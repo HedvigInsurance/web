@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/list_items/delete_item copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/list_items/delete_item-copy" fill="#414150">
+            <path d="M4,8.5 L4,22.5 C4,23.3284271 4.67157288,24 5.5,24 L18.5,24 C19.3284271,24 20,23.3284271 20,22.5 L20,8.5 L20,8.5 C20,8.22385763 19.7761424,8 19.5,8 L19.5,8 L19.5,8 C19.2238576,8 19,8.22385763 19,8.5 L19,22.5 C19,22.7761424 18.7761424,23 18.5,23 L5.5,23 C5.22385763,23 5,22.7761424 5,22.5 L5,8.5 L5,8.5 C5,8.22385763 4.77614237,8 4.5,8 L4.5,8 L4.5,8 C4.22385763,8 4,8.22385763 4,8.5 Z" id="Path-3" fill-rule="nonzero"></path>
+            <path d="M7,5 L17,5 L17,1 L7,1 L7,5 Z M7,0 L17,0 C17.5522847,-1.11022302e-16 18,0.44771525 18,1 L18,6 L6,6 L6,1 C6,0.44771525 6.44771525,0 7,0 Z" id="Rectangle-2" fill-rule="nonzero"></path>
+            <rect id="Rectangle" x="2" y="5" width="20" height="1" rx="0.5"></rect>
+            <rect id="Rectangle-5" x="9" y="8" width="1" height="12" rx="0.5"></rect>
+            <rect id="Rectangle-5-Copy" x="14" y="8" width="1" height="12" rx="0.5"></rect>
+        </g>
+    </g>
+</svg>

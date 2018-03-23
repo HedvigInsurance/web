@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/take_picture</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/take_picture">
+            <circle id="Oval-4" stroke="#9B9BAA" cx="28" cy="28" r="27.5"></circle>
+            <path d="M21.8369786,18.2 L15.2,18.2 C13.9842847,18.2 13,19.1842847 13,20.4 L13,37.6 C13,38.8157148 13.9842851,39.8 15.2,39.8 L40.8,39.8 C42.0157149,39.8 43,38.8157148 43,37.6 L43,20.4 C43,19.1842847 42.0157153,18.2 40.8,18.2 L34.1630214,18.2 L32.2350214,15 L23.7649786,15 L21.8369786,18.2 Z M23.2,14 L32.8,14 L34.728,17.2 L40.8,17.2 C42.568,17.2 44,18.632 44,20.4 L44,37.6 C44,39.3679992 42.568,40.8 40.8,40.8 L15.2,40.8 C13.432,40.8 12,39.3679992 12,37.6 L12,20.4 C12,18.632 13.432,17.2 15.2,17.2 L21.272,17.2 L23.2,14 Z" id="Fill-3" fill="#9B9BAA" fill-rule="nonzero"></path>
+            <path d="M28,35 C31.3117153,35 34,32.3117153 34,29 C34,25.6882847 31.3117153,23 28,23 C24.6882847,23 22,25.6882847 22,29 C22,32.3117153 24.6882847,35 28,35 Z M28,36 C24.136,36 21,32.864 21,29 C21,25.136 24.136,22 28,22 C31.864,22 35,25.136 35,29 C35,32.864 31.864,36 28,36 Z" id="Path" fill="#9B9BAA" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

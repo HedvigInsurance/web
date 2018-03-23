@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/chat/send_idle</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/chat/send_idle">
+            <path d="M40.0005,19.9997051 C40.0005,31.0452617 31.0461699,39.9995 20.0005,39.9995 C8.95483013,39.9995 0.0005,31.0452617 0.0005,19.9997051 C0.0005,8.95414846 8.95483013,-0.0005 20.0005,-0.0005 C31.0461699,-0.0005 40.0005,8.95414846 40.0005,19.9997051" id="Fill-1" fill="#D7D7DC"></path>
+            <polygon id="Fill-4" fill="#FFFFFF" points="29 16.4189604 20.0641098 8 11 16.4139749 12.4283259 17.7796159 19.0412021 11.641326 19.0412021 32 21.0764343 32 21.0764343 11.6654864 27.5610909 17.7746304"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+.Download {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Download__article {
+  flex: 1;
+  padding: 90px 15px 30px 15px;
+  text-align: center;
+}
+
+.Download__page-header {
+  font-family: "Merriweather";
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #000;
+}
+
+.Download__section-header {
+  font-family: "Merriweather";
+  font-size: 23px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #0F007A;
+}
+
+.Download__social-icon {
+  margin-right: 10px;
+}

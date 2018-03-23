@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["react-app", "prettier"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-undef": "error",
+    "jsx-a11y/href-no-hash": "off"
+  }
+}

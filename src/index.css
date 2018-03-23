@@ -1,0 +1,131 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+#root,
+#root > [data-reactroot] {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/assets/fonts/Merriweather-Light.eot");
+  src: url("/assets/fonts/Merriweather-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/Merriweather-Light.woff") format("woff"),
+    url("/assets/fonts/Merriweather-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular Std Book";
+  src: url("/assets/fonts/CircularStd-Book.eot");
+  src: url("/assets/fonts/CircularStd-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/CircularStd-Book.woff") format("woff"),
+    url("/assets/fonts/CircularStd-Book.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Circular Std Book", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+body {
+  color: #212121;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pure-centered {
+  justify-content: center;
+}
+
+.__react_modal {
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+.__react_modal:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .__react_modal {
+    min-width: 80%;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0px;
+}
+
+/* pure-hidden-xs */
+@media screen and (max-width:567px) {
+  .pure-visible-sm:not(.pure-visible-xs){display:none}
+  .pure-visible-md:not(.pure-visible-xs){display:none}
+  .pure-visible-lg:not(.pure-visible-xs){display:none}
+  .pure-visible-xl:not(.pure-visible-xs){display:none}
+  .pure-hidden-xs {display:none}
+}
+/* pure-hidden-sm */
+@media screen and (min-width:568px) and (max-width:767px) {
+  .pure-visible-xs:not(.pure-visible-sm){display:none}
+  .pure-visible-md:not(.pure-visible-sm){display:none}
+  .pure-visible-lg:not(.pure-visible-sm){display:none}
+  .pure-visible-xl:not(.pure-visible-sm){display:none}
+  .pure-hidden-sm {display:none}
+}
+/* pure-hidden-md */
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .pure-visible-xs:not(.pure-visible-md){display:none}
+  .pure-visible-sm:not(.pure-visible-md){display:none}
+  .pure-visible-lg:not(.pure-visible-md){display:none}
+  .pure-visible-xl:not(.pure-visible-md){display:none}
+  .pure-hidden-md {display:none}
+}
+/* pure-hidden-lg */
+@media screen and (min-width:1024px) and (max-width:1279px) {
+  .pure-visible-xs:not(.pure-visible-lg){display:none}
+  .pure-visible-sm:not(.pure-visible-lg){display:none}
+  .pure-visible-md:not(.pure-visible-lg){display:none}
+  .pure-visible-xl:not(.pure-visible-lg) {display:none}
+  .pure-hidden-lg{display:none}
+}
+/* pure-hidden-xl */
+@media screen and (min-width:1280px) {
+  .pure-visible-xs:not(.pure-visible-xl){display:none}
+  .pure-visible-sm:not(.pure-visible-xl){display:none}
+  .pure-visible-md:not(.pure-visible-xl){display:none}
+  .pure-visible-lg:not(.pure-visible-xl){display:none}
+  .pure-hidden-xl{display:none}
+}
+

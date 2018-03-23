@@ -1,0 +1,20 @@
+{
+  "_mock": true,
+  "name": "Anakin Skywalker",
+  "firstName": "Anakin",
+  "lastName": "Skywalker",
+  "familyMembers": ["Padmé Amidala", "Luke Skywalker"],
+  "age": 26,
+  "email": "anakkin@skywalk.er",
+  "address": "Krukmakargatan 5",
+  "livingAreaSqm": 48,
+  "safetyIncreasers": ["brandvarnare", "säkerhetsdörr", "gallergrind"],
+  "maskedBankAccountNumber": "XXXX XXXX 1234",
+  "paymentStatus": "ACTIVE",
+  "nextPaymentDate": 1507042098159,
+  "selectedCashback": "Rädda Barnen",
+  "selectedCashbackImageUrl": "https://unsplash.it/400/400",
+  "selectedCashbackParagraph":
+    "\"Tack kära Lucas för att du bidrar till att rädda livet på fler cancerdrabbade barn\"",
+  "selectedCashbackSignature": "Isabelle Ducellier, Generaldirektör"
+}

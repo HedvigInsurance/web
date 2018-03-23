@@ -1,0 +1,46 @@
+.ModelExplanation {
+  margin-bottom: 2em;
+  padding: 4em 0 0;
+}
+
+.ModelExplanation__text {
+  text-align: center;
+}
+
+.ModelExplanation__text p {
+  font-size: 14px;
+  line-height: normal;
+  white-space: pre-line;
+}
+
+.ModelExplanation__heading {
+  font-size: 28px;
+  font-family: "Merriweather";
+  font-weight: 400;
+  line-height: normal;
+  color: #0F007A;
+  margin: 0;
+}
+
+.ModelExplanation__paragraph {
+  margin-bottom: 3em;
+  max-width: 600px;
+}
+
+.ModelExplanation__icons {
+  text-align: center;
+}
+
+.ModelExplanation__icon {
+  padding: 15px 15px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .ModelExplanation__heading {
+    font-size: 40px;
+  }
+
+  .ModelExplanation__text p {
+    font-size: 18px;
+  }
+}

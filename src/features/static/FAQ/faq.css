@@ -1,0 +1,26 @@
+.FAQ {
+  padding: 90px 15px 30px 15px;
+  max-width: 650px;
+  display: block;
+  margin: 0 auto;
+}
+
+.FAQ__page-header {
+  font-family: "Merriweather";
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #000;
+}
+
+.FAQ__section-header {
+  margin: 1.6em 0 0;
+  font-family: "Merriweather";
+  font-size: 23px;
+  line-height: 34px;
+  font-weight: 400;
+  color: #0F007A;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}

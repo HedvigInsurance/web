@@ -1,0 +1,76 @@
+.Button__white-round {
+  background-color: white;
+  color: #651eff;
+  border-radius: 24px;
+  font-family: "Circular Std Book";
+  font-size: 18px;
+  line-height: 22px;
+  padding: 12px 24px;
+  text-align: center;
+  border: 1px solid #651eff;
+}
+
+.Button__white-round:active {
+  color: white;
+  background-color: #651eff;
+}
+
+@keyframes Button__slideFromRight {
+  from {
+    transform: translateX(100px);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.Button__slideFromRight {
+  animation: 0.3s Button__slideFromRight 1;
+}
+
+.Button__inactive {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.Button__turquoise-round {
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: #1BE9B6;
+  color: white;
+  border-radius: 24px;
+  font-family: "Circular Std Book";
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+@keyframes Button__slideDown {
+  from {
+    margin-bottom: 20px;
+  }
+
+  to {
+    margin-bottom: 0px;
+  }
+}
+
+.Button__slideDown {
+  overflow-y: hidden;
+  animation: Button__slideDown 0.1s linear;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.Button__black-purple-round {
+  background-color: #0F007A;
+  font-family: "Circular Std Book";
+  font-size: 18px;
+  line-height: 22px;
+  padding: 12px 24px;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 24px;
+}

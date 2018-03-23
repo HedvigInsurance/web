@@ -1,0 +1,34 @@
+.Footer {
+  flex-direction: column;
+  background-color: #0f007a;
+}
+
+.Footer__links {
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+}
+
+.Footer__link {
+  color: white;
+  display: block;
+}
+
+.Footer__icon {
+  height: 28px;
+  width: 84px;
+  background-image: url("/assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg");
+  background-size: 84px 28px;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .Footer {
+    flex-direction: row;
+    padding: 2em 0;
+  }
+
+  .Footer__links {
+    padding: 0 0 0 2em;
+  }
+}
