@@ -1,36 +1,23 @@
 import React from "react"
-import styled from "styled-components"
 import "./button.css"
 
+export const ButtonStyled = ({children, ...props}) => (
+  <button
+    className="Button"
+    {...props}
+  >
+    {children}
+  </button>
+)
 
-export const ButtonStyled = styled.button`
-  font-family: "Circular Std Book";
-  font-size: 18px;
-  line-height: 22px;
-  padding: 12px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-
-  > a {
-    color: inherit;
-    text-decoration: none;
-    &:visited,
-    &:active,
-    &:hover,
-    &:link {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-`
-
-export const RoundedButtonStyled = ButtonStyled.extend`
-  border-radius: 24px;
-`
+export const RoundedButtonStyled = ({children, ...props}) => (
+  <button
+    className="Button Button--rounded"
+    {...props}
+  >
+    {children}
+  </button>
+)
 
 export const TurquoiseRoundedButtonStyled = ({children, ...props}) => (
   <button
@@ -41,15 +28,23 @@ export const TurquoiseRoundedButtonStyled = ({children, ...props}) => (
   </button>
 )
 
-export const PurpleRoundedButtonStyled = RoundedButtonStyled.extend`
-  background-color: ${props => props.theme.colors.purple};
-  color: white;
-`
+export const PurpleRoundedButtonStyled = ({children, ...props}) => (
+  <button
+    className="Button Button--rounded Button--purple"
+    {...props}
+  >
+    {children}
+  </button>
+)
 
-export const BlackPurpleRoundedButtonStyled = RoundedButtonStyled.extend`
-  background-color: ${props => props.theme.colors.blackPurple};
-  color: white;
-`
+export const BlackPurpleRoundedButtonStyled = ({children, ...props}) => (
+  <button
+    className="Button Button--rounded Button--blackPurple"
+    {...props}
+  >
+    {children}
+  </button>
+)
 
 export const BlackPurpleRoundedButtonWhiteBorderStyled = ({children, ...props}) => (
   <button
@@ -94,20 +89,3 @@ export const SlideDownCtaButton = ({children, ...props}) => (
     {children}
   </button>
 )
-
-const iconSizes = {
-  medium: 24,
-  big: 40
-}
-export const IconButtonStyled = RoundedButtonStyled.extend`
-  border: none;
-  padding: 0px;
-  width: ${props => iconSizes[props.size || "big"]}px;
-  height: ${props => iconSizes[props.size || "big"]}px;
-  background-image: url(${props => props.iconUrl});
-  margin-left: auto;
-`
-
-export const InactiveIconButtonStyled = IconButtonStyled.extend`
-  cursor: default;
-`

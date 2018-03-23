@@ -3,8 +3,6 @@ import { Route, Switch } from "react-router-dom"
 import { ConnectedRouter, routerMiddleware } from "react-router-redux"
 import createHistory from "history/createBrowserHistory"
 
-import Dialog from "../containers/Dialog"
-
 import { Landing, AboutUs, FAQ, Legal, Contact, Terms, Download, NotFound } from "../features/loadables"
 
 // Create a history of your choosing (we're using a browser history in this case)
@@ -23,7 +21,6 @@ const Router = () => (
         height: "100%"
       }}
     >
-      <Dialog />
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/about-us" component={AboutUs} />

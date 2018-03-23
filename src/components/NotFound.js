@@ -1,21 +1,22 @@
 /* global require */
-import React from "react"
-import styled from "styled-components"
+import React, { StyleSheet } from "react"
 import Lottie from "react-lottie"
 
-const NotFoundPage = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 72px;
-  font-family: "Merriweather";
-  color: ${props => props.theme.colors.purple};
-`
+const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    fontSize: 72,
+    fontFamily: 'Merriweather',
+    color: '#651EFF',
+  }
+})
 
 const NotFound = () => (
-  <NotFoundPage>
+  <div style={styles.container}>
     <div>Not found</div>
     <div>
       <Lottie
@@ -29,7 +30,7 @@ const NotFound = () => (
         style={{margin: "auto"}}
       />
     </div>
-  </NotFoundPage>
+  </div>
 )
 
 export default NotFound

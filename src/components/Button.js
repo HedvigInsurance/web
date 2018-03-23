@@ -6,8 +6,6 @@ import {
   BlackPurpleRoundedButtonWhiteBorderStyled,
   WhiteRoundedButtonStyled,
   InactiveWhiteRoundedButtonStyled,
-  IconButtonStyled,
-  InactiveIconButtonStyled,
   AnimatedWhiteRoundedButtonStyled
 } from "./styles/button"
 
@@ -63,40 +61,6 @@ export const InactiveWhiteRoundedButton = ({ onClick, children }) => (
   </InactiveWhiteRoundedButtonStyled>
 )
 
-// Icon buttons
-
-const IconButton = ({ onClick, iconUrl, size, ...props }) => (
-  <IconButtonStyled
-    iconUrl={iconUrl}
-    size={size}
-    onClick={onClick || defaultOnClick}
-    {...props}
-  />
-)
-
-const InactiveIconButton = ({ onClick, iconUrl, size }) => (
-  <InactiveIconButtonStyled iconUrl={iconUrl} size={size} />
-)
-
-export const SendIconButton = ({ onClick, ...props }) =>
-  IconButton({ iconUrl: "/assets/icons/chat/send.svg", onClick, ...props})
-
-export const InactiveSendIconButton = ({ onClick }) =>
-  InactiveIconButton({ iconUrl: "/assets/icons/chat/send_idle.svg", onClick })
-
-export const ExitIconButton = ({ onClick, ...props }) =>
-  IconButton({ iconUrl: "/assets/icons/chat/exit.svg", onClick, ...props })
-
-export const ResetIconButton = ({ onClick, ...props }) =>
-  IconButton({ iconUrl: "/assets/icons/chat/restart.svg", onClick, ...props})
-
-export const EditIconButton = ({ onClick }) =>
-  IconButton({
-    iconUrl: "/assets/icons/chat/edit_last_message.svg",
-    size: "medium",
-    onClick
-  })
-
 // For storybook
 
 export const ButtonsExample = () => (
@@ -131,24 +95,5 @@ export const ButtonsExample = () => (
       InactiveWhiteRoundedButton
     </InactiveWhiteRoundedButton>
     <br />
-
-    <h4>SendIconButton</h4>
-    <SendIconButton />
-    <br />
-
-    <h4>InactiveSendIconButton</h4>
-    <InactiveSendIconButton />
-    <br />
-
-    <h4>ExitIconButton</h4>
-    <ExitIconButton />
-    <br />
-
-    <h4>ResetIconButton</h4>
-    <ResetIconButton />
-    <br />
-
-    <h4>EditIconButton</h4>
-    <EditIconButton />
   </div>
 )
