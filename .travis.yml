@@ -1,0 +1,22 @@
+language: node_js
+sudo: true
+node_js:
+- '9'
+
+before_install:
+- pip install --user awscli
+
+install:
+- yarn install
+
+script:
+- yarn lint
+- yarn test
+
+after_success:
+- ./scripts/test-deploy.sh
+- ./scripts/production-deploy.sh
+
+notifications:
+  email: false
+  webhooks: https://www.travisbuddy.com
