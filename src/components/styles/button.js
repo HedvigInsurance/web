@@ -1,91 +1,101 @@
-import React from "react"
-import "./button.css"
+import React from 'react';
+import PropTypes from 'prop-types';
+import './button.css';
 
-export const ButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button"
-    {...props}
-  >
+export const ButtonStyled = ({ children, ...props }) => (
+  <button className="Button" {...props}>
     {children}
   </button>
-)
+);
 
-export const RoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button Button--rounded"
-    {...props}
-  >
+ButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const RoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button Button--rounded" {...props}>
     {children}
   </button>
-)
+);
 
-export const TurquoiseRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button__turquoise-round"
-    {...props}
-  >
+RoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const TurquoiseRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button__turquoise-round" {...props}>
     {children}
   </button>
-)
+);
 
-export const PurpleRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button Button--rounded Button--purple"
-    {...props}
-  >
+TurquoiseRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const PurpleRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button Button--rounded Button--purple" {...props}>
     {children}
   </button>
-)
+);
 
-export const BlackPurpleRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button Button--rounded Button--blackPurple"
-    {...props}
-  >
+PurpleRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const BlackPurpleRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button Button--rounded Button--blackPurple" {...props}>
     {children}
   </button>
-)
+);
 
-export const BlackPurpleRoundedButtonWhiteBorderStyled = ({children, ...props}) => (
-  <button
-    className="Button__black-purple-round"
-    {...props}
-  >
+BlackPurpleRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const BlackPurpleRoundedButtonWhiteBorderStyled = ({ children, ...props }) => (
+  <button className="Button__black-purple-round" {...props}>
     {children}
   </button>
-)
+);
 
-export const WhiteRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button__white-round"
-    {...props}
-  >
+BlackPurpleRoundedButtonWhiteBorderStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const WhiteRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button__white-round" {...props}>
     {children}
   </button>
-)
+);
 
-export const AnimatedWhiteRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button__white-round Button__slideFromRight"
-    {...props}
-  >
+WhiteRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const AnimatedWhiteRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button__white-round Button__slideFromRight" {...props}>
     {children}
   </button>
-)
+);
 
-export const InactiveWhiteRoundedButtonStyled = ({children, ...props}) => (
-  <button
-    className="Button__white-round Button__inactive"
-    {...props}
-  >
+AnimatedWhiteRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const InactiveWhiteRoundedButtonStyled = ({ children, ...props }) => (
+  <button className="Button__white-round Button__inactive" {...props}>
     {children}
   </button>
-)
+);
 
-export const SlideDownCtaButton = ({children, ...props}) => (
-  <button
-    className="Button__turquoise-round Button__slideDown"
-  >
-    {children}
-  </button>
-)
+InactiveWhiteRoundedButtonStyled.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export const SlideDownCtaButton = ({ children }) => (
+  <button className="Button__turquoise-round Button__slideDown">{children}</button>
+);
+
+SlideDownCtaButton.propTypes = {
+  children: PropTypes.node.isRequired,
+};

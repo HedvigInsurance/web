@@ -1,0 +1,10 @@
+{
+  "files.autoSave": "off",
+  "editor.formatOnSave": true,
+  "prettier.eslintIntegration": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/public": true,
+    "**/.cache": true
+  }
+}

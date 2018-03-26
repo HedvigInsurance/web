@@ -1,0 +1,47 @@
+.Splash {
+  margin: 62px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.Splash__text {
+  margin-top: 3em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.Splash__heading {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: normal;
+  margin: 0 0 20px;
+}
+
+.Splash__hero-animation {
+  padding: 20px 30px 30px;
+  min-height: 250px;
+}
+
+@media screen and (min-width: 1024px) {
+  .Splash {
+    height: 85vh;
+  }
+
+  .Splash__text {
+    margin-top: 0;
+    text-align: left;
+    padding: 0;
+  }
+
+  .Splash__heading {
+    font-size: 60px;
+  }
+
+  .Splash__full-height {
+    height: 100%;
+  }
+}
