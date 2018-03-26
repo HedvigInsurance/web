@@ -1,5 +1,4 @@
 import React from "react"
-import { connect } from "react-redux"
 import { Helmet } from "react-helmet";
 
 import Collaboration from "./sections/Collaboration"
@@ -10,24 +9,6 @@ import Header from "../../components/Header"
 import ModelExplanation from "./sections/ModelExplanation"
 import WaterDamagePage from "./sections/WaterDamage";
 import CallToAction from "./sections/CallToAction"
-import { SlideDownCtaButton } from "../../components/styles/button"
-
-const HidingCtaButton = ({isVisible, registerCtaClick}) => (
-  !isVisible ? (
-    <a href="https://hedvig.app.link" onClick={registerCtaClick}>
-      <SlideDownCtaButton>Ladda ner appen</SlideDownCtaButton>
-    </a>
-  ) : (<div></div>)
-)
-
-const ConnectedHidingCtaButton = connect(
-  state => ({
-    isVisible: state.landing.visible
-  }),
-  dispatch => ({
-    registerCtaClick: () => dispatch({type: "ANALYTICS/CTA_CLICK", payload: {location: "header"}})
-  })
-)(HidingCtaButton)
 
 const Landing = () => { // Fragment is used as a quick hack to render nothing in place of a better solution right now
   return (
@@ -35,7 +16,7 @@ const Landing = () => { // Fragment is used as a quick hack to render nothing in
       <Helmet>
         <title>Hedvig</title>
       </Helmet>
-      <Header headerRight={<ConnectedHidingCtaButton />}/>
+      <Header/>
       <Splash />
       <WaterDamagePage />
       <ClaimDemo />

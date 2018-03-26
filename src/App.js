@@ -3,8 +3,6 @@ import React, { Component } from "react"
 import { Provider } from "react-redux"
 import { routerReducer } from "react-router-redux"
 import { Router, routerMiddleware } from "./components/Router"
-import * as Navigation from "./services/Navigation"
-import landingReducer from "./reducers/landing"
 import analyticsMiddleware from "./middleware/analytics";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createStore, applyMiddleware, compose, combineReducers } from "redux"
@@ -12,8 +10,6 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux"
 import "purecss/build/base.css"
 import "purecss/build/grids.css"
 import "purecss/build/grids-responsive.css"
-
-window.Navigation = Navigation
 
 if (process.env.NODE_ENV === 'production') {
   Raven.config('https://f3942dffb4a14ed0ab23aa38b6ae73f0@sentry.io/284598').install()
@@ -35,7 +31,6 @@ class App extends Component {
     this.store = createStore(
       combineReducers({
         router: routerReducer,
-        landing: landingReducer,
       }),
       {},
       middlewares

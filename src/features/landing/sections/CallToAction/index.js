@@ -4,13 +4,7 @@ import { TurquoiseRoundedButton } from "../../../../components/Button";
 
 import "./calltoaction.css"
 
-
 class CallToAction extends React.Component {
-
-  _change = isVisible => {
-    this.props.ctaVisibilityChanged(isVisible)
-  }
-
   render() {
     return (
       <section className="pure-g pure-centered CallToAction">
@@ -33,7 +27,6 @@ class CallToAction extends React.Component {
 export default connect(
   undefined,
   dispatch => ({
-    ctaVisibilityChanged: isVisible => dispatch({type: "LANDING/CTA_VISIBILITY_CHANGED", payload: { status: isVisible}}),
     registerCtaClick: () => dispatch({type: "ANALYTICS/CTA_CLICK", payload: {location: "cta section"}})
   })
 )(CallToAction)

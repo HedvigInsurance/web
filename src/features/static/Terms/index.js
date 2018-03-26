@@ -1,15 +1,13 @@
 import React from "react"
 
-import { SayHi } from "../common";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer"
 
 import "./terms.css"
 
-
 const Terms = () => (
   <main className="Terms">
-    <Header headerRight={<SayHi />} />
+    <Header/>
     <article className="pure-g pure-centered Terms__text">
       <div className="pure-u-1-1 pure-u-md-3-5">
         <section>
