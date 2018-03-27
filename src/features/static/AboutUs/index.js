@@ -1,9 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-
-import {
-  SayHi,
-} from "../common"
 import Hero from "../../../components/Hero"
 import Header from "../../../components/Header"
 import Footer from "../../../components/Footer"
@@ -14,7 +10,7 @@ const AboutUs = () => (
     <Helmet>
       <title>Om Hedvig | Hedvig</title>
     </Helmet>
-    <Header headerRight={<SayHi />}/>
+    <Header />
     <Hero
       imageUrl="/assets/web/Images/Norrsken-4.jpg"
       alt="Hedvig office at Norrsken"

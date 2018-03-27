@@ -1,42 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> Should render correctly 1`] = `
-<footer
-  className="pure-g Footer"
->
+<footer>
   <div
-    className="pure-u-1-1 pure-u-md-1-3"
+    className="Footer"
   >
     <div
-      className="pure-g Footer__links"
+      className="Footer__start"
     >
       <div
-        className="pure-u-1-2"
+        className="Footer__links"
       >
         <div
-          aria-label="Hedvig logo"
-          className="Footer__icon"
-          role="img"
-        />
+          className="Footer__logo"
+        >
+          <a
+            href="/"
+          >
+            <div
+              aria-label="Hedvig logo"
+              className="Footer__icon"
+              role="img"
+            />
+          </a>
+        </div>
+        <nav
+          className=""
+        >
+          <Link
+            className="Footer__link"
+            replace={false}
+            to="/contact"
+          >
+            Kontakt
+          </Link>
+          <Link
+            className="Footer__link"
+            replace={false}
+            to="/legal"
+          >
+            Legal information
+          </Link>
+        </nav>
       </div>
-      <nav
-        className="pure-u-1-2"
+    </div>
+    <div
+      className="Footer__end"
+    >
+      <a
+        className="Footer__appLink"
+        href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        <Link
-          className="Footer__link"
-          replace={false}
-          to="/contact"
+        <LazyLoad
+          height={46}
+          offset={200}
+          once={false}
+          overflow={false}
+          resize={false}
+          scroll={true}
+          unmountIfInvisible={false}
         >
-          Kontakt
-        </Link>
-        <Link
-          className="Footer__link"
-          replace={false}
-          to="/legal"
+          <img
+            alt="Ladda ner på App Store"
+            height={54}
+            src="/assets/web/appstores/app-store-badge@2x.png"
+          />
+        </LazyLoad>
+      </a>
+      <a
+        className="Footer__appLink"
+        href="https://play.google.com/store/apps/details?id=com.hedvig.app"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <LazyLoad
+          height={46}
+          offset={200}
+          once={false}
+          overflow={false}
+          resize={false}
+          scroll={true}
+          unmountIfInvisible={false}
         >
-          Legal information
-        </Link>
-      </nav>
+          <img
+            alt="Ladda ner på Google Play"
+            height={54}
+            src="/assets/web/appstores/google-play-badge@2x.png"
+          />
+        </LazyLoad>
+      </a>
     </div>
   </div>
 </footer>

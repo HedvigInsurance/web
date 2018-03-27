@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-import { SayHi } from "../common"
 import Header from "../../../components/Header"
 import Footer from "../../../components/Footer"
 import "./faq.css"
@@ -11,7 +10,7 @@ const FAQ = () => (
     <Helmet>
       <title>FAQ | Hedvig</title>
     </Helmet>
-    <Header headerRight={<SayHi />}/>
+    <Header />
     <article className="pure-g pure-centered FAQ">
       <div className="pure-u-1-1">
         <h1 className="FAQ__page-header">Frågor och svar</h1>

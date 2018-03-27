@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet"
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer"
 import Hero from "../../../components/Hero"
-import { SayHi } from "../common"
 import "./contact.css"
 
 export default () => (
@@ -12,7 +11,7 @@ export default () => (
     <Helmet>
       <title>Kontakt | Hedvig</title>
     </Helmet>
-    <Header headerRight={<SayHi/>}/>
+    <Header />
     <Hero
       imageUrl="/assets/web/Images/map.png"
       alt="Map centered on Hedvigs Office at Norrsken"

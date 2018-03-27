@@ -12,10 +12,7 @@ exports[`<AboutUs /> Should render correctly 1`] = `
       Om Hedvig | Hedvig
     </title>
   </HelmetWrapper>
-  <Header
-    headerRight={<Connect(Component) />}
-    static={false}
-  />
+  <Header />
   <Hero
     alt="Hedvig office at Norrsken"
     imageUrl="/assets/web/Images/Norrsken-4.jpg"
