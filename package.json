@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test",
+    "test": "react-scripts test --bail",
     "build": "react-scripts build",
     "lint": "./node_modules/.bin/eslint src"
   },
