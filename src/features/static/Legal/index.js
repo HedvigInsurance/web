@@ -1,6 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet";
 
+import { SayHi } from "../common"
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer"
 import "./legal.css"
@@ -10,7 +11,7 @@ const Legal = () => (
     <Helmet>
       <title>Legal information | Hedvig</title>
     </Helmet>
-    <Header />
+    <Header headerRight={<SayHi />} />
     <article className="pure-g pure-centered Legal__text">
       <div className="pure-u-1-1 pure-u-lg-3-5">
         <section className="pure-g">

@@ -1,6 +1,7 @@
 import React from "react"
 import Lottie from "react-lottie"
 import { connect } from "react-redux"
+import VisibilitySensor from "react-visibility-sensor"
 
 import { TurquoiseRoundedButtonStyled } from "../../../../components/styles/button"
 import "./splash.css"
@@ -26,6 +27,10 @@ const animation = width < 768 ? (
 )
 
 class Splash extends React.Component {
+  _change = isVisible => {
+    this.props.ctaVisibilityChanged(isVisible)
+  }
+
   render() {
     return (
       <section className="pure-g pure-centered Splash">
@@ -35,9 +40,11 @@ class Splash extends React.Component {
               <div className="Splash__text Splash__full-height">
                 <h1 className="Splash__heading">Livet är lättare med Hedvig</h1>
                 <a href="https://hedvig.app.link" onClick={this.props.registerCtaClick}>
-                  <TurquoiseRoundedButtonStyled>
-                    Ladda ner appen
-                  </TurquoiseRoundedButtonStyled>
+                  <VisibilitySensor onChange={this._change}>
+                    <TurquoiseRoundedButtonStyled>
+                      Ladda ner appen
+                    </TurquoiseRoundedButtonStyled>
+                  </VisibilitySensor>
                 </a>
               </div>
             </div>
@@ -54,6 +61,7 @@ class Splash extends React.Component {
 export default connect(
   undefined,
   dispatch => ({
+    ctaVisibilityChanged: isVisible => dispatch({type: "LANDING/CTA_VISIBILITY_CHANGED", payload: {status: isVisible}}),
     registerCtaClick: () => dispatch({type: "ANALYTICS/CTA_CLICK", payload: {location: "splash"}})
   })
 )(Splash)

@@ -1,67 +1,48 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 
 import "./header.css"
 
-class Header extends React.Component {
-  state = {
-    isActive: false
-  }
-
-  togglePopover = () => {
-    this.setState({ isActive: !this.state.isActive })
-  }
-
-  render() {
-    const nav = (
-      <React.Fragment>
-        <Link to="/faq" className="Header__menu__link">
+const Header = props => (
+  <header style={{position: props.static ? "static" : "fixed"}} className="Header pure-g">
+    <div className="pure-hidden-xs pure-hidden-sm pure-u-md-1-3 Header__child">
+      <nav className="Header__links">
+        <Link to="/">
+          Hem
+        </Link>
+        <Link to="/about-us">
+          Om&nbsp;Hedvig
+        </Link>
+        <Link to="/faq">
           FAQ
         </Link>
-        <Link to="/about-us" className="Header__menu__link">
-          Om Hedvig
+      </nav>
+    </div>
+    <div className="pure-u-1-3 pure-u-md-1-3 Header__child">
+      <div className="Header__logo">
+        <Link to="/">
+          <img src="/assets/identity/hedvig_wordmark/hedvig_wordmark_black.svg" alt="Hedvig Logo" />
         </Link>
-      </React.Fragment>
-    )
-    const cta = (<a href="https://hedvig.app.link" className="Header__cta">
-      Ladda ner appen
-    </a>)
-
-    return (
-      <header style={{position: "fixed"}} className="Header">
-        <div className="Header__container">
-          <div className="Header__start">
-            <Link to="/" className="Header__logo">
-              <img className="Header__logo__inner" src="/assets/identity/hedvig_wordmark/hedvig_wordmark_black.svg" alt="Hedvig" />
-            </Link>
-
-            <nav className="Header__menu">
-              {nav}
-            </nav>
-          </div>
-
-          <div className="Header__end">
-            <a className={["Header__burger", (this.state.isActive && "isActive")].join(' ')}
-              onClick={this.togglePopover}>
-              <span className="Header__burger__line"></span>
-              <h2 className="Header__burger__line">
-                Meny
-              </h2>
-              <span className="Header__burger__line"></span>
-            </a>
-            <nav className="Header__menu">
-              {cta}
-            </nav>
-          </div>
-
-          <div className={["Header__popover", (this.state.isActive && "isActive")].join(' ')}>
-            {nav}
-            {cta}
-          </div>
+      </div>
+    </div>
+    { props.headerRight ? (
+      <div className="pure-u-2-3 pure-u-md-1-3 Header__child">
+        <div className="Header__right">
+          {props.headerRight}
         </div>
-      </header>
-    )
-  }
+      </div>
+    ) : null }
+  </header>
+)
+
+Header.propTypes = {
+  static: PropTypes.bool,
+  headerRight: PropTypes.node.isRequired
+}
+
+Header.defaultProps = {
+  static: false
 }
 
 export default Header
