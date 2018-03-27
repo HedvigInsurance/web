@@ -12,7 +12,10 @@ exports[`<Contact /> Should render correctly 1`] = `
       Kontakt | Hedvig
     </title>
   </HelmetWrapper>
-  <Header />
+  <Header
+    headerRight={<Connect(Component) />}
+    static={false}
+  />
   <Hero
     alt="Map centered on Hedvigs Office at Norrsken"
     imageUrl="/assets/web/Images/map.png"

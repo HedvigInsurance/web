@@ -12,7 +12,10 @@ exports[`<Legal /> Should render correctly 1`] = `
       Legal information | Hedvig
     </title>
   </HelmetWrapper>
-  <Header />
+  <Header
+    headerRight={<Connect(Component) />}
+    static={false}
+  />
   <article
     className="pure-g pure-centered Legal__text"
   >
