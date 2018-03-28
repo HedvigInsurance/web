@@ -5,7 +5,6 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
-    "babel-plugin-syntax-class-properties": "^6.13.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -17,7 +16,6 @@
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-import-resolver-jest": "^2.1.1",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -44,7 +42,6 @@
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
-    "react-loadable": "^5.3.1",
     "react-lottie": "^1.0.0",
     "react-router-dom": "^4.2.2",
     "react-router-enzyme-context": "^1.2.0",
