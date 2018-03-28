@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   TurquoiseRoundedButtonStyled,
   PurpleRoundedButtonStyled,
@@ -6,94 +7,113 @@ import {
   BlackPurpleRoundedButtonWhiteBorderStyled,
   WhiteRoundedButtonStyled,
   InactiveWhiteRoundedButtonStyled,
-  AnimatedWhiteRoundedButtonStyled
-} from "./styles/button"
+  AnimatedWhiteRoundedButtonStyled,
+} from './styles/button';
 
-const defaultOnClick = () => {}
+const defaultOnClick = () => {};
 
 // Regular rounded buttons
 
 export const TurquoiseRoundedButton = ({ onClick, children, ...props }) => (
-  <TurquoiseRoundedButtonStyled onClick={onClick || defaultOnClick} {...props}>
-    {children || "No Content"}
+  <TurquoiseRoundedButtonStyled onClick={onClick} {...props}>
+    {children}
   </TurquoiseRoundedButtonStyled>
-)
+);
+
+TurquoiseRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+TurquoiseRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const BlackPurpleRoundedButton = ({ onClick, children }) => (
-  <BlackPurpleRoundedButtonStyled onClick={onClick || defaultOnClick}>
-    {children || "No Content"}
-  </BlackPurpleRoundedButtonStyled>
-)
+  <BlackPurpleRoundedButtonStyled onClick={onClick}>{children}</BlackPurpleRoundedButtonStyled>
+);
+
+BlackPurpleRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+BlackPurpleRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const BlackPurpleRoundedButtonWhiteBorder = ({ onClick, children, ...props }) => (
-  <BlackPurpleRoundedButtonWhiteBorderStyled
-    onClick={onClick || defaultOnClick}
-    {...props}
-  >
-    {children || "No Content"}
+  <BlackPurpleRoundedButtonWhiteBorderStyled onClick={onClick} {...props}>
+    {children}
   </BlackPurpleRoundedButtonWhiteBorderStyled>
-)
+);
+
+BlackPurpleRoundedButtonWhiteBorder.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+BlackPurpleRoundedButtonWhiteBorder.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const PurpleRoundedButton = ({ onClick, children }) => (
-  <PurpleRoundedButtonStyled onClick={onClick || defaultOnClick}>
-    {children || "No Content"}
-  </PurpleRoundedButtonStyled>
-)
+  <PurpleRoundedButtonStyled onClick={onClick}>{children}</PurpleRoundedButtonStyled>
+);
+
+PurpleRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+PurpleRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const WhiteRoundedButton = ({ onClick, children, ...props }) => (
-  <WhiteRoundedButtonStyled
-    onClick={onClick || defaultOnClick}
-    {...props}
-  >
-    {children || "No Content"}
+  <WhiteRoundedButtonStyled onClick={onClick} {...props}>
+    {children}
   </WhiteRoundedButtonStyled>
-)
+);
+
+WhiteRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+WhiteRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const AnimatedWhiteRoundedButton = ({ onClick, children }) => (
-  <AnimatedWhiteRoundedButtonStyled onClick={onClick || defaultOnClick}>
-    {children || "No content"}
-  </AnimatedWhiteRoundedButtonStyled>
-)
+  <AnimatedWhiteRoundedButtonStyled onClick={onClick}>{children}</AnimatedWhiteRoundedButtonStyled>
+);
+
+AnimatedWhiteRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
+
+AnimatedWhiteRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
 
 export const InactiveWhiteRoundedButton = ({ onClick, children }) => (
-  <InactiveWhiteRoundedButtonStyled onClick={onClick || defaultOnClick}>
-    {children || "No Content"}
-  </InactiveWhiteRoundedButtonStyled>
-)
+  <InactiveWhiteRoundedButtonStyled onClick={onClick}>{children}</InactiveWhiteRoundedButtonStyled>
+);
 
-// For storybook
+InactiveWhiteRoundedButton.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+};
 
-export const ButtonsExample = () => (
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      margin: 40
-    }}
-  >
-    <TurquoiseRoundedButton>TurquoiseRoundedButton</TurquoiseRoundedButton>
-    <br />
-
-    <PurpleRoundedButton>PurpleRoundedButton</PurpleRoundedButton>
-    <br />
-
-    <BlackPurpleRoundedButton>
-      BlackPurpleRoundedButton
-    </BlackPurpleRoundedButton>
-    <br />
-
-    <BlackPurpleRoundedButtonWhiteBorder>
-      BlackPurpleRoundedButtonWhiteBorder
-    </BlackPurpleRoundedButtonWhiteBorder>
-    <br />
-
-    <WhiteRoundedButton>WhiteRoundedButton</WhiteRoundedButton>
-    <br />
-
-    <InactiveWhiteRoundedButton>
-      InactiveWhiteRoundedButton
-    </InactiveWhiteRoundedButton>
-    <br />
-  </div>
-)
+InactiveWhiteRoundedButton.defaultProps = {
+  children: 'No Content',
+  onClick: defaultOnClick,
+};
