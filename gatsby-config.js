@@ -16,11 +16,5 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    {
-      resolve: 'gatsby-plugin-sentry',
-      options: {
-        dsn: 'https://f3942dffb4a14ed0ab23aa38b6ae73f0@sentry.io/284598',
-      },
-    },
   ],
 };
