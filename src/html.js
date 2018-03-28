@@ -1,4 +1,4 @@
-/* eslint-disable global-require, react/no-danger, import/no-webpack-loader-syntax */
+/* eslint-disable global-require, react/no-danger, import/no-webpack-loader-syntax, import/no-unresolved */
 
 import React from 'react';
 import PropTypes from 'prop-types';

@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "checkJs": false,
     "baseUrl": ".",
     "paths": {
-      "src/*": ["./src/*/index.js", "./src/*"]
+      "src/*": ["src/*"]
     },
-    "jsx": "react"
+    "jsx": "react",
+    "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
   "exclude": ["node_modules/*", "public/*"]
 }

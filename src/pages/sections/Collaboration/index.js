@@ -23,7 +23,7 @@ const Collaboration = () => (
           </Lazyload>
           <div className="pure-g pure-centered">
             <p className="pure-u-5-6 pure-u-lg-5-6">
-              AA-rating från Standard&nbsp;&amp;&nbsp;Poor's
+              AA-rating från Standard&nbsp;&amp;&nbsp;Poor&apos;s
             </p>
           </div>
         </div>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Footer from 'src/components/Footer/index.js';
-import Header from 'src/components/Header/index.js';
-import Collaboration from './sections/Collaboration/index.js';
-import Splash from './sections/Splash/index.js';
-import ClaimDemo from './sections/ClaimDemo/index.js';
-import ModelExplanation from './sections/ModelExplanation/index.js';
-import WaterDamagePage from './sections/WaterDamage/index.js';
-import CallToAction from './sections/CallToAction/index.js';
+import Footer from 'src/components/Footer';
+import Header from 'src/components/Header';
+import Collaboration from './sections/Collaboration';
+import Splash from './sections/Splash';
+import ClaimDemo from './sections/ClaimDemo';
+import ModelExplanation from './sections/ModelExplanation';
+import WaterDamagePage from './sections/WaterDamage';
+import CallToAction from './sections/CallToAction';
 
 const Landing = () => (
   <main>

@@ -1,12 +1,13 @@
 const OFF = 'off';
 const ERROR = 'error';
+const path = require('path');
 
 module.exports = {
   parser: 'babel-eslint',
   // Stop ESLint from looking for a configuration file in parent folders
   root: true,
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['jest', 'react'],
+  extends: ['airbnb', 'plugin:jsx-a11y/strict', 'prettier', 'prettier/react'],
+  plugins: ['jest', 'react', 'jsx-a11y'],
   env: {
     es6: true,
     browser: true,
@@ -21,14 +22,10 @@ module.exports = {
     },
   },
   rules: {
-    'jsx-a11y/href-no-hash': OFF,
     'no-console': OFF,
     'import/default': ERROR,
-    'import/extensions': OFF, // fix me
-    'import/no-unresolved': OFF, // fix me (support wepack alias)
-    'react/no-unescaped-entities': OFF,
     'import/prefer-default-export': OFF,
-    'react/jsx-filename-extension': [ERROR, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [ERROR, { extensions: ['.js'] }],
     'jsx-a11y/anchor-is-valid': [
       ERROR,
       {
@@ -49,8 +46,14 @@ module.exports = {
   ],
   settings: {
     'import/resolver': {
-      jest: {
-        jestConfigFile: './jest.config.js',
+      webpack: {
+        config: {
+          resolve: {
+            alias: {
+              src: path.resolve(__dirname, 'src/'),
+            },
+          },
+        },
       },
     },
   },
