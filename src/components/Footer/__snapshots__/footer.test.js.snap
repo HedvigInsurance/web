@@ -42,54 +42,6 @@ exports[`<Footer /> Should render correctly 1`] = `
         </nav>
       </div>
     </div>
-    <div
-      className="Footer__end"
-    >
-      <a
-        className="Footer__appLink"
-        href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <LazyLoad
-          height={46}
-          offset={200}
-          once={false}
-          overflow={false}
-          resize={false}
-          scroll={true}
-          unmountIfInvisible={false}
-        >
-          <img
-            alt="Ladda ner på App Store"
-            height={54}
-            src="/assets/web/appstores/app-store-badge@2x.png"
-          />
-        </LazyLoad>
-      </a>
-      <a
-        className="Footer__appLink"
-        href="https://play.google.com/store/apps/details?id=com.hedvig.app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <LazyLoad
-          height={46}
-          offset={200}
-          once={false}
-          overflow={false}
-          resize={false}
-          scroll={true}
-          unmountIfInvisible={false}
-        >
-          <img
-            alt="Ladda ner på Google Play"
-            height={54}
-            src="/assets/web/appstores/google-play-badge@2x.png"
-          />
-        </LazyLoad>
-      </a>
-    </div>
   </div>
 </footer>
 `;
