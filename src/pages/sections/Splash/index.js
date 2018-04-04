@@ -36,15 +36,18 @@ const Splash = () => (
   <section className="pure-g pure-centered Splash">
     <div className="pure-u-1-1 pure-u-lg-7-8 Splash__full-height">
       <div className="pure-g pure-centered Splash__full-height">
-        <div className="pure-u-1-1 pure-u-lg-2-5 Splash__full-height">
+        <div className="pure-u-1-1 pure-u-lg-1-2 Splash__full-height">
           <div className="Splash__text Splash__full-height">
-            <h1 className="Splash__heading">Livet är lättare med Hedvig</h1>
+            <h1 className="Splash__heading">Nothing like your old insurance</h1>
+            <h2 className="Splash__subheading">
+              Med Hedvig är försäkring blixtsnabbt, enkelt och&nbsp;schysst
+            </h2>
             <a href="https://hedvig.app.link" id="cta-app-download">
               <TurquoiseRoundedButtonStyled>Ladda ner appen</TurquoiseRoundedButtonStyled>
             </a>
           </div>
         </div>
-        <div className="pure-u-1-1 pure-u-lg-3-5 Splash__full-height Splash__hero-animation">
+        <div className="pure-u-1-1 pure-u-lg-1-2 Splash__full-height Splash__hero-animation">
           {animation}
         </div>
       </div>
