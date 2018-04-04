@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 768px) {
   .Splash__heading {
-    font-size: 40px;
+    font-size: 45px;
   }
 }
 
@@ -72,5 +72,11 @@
 
   .Splash__full-height {
     height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Splash__heading {
+    font-size: 60px;
   }
 }
