@@ -10,7 +10,7 @@ const CallToAction = () => (
         Redan försäkrad?<br />
         Inga problem, Hedvig sköter&nbsp;bytet
       </h1>
-      <a href="https://hedvig.app.link" id="cta-app-download">
+      <a href="https://hedvig.app.link/kZNtW0cT9L" id="cta-app-download">
         <TurquoiseRoundedButton style={{ minWidth: '120px' }}>
           Ladda ner appen
         </TurquoiseRoundedButton>

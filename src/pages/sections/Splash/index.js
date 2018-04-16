@@ -42,7 +42,7 @@ const Splash = () => (
             <h2 className="Splash__subheading">
               Med Hedvig är försäkring blixtsnabbt, enkelt och&nbsp;schysst
             </h2>
-            <a href="https://hedvig.app.link" id="cta-app-download">
+            <a href="https://hedvig.app.link/kZNtW0cT9L" id="cta-app-download">
               <TurquoiseRoundedButtonStyled>Ladda ner appen</TurquoiseRoundedButtonStyled>
             </a>
           </div>

@@ -24,7 +24,7 @@ class Header extends React.Component {
       </div>
     );
     const cta = (
-      <a href="https://hedvig.app.link" id="cta-app-download" className="Header__cta">
+      <a href="https://hedvig.app.link/kZNtW0cT9L" id="cta-app-download" className="Header__cta">
         Ladda ner appen
       </a>
     );
