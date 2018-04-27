@@ -45,17 +45,19 @@
 
   .Splash__heading {
     font-size: 55px;
+    line-height: 65px;
   }
 
   .Splash__subheading {
     font-size: 20px;
-    max-width: 500px;
+    max-width: 450px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .Splash__heading {
     font-size: 65px;
+    line-height: 75px;
   }
 }
 

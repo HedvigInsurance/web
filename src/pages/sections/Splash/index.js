@@ -39,7 +39,8 @@ const Splash = () => (
         <div className="pure-u-1-1 pure-u-lg-1-2 Splash__full-height">
           <div className="Splash__text Splash__full-height">
             <h1 className="Splash__heading">
-              Insurance. <em>Un</em>broken.
+              Insurance.<br />
+              <em>Un</em>broken.
             </h1>
             <h2 className="Splash__subheading">
               Hedvig är en ny typ av försäkring. Byggd från grunden med modern teknik, omtanke och
