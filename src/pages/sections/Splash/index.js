@@ -38,9 +38,12 @@ const Splash = () => (
       <div className="pure-g pure-centered Splash__full-height">
         <div className="pure-u-1-1 pure-u-lg-1-2 Splash__full-height">
           <div className="Splash__text Splash__full-height">
-            <h1 className="Splash__heading">Nothing like your old&nbsp;insurance</h1>
+            <h1 className="Splash__heading">
+              Insurance. <em>Un</em>broken.
+            </h1>
             <h2 className="Splash__subheading">
-              Med Hedvig är försäkring blixtsnabbt, enkelt och&nbsp;schysst
+              Hedvig är en ny typ av försäkring. Byggd från grunden med modern teknik, omtanke och
+              sunt&nbsp;förnuft. För dig, ditt hem och dina saker.
             </h2>
             <a href="https://hedvig.app.link/kZNtW0cT9L" id="cta-app-download">
               <TurquoiseRoundedButtonStyled>Ladda ner appen</TurquoiseRoundedButtonStyled>

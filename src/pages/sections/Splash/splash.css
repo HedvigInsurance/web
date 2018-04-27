@@ -16,13 +16,16 @@
 .Splash__heading {
   font-family: 'Merriweather';
   font-weight: 400;
-  font-size: 32px;
+  font-size: 45px;
   line-height: normal;
   margin: 0;
   line-height: 1.35;
+  margin-bottom: 10px;
 }
 
 .Splash__subheading {
+  display: block;
+  margin: 0 auto;
   font-family: 'Circular Std Book';
   font-weight: 500;
   font-size: 18px;
@@ -41,17 +44,18 @@
   }
 
   .Splash__heading {
-    font-size: 36px;
+    font-size: 55px;
   }
 
   .Splash__subheading {
     font-size: 20px;
+    max-width: 500px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .Splash__heading {
-    font-size: 45px;
+    font-size: 65px;
   }
 }
 
@@ -67,16 +71,17 @@
   }
 
   .Splash__heading {
-    font-size: 50px;
+    font-size: 78px;
+    line-height: 88px;
+    margin-bottom: 10px;
+  }
+
+  .Splash__subheading {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .Splash__full-height {
     height: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .Splash__heading {
-    font-size: 60px;
   }
 }
