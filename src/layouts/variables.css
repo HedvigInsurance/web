@@ -1,0 +1,28 @@
+$color-text-body: #212121;
+
+$color-primary-black: #141033;
+$color-primary-blue: #100079;
+$color-primary-pink: #ff8a80;
+$color-primary-green: #1be9b6;
+$color-primary-purple: #651eff;
+$color-primary-grey: #e9ecef;
+
+$color-secondary-pink: #fff3f2;
+$color-secondary-green: #e8fcf7;
+$color-secondary-purple: #efe8ff;
+$color-secondary-grey: #f9fafc;
+
+$sm-viewport: (min-width: 320px) and (max-width: 599px);
+$md-viewport: (min-width: 600px) and (max-width: 959px);
+$lg-viewport: (min-width: 960px);
+
+// Component variables
+$Grid-gutterSize: 25px;
+$Arrange-gutterSize: 10px;
+
+$fontSize-1: 34px;
+$fontSize-2: 28px;
+$fontSize-3: 24px;
+$fontSize-4: 20px;
+$fontSize-5: 18px;
+$fontSize-6: 16px;
