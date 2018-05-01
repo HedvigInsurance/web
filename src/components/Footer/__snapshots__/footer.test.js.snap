@@ -17,9 +17,8 @@ exports[`<Footer /> Should render correctly 1`] = `
           <a
             href="/"
           >
-            <div
-              aria-label="Hedvig logo"
-              className="Footer__icon"
+            <ReactComponent
+              ariaLabel="Hedvig logo"
               role="img"
             />
           </a>
