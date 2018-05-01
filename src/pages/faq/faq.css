@@ -6,7 +6,7 @@
 }
 
 .FAQ__page-header {
-  font-family: "Merriweather";
+  font-family: "CircularStd";
   font-size: 36px;
   line-height: normal;
   font-weight: 400;
@@ -16,7 +16,7 @@
 
 .FAQ__section-header {
   margin: 1.6em 0 0;
-  font-family: "Merriweather";
+  font-family: "CircularStd";
   font-size: 23px;
   line-height: 34px;
   font-weight: 400;

@@ -24,14 +24,6 @@
   display: block;
 }
 
-.Footer__icon {
-  height: 28px;
-  width: 84px;
-  background-image: url('/assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg');
-  background-size: 84px 28px;
-  background-repeat: no-repeat;
-}
-
 @media screen and (min-width: 700px) {
   .Footer {
     display: flex;

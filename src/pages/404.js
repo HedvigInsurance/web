@@ -12,7 +12,7 @@ const styles = {
     flexDirection: 'column',
     fontSize: '50px',
     lineHeight: '75px',
-    fontFamily: 'Merriweather',
+    fontFamily: 'CircularStd',
     color: '#651EFF',
   },
 };
