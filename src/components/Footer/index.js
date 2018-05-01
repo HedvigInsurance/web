@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { ReactComponent as Logo } from 'assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg';
 
 import './footer.css';
 
@@ -10,7 +11,7 @@ const Footer = () => (
         <div className="Footer__links">
           <div className="Footer__logo">
             <a href="/">
-              <div role="img" className="Footer__icon" aria-label="Hedvig logo" />
+              <Logo role="img" ariaLabel="Hedvig logo" />
             </a>
           </div>
           <nav className="">
