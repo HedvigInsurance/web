@@ -52,6 +52,7 @@
     "stylelint": "^9.2.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
+    "stylelint-order": "^0.8.1",
     "stylelint-selector-bem-pattern": "^2.0.0",
     "svgr": "^1.9.1"
   },
@@ -62,8 +63,8 @@
     "lint": "./node_modules/.bin/eslint .",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"src/**/*.js\"",
-    "format-css": "prettier-stylelint --write \"src/**/*.css\""
+    "format-js": "prettier-eslint --write -q \"src/**/*.js\"",
+    "format-css": "prettier-stylelint --write -q \"src/**/*.css\""
   },
   "husky": {
     "hooks": {
@@ -71,13 +72,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.css": [
-      "prettier-stylelint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"],
+    "*.css": ["prettier-stylelint --write", "git add"]
   }
 }

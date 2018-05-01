@@ -10834,7 +10834,7 @@ stylelint-config-suitcss@^14.0.0:
     stylelint-order "^0.8.0"
     stylelint-suitcss "^3.0.0"
 
-stylelint-order@^0.8.0:
+stylelint-order@^0.8.0, stylelint-order@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.8.1.tgz#35f71af3a15954154e0e99e5646ba3d6fbe34f8d"
   dependencies:
