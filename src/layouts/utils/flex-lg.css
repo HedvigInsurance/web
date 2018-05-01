@@ -3,7 +3,8 @@
  * Size: breakpoint 3 (large)
  */
 
-@media ($lg-viewport) {
+@media (--lg-viewport) {
+
   /* Applies to flex container
      ======================================================================== */
 

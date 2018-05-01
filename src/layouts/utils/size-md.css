@@ -3,7 +3,8 @@
  * Size: breakpoint 2 (medium)
  */
 
-@media ($md-viewport) {
+@media (--md-viewport) {
+
   /* Proportional widths: breakpoint 2 (medium)
      ======================================================================== */
 

@@ -1,8 +1,8 @@
 .Footer {
   background-color: #0f007a;
-  padding: 30px 20px 20px;
   display: block;
   flex-direction: row;
+  padding: 30px 20px 20px;
 }
 
 .Footer__start {
@@ -11,8 +11,8 @@
 }
 
 .Footer__links {
-  justify-content: start;
   align-items: center;
+  justify-content: start;
 }
 
 .Footer__logo {
@@ -25,6 +25,7 @@
 }
 
 @media screen and (min-width: 700px) {
+
   .Footer {
     display: flex;
   }
