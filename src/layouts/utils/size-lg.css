@@ -3,7 +3,8 @@
  * Size: breakpoint 3 (large)
  */
 
-@media ($lg-viewport) {
+@media (--lg-viewport) {
+
   /* Proportional widths: breakpoint 3 (large)
      ======================================================================== */
 

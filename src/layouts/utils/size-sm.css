@@ -3,7 +3,8 @@
  * Size: breakpoint 1 (small)
  */
 
-@media ($sm-viewport) {
+@media (--sm-viewport) {
+
   /* Proportional widths: breakpoint 1 (small)
      ======================================================================== */
 

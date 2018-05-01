@@ -9,9 +9,9 @@
 }
 
 .AboutUs__heading {
-  font-family: "CircularStd";
+  color: #0f007a;
+  font-family: "CircularStd", sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: normal;
-  color: #0F007A;
 }

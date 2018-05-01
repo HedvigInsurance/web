@@ -4,11 +4,11 @@
 }
 
 .Contact__header {
-  font-size: 28px;
-  line-height: 32px;
-  font-family: "CircularStd";
   color: #0f007a;
+  font-family: "CircularStd", sans-serif;
+  font-size: 28px;
   font-weight: 400;
+  line-height: 32px;
   margin: 2em 0;
   text-align: center;
 }
@@ -19,11 +19,12 @@
 }
 
 .Contact__text {
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
+
   .Contact__article {
     padding: 5em 0;
   }

@@ -1,16 +1,16 @@
 .CallToAction {
-  text-align: center;
-  background-color: #F9FAFC;
-  padding: 2em 0;
+  background-color: #f9fafc;
   margin: 2em 0 0;
+  padding: 2em 0;
+  text-align: center;
 }
 
 .CallToAction__heading {
+  color: #0f007a;
+  font-family: "CircularStd", sans-serif;
   font-size: 28px;
-  font-family: "CircularStd";
   font-weight: 400;
   line-height: normal;
-  color: #0F007A;
   margin: 0.5em 0 1em;
   padding: 15px;
 }
@@ -20,6 +20,7 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .CallToAction__heading {
     font-size: 40px;
   }

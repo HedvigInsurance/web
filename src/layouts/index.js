@@ -6,7 +6,7 @@ import 'normalize.css';
 import 'purecss/build/base.css';
 import 'purecss/build/grids.css';
 import 'purecss/build/grids-responsive.css';
-import './style.scss';
+import './style.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>

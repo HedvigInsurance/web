@@ -3,35 +3,35 @@
 }
 
 .WaterDamage__relative-container {
-  position: relative;
   overflow: auto;
+  position: relative;
 }
 
 .WaterDamage__animations {
-  display: flex;
   background-image: url("/assets/web/splash/backdrop.svg");
   background-size: cover;
-  width: 100%;
+  display: flex;
   float: left;
+  width: 100%;
 }
 
 .WaterDamage__text {
-  position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
   text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .WaterDamage__heading {
-  font-family: "CircularStd";
+  color: #0f007a;
+  font-family: "CircularStd", sans-serif;
+  font-size: 28px;
   font-weight: 400;
   line-height: normal;
-  font-size: 28px;
-  color: #0F007A;
-  white-space: nowrap;
   margin: 0;
   padding: 0 15px;
+  white-space: nowrap;
 }
 
 .WaterDamage__subtext {
@@ -39,6 +39,7 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .WaterDamage__heading {
     font-size: 40px;
   }

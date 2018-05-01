@@ -1,14 +1,14 @@
 .Button {
-  font-family: "CircularStd";
+  align-items: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  font-family: "CircularStd", sans-serif;
   font-size: 18px;
+  justify-content: center;
   line-height: 22px;
   padding: 12px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
 }
 
 .Button a {
@@ -21,12 +21,12 @@
 }
 
 .Button--purple {
-  background-color: #651EFF;
+  background-color: #651eff;
   color: white;
 }
 
 .Button--blackPurple {
-  background-color: #0F007A;
+  background-color: #0f007a;
   color: white;
 }
 
@@ -40,29 +40,30 @@
 
 .Button__white-round {
   background-color: white;
-  color: #651eff;
+  border: 1px solid #651eff;
   border-radius: 24px;
-  font-family: "CircularStd";
+  color: #651eff;
+  font-family: "CircularStd", sans-serif;
   font-size: 18px;
   line-height: 22px;
   padding: 12px 24px;
   text-align: center;
-  border: 1px solid #651eff;
 }
 
 .Button__white-round:active {
-  color: white;
   background-color: #651eff;
+  color: white;
 }
 
 @keyframes Button__slideFromRight {
+
   from {
-    transform: translateX(100px);
     animation-timing-function: ease-in;
+    transform: translateX(100px);
   }
 
   to {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
@@ -71,48 +72,49 @@
 }
 
 .Button__inactive {
-  opacity: 0.3;
   cursor: default;
+  opacity: 0.3;
 }
 
 .Button__turquoise-round {
+  background-color: #1be9b6;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  color: white;
+  font-family: "CircularStd", sans-serif;
   font-size: 18px;
   padding: 12px 24px;
-  background-color: #1BE9B6;
-  color: white;
-  border-radius: 24px;
-  font-family: "CircularStd";
   text-align: center;
-  border: 1px solid transparent;
 }
 
 @keyframes Button__slideDown {
+
   from {
     margin-bottom: 20px;
   }
 
   to {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
 .Button__slideDown {
-  overflow-y: hidden;
   animation: Button__slideDown 0.1s linear;
-  margin-left: auto;
-  white-space: nowrap;
   font-size: 16px;
+  margin-left: auto;
+  overflow-y: hidden;
   padding: 10px 20px;
+  white-space: nowrap;
 }
 
 .Button__black-purple-round {
-  background-color: #0F007A;
-  font-family: "CircularStd";
+  background-color: #0f007a;
+  border: 1px solid white;
+  border-radius: 24px;
+  color: white;
+  font-family: "CircularStd", sans-serif;
   font-size: 18px;
   line-height: 22px;
   padding: 12px 24px;
   text-align: center;
-  color: white;
-  border: 1px solid white;
-  border-radius: 24px;
 }

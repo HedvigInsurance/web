@@ -3,7 +3,6 @@
   "version": "1.2.0",
   "private": true,
   "dependencies": {
-    "autoprefixer": "^8.4.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -28,7 +27,6 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-google-tagmanager": "^1.0.16",
     "gatsby-plugin-netlify": "^1.0.12",
-    "gatsby-plugin-postcss-sass": "^1.0.20",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-source-filesystem": "^1.5.35",
     "gatsby-transformer-json": "^1.0.17",
@@ -38,9 +36,9 @@
     "jsdom": "^11.6.2",
     "lint-staged": "^7.0.0",
     "normalize.css": "^8.0.0",
-    "pixrem": "^4.0.1",
     "prettier": "^1.11.1",
     "prettier-eslint-cli": "^4.7.1",
+    "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.6.0",
     "purecss": "^1.0.0",
     "react": "^16.2.0",
@@ -51,6 +49,11 @@
     "react-router-dom": "^4.2.2",
     "react-router-enzyme-context": "^1.2.0",
     "react-visibility-sensor": "^3.11.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-suitcss": "^14.0.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-selector-bem-pattern": "^2.0.0",
     "svgr": "^1.9.1"
   },
   "scripts": {
@@ -60,7 +63,8 @@
     "lint": "./node_modules/.bin/eslint .",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format": "prettier-eslint --write \"src/**/*.js\""
+    "format-js": "prettier-eslint --write -q \"src/**/*.js\"",
+    "format-css": "prettier-stylelint --write -q \"src/**/*.css\""
   },
   "husky": {
     "hooks": {
@@ -68,9 +72,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"],
+    "*.css": ["prettier-stylelint --write", "git add"]
   }
 }

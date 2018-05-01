@@ -7,7 +7,8 @@
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
-@media ($md-viewport) {
+@media (--md-viewport) {
+
   .u-md-afterNone {
     margin-right: 0 !important;
   }

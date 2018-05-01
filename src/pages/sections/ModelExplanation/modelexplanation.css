@@ -14,11 +14,11 @@
 }
 
 .ModelExplanation__heading {
+  color: #0f007a;
+  font-family: "CircularStd", sans-serif;
   font-size: 28px;
-  font-family: "CircularStd";
   font-weight: 400;
   line-height: normal;
-  color: #0F007A;
   margin: 0;
 }
 
@@ -36,6 +36,7 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .ModelExplanation__heading {
     font-size: 40px;
   }

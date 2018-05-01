@@ -1,44 +1,45 @@
 .Splash {
+  height: auto;
   margin: 62px 0 0;
   width: 100%;
-  height: auto;
 }
 
 .Splash__text {
-  margin-top: 3em;
-  text-align: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  margin-top: 3em;
   padding: 0 20px;
+  text-align: center;
 }
 
 .Splash__heading {
-  font-family: 'CircularStd';
-  font-weight: 400;
+  font-family: "CircularStd", sans-serif;
   font-size: 45px;
+  font-weight: 400;
   line-height: normal;
-  margin: 0;
   line-height: 1.35;
+  margin: 0;
   margin-bottom: 10px;
 }
 
 .Splash__subheading {
   display: block;
-  margin: 0 auto;
-  font-family: 'CircularStd';
-  font-weight: 500;
+  font-family: "CircularStd", sans-serif;
   font-size: 18px;
-  margin-bottom: 27px;
+  font-weight: 500;
   line-height: 1.35;
+  margin: 0 auto;
+  margin-bottom: 27px;
 }
 
 .Splash__hero-animation {
-  padding: 20px 0 30px;
   min-height: 250px;
+  padding: 20px 0 30px;
 }
 
 @media screen and (min-width: 375px) {
+
   .Splash__text {
     padding: 0 30px;
   }
@@ -55,6 +56,7 @@
 }
 
 @media screen and (min-width: 480px) {
+
   .Splash__heading {
     font-size: 65px;
     line-height: 75px;
@@ -62,14 +64,15 @@
 }
 
 @media screen and (min-width: 1024px) {
+
   .Splash {
     height: 85vh;
   }
 
   .Splash__text {
     margin-top: 0;
-    text-align: left;
     padding: 0;
+    text-align: left;
   }
 
   .Splash__heading {
