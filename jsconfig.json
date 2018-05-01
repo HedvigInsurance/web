@@ -3,7 +3,8 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "src/*": ["src/*"]
+      "src/*": ["src/*"],
+      "assets/*": ["static/assets/*"]
     },
     "jsx": "react",
     "moduleResolution": "node"
