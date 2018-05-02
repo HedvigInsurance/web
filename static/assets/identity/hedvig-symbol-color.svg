@@ -1,0 +1,31 @@
+<svg width="16" height="22" viewBox="0 0 16 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" fill="none">
+<g id="hedvig-symbol-color" clip-path="url(#clip0)">
+<g id="Group 2">
+<g id="Group">
+<g id="Vector">
+<path d="M 3.21477 0L 0 0L 0 7.67203L 3.21477 7.67203L 3.21477 0Z" transform="translate(12.4843 14.2755)" fill="#0F007A"/>
+</g>
+</g>
+<g id="Group_2">
+<g id="Vector_2">
+<path d="M 3.21477 0L 0 0L 0 21.9326L 3.21477 21.9326L 3.21477 0Z" fill="#0F007A"/>
+</g>
+</g>
+<g id="Group_3">
+<g id="Vector_3">
+<path d="M 15.699 7.97949L 12.4843 7.97949C 12.4843 5.38798 10.4084 3.265 7.84231 3.265C 5.29068 3.265 3.20035 5.37334 3.20035 7.97949L 0 7.97949C 0 3.57247 3.51751 0 7.85673 0C 12.1959 0 15.699 3.57247 15.699 7.97949Z" transform="translate(0 6.29584)" fill="#FF8A80"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+
+<clipPath id="clip0">
+<rect width="16" height="22" fill="white"/>
+</clipPath>
+
+</defs>
+</svg>
+
