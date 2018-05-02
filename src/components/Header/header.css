@@ -1,7 +1,6 @@
 .Header {
-  background-color: white;
-  border-bottom: solid 1px #f1f3f7;
   height: 62px;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -53,7 +52,6 @@
 }
 
 .Header__menu__link {
-  font-size: 16px;
   margin: 0 20px;
   position: relative;
   top: 18px;

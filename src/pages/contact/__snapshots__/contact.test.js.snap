@@ -13,10 +13,6 @@ exports[`<Contact /> Should render correctly 1`] = `
     </title>
   </HelmetWrapper>
   <Header />
-  <Hero
-    alt="Map centered on Hedvigs Office at Norrsken"
-    imageUrl="/assets/web/Images/map.png"
-  />
   <article
     className="pure-g Contact__article"
   >

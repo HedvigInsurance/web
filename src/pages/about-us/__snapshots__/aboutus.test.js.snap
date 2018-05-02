@@ -13,10 +13,6 @@ exports[`<AboutUs /> Should render correctly 1`] = `
     </title>
   </HelmetWrapper>
   <Header />
-  <Hero
-    alt="Hedvig office at Norrsken"
-    imageUrl="/assets/web/Images/Norrsken-4.jpg"
-  />
   <article
     className="pure-g pure-centered AboutUs__text"
   >

@@ -1,42 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> Should render correctly 1`] = `
-<footer>
+<footer
+  className="u-backgroundPrimaryDarkBlue"
+>
   <div
-    className="Footer"
+    className="u-flexRow"
   >
     <div
-      className="Footer__start"
+      className="u-flexGrow1"
     >
       <div
-        className="Footer__links"
+        className="u-flexAlignItemsCenter u-flexJustifyStart"
       >
-        <div
-          className="Footer__logo"
-        >
-          <a
-            href="/"
-          >
-            <ReactComponent
-              ariaLabel="Hedvig logo"
-              role="img"
-            />
-          </a>
-        </div>
         <nav
           className=""
         >
           <GatsbyLink
-            className="Footer__link"
+            className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+            to="/about-us"
+          >
+            Om hedvig
+          </GatsbyLink>
+          <GatsbyLink
+            className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+            to="/faq"
+          >
+            Vanliga frågor
+          </GatsbyLink>
+          <GatsbyLink
+            className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
             to="/contact"
           >
             Kontakt
           </GatsbyLink>
           <GatsbyLink
-            className="Footer__link"
+            className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
             to="/legal"
           >
-            Legal information
+            Legal information
           </GatsbyLink>
         </nav>
       </div>

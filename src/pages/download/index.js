@@ -27,7 +27,7 @@ const Download = () => (
             className="Download__social-icon"
           >
             <img
-              src="/assets/web/appstores/app-store-badge@2x.png"
+              src="/assets/appstores/app-store-badge@2x.png"
               alt="Ladda ner på App Store"
               height={54}
             />
@@ -39,7 +39,7 @@ const Download = () => (
             className="Download__social-icon"
           >
             <img
-              src="/assets/web/appstores/google-play-badge@2x.png"
+              src="/assets/appstores/google-play-badge@2x.png"
               alt="Ladda ner på Google Play"
               height={54}
             />
