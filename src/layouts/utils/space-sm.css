@@ -1,0 +1,6 @@
+@media (--sm-viewport) {
+
+  .u-sm-spacePT1 {
+    padding-top: 50px !important;
+  }
+}

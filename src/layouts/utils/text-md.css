@@ -1,0 +1,6 @@
+@media (--md-viewport) {
+
+  .u-md-textCenter {
+    text-align: center !important;
+  }
+}

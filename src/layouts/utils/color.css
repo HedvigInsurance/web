@@ -1,0 +1,51 @@
+.u-colorWhite {
+  color: #fff !important;
+}
+
+.u-colorBlack {
+  color: #000 !important;
+}
+
+.u-colorPrimaryBlack {
+  color: var(--color-primaryBlack) !important;
+}
+
+.u-colorPrimaryDarkBlue {
+  color: var(--color-primaryDarkBlue) !important;
+}
+
+.u-colorPrimaryBlue {
+  color: var(--color-primaryBlue) !important;
+}
+
+.u-colorPrimaryPink {
+  color: var(--color-primaryPink) !important;
+}
+
+.u-colorPrimaryGreen {
+  color: var(--color-primaryGreen) !important;
+}
+
+.u-colorPrimaryPurple {
+  color: var(--color-primaryPurple) !important;
+}
+
+.u-colorPrimaryGrey {
+  color: var(--color-primaryGrey) !important;
+}
+
+.u-colorSecondaryPink {
+  color: var(--color-secondaryPink) !important;
+}
+
+.u-colorSecondaryGreen {
+  color: var(--color-secondaryGreen) !important;
+}
+
+.u-colorSecondaryPurple {
+  color: var(--color-secondaryPurple) !important;
+}
+
+.u-colorSecondaryGrey {
+  color: var(--color-secondaryGrey) !important;
+}

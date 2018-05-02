@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import 'normalize.css';
-import 'purecss/build/base.css';
-import 'purecss/build/grids.css';
-import 'purecss/build/grids-responsive.css';
 import './style.css';
 
 const TemplateWrapper = ({ children }) => (
