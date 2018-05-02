@@ -1,0 +1,51 @@
+.u-fillWhite > * {
+  fill: #fff !important;
+}
+
+.u-fillBlack > * {
+  fill: #000 !important;
+}
+
+.u-fillPrimaryBlack > * {
+  fill: var(--color-primaryBlack) !important;
+}
+
+.u-fillPrimaryDarkBlue > * {
+  fill: var(--color-primaryDarkBlue) !important;
+}
+
+.u-fillPrimaryBlue > * {
+  fill: var(--color-primaryBlue) !important;
+}
+
+.u-fillPrimaryPink > * {
+  fill: var(--color-primaryPink) !important;
+}
+
+.u-fillPrimaryGreen > * {
+  fill: var(--color-primaryGreen) !important;
+}
+
+.u-fillPrimaryPurple > * {
+  fill: var(--color-primaryPurple) !important;
+}
+
+.u-fillPrimaryGrey > * {
+  fill: var(--color-primaryGrey) !important;
+}
+
+.u-fillSecondaryPink > * {
+  fill: var(--color-secondaryPink) !important;
+}
+
+.u-fillSecondaryGreen > * {
+  fill: var(--color-secondaryGreen) !important;
+}
+
+.u-fillSecondaryPurple > * {
+  fill: var(--color-secondaryPurple) !important;
+}
+
+.u-fillSecondaryGrey > * {
+  fill: var(--color-secondaryGrey) !important;
+}

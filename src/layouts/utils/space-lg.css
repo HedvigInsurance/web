@@ -1,0 +1,6 @@
+@media (--lg-viewport) {
+
+  .u-lg-spacePT1 {
+    padding-top: 50px !important;
+  }
+}

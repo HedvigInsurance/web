@@ -1,29 +1,52 @@
 :root {
-  --color-text-body: #212121;
+  --color-primaryBlack: #212121;
+  --color-primaryDarkBlue: #141033;
+  --color-primaryBlue: #100079;
+  --color-primaryPink: #ff8a80;
+  --color-primaryGreen: #1be9b6;
+  --color-primaryPurple: #651eff;
+  --color-primaryGrey: #e9ecef;
 
-  --color-primary-black: #141033;
-  --color-primary-blue: #100079;
-  --color-primary-pink: #ff8a80;
-  --color-primary-green: #1be9b6;
-  --color-primary-purple: #651eff;
-  --color-primary-grey: #e9ecef;
-
-  --color-secondary-pink: #fff3f2;
-  --color-secondary-green: #e8fcf7;
-  --color-secondary-purple: #efe8ff;
-  --color-secondary-grey: #f9fafc;
+  --color-secondaryPink: #fff3f2;
+  --color-secondaryGreen: #e8fcf7;
+  --color-secondaryPurple: #efe8ff;
+  --color-secondaryGrey: #f9fafc;
 
   --Grid-gutterSize: 25px;
   --Arrange-gutterSize: 10px;
 
-  --fontSize-1: 34px;
-  --fontSize-2: 28px;
-  --fontSize-3: 24px;
-  --fontSize-4: 20px;
-  --fontSize-5: 18px;
-  --fontSize-6: 16px;
+  --fontSize1: 120px;
+  --fontSize2: 60px;
+  --fontSize3: 50px;
+  --fontSize4: 40px;
+  --fontSize5: 36px;
+  --fontSize6: 32px;
+  --fontSize7: 28px;
+  --fontSize8: 24px;
+  --fontSize9: 18px;
+  --fontSize10: 16px;
+
+  --lineHeight1: 120px;
+  --lineHeight2: 66px;
+  --lineHeight3: 56px;
+  --lineHeight4: 54px;
+  --lineHeight5: 50px;
+  --lineHeight6: 38px;
+  --lineHeight7: 35px;
+  --lineHeight8: 32px;
+  --lineHeight9: 28px;
+  --lineHeight10: 24px;
+
+  --fontWeightBook: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 600;
+  --fontWeightSuper: 800;
+
+  --fontFamilyBody: "CircularStd";
+  --fontFamilyHeader: "SoRay";
+  --fontFamilyHero: "GT-Super-Display";
 }
 
-@custom-media --sm-viewport (min-width: 320px) and (max-width: 599px);
+@custom-media --sm-viewport (max-width: 599px);
 @custom-media --md-viewport (min-width: 600px) and (max-width: 959px);
 @custom-media --lg-viewport (min-width: 960px);

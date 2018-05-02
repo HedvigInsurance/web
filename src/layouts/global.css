@@ -19,13 +19,13 @@ button,
 input,
 select,
 textarea {
-  font-family: "CircularStd", sans-serif;
-  font-size: 18px;
-  line-height: 1.3;
+  font-family: var(--fontFamilyBody), sans-serif;
+  font-size: var(--fontSize10);
+  line-height: var(--lineHeight10);
 }
 
 body {
-  color: var(--color-text-body);
+  color: var(--color-primaryBlack);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -87,6 +87,12 @@ ul {
   padding: 0;
 }
 
+a,
+a:visited {
+  color: var(--color-primaryBlack);
+  text-decoration: underline;
+}
+
 /**
  * Suppress the focus outline on elements that cannot be accessed via keyboard.
  * This prevents an unwanted focus outline from appearing around elements that
@@ -95,44 +101,4 @@ ul {
 
 [tabindex="-1"]:focus {
   outline: none !important;
-}
-
-a,
-a:visited {
-  color: var(--color-text-body);
-  text-decoration: underline;
-}
-
-h1,
-.u-textHeading1 {
-  font-size: var(--fontSize-1);
-}
-
-h2,
-.u-textHeading2 {
-  font-size: var(--fontSize-2);
-}
-
-h3,
-.u-textHeading3 {
-  font-size: var(--fontSize-3);
-}
-
-h4,
-.u-textHeading4 {
-  font-size: var(--fontSize-4);
-}
-
-h5,
-.u-textHeading5 {
-  font-size: var(--fontSize-5);
-}
-
-h6,
-.u-textHeading6 {
-  font-size: var(--fontSize-6);
-}
-
-p {
-  font-size: var(--fontSize-6);
 }
