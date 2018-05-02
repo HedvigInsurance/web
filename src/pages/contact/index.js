@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import Hero from 'src/components/Hero';
-import './contact.css';
+import './Contact.css';
 
 const Contact = () => (
   <main className="Contact">
@@ -12,17 +11,41 @@ const Contact = () => (
       <title>Kontakt | Hedvig</title>
     </Helmet>
     <Header />
-    <Hero imageUrl="/assets/web/Images/map.png" alt="Map centered on Hedvigs Office at Norrsken" />
-    <article className="pure-g Contact__article">
-      <h1 className="pure-u-1-1 Contact__header">Vill du komma i kontakt med oss?</h1>
-      <section className="pure-u-1-1 Contact__text">
-        <a href="mailto:hedvig@hedvig.com">hedvig@hedvig.com</a>
-        <br />
-        <a href="mailto:press@hedvig.com">press@hedvig.com</a>
-        <br />
-        <a href="mailto:careers@hedvig.com">careers@hedvig.com</a>
-        <br />
-      </section>
+    <article className="">
+      <div className="Container">
+        <h1 className="u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
+          Vill du komma i kontakt med oss?
+        </h1>
+        <section className="Grid">
+          <div className="u-md-size1of3 u-lg-size1of3">
+            <a
+              className="Button u-backgroundPrimaryBlack
+                     u-lg-fontSize9 u-colorWhite"
+              href="mailto:hedvig@hedvig.com"
+            >
+              hedvig@hedvig.com
+            </a>
+          </div>
+          <div className="u-md-size1of3 u-lg-size1of3">
+            <a
+              className="Button u-backgroundPrimaryBlack
+                     u-lg-fontSize9 u-colorWhite"
+              href="mailto:press@hedvig.com"
+            >
+              press@hedvig.com
+            </a>
+          </div>
+          <div className="u-md-size1of3 u-lg-size1of3">
+            <a
+              className="Button u-backgroundPrimaryBlack
+                     u-lg-fontSize9 u-colorWhite"
+              href="mailto:careers@hedvig.com"
+            >
+              careers@hedvig.com
+            </a>
+          </div>
+        </section>
+      </div>
     </article>
     <Footer />
   </main>

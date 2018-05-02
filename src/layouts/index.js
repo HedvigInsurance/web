@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import 'normalize.css';
-import './style.css';
+import '../css/style.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>

@@ -1,43 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> Should render correctly 1`] = `
-<footer>
+<footer
+  className="u-backgroundPrimaryDarkBlue"
+>
   <div
-    className="Footer"
+    className="Container u-flexRow"
   >
     <div
-      className="Footer__start"
+      className="u-flexGrow1"
     >
       <div
-        className="Footer__links"
+        className="u-flexAlignItemsCenter u-flexJustifyStart"
       >
-        <div
-          className="Footer__logo"
-        >
-          <a
-            href="/"
-          >
-            <ReactComponent
-              ariaLabel="Hedvig logo"
-              role="img"
-            />
-          </a>
-        </div>
         <nav
-          className=""
+          className="Grid"
         >
-          <GatsbyLink
-            className="Footer__link"
-            to="/contact"
+          <div
+            className="u-md-size1of2 u-lg-size1of2"
           >
-            Kontakt
-          </GatsbyLink>
-          <GatsbyLink
-            className="Footer__link"
-            to="/legal"
+            <GatsbyLink
+              className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/about-us"
+            >
+              Om hedvig
+            </GatsbyLink>
+            <GatsbyLink
+              className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/faq"
+            >
+              Vanliga frågor
+            </GatsbyLink>
+          </div>
+          <div
+            className="u-md-size1of2 u-lg-size1of2"
           >
-            Legal information
-          </GatsbyLink>
+            <GatsbyLink
+              className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/contact"
+            >
+              Kontakt
+            </GatsbyLink>
+            <GatsbyLink
+              className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/legal"
+            >
+              Legal information
+            </GatsbyLink>
+          </div>
         </nav>
       </div>
     </div>

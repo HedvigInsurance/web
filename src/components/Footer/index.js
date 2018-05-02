@@ -1,26 +1,42 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { ReactComponent as Logo } from 'assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg';
 
-import './footer.css';
+import './Footer.css';
 
 const Footer = () => (
-  <footer>
-    <div className="Footer">
-      <div className="Footer__start">
-        <div className="Footer__links">
-          <div className="Footer__logo">
-            <a href="/">
-              <Logo role="img" ariaLabel="Hedvig logo" />
-            </a>
-          </div>
-          <nav className="">
-            <Link className="Footer__link" to="/contact">
-              Kontakt
-            </Link>
-            <Link className="Footer__link" to="/legal">
-              Legal&nbsp;information
-            </Link>
+  <footer className="u-backgroundPrimaryDarkBlue">
+    <div className="Container u-flexRow">
+      <div className="u-flexGrow1">
+        <div className="u-flexAlignItemsCenter u-flexJustifyStart">
+          <nav className="Grid">
+            <div className="u-md-size1of2 u-lg-size1of2">
+              <Link
+                className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/about-us"
+              >
+                Om hedvig
+              </Link>
+              <Link
+                className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/faq"
+              >
+                Vanliga frågor
+              </Link>
+            </div>
+            <div className="u-md-size1of2 u-lg-size1of2">
+              <Link
+                className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/contact"
+              >
+                Kontakt
+              </Link>
+              <Link
+                className="Footer__link u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/legal"
+              >
+                Legal information
+              </Link>
+            </div>
           </nav>
         </div>
       </div>

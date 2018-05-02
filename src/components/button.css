@@ -1,12 +1,10 @@
 /** @define Button */
 
 :root {
-  --Button-border-color: currentcolor;
-  --Button-border-width: 1px;
   --Button-color: inherit;
   --Button-disabled-opacity: 0.6;
   --Button-font: inherit;
-  --Button-padding: 0.4em 0.75em;
+  --Button-padding: 0.79em 1.9em;
 }
 
 /**
@@ -21,17 +19,20 @@
  * 2. Inherit text color from ancestor.
  * 3. Inherit font styles from ancestor.
  * 4. Prevent button text from being selectable.
+ * 5. Fixes issue in IE 10 where flex-basis is ignored - https://git.io/vllMt
+ *    This ensures it overrides flex-basis set in other utilities.
+ *    - Sizes the item based on the width/height properties
  */
 
 .Button {
   background: transparent;
-  border-color: var(--Button-border-color);
-  border-radius: 0;
-  border-style: solid;
-  border-width: var(--Button-border-width);
+  border-radius: 112px;
+  border-style: none;
   box-sizing: border-box; /* 1 */
   color: var(--Button-color); /* 2 */
   display: inline-block;
+  flex: 0 1 auto !important;
+  flex-basis: auto !important; /* 4 */
   font: var(--Button-font); /* 3 */
   margin: 0;
   padding: var(--Button-padding);
