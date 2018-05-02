@@ -20,7 +20,7 @@
 
 ```js
 import Button from 'src/components/Button';
-import { ReactComponent as Logo } from 'assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg';
+import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
 import './footer.css';
 ```
 
