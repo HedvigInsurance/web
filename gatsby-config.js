@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Hedvig',
+    siteUrl: `https://hedvig.com`,
   },
   plugins: [
     {
@@ -40,6 +41,9 @@ module.exports = {
     },
     {
       resolve: 'gatsby-transformer-sharp',
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
     },
   ],
 };
