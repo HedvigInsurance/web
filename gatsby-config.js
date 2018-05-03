@@ -60,5 +60,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify',
     },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#651eff',
+      },
+    },
   ],
 };
