@@ -35,5 +35,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
     },
+    {
+      resolve: 'gatsby-plugin-sharp',
+    },
+    {
+      resolve: 'gatsby-transformer-sharp',
+    },
   ],
 };
