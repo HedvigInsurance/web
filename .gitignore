@@ -16,6 +16,9 @@ public/
 .eslintcache
 .node_repl_history
 
+# chrome debugger cache
+.vscode/chrome
+
 # dotenv environment variables
 .env.local
 .env.development.local

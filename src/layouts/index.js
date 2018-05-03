@@ -8,7 +8,7 @@ import 'src/css/style.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
-      <title>Hedvig</title>
+      <title>Hedvig | Insurance. Unbroken.</title>
     </Helmet>
     <div>{children()}</div>
   </div>

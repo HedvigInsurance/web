@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Download /> Should render correctly 1`] = `
+<main
+  className="Site"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Ladda ner appen | Hedvig
+    </title>
+  </HelmetWrapper>
+  <Header
+    isInverted={false}
+  />
+  <article
+    className="Site-content"
+  >
+    <div
+      className="Container"
+    >
+      <div
+        className="u-textCenter"
+      >
+        <h1
+          className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2"
+        >
+          Ladda ner appen
+        </h1>
+        <h2
+          className="u-spaceMB10 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
+        >
+          Sök efter Hedvig i din Store för att komma igång.
+        </h2>
+      </div>
+      <div
+        className="u-spaceMB5"
+      >
+        <div
+          className="u-textCenter"
+        >
+          <a
+            className="Download__social-icon"
+            href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Ladda ner på App Store"
+              height={54}
+              src="/assets/appstores/app-store-badge@2x.png"
+            />
+          </a>
+          <a
+            className="Download__social-icon"
+            href="https://play.google.com/store/apps/details?id=com.hedvig.app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Ladda ner på Google Play"
+              height={54}
+              src="/assets/appstores/google-play-badge@2x.png"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <Footer />
+</main>
+`;

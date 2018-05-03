@@ -12,8 +12,14 @@
   --color-secondaryPurple: #efe8ff;
   --color-secondaryGrey: #f9fafc;
 
-  --Grid-gutterSize: 25px;
-  --Arrange-gutterSize: 10px;
+  --fontFamilyBody: "CircularStd";
+  --fontFamilyHeader: "SoRay";
+  --fontFamilyHero: "GT-Super-Display";
+
+  --fontWeightBook: 400;
+  --fontWeightMedium: 500;
+  --fontWeightBold: 600;
+  --fontWeightSuper: 800;
 
   --fontSize1: 120px;
   --fontSize2: 60px;
@@ -37,16 +43,23 @@
   --lineHeight9: 28px;
   --lineHeight10: 24px;
 
-  --fontWeightBook: 400;
-  --fontWeightMedium: 500;
-  --fontWeightBold: 600;
-  --fontWeightSuper: 800;
+  --Grid-gutterSize: 25px;
+  --Arrange-gutterSize: 10px;
 
-  --fontFamilyBody: "CircularStd";
-  --fontFamilyHeader: "SoRay";
-  --fontFamilyHero: "GT-Super-Display";
+  --space1: 140px;
+  --space2: 125px;
+  --space3: 100px;
+  --space4: 75px;
+  --space5: 62.5px;
+  --space6: 50px;
+  --space7: 40px;
+  --space8: 30px;
+  --space9: 25px;
+  --space10: 20px;
+  --space11: 15px;
+  --space12: 10px;
 }
 
-@custom-media --sm-viewport (max-width: 599px);
-@custom-media --md-viewport (min-width: 600px) and (max-width: 959px);
+@custom-media --sm-viewport (max-width: 639px);
+@custom-media --md-viewport (min-width: 640px) and (max-width: 959px);
 @custom-media --lg-viewport (min-width: 960px);

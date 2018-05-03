@@ -1,93 +1,171 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
 import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
 
 import './Header.css';
 
 class Header extends React.Component {
   state = {
-    isActive: false,
+    popoverIsActive: false,
   };
 
-  togglePopover = () => {
-    this.setState({ isActive: !this.state.isActive });
+  componentWillUnmount() {
+    this.dismiss();
+  }
+
+  documentOnClickHandler = (event) => {
+    const { popoverIsActive } = this.state;
+    const clickedOutside = !this.popoverElem.contains(event.target);
+
+    if (popoverIsActive && clickedOutside) {
+      this.dismiss();
+    }
   };
+
+  togglePopover = (event) => {
+    // Prevent documentOnClickHandler immediately hiding the popover
+    event.stopPropagation();
+
+    const popoverIsActive = !this.state.popoverIsActive;
+    if (popoverIsActive) {
+      this.show();
+    } else {
+      this.dismiss();
+    }
+    this.setState({ popoverIsActive });
+  };
+
+  show() {
+    this.setState({ popoverIsActive: true });
+    document.addEventListener('click', this.documentOnClickHandler, false);
+  }
+
+  dismiss() {
+    this.setState({ popoverIsActive: false });
+    document.removeEventListener('click', this.documentOnClickHandler, false);
+  }
 
   render() {
-    const nav = (
-      <div className="u-flex u-flexRow">
-        <Link
-          to="/about-us"
-          className="Header__menu__link u-linkBlock u-colorWhite u-lg-fontSize9"
-        >
-          Om Hedvig
-        </Link>
-        <Link
-          to="/faq"
-          className="Header__menu__link u-linkBlock u-colorWhite u-lg-fontSize9"
-        >
-          Vanliga frågor
-        </Link>
-        <Link
-          to="/contact"
-          className="Header__menu__link u-linkBlock u-colorWhite u-lg-fontSize9"
-        >
-          Kontakt
-        </Link>
-      </div>
-    );
-    const cta = (
-      <a
-        href="https://hedvig.app.link/kZNtW0cT9L"
-        id="cta-app-download"
-        className="Button Header__cta"
-      >
-        Ladda ner appen
-      </a>
-    );
+    const { isInverted } = this.props;
+    const { popoverIsActive } = this.state;
+
+    const logoClassNames = classNames({
+      'Header-logo__inner': true,
+      'u-fillWhite': isInverted && !popoverIsActive,
+    });
+
+    const burgerClassNames = classNames({
+      'Header-burger': true,
+      'u-md-hidden': true,
+      'u-lg-hidden': true,
+      'is-inverted': isInverted && !popoverIsActive,
+      'is-active': popoverIsActive,
+    });
+
+    const popoverClassNames = classNames({
+      'Header-popover': true,
+      'u-md-hidden': true,
+      'u-lg-hidden': true,
+      'is-active': popoverIsActive,
+    });
+
+    const links = [
+      {
+        path: '/about-us',
+        label: 'Om Hedvig',
+      },
+      {
+        path: '/faq',
+        label: 'Vanliga frågor',
+      },
+      {
+        path: '/giving-back',
+        label: 'Hur vi ger tillbaka',
+      },
+    ];
+
+    const menuLinkClassNames = classNames({
+      'Header-menu-link': true,
+      'u-linkBlock': true,
+      'u-lg-fontSize9': true,
+      'u-colorWhite': isInverted,
+    });
 
     return (
-      <div className="u-flex u-flexJustifyCenter">
-        <header className="Header Container">
-          <div className="u-flex u-flexRow">
+      <header className="Header" style={{ zIndex: 2 }}>
+        <div className="Container">
+          <div className="u-flex">
             <div className="u-flexGrow1">
-              <Link to="/" className="Header__logo">
-                <Logo
-                  className="Header__logo__inner u-fillWhite"
-                  alt="Hedvig"
-                />
+              <Link to="/" className="Header-logo">
+                <Logo className={logoClassNames} alt="Hedvig" />
               </Link>
             </div>
 
-            <div className="">
-              <nav className="Header__menu">{nav}</nav>
-              <button
-                className={[
-                  'Header__burger',
-                  this.state.isActive && 'isActive',
-                ].join(' ')}
-                onClick={this.togglePopover}
-              >
-                <span className="Header__burger__line" />
-                <h2 className="Header__burger__line">Meny</h2>
-                <span className="Header__burger__line" />
+            <div>
+              <nav className="Header-menu u-hidden u-md-block u-lg-block">
+                <div className="u-flex u-flexRow">
+                  {links.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className={menuLinkClassNames}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
+              <button className={burgerClassNames} onClick={this.togglePopover}>
+                <span className="Header-burger-line" />
+                <h2 className="Header-burger-line">Meny</h2>
+                <span className="Header-burger-line" />
               </button>
             </div>
 
             <div
-              className={[
-                'Header__popover',
-                this.state.isActive && 'isActive',
-              ].join(' ')}
+              className={popoverClassNames}
+              ref={(popoverElem) => {
+                this.popoverElem = popoverElem;
+              }}
             >
-              {nav}
-              {cta}
+              <div>
+                {links.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="u-spacePV11 u-linkBlock u-lg-fontSize9"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="u-textCenter u-spacePT10">
+                <a
+                  className="Button u-colorWhite
+                            u-lg-fontSize9 u-backgroundPrimaryPurple"
+                  href="https://hedvig.app.link/kZNtW0cT9L"
+                  id="cta-app-download"
+                >
+                  Ladda ner appen
+                </a>
+              </div>
             </div>
           </div>
-        </header>
-      </div>
+        </div>
+      </header>
     );
   }
 }
+
+Header.propTypes = {
+  isInverted: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  isInverted: false,
+};
 
 export default Header;
