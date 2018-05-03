@@ -49,11 +49,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
-    "react-lazyload": "^2.3.0",
     "react-lottie": "^1.0.0",
     "react-router-dom": "^4.2.2",
     "react-router-enzyme-context": "^1.2.0",
-    "react-visibility-sensor": "^3.11.0",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
@@ -68,8 +66,10 @@
     "lint": "./node_modules/.bin/eslint .",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info --ignore \"coverage/**\"",
-    "format-css": "prettier-stylelint --write -q \"**/*.css\" --ignore \"node_modules/**\" --ignore \"coverage/**\""
+    "format-js":
+      "prettier-eslint --write \"**/*.js\" --log-level info --ignore \"coverage/**\"",
+    "format-css":
+      "prettier-stylelint --write -q \"**/*.css\" --ignore \"node_modules/**\" --ignore \"coverage/**\""
   },
   "husky": {
     "hooks": {
@@ -77,13 +77,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.css": [
-      "prettier-stylelint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"],
+    "*.css": ["prettier-stylelint --write", "git add"]
   }
 }

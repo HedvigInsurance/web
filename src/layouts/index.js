@@ -5,13 +5,10 @@ import Helmet from 'react-helmet';
 import 'normalize.css';
 import 'src/css/style.css';
 
-import config from '../../config/site';
-
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
-      <title>{config.siteTitle}</title>
-      <meta name="description" content={config.siteDescription} />
+      <title>Hedvig</title>
     </Helmet>
     <div>{children()}</div>
   </div>
@@ -22,3 +19,14 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+// ToDo fix me
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

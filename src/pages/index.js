@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { LottieLoader } from 'src/components/LottieLoader';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
 
 import { ReactComponent as SOSBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg';
 import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg';
@@ -17,7 +19,7 @@ if (typeof window !== 'undefined') {
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 const heroAnimation = require('assets/animations/hero/desktop/data.json');
 
-const Landing = () => (
+const Landing = ({ data }) => (
   <main>
     <Helmet title="Hedvig" />
     <div className="u-backgroundPrimaryBlack">
@@ -127,10 +129,9 @@ const Landing = () => (
         </h2>
         <div className="Grid">
           <figure className="u-lg-size1of2 u-lg-flexOrderLast u-textCenter">
-            <img
+            <Img
               className="u-imageContain"
-              width="514"
-              src="/assets/graphics/money-model@2x.png"
+              sizes={data.file.moneyExplainer.sizes}
               alt=""
             />
           </figure>
@@ -343,4 +344,20 @@ const Landing = () => (
   </main>
 );
 
+Landing.propTypes = {
+  data: PropTypes.isRequired,
+};
+
 export default Landing;
+
+export const query = graphql`
+  query HomeMoneyExplainerQuery {
+    file(relativePath: { eq: "money-model@2x.png" }) {
+      moneyExplainer: childImageSharp {
+        sizes(maxWidth: 514) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+  }
+`;

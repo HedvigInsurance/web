@@ -10,7 +10,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-react-helmet',
     },
-    { resolve: 'gatsby-plugin-netlify' },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
@@ -34,22 +33,32 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-json',
-    },
-    {
-      resolve: 'gatsby-plugin-offline',
-    },
-    {
-      resolve: 'gatsby-plugin-sharp',
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${__dirname}/src/img/`,
+      },
     },
     {
       resolve: 'gatsby-transformer-sharp',
     },
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: 'gatsby-plugin-sharp',
+    },
+    {
+      resolve: 'gatsby-transformer-json',
     },
     {
       resolve: 'gatsby-plugin-catch-links',
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+    },
+    {
+      resolve: 'gatsby-plugin-netlify',
     },
   ],
 };
