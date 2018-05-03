@@ -1,7 +1,10 @@
+const siteConfig = require('./config/site');
+
 module.exports = {
   siteMetadata: {
-    title: 'Hedvig',
-    siteUrl: `https://hedvig.com`,
+    title: siteConfig.siteTitle,
+    siteUrl: siteConfig.siteUrl,
+    description: siteConfig.siteDescription,
   },
   plugins: [
     {
@@ -44,6 +47,9 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-catch-links',
     },
   ],
 };
