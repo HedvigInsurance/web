@@ -1,0 +1,6 @@
+@media (--sm-viewport) {
+
+  .u-sm-textCenter {
+    text-align: center !important;
+  }
+}

@@ -1,39 +1,4 @@
 .Footer {
-  background-color: #0f007a;
-  padding: 30px 20px 20px;
-  display: block;
-  flex-direction: row;
-}
 
-.Footer__start {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.Footer__links {
-  justify-content: start;
-  align-items: center;
-}
-
-.Footer__logo {
-  padding-right: 30px;
-}
-
-.Footer__link {
-  color: white;
-  display: block;
-}
-
-.Footer__icon {
-  height: 28px;
-  width: 84px;
-  background-image: url('/assets/identity/hedvig_wordmark/hedvig_wordmark_white.svg');
-  background-size: 84px 28px;
-  background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 700px) {
-  .Footer {
-    display: flex;
-  }
+  /* display: flex; */
 }

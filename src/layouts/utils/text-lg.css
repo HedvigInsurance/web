@@ -1,0 +1,6 @@
+@media (--lg-viewport) {
+
+  .u-lg-textCenter {
+    text-align: center !important;
+  }
+}

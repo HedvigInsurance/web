@@ -1,0 +1,10 @@
+@media (--sm-viewport) {
+
+  .u-sm-block {
+    display: block !important;
+  }
+
+  .u-sm-hidden {
+    display: none !important;
+  }
+}

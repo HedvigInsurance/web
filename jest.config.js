@@ -14,5 +14,6 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
   moduleNameMapper: {
     '^src(.*)$': '<rootDir>/src$1',
+    '^assets(.*)$': '<rootDir>/static/assets$1',
   },
 };

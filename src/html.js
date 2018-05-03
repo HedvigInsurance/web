@@ -14,7 +14,12 @@ if (process.env.NODE_ENV === 'production') {
 
 let css;
 if (process.env.NODE_ENV === 'production') {
-  css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }} />;
+  css = (
+    <style
+      id="gatsby-inlined-css"
+      dangerouslySetInnerHTML={{ __html: stylesStr }}
+    />
+  );
 }
 
 const HTML = ({
@@ -30,10 +35,13 @@ const HTML = ({
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="theme-color" content="#000000" />
-      <meta property="og:title" content="Hedvig | Hemförsäkring som gör livet lättare" />
+      <meta
+        property="og:title"
+        content="Hedvig | Hemförsäkring som gör livet lättare"
+      />
       <meta
         property="og:image"
-        content="https://www.hedvig.com/assets/web/hedvig_linkedin_02_2x_1024.png"
+        content="https://www.hedvig.com/assets/social/hedvig-linkedin@2x.png"
       />
       <meta property="og:description" content="" />
       <meta property="og:url" content="https://www.hedvig.com" />
@@ -42,13 +50,20 @@ const HTML = ({
       <meta property="og:locale" content="sv_SE" />
       <link rel="manifest" href="/manifest.json" />
       <link rel="shortcut icon" href="/favicon.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
       {headComponents}
       {css}
     </head>
     <body {...bodyAttributes}>
       {preBodyComponents}
-      <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
+      <div
+        key="body"
+        id="___gatsby"
+        dangerouslySetInnerHTML={{ __html: body }}
+      />
       {postBodyComponents}
     </body>
   </html>

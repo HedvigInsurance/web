@@ -1,0 +1,52 @@
+@media (--md-viewport) {
+
+  .u-md-fontSize1 {
+    font-size: var(--fontSize1) !important;
+    line-height: var(--lineHeight1) !important;
+  }
+
+  .u-md-fontSize2 {
+    font-size: var(--fontSize2) !important;
+    line-height: var(--lineHeight2) !important;
+  }
+
+  .u-md-fontSize3 {
+    font-size: var(--fontSize3) !important;
+    line-height: var(--lineHeight3) !important;
+  }
+
+  .u-md-fontSize4 {
+    font-size: var(--fontSize4) !important;
+    line-height: var(--lineHeight4) !important;
+  }
+
+  .u-md-fontSize5 {
+    font-size: var(--fontSize5) !important;
+    line-height: var(--lineHeight5) !important;
+  }
+
+  .u-md-fontSize6 {
+    font-size: var(--fontSize6) !important;
+    line-height: var(--lineHeight6) !important;
+  }
+
+  .u-md-fontSize7 {
+    font-size: var(--fontSize7) !important;
+    line-height: var(--lineHeight7) !important;
+  }
+
+  .u-md-fontSize8 {
+    font-size: var(--fontSize8) !important;
+    line-height: var(--lineHeight8) !important;
+  }
+
+  .u-md-fontSize9 {
+    font-size: var(--fontSize9) !important;
+    line-height: var(--lineHeight9) !important;
+  }
+
+  .u-md-fontSize10 {
+    font-size: var(--fontSize10) !important;
+    line-height: var(--lineHeight10) !important;
+  }
+}

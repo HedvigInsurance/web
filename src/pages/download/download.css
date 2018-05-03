@@ -1,7 +1,7 @@
 .Download {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .Download__article {
@@ -11,20 +11,20 @@
 }
 
 .Download__page-header {
-  font-family: "Merriweather";
-  font-size: 36px;
-  line-height: normal;
-  font-weight: 400;
-  margin-bottom: 0;
   color: #000;
+  font-family: "CircularStd", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
 }
 
 .Download__section-header {
-  font-family: "Merriweather";
+  color: #0f007a;
+  font-family: "CircularStd", sans-serif;
   font-size: 23px;
-  line-height: 34px;
   font-weight: 400;
-  color: #0F007A;
+  line-height: 34px;
 }
 
 .Download__social-icon {

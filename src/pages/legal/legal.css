@@ -1,7 +1,7 @@
 .Legal {
   height: 100%;
-  width: 100%;
   margin: 62px 0 0;
+  width: 100%;
 }
 
 .Legal__text {
@@ -10,7 +10,7 @@
 }
 
 .Legal__heading {
-  font-family: "Merriweather";
+  font-family: "CircularStd", sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: normal;

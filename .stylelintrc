@@ -1,0 +1,24 @@
+{
+  "extends": [
+      "stylelint-config-recommended",
+      "stylelint-config-suitcss",
+      "./node_modules/prettier-stylelint/config.js"
+  ],
+  "plugins": [
+    "stylelint-selector-bem-pattern",
+    "stylelint-order"
+  ],
+  "rules": {
+    "plugin/selector-bem-pattern": [
+      { preset: "suit" }
+    ],
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}

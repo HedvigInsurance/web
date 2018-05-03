@@ -2,6 +2,10 @@
   "files.autoSave": "off",
   "editor.formatOnSave": true,
   "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/public": true,

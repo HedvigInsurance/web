@@ -1,0 +1,51 @@
+.u-backgroundWhite {
+  background-color: #fff !important;
+}
+
+.u-backgroundBlack {
+  background-color: #000 !important;
+}
+
+.u-backgroundPrimaryBlack {
+  background-color: var(--color-primaryBlack) !important;
+}
+
+.u-backgroundPrimaryDarkBlue {
+  background-color: var(--color-primaryDarkBlue) !important;
+}
+
+.u-backgroundPrimaryBlue {
+  background-color: var(--color-primaryBlue) !important;
+}
+
+.u-backgroundPrimaryPink {
+  background-color: var(--color-primaryPink) !important;
+}
+
+.u-backgroundPrimaryGreen {
+  background-color: var(--color-primaryGreen) !important;
+}
+
+.u-backgroundPrimaryPurple {
+  background-color: var(--color-primaryPurple) !important;
+}
+
+.u-backgroundPrimaryGrey {
+  background-color: var(--color-primaryGrey) !important;
+}
+
+.u-backgroundSecondaryPink {
+  background-color: var(--color-secondaryPink) !important;
+}
+
+.u-backgroundSecondaryGreen {
+  background-color: var(--color-secondaryGreen) !important;
+}
+
+.u-backgroundSecondaryPurple {
+  background-color: var(--color-secondaryPurple) !important;
+}
+
+.u-backgroundSecondaryGrey {
+  background-color: var(--color-secondaryGrey) !important;
+}

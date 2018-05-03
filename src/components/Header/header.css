@@ -1,30 +1,29 @@
 .Header {
-  width: 100%;
   height: 62px;
+  position: absolute;
   top: 0;
+  width: 100%;
   z-index: 1;
-  background-color: white;
-  border-bottom: solid 1px #f1f3f7;
 }
 
 .Header__container {
   padding: 0 12px;
 }
 
-.Header__container:after {
-  content: '';
-  display: table;
+.Header__container::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .Header__start {
   float: left;
 }
 
-.Header__start:after {
-  content: '';
-  display: table;
+.Header__start::after {
   clear: both;
+  content: "";
+  display: table;
 }
 
 .Header__end {
@@ -35,8 +34,8 @@
   display: block;
   float: left;
   height: 60px;
-  padding-left: 8px;
   margin-right: 20px;
+  padding-left: 8px;
 }
 
 .Header__logo__inner {
@@ -45,18 +44,17 @@
 }
 
 .Header__menu {
+  align-items: center;
   display: none;
   float: left;
+  font-family: CircularStd, sans-serif;
   height: 60px;
-  align-items: center;
-  font-family: Circular Std Book, sans-serif;
 }
 
 .Header__menu__link {
+  margin: 0 20px;
   position: relative;
   top: 18px;
-  margin: 0 20px;
-  font-size: 16px;
 }
 
 .Header__menu__link,
@@ -65,37 +63,37 @@
 }
 
 .Header__cta {
-  position: relative;
-  top: 18px;
+  background-color: #1be9b6;
+  border-radius: 24px;
+  color: white;
+  font-family: "CircularStd", sans-serif;
   font-size: 16px;
   padding: 10px 20px;
-  background-color: #1be9b6;
-  color: white;
-  border-radius: 24px;
-  font-family: 'Circular Std Book';
+  position: relative;
   text-align: center;
+  top: 18px;
 }
 
 .Header__burger {
-  display: block;
-  float: right;
   align-items: center;
+  background-color: transparent;
+  border: none;
   color: #000;
   cursor: pointer;
-  border: none;
-  width: 50px;
-  height: 60px;
-  position: relative;
-  padding: 0 30px;
-  white-space: nowrap;
-  user-select: none;
+  display: block;
+  float: right;
   font-size: 17px;
-  line-height: 50px;
   font-weight: 400;
+  height: 60px;
+  line-height: 50px;
+  padding: 0 30px;
   padding: 0 10px;
-  transition: opacity 0.1s ease;
+  position: relative;
   right: -5px;
-  background-color: transparent;
+  transition: opacity 0.1s ease;
+  user-select: none;
+  white-space: nowrap;
+  width: 50px;
 }
 
 .Header__burger:hover {
@@ -103,17 +101,17 @@
 }
 
 .Header__burger__line {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: 29px;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  font-size: 0;
-  color: inherit;
   background: currentColor;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  font-size: 0;
+  height: 2px;
+  left: 14px;
+  position: absolute;
+  top: 29px;
   transition: all 400ms cubic-bezier(0.37, 0, 0.28, 1);
+  width: 22px;
 }
 
 .Header__burger__line:first-child {
@@ -138,32 +136,29 @@
 }
 
 .Header__popover {
-  position: absolute;
-  top: 62px;
-  left: 0;
-  right: 0;
+  background: #fff;
   height: 100vh;
-  pointer-events: none;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
   perspective: 2000px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 62px;
+  transform: scale(0.97);
+  transform-origin: 100% 0;
+  transition-duration: 0.2s;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
 }
 
 .Header__popover.isActive {
-  transform: none;
   opacity: 1;
   pointer-events: auto;
-}
-
-.Header__popover {
-  text-align: center;
-  padding: 0 20px;
-  background: #fff;
-  overflow: hidden;
-  transform: scale(0.97);
-  transform-origin: 100% 0;
-  opacity: 0;
-  will-change: transform, opacity;
-  transition-property: transform, opacity;
-  transition-duration: 0.2s;
+  transform: none;
 }
 
 .Header__popover .Header__menu__link {
@@ -177,6 +172,7 @@
 }
 
 @media screen and (min-width: 550px) {
+
   .Header__burger {
     display: none;
   }

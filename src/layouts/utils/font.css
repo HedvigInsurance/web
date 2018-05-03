@@ -1,0 +1,85 @@
+.u-fontSize1 {
+  font-size: var(--fontSize1) !important;
+  line-height: var(--lineHeight1) !important;
+}
+
+.u-fontSize2 {
+  font-size: var(--fontSize2) !important;
+  line-height: var(--lineHeight2) !important;
+}
+
+.u-fontSize3 {
+  font-size: var(--fontSize3) !important;
+  line-height: var(--lineHeight3) !important;
+}
+
+.u-fontSize4 {
+  font-size: var(--fontSize4) !important;
+  line-height: var(--lineHeight4) !important;
+}
+
+.u-fontSize5 {
+  font-size: var(--fontSize5) !important;
+  line-height: var(--lineHeight5) !important;
+}
+
+.u-fontSize6 {
+  font-size: var(--fontSize6) !important;
+  line-height: var(--lineHeight6) !important;
+}
+
+.u-fontSize7 {
+  font-size: var(--fontSize7) !important;
+  line-height: var(--lineHeight7) !important;
+}
+
+.u-fontSize8 {
+  font-size: var(--fontSize8) !important;
+  line-height: var(--lineHeight8) !important;
+}
+
+.u-fontSize9 {
+  font-size: var(--fontSize9) !important;
+  line-height: var(--lineHeight9) !important;
+}
+
+.u-fontSize10 {
+  font-size: var(--fontSize10) !important;
+  line-height: var(--lineHeight10) !important;
+}
+
+.u-fontStyleItalic {
+  font-style: italic !important;
+}
+
+.u-fontStyleNormal {
+  font-style: normal !important;
+}
+
+.u-fontWeightBook {
+  font-weight: var(--fontWeightBook) !important;
+}
+
+.u-fontWeightMedium {
+  font-weight: var(--fontWeightMedium) !important;
+}
+
+.u-fontWeightBold {
+  font-weight: var(--fontWeightBold) !important;
+}
+
+.u-fontWeightSuper {
+  font-weight: var(--fontWeightSuper) !important;
+}
+
+.u-fontFamilyBody {
+  font-family: var(--fontFamilyBody) !important;
+}
+
+.u-fontFamilyHeader {
+  font-family: var(--fontFamilyHeader) !important;
+}
+
+.u-fontFamilyHero {
+  font-family: var(--fontFamilyHero) !important;
+}

@@ -16,5 +16,21 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    {
+      resolve: `svgr`,
+      options: {
+        babel: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+    },
   ],
 };
