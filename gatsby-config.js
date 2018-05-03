@@ -17,20 +17,23 @@ module.exports = {
       },
     },
     {
-      resolve: `svgr`,
+      resolve: 'svgr',
       options: {
         babel: false,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `data`,
+        name: 'data',
         path: `${__dirname}/src/data/`,
       },
     },
     {
-      resolve: `gatsby-transformer-json`,
+      resolve: 'gatsby-transformer-json',
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
     },
   ],
 };
