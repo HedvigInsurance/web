@@ -1,0 +1,10 @@
+@media (--md-viewport) {
+
+  .u-md-textCenter {
+    text-align: center !important;
+  }
+
+  .u-md-textRight {
+    text-align: right !important;
+  }
+}

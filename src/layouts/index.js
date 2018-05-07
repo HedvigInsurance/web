@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import 'normalize.css';
-import 'purecss/build/base.css';
-import 'purecss/build/grids.css';
-import 'purecss/build/grids-responsive.css';
-import './index.css';
+import 'src/css/style.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Hedvig" />
+    <Helmet>
+      <title>Hedvig | Insurance. Unbroken.</title>
+    </Helmet>
     <div>{children()}</div>
   </div>
 );
@@ -20,3 +19,14 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+// ToDo fix me
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

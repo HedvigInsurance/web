@@ -1,0 +1,54 @@
+@import "../css/variables.css";
+
+.Home-hero-background-svg {
+  bottom: 0;
+  height: 100% !important;
+  min-height: 100% !important;
+  position: absolute;
+  width: 100vw !important;
+  z-index: -1;
+}
+
+.Home-howItWorks {
+  background-image: url("/assets/backgrounds/plane-bg@2x.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 484px 1070px;
+}
+
+/*
+  BEWARE BRITTLE CODE
+  The animation is absolutely positioned inside the phone shell
+*/
+
+.Home-chatDemo {
+  height: 675px;
+  left: -60px;
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+}
+
+.Home-chatDemo-animation {
+  left: 89px;
+  position: absolute;
+  top: 85px;
+  width: 260px !important;
+}
+
+@media (min-width: 745px) {
+
+  .Home-chatDemo {
+    left: 0;
+  }
+}
+
+.Home-strike {
+  background-image: linear-gradient(
+    transparent 52%,
+    rgba(255, 138, 128, 0.5) 52%,
+    rgba(255, 138, 128, 0.5) 60%,
+    transparent 60%
+  );
+  text-decoration: none;
+}

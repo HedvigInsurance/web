@@ -1,0 +1,128 @@
+.Header {
+  position: absolute;
+  width: 100%;
+}
+
+.Header-logo {
+  display: block;
+  float: left;
+  height: 50px;
+  left: -10px;
+  padding-right: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.Header-logo__inner {
+  left: 10px;
+  position: relative;
+  top: 13px;
+}
+
+.Header-menu {
+  align-items: center;
+  display: none;
+  float: left;
+  font-family: CircularStd, sans-serif;
+  height: 60px;
+}
+
+.Header-menu-link {
+  margin: 0 20px;
+  position: relative;
+  top: 24px;
+}
+
+.Header-burger {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-size: 17px;
+  font-weight: 400;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  padding: 0 10px;
+  position: relative;
+  right: -10px;
+  top: 10px;
+  transition: opacity 0.1s ease;
+  user-select: none;
+  white-space: nowrap;
+  width: 50px;
+}
+
+.Header-burger.is-inverted {
+  color: #fff;
+}
+
+.Header-burger:hover {
+  opacity: 0.5;
+}
+
+.Header-burger-line {
+  background: currentColor;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  font-size: 0;
+  height: 2px;
+  left: 14px;
+  position: absolute;
+  top: 24px;
+  transition: all 400ms cubic-bezier(0.37, 0, 0.28, 1);
+  width: 22px;
+}
+
+.Header-burger-line:first-child {
+  top: 16px;
+}
+
+.Header-burger-line:last-child {
+  top: 32px;
+}
+
+.Header-burger.is-active .Header-burger-line:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.Header-burger.is-active .Header-burger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px) scaleX(0.7);
+}
+
+.Header-burger.is-active .Header-burger-line:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.Header-popover {
+  background: #fff;
+  box-shadow: 0 5px 40px rgba(20, 16, 51, 0.2),
+    0 15px 20px rgba(20, 16, 51, 0.1);
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 60px 20px 30px;
+  perspective: 2000px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0.97);
+  transform-origin: 100% 0;
+  transition-duration: 0.2s;
+  transition-property: transform, opacity;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  z-index: -1;
+}
+
+.Header-popover.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}

@@ -1,45 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> Should render correctly 1`] = `
-<footer>
+<footer
+  className="u-backgroundPrimaryDarkBlue"
+>
   <div
-    className="Footer"
+    className="Container"
   >
     <div
-      className="Footer__start"
+      className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7"
     >
       <div
-        className="Footer__links"
+        className="u-flexGrow1"
       >
-        <div
-          className="Footer__logo"
-        >
-          <a
-            href="/"
-          >
-            <div
-              aria-label="Hedvig logo"
-              className="Footer__icon"
-              role="img"
-            />
-          </a>
-        </div>
         <nav
-          className=""
+          className="Grid"
         >
-          <GatsbyLink
-            className="Footer__link"
-            to="/contact"
+          <div
+            className="u-md-size1of2 u-lg-size1of2"
+            style={
+              Object {
+                "maxWidth": 250,
+              }
+            }
           >
-            Kontakt
-          </GatsbyLink>
-          <GatsbyLink
-            className="Footer__link"
-            to="/legal"
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/about-us"
+            >
+              Om oss
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/faq"
+            >
+              Vanliga frågor
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/legal"
+            >
+              Legal information
+            </GatsbyLink>
+          </div>
+          <div
+            className="u-md-size1of2 u-lg-size1of2"
+            style={
+              Object {
+                "maxWidth": 250,
+              }
+            }
           >
-            Legal information
-          </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/contact"
+            >
+              Kontakt
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/press"
+            >
+              Press
+            </GatsbyLink>
+          </div>
         </nav>
+      </div>
+      <div
+        className="u-md-textRight u-lg-textRight"
+      >
+        <a
+          className="u-block u-spaceMB11"
+          href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Ladda ner på App Store"
+            height={54}
+            src="/assets/appstores/app-store-badge@2x.png"
+          />
+        </a>
+        <a
+          className="u-block u-spaceMB11"
+          href="https://play.google.com/store/apps/details?id=com.hedvig.app"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Ladda ner på Google Play"
+            height={54}
+            src="/assets/appstores/google-play-badge@2x.png"
+          />
+        </a>
       </div>
     </div>
   </div>

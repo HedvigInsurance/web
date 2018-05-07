@@ -1,0 +1,16 @@
+.NumberedIcon {
+  background-image: url("/assets/icons/dots/dot1-icon@2x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 66px 66px;
+  color: white;
+  display: inline-block;
+  font-family: var(--fontFamilyHeader);
+  font-size: var(--fontSize7);
+  font-weight: var(--fontWeightBold);
+  height: 66px;
+  line-height: 70px;
+  margin-bottom: var(--space10);
+  text-align: center;
+  width: 66px;
+}

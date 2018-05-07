@@ -12,12 +12,12 @@ const styles = {
     flexDirection: 'column',
     fontSize: '50px',
     lineHeight: '75px',
-    fontFamily: 'Merriweather',
+    fontFamily: 'CircularStd',
     color: '#651EFF',
   },
 };
 
-const sadAnimation = require('src/bundledAssets/animations/hedvig_sad_avatar.json');
+const sadAnimation = require('assets/animations/hedvig-sad-avatar/data.json');
 
 const NotFound = () => (
   <div style={styles.container}>

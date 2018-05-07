@@ -10,6 +10,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "classnames": "^2.2.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
@@ -25,9 +26,17 @@
     "gatsby": "^1.9.241",
     "gatsby-image": "^1.0.31",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-google-tagmanager": "^1.0.16",
     "gatsby-plugin-netlify": "^1.0.12",
+    "gatsby-plugin-nprogress": "^1.0.14",
+    "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-plugin-sharp": "^1.6.44",
+    "gatsby-plugin-sitemap": "^1.2.23",
+    "gatsby-source-filesystem": "^1.5.35",
+    "gatsby-transformer-json": "^1.0.17",
+    "gatsby-transformer-sharp": "^1.6.24",
     "husky": "^0.15.0-rc.13",
     "jest": "^22.4.3",
     "jest-cli": "^22.4.3",
@@ -36,16 +45,21 @@
     "normalize.css": "^8.0.0",
     "prettier": "^1.11.1",
     "prettier-eslint-cli": "^4.7.1",
+    "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.6.0",
-    "purecss": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
-    "react-lazyload": "^2.3.0",
     "react-lottie": "^1.0.0",
     "react-router-dom": "^4.2.2",
     "react-router-enzyme-context": "^1.2.0",
-    "react-visibility-sensor": "^3.11.0"
+    "react-visibility-sensor": "^3.11.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-suitcss": "^14.0.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-selector-bem-pattern": "^2.0.0",
+    "svgr": "^1.9.1"
   },
   "scripts": {
     "build": "gatsby build",
@@ -54,7 +68,8 @@
     "lint": "./node_modules/.bin/eslint .",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format": "prettier-eslint --write \"src/**/*.js\""
+    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info --ignore \"coverage/**\"",
+    "format-css": "prettier-stylelint --write -q \"**/*.css\" --ignore \"node_modules/**\" --ignore \"coverage/**\""
   },
   "husky": {
     "hooks": {
@@ -65,6 +80,20 @@
     "*.js": [
       "prettier-eslint --write",
       "git add"
+    ],
+    "*.css": [
+      "prettier-stylelint --write",
+      "git add"
     ]
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "safari > 6",
+    "ie > 9",
+    "ios > 6",
+    "android > 4.3",
+    "samsung > 3",
+    "chromeandroid > 50"
+  ]
 }

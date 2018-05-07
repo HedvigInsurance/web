@@ -1,0 +1,10 @@
+@media (--sm-viewport) {
+
+  .u-sm-textCenter {
+    text-align: center !important;
+  }
+
+  .u-sm-textRight {
+    text-align: right !important;
+  }
+}
