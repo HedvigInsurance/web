@@ -17,12 +17,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
           className="Grid"
         >
           <div
-            className="u-md-size1of2 u-lg-size1of2"
-            style={
-              Object {
-                "maxWidth": 250,
-              }
-            }
+            className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
@@ -44,12 +39,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
             </GatsbyLink>
           </div>
           <div
-            className="u-md-size1of2 u-lg-size1of2"
-            style={
-              Object {
-                "maxWidth": 250,
-              }
-            }
+            className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
@@ -88,12 +78,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
           className="Grid"
         >
           <div
-            className="u-md-size1of2 u-lg-size1of2"
-            style={
-              Object {
-                "maxWidth": 250,
-              }
-            }
+            className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
@@ -115,12 +100,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
             </GatsbyLink>
           </div>
           <div
-            className="u-md-size1of2 u-lg-size1of2"
-            style={
-              Object {
-                "maxWidth": 250,
-              }
-            }
+            className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"

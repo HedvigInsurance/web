@@ -369,10 +369,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Hedvig är tryggat av Inter Hannover, del av en av världens
                     största försäkringsgrupper
                   </p>
@@ -386,10 +383,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Med AA-rating från Standard &amp; Poor&apos;s
                   </p>
                 </div>
@@ -402,10 +396,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Hedvig är auktoriserat av Finansinspektionen
                   </p>
                 </div>

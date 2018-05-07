@@ -5,7 +5,6 @@ import Img from 'gatsby-image';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import './Contact.css';
 
 const Contact = ({ data }) => (
   <main className="Site">

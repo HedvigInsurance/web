@@ -19,7 +19,7 @@ const GivingBack = () => (
       </div>
 
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-        <div style={{ maxWidth: 640 }}>
+        <div className="u-maxWidth1of1">
           <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
             Vårt sätt att bidra
           </h2>
@@ -114,10 +114,7 @@ const GivingBack = () => (
               >
                 <SosBarnbyarLogo />
               </figure>
-              <p
-                style={{ maxWidth: 425 }}
-                className="u-lg-fontSize9 u-spaceMB9 u-textCenter"
-              >
+              <p className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2">
                 SOS Barnbyar arbetar för att fler barn ska få en trygg uppväxt.
                 Stödet från våra medlemmar går till att finansiera en barnby
                 i&nbsp;Ukraina.
@@ -127,10 +124,7 @@ const GivingBack = () => (
               <figure className="u-spaceMB7" style={{ height: 120 }}>
                 <BarncancerfondenLogo />
               </figure>
-              <p
-                style={{ maxWidth: 425 }}
-                className="u-lg-fontSize9 u-spaceMB9 u-textCenter"
-              >
+              <p className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2">
                 Barncancerfonden arbetar för att bekämpa cancer och för att
                 cancerdrabbade barn, ungdomar och deras familjer ska få den vård
                 och det stöd de&nbsp;behöver.

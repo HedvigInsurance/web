@@ -58,6 +58,10 @@
   --space10: 20px;
   --space11: 15px;
   --space12: 10px;
+
+  --maxWidth1of1: 640px;
+  --maxWidth1of2: 425px;
+  --maxWidth1of3: 315px;
 }
 
 @custom-media --sm-viewport (max-width: 639px);

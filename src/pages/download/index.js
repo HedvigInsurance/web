@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import './Download.css';
 
 const Download = () => (
   <main className="Site">
@@ -27,7 +26,7 @@ const Download = () => (
               href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
               target="_blank"
               rel="noopener noreferrer"
-              className="Download__social-icon"
+              className="u-spaceMH12"
             >
               <img
                 src="/assets/appstores/app-store-badge@2x.png"
@@ -39,7 +38,7 @@ const Download = () => (
               href="https://play.google.com/store/apps/details?id=com.hedvig.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="Download__social-icon"
+              className="u-spaceMH12"
             >
               <img
                 src="/assets/appstores/google-play-badge@2x.png"

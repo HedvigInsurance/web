@@ -27,11 +27,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
       className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3"
     >
       <div
-        style={
-          Object {
-            "maxWidth": 640,
-          }
-        }
+        className="u-maxWidth1of1"
       >
         <h2
           className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
@@ -181,12 +177,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               <ReactComponent />
             </figure>
             <p
-              className="u-lg-fontSize9 u-spaceMB9 u-textCenter"
-              style={
-                Object {
-                  "maxWidth": 425,
-                }
-              }
+              className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2"
             >
               SOS Barnbyar arbetar för att fler barn ska få en trygg uppväxt. Stödet från våra medlemmar går till att finansiera en barnby i Ukraina.
             </p>
@@ -205,12 +196,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               <ReactComponent />
             </figure>
             <p
-              className="u-lg-fontSize9 u-spaceMB9 u-textCenter"
-              style={
-                Object {
-                  "maxWidth": 425,
-                }
-              }
+              className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2"
             >
               Barncancerfonden arbetar för att bekämpa cancer och för att cancerdrabbade barn, ungdomar och deras familjer ska få den vård och det stöd de behöver.
             </p>
@@ -223,8 +209,8 @@ exports[`<GivingBack /> Should render correctly 1`] = `
         >
           <a
             className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen"
+            data-cta-app-download="giving-back"
             href="https://hedvig.app.link/kZNtW0cT9L"
-            id="cta-app-download"
           >
             Skaffa Hedvig
           </a>

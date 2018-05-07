@@ -1,0 +1,26 @@
+/*
+  Used on columns 100% of site width (1100px)
+  Max content width is 1100px without gutter
+*/
+
+.u-maxWidth1of1 {
+  max-width: var(--maxWidth1of1);
+}
+
+/*
+  Used on columns 50% of site width (1100px)
+  Max content width is 550px without gutter
+*/
+
+.u-maxWidth1of2 {
+  max-width: var(--maxWidth1of2);
+}
+
+/*
+  Used on columns 33% of site width (1100px)
+  Max content width is 366px without gutter
+*/
+
+.u-maxWidth1of3 {
+  max-width: var(--maxWidth1of3);
+}

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import './Faq.css';
 
 const FAQ = () => (
   <main className="Site">
@@ -20,7 +19,7 @@ const FAQ = () => (
         </div>
       </div>
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-        <div style={{ maxWidth: 640 }}>
+        <div className="u-maxWidth1of1">
           <div>
             <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
               Vilka typer av försäkringar har Hedvig?
