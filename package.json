@@ -53,6 +53,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-enzyme-context": "^1.2.0",
     "react-visibility-sensor": "^3.11.0",
+    "rimraf": "^2.6.2",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
@@ -61,14 +62,14 @@
     "svgr": "^1.9.1"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "./scripts/build.sh",
     "start": "gatsby develop --open",
     "develop": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint .",
+    "lint": "./scripts/lint.sh",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info --ignore \"coverage/**\"",
-    "format-css": "prettier-stylelint --write -q \"**/*.css\" --ignore \"node_modules/**\" --ignore \"coverage/**\""
+    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info",
+    "format-css": "prettier-stylelint --write -q \"**/*.css\""
   },
   "husky": {
     "hooks": {
@@ -76,14 +77,8 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ],
-    "*.css": [
-      "prettier-stylelint --write",
-      "git add"
-    ]
+    "*.js": ["prettier-eslint --write", "git add"],
+    "*.css": ["prettier-stylelint --write", "git add"]
   },
   "browserslist": [
     "> 1%",
