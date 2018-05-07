@@ -7,6 +7,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
 
+import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-hearo-header.svg';
+
 import './Home.css';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
@@ -47,15 +49,14 @@ class Landing extends React.Component {
         <section className="Site-content">
           <div className="u-backgroundPrimaryBlack">
             <Header isInverted />
-            <div className="u-posRelative">
+            <div className="u-posRelative u-nbfc">
               <div className="u-posRelative" style={{ zIndex: 1 }}>
                 <div className="Container u-md-spacePT7 u-lg-spacePT6">
                   <h1
-                    className="u-spaceMT2 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite
-                            u-fontFamilyHero u-fontWeightSuper u-fontSize2 u-md-fontSize1 u-lg-fontSize1"
+                    className="u-spaceMT2 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8"
+                    aria-label="Insurance. Unbroken."
                   >
-                    Insurance.<br />
-                    <span className="u-fontStyleItalic">Un</span>broken.
+                    <HeroHeader alt="" className="Home-heroHeaderSvg" />
                   </h1>
                   <p
                     style={{ maxWidth: 600 }}
@@ -94,7 +95,7 @@ class Landing extends React.Component {
                     rendererSettings: {
                       progressiveLoad: true,
                       preserveAspectRatio: 'xMidYMid slice',
-                      className: 'Home-hero-background-svg',
+                      className: 'Home-heroBackgroundSvg',
                     },
                   }}
                   eventListeners={[

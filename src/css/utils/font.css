@@ -79,7 +79,3 @@
 .u-fontFamilyHeader {
   font-family: var(--fontFamilyHeader) !important;
 }
-
-.u-fontFamilyHero {
-  font-family: var(--fontFamilyHero) !important;
-}
