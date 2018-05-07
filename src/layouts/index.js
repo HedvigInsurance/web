@@ -5,18 +5,40 @@ import Helmet from 'react-helmet';
 import 'normalize.css';
 import 'src/css/style.css';
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet>
-      <title>Hedvig | Insurance. Unbroken.</title>
-    </Helmet>
-    <div>{children()}</div>
-  </div>
-);
+class TemplateWrapper extends React.Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+    location: PropTypes.objectOf(PropTypes.any).isRequired,
+  };
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func.isRequired,
-};
+  static childContextTypes = {
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }),
+  };
+
+  getChildContext = () => {
+    const { pathname } = this.props.location;
+    return {
+      location: {
+        pathname,
+      },
+    };
+  };
+
+  render() {
+    const { children } = this.props;
+
+    return (
+      <div>
+        <Helmet>
+          <title>Hedvig | Insurance. Unbroken.</title>
+        </Helmet>
+        <div>{children()}</div>
+      </div>
+    );
+  }
+}
 
 export default TemplateWrapper;
 
