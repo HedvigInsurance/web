@@ -3,11 +3,25 @@ module.exports = {
     title: 'Hedvig | Insurance. Unbroken.',
     siteName: 'Hedvig',
     siteUrl: 'https://www.hedvig.com',
+    siteLogo:
+      'https://www.hedvig.com/assets/identity/hedvig-wordmark-color@2x.png',
     headline: 'Insurance. Unbroken.',
     description:
       'Hedvig är en ny typ av försäkring. Byggd på smart teknik, omtanke och sunt förnuft. Så att du kan få hjälp på sekunder, och ersättning på minuter.',
     socialImage: 'https://www.hedvig.com/assets/social/hedvig-social@2x.png',
     locale: 'sv_SE',
+    facebookProfile: 'https://www.facebook.com/hedvigers/',
+    twitterProfile: 'https://twitter.com/hedvigers',
+    linkedInProfile: 'https://www.linkedin.com/company/hedvig/',
+    instagramProfile: 'https://www.instagram.com/hedvigers/',
+    supportEmail: 'help@hedvig.com',
+    pressEmail: 'press@hedvig.com',
+    contactEmail: 'hedvig@hedvig.com',
+    jobsEmail: 'careers@hedvig.com',
+    streetAddress: 'Artillerigatan 10',
+    addressLocality: 'Stockholm',
+    postalCode: '11451',
+    addressCountry: 'SE',
   },
   plugins: [
     {
