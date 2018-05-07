@@ -52,9 +52,19 @@ class Header extends React.Component {
     const { isInverted } = this.props;
     const { popoverIsActive } = this.state;
 
-    const logoClassNames = classNames({
+    const mobileLogoClassNames = classNames({
       'Header-logo__inner': true,
+      'u-md-hidden': true,
+      'u-lg-hidden': true,
       'u-fillWhite': isInverted && !popoverIsActive,
+    });
+
+    const desktopLogoClassNames = classNames({
+      'Header-logo__inner': true,
+      'u-hidden': true,
+      'u-md-block': true,
+      'u-lg-block': true,
+      'u-fillWhite': isInverted,
     });
 
     const burgerClassNames = classNames({
@@ -99,8 +109,9 @@ class Header extends React.Component {
         <div className="Container">
           <div className="u-flex">
             <div className="u-flexGrow1">
-              <Link to="/" className="Header-logo">
-                <Logo className={logoClassNames} alt="Hedvig" />
+              <Link to="/" className="Header-logo" aria-label="Hedvig hem">
+                <Logo className={mobileLogoClassNames} alt="" />
+                <Logo className={desktopLogoClassNames} alt="" />
               </Link>
             </div>
 
