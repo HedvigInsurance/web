@@ -10,7 +10,7 @@ import Header from 'src/components/Header';
 import './Home.css';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
-const heroAnimation = require('assets/animations/hero/desktop/data.json');
+const heroAnimation = require('assets/animations/hero/data.json');
 
 const WAIT_UNTIL_UNBREAK_HERO_MS = 1500;
 
