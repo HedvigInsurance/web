@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
-<footer
-  className="u-backgroundPrimaryDarkBlue"
+<div
+  className="u-backgroundPrimaryDarkBlue u-flexNone"
 >
   <div
     className="Container"
@@ -68,12 +68,12 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
       </div>
     </div>
   </div>
-</footer>
+</div>
 `;
 
 exports[`<Footer /> Should render correctly with app store downloads 1`] = `
-<footer
-  className="u-backgroundPrimaryDarkBlue"
+<div
+  className="u-backgroundPrimaryDarkBlue u-flexNone"
 >
   <div
     className="Container"
@@ -169,5 +169,5 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
       </div>
     </div>
   </div>
-</footer>
+</div>
 `;

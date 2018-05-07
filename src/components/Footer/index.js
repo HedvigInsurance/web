@@ -5,7 +5,7 @@ import Link from 'gatsby-link';
 import './Footer.css';
 
 const Footer = (props, { location }) => (
-  <footer className="u-backgroundPrimaryDarkBlue">
+  <div className="u-backgroundPrimaryDarkBlue u-flexNone">
     <div className="Container">
       <div className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7">
         <div className="u-flexGrow1">
@@ -84,7 +84,7 @@ const Footer = (props, { location }) => (
         )}
       </div>
     </div>
-  </footer>
+  </div>
 );
 
 // Passed in from layouts/index
