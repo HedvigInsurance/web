@@ -1,0 +1,14 @@
+@media (--md-viewport) {
+
+  .u-md-maxWidth1of1 {
+    max-width: var(--maxWidth1of1);
+  }
+
+  .u-md-maxWidth1of2 {
+    max-width: var(--maxWidth1of2);
+  }
+
+  .u-md-maxWidth1of3 {
+    max-width: var(--maxWidth1of3);
+  }
+}

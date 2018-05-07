@@ -1,0 +1,14 @@
+@media (--sm-viewport) {
+
+  .u-sm-maxWidth1of1 {
+    max-width: var(--maxWidth1of1);
+  }
+
+  .u-sm-maxWidth1of2 {
+    max-width: var(--maxWidth1of2);
+  }
+
+  .u-sm-maxWidth1of3 {
+    max-width: var(--maxWidth1of3);
+  }
+}

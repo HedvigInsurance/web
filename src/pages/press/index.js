@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
 const Press = () => (
   <main className="Site">
+    <Helmet>
+      <title>Press | Hedvig</title>
+    </Helmet>
     <Header />
     <article className="Site-content">
       <div className="u-backgroundSecondaryPurple">
@@ -15,7 +19,7 @@ const Press = () => (
         </div>
       </div>
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-        <div style={{ maxWidth: 640 }}>
+        <div className="u-maxWidth1of1">
           <div className="">
             <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
               Vill du komma i kontakt med oss?

@@ -4,6 +4,14 @@ exports[`<Press /> Should render correctly 1`] = `
 <main
   className="Site"
 >
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Press | Hedvig
+    </title>
+  </HelmetWrapper>
   <Header
     isInverted={false}
   />
@@ -27,11 +35,7 @@ exports[`<Press /> Should render correctly 1`] = `
       className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3"
     >
       <div
-        style={
-          Object {
-            "maxWidth": 640,
-          }
-        }
+        className="u-maxWidth1of1"
       >
         <div
           className=""

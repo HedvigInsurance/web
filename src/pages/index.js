@@ -7,28 +7,30 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
 
+import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-hero-header.svg';
+
 import './Home.css';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
-const heroAnimation = require('assets/animations/hero/desktop/data.json');
+const heroAnimation = require('assets/animations/hero/data.json');
 
 const WAIT_UNTIL_UNBREAK_HERO_MS = 1500;
 
 class Landing extends React.Component {
-  componentDidMount() {
-    this.heroAnimTimer = setTimeout(() => {
-      if (this.heroAnim) {
-        this.heroAnim.play();
-      }
-    }, WAIT_UNTIL_UNBREAK_HERO_MS);
-  }
-
   componentWillUnmount() {
     if (this.heroAnimTimer) {
       clearTimeout(this.heroAnimTimer);
       this.heroAnimTimer = null;
     }
   }
+
+  heroAnimOnLoad = () => {
+    if (!this.heroAnim) return;
+
+    this.heroAnimTimer = setTimeout(() => {
+      this.heroAnim.play();
+    }, WAIT_UNTIL_UNBREAK_HERO_MS);
+  };
 
   chatDemoOnVisibilityChange = (isVisible) => {
     if (!this.chatAnim) return;
@@ -47,15 +49,14 @@ class Landing extends React.Component {
         <section className="Site-content">
           <div className="u-backgroundPrimaryBlack">
             <Header isInverted />
-            <div className="u-posRelative">
+            <div className="u-posRelative u-nbfc">
               <div className="u-posRelative" style={{ zIndex: 1 }}>
                 <div className="Container u-md-spacePT7 u-lg-spacePT6">
                   <h1
-                    className="u-spaceMT2 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite
-                            u-fontFamilyHero u-fontWeightSuper u-fontSize2 u-md-fontSize1 u-lg-fontSize1"
+                    className="u-spaceMT2 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8"
+                    aria-label="Insurance. Unbroken."
                   >
-                    Insurance.<br />
-                    <span className="u-fontStyleItalic">Un</span>broken.
+                    <HeroHeader alt="" className="Home-heroHeaderSvg" />
                   </h1>
                   <p
                     style={{ maxWidth: 600 }}
@@ -73,7 +74,7 @@ class Landing extends React.Component {
                       className="Button u-colorPrimaryBlack
                             u-lg-fontSize9 u-backgroundWhite"
                       href="https://hedvig.app.link/kZNtW0cT9L"
-                      id="cta-app-download"
+                      data-cta-app-download="home-hero"
                     >
                       Try it!
                     </a>
@@ -94,9 +95,15 @@ class Landing extends React.Component {
                     rendererSettings: {
                       progressiveLoad: true,
                       preserveAspectRatio: 'xMidYMid slice',
-                      className: 'Home-hero-background-svg',
+                      className: 'Home-heroBackgroundSvg',
                     },
                   }}
+                  eventListeners={[
+                    {
+                      eventName: 'DOMLoaded',
+                      callback: this.heroAnimOnLoad,
+                    },
+                  ]}
                   height={null}
                   width={null}
                 />
@@ -112,7 +119,7 @@ class Landing extends React.Component {
                 </h2>
                 <p
                   style={{ maxWidth: 900 }}
-                  className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-fontWeightMedium u-colorPrimaryPink
+                  className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-fontWeightBold u-colorPrimaryPink
                              u-fontSize8 u-md-fontSize5 u-lg-fontSize4"
                 >
                   <strike className="Home-strike">
@@ -147,6 +154,7 @@ class Landing extends React.Component {
                         className="Button u-colorWhite
                               u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                         href="https://hedvig.app.link/kZNtW0cT9L"
+                        data-cta-app-download="home-chat-demo"
                       >
                         Kom igång direkt
                       </a>
@@ -191,6 +199,7 @@ class Landing extends React.Component {
                       className="Button u-colorWhite
                           u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                       href="https://hedvig.app.link/kZNtW0cT9L"
+                      data-cta-app-download="home-chat-demo"
                     >
                       Kom igång direkt
                     </a>
@@ -324,6 +333,7 @@ class Landing extends React.Component {
                   className="Button u-backgroundPrimaryBlack
                         u-lg-fontSize9 u-colorWhite"
                   href="https://hedvig.app.link/kZNtW0cT9L"
+                  data-cta-app-download="home-already-insured"
                 >
                   Skaffa Hedvig
                 </a>
@@ -350,7 +360,7 @@ class Landing extends React.Component {
                   className="Button u-colorPrimaryBlack
                               u-lg-fontSize9 u-backgroundWhite"
                   href="https://hedvig.app.link/kZNtW0cT9L"
-                  id="cta-app-download"
+                  data-cta-app-download="home-comparison"
                 >
                   Läs mer i appen
                 </a>
@@ -369,10 +379,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Hedvig är tryggat av Inter Hannover, del av en av världens
                     största försäkringsgrupper
                   </p>
@@ -386,10 +393,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Med AA-rating från Standard &amp; Poor&apos;s
                   </p>
                 </div>
@@ -402,10 +406,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p
-                    style={{ maxWidth: 315 }}
-                    className="u-lg-fontSize9 u-textCenter"
-                  >
+                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
                     Hedvig är auktoriserat av Finansinspektionen
                   </p>
                 </div>

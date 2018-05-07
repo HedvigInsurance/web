@@ -24,6 +24,10 @@
 @import "./utils/size-lg.css";
 @import "./utils/size-md.css";
 @import "./utils/size-sm.css";
+@import "./utils/max-width.css";
+@import "./utils/max-width-lg.css";
+@import "./utils/max-width-md.css";
+@import "./utils/max-width-sm.css";
 @import "./utils/text.css";
 @import "./utils/text-lg.css";
 @import "./utils/text-md.css";

@@ -12,6 +12,7 @@
 html {
   box-sizing: border-box; /* 1 */
   font-family: sans-serif; /* 2 */
+  height: 100%;
 }
 
 body,
@@ -19,7 +20,7 @@ button,
 input,
 select,
 textarea {
-  font-family: var(--fontFamilyBody), sans-serif;
+  font-family: var(--fontFamilyBody);
   font-size: var(--fontSize10);
   line-height: var(--lineHeight10);
 }
@@ -27,6 +28,11 @@ textarea {
 body {
   color: var(--color-primaryBlack);
   -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body > div {
+  height: 100%;
 }
 
 *,

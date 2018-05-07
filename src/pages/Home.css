@@ -1,12 +1,16 @@
 @import "../css/variables.css";
 
-.Home-hero-background-svg {
+.Home-heroBackgroundSvg {
   bottom: 0;
   height: 100% !important;
   min-height: 100% !important;
   position: absolute;
   width: 100vw !important;
   z-index: -1;
+}
+
+.Home-heroHeaderSvg {
+  width: 100% !important;
 }
 
 .Home-howItWorks {

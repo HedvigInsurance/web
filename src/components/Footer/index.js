@@ -2,18 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
-import './Footer.css';
-
 const Footer = (props, { location }) => (
-  <footer className="u-backgroundPrimaryDarkBlue">
+  <div className="u-backgroundPrimaryDarkBlue u-flexNone">
     <div className="Container">
       <div className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7">
         <div className="u-flexGrow1">
           <nav className="Grid">
-            <div
-              style={{ maxWidth: 250 }}
-              className="u-md-size1of2 u-lg-size1of2"
-            >
+            <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
               <Link
                 className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
                 to="/about-us"
@@ -33,10 +28,7 @@ const Footer = (props, { location }) => (
                 Legal information
               </Link>
             </div>
-            <div
-              style={{ maxWidth: 250 }}
-              className="u-md-size1of2 u-lg-size1of2"
-            >
+            <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
               <Link
                 className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
                 to="/contact"
@@ -84,7 +76,7 @@ const Footer = (props, { location }) => (
         )}
       </div>
     </div>
-  </footer>
+  </div>
 );
 
 // Passed in from layouts/index

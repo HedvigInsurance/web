@@ -60,10 +60,6 @@
   font-weight: var(--fontWeightBook) !important;
 }
 
-.u-fontWeightMedium {
-  font-weight: var(--fontWeightMedium) !important;
-}
-
 .u-fontWeightBold {
   font-weight: var(--fontWeightBold) !important;
 }
@@ -78,8 +74,4 @@
 
 .u-fontFamilyHeader {
   font-family: var(--fontFamilyHeader) !important;
-}
-
-.u-fontFamilyHero {
-  font-family: var(--fontFamilyHero) !important;
 }

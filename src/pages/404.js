@@ -1,19 +1,11 @@
 import React from 'react';
+
+import Header from 'src/components/Header';
 import { LottieLoader } from 'src/components/LottieLoader';
 
 const styles = {
   container: {
-    display: 'flex',
-    height: '100vh',
-    width: '100%',
-    padding: '10px',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    fontSize: '50px',
-    lineHeight: '75px',
-    fontFamily: 'CircularStd',
-    color: '#651EFF',
+    height: '100%',
   },
 };
 
@@ -21,18 +13,26 @@ const sadAnimation = require('assets/animations/hedvig-sad-avatar/data.json');
 
 const NotFound = () => (
   <div style={styles.container}>
-    <div>Not found</div>
+    <Header />
+    <div
+      style={styles.container}
+      className="u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter u-spacePH10 u-spacePV10"
+    >
+      <h1 className="u-textHeading u-textCenter u-fontSize4 u-md-fontSize3 u-lg-fontSize2 u-colorPrimaryBlue">
+        Oj! Här fanns inget
+      </h1>
 
-    <LottieLoader
-      options={{
-        loop: false,
-        autoplay: true,
-        animationData: sadAnimation,
-      }}
-      width={300}
-      height={300}
-      style={{ margin: 'auto' }}
-    />
+      <LottieLoader
+        options={{
+          loop: false,
+          autoplay: true,
+          animationData: sadAnimation,
+        }}
+        width={300}
+        height={300}
+        style={{ margin: 'auto' }}
+      />
+    </div>
   </div>
 );
 

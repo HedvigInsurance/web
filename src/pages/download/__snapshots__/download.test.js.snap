@@ -42,7 +42,7 @@ exports[`<Download /> Should render correctly 1`] = `
           className="u-textCenter"
         >
           <a
-            className="Download__social-icon"
+            className="u-spaceMH12"
             href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
             rel="noopener noreferrer"
             target="_blank"
@@ -54,7 +54,7 @@ exports[`<Download /> Should render correctly 1`] = `
             />
           </a>
           <a
-            className="Download__social-icon"
+            className="u-spaceMH12"
             href="https://play.google.com/store/apps/details?id=com.hedvig.app"
             rel="noopener noreferrer"
             target="_blank"
