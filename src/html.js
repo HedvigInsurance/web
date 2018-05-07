@@ -37,7 +37,7 @@ const HTML = ({
       <meta property="og:title" content="Hedvig | Insurance. Unbroken." />
       <meta
         property="og:image"
-        content="https://www.hedvig.com/assets/social/hedvig-linkedin@2x.png"
+        content="https://www.hedvig.com/assets/social/hedvig-social@2x.png"
       />
       <meta
         property="og:description"
