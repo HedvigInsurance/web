@@ -1,31 +1,7 @@
 /*
 
-Currently these are only used for the heading "Insurance. Unbroken." which is
-embedded as an svg for performance.
-
-@font-face {
-  font-family: "GT-Super-Display";
-  font-style: normal;
-  font-weight: 800;
-  src: url("/assets/fonts/GT-Super-Display-Super.eot");
-  src: url("/assets/fonts/GT-Super-Display-Super.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/GT-Super-Display-Super.woff2") format("woff2"),
-    url("/assets/fonts/GT-Super-Display-Super.woff") format("woff"),
-    url("/assets/fonts/GT-Super-Display-Super.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "GT-Super-Display";
-  font-style: italic;
-  font-weight: 800;
-  src: url("/assets/fonts/GT-Super-Display-Super-Italic.eot");
-  src: url("/assets/fonts/GT-Super-Display-Super-Italic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/GT-Super-Display-Super-Italic.woff2") format("woff2"),
-    url("/assets/fonts/GT-Super-Display-Super-Italic.woff") format("woff"),
-    url("/assets/fonts/GT-Super-Display-Super-Italic.ttf") format("truetype");
-}
+Currently GT-Super-Display is only used for the heading "Insurance. Unbroken."
+which is embedded as an svg for performance.
 
 */
 
@@ -44,20 +20,6 @@ embedded as an svg for performance.
 
 @font-face {
   font-family: "CircularStd";
-  font-style: italic;
-  font-weight: 800;
-  src: url("/assets/fonts/CircularStd-BlackItalic.eot");
-  src: url("/assets/fonts/CircularStd-BlackItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-BlackItalic.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-BlackItalic.woff") format("woff"),
-    url("/assets/fonts/CircularStd-BlackItalic.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
-}
-
-@font-face {
-  font-family: "CircularStd";
   font-style: normal;
   font-weight: 600;
   src: url("/assets/fonts/CircularStd-Bold.eot");
@@ -67,48 +29,6 @@ embedded as an svg for performance.
     url("/assets/fonts/CircularStd-Bold.woff") format("woff"),
     url("/assets/fonts/CircularStd-Bold.ttf") format("truetype"),
     url("/assets/fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
-}
-
-@font-face {
-  font-family: "CircularStd";
-  font-style: italic;
-  font-weight: 600;
-  src: url("/assets/fonts/CircularStd-BoldItalic.eot");
-  src: url("/assets/fonts/CircularStd-BoldItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-BoldItalic.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-BoldItalic.woff") format("woff"),
-    url("/assets/fonts/CircularStd-BoldItalic.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
-}
-
-@font-face {
-  font-family: "CircularStd";
-  font-style: normal;
-  font-weight: 500;
-  src: url("/assets/fonts/CircularStd-Medium.eot");
-  src: url("/assets/fonts/CircularStd-Medium.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-Medium.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-Medium.woff") format("woff"),
-    url("/assets/fonts/CircularStd-Medium.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
-}
-
-@font-face {
-  font-family: "CircularStd";
-  font-style: italic;
-  font-weight: 500;
-  src: url("/assets/fonts/CircularStd-MediumItalic.eot");
-  src: url("/assets/fonts/CircularStd-MediumItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-MediumItalic.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-MediumItalic.woff") format("woff"),
-    url("/assets/fonts/CircularStd-MediumItalic.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd")
     format("svg");
 }
 

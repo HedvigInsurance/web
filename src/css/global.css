@@ -20,7 +20,7 @@ button,
 input,
 select,
 textarea {
-  font-family: var(--fontFamilyBody), sans-serif;
+  font-family: var(--fontFamilyBody);
   font-size: var(--fontSize10);
   line-height: var(--lineHeight10);
 }

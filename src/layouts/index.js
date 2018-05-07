@@ -29,6 +29,37 @@ class TemplateWrapper extends React.Component {
   render() {
     const { children, data } = this.props;
 
+    const schemaOrgJSONLD = [
+      {
+        '@context': 'http://schema.org',
+        '@type': 'WebSite',
+        url: data.site.siteMetadata.siteUrl,
+        name: data.site.siteMetadata.siteName,
+        description: data.site.siteMetadata.description,
+      },
+      {
+        '@context': 'http://schema.org',
+        '@type': 'Organization',
+        url: data.site.siteMetadata.siteUrl,
+        logo: data.site.siteMetadata.siteLogo,
+        name: data.site.siteMetadata.siteName,
+        description: data.site.siteMetadata.description,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: data.site.siteMetadata.streetAddress,
+          addressLocality: data.site.siteMetadata.addressLocality,
+          postalCode: data.site.siteMetadata.postalCode,
+          addressCountry: data.site.siteMetadata.addressCountry,
+        },
+        sameAs: [
+          data.site.siteMetadata.facebookProfile,
+          data.site.siteMetadata.twitterProfile,
+          data.site.siteMetadata.instagramProfile,
+          data.site.siteMetadata.linkedInProfile,
+        ],
+      },
+    ];
+
     return (
       <React.Fragment>
         <Helmet>
@@ -53,6 +84,9 @@ class TemplateWrapper extends React.Component {
             content={data.site.siteMetadata.siteName}
           />
           <meta property="og:locale" content={data.site.siteMetadata.locale} />
+          <script type="application/ld+json">
+            {JSON.stringify(schemaOrgJSONLD)}
+          </script>
         </Helmet>
         {children()}
       </React.Fragment>
@@ -77,6 +111,16 @@ export const query = graphql`
         description
         socialImage
         locale
+        siteLogo
+        facebookProfile
+        twitterProfile
+        linkedInProfile
+        instagramProfile
+        supportEmail
+        streetAddress
+        addressLocality
+        postalCode
+        addressCountry
       }
     }
   }

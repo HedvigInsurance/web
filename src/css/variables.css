@@ -12,11 +12,10 @@
   --color-secondaryPurple: #efe8ff;
   --color-secondaryGrey: #f9fafc;
 
-  --fontFamilyBody: "CircularStd";
-  --fontFamilyHeader: "SoRay";
+  --fontFamilyBody: CircularStd, sans-serif;
+  --fontFamilyHeader: SoRay, sans-serif;
 
   --fontWeightBook: 400;
-  --fontWeightMedium: 500;
   --fontWeightBold: 600;
   --fontWeightSuper: 800;
 
