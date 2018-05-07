@@ -7,7 +7,7 @@ import Footer from 'src/components/Footer';
 const FAQ = () => (
   <main className="Site">
     <Helmet>
-      <title>FAQ | Hedvig</title>
+      <title>Vanliga frågor | Hedvig</title>
     </Helmet>
     <Header />
     <article className="Site-content">

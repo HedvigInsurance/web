@@ -4,6 +4,14 @@ exports[`<GivingBack /> Should render correctly 1`] = `
 <main
   className="Site"
 >
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Hur vi ger tillbaka | Hedvig
+    </title>
+  </HelmetWrapper>
   <Header
     isInverted={false}
   />

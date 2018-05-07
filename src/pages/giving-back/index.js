@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -8,6 +9,9 @@ import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
 
 const GivingBack = () => (
   <main className="Site">
+    <Helmet>
+      <title>Hur vi ger tillbaka | Hedvig</title>
+    </Helmet>
     <Header />
     <article className="Site-content">
       <div className="u-backgroundSecondaryPurple">

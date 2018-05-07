@@ -119,7 +119,7 @@ class Landing extends React.Component {
                 </h2>
                 <p
                   style={{ maxWidth: 900 }}
-                  className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-fontWeightMedium u-colorPrimaryPink
+                  className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-fontWeightBold u-colorPrimaryPink
                              u-fontSize8 u-md-fontSize5 u-lg-fontSize4"
                 >
                   <strike className="Home-strike">

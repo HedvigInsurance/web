@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
 const Terms = () => (
   <main className="Site">
+    <Helmet>
+      <title>Villkor | Hedvig</title>
+    </Helmet>
     <Header />
     <article className="Site-content">
       <div className="u-backgroundSecondaryPurple">

@@ -9,7 +9,7 @@ exports[`<FAQ /> Should render correctly 1`] = `
     encodeSpecialCharacters={true}
   >
     <title>
-      FAQ | Hedvig
+      Vanliga frågor | Hedvig
     </title>
   </HelmetWrapper>
   <Header
