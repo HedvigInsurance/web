@@ -7,7 +7,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
 
-import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-hearo-header.svg';
+import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-hero-header.svg';
 
 import './Home.css';
 
