@@ -139,7 +139,7 @@ const GivingBack = () => (
               className="Button u-colorWhite
                         u-lg-fontSize9 u-backgroundPrimaryGreen"
               href="https://hedvig.app.link/kZNtW0cT9L"
-              id="cta-app-download"
+              data-cta-app-download="giving-back"
             >
               Skaffa Hedvig
             </a>

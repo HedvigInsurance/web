@@ -73,7 +73,7 @@ class Landing extends React.Component {
                       className="Button u-colorPrimaryBlack
                             u-lg-fontSize9 u-backgroundWhite"
                       href="https://hedvig.app.link/kZNtW0cT9L"
-                      id="cta-app-download"
+                      data-cta-app-download="home-hero"
                     >
                       Try it!
                     </a>
@@ -153,6 +153,7 @@ class Landing extends React.Component {
                         className="Button u-colorWhite
                               u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                         href="https://hedvig.app.link/kZNtW0cT9L"
+                        data-cta-app-download="home-chat-demo"
                       >
                         Kom igång direkt
                       </a>
@@ -197,6 +198,7 @@ class Landing extends React.Component {
                       className="Button u-colorWhite
                           u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                       href="https://hedvig.app.link/kZNtW0cT9L"
+                      data-cta-app-download="home-chat-demo"
                     >
                       Kom igång direkt
                     </a>
@@ -330,6 +332,7 @@ class Landing extends React.Component {
                   className="Button u-backgroundPrimaryBlack
                         u-lg-fontSize9 u-colorWhite"
                   href="https://hedvig.app.link/kZNtW0cT9L"
+                  data-cta-app-download="home-already-insured"
                 >
                   Skaffa Hedvig
                 </a>
@@ -356,7 +359,7 @@ class Landing extends React.Component {
                   className="Button u-colorPrimaryBlack
                               u-lg-fontSize9 u-backgroundWhite"
                   href="https://hedvig.app.link/kZNtW0cT9L"
-                  id="cta-app-download"
+                  data-cta-app-download="home-comparison"
                 >
                   Läs mer i appen
                 </a>

@@ -158,7 +158,7 @@ class Header extends React.Component {
                   className="Button u-colorWhite
                             u-lg-fontSize9 u-backgroundPrimaryPurple"
                   href="https://hedvig.app.link/kZNtW0cT9L"
-                  id="cta-app-download"
+                  data-cta-app-download="header"
                 >
                   Ladda ner appen
                 </a>
