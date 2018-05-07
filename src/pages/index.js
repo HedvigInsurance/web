@@ -15,20 +15,20 @@ const heroAnimation = require('assets/animations/hero/desktop/data.json');
 const WAIT_UNTIL_UNBREAK_HERO_MS = 1500;
 
 class Landing extends React.Component {
-  componentDidMount() {
-    this.heroAnimTimer = setTimeout(() => {
-      if (this.heroAnim) {
-        this.heroAnim.play();
-      }
-    }, WAIT_UNTIL_UNBREAK_HERO_MS);
-  }
-
   componentWillUnmount() {
     if (this.heroAnimTimer) {
       clearTimeout(this.heroAnimTimer);
       this.heroAnimTimer = null;
     }
   }
+
+  heroAnimOnLoad = () => {
+    if (!this.heroAnim) return;
+
+    this.heroAnimTimer = setTimeout(() => {
+      this.heroAnim.play();
+    }, WAIT_UNTIL_UNBREAK_HERO_MS);
+  };
 
   chatDemoOnVisibilityChange = (isVisible) => {
     if (!this.chatAnim) return;
@@ -97,6 +97,12 @@ class Landing extends React.Component {
                       className: 'Home-hero-background-svg',
                     },
                   }}
+                  eventListeners={[
+                    {
+                      eventName: 'DOMLoaded',
+                      callback: this.heroAnimOnLoad,
+                    },
+                  ]}
                   height={null}
                   width={null}
                 />
