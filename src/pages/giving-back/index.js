@@ -35,7 +35,7 @@ const GivingBack = () => (
           <p className="u-spaceMB9 u-lg-fontSize9">
             Hedvig tar en fast avgift oavsett hur mycket ersättning som betalas
             ut. Överskottet skänks till ett gott ändamål istället för att gå
-            till extra vinst
+            till extra vinst.
           </p>
 
           <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10 u-lg-fontSize9">

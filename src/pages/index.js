@@ -304,9 +304,9 @@ class Landing extends React.Component {
                 <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
                   <span className="NumberedIcon">4</span>
                   <p className="u-lg-fontSize9">
-                    Hedvig betalar ut din ersättning blixtsnabbt. Vi har ingen
-                    anledning att smita från din ersättning eftersom det som
-                    inte betalas ut doneras till välgörenhet
+                    Hedvig betalar ut din ersättning blixtsnabbt. Vi tjänar
+                    inget på att smita från din ersättning eftersom vi donerar
+                    överskottet till välgörenhet istället för att behålla det
                   </p>
                 </div>
               </div>
