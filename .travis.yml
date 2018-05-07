@@ -15,7 +15,6 @@ script:
 
 after_success:
 - ./scripts/test-deploy.sh
-- ./scripts/production-deploy.sh
 
 notifications:
   email: false
