@@ -8,7 +8,50 @@
 * `yarn install`
 * `yarn start`
 
+## Browser support
+
+* iOS 7+
+* Safari 6+
+* IE11+ (IE10 has 0.04% share in Sweden)
+* Evergreen: Firefox, Chrome, Edge, Opera
+
+Autoprefixed is configured in package.json under `browserlist`
+
+## Dev setup
+
+### Editor
+
+* This project is configured for VSCode
+* Install the recommended extensions and edit any shared settings in `.vscode`
+
+### Linting
+
+* Using prettier and stylint which run on staged files before commit
+
+## Site config
+
+### Redirects
+
+Redicts for Netlify live in `static/_redirects`
+
 ## Styleguide
+
+### CSS
+
+Following Suit CSS
+
+* Docs: https://github.com/suitcss/suit/blob/master/doc/README.md
+
+### SVGs
+
+Include svgs as react components (enabled by `svgr` gatsby plugin)
+
+#### Example
+
+```js
+import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
+export default () => <Logo />;
+```
 
 ### Requiring files
 
@@ -20,7 +63,6 @@
 
 ```js
 import Button from 'src/components/Button';
-import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
 import './footer.css';
 ```
 
