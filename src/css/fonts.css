@@ -6,6 +6,7 @@ which is embedded as an svg for performance.
 */
 
 @font-face {
+  font-display: swap;
   font-family: "SoRay";
   font-style: normal;
   font-weight: 800;
@@ -19,6 +20,7 @@ which is embedded as an svg for performance.
 }
 
 @font-face {
+  font-display: fallback;
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 600;
@@ -33,6 +35,7 @@ which is embedded as an svg for performance.
 }
 
 @font-face {
+  font-display: fallback;
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 400;
