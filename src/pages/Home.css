@@ -13,13 +13,6 @@
   width: 100% !important;
 }
 
-.Home-howItWorks {
-  background-image: url("/assets/backgrounds/plane-bg@2x.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: 484px 1070px;
-}
-
 /*
   BEWARE BRITTLE CODE
   The animation is absolutely positioned inside the phone shell
