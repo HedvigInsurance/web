@@ -3,6 +3,8 @@ language: node_js
 node_js:
 - '10'
 
+sudo: true
+
 cache:
   directories:
     - node_modules
@@ -15,11 +17,12 @@ script:
 - yarn test
 
 before_deploy:
+- sudo apt install netlifyctl
 - yarn build
 
 deploy:
   provider: script
-  script: node_modules/.bin/netlify deploy -e production -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+  script: ./scripts/deploy-draft.sh
   skip_cleanup: true
   on:
     branch: master

@@ -86,12 +86,12 @@ Travis publishes to production on a successful build on master.
 ### Manual production deploy
 
 * `yarn build`
-* `netlify deploy -e production -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public`
+* `./scripts/deploy-production.sh`
 
 ### Manual draft deploy
 
 * `yarn build`
-* `netlify deploy -d -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public`
+* `./scripts/deploy-draft.sh`
 
 ## License
 
