@@ -62,6 +62,5 @@
   --maxWidth1of3: 315px;
 }
 
-@custom-media --sm-viewport (max-width: 639px);
 @custom-media --md-viewport (min-width: 640px) and (max-width: 959px);
 @custom-media --lg-viewport (min-width: 960px);

@@ -209,134 +209,155 @@ class Landing extends React.Component {
             </div>
           </div>
 
-          <div className="">
-            <div className="Container">
-              <h2
-                style={{ maxWidth: 900 }}
-                className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
-              >
-                Vanliga försäkrings&shy;bolag tjänar mer när du får mindre. Men
-                Hedvig är inget vanligt försäkrings&shy;bolag
-              </h2>
-              <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB5 u-lg-spaceMB4 u-flexAlignItemsCenter">
-                <figure className="u-spaceMB6 u-md-size1of2 u-lg-size1of2 u-md-flexOrderLast u-lg-flexOrderLast u-textCenter">
-                  <Img
-                    className="u-imageContain"
-                    sizes={data.moneyModelFile.image.sizes}
-                    alt=""
-                  />
-                </figure>
-                <div className="u-md-size1of2 u-lg-size1of2">
-                  <div>
-                    <div className="">
-                      <h3
-                        className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
-                        style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
-                      >
-                        <span
-                          style={{ width: 12, height: 12, borderRadius: 6 }}
-                          className="u-backgroundPrimaryGreen u-inlineBlock u-spaceMR12"
-                        />{' '}
-                        En fast avgift för att ge dig bra service
-                      </h3>
-                      <p className="u-spaceMB9 u-lg-fontSize9">
-                        20% går till att driva och utveckla Hedvig med rimlig
-                        vinst
-                      </p>
-                    </div>
-                    <div className="">
-                      <h3
-                        className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
-                        style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
-                      >
-                        <span
-                          style={{ width: 12, height: 12, borderRadius: 6 }}
-                          className="u-backgroundPrimaryDarkBlue u-inlineBlock u-spaceMR12"
-                        />{' '}
-                        Resten öronmärks till ersättningar
-                      </h3>
-                      <p className="u-spaceMB9 u-lg-fontSize9">
-                        80% är öronmärkt till skador och till Hedvigs globala
-                        försäkringspartner Inter Hannover som ger extra trygghet
-                      </p>
-                    </div>
-                    <div className="">
-                      <h3
-                        className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
-                        style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
-                      >
-                        <span
-                          style={{ width: 12, height: 12, borderRadius: 6 }}
-                          className="u-backgroundPrimaryPink u-inlineBlock u-spaceMR12"
-                        />{' '}
-                        Det som inte går till ersättning går till välgörenhet
-                      </h3>
-                      <p className="u-spaceMB9 u-lg-fontSize9">
-                        Överskottet skänks till ett gott ändamål istället för
-                        att gå till extra vinst
-                      </p>
+          <div style={{ overflowX: 'hidden' }}>
+            <div className="">
+              <div className="Container">
+                <h2
+                  style={{ maxWidth: 900 }}
+                  className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
+                >
+                  Vanliga försäkrings&shy;bolag tjänar mer när du får mindre.
+                  Men Hedvig är inget vanligt försäkrings&shy;bolag
+                </h2>
+                <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB5 u-lg-spaceMB4 u-flexAlignItemsCenter">
+                  <figure className="u-spaceMB6 u-md-size1of2 u-lg-size1of2 u-md-flexOrderLast u-lg-flexOrderLast u-textCenter">
+                    <Img
+                      className="u-imageContain"
+                      sizes={data.moneyModelFile.image.sizes}
+                      alt=""
+                    />
+                  </figure>
+                  <div className="u-md-size1of2 u-lg-size1of2">
+                    <div>
+                      <div className="">
+                        <h3
+                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
+                        >
+                          <span
+                            style={{ width: 12, height: 12, borderRadius: 6 }}
+                            className="u-backgroundPrimaryGreen u-inlineBlock u-spaceMR12"
+                          />{' '}
+                          En fast avgift för att ge dig bra service
+                        </h3>
+                        <p className="u-spaceMB9 u-lg-fontSize9">
+                          20% går till att driva och utveckla Hedvig med rimlig
+                          vinst
+                        </p>
+                      </div>
+                      <div className="">
+                        <h3
+                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
+                        >
+                          <span
+                            style={{ width: 12, height: 12, borderRadius: 6 }}
+                            className="u-backgroundPrimaryDarkBlue u-inlineBlock u-spaceMR12"
+                          />{' '}
+                          Resten öronmärks till ersättningar
+                        </h3>
+                        <p className="u-spaceMB9 u-lg-fontSize9">
+                          80% är öronmärkt till skador och till Hedvigs globala
+                          försäkringspartner Inter Hannover som ger extra
+                          trygghet
+                        </p>
+                      </div>
+                      <div className="">
+                        <h3
+                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
+                        >
+                          <span
+                            style={{ width: 12, height: 12, borderRadius: 6 }}
+                            className="u-backgroundPrimaryPink u-inlineBlock u-spaceMR12"
+                          />{' '}
+                          Det som inte går till ersättning går till välgörenhet
+                        </h3>
+                        <p className="u-spaceMB9 u-lg-fontSize9">
+                          Överskottet skänks till ett gott ändamål istället för
+                          att gå till extra vinst
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="u-backgroundSecondaryGrey">
-            <div className="Container Home-howItWorks">
-              <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB10 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                Så funkar Hedvig
-              </h2>
+            <div className="u-backgroundSecondaryGrey">
+              <div className="Container u-posRelative" style={{ zIndex: 1 }}>
+                <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB10 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
+                  Så funkar Hedvig
+                </h2>
 
-              <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB4 u-lg-spaceMB4">
-                <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                  <span className="NumberedIcon">1</span>
-                  <p className="u-lg-fontSize9">
-                    Ladda ner Hedvig från din app store och registrera dig
-                  </p>
-                </div>
-                <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                  <span className="NumberedIcon">2</span>
-                  <p className="u-lg-fontSize9">
-                    Välj en välgörenhets&shy;organisation som ska få eventuellt
-                    överskott om skadeutbetalningarna är lägre än vad vi räknat
-                    med
-                  </p>
-                </div>
-                <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                  <span className="NumberedIcon">3</span>
-                  <p className="u-lg-fontSize9">
-                    När olyckan varit framme så anmäler du den genom att spela
-                    in ett röstmeddelande direkt i appen
-                  </p>
-                </div>
-                <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                  <span className="NumberedIcon">4</span>
-                  <p className="u-lg-fontSize9">
-                    Hedvig betalar ut din ersättning blixtsnabbt. Vi tjänar
-                    inget på att smita från din ersättning eftersom vi donerar
-                    överskottet till välgörenhet istället för att behålla det
-                  </p>
+                <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB4 u-lg-spaceMB4">
+                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
+                    <span className="NumberedIcon">1</span>
+                    <p className="u-lg-fontSize9">
+                      Ladda ner Hedvig från din app store och registrera dig
+                    </p>
+                  </div>
+                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
+                    <span className="NumberedIcon">2</span>
+                    <p className="u-lg-fontSize9">
+                      Välj en välgörenhets&shy;organisation som ska få
+                      eventuellt överskott om skadeutbetalningarna är lägre än
+                      vad vi räknat med
+                    </p>
+                  </div>
+                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
+                    <span className="NumberedIcon">3</span>
+                    <p className="u-lg-fontSize9">
+                      När olyckan varit framme så anmäler du den genom att spela
+                      in ett röstmeddelande direkt i appen
+                    </p>
+                  </div>
+                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
+                    <span className="NumberedIcon">4</span>
+                    <p className="u-lg-fontSize9">
+                      Hedvig betalar ut din ersättning blixtsnabbt. Vi tjänar
+                      inget på att smita från din ersättning eftersom vi donerar
+                      överskottet till välgörenhet istället för att behålla det
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="">
-            <div className="Container">
-              <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-textCenter u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                Redan försäkrad? Byt på 2 minuter
-              </h2>
-
-              <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
-                <a
-                  className="Button u-backgroundPrimaryBlack
-                        u-lg-fontSize9 u-colorWhite"
-                  href="https://hedvig.app.link/kZNtW0cT9L"
-                  data-cta-app-download="home-already-insured"
+            <div className="">
+              <div className="Container">
+                <h2
+                  style={{ zIndex: 1 }}
+                  className="u-posRelative u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-textCenter u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
                 >
-                  Skaffa Hedvig
-                </a>
+                  Redan försäkrad? Byt på 2 minuter
+                </h2>
+
+                <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
+                  <a
+                    className="Button u-backgroundPrimaryBlack
+                          u-lg-fontSize9 u-colorWhite u-posRelative"
+                    href="https://hedvig.app.link/kZNtW0cT9L"
+                    data-cta-app-download="home-already-insured"
+                  >
+                    <div
+                      className="u-posAbsolute"
+                      style={{
+                        bottom: 8,
+                        left: -38,
+                        zIndex: 0,
+                      }}
+                    >
+                      <Img
+                        style={{ width: 430 }}
+                        className=""
+                        sizes={data.planeBgFile.image.sizes}
+                        alt=""
+                      />
+                    </div>
+                    Skaffa Hedvig
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -460,6 +481,13 @@ export const query = graphql`
     chatDemoBgFile: file(relativePath: { eq: "home/chat-demo-bg@2x.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 650) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    planeBgFile: file(relativePath: { eq: "home/plane-bg.png" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 430) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
