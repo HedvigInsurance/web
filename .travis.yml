@@ -19,7 +19,7 @@ before_deploy:
 
 deploy:
   provider: script
-  script: netlify deploy -e production -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
+  script: node_modules/.bin/netlify deploy -e production -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public
   skip_cleanup: true
   on:
     branch: master

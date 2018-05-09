@@ -4,7 +4,8 @@
 
 ## Setup
 
-* Install node.js and yarn
+* Install Node.js and yarn
+* Add `node_modules/.bin` to your `$PATH`
 * `yarn install`
 * `yarn start`
 
@@ -74,6 +75,23 @@ Aliases are configured in
 * .eslintrc.js (ESlint rule to check imports work)
 * jsconfig.json (VSCode uses this to resolve paths)
 * jest.config.js (Resolve tests)
+
+## Deploys
+
+The site is hosted on Netlify which publishes previews for all
+new commits which can be viewed from GitHub.
+
+Travis publishes to production on a successful build on master.
+
+### Manual production deploy
+
+* `yarn build`
+* `netlify deploy -e production -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public`
+
+### Manual draft deploy
+
+* `yarn build`
+* `netlify deploy -d -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./public`
 
 ## License
 
