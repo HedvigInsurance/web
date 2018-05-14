@@ -84,13 +84,17 @@ class TemplateWrapper extends React.Component {
             name="description"
             content={data.site.siteMetadata.description}
           />
-          <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
           <meta property="og:type" content="website" />
           <meta
             property="og:site_name"
             content={data.site.siteMetadata.siteName}
           />
           <meta property="og:locale" content={data.site.siteMetadata.locale} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:site"
+            content={data.site.siteMetadata.twitterUsername}
+          />
           <script type="application/ld+json">
             {JSON.stringify(schemaOrgJSONLD)}
           </script>
@@ -118,6 +122,7 @@ export const query = graphql`
         description
         locale
         siteLogo
+        twitterUsername
         facebookProfile
         twitterProfile
         linkedInProfile

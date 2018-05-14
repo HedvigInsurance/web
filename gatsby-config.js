@@ -8,6 +8,7 @@ const siteMetadata = {
   description:
     'Hedvig är en ny typ av försäkring. Byggd på smart teknik, omtanke och sunt förnuft. Så att du kan få hjälp på sekunder, och ersättning på minuter.',
   locale: 'sv_SE',
+  twitterUsername: '@hedvigers',
   facebookProfile: 'https://www.facebook.com/hedvigers/',
   twitterProfile: 'https://twitter.com/hedvigers',
   linkedInProfile: 'https://www.linkedin.com/company/hedvig/',
@@ -121,6 +122,12 @@ module.exports = {
             url: siteMetadata.itunesStoreUrl,
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: siteMetadata.siteUrl,
       },
     },
   ],
