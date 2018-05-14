@@ -31,7 +31,12 @@ body {
   height: 100%;
 }
 
-body > div {
+/*
+  We have some scripts in GTM that inject divs
+  interfering with the .Site container class
+*/
+
+body > div:first-of-type {
   height: 100%;
 }
 
