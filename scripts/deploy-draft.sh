@@ -8,6 +8,4 @@ else
     set -eo pipefail
 fi
 
-./node_modules/.bin/eslint "**/*.js"
-
-./node_modules/.bin/stylelint "**/*.css"
+netlifyctl deploy --draft --yes --site-id "$NETLIFY_SITE_ID" --access-token "$NETLIFY_ACCESS_TOKEN" --base-directory "./public"

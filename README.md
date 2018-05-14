@@ -4,7 +4,8 @@
 
 ## Setup
 
-* Install node.js and yarn
+* Install Node.js and yarn
+* Add `node_modules/.bin` to your `$PATH`
 * `yarn install`
 * `yarn start`
 
@@ -74,6 +75,32 @@ Aliases are configured in
 * .eslintrc.js (ESlint rule to check imports work)
 * jsconfig.json (VSCode uses this to resolve paths)
 * jest.config.js (Resolve tests)
+
+## Deploys
+
+The site is hosted on [Netlify](https://app.netlify.com/sites/hedvig/overview).
+
+All commits and pull requests are published as draft previews.
+
+### Production
+
+`master` is autopublished regardless of Travis CI status.
+
+### Manual deploy setup
+
+* `brew install netlifyctl # Mac`
+* `https://github.com/netlify/netlifyctl/releases/download/v0.3.3/netlifyctl-linux-amd64-0.3.3.tar.gz | tar xvz # Linux`
+  * `# Add to $PATH`
+
+### Manual production deploy
+
+* `yarn build`
+* `./scripts/deploy-production.sh`
+
+### Manual draft deploy
+
+* `yarn build`
+* `./scripts/deploy-draft.sh`
 
 ## License
 
