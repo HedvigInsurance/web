@@ -3,8 +3,6 @@ language: node_js
 node_js:
 - '10'
 
-sudo: true
-
 cache:
   directories:
     - node_modules
@@ -15,17 +13,6 @@ install:
 script:
 - yarn lint
 - yarn test
-
-before_deploy:
-- sudo apt install netlifyctl
-- yarn build
-
-deploy:
-  provider: script
-  script: ./scripts/deploy-draft.sh
-  skip_cleanup: true
-  on:
-    branch: master
 
 notifications:
   email: false

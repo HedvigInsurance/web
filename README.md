@@ -78,10 +78,19 @@ Aliases are configured in
 
 ## Deploys
 
-The site is hosted on Netlify which publishes previews for all
-new commits which can be viewed from GitHub.
+The site is hosted on [Netlify](https://app.netlify.com/sites/hedvig/overview).
 
-Travis publishes to production on a successful build on master.
+All commits and pull requests are published as draft previews.
+
+### Production
+
+`master` is autopublished regardless of Travis CI status.
+
+### Manual deploy setup
+
+* `brew install netlifyctl # Mac`
+* `https://github.com/netlify/netlifyctl/releases/download/v0.3.3/netlifyctl-linux-amd64-0.3.3.tar.gz | tar xvz # Linux`
+  * `# Add to $PATH`
 
 ### Manual production deploy
 
