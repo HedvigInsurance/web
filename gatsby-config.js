@@ -7,7 +7,6 @@ const siteMetadata = {
   headline: 'Insurance. Unbroken.',
   description:
     'Hedvig är en ny typ av försäkring. Byggd på smart teknik, omtanke och sunt förnuft. Så att du kan få hjälp på sekunder, och ersättning på minuter.',
-  socialImage: 'https://www.hedvig.com/assets/social/hedvig-social@2x.png',
   locale: 'sv_SE',
   facebookProfile: 'https://www.facebook.com/hedvigers/',
   twitterProfile: 'https://twitter.com/hedvigers',

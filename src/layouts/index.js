@@ -1,8 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-
 import 'normalize.css';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Helmet from 'react-helmet';
 import 'src/css/style.css';
 
 class TemplateWrapper extends React.Component {
@@ -67,8 +66,16 @@ class TemplateWrapper extends React.Component {
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta
             property="og:image"
-            content={data.site.siteMetadata.socialImage}
+            content="https://www.hedvig.com/assets/social/og-share-default.png"
           />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta
+            property="og:image"
+            content="https://www.hedvig.com/assets/social/og-share-stories.png"
+          />
+          <meta property="og:image:width" content="750" />
+          <meta property="og:image:height" content="750" />
           <meta
             property="og:description"
             content={data.site.siteMetadata.description}
@@ -109,7 +116,6 @@ export const query = graphql`
         siteUrl
         headline
         description
-        socialImage
         locale
         siteLogo
         facebookProfile
