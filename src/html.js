@@ -22,6 +22,23 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 
+// Un-register buggy service workers that got deployed when first
+// publishing the new design (2018-05-06)
+// Deprecate this within a month or so
+const getScriptToUnregisterBuggyServiceWorkers = () => ({
+  __html: `
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        if (registrations.length) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        }
+      });
+    }
+  `,
+});
+
 const HTML = ({
   htmlAttributes,
   headComponents,
@@ -40,6 +57,9 @@ const HTML = ({
       />
       {headComponents}
       {css}
+      <script
+        dangerouslySetInnerHTML={getScriptToUnregisterBuggyServiceWorkers()}
+      />
     </head>
     <body {...bodyAttributes}>
       {preBodyComponents}
