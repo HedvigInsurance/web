@@ -62,7 +62,7 @@
     "stylelint-config-suitcss": "^14.0.0",
     "stylelint-order": "^0.8.1",
     "stylelint-selector-bem-pattern": "^2.0.0",
-    "svgr": "^1.9.1"
+    "svgr": "^1.9.2"
   },
   "scripts": {
     "build": "./scripts/build.sh",
