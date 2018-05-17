@@ -77,6 +77,10 @@ class TemplateWrapper extends React.Component {
           <meta property="og:image:width" content="750" />
           <meta property="og:image:height" content="750" />
           <meta
+            property="twitter:image"
+            content="https://www.hedvig.com/assets/social/og-share-default.png"
+          />
+          <meta
             property="og:description"
             content={data.site.siteMetadata.description}
           />
