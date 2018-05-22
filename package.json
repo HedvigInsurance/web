@@ -41,7 +41,7 @@
     "gatsby-transformer-sharp": "^1.6.24",
     "husky": "^0.15.0-rc.13",
     "jest": "^22.4.4",
-    "jest-cli": "^22.4.3",
+    "jest-cli": "^22.4.4",
     "jsdom": "^11.6.2",
     "lint-staged": "^7.1.0",
     "normalize.css": "^8.0.0",
