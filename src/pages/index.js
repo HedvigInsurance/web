@@ -111,6 +111,16 @@ class Landing extends React.Component {
             </div>
           </div>
 
+          <div>
+            <div className="Container">
+              <Img
+                style={{ width: 469 }}
+                sizes={data.mediaLogosFile.image.sizes}
+                alt=""
+              />
+            </div>
+          </div>
+
           <div className="u-backgroundSecondaryPink">
             <div className="">
               <div className="Container">
@@ -488,6 +498,13 @@ export const query = graphql`
     planeBgFile: file(relativePath: { eq: "home/plane-bg.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 430) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 469) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
