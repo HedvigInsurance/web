@@ -114,7 +114,7 @@ class Landing extends React.Component {
           <div>
             <div className="Container">
               <Img
-                style={{ width: 469 }}
+                style={{ width: 659 }}
                 sizes={data.mediaLogosFile.image.sizes}
                 alt=""
               />
@@ -504,7 +504,7 @@ export const query = graphql`
     }
     mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
       image: childImageSharp {
-        sizes(maxWidth: 469) {
+        sizes(maxWidth: 659) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }

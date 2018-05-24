@@ -11,15 +11,35 @@ const Footer = (props, { location }) => (
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
               <Link
                 className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/about-us"
-              >
-                Om oss
-              </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
                 to="/faq"
               >
                 Vanliga frågor
+              </Link>
+              <Link
+                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/about-us"
+              >
+                Om Hedvig
+              </Link>
+              <Link
+                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/contact"
+              >
+                Kontakt
+              </Link>
+            </div>
+            <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
+              <Link
+                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/press"
+              >
+                Press
+              </Link>
+              <Link
+                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                to="/privacy"
+              >
+                Personuppgifter
               </Link>
               <Link
                 className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
@@ -28,23 +48,9 @@ const Footer = (props, { location }) => (
                 Legal information
               </Link>
             </div>
-            <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/contact"
-              >
-                Kontakt
-              </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/press"
-              >
-                Press
-              </Link>
-            </div>
           </nav>
         </div>
-        {location.pathname !== '/download' && (
+        {location.pathname.indexOf('/download') === -1 && (
           <div className="u-md-textRight u-lg-textRight">
             <a
               href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"

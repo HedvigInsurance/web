@@ -21,21 +21,21 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/about-us"
-            >
-              Om oss
-            </GatsbyLink>
-            <GatsbyLink
-              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
               to="/faq"
             >
               Vanliga frågor
             </GatsbyLink>
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/legal"
+              to="/about-us"
             >
-              Legal information
+              Om Hedvig
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/contact"
+            >
+              Kontakt
             </GatsbyLink>
           </div>
           <div
@@ -43,15 +43,21 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/contact"
-            >
-              Kontakt
-            </GatsbyLink>
-            <GatsbyLink
-              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
               to="/press"
             >
               Press
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/privacy"
+            >
+              Personuppgifter
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/legal"
+            >
+              Legal information
             </GatsbyLink>
           </div>
         </nav>
@@ -82,21 +88,21 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/about-us"
-            >
-              Om oss
-            </GatsbyLink>
-            <GatsbyLink
-              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
               to="/faq"
             >
               Vanliga frågor
             </GatsbyLink>
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/legal"
+              to="/about-us"
             >
-              Legal information
+              Om Hedvig
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/contact"
+            >
+              Kontakt
             </GatsbyLink>
           </div>
           <div
@@ -104,15 +110,21 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
           >
             <GatsbyLink
               className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-              to="/contact"
-            >
-              Kontakt
-            </GatsbyLink>
-            <GatsbyLink
-              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
               to="/press"
             >
               Press
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/privacy"
+            >
+              Personuppgifter
+            </GatsbyLink>
+            <GatsbyLink
+              className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+              to="/legal"
+            >
+              Legal information
             </GatsbyLink>
           </div>
         </nav>

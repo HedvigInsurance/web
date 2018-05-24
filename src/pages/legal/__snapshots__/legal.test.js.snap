@@ -112,33 +112,6 @@ exports[`<Legal /> Should render correctly 1`] = `
             <h2
               className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
             >
-              Dataskydd
-            </h2>
-          </div>
-          <div
-            className=""
-          >
-            <p
-              className="u-lg-fontSize9 u-spaceMB9"
-            >
-              Hedvig, och i förekommande fall International Insurance Company of Hannover SE, använder personuppgifter i administration, skadereglering, marknads- och kundanalys, produktutveckling, marknadsföring och för statistiska ändamål. Vi behandlar uppgifterna i enlighet med Personuppgiftslagen (1998:204).
-            </p>
-            <p
-              className="u-lg-fontSize9 u-spaceMB9"
-            >
-              Personuppgifterna kan komma att kompletteras med uppgifter ur offentliga register, främst statens person- och adressregister (SPAR) och kan komma att lämnas ut till samarbetspartners. I vissa fall är vi också enligt lag skyldiga att lämna ut uppgifter till bland andra Finansinspektionen och Skatteverket. Du har rätt att ansöka om att få veta vilka personuppgifter vi har om dig och begära rättelse av felaktiga uppgifter.
-            </p>
-          </div>
-        </section>
-        <section
-          className=""
-        >
-          <div
-            className=""
-          >
-            <h2
-              className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
-            >
               Cookies
             </h2>
           </div>
