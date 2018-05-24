@@ -21,7 +21,7 @@ describe('<Footer />', () => {
     const component = shallow(<Footer />, {
       context: {
         location: {
-          pathname: '/download',
+          pathname: '/download/',
         },
       },
     });
