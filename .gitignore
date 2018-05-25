@@ -20,6 +20,7 @@ public/
 .vscode/chrome
 
 # dotenv environment variables
+.envrc
 .env.local
 .env.development.local
 .env.test.local

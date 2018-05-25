@@ -4,8 +4,9 @@ import { LottieLoader } from 'src/components/LottieLoader';
 import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 
-import Footer from 'src/components/Footer';
 import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
+import AppLink from 'src/components/AppLink';
 
 import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-hero-header.svg';
 
@@ -70,14 +71,13 @@ class Landing extends React.Component {
                     För dig, ditt hem och dina saker.
                   </p>
                   <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT6 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB2">
-                    <a
+                    <AppLink
+                      feature="home-hero"
                       className="Button u-colorPrimaryBlack
                             u-lg-fontSize9 u-backgroundWhite"
-                      href="https://hedvig.app.link/kZNtW0cT9L"
-                      data-cta-app-download="home-hero"
                     >
                       Try it!
-                    </a>
+                    </AppLink>
                   </div>
                 </div>
               </div>
@@ -160,14 +160,13 @@ class Landing extends React.Component {
                         hänt.
                       </p>
 
-                      <a
+                      <AppLink
+                        feature="home-chat-demo"
                         className="Button u-colorWhite
                               u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
-                        href="https://hedvig.app.link/kZNtW0cT9L"
-                        data-cta-app-download="home-chat-demo"
                       >
                         Kom igång direkt
-                      </a>
+                      </AppLink>
                     </div>
                   </div>
                   <div className="u-spaceMB5 u-md-size1of2 u-lg-size1of2">
@@ -205,14 +204,13 @@ class Landing extends React.Component {
 
                 <div className="Container u-md-hidden u-lg-hidden">
                   <div className="Grid Grid--alignCenter u-spaceMB4">
-                    <a
+                    <AppLink
+                      feature="home-chat-demo"
                       className="Button u-colorWhite
-                          u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
-                      href="https://hedvig.app.link/kZNtW0cT9L"
-                      data-cta-app-download="home-chat-demo"
+                        u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                     >
                       Kom igång direkt
-                    </a>
+                    </AppLink>
                   </div>
                 </div>
               </div>
@@ -344,11 +342,10 @@ class Landing extends React.Component {
                 </h2>
 
                 <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
-                  <a
+                  <AppLink
+                    feature="home-already-insured"
                     className="Button u-backgroundPrimaryBlack
-                          u-lg-fontSize9 u-colorWhite u-posRelative"
-                    href="https://hedvig.app.link/kZNtW0cT9L"
-                    data-cta-app-download="home-already-insured"
+                    u-lg-fontSize9 u-colorWhite u-posRelative"
                   >
                     <div
                       className="u-posAbsolute"
@@ -366,7 +363,7 @@ class Landing extends React.Component {
                       />
                     </div>
                     Skaffa Hedvig
-                  </a>
+                  </AppLink>
                 </div>
               </div>
             </div>
@@ -387,14 +384,12 @@ class Landing extends React.Component {
               </p>
 
               <div className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3 u-textCenter">
-                <a
-                  className="Button u-colorPrimaryBlack
-                              u-lg-fontSize9 u-backgroundWhite"
-                  href="https://hedvig.app.link/kZNtW0cT9L"
-                  data-cta-app-download="home-comparison"
+                <AppLink
+                  feature="home-comparison"
+                  className="Button u-colorPrimaryBlack u-lg-fontSize9 u-backgroundWhite"
                 >
                   Läs mer i appen
-                </a>
+                </AppLink>
               </div>
             </div>
           </div>

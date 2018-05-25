@@ -215,13 +215,16 @@ exports[`<GivingBack /> Should render correctly 1`] = `
         <div
           className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8"
         >
-          <a
+          <AppLink
+            campaign="App"
+            channel="Web"
             className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen"
-            data-cta-app-download="giving-back"
-            href="https://hedvig.app.link/kZNtW0cT9L"
+            feature={null}
+            stage={null}
+            tags={null}
           >
             Skaffa Hedvig
-          </a>
+          </AppLink>
         </div>
       </div>
     </div>
