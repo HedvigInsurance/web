@@ -646,11 +646,33 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@ndhoule/each@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ndhoule/each/-/each-2.0.1.tgz#bbed372a603e0713a3193c706a73ddebc5b426a9"
+  dependencies:
+    "@ndhoule/keys" "^2.0.0"
+
+"@ndhoule/keys@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ndhoule/keys/-/keys-2.0.0.tgz#3d64ae677c65a261747bf3a457c62eb292a4e0ce"
+
+"@ndhoule/map@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ndhoule/map/-/map-2.0.1.tgz#f5ca0a47424ea67f46e2a6d499b9e9bc886aefa8"
+  dependencies:
+    "@ndhoule/each" "^2.0.1"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
   dependencies:
     any-observable "^0.3.0"
+
+"@segment/snippet@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@segment/snippet/-/snippet-4.3.1.tgz#11c345eb88ea5c64879212ae81a67da0f6e7a80c"
+  dependencies:
+    "@ndhoule/map" "^2.0.1"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -5259,12 +5281,6 @@ gatsby-plugin-favicon@^2.1.1:
   dependencies:
     babel-runtime "^6.26.0"
     favicons-webpack-plugin "0.0.7"
-
-gatsby-plugin-google-tagmanager@^1.0.16:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-1.0.18.tgz#703aa3cdf9f105138c7835977872e9c97caa8c43"
-  dependencies:
-    babel-runtime "^6.26.0"
 
 gatsby-plugin-manifest@^1.0.22:
   version "1.0.22"

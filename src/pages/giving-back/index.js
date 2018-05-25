@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import AppLink from 'src/components/AppLink';
 import { ReactComponent as SosBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg';
 import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
@@ -139,14 +140,9 @@ const GivingBack = () => (
 
         <div>
           <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8">
-            <a
-              className="Button u-colorWhite
-                        u-lg-fontSize9 u-backgroundPrimaryGreen"
-              href="https://hedvig.app.link/kZNtW0cT9L"
-              data-cta-app-download="giving-back"
-            >
+            <AppLink className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen">
               Skaffa Hedvig
-            </a>
+            </AppLink>
           </div>
         </div>
       </div>

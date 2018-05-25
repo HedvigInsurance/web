@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import AppLink from 'src/components/AppLink';
 import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
 
 import './Header.css';
@@ -154,14 +155,12 @@ class Header extends React.Component {
                 ))}
               </div>
               <div className="u-textCenter u-spacePT10">
-                <a
-                  className="Button u-colorWhite
-                            u-lg-fontSize9 u-backgroundPrimaryPurple"
-                  href="https://hedvig.app.link/kZNtW0cT9L"
-                  data-cta-app-download="header"
+                <AppLink
+                  feature="header"
+                  className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryPurple"
                 >
                   Ladda ner appen
-                </a>
+                </AppLink>
               </div>
             </div>
           </div>

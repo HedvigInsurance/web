@@ -1,3 +1,27 @@
+const {
+  NODE_ENV = 'development',
+  SEGMENT_JS_WRITE_KEY_PRODUCTION,
+  SEGMENT_JS_WRITE_KEY_TEST,
+  BRANCH_KEY_PRODUCTION,
+  BRANCH_KEY_TEST,
+} = process.env;
+
+const hasEnvConfig = [
+  SEGMENT_JS_WRITE_KEY_PRODUCTION,
+  SEGMENT_JS_WRITE_KEY_TEST,
+  BRANCH_KEY_PRODUCTION,
+  BRANCH_KEY_TEST,
+].every((value) => !!value);
+
+if (!hasEnvConfig) {
+  throw new Error(
+    `Export API keys for Segment and Branch from:
+       - https://app.segment.com/hedvig/sources
+       - https://dashboard.branch.io/account-settings/app
+    `,
+  );
+}
+
 const siteMetadata = {
   title: 'Hedvig | Insurance. Unbroken.',
   siteName: 'Hedvig',
@@ -32,18 +56,25 @@ module.exports = {
       resolve: 'gatsby-plugin-react-helmet',
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: 'GTM-KNR4PZT',
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-      },
-    },
-    {
       resolve: 'svgr',
       options: {
         babel: false,
+      },
+    },
+    {
+      resolve: 'segment',
+      options: {
+        writeKey:
+          NODE_ENV === 'production'
+            ? SEGMENT_JS_WRITE_KEY_PRODUCTION
+            : SEGMENT_JS_WRITE_KEY_TEST,
+      },
+    },
+    {
+      resolve: 'branch',
+      options: {
+        key:
+          NODE_ENV === 'production' ? BRANCH_KEY_PRODUCTION : BRANCH_KEY_TEST,
       },
     },
     {

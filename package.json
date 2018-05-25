@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "dependencies": {
+    "@segment/snippet": "^4.3.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -29,7 +30,6 @@
     "gatsby-plugin-canonical-urls": "^1.0.18",
     "gatsby-plugin-catch-links": "^1.0.22",
     "gatsby-plugin-favicon": "^2.1.1",
-    "gatsby-plugin-google-tagmanager": "^1.0.16",
     "gatsby-plugin-manifest": "^1.0.22",
     "gatsby-plugin-netlify": "^1.0.12",
     "gatsby-plugin-nprogress": "^1.0.14",
