@@ -40,7 +40,7 @@
     "gatsby-transformer-json": "^1.0.18",
     "gatsby-transformer-sharp": "^1.6.24",
     "husky": "^0.15.0-rc.13",
-    "jest": "^22.4.4",
+    "jest": "^23.0.0",
     "jest-cli": "^23.0.0",
     "jsdom": "^11.11.0",
     "lint-staged": "^7.1.2",
