@@ -220,6 +220,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
             channel="Web"
             className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen"
             feature={null}
+            keywords={null}
             stage={null}
             tags={null}
           >
