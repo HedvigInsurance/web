@@ -50,12 +50,15 @@ class AppLink extends React.Component {
       return acc;
     }, {});
 
+    const path =
+      this.context && this.context.location && this.context.location.pathname;
+
     window.branch.link(
       {
         ...linkOptions,
         data: {
           $desktop_url: 'http://www.hedvig.com/download',
-          path: this.context.location.pathname,
+          path,
         },
       },
       (err, link) => {
