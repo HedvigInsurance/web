@@ -47,7 +47,7 @@
     "jsdom": "^11.11.0",
     "lint-staged": "^7.1.2",
     "normalize.css": "^8.0.0",
-    "prettier": "^1.11.1",
+    "prettier": "^1.13.0",
     "prettier-eslint-cli": "^4.7.1",
     "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.6.0",
