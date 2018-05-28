@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@segment/snippet": "^4.3.1",
+    "@segment/utm-params": "^2.0.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -42,6 +43,7 @@
     "husky": "^0.15.0-rc.13",
     "jest": "^23.0.0",
     "jest-cli": "^23.0.0",
+    "js-cookie": "^2.2.0",
     "jsdom": "^11.11.0",
     "lint-staged": "^7.1.2",
     "normalize.css": "^8.0.0",

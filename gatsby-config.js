@@ -78,6 +78,9 @@ module.exports = {
       },
     },
     {
+      resolve: 'utm-cookies',
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
