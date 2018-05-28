@@ -114,7 +114,7 @@ class Landing extends React.Component {
           <div>
             <div className="Container">
               <Img
-                style={{ width: 659 }}
+                style={{ maxWidth: 659 }}
                 sizes={data.mediaLogosFile.image.sizes}
                 alt=""
               />
