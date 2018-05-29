@@ -72,7 +72,7 @@ class Landing extends React.Component {
                   </p>
                   <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT6 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB2">
                     <AppLink
-                      feature="home-hero"
+                      tags="home-hero"
                       className="Button u-colorPrimaryBlack
                             u-lg-fontSize9 u-backgroundWhite"
                     >
@@ -161,7 +161,7 @@ class Landing extends React.Component {
                       </p>
 
                       <AppLink
-                        feature="home-chat-demo"
+                        tags="home-chat-demo"
                         className="Button u-colorWhite
                               u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                       >
@@ -205,7 +205,7 @@ class Landing extends React.Component {
                 <div className="Container u-md-hidden u-lg-hidden">
                   <div className="Grid Grid--alignCenter u-spaceMB4">
                     <AppLink
-                      feature="home-chat-demo"
+                      tags="home-chat-demo"
                       className="Button u-colorWhite
                         u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
                     >
@@ -343,7 +343,7 @@ class Landing extends React.Component {
 
                 <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
                   <AppLink
-                    feature="home-already-insured"
+                    tags="home-already-insured"
                     className="Button u-backgroundPrimaryBlack
                     u-lg-fontSize9 u-colorWhite u-posRelative"
                   >
@@ -385,7 +385,7 @@ class Landing extends React.Component {
 
               <div className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3 u-textCenter">
                 <AppLink
-                  feature="home-comparison"
+                  tags="home-comparison"
                   className="Button u-colorPrimaryBlack u-lg-fontSize9 u-backgroundWhite"
                 >
                   Läs mer i appen
