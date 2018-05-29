@@ -12,17 +12,17 @@ class AppLink extends React.Component {
     children: PropTypes.node.isRequired,
     channel: PropTypes.string,
     campaign: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string),
-    keywords: PropTypes.arrayOf(PropTypes.string),
+    tags: PropTypes.string,
+    keywords: PropTypes.string,
     feature: PropTypes.string,
     stage: PropTypes.string,
   };
 
   static defaultProps = {
-    channel: 'Web',
-    campaign: 'App',
+    channel: 'hedvig',
+    campaign: null,
     tags: null,
-    feature: null,
+    feature: 'organic',
     stage: null,
     keywords: null,
   };
@@ -37,7 +37,7 @@ class AppLink extends React.Component {
     // Fallback if link creation fails (static channel and source)
     // Branch is blocked by adblockers (e.g. uBlock)
     // https://dashboard.branch.io/quick-links/qlc/config/514349583263033320
-    link: 'https://hedvig.app.link/kZNtW0cT9L',
+    link: 'https://hedvig.app.link/cD3ZL59gjN',
   };
 
   componentDidMount() {

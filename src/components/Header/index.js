@@ -156,7 +156,7 @@ class Header extends React.Component {
               </div>
               <div className="u-textCenter u-spacePT10">
                 <AppLink
-                  feature="header"
+                  tags="header"
                   className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryPurple"
                 >
                   Ladda ner appen

@@ -216,10 +216,10 @@ exports[`<GivingBack /> Should render correctly 1`] = `
           className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8"
         >
           <AppLink
-            campaign="App"
-            channel="Web"
+            campaign={null}
+            channel="hedvig"
             className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen"
-            feature={null}
+            feature="organic"
             keywords={null}
             stage={null}
             tags={null}
