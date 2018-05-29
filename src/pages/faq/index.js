@@ -108,6 +108,11 @@ const FAQ = () => (
               </a>
             </p>
             <p className="u-lg-fontSize9 u-spaceMB9">
+              <a href="https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf">
+                För dig som försäkrar en extra dyr pryl
+              </a>
+            </p>
+            <p className="u-lg-fontSize9 u-spaceMB9">
               Vill du inte läsa hela villkoren finns sammanfattningar här:
             </p>
             <p className="u-lg-fontSize9 u-spaceMB9">
