@@ -16,24 +16,24 @@ exports[`<Download /> Should render correctly 1`] = `
     isInverted={false}
   />
   <article
-    className="Site-content"
+    className="Site-content u-flexGrow1"
   >
     <div
-      className="Container"
+      className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
+      style={
+        Object {
+          "height": "100%",
+        }
+      }
     >
       <div
         className="u-textCenter"
       >
         <h1
-          className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2"
+          className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3"
         >
-          Ladda ner appen
+          Skaffa Hedvig-appen
         </h1>
-        <h2
-          className="u-spaceMB10 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
-        >
-          Sök efter Hedvig i din Store för att komma igång.
-        </h2>
       </div>
       <div
         className="u-spaceMB5"
@@ -41,29 +41,53 @@ exports[`<Download /> Should render correctly 1`] = `
         <div
           className="u-textCenter"
         >
+          <div
+            className="u-spaceMB5"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <input
+                className="TextInput u-lg-fontSize9 u-spaceMB12 u-spaceMR11 false"
+                onChange={[Function]}
+                placeholder="Skriv in ditt mobilnummer"
+                style={
+                  Object {
+                    "minWidth": "280px",
+                  }
+                }
+                type="tel"
+                value=""
+              />
+              <button
+                className="false Button u-colorWhite u-lg-fontSize9 u-spaceMB12"
+                disabled={true}
+                style={
+                  Object {
+                    "backgroundColor": "rgb(175, 175, 175)",
+                  }
+                }
+                type="submit"
+              >
+                Få en länk till appen
+              </button>
+            </form>
+          </div>
           <a
-            className="u-spaceMH12"
+            className="u-spaceMH12 u-spacePH11 u-spacePV11"
             href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img
-              alt="Ladda ner på App Store"
-              height={54}
-              src="/assets/appstores/app-store-badge@2x.png"
-            />
+            <ReactComponent />
           </a>
           <a
-            className="u-spaceMH12"
+            className="u-spaceMH12 u-spacePH11 u-spacePV11"
             href="https://play.google.com/store/apps/details?id=com.hedvig.app"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img
-              alt="Ladda ner på Google Play"
-              height={54}
-              src="/assets/appstores/google-play-badge@2x.png"
-            />
+            <ReactComponent />
           </a>
         </div>
       </div>
