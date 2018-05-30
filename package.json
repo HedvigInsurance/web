@@ -68,7 +68,7 @@
   },
   "scripts": {
     "build": "./scripts/build.sh",
-    "start": "gatsby develop --open",
+    "start": "gatsby develop --open -H 0.0.0.0",
     "develop": "gatsby develop",
     "lint": "./scripts/lint.sh",
     "test": "jest",

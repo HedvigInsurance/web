@@ -2,7 +2,7 @@
 
 :root {
   --Button-color: inherit;
-  --Button-disabled-opacity: 0.6;
+  --Button-disabled-opacity: 0.65;
   --Button-font: inherit;
   --Button-padding: 0.79em 1.9em;
 }
@@ -30,6 +30,7 @@
   border-style: none;
   box-sizing: border-box; /* 1 */
   color: var(--Button-color); /* 2 */
+  cursor: pointer;
   display: inline-block;
   flex: 0 1 auto !important;
   flex-basis: auto !important; /* 4 */

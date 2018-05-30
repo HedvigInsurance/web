@@ -1,0 +1,15 @@
+.TextInput {
+  border: 2px solid #e9ecef;
+  border-radius: 30px;
+  box-shadow: none;
+  padding: 0.79em 1.2em;
+}
+
+.TextInput:focus {
+  border-color: var(--color-primaryBlue);
+  outline: none;
+}
+
+.TextInput.has-errors {
+  border-color: var(--color-primaryPink);
+}
