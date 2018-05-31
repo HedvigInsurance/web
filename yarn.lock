@@ -5400,9 +5400,9 @@ gatsby-source-filesystem@^1.5.36:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-transformer-json@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-1.0.18.tgz#6629ce4e1c5808501ddf80437873c25822744852"
+gatsby-transformer-json@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-1.0.19.tgz#89f6454e61f1351399796dbff6f06c740d8f8002"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
