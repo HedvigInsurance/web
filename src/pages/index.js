@@ -61,9 +61,9 @@ class Landing extends React.Component {
                   </h1>
                   <p
                     style={{ maxWidth: 600 }}
-                    className="u-colorWhite u-spaceMT8 u-fontSize8 u-md-fontSize8 u-lg-fontSize7 u-fontWeightBold u-textCenter u-md-textLeft u-lg-textLeft"
+                    className="u-colorWhite u-spaceMT8 u-fontSize8 u-fontWeightBold u-textCenter u-md-textLeft u-lg-textLeft"
                   >
-                    Blixtsnabb hemförsäkring med ett&nbsp;stort&nbsp;hjärta.
+                    Blixtsnabb hemförsäkring med &nbsp;stort&nbsp;hjärta.
                   </p>
                   <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2">
                     <AppLink
@@ -75,10 +75,10 @@ class Landing extends React.Component {
                         padding: '1.5em 2.5em',
                       }}
                     >
-                      Skaffa på två minuter
+                      Se ditt pris i appen
                     </AppLink>
                     <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
-                      Redan försäkrad? Vi fixar bytet
+                      Redan försäkrad? Vi sköter bytet
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ class Landing extends React.Component {
           </div>
 
           <div style={{ overflowX: 'hidden' }}>
-            <div className="">
+            <div className="u-posRelative" style={{ zIndex: 1 }}>
               <div className="Container">
                 <h2
                   style={{ maxWidth: 900 }}
@@ -312,38 +312,30 @@ class Landing extends React.Component {
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-posRelative" style={{ zIndex: 1 }}>
                 <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB10 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                  Så funkar Hedvig
+                  Så kommer du igång
                 </h2>
 
-                <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB4 u-lg-spaceMB4">
-                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                    <span className="NumberedIcon">1</span>
-                    <p>
-                      Ladda ner Hedvig från din app store och registrera dig
-                    </p>
+                <div className="Grid Grid--withGutter u-spaceMB8 u-md-spaceMB4 u-lg-spaceMB4">
+                  <div className="u-spaceMB9 u-lg-size1of3">
+                    <span className="NumberedIcon u-floatLeft">1</span>
+                    <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
+                      Ladda ner appen
+                    </h3>
+                    <p />
                   </div>
-                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                    <span className="NumberedIcon">2</span>
-                    <p>
-                      Välj en välgörenhets&shy;organisation som ska få
-                      eventuellt överskott om skadeutbetalningarna är lägre än
-                      vad vi räknat med
-                    </p>
+                  <div className="u-spaceMB9 u-lg-size1of3">
+                    <span className="NumberedIcon u-floatLeft">2</span>
+                    <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
+                      Se ditt pris
+                    </h3>
+                    <p />
                   </div>
-                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                    <span className="NumberedIcon">3</span>
-                    <p>
-                      När olyckan varit framme så anmäler du den genom att spela
-                      in ett röstmeddelande direkt i appen
-                    </p>
-                  </div>
-                  <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
-                    <span className="NumberedIcon">4</span>
-                    <p>
-                      Hedvig betalar ut din ersättning blixtsnabbt. Vi tjänar
-                      inget på att smita från din ersättning eftersom vi donerar
-                      överskottet till välgörenhet istället för att behålla det
-                    </p>
+                  <div className="u-spaceMB9 u-lg-size1of3">
+                    <span className="NumberedIcon u-floatLeft">3</span>
+                    <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
+                      Signera med BankID
+                    </h3>
+                    <p />
                   </div>
                 </div>
               </div>
@@ -352,10 +344,10 @@ class Landing extends React.Component {
             <div className="">
               <div className="Container">
                 <h2
-                  style={{ zIndex: 1 }}
+                  style={{ zIndex: 0 }}
                   className="u-posRelative u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-textCenter u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
                 >
-                  Redan försäkrad? Byt på 2 minuter
+                  Hedvig sköter bytet
                 </h2>
 
                 <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
@@ -368,8 +360,9 @@ class Landing extends React.Component {
                       className="u-posAbsolute"
                       style={{
                         bottom: 8,
-                        left: -38,
+                        left: 0,
                         zIndex: 0,
+                        pointerEvents: 'none',
                       }}
                     >
                       <Img
@@ -379,7 +372,7 @@ class Landing extends React.Component {
                         alt=""
                       />
                     </div>
-                    Skaffa Hedvig
+                    Se ditt pris i appen
                   </AppLink>
                 </div>
               </div>
@@ -396,18 +389,9 @@ class Landing extends React.Component {
                 Självklart innehåller vår hemförsäkring allt vanliga
                 hemförsäkringar innehåller. Förutom bindningstid då
               </h2>
-              <p className="u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-colorWhite u-md-textCenter u-lg-textCenter">
+              <p className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3  u-colorWhite u-md-textCenter u-lg-textCenter">
                 (tyvärr har vi fortfarande självrisk, men vi jobbar på det)
               </p>
-
-              <div className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3 u-textCenter">
-                <AppLink
-                  tags={['home-comparison']}
-                  className="Button u-colorPrimaryDarkBlue u-backgroundWhite"
-                >
-                  Läs mer i appen
-                </AppLink>
-              </div>
             </div>
           </div>
 
