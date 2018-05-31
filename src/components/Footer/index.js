@@ -72,6 +72,17 @@ const Footer = (props, { location }) => (
           </div>
         )}
       </div>
+      <div className="u-spaceMB7">
+        <p className="u-fontSize10 u-colorWhite u-spaceMB9">
+          © Hedvig AB. Huvudkontor: Artillerigatan 10, 114 51, Stockholm. Org.
+          nr. 559093-0334.
+        </p>
+        <p className="u-fontSize10 u-colorWhite u-spaceMB9">
+          Exklusiv försäkringsgivare för Hedvigs försäkringar är International
+          Insurance Company of Hannover SE, Sverige filial, org. nr.
+          516402-6345. Hedvig står under Finansinspektionens tillsyn.
+        </p>
+      </div>
     </div>
   </div>
 );

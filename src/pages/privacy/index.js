@@ -84,21 +84,21 @@ const Privacy = () => (
                 med dig och för att hantera olika typer av betalningar
                 (exempelvis utbetalning av ersättning om du har haft en skada).
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Personlig information du delar med oss
               </h4>
               <p className="u-spaceMB9">
                 Namn, kontaktuppgifter, familjestatus, födelsedatum, anställning
                 och arbetsgivare, marknadsföringspreferenser.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Personnummer och andra officiella uppgifter
               </h4>
 
               <p className="u-spaceMB9">
                 Personnummer, körkortsuppgifter och folkbokföringsadress.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Finansiell information och kontouppgifter
               </h4>
               <p className="u-spaceMB9">
@@ -116,25 +116,19 @@ const Privacy = () => (
                 utomlands. Här listar vi fler exempel på uppgifter som samlas
                 in.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Fastighetsuppgifter
-              </h4>
+              <h4 className="u-spaceMT8">Fastighetsuppgifter</h4>
               <p className="u-spaceMB9">
                 Adress och fastighetsbeteckning, byggnadstyp och byggnadens
                 egenskaper, fastighetens skick, byggnadens ålder och tillbehör,
                 boende och hyresgäster, larm och låsskydd.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Reseinformation
-              </h4>
+              <h4 className="u-spaceMT8">Reseinformation</h4>
               <p className="u-spaceMB9">
                 Hotellbokningar, biljettuppgifter, reseinformation.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Skadehistorik
-              </h4>
+              <h4 className="u-spaceMT8">Skadehistorik</h4>
               <p className="u-spaceMB9">Tidigare skadehistorik hos Hedvig.</p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Skadeuppgifter från andra försäkringsbolag
               </h4>
               <p className="u-spaceMB9">
@@ -148,9 +142,7 @@ const Privacy = () => (
                 känslig information om dig. Nedan ser du exempel på sådana
                 uppgifter.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Hälsouppgifter
-              </h4>
+              <h4 className="u-spaceMT8">Hälsouppgifter</h4>
               <p className="u-spaceMB9">
                 I samband med sjukdom och olycka utomlands, tidigare och
                 aktuellt hälsotillstånd, information om skador och
@@ -158,7 +150,7 @@ const Privacy = () => (
                 behandlingar och undersökningar, graviditet och
                 receptförskrivningar.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Rättsliga förfaranden och information om brott
               </h4>
               <p className="u-spaceMB9">
@@ -175,36 +167,26 @@ const Privacy = () => (
                 Förutom allmän och känslig information ser du nedan exempel på
                 övriga personuppgifter som Hedvig behandlar.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Telefonsamtal och röstinspelningar
-              </h4>
+              <h4 className="u-spaceMT8">Telefonsamtal och röstinspelningar</h4>
               <p className="u-spaceMB9">
                 Vi spelar in telefonsamtal mellan dig och våra anställda, samt
                 analyserar och lyssnar på röstinspelningar du har gjort i appen.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Bilder och videoinspelningar
-              </h4>
+              <h4 className="u-spaceMT8">Bilder och videoinspelningar</h4>
               <p className="u-spaceMB9">
                 Vi analyserar och tittar på bilder och videoinspelningar som rör
                 försäkringsskador, som du har laddat upp i appen eller skickat
                 till oss.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Din kontakt med oss
-              </h4>
+              <h4 className="u-spaceMT8">Din kontakt med oss</h4>
               <p className="u-spaceMB9">
                 Chattmeddelanden, mail och övrig kommunikation.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Information från sociala media
-              </h4>
+              <h4 className="u-spaceMT8">Information från sociala media</h4>
               <p className="u-spaceMB9">
                 Information publicerad i sociala media.
               </p>
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Information från externa källor
-              </h4>
+              <h4 className="u-spaceMT8">Information från externa källor</h4>
               <p className="u-spaceMB9">
                 För att komplettera och hålla den information som du
                 tillhandahållit oss aktuell inhämtar vi kompletterande
@@ -228,7 +210,7 @@ const Privacy = () => (
                 samla in.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Direkt från dig eller den som är huvudförsäkringstagare
               </h4>
               <p className="u-spaceMB9">
@@ -238,7 +220,7 @@ const Privacy = () => (
                 anmäler en skada.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Användande av vår app, hemsida och information publicerad på
                 sociala medier
               </h4>
@@ -249,7 +231,7 @@ const Privacy = () => (
                 mer om vår användning av cookies på www.hedvig.com/legal.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Direkt från samarbetspartners, andra försäkringsbolag,
                 myndigheter och institutioner
               </h4>
@@ -260,7 +242,7 @@ const Privacy = () => (
                 andra parters rätt till ersättning.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Register hos myndigheter, försäkringsgivare och andra externa
                 parter
               </h4>
@@ -284,7 +266,7 @@ const Privacy = () => (
                 olika användningsområden för de personuppgifter vi behandlar.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Förmedling och administration av försäkring
               </h4>
               <p className="u-spaceMB9">
@@ -298,32 +280,26 @@ const Privacy = () => (
                 Hedvig.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Försäkringspartner
-              </h4>
+              <h4 className="u-spaceMT8">Försäkringspartner</h4>
               <p className="u-spaceMB9">
                 Vi kan komma att sammanställa och lämna ut personuppgifter till
                 vår försäkringsgivare.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Skadereglering
-              </h4>
+              <h4 className="u-spaceMT8">Skadereglering</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter för att kunna utföra vår
                 skadereglering och bekräfta rättsliga anspråk.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Hantera vår relation
-              </h4>
+              <h4 className="u-spaceMT8">Hantera vår relation</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter för att identifiera dig som
                 användare, kommunicera med dig i våra kanaler samt
                 tillhandahålla dig relevant information.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
+              <h4 className="u-spaceMT8">
                 Tillhandahållande av tjänster från partners
               </h4>
               <p className="u-spaceMB9">
@@ -332,9 +308,7 @@ const Privacy = () => (
                 försäkring.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Verksamhetsutveckling
-              </h4>
+              <h4 className="u-spaceMT8">Verksamhetsutveckling</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter, t.ex. inspelade telefonsamtal,
                 röstinspelningar, bilder och videoinspelningar för att utveckla
@@ -342,9 +316,7 @@ const Privacy = () => (
                 marknadsundersökningar och andra analyser.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Marknadsföring
-              </h4>
+              <h4 className="u-spaceMT8">Marknadsföring</h4>
               <p className="u-spaceMB9">
                 Vi samlar in och analyserar personuppgifter, som beteende i vår
                 app och på vår hemsida (inklusive geobaserad information) för
@@ -355,9 +327,7 @@ const Privacy = () => (
                 någon utomstående tredje part.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Utredning och penningtvätt
-              </h4>
+              <h4 className="u-spaceMT8">Utredning och penningtvätt</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter för att motverka penningtvätt och
                 terrorfinansiering samt för att förebygga, utreda och avvärja
@@ -365,18 +335,14 @@ const Privacy = () => (
                 hantera andra kommersiella risker.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Myndighetsrapportering
-              </h4>
+              <h4 className="u-spaceMT8">Myndighetsrapportering</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter för att fullgöra våra skyldigheter
                 enligt gällande rätt och att på begäran kunna svara myndigheter
                 när de har rätt att få del av uppgifter enligt lag.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Upprättande av statistik
-              </h4>
+              <h4 className="u-spaceMT8">Upprättande av statistik</h4>
               <p className="u-spaceMB9">
                 Vi använder personuppgifter för att ta fram statistiskt underlag
                 för våra riskbedömningar och försäkringsprodukter.
@@ -463,9 +429,7 @@ const Privacy = () => (
                 hjälp.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Skadereglering
-              </h4>
+              <h4 className="u-spaceMT8">Skadereglering</h4>
               <p className="u-spaceMB9">
                 Vi använder automatiserade beslut som en viktig del av vår
                 skadereglering. Besluten baseras på den information som du ger
@@ -475,9 +439,7 @@ const Privacy = () => (
                 kontakta oss.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Onboardingprocessen
-              </h4>
+              <h4 className="u-spaceMT8">Onboardingprocessen</h4>
               <p className="u-spaceMB9">
                 Vi använder automatiserade beslut som del i vår
                 onboardingprocess i appen. Med onboarding menar vi när du
@@ -488,9 +450,7 @@ const Privacy = () => (
                 förekommer för alla våra försäkringar.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Direktmarknadsföring
-              </h4>
+              <h4 className="u-spaceMT8">Direktmarknadsföring</h4>
               <p className="u-spaceMB9">
                 Inom marknadsföring använder vi profilering för att ge dig den
                 information som vi tror är mest relevant för dig och för att
@@ -724,9 +684,7 @@ const Privacy = () => (
                 så fall till:
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Hedvig AB
-              </h4>
+              <h4 className="u-spaceMT8">Hedvig AB</h4>
               <address className="u-fontStyleNormal">
                 Dataskyddsombudet<br />
                 Artillerigatan 10<br />
@@ -740,9 +698,7 @@ const Privacy = () => (
                 klagomål.
               </p>
 
-              <h4 className="u-spaceMT8 u-fontSize10 u-md-fontSize10">
-                Datainspektionen
-              </h4>
+              <h4 className="u-spaceMT8">Datainspektionen</h4>
               <address className="u-fontStyleNormal">
                 Box 8114<br />
                 104 20 Stockholm<br />
