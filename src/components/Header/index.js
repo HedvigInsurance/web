@@ -57,6 +57,7 @@ class Header extends React.Component {
       'Header-logo__inner': true,
       'u-md-hidden': true,
       'u-lg-hidden': true,
+      'u-fillPrimaryDarkBlue': !isInverted,
       'u-fillWhite': isInverted && !popoverIsActive,
     });
 
@@ -65,6 +66,7 @@ class Header extends React.Component {
       'u-hidden': true,
       'u-md-block': true,
       'u-lg-block': true,
+      'u-fillPrimaryDarkBlue': !isInverted,
       'u-fillWhite': isInverted,
     });
 
@@ -101,7 +103,6 @@ class Header extends React.Component {
     const menuLinkClassNames = classNames({
       'Header-menu-link': true,
       'u-linkBlock': true,
-      'u-lg-fontSize9': true,
       'u-colorWhite': isInverted,
     });
 
@@ -148,7 +149,7 @@ class Header extends React.Component {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="u-spacePV11 u-linkBlock u-lg-fontSize9"
+                    className="u-spacePV11 u-linkBlock"
                   >
                     {link.label}
                   </Link>
@@ -157,7 +158,7 @@ class Header extends React.Component {
               <div className="u-textCenter u-spacePT10">
                 <AppLink
                   tags={['header']}
-                  className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryPurple"
+                  className="Button u-colorWhite u-backgroundPrimaryPurple"
                 >
                   Ladda ner appen
                 </AppLink>

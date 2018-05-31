@@ -43,7 +43,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
           Vårt sätt att bidra
         </h2>
         <p
-          className="u-lg-fontSize9 u-spaceMB9"
+          className="u-spaceMB9"
         >
           Försäkring finns till för att göra livet lättare för människor. Vår prio ett är alltid våra medlemmar, men blir det pengar över kan vi tillsammans vara med och bidra.
         </p>
@@ -53,12 +53,12 @@ exports[`<GivingBack /> Should render correctly 1`] = `
           En schysstare modell för alla
         </h2>
         <p
-          className="u-spaceMB9 u-lg-fontSize9"
+          className="u-spaceMB9"
         >
           Hedvig tar en fast avgift oavsett hur mycket ersättning som betalas ut. Överskottet skänks till ett gott ändamål istället för att gå till extra vinst.
         </p>
         <h3
-          className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10 u-lg-fontSize9"
+          className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10"
         >
           Detta betyder att:
         </h3>
@@ -127,7 +127,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               1
             </span>
             <p
-              className="u-lg-fontSize9 u-spaceMB9"
+              className="u-spaceMB9"
             >
               Skaffa Hedvig och välj det ändamål du vill stötta
             </p>
@@ -141,7 +141,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               2
             </span>
             <p
-              className="u-lg-fontSize9 u-spaceMB9"
+              className="u-spaceMB9"
             >
               Vid årets slut summerar vi alla pengar som inte betalats ut i ersättningar till dig, eller till andra som valt samma ändamål
             </p>
@@ -155,7 +155,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               3
             </span>
             <p
-              className="u-lg-fontSize9 u-spaceMB9"
+              className="u-spaceMB9"
             >
               Tillsammans gör vi skillnad genom att skänka pengarna
             </p>
@@ -185,7 +185,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               <ReactComponent />
             </figure>
             <p
-              className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2"
+              className="u-spaceMB9 u-textCenter u-maxWidth1of2"
             >
               SOS Barnbyar arbetar för att fler barn ska få en trygg uppväxt. Stödet från våra medlemmar går till att finansiera en barnby i Ukraina.
             </p>
@@ -204,7 +204,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
               <ReactComponent />
             </figure>
             <p
-              className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2"
+              className="u-spaceMB9 u-textCenter u-maxWidth1of2"
             >
               Barncancerfonden arbetar för att bekämpa cancer och för att cancerdrabbade barn, ungdomar och deras familjer ska få den vård och det stöd de behöver.
             </p>
@@ -218,7 +218,7 @@ exports[`<GivingBack /> Should render correctly 1`] = `
           <AppLink
             campaign={null}
             channel="hedvig"
-            className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen"
+            className="Button u-colorWhite u-backgroundPrimaryGreen"
             feature="organic"
             keywords={null}
             stage={null}

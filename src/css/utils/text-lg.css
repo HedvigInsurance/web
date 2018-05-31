@@ -4,6 +4,10 @@
     text-align: center !important;
   }
 
+  .u-lg-textLeft {
+    text-align: left !important;
+  }
+
   .u-lg-textRight {
     text-align: right !important;
   }

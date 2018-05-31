@@ -21,12 +21,12 @@ input,
 select,
 textarea {
   font-family: var(--fontFamilyBody);
-  font-size: var(--fontSize10);
-  line-height: var(--lineHeight10);
+  font-size: var(--fontSize9);
+  line-height: var(--lineHeight9);
 }
 
 body {
-  color: var(--color-primaryBlack);
+  color: var(--color-primaryDarkBlue);
   -webkit-font-smoothing: antialiased;
   height: 100%;
 }
@@ -100,7 +100,7 @@ ul {
 
 a,
 a:visited {
-  color: var(--color-primaryBlack);
+  color: var(--color-primaryDarkBlue);
   text-decoration: underline;
 }
 

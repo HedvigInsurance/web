@@ -9,42 +9,33 @@ const Footer = (props, { location }) => (
         <div className="u-flexGrow1">
           <nav className="Grid">
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/faq"
-              >
+              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/faq">
                 Vanliga frågor
               </Link>
               <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                className="u-spaceMB9 u-linkBlock u-colorWhite"
                 to="/about-us"
               >
                 Om Hedvig
               </Link>
               <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                className="u-spaceMB9 u-linkBlock u-colorWhite"
                 to="/contact"
               >
                 Kontakt
               </Link>
             </div>
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/press"
-              >
+              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/press">
                 Press
               </Link>
               <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
+                className="u-spaceMB9 u-linkBlock u-colorWhite"
                 to="/privacy"
               >
                 Personuppgifter
               </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-lg-fontSize9 u-colorWhite"
-                to="/legal"
-              >
+              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/legal">
                 Legal information
               </Link>
             </div>

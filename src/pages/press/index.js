@@ -27,8 +27,7 @@ const Press = () => (
           </div>
           <div className="u-spaceMB6 u-md-size1of3 u-lg-size1of3">
             <a
-              className="Button u-backgroundPrimaryBlack
-                     u-lg-fontSize9 u-colorWhite"
+              className="Button u-backgroundPrimaryDarkBlue u-colorWhite"
               href="mailto:press@hedvig.com"
             >
               press@hedvig.com
@@ -42,8 +41,7 @@ const Press = () => (
           </div>
           <div className="u-spaceMB6">
             <a
-              className="Button u-backgroundPrimaryBlack
-                     u-lg-fontSize9 u-colorWhite"
+              className="Button u-backgroundPrimaryDarkBlue u-colorWhite"
               href="/assets/press/hedvig-press-assets.zip"
               download
             >

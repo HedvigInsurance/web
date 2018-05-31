@@ -4,6 +4,10 @@
     text-align: center !important;
   }
 
+  .u-md-textLeft {
+    text-align: left !important;
+  }
+
   .u-md-textRight {
     text-align: right !important;
   }
