@@ -22,7 +22,7 @@ const Contact = ({ data }) => (
       </div>
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
         <div className="u-spaceMT7 u-spaceMB5">
-          <address className="u-lg-fontSize9 u-fontStyleNormal u-spaceMB7">
+          <address className="u-fontStyleNormal u-spaceMB7">
             <strong>Hedvig AB</strong>
             <br />
             Artillerigatan 10, 114 51, Stockholm<br />
@@ -38,8 +38,8 @@ const Contact = ({ data }) => (
         <section className="Grid Grid--withGutter">
           <div className="u-spaceMB6 u-md-size1of3 u-lg-size1of3">
             <a
-              className="Button u-backgroundPrimaryBlack
-                     u-lg-fontSize9 u-colorWhite"
+              className="Button u-backgroundPrimaryDarkBlue
+                     u-colorWhite"
               href="mailto:hedvig@hedvig.com"
             >
               hedvig@hedvig.com
@@ -47,8 +47,8 @@ const Contact = ({ data }) => (
           </div>
           <div className="u-spaceMB6 u-md-size1of3 u-lg-size1of3">
             <a
-              className="Button u-backgroundPrimaryBlack
-                     u-lg-fontSize9 u-colorWhite"
+              className="Button u-backgroundPrimaryDarkBlue
+                     u-colorWhite"
               href="mailto:press@hedvig.com"
             >
               press@hedvig.com
@@ -56,8 +56,8 @@ const Contact = ({ data }) => (
           </div>
           <div className="u-spaceMB6 u-md-size1of3 u-lg-size1of3">
             <a
-              className="Button u-backgroundPrimaryBlack
-                     u-lg-fontSize9 u-colorWhite"
+              className="Button u-backgroundPrimaryDarkBlue
+                     u-colorWhite"
               href="mailto:careers@hedvig.com"
             >
               careers@hedvig.com

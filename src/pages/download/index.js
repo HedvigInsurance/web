@@ -89,7 +89,7 @@ class Download extends React.Component {
               <div className="u-textCenter">
                 <div className="u-spaceMB5">
                   {this.state.isSuccessful ? (
-                    <div className="u-lg-fontSize9">
+                    <div>
                       Vi har skickat dig ett sms med en länk för att ladda ner
                       Hedvig-appen
                     </div>
@@ -100,7 +100,7 @@ class Download extends React.Component {
                           minWidth: '280px',
                         }}
                         className={[
-                          'TextInput u-lg-fontSize9 u-spaceMB12 u-spaceMR11',
+                          'TextInput u-spaceMB12 u-spaceMR11',
                           this.state.hasErrors && 'has-errors',
                         ].join(' ')}
                         type="tel"
@@ -118,7 +118,7 @@ class Download extends React.Component {
                         }}
                         className={[
                           !isDisabled && 'u-backgroundPrimaryBlue',
-                          'Button u-colorWhite u-lg-fontSize9 u-spaceMB12',
+                          'Button u-colorWhite u-spaceMB12',
                         ].join(' ')}
                       >
                         Få en länk till appen
@@ -134,7 +134,7 @@ class Download extends React.Component {
                     </div>
                   )}
                   {this.state.hasErrors && (
-                    <div className="u-spaceMT8 u-lg-fontSize9 u-colorPrimaryPink">
+                    <div className="u-spaceMT8 u-colorPrimaryPink">
                       Ojdå! Det gick inte att skicka sms till det angivna
                       numret.<br />Dubbelkolla numret och prova igen.
                     </div>

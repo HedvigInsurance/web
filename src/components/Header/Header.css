@@ -1,3 +1,5 @@
+@import "../../css/variables.css";
+
 .Header {
   position: absolute;
   width: 100%;
@@ -36,7 +38,7 @@
   align-items: center;
   background-color: transparent;
   border: none;
-  color: #000;
+  color: var(--color-primaryDarkBlue);
   cursor: pointer;
   display: block;
   float: right;

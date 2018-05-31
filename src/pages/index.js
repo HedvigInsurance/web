@@ -48,7 +48,7 @@ class Landing extends React.Component {
     return (
       <main className="Site">
         <section className="Site-content">
-          <div className="u-backgroundPrimaryBlack">
+          <div className="u-backgroundPrimaryDarkBlue">
             <Header isInverted />
             <div className="u-posRelative u-nbfc">
               <div className="u-posRelative" style={{ zIndex: 1 }}>
@@ -61,23 +61,25 @@ class Landing extends React.Component {
                   </h1>
                   <p
                     style={{ maxWidth: 600 }}
-                    className="u-colorWhite u-spaceMT10 u-spaceMB10 u-lg-fontSize9"
+                    className="u-colorWhite u-spaceMT8 u-fontSize8 u-md-fontSize8 u-lg-fontSize7 u-fontWeightBold u-textCenter u-md-textLeft u-lg-textLeft"
                   >
-                    Hedvig är en ny typ av försäkring. Byggd på smart teknik,
-                    omtanke och sunt förnuft. Så att du kan få hjälp på
-                    sekunder, och ersättning på minuter.
+                    Blixtsnabb hemförsäkring med ett&nbsp;stort&nbsp;hjärta.
                   </p>
-                  <p className="u-colorWhite u-spaceMT10 u-spaceMB10 u-lg-fontSize9">
-                    För dig, ditt hem och dina saker.
-                  </p>
-                  <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT6 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB2">
+                  <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2">
                     <AppLink
                       tags={['home-hero']}
-                      className="Button u-colorPrimaryBlack
-                            u-lg-fontSize9 u-backgroundWhite"
+                      className="Button u-colorPrimaryDarkBlue u-backgroundWhite"
+                      style={{
+                        boxShadow:
+                          '0 4px 25px 3px rgba(255, 255, 255, 0.35), 0 1px 10px 0 rgba(0, 0, 0, 0.1)',
+                        padding: '1.5em 2.5em',
+                      }}
                     >
-                      Try it!
+                      Skaffa på två minuter
                     </AppLink>
+                    <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
+                      Redan försäkrad? Vi fixar bytet
+                    </div>
                   </div>
                 </div>
               </div>
@@ -154,7 +156,7 @@ class Landing extends React.Component {
                       minuter
                     </h2>
                     <div className="u-hidden u-md-block u-lg-block">
-                      <p className="u-lg-fontSize9 u-spaceMB7">
+                      <p className="u-spaceMB7">
                         Hedvig gör det enkelt när oturen varit framme. Bara
                         spela in ett kort röstmeddelande där du berättar vad som
                         hänt.
@@ -163,7 +165,7 @@ class Landing extends React.Component {
                       <AppLink
                         tags={['home-chat-demo']}
                         className="Button u-colorWhite
-                              u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
+                              u-backgroundPrimaryDarkBlue"
                       >
                         Kom igång direkt
                       </AppLink>
@@ -207,7 +209,7 @@ class Landing extends React.Component {
                     <AppLink
                       tags={['home-chat-demo']}
                       className="Button u-colorWhite
-                        u-lg-fontSize9 u-backgroundPrimaryDarkBlue"
+                        u-backgroundPrimaryDarkBlue"
                     >
                       Kom igång direkt
                     </AppLink>
@@ -239,32 +241,42 @@ class Landing extends React.Component {
                     <div>
                       <div className="">
                         <h3
-                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          className="u-spaceMB12 u-fontWeightBold"
                           style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
                         >
                           <span
-                            style={{ width: 12, height: 12, borderRadius: 6 }}
-                            className="u-backgroundPrimaryGreen u-inlineBlock u-spaceMR12"
+                            style={{
+                              width: 12,
+                              height: 12,
+                              marginRight: 14,
+                              borderRadius: 6,
+                            }}
+                            className="u-backgroundPrimaryGreen u-inlineBlock"
                           />{' '}
                           En fast avgift för att ge dig bra service
                         </h3>
-                        <p className="u-spaceMB9 u-lg-fontSize9">
+                        <p className="u-spaceMB9">
                           20% går till att driva och utveckla Hedvig med rimlig
                           vinst
                         </p>
                       </div>
                       <div className="">
                         <h3
-                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          className="u-spaceMB12 u-fontWeightBold"
                           style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
                         >
                           <span
-                            style={{ width: 12, height: 12, borderRadius: 6 }}
-                            className="u-backgroundPrimaryDarkBlue u-inlineBlock u-spaceMR12"
+                            style={{
+                              width: 12,
+                              height: 12,
+                              marginRight: 14,
+                              borderRadius: 6,
+                            }}
+                            className="u-backgroundPrimaryDarkBlue u-inlineBlock"
                           />{' '}
                           Resten öronmärks till ersättningar
                         </h3>
-                        <p className="u-spaceMB9 u-lg-fontSize9">
+                        <p className="u-spaceMB9">
                           80% är öronmärkt till skador och till Hedvigs globala
                           försäkringspartner Inter Hannover som ger extra
                           trygghet
@@ -272,16 +284,21 @@ class Landing extends React.Component {
                       </div>
                       <div className="">
                         <h3
-                          className="u-spaceMB12 u-fontWeightBold u-lg-fontSize9"
+                          className="u-spaceMB12 u-fontWeightBold"
                           style={{ textIndent: '-1.5em', paddingLeft: '1.5em' }}
                         >
                           <span
-                            style={{ width: 12, height: 12, borderRadius: 6 }}
-                            className="u-backgroundPrimaryPink u-inlineBlock u-spaceMR12"
+                            style={{
+                              width: 12,
+                              height: 12,
+                              marginRight: 14,
+                              borderRadius: 6,
+                            }}
+                            className="u-backgroundPrimaryPink u-inlineBlock"
                           />{' '}
                           Det som inte går till ersättning går till välgörenhet
                         </h3>
-                        <p className="u-spaceMB9 u-lg-fontSize9">
+                        <p className="u-spaceMB9">
                           Överskottet skänks till ett gott ändamål istället för
                           att gå till extra vinst
                         </p>
@@ -301,13 +318,13 @@ class Landing extends React.Component {
                 <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB4 u-lg-spaceMB4">
                   <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
                     <span className="NumberedIcon">1</span>
-                    <p className="u-lg-fontSize9">
+                    <p>
                       Ladda ner Hedvig från din app store och registrera dig
                     </p>
                   </div>
                   <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
                     <span className="NumberedIcon">2</span>
-                    <p className="u-lg-fontSize9">
+                    <p>
                       Välj en välgörenhets&shy;organisation som ska få
                       eventuellt överskott om skadeutbetalningarna är lägre än
                       vad vi räknat med
@@ -315,14 +332,14 @@ class Landing extends React.Component {
                   </div>
                   <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
                     <span className="NumberedIcon">3</span>
-                    <p className="u-lg-fontSize9">
+                    <p>
                       När olyckan varit framme så anmäler du den genom att spela
                       in ett röstmeddelande direkt i appen
                     </p>
                   </div>
                   <div className="u-spaceMB9 u-md-size1of2 u-lg-size1of4">
                     <span className="NumberedIcon">4</span>
-                    <p className="u-lg-fontSize9">
+                    <p>
                       Hedvig betalar ut din ersättning blixtsnabbt. Vi tjänar
                       inget på att smita från din ersättning eftersom vi donerar
                       överskottet till välgörenhet istället för att behålla det
@@ -344,8 +361,8 @@ class Landing extends React.Component {
                 <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
                   <AppLink
                     tags={['home-already-insured']}
-                    className="Button u-backgroundPrimaryBlack
-                    u-lg-fontSize9 u-colorWhite u-posRelative"
+                    className="Button u-backgroundPrimaryDarkBlue
+                    u-colorWhite u-posRelative"
                   >
                     <div
                       className="u-posAbsolute"
@@ -379,14 +396,14 @@ class Landing extends React.Component {
                 Självklart innehåller vår hemförsäkring allt vanliga
                 hemförsäkringar innehåller. Förutom bindningstid då
               </h2>
-              <p className="u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-colorWhite u-lg-fontSize9 u-md-textCenter u-lg-textCenter">
+              <p className="u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-colorWhite u-md-textCenter u-lg-textCenter">
                 (tyvärr har vi fortfarande självrisk, men vi jobbar på det)
               </p>
 
               <div className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3 u-textCenter">
                 <AppLink
                   tags={['home-comparison']}
-                  className="Button u-colorPrimaryBlack u-lg-fontSize9 u-backgroundWhite"
+                  className="Button u-colorPrimaryDarkBlue u-backgroundWhite"
                 >
                   Läs mer i appen
                 </AppLink>
@@ -405,7 +422,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
+                  <p className="u-textCenter u-maxWidth1of3">
                     Hedvig är tryggat av Inter Hannover, del av en av världens
                     största försäkringsgrupper
                   </p>
@@ -419,7 +436,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
+                  <p className="u-textCenter u-maxWidth1of3">
                     Med AA-rating från Standard &amp; Poor&apos;s
                   </p>
                 </div>
@@ -432,7 +449,7 @@ class Landing extends React.Component {
                       alt=""
                     />
                   </figure>
-                  <p className="u-lg-fontSize9 u-textCenter u-maxWidth1of3">
+                  <p className="u-textCenter u-maxWidth1of3">
                     Hedvig är auktoriserat av Finansinspektionen
                   </p>
                 </div>

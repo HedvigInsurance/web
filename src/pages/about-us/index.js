@@ -26,7 +26,7 @@ const AboutUs = () => (
               Vår historia
             </h2>
             <div>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Hedvig grundades i Stockholm i början av 2016. När vi satte
                 igång kunde vi ungefär lika mycket om försäkring som du, vilket
                 var toppen. Det betydde nämligen att vi ställde oss en massa
@@ -34,7 +34,7 @@ const AboutUs = () => (
                 Vårt mål var enkelt. Att göra försäkring schysst, enkelt och
                 blixtsnabbt.
               </p>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Även om vi idag kan nästan allt om försäkringar har vi ändå valt
                 att samarbeta med en av världens största försäkringsgrupper. Vi
                 backas dessutom av investerare som har investerat i, byggt upp
@@ -48,7 +48,7 @@ const AboutUs = () => (
               Varför vi finns
             </h2>
             <div>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Om sanningen ska fram är det få som gillar att betala sin
                 försäkring. Fullt förståeligt, om man tänker på hur försäkringar
                 fungerar idag. Du betalar dina räkningar år efter år, utan att
@@ -57,7 +57,7 @@ const AboutUs = () => (
                 motarbetad eller kanske till och med misstrodd. Varför är det
                 så?
               </p>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Problemet med vanliga försäkringsbolag är att de tjänar mer när
                 de betalar dig mindre. Hedvig är inget vanligt försäkringsbolag.
                 Vi behandlar nämligen dina pengar som dina och tar bara ut en
@@ -69,7 +69,7 @@ const AboutUs = () => (
                 skänks överskottet till organisationer som gör världen bättre.
                 Du väljer själv vad ditt hjärta klappar för.
               </p>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och
                 när du inte gör det, så hjälper vi dig hjälpa andra. Vi tycker
                 att det är så försäkring borde fungera.

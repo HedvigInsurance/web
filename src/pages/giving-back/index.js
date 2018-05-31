@@ -28,7 +28,7 @@ const GivingBack = () => (
           <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
             Vårt sätt att bidra
           </h2>
-          <p className="u-lg-fontSize9 u-spaceMB9">
+          <p className="u-spaceMB9">
             Försäkring finns till för att göra livet lättare för människor. Vår
             prio ett är alltid våra medlemmar, men blir det pengar över kan vi
             tillsammans vara med och bidra.
@@ -37,13 +37,13 @@ const GivingBack = () => (
           <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
             En schysstare modell för alla
           </h2>
-          <p className="u-spaceMB9 u-lg-fontSize9">
+          <p className="u-spaceMB9">
             Hedvig tar en fast avgift oavsett hur mycket ersättning som betalas
             ut. Överskottet skänks till ett gott ändamål istället för att gå
             till extra vinst.
           </p>
 
-          <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10 u-lg-fontSize9">
+          <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
             Detta betyder att:
           </h3>
 
@@ -86,13 +86,13 @@ const GivingBack = () => (
           <div className="Grid Grid--withGutter">
             <div className="u-md-size1of3 u-lg-size1of3">
               <span className="NumberedIcon">1</span>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Skaffa Hedvig och välj det ändamål du vill&nbsp;stötta
               </p>
             </div>
             <div className="u-md-size1of3 u-lg-size1of3">
               <span className="NumberedIcon">2</span>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Vid årets slut summerar vi alla pengar som inte betalats ut i
                 ersättningar till dig, eller till andra som valt
                 samma&nbsp;ändamål
@@ -100,7 +100,7 @@ const GivingBack = () => (
             </div>
             <div className="u-md-size1of3 u-lg-size1of3">
               <span className="NumberedIcon">3</span>
-              <p className="u-lg-fontSize9 u-spaceMB9">
+              <p className="u-spaceMB9">
                 Tillsammans gör vi skillnad genom att skänka&nbsp;pengarna
               </p>
             </div>
@@ -119,7 +119,7 @@ const GivingBack = () => (
               >
                 <SosBarnbyarLogo />
               </figure>
-              <p className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2">
+              <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
                 SOS Barnbyar arbetar för att fler barn ska få en trygg uppväxt.
                 Stödet från våra medlemmar går till att finansiera en barnby
                 i&nbsp;Ukraina.
@@ -129,7 +129,7 @@ const GivingBack = () => (
               <figure className="u-spaceMB7" style={{ height: 120 }}>
                 <BarncancerfondenLogo />
               </figure>
-              <p className="u-lg-fontSize9 u-spaceMB9 u-textCenter u-maxWidth1of2">
+              <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
                 Barncancerfonden arbetar för att bekämpa cancer och för att
                 cancerdrabbade barn, ungdomar och deras familjer ska få den vård
                 och det stöd de&nbsp;behöver.
@@ -140,7 +140,7 @@ const GivingBack = () => (
 
         <div>
           <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8">
-            <AppLink className="Button u-colorWhite u-lg-fontSize9 u-backgroundPrimaryGreen">
+            <AppLink className="Button u-colorWhite u-backgroundPrimaryGreen">
               Skaffa Hedvig
             </AppLink>
           </div>

@@ -48,7 +48,7 @@ exports[`<Download /> Should render correctly 1`] = `
               onSubmit={[Function]}
             >
               <input
-                className="TextInput u-lg-fontSize9 u-spaceMB12 u-spaceMR11 false"
+                className="TextInput u-spaceMB12 u-spaceMR11 false"
                 onChange={[Function]}
                 placeholder="Skriv in ditt mobilnummer"
                 style={
@@ -60,7 +60,7 @@ exports[`<Download /> Should render correctly 1`] = `
                 value=""
               />
               <button
-                className="false Button u-colorWhite u-lg-fontSize9 u-spaceMB12"
+                className="false Button u-colorWhite u-spaceMB12"
                 disabled={true}
                 style={
                   Object {
