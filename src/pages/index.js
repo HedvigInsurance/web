@@ -63,7 +63,7 @@ class Landing extends React.Component {
                     style={{ maxWidth: 600 }}
                     className="u-colorWhite u-spaceMT8 u-fontSize8 u-fontWeightBold u-textCenter u-md-textLeft u-lg-textLeft"
                   >
-                    Blixtsnabb hemförsäkring med &nbsp;stort&nbsp;hjärta.
+                    Blixtsnabb hemförsäkring med&nbsp;stort&nbsp;hjärta.
                   </p>
                   <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2">
                     <AppLink
