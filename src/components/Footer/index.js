@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebook.svg';
+import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
+import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
 
 const Footer = (props, { location }) => (
   <div className="u-backgroundPrimaryDarkBlue u-flexNone">
     <div className="Container">
-      <div className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7">
+      <div className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB8">
         <div className="u-flexGrow1">
           <nav className="Grid">
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
@@ -71,6 +74,17 @@ const Footer = (props, { location }) => (
             </a>
           </div>
         )}
+      </div>
+      <div className="u-spaceMB7">
+        <a href="https://www.facebook.com/hedvigers" className="u-spacePR10">
+          <FacebookIcon />
+        </a>
+        <a href="https://www.instagram.com/hedvigers/" className="u-spacePR9">
+          <InstagramIcon />
+        </a>
+        <a href="https://twitter.com/hedvigers" className="u-spacePR10">
+          <TwitterIcon />
+        </a>
       </div>
       <div className="u-spaceMB7">
         <p className="u-fontSize10 u-colorWhite u-spaceMB9">

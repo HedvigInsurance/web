@@ -8,7 +8,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
     className="Container"
   >
     <div
-      className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7"
+      className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB8"
     >
       <div
         className="u-flexGrow1"
@@ -66,6 +66,28 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
     <div
       className="u-spaceMB7"
     >
+      <a
+        className="u-spacePR10"
+        href="https://www.facebook.com/hedvigers"
+      >
+        <ReactComponent />
+      </a>
+      <a
+        className="u-spacePR9"
+        href="https://www.instagram.com/hedvigers/"
+      >
+        <ReactComponent />
+      </a>
+      <a
+        className="u-spacePR10"
+        href="https://twitter.com/hedvigers"
+      >
+        <ReactComponent />
+      </a>
+    </div>
+    <div
+      className="u-spaceMB7"
+    >
       <p
         className="u-fontSize10 u-colorWhite u-spaceMB9"
       >
@@ -89,7 +111,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
     className="Container"
   >
     <div
-      className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB7"
+      className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB8"
     >
       <div
         className="u-flexGrow1"
@@ -173,6 +195,28 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
           />
         </a>
       </div>
+    </div>
+    <div
+      className="u-spaceMB7"
+    >
+      <a
+        className="u-spacePR10"
+        href="https://www.facebook.com/hedvigers"
+      >
+        <ReactComponent />
+      </a>
+      <a
+        className="u-spacePR9"
+        href="https://www.instagram.com/hedvigers/"
+      >
+        <ReactComponent />
+      </a>
+      <a
+        className="u-spacePR10"
+        href="https://twitter.com/hedvigers"
+      >
+        <ReactComponent />
+      </a>
     </div>
     <div
       className="u-spaceMB7"
