@@ -37,7 +37,7 @@
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-sharp": "^1.6.46",
     "gatsby-plugin-sitemap": "^1.2.25",
-    "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-source-filesystem": "^1.5.38",
     "gatsby-transformer-json": "^1.0.19",
     "gatsby-transformer-sharp": "^1.6.26",
     "husky": "^0.15.0-rc.13",
