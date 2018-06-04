@@ -34,7 +34,7 @@ const FAQ = () => (
           </div>
           <div>
             <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-              Hedvig vill byta till Hedvig men har redan en försäkring, hur gör
+              Jag vill byta till Hedvig men har redan en försäkring, hur gör
               jag?
             </h2>
             <p className="u-spaceMB9">
