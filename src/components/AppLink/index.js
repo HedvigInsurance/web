@@ -20,6 +20,12 @@ class AppLink extends React.Component {
     stage: PropTypes.string,
   };
 
+  static contextTypes = {
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }).isRequired,
+  };
+
   static defaultProps = {
     channel: 'hedvig',
     campaign: null,
@@ -27,12 +33,6 @@ class AppLink extends React.Component {
     feature: 'organic',
     stage: null,
     keywords: null,
-  };
-
-  static contextTypes = {
-    location: PropTypes.shape({
-      pathname: PropTypes.string,
-    }).isRequired,
   };
 
   state = {
