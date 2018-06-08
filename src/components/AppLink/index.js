@@ -70,9 +70,17 @@ class AppLink extends React.Component {
     );
   }
 
+  trackClick = () => {
+    window.analytics.track('Click app link');
+  };
+
   render() {
     return (
-      <a {...this.props} href={this.state.link}>
+      <a
+        {...this.props}
+        href={this.state.link}
+        onClick={() => this.trackClick()}
+      >
         {this.props.children}
       </a>
     );

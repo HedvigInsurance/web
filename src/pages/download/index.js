@@ -61,6 +61,7 @@ class Download extends React.Component {
           return;
         }
         this.setState({ isSuccessful: true, phoneNumber: '' });
+        window.analytics.track('Send app link sms');
       },
     );
   };
