@@ -72,6 +72,12 @@ class AppLink extends React.Component {
 
   trackClick = () => {
     window.analytics.track('Click app link');
+    // Track conversion in AdWords
+    // ToDo: Move to Segment destination when they support new global tags!
+    // https://adwords.google.com/aw/conversions/detail?ocid=267748952&ctId=275323410&__c=3773220248
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-806495569/UihGCJK0pIMBENHKyIAD',
+    });
   };
 
   render() {

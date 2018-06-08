@@ -88,6 +88,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gtag',
+      options: {
+        conversionId: 'AW-806495569',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'img',
