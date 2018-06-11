@@ -3,7 +3,7 @@
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "top",
   "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": true,
+  "prettier.stylelintIntegration": false,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
