@@ -229,7 +229,9 @@ class Landing extends React.Component {
               <div className="Grid u-flexJustifyAround">
                 <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8 u-spaceMB8 u-md-spaceMB0 u-lg-spaceMB0">
                   <div className="CardHeader u-spacePH8 u-spacePB8">
-                    <h3>Hemförsäkring för hyresrätt</h3>
+                    <h3 className="u-fontFamilyHeader">
+                      Hemförsäkring för hyresrätt
+                    </h3>
                   </div>
                   <div className="u-spacePH8">
                     <div className="u-spacePT10">
@@ -266,7 +268,9 @@ class Landing extends React.Component {
                 </div>
                 <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8">
                   <div className="CardHeader u-spacePH8 u-spacePB8">
-                    <h3>Hemförsäkring för bostadsrätt</h3>
+                    <h3 className="u-fontFamilyHeader">
+                      Hemförsäkring för bostadsrätt
+                    </h3>
                   </div>
                   <div className="u-spacePH8">
                     <div className="u-spacePT10">
