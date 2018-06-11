@@ -219,80 +219,86 @@ class Landing extends React.Component {
             </div>
           </div>
 
-          <div>
+          <div className="u-backgroundSecondaryGrey u-spacePT5 u-md-spacePT2 u-lg-spacePT2 u-spacePB5 u-md-spacePB2 u-lg-spacePB2">
             <div className="Container">
               <div>
-                <h2 className="u-textCenter u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB7 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
+                <h2 className="u-textCenter u-spaceMB7 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
                   Månadsvis betalning. Ingen bindningstid
                 </h2>
               </div>
               <div className="Grid u-flexJustifyAround">
-                <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePH8 u-spacePV8 u-spaceMB8 u-md-spaceMB0 u-lg-spaceMB0">
-                  <h3 className="u-textCenter u-fontWeightBook">
-                    Hemförsäkring för hyresrätt
-                  </h3>
-                  <hr className="Ruler" />
-                  <div>
-                    <div>
-                      <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                        Från 99 kr
-                      </h4>
-                      <span>/månad</span>
-                    </div>
-                    <p className="u-fontSize12">(en person, liten lägenhet)</p>
+                <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8 u-spaceMB8 u-md-spaceMB0 u-lg-spaceMB0">
+                  <div className="CardHeader u-spacePH8 u-spacePB8">
+                    <h3>Hemförsäkring för hyresrätt</h3>
                   </div>
-                  <div>
-                    <div>
-                      <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                        Till 399 kr
-                      </h4>
-                      <span>/månad</span>
+                  <div className="u-spacePH8">
+                    <div className="u-spacePT10">
+                      <div>
+                        <h4 className="u-fontSize8 u-fontWeightBook u-inline">
+                          Från 99 kr
+                        </h4>
+                        <span>/mån</span>
+                      </div>
+                      <p className="u-fontSize10 u-colorPrimaryDarkGrey">
+                        (en person, liten lägenhet)
+                      </p>
                     </div>
-                    <p className="u-fontSize12">
-                      (många personer, stor lägenhet)
-                    </p>
-                  </div>
-                  <div className="u-textCenter u-spaceMT8">
-                    <AppLink
-                      tags={['home-price-example-rent']}
-                      className="Button u-backgroundPrimaryGreen u-colorWhite"
-                    >
-                      Se ditt pris i appen
-                    </AppLink>
+                    <div className="u-spacePV8">
+                      <div>
+                        <h4 className="u-fontSize8 u-fontWeightBook u-inline">
+                          Till 799 kr
+                        </h4>
+                        <span>/mån</span>
+                      </div>
+                      <p className="u-fontSize10 u-colorPrimaryDarkGrey">
+                        (sex personer, stor lägenhet)
+                      </p>
+                    </div>
+                    <div className="u-textCenter u-spaceMV8">
+                      <AppLink
+                        tags={['home-price-example-rent']}
+                        className="Button u-backgroundPrimaryGreen u-colorWhite"
+                      >
+                        Se ditt pris i appen
+                      </AppLink>
+                    </div>
                   </div>
                 </div>
-                <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePH8 u-spacePV8">
-                  <h3 className="u-textCenter u-textNoWrap u-fontWeightBook">
-                    Hemförsäkring för bostadsrätt
-                  </h3>
-                  <hr className="Ruler" />
-                  <div>
-                    <div>
-                      <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                        Från 129 kr
-                      </h4>
-                      <span>/månad</span>
-                    </div>
-                    <p className="u-fontSize12">(en person, liten lägenhet)</p>
+                <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8">
+                  <div className="CardHeader u-spacePH8 u-spacePB8">
+                    <h3>Hemförsäkring för bostadsrätt</h3>
                   </div>
-                  <div>
-                    <div>
-                      <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                        Till 599 kr
-                      </h4>
-                      <span>/månad</span>
+                  <div className="u-spacePH8">
+                    <div className="u-spacePT10">
+                      <div>
+                        <h4 className="u-fontSize8 u-fontWeightBook u-inline">
+                          Från 129 kr
+                        </h4>
+                        <span>/mån</span>
+                      </div>
+                      <p className="u-fontSize10 u-colorPrimaryDarkGrey">
+                        (en person, liten lägenhet)
+                      </p>
                     </div>
-                    <p className="u-fontSize12">
-                      (många personer, stor lägenhet)
-                    </p>
-                  </div>
-                  <div className="u-textCenter u-spaceMT8">
-                    <AppLink
-                      tags={['home-price-example-brf']}
-                      className="Button u-backgroundPrimaryGreen u-colorWhite"
-                    >
-                      Se ditt pris i appen
-                    </AppLink>
+                    <div className="u-spacePV8">
+                      <div>
+                        <h4 className="u-fontSize8 u-fontWeightBook u-inline">
+                          Till 999 kr
+                        </h4>
+                        <span>/mån</span>
+                      </div>
+                      <p className="u-fontSize10 u-colorPrimaryDarkGrey">
+                        (sex personer, stor lägenhet)
+                      </p>
+                    </div>
+                    <div className="u-textCenter u-spaceMV8">
+                      <AppLink
+                        tags={['home-price-example-brf']}
+                        className="Button u-backgroundPrimaryGreen u-colorWhite"
+                      >
+                        Se ditt pris i appen
+                      </AppLink>
+                    </div>
                   </div>
                 </div>
               </div>

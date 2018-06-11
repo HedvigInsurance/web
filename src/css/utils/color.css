@@ -34,6 +34,10 @@
   color: var(--color-primaryGrey) !important;
 }
 
+.u-colorPrimaryDarkGrey {
+  color: var(--color-primaryDarkGrey) !important;
+}
+
 .u-colorSecondaryPink {
   color: var(--color-secondaryPink) !important;
 }
