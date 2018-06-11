@@ -223,7 +223,7 @@ class Landing extends React.Component {
             <div className="Container">
               <div>
                 <h2 className="u-textCenter u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB7 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                  Månadsvis betalning. Ingen bindingstid
+                  Månadsvis betalning. Ingen bindningstid
                 </h2>
               </div>
               <div className="Grid u-flexJustifyAround">
