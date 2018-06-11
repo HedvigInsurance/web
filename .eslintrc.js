@@ -6,7 +6,7 @@ module.exports = {
   parser: 'babel-eslint',
   // Stop ESLint from looking for a configuration file in parent folders
   root: true,
-  extends: ['airbnb', 'plugin:jsx-a11y/strict', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'plugin:jsx-a11y/strict', 'plugin:prettier/recommended'],
   plugins: ['jest', 'react', 'jsx-a11y'],
   env: {
     es6: true,
