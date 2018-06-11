@@ -1,0 +1,4 @@
+.Ruler {
+  border-color: var(--color-secondaryGrey);
+  opacity: 0.4;
+}
