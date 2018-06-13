@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: hedviginsurance/web
+  branch: feature/netlify-cms
 
 media_folder: static/assets
 public_folder: assets
