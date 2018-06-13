@@ -95,6 +95,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+    },
+    {
       resolve: 'gatsby-transformer-sharp',
     },
     {
@@ -108,6 +118,9 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sitemap',
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
     },
     {
       resolve: 'gatsby-plugin-netlify',

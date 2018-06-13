@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: hedviginsurance/web
+
+media_folder: static/assets
+public_folder: assets
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about-us/index.md"
+        label: "About Us"
+        name: "about-us"
+        format: yaml-frontmatter
+        fields:
+          - label: "Template Key"
+            name: "templateKey"
+            widget: "hidden"
+            default: "about-page"
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  - label: Text
+                    name: text
+                    widget: string
