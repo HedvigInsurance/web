@@ -15,6 +15,7 @@ collections:
       - file: "src/pages/about-us/index.md"
         label: "About Us"
         name: "about-us"
+        path: /about-us
         format: yaml-frontmatter
         fields:
           - label: "Template Key"
