@@ -35,20 +35,22 @@ const AboutUsTemplate = ({ title, heading, sections }) => (
 
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
         <div className="u-maxWidth1of1">
-          {sections.map((section) => (
-            <div key={section.heading} className="">
-              <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-                {section.heading}
-              </h2>
-              <div>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph.text} className="u-spaceMB9">
-                    {paragraph.text}
-                  </p>
-                ))}
+          {sections &&
+            sections.map((section) => (
+              <div key={section.heading} className="">
+                <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+                  {section.heading}
+                </h2>
+                <div>
+                  {section.paragraphs &&
+                    section.paragraphs.map((paragraph) => (
+                      <p key={paragraph.text} className="u-spaceMB9">
+                        {paragraph.text}
+                      </p>
+                    ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </article>
