@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AboutPageTemplate } from 'src/templates/about-page';
+import { AboutUsTemplate } from 'src/templates/about-page';
 
 const AboutPagePreview = ({ entry }) => (
-  <AboutPageTemplate
+  <AboutUsTemplate
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
     sections={entry.getIn(['data', 'sections'])}
