@@ -7,6 +7,7 @@ const AboutPagePreview = ({ entry }) => (
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
     sections={entry.getIn(['data', 'sections'])}
+    location={{ pathname: '/about-us' }}
   />
 );
 
