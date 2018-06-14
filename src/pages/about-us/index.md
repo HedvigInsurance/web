@@ -1,8 +1,7 @@
 ---
 templateKey: about-page
 title: Om Hedvig | Hedvig
-heading: Om Hedvig -
-path: /about-us
+heading: Om Hedvig
 sections:
   - heading: Vår historia
     paragraphs:
@@ -41,3 +40,4 @@ sections:
           inte gör det, så hjälper vi dig hjälpa andra. Vi tycker att det är så
           försäkring borde fungera.
 ---
+
