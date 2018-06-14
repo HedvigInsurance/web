@@ -18,7 +18,7 @@ class TemplateWrapper extends React.Component {
 
   getChildContext = () => {
     if (!this.props.location) {
-      return {};
+      return { location: { pathname: '' } };
     }
     const { pathname } = this.props.location;
     return {
