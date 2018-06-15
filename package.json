@@ -52,7 +52,7 @@
     "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.6.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.0",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-lottie": "^1.0.0",
     "react-router-dom": "^4.3.1",
