@@ -141,11 +141,13 @@ class LandingTemplate extends React.Component {
 
           <div>
             <div className="Container">
-              <Img
-                style={{ maxWidth: 659 }}
-                sizes={mediaLogosFile.image.sizes}
-                alt=""
-              />
+              {mediaLogosFile && (
+                <Img
+                  style={{ maxWidth: 659 }}
+                  sizes={mediaLogosFile.image.sizes}
+                  alt=""
+                />
+              )}
             </div>
           </div>
 
@@ -193,11 +195,13 @@ class LandingTemplate extends React.Component {
                       onChange={this.chatDemoOnVisibilityChange}
                     >
                       <div className="Home-chatDemo">
-                        <Img
-                          className="Home-chatDemo-phone"
-                          sizes={chatDemoBgFile.image.sizes}
-                          alt=""
-                        />
+                        {chatDemoBgFile && (
+                          <Img
+                            className="Home-chatDemo-phone"
+                            sizes={chatDemoBgFile.image.sizes}
+                            alt=""
+                          />
+                        )}
 
                         <LottieLoader
                           ref={(anim) => {
@@ -336,11 +340,13 @@ class LandingTemplate extends React.Component {
                 </h2>
                 <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB5 u-lg-spaceMB4 u-flexAlignItemsCenter">
                   <figure className="u-spaceMB6 u-md-size1of2 u-lg-size1of2 u-md-flexOrderLast u-lg-flexOrderLast u-textCenter">
-                    <Img
-                      className="u-imageContain"
-                      sizes={moneyModelFile.image.sizes}
-                      alt=""
-                    />
+                    {moneyModelFile && (
+                      <Img
+                        className="u-imageContain"
+                        sizes={moneyModelFile.image.sizes}
+                        alt=""
+                      />
+                    )}
                   </figure>
                   <div className="u-md-size1of2 u-lg-size1of2">
                     <div>
@@ -466,12 +472,14 @@ class LandingTemplate extends React.Component {
                         pointerEvents: 'none',
                       }}
                     >
-                      <Img
-                        style={{ width: 430 }}
-                        className=""
-                        sizes={planeBgFile.image.sizes}
-                        alt=""
-                      />
+                      {planeBgFile && (
+                        <Img
+                          style={{ width: 430 }}
+                          className=""
+                          sizes={planeBgFile.image.sizes}
+                          alt=""
+                        />
+                      )}
                     </div>
                     {section7.cta_text}
                   </AppLink>
@@ -500,11 +508,13 @@ class LandingTemplate extends React.Component {
               <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT9 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
                 <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                   <figure className="u-spaceMB9 u-spaceMT6">
-                    <Img
-                      style={{ width: 120 }}
-                      sizes={reinsuredFile.image.sizes}
-                      alt=""
-                    />
+                    {reinsuredFile && (
+                      <Img
+                        style={{ width: 120 }}
+                        sizes={reinsuredFile.image.sizes}
+                        alt=""
+                      />
+                    )}
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
                     {section9.item1}
@@ -513,11 +523,13 @@ class LandingTemplate extends React.Component {
 
                 <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                   <figure className="u-spaceMB9 u-spaceMT6">
-                    <Img
-                      style={{ width: 120 }}
-                      sizes={aaRatedFile.image.sizes}
-                      alt=""
-                    />
+                    {aaRatedFile && (
+                      <Img
+                        style={{ width: 120 }}
+                        sizes={aaRatedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
                     {section9.item2}
@@ -526,11 +538,13 @@ class LandingTemplate extends React.Component {
 
                 <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                   <figure className="u-spaceMB9 u-spaceMT6">
-                    <Img
-                      style={{ width: 120 }}
-                      sizes={authorisedFile.image.sizes}
-                      alt=""
-                    />
+                    {authorisedFile && (
+                      <Img
+                        style={{ width: 120 }}
+                        sizes={authorisedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
                     {section9.item3}
@@ -634,6 +648,8 @@ const Landing = ({ data }) => (
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
+
+export { LandingTemplate };
 
 export default Landing;
 
