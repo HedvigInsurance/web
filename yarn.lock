@@ -5300,9 +5300,9 @@ gatsby-plugin-canonical-urls@^1.0.18:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-catch-links@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.22.tgz#a51f525afcdf9a1050e284f93f72fc33694c9789"
+gatsby-plugin-catch-links@^1.0.23:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.23.tgz#003b5a99de2bc009ac85a22888b19b455581f3b0"
   dependencies:
     babel-runtime "^6.26.0"
 
