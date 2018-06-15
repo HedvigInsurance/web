@@ -47,6 +47,7 @@ collections:
                     widget: text
       - file: src/pages/contact/index.md
         label: Contact
+        name: contact
         path: /contact
         fields:
           - label: Path
