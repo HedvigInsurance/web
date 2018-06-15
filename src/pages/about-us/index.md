@@ -1,22 +1,21 @@
 ---
 templateKey: about-page
 title: Om Hedvig | Hedvig
-heading: Om Hedvig -
-path: /about-us
+heading: Om Hedvig
 sections:
   - heading: Vår historia
     paragraphs:
-      - text: >-
-          Hedvig grundades i Stockholm i början av 2016. När vi satte igång
-          kunde vi ungefär lika mycket om försäkring som du, vilket var toppen.
-          Det betydde nämligen att vi ställde oss en massa frågor och utmanade
-          alla gamla sanningar som finns i branschen. Vårt mål var enkelt. Att
-          göra försäkring schysst, enkelt och blixtsnabbt.
-      - text: >-
-          Även om vi idag kan nästan allt om försäkringar har vi ändå valt att
-          samarbeta med en av världens största försäkringsgrupper. Vi backas
-          dessutom av investerare som har investerat i, byggt upp och gett dig
-          några av Sveriges bästa tjänster – som Spotify, Avanza och Klarna.
+      - >-
+        Hedvig grundades i Stockholm i början av 2016. När vi satte igång kunde
+        vi ungefär lika mycket om försäkring som du, vilket var toppen. Det
+        betydde nämligen att vi ställde oss en massa frågor och utmanade alla
+        gamla sanningar som finns i branschen. Vårt mål var enkelt. Att göra
+        försäkring schysst, enkelt och blixtsnabbt.
+      - >-
+        Även om vi idag kan nästan allt om försäkringar har vi ändå valt att
+        samarbeta med en av världens största försäkringsgrupper. Vi backas
+        dessutom av investerare som har investerat i, byggt upp och gett dig
+        några av Sveriges bästa tjänster – som Spotify, Avanza och Klarna.
   - heading: Varför vi finns
     paragraphs:
       - text: >-
@@ -41,3 +40,4 @@ sections:
           inte gör det, så hjälper vi dig hjälpa andra. Vi tycker att det är så
           försäkring borde fungera.
 ---
+
