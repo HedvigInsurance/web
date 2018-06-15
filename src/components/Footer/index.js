@@ -44,36 +44,38 @@ const Footer = (props, { location }) => (
             </div>
           </nav>
         </div>
-        {location.pathname.indexOf('/download') === -1 && (
-          <div className="u-md-textRight u-lg-textRight">
-            <a
-              href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="u-block u-spaceMB11"
-              id="cta-footer-download-apple-store"
-            >
-              <img
-                src="/assets/appstores/app-store-badge@2x.png"
-                alt="Ladda ner på App Store"
-                height={54}
-              />
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.hedvig.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="u-block u-spaceMB11"
-              id="cta-footer-download-play-store"
-            >
-              <img
-                src="/assets/appstores/google-play-badge@2x.png"
-                alt="Ladda ner på Google Play"
-                height={54}
-              />
-            </a>
-          </div>
-        )}
+        {location &&
+          location.pathname &&
+          location.pathname.indexOf('/download') === -1 && (
+            <div className="u-md-textRight u-lg-textRight">
+              <a
+                href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="u-block u-spaceMB11"
+                id="cta-footer-download-apple-store"
+              >
+                <img
+                  src="/assets/appstores/app-store-badge@2x.png"
+                  alt="Ladda ner på App Store"
+                  height={54}
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.hedvig.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="u-block u-spaceMB11"
+                id="cta-footer-download-play-store"
+              >
+                <img
+                  src="/assets/appstores/google-play-badge@2x.png"
+                  alt="Ladda ner på Google Play"
+                  height={54}
+                />
+              </a>
+            </div>
+          )}
       </div>
       <div className="u-spaceMB7">
         <a href="https://www.facebook.com/hedvigers" className="u-spacePR10">
