@@ -610,29 +610,26 @@ LandingTemplate.propTypes = {
   }).isRequired,
 };
 
-const Landing = ({ data }) => {
-  console.log(data);
-  return (
-    <LandingTemplate
-      moneyModelFile={data.moneyModelFile}
-      reinsuredFile={data.reinsuredFile}
-      authorisedFile={data.authorisedFile}
-      aaRatedFile={data.aaRatedFile}
-      chatDemoBgFile={data.chatDemoBgFile}
-      planeBgFile={data.planeBgFile}
-      mediaLogosFile={data.mediaLogosFile}
-      section1={data.landingPage.frontmatter.section1}
-      section2={data.landingPage.frontmatter.section2}
-      section3={data.landingPage.frontmatter.section3}
-      section4={data.landingPage.frontmatter.section4}
-      section5={data.landingPage.frontmatter.section5}
-      section6={data.landingPage.frontmatter.section6}
-      section7={data.landingPage.frontmatter.section7}
-      section8={data.landingPage.frontmatter.section8}
-      section9={data.landingPage.frontmatter.section9}
-    />
-  );
-};
+const Landing = ({ data }) => (
+  <LandingTemplate
+    moneyModelFile={data.moneyModelFile}
+    reinsuredFile={data.reinsuredFile}
+    authorisedFile={data.authorisedFile}
+    aaRatedFile={data.aaRatedFile}
+    chatDemoBgFile={data.chatDemoBgFile}
+    planeBgFile={data.planeBgFile}
+    mediaLogosFile={data.mediaLogosFile}
+    section1={data.landingPage.frontmatter.section1}
+    section2={data.landingPage.frontmatter.section2}
+    section3={data.landingPage.frontmatter.section3}
+    section4={data.landingPage.frontmatter.section4}
+    section5={data.landingPage.frontmatter.section5}
+    section6={data.landingPage.frontmatter.section6}
+    section7={data.landingPage.frontmatter.section7}
+    section8={data.landingPage.frontmatter.section8}
+    section9={data.landingPage.frontmatter.section9}
+  />
+);
 
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
