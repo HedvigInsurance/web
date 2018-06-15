@@ -88,9 +88,7 @@ export const aboutPageQuery = graphql`
         heading
         sections {
           heading
-          paragraphs {
-            text
-          }
+          paragraphs
         }
       }
     }
