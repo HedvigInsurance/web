@@ -64,3 +64,198 @@ collections:
           - label: Heading
             name: heading
             widget: string
+      - file: src/pages/index.md
+        label: Landing
+        name: landing
+        path: /
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: landing-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Section 1
+            name: section1
+            widget: object
+            fields:
+              - label: Subheading
+                name: subheading
+                widget: string
+              - label: CTA text
+                name: cta_text
+                widget: string
+              - label: paragraph
+                name: paragraph
+                widget: string
+          - label: Section 2
+            name: section2
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Strikethrough paragraph
+                name: strikethrough_paragraph
+                widget: text
+          - label: Section 3
+            name: section3
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+              - label: CTA text
+                name: cta_text
+                widget: string
+          - label: Section 4
+            name: section4
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Pricecard, Rental
+                name: pricecard_rental
+                widget: object
+                fields:
+                  - label: heading
+                    name: heading
+                    widget: string
+                  - label: Price, from
+                    name: price_from
+                    widget: number
+                    valueType: int
+                  - label: Price, from explainer
+                    name: price_from_explainer
+                    widget: string
+                  - label: Price, to
+                    name: price_to
+                    widget: number
+                    valueType: int
+                  - label: Price, to explainer
+                    name: price_to_explainer
+                    widget: string
+                  - label: CTA Text
+                    name: cta_text
+                    widget: string
+              - label: Pricecard, BRF
+                name: pricecard_brf
+                widget: object
+                fields:
+                  - label: heading
+                    name: heading
+                    widget: string
+                  - label: Price, from
+                    name: price_from
+                    widget: number
+                    valueType: int
+                  - label: Price, from explainer
+                    name: price_from_explainer
+                    widget: string
+                  - label: Price, to
+                    name: price_to
+                    widget: number
+                    valueType: int
+                  - label: Price, to explainer
+                    name: price_to_explainer
+                    widget: string
+                  - label: CTA Text
+                    name: cta_text
+                    widget: string
+          - label: Section 5
+            name: section5
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                type: string
+              - label: Bullet 1
+                name: bullet1
+                widget: object
+                fields:
+                  - label: Heading
+                    name: heading
+                    type: string
+                  - label: Paragraph
+                    name: paragraph
+                    type: text
+              - label: Bullet 2
+                name: bullet2
+                widget: object
+                fields:
+                  - label: Heading
+                    name: heading
+                    type: string
+                  - label: Paragraph
+                    name: paragraph
+                    type: text
+              - label: Bullet 3
+                name: bullet3
+                widget: object
+                fields:
+                  - label: Heading
+                    name: heading
+                    type: string
+                  - label: Paragraph
+                    name: paragraph
+                    type: text
+          - label: Section 6
+            name: section6
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bullet 1
+                name: bullet1
+                widget: string
+              - label: Bullet 2
+                name: bullet2
+                widget: string
+              - label: Bullet 3
+                name: bullet3
+                widget: string
+          - label: Section 7
+            name: section7
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: CTA Text
+                name: cta_text
+                widget: string
+          - label: Section 8
+            name: section8
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: text
+              - label: Paragraph
+                name: paragraph
+                widget: text
+          - label: Section 9
+            name: section9
+            widget: object
+            fields:
+              - label: Item 1
+                name: item1
+                widget: text
+              - label: Item 2
+                name: item2
+                widget: text
+              - label: Item 3
+                name: item3
+                widget: text
+
+

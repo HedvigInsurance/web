@@ -2,8 +2,6 @@
   "files.autoSave": "off",
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "top",
-  "prettier.eslintIntegration": true,
-  "prettier.stylelintIntegration": false,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -11,23 +9,5 @@
     "**/node_modules": true,
     "**/public": true,
     "**/.cache": true
-  },
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.syntaxProfiles": {
-    "html": {
-      "filters": "bem"
-    },
-    "jsx": {
-      "self_closing_tag": true
-    }
-  },
-  "emmet.preferences": {
-    "bem.elementSeparator": "-",
-    "bem.modifierSeparator": "--",
-    "ben.shortElementPrefix": ""
   }
 }

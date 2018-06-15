@@ -12,12 +12,21 @@ import { ReactComponent as HeroHeader } from 'assets/headers/insurance-unbroken-
 
 import './Home.css';
 
+const pricecardPropTypes = PropTypes.shape({
+  heading: PropTypes.string.isRequired,
+  price_from: PropTypes.number.isRequired,
+  price_from_explainer: PropTypes.string.isRequired,
+  price_to: PropTypes.number.isRequired,
+  price_to_explainer: PropTypes.string.isRequired,
+  cta_text: PropTypes.string.isRequired,
+}).isRequired;
+
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 const heroAnimation = require('assets/animations/hero/data.json');
 
 const WAIT_UNTIL_UNBREAK_HERO_MS = 1500;
 
-class Landing extends React.Component {
+class LandingTemplate extends React.Component {
   componentWillUnmount() {
     if (this.heroAnimTimer) {
       clearTimeout(this.heroAnimTimer);
@@ -44,7 +53,24 @@ class Landing extends React.Component {
   };
 
   render() {
-    const { data } = this.props;
+    const {
+      moneyModelFile,
+      reinsuredFile,
+      authorisedFile,
+      aaRatedFile,
+      chatDemoBgFile,
+      planeBgFile,
+      mediaLogosFile,
+      section1,
+      section2,
+      section3,
+      section4,
+      section5,
+      section6,
+      section7,
+      section8,
+      section9,
+    } = this.props;
     return (
       <main className="Site">
         <section className="Site-content">
@@ -63,7 +89,7 @@ class Landing extends React.Component {
                     style={{ maxWidth: 600 }}
                     className="u-colorWhite u-spaceMT8 u-fontSize8 u-fontWeightBold u-textCenter u-md-textLeft u-lg-textLeft"
                   >
-                    Blixtsnabb hemförsäkring med&nbsp;stort&nbsp;hjärta.
+                    {section1.subheading}
                   </p>
                   <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2">
                     <AppLink
@@ -75,10 +101,10 @@ class Landing extends React.Component {
                         padding: '1.5em 2.5em',
                       }}
                     >
-                      Se ditt pris i appen
+                      {section1.cta_text}
                     </AppLink>
                     <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
-                      Redan försäkrad? Vi sköter bytet
+                      {section1.paragraph}
                     </div>
                   </div>
                 </div>
@@ -117,7 +143,7 @@ class Landing extends React.Component {
             <div className="Container">
               <Img
                 style={{ maxWidth: 659 }}
-                sizes={data.mediaLogosFile.image.sizes}
+                sizes={mediaLogosFile.image.sizes}
                 alt=""
               />
             </div>
@@ -127,7 +153,7 @@ class Landing extends React.Component {
             <div className="">
               <div className="Container">
                 <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB7 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                  Ditt försäkrings&shy;bolag är trasigt
+                  {section2.heading}
                 </h2>
                 <p
                   style={{ maxWidth: 900 }}
@@ -135,12 +161,7 @@ class Landing extends React.Component {
                              u-fontSize8 u-md-fontSize5 u-lg-fontSize4"
                 >
                   <strike className="Home-strike">
-                    Leta på hemsidan för att hitta numret till kundtjänst vänta
-                    i telefonkön tills du kommer fram endast för att bli
-                    vidarekopplad till någon annan som vill att du fyller i
-                    femtioelva papper som du sedan ska skicka in innan väntan
-                    börjar på att någon ska återkoppla så att du någon gång kan
-                    få betalt-ish
+                    {section2.strikethrough_paragraph}
                   </strike>
                 </p>
               </div>
@@ -152,22 +173,17 @@ class Landing extends React.Component {
                     style={{ zIndex: 1 }}
                   >
                     <h2 className="u-md-spaceMB8 u-lg-spaceMB8 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                      Hedvig är lösningen. Få hjälp på sekunder, ersättning på
-                      minuter
+                      {section3.heading}
                     </h2>
                     <div className="u-hidden u-md-block u-lg-block">
-                      <p className="u-spaceMB7">
-                        Hedvig gör det enkelt när oturen varit framme. Bara
-                        spela in ett kort röstmeddelande där du berättar vad som
-                        hänt.
-                      </p>
+                      <p className="u-spaceMB7">{section3.paragraph}</p>
 
                       <AppLink
                         tags={['home-chat-demo']}
                         className="Button u-colorWhite
                               u-backgroundPrimaryDarkBlue"
                       >
-                        Kom igång direkt
+                        {section3.cta_text}
                       </AppLink>
                     </div>
                   </div>
@@ -179,7 +195,7 @@ class Landing extends React.Component {
                       <div className="Home-chatDemo">
                         <Img
                           className="Home-chatDemo-phone"
-                          sizes={data.chatDemoBgFile.image.sizes}
+                          sizes={chatDemoBgFile.image.sizes}
                           alt=""
                         />
 
@@ -211,7 +227,7 @@ class Landing extends React.Component {
                       className="Button u-colorWhite
                         u-backgroundPrimaryDarkBlue"
                     >
-                      Kom igång direkt
+                      {section3.cta_text}
                     </AppLink>
                   </div>
                 </div>
@@ -223,37 +239,37 @@ class Landing extends React.Component {
             <div className="Container">
               <div>
                 <h2 className="u-textCenter u-spaceMB7 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                  Månadsvis betalning. Ingen bindningstid
+                  {section4.heading}
                 </h2>
               </div>
               <div className="Grid u-flexJustifyAround">
                 <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8 u-spaceMB8 u-md-spaceMB0 u-lg-spaceMB0">
                   <div className="CardHeader u-spacePH8 u-spacePB8">
                     <h3 className="u-fontFamilyHeader u-fontSize7">
-                      Hemförsäkring för hyresrätt
+                      {section4.pricecard_rental.heading}
                     </h3>
                   </div>
                   <div className="u-spacePH8">
                     <div className="u-spacePT10">
                       <div>
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                          Från 99 kr
+                          Från {section4.pricecard_rental.price_from} kr
                         </h4>
                         <span>/mån</span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
-                        (en person, liten lägenhet)
+                        {section4.pricecard_rental.price_from_explainer}
                       </p>
                     </div>
                     <div className="u-spacePV8">
                       <div>
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                          Till 799 kr
+                          Till {section4.pricecard_rental.price_to} kr
                         </h4>
                         <span>/mån</span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
-                        (sex personer, stor lägenhet)
+                        {section4.pricecard_rental.price_to_explainer}
                       </p>
                     </div>
                     <div className="u-textCenter u-spaceMV8">
@@ -261,7 +277,7 @@ class Landing extends React.Component {
                         tags={['home-price-example-rent']}
                         className="Button u-backgroundPrimaryGreen u-colorWhite"
                       >
-                        Se ditt pris i appen
+                        {section4.pricecard_rental.cta_text}
                       </AppLink>
                     </div>
                   </div>
@@ -269,30 +285,30 @@ class Landing extends React.Component {
                 <div className="Card u-md-size1of2 u-lg-size1of2 u-maxWidth1of2 u-spacePV8">
                   <div className="CardHeader u-spacePH8 u-spacePB8">
                     <h3 className="u-fontFamilyHeader u-fontSize7">
-                      Hemförsäkring för bostadsrätt
+                      {section4.pricecard_brf.heading}
                     </h3>
                   </div>
                   <div className="u-spacePH8">
                     <div className="u-spacePT10">
                       <div>
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                          Från 129 kr
+                          Från {section4.pricecard_brf.price_from} kr
                         </h4>
                         <span>/mån</span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
-                        (en person, liten lägenhet)
+                        {section4.pricecard_brf.price_from_explainer}
                       </p>
                     </div>
                     <div className="u-spacePV8">
                       <div>
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
-                          Till 999 kr
+                          Till {section4.pricecard_brf.price_to} kr
                         </h4>
                         <span>/mån</span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
-                        (sex personer, stor lägenhet)
+                        {section4.pricecard_brf.price_to_explainer}
                       </p>
                     </div>
                     <div className="u-textCenter u-spaceMV8">
@@ -300,7 +316,7 @@ class Landing extends React.Component {
                         tags={['home-price-example-brf']}
                         className="Button u-backgroundPrimaryGreen u-colorWhite"
                       >
-                        Se ditt pris i appen
+                        {section4.pricecard_brf.cta_text}
                       </AppLink>
                     </div>
                   </div>
@@ -316,14 +332,13 @@ class Landing extends React.Component {
                   style={{ maxWidth: 900 }}
                   className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
                 >
-                  Vanliga försäkrings&shy;bolag tjänar mer när du får mindre.
-                  Men Hedvig är inget vanligt försäkrings&shy;bolag
+                  {section5.heading}
                 </h2>
                 <div className="Grid Grid--withGutter u-spaceMB6 u-md-spaceMB5 u-lg-spaceMB4 u-flexAlignItemsCenter">
                   <figure className="u-spaceMB6 u-md-size1of2 u-lg-size1of2 u-md-flexOrderLast u-lg-flexOrderLast u-textCenter">
                     <Img
                       className="u-imageContain"
-                      sizes={data.moneyModelFile.image.sizes}
+                      sizes={moneyModelFile.image.sizes}
                       alt=""
                     />
                   </figure>
@@ -343,11 +358,10 @@ class Landing extends React.Component {
                             }}
                             className="u-backgroundPrimaryGreen u-inlineBlock"
                           />{' '}
-                          En fast avgift för att ge dig bra service
+                          {section5.bullet1.heading}
                         </h3>
                         <p className="u-spaceMB9">
-                          20% går till att driva och utveckla Hedvig med rimlig
-                          vinst
+                          {section5.bullet1.paragraph}
                         </p>
                       </div>
                       <div className="">
@@ -364,12 +378,10 @@ class Landing extends React.Component {
                             }}
                             className="u-backgroundPrimaryDarkBlue u-inlineBlock"
                           />{' '}
-                          Resten öronmärks till ersättningar
+                          {section5.bullet2.heading}
                         </h3>
                         <p className="u-spaceMB9">
-                          80% är öronmärkt till skador och till Hedvigs globala
-                          försäkringspartner Inter Hannover som ger extra
-                          trygghet
+                          {section5.bullet2.paragraph}
                         </p>
                       </div>
                       <div className="">
@@ -386,11 +398,10 @@ class Landing extends React.Component {
                             }}
                             className="u-backgroundPrimaryPink u-inlineBlock"
                           />{' '}
-                          Det som inte går till ersättning går till välgörenhet
+                          {section5.bullet3.heading}
                         </h3>
                         <p className="u-spaceMB9">
-                          Överskottet skänks till ett gott ändamål istället för
-                          att gå till extra vinst
+                          {section5.bullet3.paragraph}
                         </p>
                       </div>
                     </div>
@@ -402,28 +413,28 @@ class Landing extends React.Component {
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-posRelative" style={{ zIndex: 1 }}>
                 <h2 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB10 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2">
-                  Så kommer du igång
+                  {section6.heading}
                 </h2>
 
                 <div className="Grid Grid--withGutter u-spaceMB8 u-md-spaceMB4 u-lg-spaceMB4">
                   <div className="u-spaceMB9 u-lg-size1of3">
                     <span className="NumberedIcon u-floatLeft">1</span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
-                      Ladda ner appen
+                      {section6.bullet1}
                     </h3>
                     <p />
                   </div>
                   <div className="u-spaceMB9 u-lg-size1of3">
                     <span className="NumberedIcon u-floatLeft">2</span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
-                      Se ditt pris
+                      {section6.bullet2}
                     </h3>
                     <p />
                   </div>
                   <div className="u-spaceMB9 u-lg-size1of3">
                     <span className="NumberedIcon u-floatLeft">3</span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
-                      Signera med BankID
+                      {section6.bullet3}
                     </h3>
                     <p />
                   </div>
@@ -437,7 +448,7 @@ class Landing extends React.Component {
                   style={{ zIndex: 0 }}
                   className="u-posRelative u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB6 u-textCenter u-fontFamilyHeader u-fontSize6 u-md-fontSize3 u-lg-fontSize2"
                 >
-                  Hedvig sköter bytet
+                  {section7.heading}
                 </h2>
 
                 <div className="Grid Grid--alignCenter u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
@@ -458,11 +469,11 @@ class Landing extends React.Component {
                       <Img
                         style={{ width: 430 }}
                         className=""
-                        sizes={data.planeBgFile.image.sizes}
+                        sizes={planeBgFile.image.sizes}
                         alt=""
                       />
                     </div>
-                    Se ditt pris i appen
+                    {section7.cta_text}
                   </AppLink>
                 </div>
               </div>
@@ -476,11 +487,10 @@ class Landing extends React.Component {
                 className="u-spaceMT5 u-md-spaceMT2 u-lg-spaceMT2 u-spaceMB8 u-fontFamilyHeader u-fontSize6 u-md-fontSize3
                           u-lg-fontSize2 u-colorWhite u-md-textCenter u-lg-textCenter u-flexExpand"
               >
-                Självklart innehåller vår hemförsäkring allt vanliga
-                hemförsäkringar innehåller. Förutom bindningstid då
+                {section8.heading}
               </h2>
               <p className="u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3  u-colorWhite u-md-textCenter u-lg-textCenter">
-                (tyvärr har vi fortfarande självrisk, men vi jobbar på det)
+                {section8.paragraph}
               </p>
             </div>
           </div>
@@ -492,13 +502,12 @@ class Landing extends React.Component {
                   <figure className="u-spaceMB9 u-spaceMT6">
                     <Img
                       style={{ width: 120 }}
-                      sizes={data.reinsuredFile.image.sizes}
+                      sizes={reinsuredFile.image.sizes}
                       alt=""
                     />
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
-                    Hedvig är tryggat av Inter Hannover, del av en av världens
-                    största försäkringsgrupper
+                    {section9.item1}
                   </p>
                 </div>
 
@@ -506,12 +515,12 @@ class Landing extends React.Component {
                   <figure className="u-spaceMB9 u-spaceMT6">
                     <Img
                       style={{ width: 120 }}
-                      sizes={data.aaRatedFile.image.sizes}
+                      sizes={aaRatedFile.image.sizes}
                       alt=""
                     />
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
-                    Med AA-rating från Standard &amp; Poor&apos;s
+                    {section9.item2}
                   </p>
                 </div>
 
@@ -519,12 +528,12 @@ class Landing extends React.Component {
                   <figure className="u-spaceMB9 u-spaceMT6">
                     <Img
                       style={{ width: 120 }}
-                      sizes={data.authorisedFile.image.sizes}
+                      sizes={authorisedFile.image.sizes}
                       alt=""
                     />
                   </figure>
                   <p className="u-textCenter u-maxWidth1of3">
-                    Hedvig är auktoriserat av Finansinspektionen
+                    {section9.item3}
                   </p>
                 </div>
               </div>
@@ -538,6 +547,93 @@ class Landing extends React.Component {
   }
 }
 
+LandingTemplate.propTypes = {
+  moneyModelFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  reinsuredFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  authorisedFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  aaRatedFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  chatDemoBgFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  planeBgFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  section1: PropTypes.shape({
+    subheading: PropTypes.string.isRequired,
+    cta_text: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+  }).isRequired,
+  section2: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    strikethrough_paragraph: PropTypes.string.isRequired,
+  }).isRequired,
+  section3: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+    cta_text: PropTypes.string.isRequired,
+  }).isRequired,
+  section4: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    pricecard_rental: pricecardPropTypes,
+    pricecard_brf: pricecardPropTypes,
+  }).isRequired,
+  section5: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    bullet1: PropTypes.shape({
+      heading: PropTypes.string.isRequired,
+      paragraph: PropTypes.string.isRequired,
+    }),
+    bullet2: PropTypes.shape({
+      heading: PropTypes.string.isRequired,
+      paragraph: PropTypes.string.isRequired,
+    }),
+    bullet3: PropTypes.shape({
+      heading: PropTypes.string.isRequired,
+      paragraph: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
+  section6: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    bullet1: PropTypes.string.isRequired,
+    bullet2: PropTypes.string.isRequired,
+    bullet3: PropTypes.string.isRequired,
+  }).isRequired,
+  section7: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    cta_text: PropTypes.string.isRequired,
+  }).isRequired,
+  section8: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+  }).isRequired,
+  section9: PropTypes.shape({
+    item1: PropTypes.string.isRequired,
+    item2: PropTypes.string.isRequired,
+    item3: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+const Landing = ({ data }) => {
+  console.log(data);
+  return (
+    <LandingTemplate
+      moneyModelFile={data.moneyModelFile}
+      reinsuredFile={data.reinsuredFile}
+      authorisedFile={data.authorisedFile}
+      aaRatedFile={data.aaRatedFile}
+      chatDemoBgFile={data.chatDemoBgFile}
+      planeBgFile={data.planeBgFile}
+      mediaLogosFile={data.mediaLogosFile}
+      section1={data.landingPage.frontmatter.section1}
+      section2={data.landingPage.frontmatter.section2}
+      section3={data.landingPage.frontmatter.section3}
+      section4={data.landingPage.frontmatter.section4}
+      section5={data.landingPage.frontmatter.section5}
+      section6={data.landingPage.frontmatter.section6}
+      section7={data.landingPage.frontmatter.section7}
+      section8={data.landingPage.frontmatter.section8}
+      section9={data.landingPage.frontmatter.section9}
+    />
+  );
+};
+
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
@@ -545,7 +641,7 @@ Landing.propTypes = {
 export default Landing;
 
 export const query = graphql`
-  query HomeMoneyExplainerQuery {
+  query LandingPage($id: String!) {
     moneyModelFile: file(relativePath: { eq: "home/money-model@2x.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 514) {
@@ -592,6 +688,78 @@ export const query = graphql`
       image: childImageSharp {
         sizes(maxWidth: 659) {
           ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    landingPage: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        section1 {
+          subheading
+          cta_text
+          paragraph
+        }
+        section2 {
+          heading
+          strikethrough_paragraph
+        }
+        section3 {
+          heading
+          paragraph
+          cta_text
+        }
+        section4 {
+          heading
+          pricecard_rental {
+            heading
+            price_from
+            price_from_explainer
+            price_to
+            price_to_explainer
+            cta_text
+          }
+          pricecard_brf {
+            heading
+            price_from
+            price_from_explainer
+            price_to
+            price_to_explainer
+            cta_text
+          }
+        }
+        section5 {
+          heading
+          bullet1 {
+            heading
+            paragraph
+          }
+          bullet2 {
+            heading
+            paragraph
+          }
+          bullet3 {
+            heading
+            paragraph
+          }
+        }
+        section6 {
+          heading
+          bullet1
+          bullet2
+          bullet3
+        }
+        section7 {
+          heading
+          cta_text
+        }
+        section8 {
+          heading
+          paragraph
+        }
+        section9 {
+          item1
+          item2
+          item3
         }
       }
     }
