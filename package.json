@@ -59,7 +59,7 @@
     "react-router-enzyme-context": "^1.2.0",
     "react-visibility-sensor": "^3.11.0",
     "rimraf": "^2.6.2",
-    "stylelint": "^9.2.1",
+    "stylelint": "^9.3.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
     "stylelint-order": "^0.8.1",
