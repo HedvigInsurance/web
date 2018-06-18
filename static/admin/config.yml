@@ -257,5 +257,34 @@ collections:
               - label: Item 3
                 name: item3
                 widget: text
+      - file: src/pages/faq/index.md
+        label: FAQ
+        name: faq
+        path: /faq
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /faq
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: faq-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: sections
+            name: sections
+            widget: list
+            fields:
+              - label: Question
+                name: question
+                widget: string
+              - label: Answer
+                name: answer
+                widget: markdown
 
 
