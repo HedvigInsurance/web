@@ -65,8 +65,9 @@ sections:
       om resten!
     question: Hur rapporterar man en skada till Hedvig?
   - answer: >-
-      Enkelt – skicka ett mail till <mailto:hedvig@hedvig.com> så fixar vi det
-      på nolltid!
+      Enkelt – skicka ett mail till <a
+      href="mailto:hedvig@hedvig.com">hedvig@hedvig.com</a> så fixar vi det på
+      nolltid!
     question: >-
       Hur anmäler jag en skada om jag har blivit av med min mobil och inte kan
       använda appen?
