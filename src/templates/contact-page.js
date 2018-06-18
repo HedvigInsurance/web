@@ -6,17 +6,17 @@ import Img from 'gatsby-image';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 
-const Contact = ({ data }) => (
+const ContactTemplate = ({ image, title, heading }) => (
   <main className="Site">
     <Helmet>
-      <title>Kontakt | Hedvig</title>
+      <title>{title}</title>
     </Helmet>
     <Header />
     <article className="Site-content">
       <div className="u-backgroundSecondaryGrey">
         <div className="Container">
           <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
-            Vill du komma i kontakt med oss?
+            {heading}
           </h1>
         </div>
       </div>
@@ -28,11 +28,13 @@ const Contact = ({ data }) => (
             Artillerigatan 10, 114 51, Stockholm<br />
             Org. nr. 559093-0334<br />
           </address>
-          <Img
-            className="u-imageContain"
-            sizes={data.file.mapImage.sizes}
-            alt=""
-          />
+          {image && (
+            <Img
+              className="u-imageContain"
+              sizes={image.mapImage.sizes}
+              alt=""
+            />
+          )}
         </div>
 
         <section className="Grid Grid--withGutter">
@@ -70,19 +72,41 @@ const Contact = ({ data }) => (
   </main>
 );
 
+ContactTemplate.propTypes = {
+  image: PropTypes.objectOf(PropTypes.object).isRequired,
+  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+};
+
+const Contact = ({ data }) => (
+  <ContactTemplate
+    image={data.file}
+    title={data.markdownRemark.frontmatter.title}
+    heading={data.markdownRemark.frontmatter.heading}
+  />
+);
+
 Contact.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
+export { ContactTemplate };
+
 export default Contact;
 
 export const query = graphql`
-  query ContactMapImageQuery {
+  query ContactPage($id: String!) {
     file(relativePath: { eq: "contact/office-map.png" }) {
       mapImage: childImageSharp {
         sizes(maxWidth: 1100) {
           ...GatsbyImageSharpSizes_noBase64
         }
+      }
+    }
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        heading
       }
     }
   }
