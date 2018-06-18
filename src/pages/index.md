@@ -3,7 +3,7 @@ path: /
 templateKey: landing-page
 title: "Hedvig |\_Insurance. Unbroken."
 section1:
-  cta_text: Se ditt pris i appen
+  cta_text: Kom igång nu
   paragraph: Redan försäkrad? Vi sköter bytet åt dig
   subheading: Blixtsnabb hemförsäkring med stort hjärta.
 section2:
