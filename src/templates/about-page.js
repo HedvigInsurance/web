@@ -44,8 +44,8 @@ const AboutUsTemplate = ({ title, heading, sections }) => (
                 <div>
                   {section.paragraphs &&
                     section.paragraphs.map((paragraph) => (
-                      <p key={paragraph.text} className="u-spaceMB9">
-                        {paragraph.text}
+                      <p key={paragraph} className="u-spaceMB9">
+                        {paragraph}
                       </p>
                     ))}
                 </div>
