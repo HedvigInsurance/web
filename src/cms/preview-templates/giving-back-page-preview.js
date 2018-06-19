@@ -6,11 +6,11 @@ const GivingBackPagePreview = ({ entry }) => (
   <GivingBackTemplate
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
-    section1={entry.getIn('data', 'section1').toJS()}
-    section2={entry.getIn('data', 'section2').toJS()}
-    section3={entry.getIn('data', 'section3').toJS()}
-    section4={entry.getIn('data', 'section4').toJS()}
-    ctaText={entry.getIn('data', 'cta_text')}
+    section1={entry.getIn(['data', 'section1']).toJS()}
+    section2={entry.getIn(['data', 'section2']).toJS()}
+    section3={entry.getIn(['data', 'section3']).toJS()}
+    section4={entry.getIn(['data', 'section4']).toJS()}
+    ctaText={entry.getIn(['data', 'cta_text'])}
   />
 );
 
