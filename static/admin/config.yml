@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: hedviginsurance/web
-  branch: feature/cmsify-giving-back
+  branch: master
 
 media_folder: static/assets
 public_folder: assets
