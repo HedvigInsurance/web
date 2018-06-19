@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: hedviginsurance/web
-  branch: master
+  branch: feature/cmsify-giving-back
 
 media_folder: static/assets
 public_folder: assets
@@ -257,5 +257,86 @@ collections:
               - label: Item 3
                 name: item3
                 widget: text
+      - file: src/pages/giving-back/index.md
+        label: Giving Back
+        name: giving-back
+        path: /giving-back
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: giving-pack-page
+          - label: Path
+            name: path
+            widget: hidden
+            default: /giving-back
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Section 1
+            name: section1
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+          - label: Section 2
+            name: section2
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+              - label: Subheading
+                name: subheading
+                widget: string
+              - label: Bullets
+                name: bullets
+                widget: list
+                field:
+                  - label: Bullet
+                    name: bullet
+                    widget: text
+          - label: Section 3
+            name: section3
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bullet 1
+                name: bullet1
+                widget: text
+              - label: Bullet 2
+                name: bullet2
+                widget: text
+              - label: Bullet 3
+                name: bullet3
+                widget: text
+          - label: Section 4
+            name: section4
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: SOS Barnbyar text
+                name: sos_barnbyar
+                widget: text
+              - label: Barncancerfonden text
+                name: barncancerfonden
+                widget: text
+          - label: CTA Text
+            name: cta_text
+            widget: string
 
 
