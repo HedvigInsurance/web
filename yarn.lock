@@ -682,9 +682,9 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@segment/snippet@^4.3.1":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@segment/snippet/-/snippet-4.3.1.tgz#11c345eb88ea5c64879212ae81a67da0f6e7a80c"
+"@segment/snippet@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@segment/snippet/-/snippet-4.4.0.tgz#153f17b8048a2764bbb1343a61f3c3c24da038e2"
   dependencies:
     "@ndhoule/map" "^2.0.1"
 
