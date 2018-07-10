@@ -359,7 +359,7 @@ collections:
             widget: list
             fields:
               - label: Text
-                name: text
+                name: txt
                 widget: text
           - label: Phone Number-placeholder
             name: phone_number_placeholder
