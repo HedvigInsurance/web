@@ -340,6 +340,7 @@ collections:
             widget: string
       - file: src/pages/download/index.md
         label: Download
+        name: download
         path: /download
         fields:
           - label: Path
