@@ -3,7 +3,7 @@ path: /download
 templateKey: download-page
 title: Ladda ner appen | Hedvig
 heading: Skaffa Hedvig-appen
-#paragraphs:
+paragraphs:
 #  - >-
 #    För att kunna erbjuda de bästa priserna och den bästa servicen har vi gjort Hedvig till en app. Den är enkel att ladda ner 
 #    och installera och inom bara ett par minuter kan vi ge dig ditt personliga pris.
