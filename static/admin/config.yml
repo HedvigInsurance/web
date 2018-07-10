@@ -41,7 +41,7 @@ collections:
               - label: Paragraphs
                 name: paragraphs
                 widget: list
-                fields:
+                field:
                   label: Text
                   name: text
                   widget: text
