@@ -338,5 +338,39 @@ collections:
           - label: CTA Text
             name: cta_text
             widget: string
+      - file: src/pages/download/index.md
+        label: Download
+        path: /download
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /download
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: download-page
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Paragraphs
+            name: paragraphs
+            widget: list
+            field:
+              - label: Text
+                name: text
+                widget: text
+          - label: Phone Number-placeholder
+            name: phone_number_placeholder
+            widget: string
+          - label: CTA Text
+            name: cta_text
+            widget: string
+          - label: Success Text
+            name: success_text
+            widget: text
+          - label: Error Text
+            name: error_text
+            widget: text
 
 

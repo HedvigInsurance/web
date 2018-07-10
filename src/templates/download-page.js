@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 
@@ -8,7 +9,18 @@ import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { ReactComponent as AppStoreIcon } from 'assets/appstores/app-store-badge-mini.svg';
 import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-badge-mini.svg';
 
-class Download extends React.Component {
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  phoneNumberPlaceholder: PropTypes.string.isRequired,
+  ctaText: PropTypes.string.isRequired,
+  successText: PropTypes.string.isRequired,
+  errorText: PropTypes.string.isRequired,
+};
+
+class DownloadTemplate extends React.Component {
+  static propTypes = propTypes;
   state = {
     phoneNumber: '',
     hasErrors: false,
@@ -67,11 +79,20 @@ class Download extends React.Component {
   };
 
   render() {
+    const {
+      title,
+      heading,
+      paragraphs,
+      phoneNumberPlaceholder,
+      ctaText,
+      successText,
+      errorText,
+    } = this.props;
     const isDisabled = !this.state.phoneNumber || this.state.isSending;
     return (
       <main className="Site">
         <Helmet>
-          <title>Ladda ner appen | Hedvig</title>
+          <title>{title}</title>
         </Helmet>
         <Header />
         <article className="Site-content u-flexGrow1">
@@ -83,17 +104,22 @@ class Download extends React.Component {
           >
             <div className="u-textCenter">
               <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
-                Skaffa Hedvig-appen
+                {heading}
               </h1>
+            </div>
+            <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
+              {paragraphs &&
+                paragraphs.map((paragraph) => (
+                  <p className="u-fontWeightBold u-spaceMT8" key={paragraph}>
+                    {paragraph}
+                  </p>
+                ))}
             </div>
             <div className="u-spaceMB5">
               <div className="u-textCenter">
                 <div className="u-spaceMB5">
                   {this.state.isSuccessful ? (
-                    <div>
-                      Vi har skickat dig ett sms med en länk för att ladda ner
-                      Hedvig-appen
-                    </div>
+                    <div>{successText}</div>
                   ) : (
                     <form onSubmit={this.handleSubmit}>
                       <input
@@ -105,7 +131,7 @@ class Download extends React.Component {
                           this.state.hasErrors && 'has-errors',
                         ].join(' ')}
                         type="tel"
-                        placeholder="Skriv in ditt mobilnummer"
+                        placeholder={phoneNumberPlaceholder}
                         value={this.state.phoneNumber}
                         onChange={this.handleChange}
                       />
@@ -122,7 +148,7 @@ class Download extends React.Component {
                           'Button u-colorWhite u-spaceMB12',
                         ].join(' ')}
                       >
-                        Få en länk till appen
+                        {ctaText}
                       </button>
                     </form>
                   )}
@@ -136,8 +162,7 @@ class Download extends React.Component {
                   )}
                   {this.state.hasErrors && (
                     <div className="u-spaceMT8 u-colorPrimaryPink">
-                      Ojdå! Det gick inte att skicka sms till det angivna
-                      numret.<br />Dubbelkolla numret och prova igen.
+                      {errorText}
                     </div>
                   )}
                 </div>
@@ -167,4 +192,44 @@ class Download extends React.Component {
   }
 }
 
+const Download = ({ data }) => (
+  <DownloadTemplate
+    title={data.markdownRemark.frontmatter.title}
+    heading={data.markdownRemark.frontmatter.heading}
+    paragraphs={data.markdownRemark.frontmatter.paragraphs}
+    phoneNumberPlaceholder={
+      data.markdownRemark.frontmatter.phone_number_placeholder
+    }
+    ctaText={data.markdownRemark.frontmatter.cta_text}
+    successText={data.markdownRemark.frontmatter.success_text}
+    errorText={data.markdownRemark.frontmatter.errorText}
+  />
+);
+
+Download.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape(propTypes),
+    }),
+  }).isRequired,
+};
+
+export { DownloadTemplate };
+
 export default Download;
+
+export const downloadPageQuery = graphql`
+  query DownloadPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        heading
+        paragraphs
+        phone_number_placeholder
+        cta_text
+        success_text
+        error_text
+      }
+    }
+  }
+`;
