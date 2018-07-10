@@ -110,8 +110,8 @@ class DownloadTemplate extends React.Component {
               </h1>
             </div>
             <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
-              <p className="u-fontWeightBold u-spaceMT8">{paragraph1}</p>
-              <p className="u-fontWeightBold u-spaceMT8">{paragraph2}</p>
+              <p className="u-spaceMT8">{paragraph1}</p>
+              <p className="u-spaceMT8">{paragraph2}</p>
             </div>
             <div className="u-spaceMB5">
               <div className="u-textCenter">
@@ -201,14 +201,14 @@ const Download = ({ data }) => (
     }
     ctaText={data.markdownRemark.frontmatter.cta_text}
     successText={data.markdownRemark.frontmatter.success_text}
-    errorText={data.markdownRemark.frontmatter.errorText}
+    errorText={data.markdownRemark.frontmatter.error_text}
   />
 );
 
 Download.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape(propTypes),
+      frontmatter: PropTypes.objectOf(PropTypes.any),
     }),
   }).isRequired,
 };
