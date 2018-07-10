@@ -31,20 +31,35 @@ collections:
           - label: Heading
             name: heading
             widget: string
-          - label: Sections
-            name: sections
-            widget: list
+          - label: Section 1
+            name: section1
+            widget: object
             fields:
               - label: Heading
                 name: heading
                 widget: string
-              - label: Paragraphs
-                name: paragraphs
-                widget: list
-                fields:
-                  - label: Text
-                    name: text
-                    widget: text
+              - label: Paragraph 1
+                name: paragraph1
+                widget: text
+              - label: Paragraph 2
+                name: paragraph2
+                widget: text
+          - label: Section 2
+            name: section2
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph 1
+                name: paragraph1
+                widget: text
+              - label: Paragraph 2
+                name: paragraph2
+                widget: text
+              - label: Paragraph 3
+                name: paragraph3
+                widget: text
       - file: src/pages/contact/index.md
         label: Contact
         name: contact
@@ -354,13 +369,11 @@ collections:
           - label: Heading
             name: heading
             widget: string
-          - label: Paragraphs
-            name: paragraphs
-            widget: list
-            fields:
-              - label: Text
-                name: txt
-                widget: text
+          - label: Paragraph 1
+            name: paragraph1
+            widget: text
+          - label: Paragraph 2
+            name: paragraph2
           - label: Phone Number-placeholder
             name: phone_number_placeholder
             widget: string

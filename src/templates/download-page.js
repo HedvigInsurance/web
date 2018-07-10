@@ -196,7 +196,8 @@ const Download = ({ data }) => (
   <DownloadTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
-    paragraphs={data.markdownRemark.frontmatter.paragraphs}
+    paragraph1={data.markdownRemark.frontmatter.paragraph1}
+    paragraph2={data.markdownRemark.frontmatter.paragraph2}
     phoneNumberPlaceholder={
       data.markdownRemark.frontmatter.phone_number_placeholder
     }
@@ -224,7 +225,8 @@ export const downloadPageQuery = graphql`
       frontmatter {
         title
         heading
-        paragraphs
+        paragraph1
+        paragraph2
         phone_number_placeholder
         cta_text
         success_text
