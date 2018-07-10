@@ -6,7 +6,7 @@ const DownloadPagePreview = ({ entry }) => (
   <DownloadTemplate
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
-    paragraphs={entry.getIn(['data', 'paragraphs']).toJS()}
+    paragraphs={entry.getIn(['data', 'paragraphs'])}
     phoneNumberPlaceholder={entry.getIn(['data', 'phone_number_placeholder'])}
     ctaText={entry.getIn(['data', 'cta_text'])}
     successText={entry.getIn(['data', 'success_text'])}

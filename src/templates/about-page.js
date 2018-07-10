@@ -11,9 +11,7 @@ const propTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       heading: PropTypes.string.isRequired,
-      paragraphs: PropTypes.arrayOf(
-        PropTypes.shape({ text: PropTypes.string.isRequired }),
-      ),
+      paragraphs: PropTypes.arrayOf(PropTypes.string),
     }),
   ).isRequired,
 };
