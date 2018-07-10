@@ -12,7 +12,8 @@ import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-ba
 const propTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-  paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  paragraph1: PropTypes.string.isRequired,
+  paragraph2: PropTypes.string.isRequired,
   phoneNumberPlaceholder: PropTypes.string.isRequired,
   ctaText: PropTypes.string.isRequired,
   successText: PropTypes.string.isRequired,
@@ -82,7 +83,8 @@ class DownloadTemplate extends React.Component {
     const {
       title,
       heading,
-      paragraphs,
+      paragraph1,
+      paragraph2,
       phoneNumberPlaceholder,
       ctaText,
       successText,
@@ -108,12 +110,8 @@ class DownloadTemplate extends React.Component {
               </h1>
             </div>
             <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
-              {paragraphs &&
-                paragraphs.map((paragraph) => (
-                  <p className="u-fontWeightBold u-spaceMT8" key={paragraph}>
-                    {paragraph}
-                  </p>
-                ))}
+              <p className="u-fontWeightBold u-spaceMT8">{paragraph1}</p>
+              <p className="u-fontWeightBold u-spaceMT8">{paragraph2}</p>
             </div>
             <div className="u-spaceMB5">
               <div className="u-textCenter">
