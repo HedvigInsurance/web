@@ -6,7 +6,8 @@ const AboutPagePreview = ({ entry }) => (
   <AboutUsTemplate
     title={entry.getIn(['data', 'title'])}
     heading={entry.getIn(['data', 'heading'])}
-    sections={entry.getIn(['data', 'sections']).toJS()}
+    section1={entry.getIn(['data', 'section1']).toJS()}
+    section2={entry.getIn(['data', 'section2'])}
   />
 );
 
