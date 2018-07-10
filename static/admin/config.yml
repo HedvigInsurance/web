@@ -42,9 +42,9 @@ collections:
                 name: paragraphs
                 widget: list
                 fields:
-                  - label: Text
-                    name: text
-                    widget: text
+                  label: Text
+                  name: text
+                  widget: text
       - file: src/pages/contact/index.md
         label: Contact
         name: contact
@@ -302,10 +302,10 @@ collections:
               - label: Bullets
                 name: bullets
                 widget: list
-                fields:
-                  - label: Bullet
-                    name: bullet
-                    widget: text
+                field:
+                  label: Bullet
+                  name: bullet
+                  widget: text
           - label: Section 3
             name: section3
             widget: object
@@ -357,10 +357,10 @@ collections:
           - label: Paragraphs
             name: paragraphs
             widget: list
-            fields:
-              - label: Text
-                name: text
-                widget: text
+            field:
+              label: Text
+              name: text
+              widget: text
           - label: Phone Number-placeholder
             name: phone_number_placeholder
             widget: string
