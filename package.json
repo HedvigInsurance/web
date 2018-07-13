@@ -60,6 +60,7 @@
     "react-lottie": "^1.2.3",
     "react-router-dom": "^4.3.1",
     "react-router-enzyme-context": "^1.2.0",
+    "react-sticky": "^6.0.3",
     "react-visibility-sensor": "^3.11.0",
     "rimraf": "^2.6.2",
     "stylelint": "^9.3.0",

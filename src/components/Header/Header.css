@@ -1,18 +1,14 @@
 @import "../../css/variables.css";
 
 .Header {
-  position: absolute;
+  background-color: white;
+  height: 80px;
   width: 100%;
+  z-index: 2;
 }
 
 .Header-logo {
-  display: block;
-  float: left;
-  height: 50px;
-  left: -10px;
-  padding-right: 20px;
-  position: relative;
-  top: 10px;
+  padding: 27px 0 0 30px;
 }
 
 .Header-logo__inner {
@@ -34,6 +30,12 @@
   top: 24px;
 }
 
+.Header-cta-button {
+  margin: 0 20px;
+  position: relative;
+  top: 12px;
+}
+
 .Header-burger {
   align-items: center;
   background-color: transparent;
@@ -49,8 +51,8 @@
   padding: 0 30px;
   padding: 0 10px;
   position: relative;
-  right: -10px;
-  top: 10px;
+  right: 15px;
+  top: 13px;
   transition: opacity 0.1s ease;
   user-select: none;
   white-space: nowrap;

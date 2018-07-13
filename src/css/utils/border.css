@@ -1,0 +1,59 @@
+.u-border {
+  border: 1px solid !important;
+}
+
+.u-bordeColorWhite {
+  border-color: #fff !important;
+}
+
+.u-borderColorBlack {
+  border-color: #000 !important;
+}
+
+.u-borderColorPrimaryBlack {
+  border-color: var(--color-primaryBlack) !important;
+}
+
+.u-borderColorPrimaryDarkBlue {
+  border-color: var(--color-primaryDarkBlue) !important;
+}
+
+.u-borderColorPrimaryBlue {
+  border-color: var(--color-primaryBlue) !important;
+}
+
+.u-borderColorPrimaryPink {
+  border-color: var(--color-primaryPink) !important;
+}
+
+.u-borderColorPrimaryGreen {
+  border-color: var(--color-primaryGreen) !important;
+}
+
+.u-borderColorPrimaryPurple {
+  border-color: var(--color-primaryPurple) !important;
+}
+
+.u-borderColorPrimaryGrey {
+  border-color: var(--color-primaryGrey) !important;
+}
+
+.u-borderColorPrimaryDarkGrey {
+  border-color: var(--color-primaryDarkGrey) !important;
+}
+
+.u-borderColorSecondaryPink {
+  border-color: var(--color-secondaryPink) !important;
+}
+
+.u-borderColorSecondaryGreen {
+  border-color: var(--color-secondaryGreen) !important;
+}
+
+.u-borderColorSecondaryPurple {
+  border-color: var(--color-secondaryPurple) !important;
+}
+
+.u-borderColorSecondaryGrey {
+  border-color: var(--color-secondaryGrey) !important;
+}

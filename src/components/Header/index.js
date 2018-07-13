@@ -1,21 +1,38 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Sticky } from 'react-sticky';
 
-import AppLink from 'src/components/AppLink';
 import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
+import AppLink from 'src/components/AppLink';
 
 import './Header.css';
 
 class Header extends React.Component {
-  state = {
-    popoverIsActive: false,
-  };
+  state = { popoverIsActive: false };
 
   componentWillUnmount() {
     this.dismiss();
   }
+
+  links = [
+    {
+      path: '/coverage',
+      label: 'Vad som täcks',
+    },
+    {
+      path: '/giving-back',
+      label: 'Hur vi ger tillbaka',
+    },
+    {
+      path: '/faq',
+      label: 'FAQ',
+    },
+    {
+      path: '/about-us',
+      label: 'Om Hedvig',
+    },
+  ];
 
   documentOnClickHandler = (event) => {
     const { popoverIsActive } = this.state;
@@ -24,19 +41,6 @@ class Header extends React.Component {
     if (popoverIsActive && clickedOutside) {
       this.dismiss();
     }
-  };
-
-  togglePopover = (event) => {
-    // Prevent documentOnClickHandler immediately hiding the popover
-    event.stopPropagation();
-
-    const popoverIsActive = !this.state.popoverIsActive;
-    if (popoverIsActive) {
-      this.show();
-    } else {
-      this.dismiss();
-    }
-    this.setState({ popoverIsActive });
   };
 
   show() {
@@ -49,32 +53,23 @@ class Header extends React.Component {
     document.removeEventListener('click', this.documentOnClickHandler, false);
   }
 
-  render() {
-    const { isInverted } = this.props;
+  togglePopover = (event) => {
+    event.stopPropagation();
     const { popoverIsActive } = this.state;
+    if (!popoverIsActive) {
+      this.show();
+    } else {
+      this.dismiss();
+    }
+  };
 
-    const mobileLogoClassNames = classNames({
-      'Header-logo__inner': true,
-      'u-md-hidden': true,
-      'u-lg-hidden': true,
-      'u-fillPrimaryDarkBlue': !isInverted,
-      'u-fillWhite': isInverted && !popoverIsActive,
-    });
-
-    const desktopLogoClassNames = classNames({
-      'Header-logo__inner': true,
-      'u-hidden': true,
-      'u-md-block': true,
-      'u-lg-block': true,
-      'u-fillPrimaryDarkBlue': !isInverted,
-      'u-fillWhite': isInverted,
-    });
+  render() {
+    const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
       'Header-burger': true,
       'u-md-hidden': true,
       'u-lg-hidden': true,
-      'is-inverted': isInverted && !popoverIsActive,
       'is-active': popoverIsActive,
     });
 
@@ -85,50 +80,33 @@ class Header extends React.Component {
       'is-active': popoverIsActive,
     });
 
-    const links = [
-      {
-        path: '/about-us',
-        label: 'Om Hedvig',
-      },
-      {
-        path: '/faq',
-        label: 'Vanliga frågor',
-      },
-      {
-        path: '/giving-back',
-        label: 'Hur vi ger tillbaka',
-      },
-    ];
-
-    const menuLinkClassNames = classNames({
-      'Header-menu-link': true,
-      'u-linkBlock': true,
-      'u-colorWhite': isInverted,
-    });
-
     return (
-      <header className="Header" style={{ zIndex: 2 }}>
-        <div className="Container">
-          <div className="u-flex">
-            <div className="u-flexGrow1">
-              <Link to="/" className="Header-logo" aria-label="Hedvig hem">
-                <Logo className={mobileLogoClassNames} alt="" />
-                <Logo className={desktopLogoClassNames} alt="" />
-              </Link>
-            </div>
-
-            <div>
+      <Sticky>
+        {({ style }) => (
+          <header className="Header" style={style}>
+            <div className="u-flex">
+              <div className="u-flexGrow1 Header-logo">
+                <Link to="/" aria-label="Hedvig hem">
+                  <Logo />
+                </Link>
+              </div>
               <nav className="Header-menu u-hidden u-md-block u-lg-block">
                 <div className="u-flex u-flexRow">
-                  {links.map((link) => (
+                  {this.links.map((link) => (
                     <Link
                       key={link.path}
                       to={link.path}
-                      className={menuLinkClassNames}
+                      className="Header-menu-link u-linkBlock"
                     >
                       {link.label}
                     </Link>
                   ))}
+                  <AppLink
+                    tags={['header']}
+                    className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen"
+                  >
+                    Skaffa Hedvig
+                  </AppLink>
                 </div>
               </nav>
               <button className={burgerClassNames} onClick={this.togglePopover}>
@@ -136,47 +114,38 @@ class Header extends React.Component {
                 <h2 className="Header-burger-line">Meny</h2>
                 <span className="Header-burger-line" />
               </button>
-            </div>
-
-            <div
-              className={popoverClassNames}
-              ref={(popoverElem) => {
-                this.popoverElem = popoverElem;
-              }}
-            >
-              <div>
-                {links.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="u-spacePV11 u-linkBlock"
+              <div
+                className={popoverClassNames}
+                ref={(popoverElem) => {
+                  this.popoverElem = popoverElem;
+                }}
+              >
+                <div>
+                  {this.links.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className="u-spacePV11 u-linkBlock"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <div className="u-textCenter u-spacePT10">
+                  <AppLink
+                    tags={['header']}
+                    className="Button u-colorWhite u-backgroundPrimaryPurple"
                   >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-              <div className="u-textCenter u-spacePT10">
-                <AppLink
-                  tags={['header']}
-                  className="Button u-colorWhite u-backgroundPrimaryPurple"
-                >
-                  Ladda ner appen
-                </AppLink>
+                    Ladda ner appen
+                  </AppLink>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
+          </header>
+        )}
+      </Sticky>
     );
   }
 }
-
-Header.propTypes = {
-  isInverted: PropTypes.bool,
-};
-
-Header.defaultProps = {
-  isInverted: false,
-};
 
 export default Header;
