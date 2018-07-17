@@ -40,7 +40,7 @@ philosophy:
     card3_paragraph: >-
       Vi betalar blixtsnabbt. Blir det något över doneras det till ett gott
       ändamål
-  heading: Vår filosofi
+  heading: Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte Hedvig
   paragraph: >-
     Försäkring ska vara rättvist och transparent. Därför fungerar Hedvig inte
     som ditt gamla försäkringsbolag. Vi tar en låg fast avgift av din
