@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { StickyContainer } from 'react-sticky';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -49,109 +50,111 @@ const GivingBackTemplate = ({
     <Helmet>
       <title>{title}</title>
     </Helmet>
-    <Header />
-    <article className="Site-content">
-      <div className="u-backgroundSecondaryPurple">
-        <div className="Container">
-          <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
-            {heading}
-          </h1>
+    <StickyContainer>
+      <Header />
+      <article className="Site-content">
+        <div className="u-backgroundSecondaryPurple">
+          <div className="Container">
+            <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
+              {heading}
+            </h1>
+          </div>
         </div>
-      </div>
 
-      <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-        <div className="u-maxWidth1of1">
-          <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-            {section1.heading}
-          </h2>
-          <p className="u-spaceMB9">{section1.paragraph}</p>
+        <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
+          <div className="u-maxWidth1of1">
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section1.heading}
+            </h2>
+            <p className="u-spaceMB9">{section1.paragraph}</p>
 
-          <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-            {section2.heading}
-          </h2>
-          <p className="u-spaceMB9">{section2.paragraph}</p>
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section2.heading}
+            </h2>
+            <p className="u-spaceMB9">{section2.paragraph}</p>
 
-          <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
-            {section2.subheading}
-          </h3>
+            <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
+              {section2.subheading}
+            </h3>
 
-          <ul className="u-spaceMT10">
-            {section2.bullets &&
-              section2.bullets.map((bullet) => (
-                <li
-                  className="u-fontSize9 u-spaceMB10"
-                  style={{ textIndent: '-2em', paddingLeft: '2em' }}
+            <ul className="u-spaceMT10">
+              {section2.bullets &&
+                section2.bullets.map((bullet) => (
+                  <li
+                    className="u-fontSize9 u-spaceMB10"
+                    style={{ textIndent: '-2em', paddingLeft: '2em' }}
+                  >
+                    <CheckIcon
+                      style={{
+                        width: 20,
+                        marginRight: 10,
+                        verticalAlign: 'text-bottom',
+                      }}
+                      className="u-inlineBlock u-spaceMR11"
+                    />
+                    {bullet}
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section3.heading}
+            </h2>
+            <div className="Grid Grid--withGutter">
+              <div className="u-md-size1of3 u-lg-size1of3">
+                <span className="NumberedIcon">1</span>
+                <p className="u-spaceMB9">{section3.bullet1}</p>
+              </div>
+              <div className="u-md-size1of3 u-lg-size1of3">
+                <span className="NumberedIcon">2</span>
+                <p className="u-spaceMB9">{section3.bullet2}</p>
+              </div>
+              <div className="u-md-size1of3 u-lg-size1of3">
+                <span className="NumberedIcon">3</span>
+                <p className="u-spaceMB9">{section3.bullet3}</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section4.heading}
+            </h2>
+            <div className="Grid Grid--withGutter">
+              <div className="u-spaceMB8 u-md-size1of2 u-lg-size1of2 u-flex u-flexCol u-flexAlignItemsCenter">
+                <figure
+                  className="u-flex u-flexCol u-flexJustifyCenter u-spaceMB7"
+                  style={{ height: 120 }}
                 >
-                  <CheckIcon
-                    style={{
-                      width: 20,
-                      marginRight: 10,
-                      verticalAlign: 'text-bottom',
-                    }}
-                    className="u-inlineBlock u-spaceMR11"
-                  />
-                  {bullet}
-                </li>
-              ))}
-          </ul>
-        </div>
+                  <SosBarnbyarLogo />
+                </figure>
+                <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
+                  {section4.sos_barnbyar}
+                </p>
+              </div>
+              <div className="u-spaceMB8 u-md-size1of2 u-lg-size1of2 u-flex u-flexCol u-flexAlignItemsCenter">
+                <figure className="u-spaceMB7" style={{ height: 120 }}>
+                  <BarncancerfondenLogo />
+                </figure>
+                <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
+                  {section4.barncancerfonden}
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div>
-          <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-            {section3.heading}
-          </h2>
-          <div className="Grid Grid--withGutter">
-            <div className="u-md-size1of3 u-lg-size1of3">
-              <span className="NumberedIcon">1</span>
-              <p className="u-spaceMB9">{section3.bullet1}</p>
-            </div>
-            <div className="u-md-size1of3 u-lg-size1of3">
-              <span className="NumberedIcon">2</span>
-              <p className="u-spaceMB9">{section3.bullet2}</p>
-            </div>
-            <div className="u-md-size1of3 u-lg-size1of3">
-              <span className="NumberedIcon">3</span>
-              <p className="u-spaceMB9">{section3.bullet3}</p>
+          <div>
+            <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8">
+              <AppLink className="Button u-colorWhite u-backgroundPrimaryGreen">
+                {ctaText}
+              </AppLink>
             </div>
           </div>
         </div>
-
-        <div>
-          <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-            {section4.heading}
-          </h2>
-          <div className="Grid Grid--withGutter">
-            <div className="u-spaceMB8 u-md-size1of2 u-lg-size1of2 u-flex u-flexCol u-flexAlignItemsCenter">
-              <figure
-                className="u-flex u-flexCol u-flexJustifyCenter u-spaceMB7"
-                style={{ height: 120 }}
-              >
-                <SosBarnbyarLogo />
-              </figure>
-              <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
-                {section4.sos_barnbyar}
-              </p>
-            </div>
-            <div className="u-spaceMB8 u-md-size1of2 u-lg-size1of2 u-flex u-flexCol u-flexAlignItemsCenter">
-              <figure className="u-spaceMB7" style={{ height: 120 }}>
-                <BarncancerfondenLogo />
-              </figure>
-              <p className="u-spaceMB9 u-textCenter u-maxWidth1of2">
-                {section4.barncancerfonden}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8">
-            <AppLink className="Button u-colorWhite u-backgroundPrimaryGreen">
-              {ctaText}
-            </AppLink>
-          </div>
-        </div>
-      </div>
-    </article>
+      </article>
+    </StickyContainer>
     <Footer />
   </main>
 );
