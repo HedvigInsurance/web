@@ -86,6 +86,8 @@ class LandingTemplate extends React.Component {
       modelFixedFile,
       modelClaimPoolFile,
       modelCharityFile,
+      perilForestMobileFile,
+      perilForestDesktopFile,
       customerSourceDesktopFile,
       customerSourceMobileFile,
       landing,
@@ -317,12 +319,27 @@ class LandingTemplate extends React.Component {
 
             {/* Peril forest */}
             <div className="u-backgroundPrimaryBlackPurple">
-              <div className="Container u-spacePV2">
+              <div className="Container u-spacePT2 u-spacePB4">
                 <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize6">
                   {perilForest.heading}
                 </h2>
-                {/* Peril forest goes here */}
-                <p className="u-colorWhite u-textCenter u-spaceMB3">
+                <figure className="u-spaceMV6">
+                  {perilForestMobileFile && (
+                    <Img
+                      className="Home-perilForest-image-mobile u-lg-hidden"
+                      sizes={perilForestMobileFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                  {perilForestDesktopFile && (
+                    <Img
+                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
+                      sizes={perilForestDesktopFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                </figure>
+                <p className="u-colorWhite u-textCenter">
                   {perilForest.bottom_paragraph}
                 </p>
               </div>
@@ -441,6 +458,8 @@ LandingTemplate.propTypes = {
   modelFixedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   modelClaimPoolFile: PropTypes.objectOf(PropTypes.object).isRequired,
   modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   landing: PropTypes.shape({
@@ -505,6 +524,8 @@ const Landing = ({ data }) => {
       modelFixedFile={data.modelFixedFile}
       modelClaimPoolFile={data.modelClaimPoolFile}
       modelCharityFile={data.modelCharityFile}
+      perilForestMobileFile={data.perilForestMobileFile}
+      perilForestDesktopFile={data.perilForestDesktopFile}
       customerSourceDesktopFile={data.customerSourceDesktopFile}
       customerSourceMobileFile={data.customerSourceMobileFile}
       landing={copy.landing}
@@ -529,7 +550,7 @@ export const query = graphql`
   query LandingPage($id: String!) {
     mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
       image: childImageSharp {
-        sizes(maxWidth: 659) {
+        sizes(maxWidth: 759) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
@@ -553,6 +574,24 @@ export const query = graphql`
     modelCharityFile: file(relativePath: { eq: "home/model-charity@2x.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 120) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    perilForestMobileFile: file(
+      relativePath: { eq: "home/peril-forest-mobile@2x.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 300) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    perilForestDesktopFile: file(
+      relativePath: { eq: "home/peril-forest-desktop@2x.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 754) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }

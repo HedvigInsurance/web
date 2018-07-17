@@ -81,6 +81,16 @@
   height: calc(100% - 210px);
 }
 
+.Home-perilForest-image-mobile {
+  margin: 0 auto;
+  width: 304px;
+}
+
+.Home-perilForest-image-desktop {
+  margin: 0 auto;
+  width: 754px;
+}
+
 .Home-customerSource-image-mobile {
   margin: 0 auto;
   width: 276px;
