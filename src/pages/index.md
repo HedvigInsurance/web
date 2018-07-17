@@ -22,7 +22,7 @@ three_explainers:
       paragraph: >-
         Ladda ner appen, svara på Hedvigs frågor i chatten och signera med
         mobilt BankID
-      title: Signa upp på minuter
+      title: Signa upp snabbt och enkelt
     paid_right_away:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
