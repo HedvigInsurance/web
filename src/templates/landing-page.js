@@ -259,7 +259,7 @@ class LandingTemplate extends React.Component {
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
                           Från {section4.pricecard_rental.price_from} kr
                         </h4>
-                        <span>/mån</span>
+                        <span>/mån </span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
                         {section4.pricecard_rental.price_from_explainer}
@@ -270,7 +270,7 @@ class LandingTemplate extends React.Component {
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
                           Till {section4.pricecard_rental.price_to} kr
                         </h4>
-                        <span>/mån</span>
+                        <span>/mån </span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
                         {section4.pricecard_rental.price_to_explainer}
@@ -298,7 +298,7 @@ class LandingTemplate extends React.Component {
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
                           Från {section4.pricecard_brf.price_from} kr
                         </h4>
-                        <span>/mån</span>
+                        <span>/mån </span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
                         {section4.pricecard_brf.price_from_explainer}
@@ -309,7 +309,7 @@ class LandingTemplate extends React.Component {
                         <h4 className="u-fontSize8 u-fontWeightBook u-inline">
                           Till {section4.pricecard_brf.price_to} kr
                         </h4>
-                        <span>/mån</span>
+                        <span>/mån </span>
                       </div>
                       <p className="u-fontSize10 u-colorPrimaryDarkGrey">
                         {section4.pricecard_brf.price_to_explainer}
@@ -424,21 +424,21 @@ class LandingTemplate extends React.Component {
 
                 <div className="Grid Grid--withGutter u-spaceMB8 u-md-spaceMB4 u-lg-spaceMB4">
                   <div className="u-spaceMB9 u-lg-size1of3">
-                    <span className="NumberedIcon u-floatLeft">1</span>
+                    <span className="NumberedIcon u-floatLeft">1 </span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
                       {section6.bullet1}
                     </h3>
                     <p />
                   </div>
                   <div className="u-spaceMB9 u-lg-size1of3">
-                    <span className="NumberedIcon u-floatLeft">2</span>
+                    <span className="NumberedIcon u-floatLeft">2 </span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
                       {section6.bullet2}
                     </h3>
                     <p />
                   </div>
                   <div className="u-spaceMB9 u-lg-size1of3">
-                    <span className="NumberedIcon u-floatLeft">3</span>
+                    <span className="NumberedIcon u-floatLeft">3 </span>
                     <h3 className="u-spaceMT10 u-spaceML10 u-fontWeightBold u-floatLeft">
                       {section6.bullet3}
                     </h3>

@@ -30,13 +30,13 @@ class Header extends React.Component {
     // Prevent documentOnClickHandler immediately hiding the popover
     event.stopPropagation();
 
-    const popoverIsActive = !this.state.popoverIsActive;
-    if (popoverIsActive) {
+    const { popoverIsActive } = this.state;
+    if (!popoverIsActive) {
       this.show();
     } else {
       this.dismiss();
     }
-    this.setState({ popoverIsActive });
+    this.setState({ popoverIsActive: !popoverIsActive });
   };
 
   show() {
@@ -131,7 +131,11 @@ class Header extends React.Component {
                   ))}
                 </div>
               </nav>
-              <button className={burgerClassNames} onClick={this.togglePopover}>
+              <button
+                type="button"
+                className={burgerClassNames}
+                onClick={this.togglePopover}
+              >
                 <span className="Header-burger-line" />
                 <h2 className="Header-burger-line">Meny</h2>
                 <span className="Header-burger-line" />
