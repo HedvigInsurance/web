@@ -22,7 +22,7 @@ class Header extends React.Component {
     },
     {
       path: '/faq',
-      label: 'FAQ',
+      label: 'Vanliga frågor',
     },
     {
       path: '/about-us',

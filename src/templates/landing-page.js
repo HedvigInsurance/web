@@ -185,8 +185,8 @@ class LandingTemplate extends React.Component {
                   partialVisibility
                   onChange={this.threeExplainersVisbilityChanged}
                 >
-                  <div className="u-flex u-flexCol u-md-flexRow u-lg-flexRow u-textCenter">
-                    <div className="u-md-size1of3 u-lg-size1of3">
+                  <div className="u-flex u-flexCol u-lg-flexRow u-textCenter">
+                    <div className="u-lg-size1of3">
                       <LottieLoader
                         ref={(anim) => {
                           this.insuranceInMinutesAnim = anim;
@@ -201,14 +201,14 @@ class LandingTemplate extends React.Component {
                             .title
                         }
                       </h4>
-                      <p>
+                      <p className="u-lg-spaceMH8">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .paragraph
                         }
                       </p>
                     </div>
-                    <div className="u-md-size1of3 u-lg-size1of3">
+                    <div className="u-lg-size1of3">
                       <LottieLoader
                         ref={(anim) => {
                           this.claimOnPhoneAnimation = anim;
@@ -220,14 +220,14 @@ class LandingTemplate extends React.Component {
                       <h4>
                         {threeExplainers.three_explainers.claim_on_phone.title}
                       </h4>
-                      <p>
+                      <p className="u-lg-spaceMH8">
                         {
                           threeExplainers.three_explainers.claim_on_phone
                             .paragraph
                         }
                       </p>
                     </div>
-                    <div className="u-md-size1of3 u-lg-size1of3">
+                    <div className="u-lg-size1of3">
                       <LottieLoader
                         ref={(anim) => {
                           this.paidRightAwayAnimation = anim;
@@ -239,7 +239,7 @@ class LandingTemplate extends React.Component {
                       <h4>
                         {threeExplainers.three_explainers.paid_right_away.title}
                       </h4>
-                      <p>
+                      <p className="u-lg-spaceMH8">
                         {
                           threeExplainers.three_explainers.paid_right_away
                             .paragraph
@@ -320,7 +320,7 @@ class LandingTemplate extends React.Component {
             </div>
 
             {/* Peril forest */}
-            <div className="u-backgroundPrimaryBlackPurple">
+            <div className="u-backgroundPrimaryDarkestPurple">
               <div className="Container u-spacePT2 u-spacePB4">
                 <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize6">
                   {perilForest.heading}

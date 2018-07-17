@@ -3,7 +3,7 @@ path: /
 templateKey: landing-page
 title: "Hedvig |\_Insurance. Unbroken."
 landing:
-  heading: "Få hjälp\_när\_du behöver\_det"
+  heading: "Få\_hjälp\_när du\_behöver\_det"
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
   paragraph: Månadsvis betalning. Ingen bindningstid.
