@@ -68,14 +68,12 @@ class Header extends React.Component {
 
     const burgerClassNames = classNames({
       'Header-burger': true,
-      'u-md-hidden': true,
       'u-lg-hidden': true,
       'is-active': popoverIsActive,
     });
 
     const popoverClassNames = classNames({
       'Header-popover': true,
-      'u-md-hidden': true,
       'u-lg-hidden': true,
       'is-active': popoverIsActive,
     });
@@ -90,7 +88,7 @@ class Header extends React.Component {
                   <Logo />
                 </Link>
               </div>
-              <nav className="Header-menu u-hidden u-md-block u-lg-block">
+              <nav className="Header-menu u-hidden u-lg-block">
                 <div className="u-flex u-flexRow">
                   {this.links.map((link) => (
                     <Link

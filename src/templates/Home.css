@@ -1,16 +1,27 @@
 @import "../css/variables.css";
 
-.Home-heroBackgroundSvg {
-  bottom: 0;
-  height: 100% !important;
-  min-height: 100% !important;
-  position: absolute;
-  width: 100vw !important;
-  z-index: -1;
+.Home-hero-mobile {
+  background-image: url("/assets/backgrounds/hero-mobile@2x.png");
+  background-size: cover;
 }
 
-.Home-heroHeaderSvg {
-  width: 100% !important;
+@media (--lg-viewport) {
+
+  .Home-hero-mobile {
+    background-image: none;
+  }
+
+  .Home-hero-desktop {
+    background-image: url("/assets/backgrounds/hero-desktop@2x.png");
+    background-size: cover;
+  }
+}
+
+.Home-cta {
+  box-shadow: 0 4px 25px 3px rgba(255, 255, 255, 0.35),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5em 2.5em;
+  width: 320px;
 }
 
 /*
@@ -18,26 +29,25 @@
   The animation is absolutely positioned inside the phone shell
 */
 
-.Home-chatDemo {
-  height: 675px;
-  left: -60px;
-  margin: 0 auto;
-  position: relative;
-  width: 600px;
-}
-
-.Home-chatDemo-animation {
-  left: 89px;
-  position: absolute;
-  top: 85px;
-  width: 260px !important;
+.Home-chatDemo-phone {
+  width: 375px;
 }
 
 @media (min-width: 745px) {
 
   .Home-chatDemo {
+    background-color: transparent;
     left: 0;
   }
+
+  .Home-chatDemo-phone {
+    width: 550px;
+  }
+}
+
+.Home-media {
+  margin: 0 auto;
+  max-width: 759px;
 }
 
 .Home-strike {
@@ -48,4 +58,39 @@
     transparent 60%
   );
   text-decoration: none;
+}
+
+.Home-model {
+  height: 360px;
+}
+
+.Home-model-figure {
+  height: 210px;
+}
+
+.Home-model-image {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.Home-model-image-charity {
+  width: 128px;
+}
+
+.Home-model-paragraph {
+  height: calc(100% - 210px);
+}
+
+.Home-customerSource-image-mobile {
+  margin: 0 auto;
+  width: 276px;
+}
+
+.Home-customerSource-image-desktop {
+  margin: 0 auto;
+  width: 679px;
+}
+
+.Home-safety-image {
+  width: 120px;
 }
