@@ -1,5 +1,10 @@
 @import "../css/variables.css";
 
+.Home-hero {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 .Home-hero-mobile {
   background-image: url("/assets/backgrounds/hero-mobile@2x.png");
   background-size: cover;

@@ -104,57 +104,59 @@ class LandingTemplate extends React.Component {
             <Header />
             {/* Landing section */}
             <div className="u-backgroundWhite">
-              <div>
-                <div className="Grid Home-hero-desktop">
-                  <div className="Container u-sizeFull u-lg-size1of2 u-mdu-md-spacePT7 u-lg-spacePT6 Home-hero-mobile">
-                    <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize1 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
-                      {landing.heading}
-                    </h1>
-                    <p className="u-colorWhite u-spaceMT8 u-fontSize9 u-textCenter u-md-textLeft u-lg-textLeft">
-                      {landing.subheading}
-                    </p>
-                    <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
-                      <AppLink
-                        tags={['home-hero-1']}
-                        className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-spaceMB10"
-                      >
-                        {landing.cta_text1}
-                      </AppLink>
-                      <AppLink
-                        tags={['home-hero-2']}
-                        className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-md-spaceMB10 u-lg-spaceMB10 u-md-spaceML12 u-lg-spaceML12"
-                      >
-                        {landing.cta_text2}
-                      </AppLink>
-                      <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
-                        {landing.paragraph}
+              <div className="Home-hero-desktop">
+                <div className="Home-hero">
+                  <div className="Grid">
+                    <div className="Container u-sizeFull u-lg-size1of2 u-mdu-md-spacePT7 u-lg-spacePT6 Home-hero-mobile">
+                      <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize1 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                        {landing.heading}
+                      </h1>
+                      <p className="u-colorWhite u-spaceMT8 u-fontSize9 u-textCenter u-md-textLeft u-lg-textLeft">
+                        {landing.subheading}
+                      </p>
+                      <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                        <AppLink
+                          tags={['home-hero-1']}
+                          className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-spaceMB10"
+                        >
+                          {landing.cta_text1}
+                        </AppLink>
+                        <AppLink
+                          tags={['home-hero-2']}
+                          className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-md-spaceMB10 u-lg-spaceMB10 u-md-spaceML12 u-lg-spaceML12"
+                        >
+                          {landing.cta_text2}
+                        </AppLink>
+                        <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
+                          {landing.paragraph}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="u-sizeFull u-lg-size1of2">
-                    <VisibilitySensor
-                      partialVisibility
-                      onChange={this.chatDemoOnVisibilityChange}
-                    >
-                      <div className="u-spaceMV6 u-lg-spaceMT3">
-                        <LottieLoader
-                          ref={(anim) => {
-                            this.chatAnim = anim;
-                          }}
-                          options={{
-                            loop: false,
-                            autoplay: false,
-                            renderer: 'svg',
-                            animationData: claimsAnimation,
-                            rendererSettings: {
-                              progressiveLoad: true,
-                              preserveAspectRatio: 'xMaxYMin meet',
-                            },
-                          }}
-                          width={307}
-                        />
-                      </div>
-                    </VisibilitySensor>
+                    <div className="u-sizeFull u-lg-size1of2">
+                      <VisibilitySensor
+                        partialVisibility
+                        onChange={this.chatDemoOnVisibilityChange}
+                      >
+                        <div className="u-spaceMV6 u-lg-spaceMT3">
+                          <LottieLoader
+                            ref={(anim) => {
+                              this.chatAnim = anim;
+                            }}
+                            options={{
+                              loop: false,
+                              autoplay: false,
+                              renderer: 'svg',
+                              animationData: claimsAnimation,
+                              rendererSettings: {
+                                progressiveLoad: true,
+                                preserveAspectRatio: 'xMaxYMin meet',
+                              },
+                            }}
+                            width={307}
+                          />
+                        </div>
+                      </VisibilitySensor>
+                    </div>
                   </div>
                 </div>
               </div>
