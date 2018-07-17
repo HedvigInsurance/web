@@ -245,6 +245,24 @@ exports[`<FAQ /> Should render correctly 1`] = `
              så fixar vi det på nolltid!
           </p>
         </div>
+        <div>
+          <h2
+            className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7"
+          >
+            Vad händer om jag blir sjuk på resa?
+          </h2>
+          <p
+            className="u-spaceMB9"
+          >
+            Om du har skadats eller blivit sjuk utomlands och behöver akut vård, ring Hedvig Global Assistance dygnet runt på
+             
+            <a
+              href="tel:+4538489461"
+            >
+              +45 38 48 94 61.
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </article>

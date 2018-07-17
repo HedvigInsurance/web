@@ -8,17 +8,20 @@ import Footer from 'src/components/Footer';
 const propTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-  sections: PropTypes.arrayOf(
-    PropTypes.shape({
-      heading: PropTypes.string.isRequired,
-      paragraphs: PropTypes.arrayOf(
-        PropTypes.shape({ text: PropTypes.string.isRequired }),
-      ),
-    }),
-  ).isRequired,
+  section1: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    paragraph1: PropTypes.string.isRequired,
+    paragraph2: PropTypes.string.isRequired,
+  }).isRequired,
+  section2: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    paragraph1: PropTypes.string.isRequired,
+    paragraph2: PropTypes.string.isRequired,
+    paragraph3: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const AboutUsTemplate = ({ title, heading, sections }) => (
+const AboutUsTemplate = ({ title, heading, section1, section2 }) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
@@ -35,22 +38,27 @@ const AboutUsTemplate = ({ title, heading, sections }) => (
 
       <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
         <div className="u-maxWidth1of1">
-          {sections &&
-            sections.map((section) => (
-              <div key={section.heading} className="">
-                <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-                  {section.heading}
-                </h2>
-                <div>
-                  {section.paragraphs &&
-                    section.paragraphs.map((paragraph) => (
-                      <p key={paragraph} className="u-spaceMB9">
-                        {paragraph}
-                      </p>
-                    ))}
-                </div>
-              </div>
-            ))}
+          <div>
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section1.heading}
+            </h2>
+            <div>
+              <p className="u-spaceMB9">{section1.paragraph1}</p>
+              <p className="u-spaceMB9">{section1.paragraph2}</p>
+            </div>
+          </div>
+        </div>
+        <div className="u-maxWidth1of1">
+          <div>
+            <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+              {section2.heading}
+            </h2>
+            <div>
+              <p className="u-spaceMB9">{section2.paragraph1}</p>
+              <p className="u-spaceMB9">{section2.paragraph2}</p>
+              <p className="u-spaceMB9">{section2.paragraph3}</p>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -64,7 +72,8 @@ const AboutUs = ({ data }) => (
   <AboutUsTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
-    sections={data.markdownRemark.frontmatter.sections}
+    section1={data.markdownRemark.frontmatter.section1}
+    section2={data.markdownRemark.frontmatter.section2}
   />
 );
 
@@ -86,9 +95,16 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         heading
-        sections {
+        section1 {
           heading
-          paragraphs
+          paragraph1
+          paragraph2
+        }
+        section2 {
+          heading
+          paragraph1
+          paragraph2
+          paragraph3
         }
       }
     }
