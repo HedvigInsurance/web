@@ -1,7 +1,7 @@
 ---
 path: /
 templateKey: landing-page
-title: "Hedvig |\_Insurance. Unbroken."
+title: "Hedvig |\_Försäkring byggd på modern teknik"
 landing:
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
@@ -11,7 +11,7 @@ landing:
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
     favoritsaker. Det är enkelt, snabbt och rättvist.
 three_explainers:
-  heading: Försäkring för nutiden. Byggd på framtidens teknik
+  heading: Försäkring byggd på modern teknik
   three_explainers:
     claim_on_phone:
       paragraph: >-
