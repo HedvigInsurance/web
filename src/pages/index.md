@@ -27,7 +27,7 @@ three_explainers:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
         intelligens
-      title: Få ersättning direkt
+      title: 'Hjälp på sekunder, ersättning på minuter'
 peril_forest:
   bottom_paragraph: Läs allt om skyddet i appen.
   heading: >-
