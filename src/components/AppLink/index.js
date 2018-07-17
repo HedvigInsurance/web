@@ -49,7 +49,7 @@ class AppLink extends React.Component {
     const linkOptions = utmParamsToBranchLinkOptions(utmParams, this.props);
 
     const path =
-      this.context && this.context.location && this.context.location.pathname;
+      this.context && this.context.location && this.context.location.pathname; // eslint-disable-line
 
     const host =
       NODE_ENV === 'development' ? 'localhost:8000' : 'http://www.hedvig.com';
@@ -72,18 +72,16 @@ class AppLink extends React.Component {
 
   trackClick = () => {
     window.analytics.track('Click app link', {
-      label: this.props.tags && this.props.tags.join(', '),
+      label: this.props.tags && this.props.tags.join(', '), // eslint-disable-line
     });
   };
 
   render() {
+    const { children, ...props } = this.props;
+    const { link } = this.state;
     return (
-      <a
-        {...this.props}
-        href={this.state.link}
-        onClick={() => this.trackClick()}
-      >
-        {this.props.children}
+      <a {...props} href={link} onClick={() => this.trackClick()}>
+        {children}
       </a>
     );
   }

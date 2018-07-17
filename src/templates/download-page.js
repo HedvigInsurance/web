@@ -22,6 +22,7 @@ const propTypes = {
 
 class DownloadTemplate extends React.Component {
   static propTypes = propTypes;
+
   state = {
     phoneNumber: '',
     hasErrors: false,
@@ -90,7 +91,8 @@ class DownloadTemplate extends React.Component {
       successText,
       errorText,
     } = this.props;
-    const isDisabled = !this.state.phoneNumber || this.state.isSending;
+    const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
+    const isDisabled = !phoneNumber || isSending;
     return (
       <main className="Site">
         <Helmet>
@@ -116,7 +118,7 @@ class DownloadTemplate extends React.Component {
             <div className="u-spaceMB5">
               <div className="u-textCenter">
                 <div className="u-spaceMB5">
-                  {this.state.isSuccessful ? (
+                  {isSuccessful ? (
                     <div>{successText}</div>
                   ) : (
                     <form onSubmit={this.handleSubmit}>
@@ -126,11 +128,11 @@ class DownloadTemplate extends React.Component {
                         }}
                         className={[
                           'TextInput u-spaceMB12 u-spaceMR11',
-                          this.state.hasErrors && 'has-errors',
+                          hasErrors && 'has-errors',
                         ].join(' ')}
                         type="tel"
                         placeholder={phoneNumberPlaceholder}
-                        value={this.state.phoneNumber}
+                        value={phoneNumber}
                         onChange={this.handleChange}
                       />
                       <button
@@ -150,7 +152,7 @@ class DownloadTemplate extends React.Component {
                       </button>
                     </form>
                   )}
-                  {this.state.isSending && (
+                  {isSending && (
                     <div className="Spinner">
                       <div className="Spinner__bounce" />
                       <div className="Spinner__bounce" />
@@ -158,7 +160,7 @@ class DownloadTemplate extends React.Component {
                       <div className="Spinner__bounce" />
                     </div>
                   )}
-                  {this.state.hasErrors && (
+                  {hasErrors && (
                     <div className="u-spaceMT8 u-colorPrimaryPink">
                       {errorText}
                     </div>
