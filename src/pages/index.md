@@ -5,7 +5,7 @@ title: "Hedvig |\_Insurance. Unbroken."
 landing:
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
-  heading: "Få hjälp\_när\\ndu behöver\_det"
+  heading: "Få hjälp\_när du behöver\_det"
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: >-
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
