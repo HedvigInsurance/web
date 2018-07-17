@@ -17,10 +17,6 @@ class Header extends React.Component {
 
   links = [
     {
-      path: '/coverage',
-      label: 'Vad som täcks',
-    },
-    {
       path: '/giving-back',
       label: 'Hur vi ger tillbaka',
     },
