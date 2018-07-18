@@ -106,8 +106,8 @@ class LandingTemplate extends React.Component {
             <div className="u-backgroundWhite">
               <div className="Home-hero-desktop">
                 <div className="Home-hero">
-                  <div className="Grid">
-                    <div className="Container u-sizeFull u-lg-size3of5 u-mdu-md-spacePT7 u-lg-spacePT6 Home-hero-mobile">
+                  <div className="Grid Container Container--withoutGutter">
+                    <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-mobile">
                       <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                         {landing.heading}
                       </h1>
@@ -137,7 +137,7 @@ class LandingTemplate extends React.Component {
                         partialVisibility
                         onChange={this.chatDemoOnVisibilityChange}
                       >
-                        <div className="u-spaceMV6 u-lg-spaceMT3">
+                        <div className="u-spaceMV6 u-lg-spaceMT4">
                           <LottieLoader
                             ref={(anim) => {
                               this.chatAnim = anim;
