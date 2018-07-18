@@ -11,7 +11,7 @@ landing:
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
     favoritsaker. Det är enkelt, snabbt och rättvist.
 three_explainers:
-  heading: "Försäkring byggd på modern\_teknik"
+  heading: Slipp telefonköer och hissmusik
   three_explainers:
     claim_on_phone:
       paragraph: >-
@@ -52,3 +52,4 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
+
