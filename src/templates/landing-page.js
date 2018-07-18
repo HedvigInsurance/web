@@ -207,7 +207,7 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12 u-lg-spaceMH10">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .title
