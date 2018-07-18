@@ -48,7 +48,7 @@ philosophy:
     det något över skänker vi det till ett gott ändamål!
 customer_source:
   bottom_paragraph: Redan försäkrad? Hedvig sköter bytet
-  heading: Var våra användare kommer från
+  heading: Redan försäkrad? Vi sköter bytet
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
     If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
