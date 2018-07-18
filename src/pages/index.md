@@ -45,7 +45,7 @@ philosophy:
     månadskostnad, öronmärker resten till skador och betalar blixtsnabbt. Blir
     det något över skänker vi det till ett gott ändamål!
 customer_source:
-  bottom_paragraph: Redan försäkrad? Hedvig sköter bytet
+  bottom_paragraph: 'Våra användare byter till Hedvig från:'
   heading: Redan försäkrad? Vi sköter bytet
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
