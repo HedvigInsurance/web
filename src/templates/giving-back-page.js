@@ -147,7 +147,10 @@ const GivingBackTemplate = ({
 
           <div>
             <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT8">
-              <AppLink className="Button u-colorWhite u-backgroundPrimaryGreen">
+              <AppLink
+                tags={['giving-back']}
+                className="Button u-colorWhite u-backgroundPrimaryGreen"
+              >
                 {ctaText}
               </AppLink>
             </div>
