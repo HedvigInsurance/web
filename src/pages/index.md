@@ -38,7 +38,7 @@ philosophy:
       Resten reserveras till skadeersättningar så att vi kan betala ut
       blixtsnabbt
     card3_paragraph: Blir det något över doneras det till ett gott ändamål
-  heading: Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte Hedvig
+  heading: "Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte\_Hedvig"
   paragraph: >-
     Försäkring ska vara rättvist och transparent. Därför fungerar Hedvig inte
     som ditt gamla försäkringsbolag. Hedvig tjänar inget på att inte betala ut

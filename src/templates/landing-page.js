@@ -178,7 +178,7 @@ class LandingTemplate extends React.Component {
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePV2">
-                <h2 className="u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
+                <h2 className="u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
                   {threeExplainers.heading}
                 </h2>
                 <VisibilitySensor
@@ -254,7 +254,7 @@ class LandingTemplate extends React.Component {
             {/* Philosophy */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
                 <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
@@ -683,7 +683,6 @@ export const query = graphql`
         }
         safety {
           heading
-          paragraph
           item1
           item2
           item3
