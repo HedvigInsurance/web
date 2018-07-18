@@ -1,7 +1,7 @@
 ---
 path: /
 templateKey: landing-page
-title: "Hedvig |\_Försäkring byggd på modern teknik"
+title: "Hedvig |\_Hjälp på sekunder, ersättning på minuter"
 landing:
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
