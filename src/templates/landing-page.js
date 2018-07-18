@@ -106,7 +106,7 @@ class LandingTemplate extends React.Component {
             <div className="u-backgroundWhite">
               <div className="Home-hero-desktop">
                 <div className="Home-hero">
-                  <div className="Grid Container Container--withoutGutter">
+                  <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
                     <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-mobile">
                       <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                         {landing.heading}
