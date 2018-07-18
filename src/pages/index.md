@@ -3,9 +3,9 @@ path: /
 templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 landing:
-  heading: "Få hjälp när du behöver\_det"
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
+  heading: "Få hjälp när du behöver\_det"
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: >-
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
@@ -14,10 +14,10 @@ three_explainers:
   heading: "Försäkring byggd på modern\_teknik"
   three_explainers:
     claim_on_phone:
-      title: "Få svar på dina frågor på\_nolltid"
       paragraph: >-
         Fråga vad som helst om din försäkring. Hedvig är alltid bara ett
         knapptryck bort
+      title: "Få svar på dina frågor på\_nolltid"
     insurance_in_minutes:
       paragraph: >-
         Ladda ner appen, svara på Hedvigs frågor i chatten och signera med
@@ -38,12 +38,8 @@ philosophy:
       Resten reserveras till skadeersättningar så att vi kan betala ut
       blixtsnabbt
     card3_paragraph: Blir det något över doneras det till ett gott ändamål
-  heading: "Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte\_Hedvig"
-  paragraph: >-
-    Försäkring ska vara rättvist och transparent. Därför fungerar Hedvig inte
-    som ditt gamla försäkringsbolag. Hedvig tjänar inget på att inte betala ut
-    när det händer dig något – till skillnad från ditt gamla försäkringsbolag
-    som tjänar på hålla fast i pengarna.
+  heading: Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte Hedvig
+  paragraph: ''
 customer_source:
   bottom_paragraph: 'Våra användare byter till Hedvig från:'
   heading: Redan försäkrad? Vi sköter bytet
@@ -58,3 +54,4 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
+
