@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
+import { StickyContainer } from 'react-sticky';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -98,94 +99,96 @@ class DownloadTemplate extends React.Component {
         <Helmet>
           <title>{title}</title>
         </Helmet>
-        <Header />
-        <article className="Site-content u-flexGrow1">
-          <div
-            className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
-            style={{
-              height: '100%',
-            }}
-          >
-            <div className="u-textCenter">
-              <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
-                {heading}
-              </h1>
-            </div>
-            <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
-              <p className="u-spaceMT8">{paragraph1}</p>
-              <p className="u-spaceMT8">{paragraph2}</p>
-            </div>
-            <div className="u-spaceMB5">
+        <StickyContainer>
+          <Header />
+          <article className="Site-content u-flexGrow1">
+            <div
+              className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
+              style={{
+                height: '100%',
+              }}
+            >
               <div className="u-textCenter">
-                <div className="u-spaceMB5">
-                  {isSuccessful ? (
-                    <div>{successText}</div>
-                  ) : (
-                    <form onSubmit={this.handleSubmit}>
-                      <input
-                        style={{
-                          minWidth: '280px',
-                        }}
-                        className={[
-                          'TextInput u-spaceMB12 u-spaceMR11',
-                          hasErrors && 'has-errors',
-                        ].join(' ')}
-                        type="tel"
-                        placeholder={phoneNumberPlaceholder}
-                        value={phoneNumber}
-                        onChange={this.handleChange}
-                      />
-                      <button
-                        type="submit"
-                        disabled={isDisabled}
-                        style={{
-                          backgroundColor: isDisabled
-                            ? 'rgb(175, 175, 175)'
-                            : 'inherit',
-                        }}
-                        className={[
-                          !isDisabled && 'u-backgroundPrimaryBlue',
-                          'Button u-colorWhite u-spaceMB12',
-                        ].join(' ')}
-                      >
-                        {ctaText}
-                      </button>
-                    </form>
-                  )}
-                  {isSending && (
-                    <div className="Spinner">
-                      <div className="Spinner__bounce" />
-                      <div className="Spinner__bounce" />
-                      <div className="Spinner__bounce" />
-                      <div className="Spinner__bounce" />
-                    </div>
-                  )}
-                  {hasErrors && (
-                    <div className="u-spaceMT8 u-colorPrimaryPink">
-                      {errorText}
-                    </div>
-                  )}
+                <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
+                  {heading}
+                </h1>
+              </div>
+              <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
+                <p className="u-spaceMT8">{paragraph1}</p>
+                <p className="u-spaceMT8">{paragraph2}</p>
+              </div>
+              <div className="u-spaceMB5">
+                <div className="u-textCenter">
+                  <div className="u-spaceMB5">
+                    {isSuccessful ? (
+                      <div>{successText}</div>
+                    ) : (
+                      <form onSubmit={this.handleSubmit}>
+                        <input
+                          style={{
+                            minWidth: '280px',
+                          }}
+                          className={[
+                            'TextInput u-spaceMB12 u-spaceMR11',
+                            hasErrors && 'has-errors',
+                          ].join(' ')}
+                          type="tel"
+                          placeholder={phoneNumberPlaceholder}
+                          value={phoneNumber}
+                          onChange={this.handleChange}
+                        />
+                        <button
+                          type="submit"
+                          disabled={isDisabled}
+                          style={{
+                            backgroundColor: isDisabled
+                              ? 'rgb(175, 175, 175)'
+                              : 'inherit',
+                          }}
+                          className={[
+                            !isDisabled && 'u-backgroundPrimaryBlue',
+                            'Button u-colorWhite u-spaceMB12',
+                          ].join(' ')}
+                        >
+                          {ctaText}
+                        </button>
+                      </form>
+                    )}
+                    {isSending && (
+                      <div className="Spinner">
+                        <div className="Spinner__bounce" />
+                        <div className="Spinner__bounce" />
+                        <div className="Spinner__bounce" />
+                        <div className="Spinner__bounce" />
+                      </div>
+                    )}
+                    {hasErrors && (
+                      <div className="u-spaceMT8 u-colorPrimaryPink">
+                        {errorText}
+                      </div>
+                    )}
+                  </div>
+                  <a
+                    href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="u-spaceMH12 u-spacePH11 u-spacePV11"
+                  >
+                    <AppStoreIcon />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.hedvig.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="u-spaceMH12 u-spacePH11 u-spacePV11"
+                  >
+                    <PlayStoreIcon />
+                  </a>
                 </div>
-                <a
-                  href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="u-spaceMH12 u-spacePH11 u-spacePV11"
-                >
-                  <AppStoreIcon />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.hedvig.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="u-spaceMH12 u-spacePH11 u-spacePV11"
-                >
-                  <PlayStoreIcon />
-                </a>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </StickyContainer>
         <Footer />
       </main>
     );

@@ -4,6 +4,10 @@
     display: block !important;
   }
 
+  .u-lg-inlineBlock {
+    display: inline-block !important;
+  }
+
   .u-lg-hidden {
     display: none !important;
   }

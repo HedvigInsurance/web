@@ -95,174 +95,115 @@ collections:
           - label: Title
             name: title
             widget: string
-          - label: Section 1
-            name: section1
+          - label: Landing section
+            name: landing
             widget: object
             fields:
+              - label: Heading
+                name: heading
+                widget: string
               - label: Subheading
                 name: subheading
                 widget: string
-              - label: CTA text
-                name: cta_text
+              - label: CTA 1 text
+                name: cta_text1
+                widget: string
+              - label: CTA 2 text
+                name: cta_text2
                 widget: string
               - label: paragraph
                 name: paragraph
                 widget: string
-          - label: Section 2
-            name: section2
+          - label: Three Explainers section
+            name: three_explainers
             widget: object
             fields:
               - label: Heading
                 name: heading
                 widget: string
-              - label: Strikethrough paragraph
-                name: strikethrough_paragraph
+              - label: Three Explainers
+                name: three_explainers
+                widget: object
+                fields:
+                  - label: Insurance in minutes
+                    name: insurance_in_minutes
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Claim on your phone
+                    name: claim_on_phone
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Paid right away
+                    name: paid_right_away
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+          - label: Peril Forest section
+            name: peril_forest
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bottom paragraph
+                name: bottom_paragraph
+                widget: string
+          - label: Model section
+            name: philosophy
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Cards
+                name: cards
+                widget: object
+                fields:
+                  - label: Card 1 paragraph
+                    name: card1_paragraph
+                    widget: text
+                  - label: Card 2 paragraph
+                    name: card2_paragraph
+                    widget: text
+                  - label: Card 3 paragraph
+                    name: card3_paragraph
+          - label: Customer source section
+            name: customer_source
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Image accessibility text
+                name: image_alt
                 widget: text
-          - label: Section 3
-            name: section3
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Paragraph
-                name: paragraph
+              - label: Bottom paragraph
+                name: bottom_paragraph
                 widget: text
-              - label: CTA text
-                name: cta_text
-                widget: string
-          - label: Section 4
-            name: section4
+          - label: Safety section
+            name: safety
             widget: object
             fields:
               - label: Heading
                 name: heading
                 widget: string
-              - label: Pricecard, Rental
-                name: pricecard_rental
-                widget: object
-                fields:
-                  - label: heading
-                    name: heading
-                    widget: string
-                  - label: Price, from
-                    name: price_from
-                    widget: number
-                    valueType: int
-                  - label: Price, from explainer
-                    name: price_from_explainer
-                    widget: string
-                  - label: Price, to
-                    name: price_to
-                    widget: number
-                    valueType: int
-                  - label: Price, to explainer
-                    name: price_to_explainer
-                    widget: string
-                  - label: CTA Text
-                    name: cta_text
-                    widget: string
-              - label: Pricecard, BRF
-                name: pricecard_brf
-                widget: object
-                fields:
-                  - label: heading
-                    name: heading
-                    widget: string
-                  - label: Price, from
-                    name: price_from
-                    widget: number
-                    valueType: int
-                  - label: Price, from explainer
-                    name: price_from_explainer
-                    widget: string
-                  - label: Price, to
-                    name: price_to
-                    widget: number
-                    valueType: int
-                  - label: Price, to explainer
-                    name: price_to_explainer
-                    widget: string
-                  - label: CTA Text
-                    name: cta_text
-                    widget: string
-          - label: Section 5
-            name: section5
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                type: string
-              - label: Bullet 1
-                name: bullet1
-                widget: object
-                fields:
-                  - label: Heading
-                    name: heading
-                    type: string
-                  - label: Paragraph
-                    name: paragraph
-                    type: text
-              - label: Bullet 2
-                name: bullet2
-                widget: object
-                fields:
-                  - label: Heading
-                    name: heading
-                    type: string
-                  - label: Paragraph
-                    name: paragraph
-                    type: text
-              - label: Bullet 3
-                name: bullet3
-                widget: object
-                fields:
-                  - label: Heading
-                    name: heading
-                    type: string
-                  - label: Paragraph
-                    name: paragraph
-                    type: text
-          - label: Section 6
-            name: section6
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Bullet 1
-                name: bullet1
-                widget: string
-              - label: Bullet 2
-                name: bullet2
-                widget: string
-              - label: Bullet 3
-                name: bullet3
-                widget: string
-          - label: Section 7
-            name: section7
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: CTA Text
-                name: cta_text
-                widget: string
-          - label: Section 8
-            name: section8
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: text
-              - label: Paragraph
-                name: paragraph
-                widget: text
-          - label: Section 9
-            name: section9
-            widget: object
-            fields:
               - label: Item 1
                 name: item1
                 widget: text

@@ -30,6 +30,14 @@
   background-color: var(--color-primaryPurple) !important;
 }
 
+.u-backgroundPrimaryBlackPurple {
+  background-color: var(--color-primaryBlackPurple) !important;
+}
+
+.u-backgroundPrimaryDarkestPurple {
+  background-color: var(--color-primaryDarkestPurple) !important;
+}
+
 .u-backgroundPrimaryGrey {
   background-color: var(--color-primaryGrey) !important;
 }

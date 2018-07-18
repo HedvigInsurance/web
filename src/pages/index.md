@@ -1,72 +1,54 @@
 ---
 path: /
 templateKey: landing-page
-title: "Hedvig |\_Insurance. Unbroken."
-section1:
-  cta_text: Se ditt pris i appen
-  paragraph: Redan försäkrad? Vi sköter bytet
-  subheading: Blixtsnabb hemförsäkring med stort hjärta.
-section2:
-  heading: Ditt försäkringsbolag är trasigt
-  strikethrough_paragraph: >-
-    Leta på hemsidan för att hitta numret till kundtjänst vänta i telefonkön
-    tills du kommer fram endast för att bli vidarekopplad till någon annan som
-    vill att du fyller i femtioelva papper som du sedan ska skicka in innan
-    väntan börjar på att någon ska återkoppla så att du någon gång kan få
-    betalt-ish
-section3:
-  cta_text: Kom igång direkt
-  heading: 'Hedvig är lösningen. Få hjälp på sekunder, ersättning på minuter'
+title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
+landing:
+  cta_text1: Hyresrätt från 99 kr/mån
+  cta_text2: Bostadsrätt från 129 kr/mån
+  heading: "Få hjälp när du behöver\_det"
+  paragraph: Månadsvis betalning. Ingen bindningstid.
+  subheading: >-
+    Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
+    favoritsaker. Det är enkelt, snabbt och rättvist.
+three_explainers:
+  heading: Slipp telefonköer och hissmusik
+  three_explainers:
+    claim_on_phone:
+      paragraph: >-
+        Fråga vad som helst om din försäkring. Hedvig är alltid bara ett
+        knapptryck bort
+      title: "Få svar på dina frågor på\_nolltid"
+    insurance_in_minutes:
+      paragraph: >-
+        Ladda ner appen, svara på Hedvigs frågor i chatten och signera med
+        mobilt BankID
+      title: "Signa upp snabbt och\_enkelt"
+    paid_right_away:
+      paragraph: >-
+        Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
+        intelligens
+      title: 'Hjälp på sekunder, ersättning på minuter'
+peril_forest:
+  bottom_paragraph: Läs allt om skyddet i appen.
+  heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
+philosophy:
+  cards:
+    card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av din månadskostnad
+    card2_paragraph: >-
+      Resten reserveras till skadeersättningar så att vi kan betala ut
+      blixtsnabbt
+    card3_paragraph: Blir det något över doneras det till ett gott ändamål
+  heading: "Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte\_Hedvig"
+customer_source:
+  bottom_paragraph: 'Våra användare byter till Hedvig från:'
+  heading: Redan försäkrad? Vi sköter bytet
+  image_alt: >-
+    Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
+    If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
   paragraph: >-
-    Hedvig gör det enkelt när oturen varit framme. Bara spela in ett kort
-    röstmeddelande där du berättar vad som hänt.
-section4:
-  heading: Månadsvis betalning. Ingen bindningstid
-  pricecard_brf:
-    cta_text: Se ditt pris i appen
-    heading: Hemförsäkring för bostadsrätt
-    price_from: 129
-    price_from_explainer: '(en person, liten lägenhet)'
-    price_to: 999
-    price_to_explainer: '(sex personer, stor lägenhet)'
-  pricecard_rental:
-    cta_text: Se ditt pris i appen
-    heading: Hemförsäkring för hyresrätt
-    price_from: 99
-    price_from_explainer: '(en person, liten lägenhet)'
-    price_to: 799
-    price_to_explainer: '(sex personer, stor lägenhet)'
-section5:
-  bullet1:
-    heading: En fast avgift för att ge dig bra service
-    paragraph: 20% går till att driva och utveckla Hedvig med rimlig vinst
-  bullet2:
-    heading: Resten öronmärks till ersättningar
-    paragraph: >-
-      80% är öronmärkt till skador och till Hedvigs globala försäkringspartner
-      Inter Hannover som ger extra trygghet
-  bullet3:
-    heading: Det som inte går till ersättning går till välgörenhet
-    paragraph: >-
-      Överskottet skänks till ett gott ändamål istället för att gå till extra
-      vinst
-  heading: >-
-    Vanliga försäkrings­bolag tjänar mer när du får mindre. Men Hedvig är inget
-    vanligt försäkrings­bolag
-section6:
-  bullet1: Ladda ner appen
-  bullet2: Se ditt pris
-  bullet3: Signera med BankID
-  heading: Så kommer du igång
-section7:
-  cta_text: Se ditt pris i appen
-  heading: Hedvig sköter bytet
-section8:
-  heading: >-
-    Självklart innehåller vår hemförsäkring allt vanliga hemförsäkringar
-    innehåller. Förutom bindningstid då.
-  paragraph: '(tyvärr har vi fortfarande självrisk, men vi jobbar på det)'
-section9:
+    Våra användare byter till Hedvig från:
+safety:
+  heading: Tryggade av en global jätte
   item1: >-
     Hedvig är tryggat av Inter Hannover, del av en av världens största
     försäkringsgrupper

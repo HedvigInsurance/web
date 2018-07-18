@@ -5,6 +5,8 @@
   --color-primaryPink: #ff8a80;
   --color-primaryGreen: #1be9b6;
   --color-primaryPurple: #651eff;
+  --color-primaryBlackPurple: #0f007a;
+  --color-primaryDarkestPurple: #070646;
   --color-primaryGrey: #e9ecef;
   --color-primaryDarkGrey: #9b9baa;
 
@@ -28,6 +30,7 @@
   --fontSize6: 32px;
   --fontSize7: 28px;
   --fontSize8: 24px;
+  --fontSize85: 20px;
   --fontSize9: 18px;
   --fontSize10: 16px;
 
@@ -39,6 +42,7 @@
   --lineHeight6: 38px;
   --lineHeight7: 35px;
   --lineHeight8: 32px;
+  --lineHeight85: 30px;
   --lineHeight9: 28px;
   --lineHeight10: 24px;
 

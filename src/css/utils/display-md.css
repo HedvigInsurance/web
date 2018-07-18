@@ -4,6 +4,10 @@
     display: block !important;
   }
 
+  .u-md-inlineBlock {
+    display: inline-block !important;
+  }
+
   .u-md-hidden {
     display: none !important;
   }

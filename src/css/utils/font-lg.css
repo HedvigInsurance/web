@@ -40,6 +40,11 @@
     line-height: var(--lineHeight8) !important;
   }
 
+  .u-lg-fontSize85 {
+    font-size: var(--fontSize85) !important;
+    line-height: var(--lineHeight85) !important;
+  }
+
   .u-lg-fontSize9 {
     font-size: var(--fontSize9) !important;
     line-height: var(--lineHeight9) !important;
