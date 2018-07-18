@@ -334,12 +334,10 @@ class LandingTemplate extends React.Component {
                 <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {perilForest.heading}
                 </h2>
-                <figure
+                <figure // eslint-disable-line
                   className="u-spaceMV6"
                   onClick={this.registerPerilForestClick}
                 >
-                  {' '}
-                  {/* eslint-disable-line */}
                   {perilForestMobileFile && (
                     <Img
                       className="Home-perilForest-image-mobile u-lg-hidden"
@@ -370,12 +368,10 @@ class LandingTemplate extends React.Component {
                 <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                   {customerSource.paragraph}
                 </p>
-                <figure
+                <figure // eslint-disable-line
                   className="u-spaceMT8"
                   onClick={this.registerCustomerSourceClick}
                 >
-                  {' '}
-                  {/* eslint-disable-line */}
                   {customerSourceDesktopFile && (
                     <Img
                       className="Home-customerSource-image-desktop u-hidden u-lg-block"
