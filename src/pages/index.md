@@ -44,6 +44,8 @@ customer_source:
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
     If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
+  paragraph: >-
+    Våra användare byter till Hedvig från:
 safety:
   heading: Tryggade av en global jätte
   item1: >-
