@@ -3,20 +3,20 @@ path: /
 templateKey: landing-page
 title: "Hedvig |\_Insurance. Unbroken."
 landing:
-  heading: "Få\_hjälp\_när du\_behöver\_det"
+  heading: "Få hjälp när du behöver\_det"
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina favoritsaker. Det är enkelt, snabbt och rättvist.
 three_explainers:
-  heading: Försäkring för nutiden. Byggd på framtidens teknik
+  heading: "Försäkring för nutiden. Byggd på framtidens\_teknik"
   three_explainers:
     insurance_in_minutes:
       title: Signa upp på minuter
       paragraph: >-
         Ladda ner appen, svara på Hedvigs frågor i chatten och signera med mobilt BankID
     claim_on_phone:
-      title: Få svar på dina frågor på nolltid
+      title: "Få svar på dina frågor på\_nolltid"
       paragraph: >-
         Fråga vad som helst om din försäkring. Hedvig är alltid bara ett knapptryck bort
     paid_right_away:
@@ -54,4 +54,3 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
-

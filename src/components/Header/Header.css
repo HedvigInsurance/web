@@ -2,13 +2,14 @@
 
 .Header {
   background-color: white;
-  height: 80px;
+  box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.5);
+  height: 70px;
   width: 100%;
   z-index: 2;
 }
 
 .Header-logo {
-  padding: 27px 0 0 30px;
+  padding: 24px 0 0 26px;
 }
 
 .Header-logo__inner {
@@ -22,6 +23,7 @@
   display: none;
   float: left;
   height: 60px;
+  margin: 0 20px 0 0;
 }
 
 .Header-menu-link {
@@ -31,9 +33,10 @@
 }
 
 .Header-cta-button {
-  margin: 0 20px;
+  left: -14px;
+  padding: 8px 24px;
   position: relative;
-  top: 12px;
+  top: 15px;
 }
 
 .Header-burger {

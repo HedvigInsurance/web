@@ -84,25 +84,27 @@ class Header extends React.Component {
                   <Logo />
                 </Link>
               </div>
-              <nav className="Header-menu u-hidden u-lg-block">
-                <div className="u-flex u-flexRow">
-                  {this.links.map((link) => (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className="Header-menu-link u-linkBlock"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                  <AppLink
-                    tags={['header']}
-                    className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen"
-                  >
-                    Skaffa Hedvig
-                  </AppLink>
-                </div>
-              </nav>
+              <div>
+                <nav className="Header-menu u-hidden u-lg-block">
+                  <div className="u-flex u-flexRow">
+                    {this.links.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        className="Header-menu-link u-linkBlock"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </nav>
+                <AppLink
+                  tags={['header']}
+                  className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen u-md-inlineBlock u-lg-inlineBlock"
+                >
+                  Kom igång
+                </AppLink>
+              </div>
               <button
                 type="button"
                 className={burgerClassNames}

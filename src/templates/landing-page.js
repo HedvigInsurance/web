@@ -107,32 +107,32 @@ class LandingTemplate extends React.Component {
               <div className="Home-hero-desktop">
                 <div className="Home-hero">
                   <div className="Grid">
-                    <div className="Container u-sizeFull u-lg-size1of2 u-mdu-md-spacePT7 u-lg-spacePT6 Home-hero-mobile">
-                      <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize1 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                    <div className="Container u-sizeFull u-lg-size3of5 u-mdu-md-spacePT7 u-lg-spacePT6 Home-hero-mobile">
+                      <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                         {landing.heading}
                       </h1>
-                      <p className="u-colorWhite u-spaceMT8 u-fontSize9 u-textCenter u-md-textLeft u-lg-textLeft">
+                      <p className="u-colorWhite u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                         {landing.subheading}
                       </p>
-                      <div className="Grid Grid--alignCenter u-md-flexJustifyStart u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                         <AppLink
                           tags={['home-hero-1']}
-                          className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-spaceMB10"
+                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12"
                         >
                           {landing.cta_text1}
                         </AppLink>
                         <AppLink
                           tags={['home-hero-2']}
-                          className="Button Home-cta u-colorPrimaryDarkBlue u-backgroundWhite u-md-spaceMB10 u-lg-spaceMB10 u-md-spaceML12 u-lg-spaceML12"
+                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-md-spaceMB10 u-lg-spaceMB10"
                         >
                           {landing.cta_text2}
                         </AppLink>
-                        <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft">
+                        <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
                           {landing.paragraph}
                         </div>
                       </div>
                     </div>
-                    <div className="u-sizeFull u-lg-size1of2">
+                    <div className="u-sizeFull u-lg-size2of5">
                       <VisibilitySensor
                         partialVisibility
                         onChange={this.chatDemoOnVisibilityChange}
@@ -178,9 +178,9 @@ class LandingTemplate extends React.Component {
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePV2">
-                <h1 className="u-textCenter u-fontSize3 u-fontFamilyHeader">
+                <h2 className="u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
                   {threeExplainers.heading}
-                </h1>
+                </h2>
                 <VisibilitySensor
                   partialVisibility
                   onChange={this.threeExplainersVisbilityChanged}
@@ -195,13 +195,13 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4>
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .title
                         }
                       </h4>
-                      <p className="u-lg-spaceMH8">
+                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .paragraph
@@ -217,10 +217,10 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4>
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
                         {threeExplainers.three_explainers.claim_on_phone.title}
                       </h4>
-                      <p className="u-lg-spaceMH8">
+                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                         {
                           threeExplainers.three_explainers.claim_on_phone
                             .paragraph
@@ -236,10 +236,10 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4>
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
                         {threeExplainers.three_explainers.paid_right_away.title}
                       </h4>
-                      <p className="u-lg-spaceMH8">
+                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                         {
                           threeExplainers.three_explainers.paid_right_away
                             .paragraph
@@ -254,10 +254,10 @@ class LandingTemplate extends React.Component {
             {/* Philosophy */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize3">
+                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
-                <p className="u-textCenter u-spaceMT8">
+                <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                   {philosophy.paragraph}
                 </p>
                 <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
@@ -273,7 +273,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8">
+                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card1_paragraph}
                         </p>
                       </div>
@@ -291,7 +291,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8">
+                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card2_paragraph}
                         </p>
                       </div>
@@ -309,7 +309,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8">
+                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card3_paragraph}
                         </p>
                       </div>
@@ -322,7 +322,7 @@ class LandingTemplate extends React.Component {
             {/* Peril forest */}
             <div className="u-backgroundPrimaryDarkestPurple">
               <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize6">
+                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
                   {perilForest.heading}
                 </h2>
                 <figure className="u-spaceMV6">
@@ -341,7 +341,7 @@ class LandingTemplate extends React.Component {
                     />
                   )}
                 </figure>
-                <p className="u-colorWhite u-textCenter">
+                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                   {perilForest.bottom_paragraph}
                 </p>
               </div>
@@ -350,9 +350,12 @@ class LandingTemplate extends React.Component {
             {/* Customer source */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize3">
+                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
                   {customerSource.heading}
                 </h1>
+                <p className="u-textCenter u-spaceMT8 u-spaceMB5 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {customerSource.bottom_paragraph}
+                </p>
                 <figure className="u-spaceMT8">
                   {customerSourceDesktopFile && (
                     <Img
@@ -369,19 +372,18 @@ class LandingTemplate extends React.Component {
                     />
                   )}
                 </figure>
-                <p className="u-textCenter u-spaceMT5">
-                  {customerSource.bottom_paragraph}
-                </p>
               </div>
             </div>
 
             {/* Safety */}
             <div>
               <div className="Container u-spacePT2">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize3">
+                <h2 className="u-textCenter u-fontFamilyHeader u-fontSize2">
                   {safety.heading}
-                </h1>
-                <p className="u-textCenter u-spaceMT8">{safety.paragraph}</p>
+                </h2>
+                <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {safety.paragraph}
+                </p>
                 <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT9 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
                   <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                     <figure className="u-spaceMB9 u-spaceMT6">
@@ -393,7 +395,7 @@ class LandingTemplate extends React.Component {
                         />
                       )}
                     </figure>
-                    <p className="u-textCenter u-maxWidth1of3">
+                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                       {safety.item1}
                     </p>
                   </div>
@@ -408,7 +410,7 @@ class LandingTemplate extends React.Component {
                         />
                       )}
                     </figure>
-                    <p className="u-textCenter u-maxWidth1of3">
+                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                       {safety.item2}
                     </p>
                   </div>
@@ -423,7 +425,7 @@ class LandingTemplate extends React.Component {
                         />
                       )}
                     </figure>
-                    <p className="u-textCenter u-maxWidth1of3">
+                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                       {safety.item3}
                     </p>
                   </div>

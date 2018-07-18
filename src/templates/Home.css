@@ -23,9 +23,7 @@
 }
 
 .Home-cta {
-  box-shadow: 0 4px 25px 3px rgba(255, 255, 255, 0.35),
-    0 1px 10px 0 rgba(0, 0, 0, 0.1);
-  padding: 1.5em 2.5em;
+  padding: 24px 32px;
   width: 320px;
 }
 
