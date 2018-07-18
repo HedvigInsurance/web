@@ -23,6 +23,7 @@
 }
 
 .Home-cta {
+  border: 0.5px var(--color-primaryBlackPurple) solid;
   padding: 24px 32px;
   width: 320px;
 }

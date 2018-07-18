@@ -6,13 +6,12 @@ landing:
   heading: "Få hjälp när du behöver\_det"
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
-  heading: "Få\_hjälp\_när du\_behöver\_det"
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: >-
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
     favoritsaker. Det är enkelt, snabbt och rättvist.
 three_explainers:
-  heading: Försäkring byggd på modern teknik
+  heading: "Försäkring byggd på modern\_teknik"
   three_explainers:
     claim_on_phone:
       title: "Få svar på dina frågor på\_nolltid"
@@ -23,7 +22,7 @@ three_explainers:
       paragraph: >-
         Ladda ner appen, svara på Hedvigs frågor i chatten och signera med
         mobilt BankID
-      title: Signa upp snabbt och enkelt
+      title: "Signa upp snabbt och\_enkelt"
     paid_right_away:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
@@ -58,5 +57,4 @@ safety:
     försäkringsgrupper
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
-  paragraph: ''
 ---

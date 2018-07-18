@@ -100,7 +100,7 @@ class Header extends React.Component {
                 </nav>
                 <AppLink
                   tags={['header']}
-                  className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen u-md-inlineBlock u-lg-inlineBlock"
+                  className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen u-md-inlineBlock u-lg-inlineBlock u-fontWeightBold"
                 >
                   Kom igång
                 </AppLink>

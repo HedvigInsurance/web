@@ -50,7 +50,7 @@ const paidRightAwayOptions = {
   },
 };
 
-const THREE_EXPLAINER_WIDTH_HEIGHT = 260;
+const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
 class LandingTemplate extends React.Component {
   chatDemoOnVisibilityChange = (isVisible) => {
@@ -117,13 +117,13 @@ class LandingTemplate extends React.Component {
                       <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                         <AppLink
                           tags={['home-hero-1']}
-                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12"
+                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
                         >
                           {landing.cta_text1}
                         </AppLink>
                         <AppLink
                           tags={['home-hero-2']}
-                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-md-spaceMB10 u-lg-spaceMB10"
+                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
                         >
                           {landing.cta_text2}
                         </AppLink>
@@ -178,7 +178,7 @@ class LandingTemplate extends React.Component {
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePV2">
-                <h2 className="u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
+                <h2 className="u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
                   {threeExplainers.heading}
                 </h2>
                 <VisibilitySensor
@@ -195,7 +195,7 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .title
@@ -217,7 +217,7 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.claim_on_phone.title}
                       </h4>
                       <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
@@ -236,7 +236,7 @@ class LandingTemplate extends React.Component {
                         width={THREE_EXPLAINER_WIDTH_HEIGHT}
                         height={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
+                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.paid_right_away.title}
                       </h4>
                       <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
@@ -254,7 +254,7 @@ class LandingTemplate extends React.Component {
             {/* Philosophy */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
+                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
                 <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
@@ -322,7 +322,7 @@ class LandingTemplate extends React.Component {
             {/* Peril forest */}
             <div className="u-backgroundPrimaryDarkestPurple">
               <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
+                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {perilForest.heading}
                 </h2>
                 <figure className="u-spaceMV6">
@@ -350,7 +350,7 @@ class LandingTemplate extends React.Component {
             {/* Customer source */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize3 u-md-fontSize2 u-lg-fontSize2">
+                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {customerSource.heading}
                 </h1>
                 <p className="u-textCenter u-spaceMT8 u-spaceMB5 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
@@ -378,12 +378,9 @@ class LandingTemplate extends React.Component {
             {/* Safety */}
             <div>
               <div className="Container u-spacePT2">
-                <h2 className="u-textCenter u-fontFamilyHeader u-fontSize2">
+                <h2 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {safety.heading}
                 </h2>
-                <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {safety.paragraph}
-                </p>
                 <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT9 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
                   <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                     <figure className="u-spaceMB9 u-spaceMT6">
