@@ -30,9 +30,7 @@ three_explainers:
       title: 'Hjälp på sekunder, ersättning på minuter'
 peril_forest:
   bottom_paragraph: Läs allt om skyddet i appen.
-  heading: >-
-    Hedvig innehåller allt du förväntar dig av en traditionell hemförsäkring,
-    plus drulle
+  heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
 philosophy:
   cards:
     card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av det du betalar in
