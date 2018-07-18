@@ -34,7 +34,7 @@
 
 .Header-cta-button {
   left: -10px;
-  padding: 8px 24px;
+  padding: 8px 24px !important;
   position: relative;
   top: 15px;
 }
