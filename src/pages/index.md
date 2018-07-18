@@ -30,9 +30,7 @@ three_explainers:
       title: 'Hjälp på sekunder, ersättning på minuter'
 peril_forest:
   bottom_paragraph: Läs allt om skyddet i appen.
-  heading: >-
-    Hedvig innehåller allt du förväntar dig av en traditionell hemförsäkring,
-    plus drulle
+  heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
 philosophy:
   cards:
     card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av det du betalar in
@@ -48,7 +46,7 @@ philosophy:
     det något över skänker vi det till ett gott ändamål!
 customer_source:
   bottom_paragraph: Redan försäkrad? Hedvig sköter bytet
-  heading: Var våra användare kommer från
+  heading: Redan försäkrad? Vi sköter bytet
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
     If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
