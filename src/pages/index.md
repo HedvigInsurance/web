@@ -39,13 +39,7 @@ philosophy:
       blixtsnabbt
     card3_paragraph: Blir det något över doneras det till ett gott ändamål
   heading: "Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte\_Hedvig"
-  paragraph: >-
-    Försäkring ska vara rättvist och transparent. Därför fungerar Hedvig inte
-    som ditt gamla försäkringsbolag. Hedvig tjänar inget på att inte betala ut
-    när det händer dig något – till skillnad från ditt gamla försäkringsbolag
-    som tjänar på hålla fast i pengarna.
 customer_source:
-  bottom_paragraph: 'Våra användare byter till Hedvig från:'
   heading: Redan försäkrad? Vi sköter bytet
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%

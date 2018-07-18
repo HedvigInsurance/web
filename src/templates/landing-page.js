@@ -257,9 +257,6 @@ class LandingTemplate extends React.Component {
                 <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
-                <p className="u-textCenter u-spaceMT8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {philosophy.paragraph}
-                </p>
                 <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
                   <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
                     <div className="Card u-spaceMT6 Home-model">
@@ -353,9 +350,6 @@ class LandingTemplate extends React.Component {
                 <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {customerSource.heading}
                 </h1>
-                <p className="u-textCenter u-spaceMT8 u-spaceMB5 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {customerSource.bottom_paragraph}
-                </p>
                 <figure className="u-spaceMT8">
                   {customerSourceDesktopFile && (
                     <Img
@@ -669,7 +663,6 @@ export const query = graphql`
         }
         philosophy {
           heading
-          paragraph
           cards {
             card1_paragraph
             card2_paragraph
@@ -679,7 +672,6 @@ export const query = graphql`
         customer_source {
           heading
           image_alt
-          bottom_paragraph
         }
         safety {
           heading
