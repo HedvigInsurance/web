@@ -33,17 +33,17 @@ peril_forest:
   heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
 philosophy:
   cards:
-    card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av det du betalar in
-    card2_paragraph: Resten öronmärks till skadeersättningar
-    card3_paragraph: >-
-      Vi betalar blixtsnabbt. Blir det något över doneras det till ett gott
-      ändamål
+    card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av din månadskostnad
+    card2_paragraph: >-
+      Resten reserveras till skadeersättningar så att vi kan betala ut
+      blixtsnabbt
+    card3_paragraph: Blir det något över doneras det till ett gott ändamål
   heading: Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte Hedvig
   paragraph: >-
     Försäkring ska vara rättvist och transparent. Därför fungerar Hedvig inte
-    som ditt gamla försäkringsbolag. Vi tar en låg fast avgift av din
-    månadskostnad, öronmärker resten till skador och betalar blixtsnabbt. Blir
-    det något över skänker vi det till ett gott ändamål!
+    som ditt gamla försäkringsbolag. Hedvig tjänar inget på att inte betala ut
+    när det händer dig något – till skillnad från ditt gamla försäkringsbolag
+    som tjänar på hålla fast i pengarna.
 customer_source:
   bottom_paragraph: 'Våra användare byter till Hedvig från:'
   heading: Redan försäkrad? Vi sköter bytet
@@ -57,8 +57,6 @@ safety:
     försäkringsgrupper
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
-  paragraph: >-
-    Våra försäkringar tryggas av en av världens största försäkringsgrupper, med
-    en balansräkning på över 60 miljarder euro.
+  paragraph: ''
 ---
 
