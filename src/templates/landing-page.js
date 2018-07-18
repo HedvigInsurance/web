@@ -251,7 +251,7 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Philosophy */}
+            {/* Model */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
                 <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
@@ -270,7 +270,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card1_paragraph}
                         </p>
                       </div>
@@ -288,7 +288,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card2_paragraph}
                         </p>
                       </div>
@@ -306,7 +306,7 @@ class LandingTemplate extends React.Component {
                         )}
                       </figure>
                       <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                           {philosophy.cards.card3_paragraph}
                         </p>
                       </div>
