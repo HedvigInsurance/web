@@ -77,6 +77,18 @@ class LandingTemplate extends React.Component {
     }
   };
 
+  registerPerilForestClick = () => {
+    if (window && window.analytics) {
+      window.analytics.track('Peril forest clicked');
+    }
+  };
+
+  registerCustomerSourceClick = () => {
+    if (window && window.analytics) {
+      window.analytics.track('Customer source clicked');
+    }
+  };
+
   render() {
     const {
       reinsuredFile,
@@ -322,7 +334,12 @@ class LandingTemplate extends React.Component {
                 <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {perilForest.heading}
                 </h2>
-                <figure className="u-spaceMV6">
+                <figure
+                  className="u-spaceMV6"
+                  onClick={this.registerPerilForestClick}
+                >
+                  {' '}
+                  {/* eslint-disable-line */}
                   {perilForestMobileFile && (
                     <Img
                       className="Home-perilForest-image-mobile u-lg-hidden"
@@ -353,7 +370,12 @@ class LandingTemplate extends React.Component {
                 <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                   {customerSource.paragraph}
                 </p>
-                <figure className="u-spaceMT8">
+                <figure
+                  className="u-spaceMT8"
+                  onClick={this.registerCustomerSourceClick}
+                >
+                  {' '}
+                  {/* eslint-disable-line */}
                   {customerSourceDesktopFile && (
                     <Img
                       className="Home-customerSource-image-desktop u-hidden u-lg-block"
