@@ -165,16 +165,13 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Philosophy section
+          - label: Model section
             name: philosophy
             widget: object
             fields:
               - label: Heading
                 name: heading
                 widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: text
               - label: Cards
                 name: cards
                 widget: object
@@ -207,9 +204,6 @@ collections:
               - label: Heading
                 name: heading
                 widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: text
               - label: Item 1
                 name: item1
                 widget: text
