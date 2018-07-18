@@ -9,12 +9,6 @@ import AppLink from 'src/components/AppLink';
 import './Header.css';
 
 class Header extends React.Component {
-  state = { popoverIsActive: false };
-
-  componentWillUnmount() {
-    this.dismiss();
-  }
-
   links = [
     {
       path: '/giving-back',
@@ -30,6 +24,12 @@ class Header extends React.Component {
     },
   ];
 
+  state = { popoverIsActive: false };
+
+  componentWillUnmount() {
+    this.dismiss();
+  }
+
   documentOnClickHandler = (event) => {
     const { popoverIsActive } = this.state;
     const clickedOutside = !this.popoverElem.contains(event.target);
@@ -38,16 +38,6 @@ class Header extends React.Component {
       this.dismiss();
     }
   };
-
-  show() {
-    this.setState({ popoverIsActive: true });
-    document.addEventListener('click', this.documentOnClickHandler, false);
-  }
-
-  dismiss() {
-    this.setState({ popoverIsActive: false });
-    document.removeEventListener('click', this.documentOnClickHandler, false);
-  }
 
   togglePopover = (event) => {
     event.stopPropagation();
@@ -58,6 +48,16 @@ class Header extends React.Component {
       this.dismiss();
     }
   };
+
+  dismiss() {
+    this.setState({ popoverIsActive: false });
+    document.removeEventListener('click', this.documentOnClickHandler, false);
+  }
+
+  show() {
+    this.setState({ popoverIsActive: true });
+    document.addEventListener('click', this.documentOnClickHandler, false);
+  }
 
   render() {
     const { popoverIsActive } = this.state;
@@ -103,7 +103,11 @@ class Header extends React.Component {
                   </AppLink>
                 </div>
               </nav>
-              <button className={burgerClassNames} onClick={this.togglePopover}>
+              <button
+                type="button"
+                className={burgerClassNames}
+                onClick={this.togglePopover}
+              >
                 <span className="Header-burger-line" />
                 <h2 className="Header-burger-line">Meny</h2>
                 <span className="Header-burger-line" />
