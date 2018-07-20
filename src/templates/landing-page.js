@@ -155,7 +155,7 @@ class LandingTemplate extends React.Component {
                               this.chatAnim = anim;
                             }}
                             options={{
-                              loop: false,
+                              loop: true,
                               autoplay: false,
                               renderer: 'svg',
                               animationData: claimsAnimation,
