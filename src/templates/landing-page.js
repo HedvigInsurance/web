@@ -125,10 +125,10 @@ class LandingTemplate extends React.Component {
                 <div className="Home-hero">
                   <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
                     <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-mobile">
-                      <h1 className="u-spaceMT5 u-spaceMB10 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                      <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                         {landing.heading}
                       </h1>
-                      <p className="u-colorWhite u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                      <p className="u-colorWhite u-md-spaceMT8 u-lg-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                         {landing.subheading}
                       </p>
                       <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
