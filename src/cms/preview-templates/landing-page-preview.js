@@ -4,6 +4,7 @@ import { LandingTemplate } from 'src/templates/landing-page';
 
 const LandingPagePreview = ({ entry }) => (
   <LandingTemplate
+    title={entry.getIn(['data', 'title'])}
     landing={entry.getIn(['data', 'landing']).toJS()}
     threeExplainers={entry.getIn(['data', 'three_explainers']).toJS()}
     perilForest={entry.getIn(['data', 'peril_forest']).toJS()}

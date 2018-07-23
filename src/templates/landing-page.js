@@ -4,6 +4,7 @@ import { LottieLoader } from 'src/components/LottieLoader';
 import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
+import { Helmet } from 'react-helmet';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -102,6 +103,7 @@ class LandingTemplate extends React.Component {
       perilForestDesktopFile,
       customerSourceDesktopFile,
       customerSourceMobileFile,
+      title,
       landing,
       threeExplainers,
       perilForest,
@@ -111,6 +113,9 @@ class LandingTemplate extends React.Component {
     } = this.props;
     return (
       <main className="Site">
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
         <section className="Site-content">
           <StickyContainer>
             <Header />
@@ -478,6 +483,7 @@ LandingTemplate.propTypes = {
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  title: PropTypes.string.isRequired,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
@@ -544,6 +550,7 @@ const Landing = ({ data }) => {
       perilForestDesktopFile={data.perilForestDesktopFile}
       customerSourceDesktopFile={data.customerSourceDesktopFile}
       customerSourceMobileFile={data.customerSourceMobileFile}
+      title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
