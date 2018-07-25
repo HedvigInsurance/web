@@ -78,13 +78,28 @@ const Footer = (props, { location }) => (
           )}
       </div>
       <div className="u-spaceMB7">
-        <a href="https://www.facebook.com/hedvigers" className="u-spacePR10">
+        <a
+          href="https://www.facebook.com/hedvigers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="u-spacePR10"
+        >
           <FacebookIcon />
         </a>
-        <a href="https://www.instagram.com/hedvigers/" className="u-spacePR9">
+        <a
+          href="https://www.instagram.com/hedvig.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="u-spacePR9"
+        >
           <InstagramIcon />
         </a>
-        <a href="https://twitter.com/hedvigers" className="u-spacePR10">
+        <a
+          href="https://twitter.com/hedvigers"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="u-spacePR10"
+        >
           <TwitterIcon />
         </a>
       </div>

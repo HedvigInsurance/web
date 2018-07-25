@@ -69,18 +69,24 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
       <a
         className="u-spacePR10"
         href="https://www.facebook.com/hedvigers"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
       <a
         className="u-spacePR9"
-        href="https://www.instagram.com/hedvigers/"
+        href="https://www.instagram.com/hedvig.app/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
       <a
         className="u-spacePR10"
         href="https://twitter.com/hedvigers"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
@@ -202,18 +208,24 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
       <a
         className="u-spacePR10"
         href="https://www.facebook.com/hedvigers"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
       <a
         className="u-spacePR9"
-        href="https://www.instagram.com/hedvigers/"
+        href="https://www.instagram.com/hedvig.app/"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
       <a
         className="u-spacePR10"
         href="https://twitter.com/hedvigers"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         <ReactComponent />
       </a>
