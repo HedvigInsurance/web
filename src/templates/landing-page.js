@@ -131,7 +131,7 @@ class LandingTemplate extends React.Component {
                       <p className="u-colorWhite u-md-spaceMT8 u-lg-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                         {landing.subheading}
                       </p>
-                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                         <AppLink
                           tags={['home-hero-1']}
                           className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
@@ -140,13 +140,13 @@ class LandingTemplate extends React.Component {
                         </AppLink>
                         <AppLink
                           tags={['home-hero-2']}
-                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
+                          className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-fontWeightBold"
                         >
                           {landing.cta_text2}
                         </AppLink>
-                        <div className="u-spaceMT9 u-md-spaceMT9 u-lg-spaceMT8 u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
+                        <p className="u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
                           {landing.paragraph}
-                        </div>
+                        </p>
                       </div>
                     </div>
                     <div className="u-sizeFull u-lg-size2of5">
