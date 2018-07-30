@@ -27,8 +27,10 @@ const ContactTemplate = ({ image, title, heading }) => (
             <address className="u-fontStyleNormal u-spaceMB7">
               <strong>Hedvig AB</strong>
               <br />
-              Artillerigatan 10, 114 51, Stockholm<br />
-              Org. nr. 559093-0334<br />
+              Artillerigatan 10, 114 51, Stockholm
+              <br />
+              Org. nr. 559093-0334
+              <br />
             </address>
             {image && (
               <Img
