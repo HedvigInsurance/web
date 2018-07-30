@@ -43,7 +43,7 @@
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
     "husky": "^0.15.0-rc.13",
-    "jest": "^23.4.1",
+    "jest": "^23.4.2",
     "jest-cli": "^23.4.2",
     "js-cookie": "^2.2.0",
     "jsdom": "^11.11.0",
