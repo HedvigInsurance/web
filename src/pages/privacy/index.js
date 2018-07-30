@@ -32,8 +32,9 @@ const Privacy = () => (
                   559093-0334, med registrerad adress Artillerigatan 10, 114 51
                   Stockholm ({'"'}
                   <b>Hedvig</b>
-                  {'"'}), tillhandahåller försäkringstjänster till dig genom vår
-                  app eller web.
+                  {'"'}
+                  ), tillhandahåller försäkringstjänster till dig genom vår app
+                  eller web.
                 </p>
                 <p className="u-spaceMB9">
                   När du använder tjänsten och interagerar med oss delar du
@@ -687,7 +688,8 @@ const Privacy = () => (
                   kontakta vårt dataskyddsombud på{' '}
                   <a href="mailto:dataskyddsombud@hedvig.com">
                     dataskyddsombud@hedvig.com
-                  </a>.
+                  </a>
+                  .
                 </p>
 
                 <p className="u-spaceMB9">
@@ -697,9 +699,12 @@ const Privacy = () => (
 
                 <h4 className="u-spaceMT8">Hedvig AB</h4>
                 <address className="u-fontStyleNormal">
-                  Dataskyddsombudet<br />
-                  Artillerigatan 10<br />
-                  114 51, Stockholm<br />
+                  Dataskyddsombudet
+                  <br />
+                  Artillerigatan 10
+                  <br />
+                  114 51, Stockholm
+                  <br />
                 </address>
 
                 <p className="u-spaceMT8 u-spaceMB9">
@@ -711,8 +716,10 @@ const Privacy = () => (
 
                 <h4 className="u-spaceMT8">Datainspektionen</h4>
                 <address className="u-fontStyleNormal">
-                  Box 8114<br />
-                  104 20 Stockholm<br />
+                  Box 8114
+                  <br />
+                  104 20 Stockholm
+                  <br />
                   <a href="https://www.datainspektionen.se/">
                     datainspektionen.se
                   </a>

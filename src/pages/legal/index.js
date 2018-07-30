@@ -59,7 +59,8 @@ const Legal = () => (
                 <p className="u-spaceMB9">
                   Om du har ett allmänt klagomål eller är missnöjd med någonting
                   i ett skadeärende, kontakta Hedvig direkt via din app eller
-                  maila <a href="mailto:hedvig@hedvig.com">hedvig@hedvig.com</a>.
+                  maila <a href="mailto:hedvig@hedvig.com">hedvig@hedvig.com</a>
+                  .
                 </p>
                 <p className="u-spaceMB9">
                   Du kan också vända dig till Konsumentvägledningen i din kommun
@@ -147,35 +148,47 @@ const Legal = () => (
                   Finansinspektionen
                 </h3>
                 <address className="u-fontStyleNormal">
-                  Box 7821<br />
-                  103 97 Stockholm<br />
-                  finansinspektionen@fi.se<br />
+                  Box 7821
+                  <br />
+                  103 97 Stockholm
+                  <br />
+                  finansinspektionen@fi.se
+                  <br />
                   T: 08-408 980 00
                 </address>
                 <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
                   Bolagsverket
                 </h3>
                 <address className="u-fontStyleNormal">
-                  851 81 Sundsvall<br />
-                  bolagsverket@bolagsverket.se<br />
+                  851 81 Sundsvall
+                  <br />
+                  bolagsverket@bolagsverket.se
+                  <br />
                   T: 0771-670 670
                 </address>
                 <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
                   International Insurance Company of Hannover SE, Sverige filial
                 </h3>
                 <address className="u-fontStyleNormal">
-                  Box 22085<br />
-                  Hantverkargatan 25<br />
-                  104 22 Stockholm<br />
-                  T: 08-617 54 00<br />
+                  Box 22085
+                  <br />
+                  Hantverkargatan 25
+                  <br />
+                  104 22 Stockholm
+                  <br />
+                  T: 08-617 54 00
+                  <br />
                 </address>
                 <h3 className="u-spaceMT8 u-spaceMB10 u-fontSize11 u-md-fontSize10">
                   QBE Insurance (Europe) Ltd., UK filial Sverige
                 </h3>
                 <address className="u-fontStyleNormal">
-                  Sveavägen 13<br />
-                  111 57 Stockholm<br />
-                  T: 08-587 514 00<br />
+                  Sveavägen 13
+                  <br />
+                  111 57 Stockholm
+                  <br />
+                  T: 08-587 514 00
+                  <br />
                 </address>
               </div>
             </section>
