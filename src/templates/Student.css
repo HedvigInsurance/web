@@ -1,8 +1,5 @@
 @import "../css/variables";
 
-.Student-cta {
-}
-
 .Student-price-circle {
   border-radius: 500px;
   flex-shrink: 0;
