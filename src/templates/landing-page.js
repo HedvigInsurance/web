@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LottieLoader } from 'src/components/LottieLoader';
 import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
@@ -11,45 +10,10 @@ import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
 import './Home.css';
-
-const claimsAnimation = require('assets/animations/chat-demo/data.json');
-const insuranceInMinutesAnimation = require('assets/animations/three-explainers/insurance-in-minutes.json');
-
-const insuranceInMinutesOptions = {
-  loop: false,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: insuranceInMinutesAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
-const claimOnPhoneAnimation = require('assets/animations/three-explainers/claim-on-your-phone.json');
-
-const claimOnPhoneOptions = {
-  loop: true,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: claimOnPhoneAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
-
-const paidRightAwayAnimation = require('assets/animations/three-explainers/paid-right-away.json');
-
-const paidRightAwayOptions = {
-  loop: false,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: paidRightAwayAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
+import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes';
+import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
+import PaidRightAway from 'src/components/Animations/PaidRightAway';
+import ChatDemo from 'src/components/Animations/ChatDemo';
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -62,6 +26,22 @@ class LandingTemplate extends React.Component {
     } else {
       this.chatAnim.stop();
     }
+  };
+
+  chatAnimRef = (anim) => {
+    this.chatAnim = anim;
+  };
+
+  insuranceInMinutesRef = (anim) => {
+    this.insuranceInMinutesAnim = anim;
+  };
+
+  claimOnPhoneRef = (anim) => {
+    this.claimOnPhoneAnimation = anim;
+  };
+
+  paidRightAwayRef = (anim) => {
+    this.paidRightAwayAnimation = anim;
   };
 
   threeExplainersVisbilityChanged = (isVisible) => {
@@ -155,22 +135,7 @@ class LandingTemplate extends React.Component {
                         onChange={this.chatDemoOnVisibilityChange}
                       >
                         <div className="u-spaceMV6 u-lg-spaceMT4">
-                          <LottieLoader
-                            ref={(anim) => {
-                              this.chatAnim = anim;
-                            }}
-                            options={{
-                              loop: true,
-                              autoplay: false,
-                              renderer: 'svg',
-                              animationData: claimsAnimation,
-                              rendererSettings: {
-                                progressiveLoad: true,
-                                preserveAspectRatio: 'xMaxYMin meet',
-                              },
-                            }}
-                            width={307}
-                          />
+                          <ChatDemo ref={this.chatAnimRef} width={307} />
                         </div>
                       </VisibilitySensor>
                     </div>
@@ -204,13 +169,9 @@ class LandingTemplate extends React.Component {
                 >
                   <div className="u-flex u-flexCol u-lg-flexRow u-textCenter">
                     <div className="u-lg-size1of3">
-                      <LottieLoader
-                        ref={(anim) => {
-                          this.insuranceInMinutesAnim = anim;
-                        }}
-                        options={insuranceInMinutesOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                      <InsuranceInMinutes
+                        ref={this.insuranceInMinutesRef}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12 u-lg-spaceMH10">
                         {
@@ -226,13 +187,9 @@ class LandingTemplate extends React.Component {
                       </p>
                     </div>
                     <div className="u-lg-size1of3">
-                      <LottieLoader
-                        ref={(anim) => {
-                          this.claimOnPhoneAnimation = anim;
-                        }}
-                        options={claimOnPhoneOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                      <ClaimOnPhone
+                        ref={this.claimOnPhoneRef}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.claim_on_phone.title}
@@ -245,13 +202,9 @@ class LandingTemplate extends React.Component {
                       </p>
                     </div>
                     <div className="u-lg-size1of3">
-                      <LottieLoader
-                        ref={(anim) => {
-                          this.paidRightAwayAnimation = anim;
-                        }}
-                        options={paidRightAwayOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                      <PaidRightAway
+                        ref={this.paidRightAwayRef}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.paid_right_away.title}

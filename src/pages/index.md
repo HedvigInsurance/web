@@ -55,4 +55,3 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
-

@@ -1,0 +1,54 @@
+@import "../css/variables";
+
+.Student-cta {
+}
+
+.Student-price-circle {
+  border-radius: 500px;
+  flex-shrink: 0;
+  height: 150px;
+  text-align: center;
+  width: 150px;
+}
+
+.Student-price-circle-second {
+  left: -20px;
+  position: relative;
+  top: 30px;
+}
+
+@media (--md-viewport) {
+
+  .Student-price-circle {
+    height: 250px;
+    width: 250px;
+  }
+
+  .Student-price-circle-second {
+    left: -30px;
+    top: 80px;
+  }
+}
+
+@media (--lg-viewport) {
+
+  .Student-price-circle {
+    height: 250px;
+    width: 250px;
+  }
+
+  .Student-price-circle-second {
+    left: -30px;
+    top: 80px;
+  }
+}
+
+.Student-checkmark {
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 120px;
+}
+
+.Student-heart {
+  width: 80px;
+}
