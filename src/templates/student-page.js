@@ -104,11 +104,14 @@ class StudentTemplate extends React.Component {
                 <div className="">
                   <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
                     <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT12">
-                      <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-md-spaceMB8 u-lg-spaceMB8 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
+                      <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB12 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
                         {landing.heading}
                       </h1>
-                      <p className="u-colorBlack u-md-spaceMT8 u-lg-spaceMT8 u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
-                        {landing.subheading}
+                      <p className="u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                        {landing.subheading}{' '}
+                        <span className="u-colorPrimaryGreen">
+                          {landing.subheading_emphasis}
+                        </span>
                       </p>
                       <div className="u-flex u-lg-spaceMT8 u-spaceMB3 u-lg-spaceML6 u-flexJustifyCenter">
                         <div // eslint-disable-line
@@ -137,11 +140,11 @@ class StudentTemplate extends React.Component {
                       <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                         <AppLink
                           tags={['student-hero']}
-                          className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                          className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
                         >
                           {landing.cta_text}
                         </AppLink>
-                        <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
+                        <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9">
                           {landing.paragraph}
                         </p>
                       </div>
@@ -190,13 +193,13 @@ class StudentTemplate extends React.Component {
                         ref={this.insuranceInMinutesRef}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12 u-lg-spaceMH10">
+                      <h4 className="u-fontSize8 u-spaceMB12 u-lg-spaceMH10">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .title
                         }
                       </h4>
-                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                      <p className="u-lg-spaceMH8 u-fontSize9">
                         {
                           threeExplainers.three_explainers.insurance_in_minutes
                             .paragraph
@@ -208,10 +211,10 @@ class StudentTemplate extends React.Component {
                         ref={this.claimOnPhoneRef}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
+                      <h4 className="u-fontSize8 u-spaceMB12">
                         {threeExplainers.three_explainers.claim_on_phone.title}
                       </h4>
-                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                      <p className="u-lg-spaceMH8 u-fontSize9">
                         {
                           threeExplainers.three_explainers.claim_on_phone
                             .paragraph
@@ -223,10 +226,10 @@ class StudentTemplate extends React.Component {
                         ref={this.paidRightAwayRef}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
-                      <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
+                      <h4 className="u-fontSize8 u-spaceMB12">
                         {threeExplainers.three_explainers.paid_right_away.title}
                       </h4>
-                      <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                      <p className="u-lg-spaceMH8 u-fontSize9">
                         {
                           threeExplainers.three_explainers.paid_right_away
                             .paragraph
@@ -307,7 +310,7 @@ class StudentTemplate extends React.Component {
             </div>
 
             {/* Heart slide */}
-            <div className="u-backgroundPrimaryPurple u-flex u-flexJustifyCenter u-spacePV8">
+            <div className="u-backgroundPrimaryPurple u-flex u-flexJustifyCenter u-flexAlignCenter u-spacePV8">
               {heartFile && (
                 <Img
                   className="Student-heart"
@@ -428,6 +431,7 @@ export const query = graphql`
         landing {
           heading
           subheading
+          subheading_emphasis
           cta_text
           paragraph
           bubble1 {

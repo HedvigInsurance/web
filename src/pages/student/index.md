@@ -10,12 +10,13 @@ landing:
   bubble2:
     price: 99 kr
     explainer: per månad för bostadsrätt
-  heading: "Finns i chatten. For real."
+  heading: "Finns i chatten. På\_riktigt."
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: >-
-    En bättre hemförsäkring för studenter.
+    Hemförsäkring som gjort för
+  subheading_emphasis: studenter
 three_explainers:
-  heading: Easy peasy lemon squeezy
+  heading: Barnsligt enkelt att kamma hem vuxenpoäng
   three_explainers:
     claim_on_phone:
       paragraph: >-
