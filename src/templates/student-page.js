@@ -291,7 +291,7 @@ class StudentTemplate extends React.Component {
                     </div>
                   </div>
                 </div>
-                <p className="u-colorBlack u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                <p className="u-colorBlack u-spaceMT6 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
                   {perilForest.bottom_paragraph}
                 </p>
               </div>
