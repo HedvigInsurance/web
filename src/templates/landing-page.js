@@ -133,13 +133,13 @@ class LandingTemplate extends React.Component {
                     <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                       <AppLink
                         tags={['home-hero-1']}
-                        className="Button u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
                       >
                         {landing.cta_text1}
                       </AppLink>
                       <AppLink
                         tags={['home-hero-2']}
-                        className="Button u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-fontWeightBold"
+                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-fontWeightBold"
                       >
                         {landing.cta_text2}
                       </AppLink>
