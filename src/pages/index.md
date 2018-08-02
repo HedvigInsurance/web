@@ -49,7 +49,6 @@ customer_source:
   paragraph: >-
     Våra användare byter till Hedvig från:
 safety:
-  heading: Tryggade av en global jätte
   item1: >-
     Hedvig är tryggat av Inter Hannover, del av en av världens största
     försäkringsgrupper

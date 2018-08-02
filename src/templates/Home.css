@@ -102,6 +102,14 @@
   width: 679px;
 }
 
+.Home-safety {
+  padding: 80px 0;
+}
+
+.Home-safety-image-text {
+  margin-top: 35px;
+}
+
 .Home-safety-image {
   width: 120px;
 }

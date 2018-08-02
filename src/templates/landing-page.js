@@ -394,56 +394,51 @@ class LandingTemplate extends React.Component {
             </div>
 
             {/* Safety */}
-            <div>
-              <div className="Container u-spacePT2">
-                <h2 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {safety.heading}
-                </h2>
-                <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT9 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {reinsuredFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={reinsuredFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item1}
-                    </p>
-                  </div>
+            <div className="u-backgroundPrimaryDarkestPurple Home-safety">
+              <div className="Grid Grid--withGutter Grid--alignCenter">
+                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {reinsuredFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={reinsuredFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item1}
+                  </p>
+                </div>
 
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {aaRatedFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={aaRatedFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item2}
-                    </p>
-                  </div>
+                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {aaRatedFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={aaRatedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item2}
+                  </p>
+                </div>
 
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {authorisedFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={authorisedFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item3}
-                    </p>
-                  </div>
+                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {authorisedFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={authorisedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item3}
+                  </p>
                 </div>
               </div>
             </div>
