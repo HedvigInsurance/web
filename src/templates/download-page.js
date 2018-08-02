@@ -7,6 +7,8 @@ import { StickyContainer } from 'react-sticky';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
+import { trackEvent } from 'src/utils/track-event';
+
 import { ReactComponent as AppStoreIcon } from 'assets/appstores/app-store-badge-mini.svg';
 import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-badge-mini.svg';
 
@@ -76,7 +78,7 @@ class DownloadTemplate extends React.Component {
           return;
         }
         this.setState({ isSuccessful: true, phoneNumber: '' });
-        window.analytics.track('Send app link sms');
+        trackEvent('Send app link sms');
       },
     );
   };
