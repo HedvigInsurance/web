@@ -72,7 +72,8 @@
 }
 
 .Home-model-paragraph {
-  height: calc(100% - 210px);
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 .Home-perilForest-image-mobile {

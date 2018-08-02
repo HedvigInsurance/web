@@ -266,12 +266,46 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
+            {/* Peril forest */}
+            <div className="u-backgroundPrimaryDarkestPurple">
+              <div className="Container u-spacePT2 u-spacePB4">
+                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                  {perilForest.heading}
+                </h2>
+                <figure // eslint-disable-line
+                  className="u-spaceMV6"
+                  onClick={this.registerPerilForestClick}
+                >
+                  {perilForestMobileFile && (
+                    <Img
+                      className="Home-perilForest-image-mobile u-lg-hidden"
+                      sizes={perilForestMobileFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                  {perilForestDesktopFile && (
+                    <Img
+                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
+                      sizes={perilForestDesktopFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                </figure>
+                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {perilForest.bottom_paragraph}
+                </p>
+              </div>
+            </div>
+
             {/* Model */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
                 <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
+                <p className="u-md-spaceMT8 u-lg-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter Home-model-paragraph">
+                  {philosophy.paragraph}
+                </p>
                 <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
                   <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
                     <div className="Card u-spaceMT6 Home-model">
@@ -328,37 +362,6 @@ class LandingTemplate extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Peril forest */}
-            <div className="u-backgroundPrimaryDarkestPurple">
-              <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {perilForest.heading}
-                </h2>
-                <figure // eslint-disable-line
-                  className="u-spaceMV6"
-                  onClick={this.registerPerilForestClick}
-                >
-                  {perilForestMobileFile && (
-                    <Img
-                      className="Home-perilForest-image-mobile u-lg-hidden"
-                      sizes={perilForestMobileFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                  {perilForestDesktopFile && (
-                    <Img
-                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
-                      sizes={perilForestDesktopFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                </figure>
-                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {perilForest.bottom_paragraph}
-                </p>
               </div>
             </div>
 
@@ -689,6 +692,7 @@ export const query = graphql`
         }
         philosophy {
           heading
+          paragraph
           cards {
             card1_paragraph
             card2_paragraph
