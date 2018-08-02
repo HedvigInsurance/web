@@ -5,10 +5,16 @@
   max-width: 1600px;
 }
 
+.Home-hero-title {
+  max-width: 500px;
+}
+
 .Home-hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin-top: 150px;
+}
+
+.Home-hero-subheading {
+  margin-top: 10px;
 }
 
 @media (min-width: 800px) {

@@ -5,8 +5,7 @@ title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 landing:
   cta_text1: Hyresrätt från 99 kr/mån
   cta_text2: Bostadsrätt från 129 kr/mån
-  heading: "Få hjälp när du behöver\_det"
-  paragraph: Månadsvis betalning. Ingen bindningstid.
+  heading: "Få hjälp när du behöver det"
   subheading: >-
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
     favoritsaker. Det är enkelt, snabbt och rättvist.

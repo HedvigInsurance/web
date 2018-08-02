@@ -124,10 +124,10 @@ class LandingTemplate extends React.Component {
               <div className="Home-hero">
                 <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
                   <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
-                    <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-md-spaceMB8 u-lg-spaceMB8 u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                    <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                       {landing.heading}
                     </h1>
-                    <p className="u-colorPrimaryBlue u-md-spaceMT8 u-lg-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                    <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                       {landing.subheading}
                     </p>
                     <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
@@ -143,9 +143,6 @@ class LandingTemplate extends React.Component {
                       >
                         {landing.cta_text2}
                       </AppLink>
-                      <p className="u-colorPrimaryBlue u-textCenter u-md-textLeft u-lg-textLeft u-fontSize10">
-                        {landing.paragraph}
-                      </p>
                     </div>
                   </div>
                   <div className="u-sizeFull u-lg-size2of5">
