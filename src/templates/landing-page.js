@@ -143,7 +143,7 @@ class LandingTemplate extends React.Component {
                       >
                         {landing.cta_text2}
                       </AppLink>
-                      <p className="u-colorPrimaryBlue u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
+                      <p className="u-colorPrimaryBlue u-textCenter u-md-textLeft u-lg-textLeft u-fontSize10">
                         {landing.paragraph}
                       </p>
                     </div>
