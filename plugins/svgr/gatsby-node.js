@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 exports.modifyWebpackConfig = ({ config }, options) => {
   const { plugins, ...svgrOptions } = options;
 
@@ -23,6 +25,18 @@ exports.modifyWebpackConfig = ({ config }, options) => {
       `url?${JSON.stringify(urlQuery)}`,
     ],
   });
+
+  config.merge({
+    plugins: [
+      new webpack.DefinePlugin({
+        NETLIFY_BRANCH: JSON.stringify(
+          process.env.BRANCH ? process.env.BRANCH : 'local',
+        ),
+      }),
+    ],
+  });
+
+  console.log(config);
 
   return config;
 };
