@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-
 exports.modifyWebpackConfig = ({ config }, options) => {
   const { plugins, ...svgrOptions } = options;
 
