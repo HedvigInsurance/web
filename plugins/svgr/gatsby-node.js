@@ -26,17 +26,5 @@ exports.modifyWebpackConfig = ({ config }, options) => {
     ],
   });
 
-  config.merge({
-    plugins: [
-      new webpack.DefinePlugin({
-        NETLIFY_BRANCH: JSON.stringify(
-          process.env.BRANCH ? process.env.BRANCH : 'local',
-        ),
-      }),
-    ],
-  });
-
-  console.log(config);
-
   return config;
 };
