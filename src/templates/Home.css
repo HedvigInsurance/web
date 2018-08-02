@@ -5,27 +5,17 @@
   max-width: 1600px;
 }
 
-.Home-hero-mobile {
-  background-image: url("/assets/backgrounds/hero-mobile@2x.png");
-  background-size: cover;
+.Home-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@media (--lg-viewport) {
+@media (min-width: 800px) {
 
-  .Home-hero-mobile {
-    background-image: none;
+  .Home-hero-content {
+    padding-left: 30px;
   }
-
-  .Home-hero-desktop {
-    background-image: url("/assets/backgrounds/hero-desktop@2x.png");
-    background-size: cover;
-  }
-}
-
-.Home-cta {
-  border: 0.5px var(--color-primaryBlackPurple) solid !important;
-  padding: 20px 32px !important;
-  width: 320px;
 }
 
 /*
