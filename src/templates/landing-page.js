@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
+import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
 
@@ -79,15 +80,11 @@ class LandingTemplate extends React.Component {
   };
 
   registerPerilForestClick = () => {
-    if (window && window.analytics) {
-      window.analytics.track('Peril forest clicked');
-    }
+    trackEvent('Peril forest clicked');
   };
 
   registerCustomerSourceClick = () => {
-    if (window && window.analytics) {
-      window.analytics.track('Customer source clicked');
-    }
+    trackEvent('Customer source clicked');
   };
 
   render() {

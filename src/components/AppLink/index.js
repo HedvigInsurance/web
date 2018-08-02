@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
+import { trackEvent } from 'src/utils/track-event';
 
 const { NODE_ENV = 'development' } = process.env;
 
@@ -71,7 +72,7 @@ class AppLink extends React.Component {
   }
 
   trackClick = () => {
-    window.analytics.track('Click app link', {
+    trackEvent('Click app link', {
       label: this.props.tags && this.props.tags.join(', '), // eslint-disable-line
     });
   };

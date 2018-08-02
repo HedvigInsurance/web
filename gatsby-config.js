@@ -53,6 +53,9 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: 'netlify-branch',
+    },
+    {
       resolve: 'gatsby-plugin-react-helmet',
     },
     {
