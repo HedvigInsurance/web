@@ -294,6 +294,37 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
+            {/* Customer source */}
+            <div className="u-backgroundSecondaryGrey">
+              <div className="Container u-spacePT2 u-spacePB5">
+                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                  {customerSource.heading}
+                </h1>
+                <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {customerSource.paragraph}
+                </p>
+                <figure // eslint-disable-line
+                  className="u-spaceMT8"
+                  onClick={this.registerCustomerSourceClick}
+                >
+                  {customerSourceDesktopFile && (
+                    <Img
+                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
+                      sizes={customerSourceDesktopFile.image.sizes}
+                      alt={customerSource.image_alt}
+                    />
+                  )}
+                  {customerSourceMobileFile && (
+                    <Img
+                      className="Home-customerSource-image-mobile u-lg-hidden"
+                      sizes={customerSourceMobileFile.image.sizes}
+                      alt={customerSource.image_alt}
+                    />
+                  )}
+                </figure>
+              </div>
+            </div>
+
             {/* Model */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
@@ -359,37 +390,6 @@ class LandingTemplate extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Customer source */}
-            <div className="u-backgroundSecondaryGrey">
-              <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {customerSource.heading}
-                </h1>
-                <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {customerSource.paragraph}
-                </p>
-                <figure // eslint-disable-line
-                  className="u-spaceMT8"
-                  onClick={this.registerCustomerSourceClick}
-                >
-                  {customerSourceDesktopFile && (
-                    <Img
-                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
-                      sizes={customerSourceDesktopFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                  {customerSourceMobileFile && (
-                    <Img
-                      className="Home-customerSource-image-mobile u-lg-hidden"
-                      sizes={customerSourceMobileFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                </figure>
               </div>
             </div>
 
