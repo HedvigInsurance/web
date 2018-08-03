@@ -109,5 +109,6 @@ PriceSection.propTypes = {
   rentalTitle: PropTypes.string.isRequired,
   ownedPrice: PropTypes.string.isRequired,
   ownedTitle: PropTypes.string.isRequired,
-  monthly: PropTypes.string.isRequired,
+  monthlyLabel: PropTypes.string.isRequired,
+  aroundLabel: PropTypes.string.isRequired,
 };
