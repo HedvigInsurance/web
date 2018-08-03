@@ -15,6 +15,11 @@ const PriceBoxes = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const PriceContainer = styled('div')`
