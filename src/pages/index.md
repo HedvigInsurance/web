@@ -3,8 +3,7 @@ path: /
 templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 landing:
-  cta_text1: Hyresrätt från 99 kr/mån
-  cta_text2: Bostadsrätt från 129 kr/mån
+  cta_text: Kom igång
   heading: "Få hjälp när du behöver det"
   subheading: >-
     Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
@@ -56,10 +55,11 @@ safety:
   item3: Hedvig är auktoriserat av Finansinspektionen
 pricing:
   heading: Månadsvis betalning. Ingen bindningstid
-  monthly: / mån
-  rental_title: Hyresrätt kring
+  monthly_label: / mån
+  around_label: kring
+  rental_title: Hyresrätt
   rental_price: 99kr
-  owned_title: Bostadsrätt kring
+  owned_title: Bostadsrätt
   owned_price: 129kr
   bottom_paragraph: PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. 
 ---

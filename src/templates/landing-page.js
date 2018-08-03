@@ -135,13 +135,7 @@ class LandingTemplate extends React.Component {
                         tags={['home-hero-1']}
                         className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
                       >
-                        {landing.cta_text1}
-                      </AppLink>
-                      <AppLink
-                        tags={['home-hero-2']}
-                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-fontWeightBold"
-                      >
-                        {landing.cta_text2}
+                        {landing.cta_text}
                       </AppLink>
                     </div>
                   </div>
@@ -482,8 +476,7 @@ LandingTemplate.propTypes = {
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
-    cta_text1: PropTypes.string.isRequired,
-    cta_text2: PropTypes.string.isRequired,
+    cta_text: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
   }).isRequired,
   threeExplainers: PropTypes.shape({
@@ -529,7 +522,8 @@ LandingTemplate.propTypes = {
   }).isRequired,
   pricing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
-    monthly: PropTypes.string.isRequired,
+    monthlyLabel: PropTypes.string.isRequired,
+    aroundLabel: PropTypes.string.isRequired,
     rentalTitle: PropTypes.string.isRequired,
     rentalPrice: PropTypes.string.isRequired,
     ownedTitle: PropTypes.string.isRequired,
@@ -568,7 +562,8 @@ const Landing = ({ data }) => {
         ownedTitle: copy.pricing.owned_title,
         ownedPrice: copy.pricing.owned_price,
         bottomParagraph: copy.pricing.bottom_paragraph,
-        monthly: copy.pricing.monthly,
+        monthlyLabel: copy.pricing.monthly_label,
+        aroundLabel: copy.pricing.around_label,
       }}
     />
   );
@@ -677,8 +672,7 @@ export const query = graphql`
         landing {
           heading
           subheading
-          cta_text1
-          cta_text2
+          cta_text
         }
         three_explainers {
           heading
@@ -722,7 +716,8 @@ export const query = graphql`
         }
         pricing {
           heading
-          monthly
+          monthly_label
+          around_label
           rental_title
           rental_price
           owned_title

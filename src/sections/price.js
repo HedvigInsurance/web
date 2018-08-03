@@ -47,6 +47,11 @@ const PriceValue = styled('span')`
   color: white;
 `;
 
+const AroundLabel = styled('span')`
+  color: white;
+  font-size: 15px;
+`;
+
 const MonthLabel = styled('span')`
   color: white;
   font-size: 15px;
@@ -64,7 +69,8 @@ export const PriceSection = ({
   rentalTitle,
   ownedPrice,
   ownedTitle,
-  monthly,
+  monthlyLabel,
+  aroundLabel,
 }) => (
   <div className="u-backgroundWhite">
     <Container>
@@ -75,15 +81,17 @@ export const PriceSection = ({
         <PriceContainer>
           <PriceTitle className="u-fontWeightBold">{rentalTitle}</PriceTitle>
           <PriceBox className="u-backgroundPrimaryPurple">
+            <AroundLabel>{aroundLabel}</AroundLabel>
             <PriceValue className="u-fontWeightBold">{rentalPrice}</PriceValue>
-            <MonthLabel>{monthly}</MonthLabel>
+            <MonthLabel>{monthlyLabel}</MonthLabel>
           </PriceBox>
         </PriceContainer>
         <PriceContainer>
           <PriceTitle className="u-fontWeightBold">{ownedTitle}</PriceTitle>
           <PriceBox className="u-backgroundPrimaryPurple">
+            <AroundLabel>{aroundLabel}</AroundLabel>
             <PriceValue className="u-fontWeightBold">{ownedPrice}</PriceValue>
-            <MonthLabel>{monthly}</MonthLabel>
+            <MonthLabel>{monthlyLabel}</MonthLabel>
           </PriceBox>
         </PriceContainer>
       </PriceBoxes>
