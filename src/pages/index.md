@@ -56,10 +56,10 @@ safety:
 pricing:
   heading: Månadsvis betalning. Ingen bindningstid
   monthly_label: / mån
-  around_label: kring
-  rental_title: Hyresrätt
+  around_label: omkring
+  rental_title: För dig i hyresrätt
   rental_price: 99kr
-  owned_title: Bostadsrätt
+  owned_title: För dig i bostadsrätt
   owned_price: 129kr
   bottom_paragraph: PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. 
 ---
