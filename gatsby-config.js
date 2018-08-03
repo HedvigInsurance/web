@@ -62,6 +62,9 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-emotion',
+    },
+    {
       resolve: 'segment',
       options: {
         writeKey:

@@ -54,5 +54,13 @@ safety:
     försäkringsgrupper
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
+pricing:
+  heading: Månadsvis betalning. Ingen bindningstid
+  monthly: / mån
+  rental_title: Hyresrätt kring
+  rental_price: 99kr
+  owned_title: Bostadsrätt kring
+  owned_price: 129kr
+  bottom_paragraph: PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. 
 ---
 

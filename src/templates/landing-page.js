@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
+import { PriceSection } from 'src/sections/price';
 
 import './Home.css';
 
@@ -110,6 +111,7 @@ class LandingTemplate extends React.Component {
       philosophy,
       customerSource,
       safety,
+      pricing,
     } = this.props;
     return (
       <main className="Site">
@@ -293,6 +295,8 @@ class LandingTemplate extends React.Component {
                 </p>
               </div>
             </div>
+
+            <PriceSection {...pricing} />
 
             {/* Customer source */}
             <div className="u-backgroundSecondaryGrey">
@@ -525,6 +529,15 @@ LandingTemplate.propTypes = {
     item2: PropTypes.string.isRequired,
     item3: PropTypes.string.isRequired,
   }).isRequired,
+  pricing: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    monthly: PropTypes.string.isRequired,
+    rental_title: PropTypes.string.isRequired,
+    rental_price: PropTypes.string.isRequired,
+    owned_title: PropTypes.string.isRequired,
+    owned_price: PropTypes.string.isRequired,
+    bottom_paragraph: PropTypes.string.isRequired,
+  }),
 };
 
 const Landing = ({ data }) => {
@@ -550,6 +563,7 @@ const Landing = ({ data }) => {
       philosophy={copy.philosophy}
       customerSource={copy.customer_source}
       safety={copy.safety}
+      pricing={copy.pricing}
     />
   );
 };
@@ -659,7 +673,6 @@ export const query = graphql`
           subheading
           cta_text1
           cta_text2
-          paragraph
         }
         three_explainers {
           heading
@@ -697,10 +710,18 @@ export const query = graphql`
           paragraph
         }
         safety {
-          heading
           item1
           item2
           item3
+        }
+        pricing {
+          heading
+          monthly
+          rental_title
+          rental_price
+          owned_title
+          owned_price
+          bottom_paragraph
         }
       }
     }
