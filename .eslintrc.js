@@ -61,5 +61,6 @@ module.exports = {
   },
   globals: {
     graphql: false,
+    NETLIFY_BRANCH: false,
   },
 };
