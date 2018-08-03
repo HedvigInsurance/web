@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 const Container = styled('div')`
   padding: 50px 0;
@@ -58,11 +59,11 @@ const PriceSubline = styled('div')`
 
 export const PriceSection = ({
   heading,
-  bottom_paragraph,
-  rental_price,
-  rental_title,
-  owned_price,
-  owned_title,
+  bottomParagraph,
+  rentalPrice,
+  rentalTitle,
+  ownedPrice,
+  ownedTitle,
   monthly,
 }) => (
   <div className="u-backgroundWhite">
@@ -72,23 +73,33 @@ export const PriceSection = ({
       </Title>
       <PriceBoxes>
         <PriceContainer>
-          <PriceTitle className="u-fontWeightBold">{rental_title}</PriceTitle>
+          <PriceTitle className="u-fontWeightBold">{rentalTitle}</PriceTitle>
           <PriceBox className="u-backgroundPrimaryPurple">
-            <PriceValue className="u-fontWeightBold">{rental_price}</PriceValue>
+            <PriceValue className="u-fontWeightBold">{rentalPrice}</PriceValue>
             <MonthLabel>{monthly}</MonthLabel>
           </PriceBox>
         </PriceContainer>
         <PriceContainer>
-          <PriceTitle className="u-fontWeightBold">{owned_title}</PriceTitle>
+          <PriceTitle className="u-fontWeightBold">{ownedTitle}</PriceTitle>
           <PriceBox className="u-backgroundPrimaryPurple">
-            <PriceValue className="u-fontWeightBold">{owned_price}</PriceValue>
+            <PriceValue className="u-fontWeightBold">{ownedPrice}</PriceValue>
             <MonthLabel>{monthly}</MonthLabel>
           </PriceBox>
         </PriceContainer>
       </PriceBoxes>
       <PriceSubline className="u-fontSize85">
-        <span>{bottom_paragraph}</span>
+        <span>{bottomParagraph}</span>
       </PriceSubline>
     </Container>
   </div>
 );
+
+PriceSection.propTypes = {
+  heading: PropTypes.string.isRequired,
+  bottomParagraph: PropTypes.string.isRequired,
+  rentalPrice: PropTypes.string.isRequired,
+  rentalTitle: PropTypes.string.isRequired,
+  ownedPrice: PropTypes.string.isRequired,
+  ownedTitle: PropTypes.string.isRequired,
+  monthly: PropTypes.string.isRequired,
+};

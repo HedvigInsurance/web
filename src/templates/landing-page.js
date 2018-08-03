@@ -530,11 +530,11 @@ LandingTemplate.propTypes = {
   pricing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     monthly: PropTypes.string.isRequired,
-    rental_title: PropTypes.string.isRequired,
-    rental_price: PropTypes.string.isRequired,
-    owned_title: PropTypes.string.isRequired,
-    owned_price: PropTypes.string.isRequired,
-    bottom_paragraph: PropTypes.string.isRequired,
+    rentalTitle: PropTypes.string.isRequired,
+    rentalPrice: PropTypes.string.isRequired,
+    ownedTitle: PropTypes.string.isRequired,
+    ownedPrice: PropTypes.string.isRequired,
+    bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -561,7 +561,15 @@ const Landing = ({ data }) => {
       philosophy={copy.philosophy}
       customerSource={copy.customer_source}
       safety={copy.safety}
-      pricing={copy.pricing}
+      pricing={{
+        heading: copy.pricing.heading,
+        rentalTitle: copy.pricing.rental_title,
+        rentalPrice: copy.pricing.rental_price,
+        ownedTitle: copy.pricing.owned_title,
+        ownedPrice: copy.pricing.owned_price,
+        bottomParagraph: copy.pricing.bottom_paragraph,
+        monthly: copy.pricing.monthly,
+      }}
     />
   );
 };
