@@ -535,7 +535,7 @@ LandingTemplate.propTypes = {
     owned_title: PropTypes.string.isRequired,
     owned_price: PropTypes.string.isRequired,
     bottom_paragraph: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 
 const Landing = ({ data }) => {
