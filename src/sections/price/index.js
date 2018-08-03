@@ -24,7 +24,7 @@ const PriceBubbles = styled('div')`
   }
 `;
 
-const Subline = styled('div')`
+const BottomParagraph = styled('div')`
   margin-top: 25px;
   text-align: center;
 `;
@@ -58,9 +58,9 @@ export const PriceSection = ({
           aroundLabel={aroundLabel}
         />
       </PriceBubbles>
-      <Subline className="u-fontSize85">
+      <BottomParagraph className="u-fontSize85">
         <span>{bottomParagraph}</span>
-      </Subline>
+      </BottomParagraph>
     </Container>
   </div>
 );
