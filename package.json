@@ -49,7 +49,7 @@
     "js-cookie": "^2.2.0",
     "jsdom": "^11.11.0",
     "lint-staged": "^7.2.0",
-    "netlify-cms": "^1.9.3",
+    "netlify-cms": "^2.0.8",
     "normalize.css": "^8.0.0",
     "prettier": "^1.14.0",
     "prettier-eslint-cli": "^4.7.1",
