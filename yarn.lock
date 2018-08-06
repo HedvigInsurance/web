@@ -5498,6 +5498,12 @@ gatsby-plugin-sitemap@^1.2.25:
     minimatch "^3.0.4"
     sitemap "^1.12.0"
 
+gatsby-plugin-svgr@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-svgr/-/gatsby-plugin-svgr-1.0.1.tgz#adc2a245f141deadd55b3448aa101859301ca663"
+  dependencies:
+    svgr "1.10.0"
+
 gatsby-react-router-scroll@^1.0.18:
   version "1.0.18"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.18.tgz#616ffb801dbdbe4598611e2ff3861b91ac3eecbf"
@@ -13639,7 +13645,7 @@ svgo@^1.0.5:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-svgr@^1.10.0:
+svgr@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/svgr/-/svgr-1.10.0.tgz#0f51c38deb2c009b790f30d3ae119a7d1f76bff9"
   dependencies:
