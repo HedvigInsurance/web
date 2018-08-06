@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 const Container = styled('div')`
   margin: 25px;
@@ -36,6 +37,11 @@ const AroundLabel = styled('span')`
   font-size: 15px;
 `;
 
+const MonthLabel = styled('span')`
+  color: white;
+  font-size: 15px;
+`;
+
 export const PriceBubble = ({ title, aroundLabel, monthlyLabel, price }) => (
   <Container>
     <Title className="u-fontWeightBold">{title}</Title>
@@ -46,3 +52,10 @@ export const PriceBubble = ({ title, aroundLabel, monthlyLabel, price }) => (
     </Bubble>
   </Container>
 );
+
+PriceBubble.defaultProps = {
+  title: PropTypes.string.isRequired,
+  aroundLabel: PropTypes.string.isRequired,
+  monthlyLabel: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+};
