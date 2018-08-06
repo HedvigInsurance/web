@@ -59,7 +59,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-helmet',
     },
     {
-      resolve: 'svgr',
+      resolve: 'gatsby-plugin-svgr',
       options: {
         babel: false,
       },
