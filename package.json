@@ -38,6 +38,7 @@
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-sitemap": "^1.2.25",
+    "gatsby-plugin-svgr": "^1.0.1",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-remark": "^1.7.44",
@@ -67,8 +68,7 @@
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-selector-bem-pattern": "^2.0.0",
-    "svgr": "^1.10.0"
+    "stylelint-selector-bem-pattern": "^2.0.0"
   },
   "scripts": {
     "build": "./scripts/build.sh",
