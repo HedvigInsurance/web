@@ -53,7 +53,7 @@ export const PriceBubble = ({ title, aroundLabel, monthlyLabel, price }) => (
   </Container>
 );
 
-PriceBubble.defaultProps = {
+PriceBubble.propTypes = {
   title: PropTypes.string.isRequired,
   aroundLabel: PropTypes.string.isRequired,
   monthlyLabel: PropTypes.string.isRequired,
