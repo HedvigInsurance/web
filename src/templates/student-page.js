@@ -113,15 +113,15 @@ class StudentTemplate extends React.Component {
                           {landing.subheading_emphasis}
                         </span>
                       </p>
-                      <div className="u-flex u-lg-spaceMT8 u-spaceMB3 u-lg-spaceML6 u-flexJustifyCenter">
+                      <div className="Student-price-container">
                         <div // eslint-disable-line
                           onClick={this.registerPriceRentClick}
                           className="Student-price-circle u-colorWhite u-backgroundPrimaryPurple u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
                         >
-                          <h3 className="u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                          <h3 className="Student-price-text">
                             {landing.bubble1.price}
                           </h3>
-                          <p className="u-size5of6 u-flexExpandLeft u-flexExpandRight u-textCenter u-fontSize10">
+                          <p className="Student-price-text-subline">
                             {landing.bubble1.explainer}
                           </p>
                         </div>
@@ -129,10 +129,10 @@ class StudentTemplate extends React.Component {
                           onClick={this.registerPriceBrfClick}
                           className="Student-price-circle Student-price-circle-second u-colorWhite u-backgroundPrimaryPink u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
                         >
-                          <h3 className="u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                          <h3 className="Student-price-text">
                             {landing.bubble2.price}
                           </h3>
-                          <p className="u-fontSize10">
+                          <p className="Student-price-text-subline">
                             {landing.bubble2.explainer}
                           </p>
                         </div>

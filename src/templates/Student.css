@@ -1,5 +1,44 @@
 @import "../css/variables.css";
 
+.Student-price-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-top: 0;
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Student-price-container {
+    justify-content: flex-start;
+    padding-bottom: 64px;
+    padding-top: 15px;
+  }
+}
+
+.Student-price-text {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.Student-price-text-subline {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (--md-viewport), (--lg-viewport) {
+
+  .Student-price-text {
+    font-size: 75px;
+    line-height: 75px;
+  }
+
+  .Student-price-text-subline {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+
 .Student-price-circle {
   border-radius: 500px;
   flex-shrink: 0;
