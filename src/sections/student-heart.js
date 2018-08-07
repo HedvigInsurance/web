@@ -56,11 +56,11 @@ const Text = styled('span')`
 export const StudentHeart = ({ heartFile, wordmarkFile }) => (
   <Container className="u-backgroundPrimaryPurple">
     {wordmarkFile && (
-      <Wordmark sizes={wordmarkFile.image.sizes} alt="Hedvig logotyp" />
+      <Wordmark sizes={wordmarkFile.image.sizes} role="presentation" />
     )}
     {heartFile && (
-      <Heart sizes={heartFile.image.sizes} alt="Hedvig loves students" />
+      <Heart sizes={heartFile.image.sizes} alt="Hedvig älskar studenter" />
     )}
-    <Text>studenter</Text>
+    <Text role="presentation">studenter</Text>
   </Container>
 );
