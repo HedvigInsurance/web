@@ -2,45 +2,54 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import Img from 'gatsby-image';
 
-const MARGIN = 35;
-
 const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
     ${styles};
   }
 `;
 
+const MARGIN = 35;
+
 const Container = styled('div')`
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  flex-direction: column;
+  flex-direction: row;
 
-  ${mediaQuery(`flex-direction: row;`)};
+  ${mediaQuery(`
+    padding-top: 70px;
+    padding-bottom: 70px;
+  `)};
 `;
 
 const Wordmark = styled(Img)`
-  width: 150px;
-  margin-bottom: ${MARGIN}px;
+  width: 80px;
+  margin-right: ${MARGIN}px;
 
   ${mediaQuery(`
-    margin-right: ${MARGIN}px;
-    margin-bottom: 0;
+    width: 150px;
+  `)};
+`;
+
+const Heart = styled(Img)`
+  width: 40px;
+
+  ${mediaQuery(`
+    width: 80px;
   `)};
 `;
 
 const Text = styled('span')`
-  font-size: 45px;
+  font-size: 23px;
   color: white;
   font-weight: 600;
-  margin-top: ${MARGIN}px;
+  margin-left: ${MARGIN}px;
 
   ${mediaQuery(`
-    margin-left: ${MARGIN}px;
-    margin-top: 0;
+    font-size: 45px;
   `)};
 `;
 
@@ -50,12 +59,8 @@ export const StudentHeart = ({ heartFile, wordmarkFile }) => (
       <Wordmark sizes={wordmarkFile.image.sizes} alt="Hedvig logotyp" />
     )}
     {heartFile && (
-      <Img
-        className="Student-heart"
-        sizes={heartFile.image.sizes}
-        alt="Hedvig loves students"
-      />
+      <Heart sizes={heartFile.image.sizes} alt="Hedvig loves students" />
     )}
-    <Text>Studenter</Text>
+    <Text>studenter</Text>
   </Container>
 );
