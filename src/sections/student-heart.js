@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
+import PropTypes from 'prop-types';
 
 const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
@@ -67,7 +68,7 @@ const Text = styled('span')`
 
 export const StudentHeart = ({ heartFile, wordmarkFile }) => (
   <div className="u-backgroundPrimaryPurple">
-    <VisibilitySensor partialVisibility>
+    <VisibilitySensor partialVisibility intervalDelay={500}>
       {({ isVisible }) => (
         <Container isVisible={isVisible}>
           {wordmarkFile && (
@@ -87,6 +88,6 @@ export const StudentHeart = ({ heartFile, wordmarkFile }) => (
 );
 
 StudentHeart.propTypes = {
-  heartFile: Img.propTypes.sizes,
-  wordmarkFile: Img.propTypes.sizes,
+  heartFile: PropTypes.objectOf(Img.propTypes.sizes).isRequired,
+  wordmarkFile: PropTypes.objectOf(Img.propTypes.sizes).isRequired,
 };
