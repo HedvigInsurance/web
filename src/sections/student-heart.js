@@ -22,14 +22,13 @@ const Container = styled('div')`
   flex-direction: row;
   opacity: 0;
   transform: scale(0.8);
-  transition: opacity 350ms 250ms, transform 350ms 250ms;
+  transition: opacity 350ms, transform 350ms;
 
   ${({ isVisible }) =>
     isVisible &&
     `
     opacity: 1;
     transform: scale(1);
-    transition: opacity 350ms, transform 350ms;
   `};
 
   ${mediaQuery(`
