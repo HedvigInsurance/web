@@ -42,7 +42,11 @@ export const CTALinkContainer = ({ children }) => (
 
 CTALinkContainer.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.arrayOf(React.PropTypes.node),
+    PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+};
+
+CTALinkContainer.defaultProps = {
+  children: undefined,
 };
