@@ -22,7 +22,11 @@ export const CTAWaypoint = ({ children }) => (
 
 CTAWaypoint.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.arrayOf(React.PropTypes.node),
+    PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+};
+
+CTAWaypoint.defaultProps = {
+  children: undefined,
 };
