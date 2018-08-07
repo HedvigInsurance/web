@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
+import { StudentHeart } from 'src/sections/student-heart';
 
 import './Home.css';
 import './Student.css';
@@ -89,6 +90,7 @@ class StudentTemplate extends React.Component {
       threeExplainers,
       perilForest,
       bottomCta,
+      wordmarkFile,
     } = this.props;
     return (
       <main className="Site">
@@ -309,16 +311,7 @@ class StudentTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Heart slide */}
-            <div className="u-spaceMT6 u-backgroundPrimaryPurple u-flex u-flexJustifyCenter u-flexAlignCenter u-spacePV8">
-              {heartFile && (
-                <Img
-                  className="Student-heart"
-                  sizes={heartFile.image.sizes}
-                  alt="Hedvig loves students"
-                />
-              )}
-            </div>
+            <StudentHeart wordmarkFile={wordmarkFile} heartFile={heartFile} />
           </StickyContainer>
         </section>
 
@@ -333,6 +326,7 @@ StudentTemplate.propTypes = {
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   heartFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  wordmarkFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -374,6 +368,7 @@ const Student = ({ data }) => {
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       heartFile={data.heartFile}
+      wordmarkFile={data.wordmarkFile}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
@@ -421,6 +416,15 @@ export const query = graphql`
     heartFile: file(relativePath: { eq: "student/heart.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 80) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    wordmarkFile: file(
+      relativePath: { eq: "hedvig-wordmark-solid-white.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 400) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
