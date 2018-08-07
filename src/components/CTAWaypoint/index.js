@@ -12,6 +12,7 @@ export const CTAWaypoint = ({ children }) => (
     {({ setCTAWaypointReached }) => (
       <VisibiliySensor
         scrollCheck
+        partialVisibility
         onChange={(isVisible) => setCTAWaypointReached(!isVisible)}
       >
         {children}

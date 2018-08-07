@@ -6,15 +6,13 @@ import PropTypes from 'prop-types';
 import AppLink from 'src/components/AppLink';
 
 const PositionAnimation = styled('div')`
-  opacity: 0;
-  transition: opacity 250ms;
+  transition: transform 250ms;
+  transform: translateY(-150px);
   margin-right: 15px;
-  ${({ isVisible }) => isVisible && `opacity: 1;`};
+  ${({ isVisible }) => isVisible && `transform: translateY(0);`};
 
   @media (min-width: 960px) {
     margin-right: 0;
-    opacity: 1;
-    transition: transform 250ms;
     transform: translateX(150px);
     ${({ isVisible }) => isVisible && `transform: translateX(0);`};
   }
