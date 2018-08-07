@@ -56,10 +56,13 @@ module.exports = {
       resolve: 'gatsby-plugin-emotion',
     },
     {
+      resolve: 'netlify-branch',
+    },
+    {
       resolve: 'gatsby-plugin-react-helmet',
     },
     {
-      resolve: 'svgr',
+      resolve: 'gatsby-plugin-svgr',
       options: {
         babel: false,
       },

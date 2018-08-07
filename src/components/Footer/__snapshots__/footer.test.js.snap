@@ -67,28 +67,37 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
       className="u-spaceMB7"
     >
       <a
+        aria-label="Hedvig på Facebook"
         className="u-spacePR10"
         href="https://www.facebook.com/hedvigers"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
       <a
+        aria-label="Hedvig på Instagram"
         className="u-spacePR9"
         href="https://www.instagram.com/hedvig.app/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
       <a
+        aria-label="Hedvig på Twitter"
         className="u-spacePR10"
         href="https://twitter.com/hedvigers"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
     </div>
     <div
@@ -206,28 +215,37 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
       className="u-spaceMB7"
     >
       <a
+        aria-label="Hedvig på Facebook"
         className="u-spacePR10"
         href="https://www.facebook.com/hedvigers"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
       <a
+        aria-label="Hedvig på Instagram"
         className="u-spacePR9"
         href="https://www.instagram.com/hedvig.app/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
       <a
+        aria-label="Hedvig på Twitter"
         className="u-spacePR10"
         href="https://twitter.com/hedvigers"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <ReactComponent />
+        <ReactComponent
+          role="presentation"
+        />
       </a>
     </div>
     <div
