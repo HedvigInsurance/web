@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
+import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
@@ -141,6 +142,7 @@ class LandingTemplate extends React.Component {
                         >
                           {landing.cta_text2}
                         </AppLink>
+                        <CTAWaypoint />
                         <p className="u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
                           {landing.paragraph}
                         </p>
