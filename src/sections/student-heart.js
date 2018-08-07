@@ -4,11 +4,11 @@ import Img from 'gatsby-image';
 
 const MARGIN = 35;
 
-const mediaQuery = (styles = css`
+const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
     ${styles};
   }
-`);
+`;
 
 const Container = styled('div')`
   padding-top: 70px;
@@ -19,19 +19,17 @@ const Container = styled('div')`
   margin-top: 50px;
   flex-direction: column;
 
-  ${mediaQuery(`flex-direction: row;`)} @media (min-width: 650px) {
-    flex-direction: row;
-  }
+  ${mediaQuery(`flex-direction: row;`)};
 `;
 
 const Wordmark = styled(Img)`
   width: 150px;
   margin-bottom: ${MARGIN}px;
 
-  @media (min-width: 650px) {
+  ${mediaQuery(`
     margin-right: ${MARGIN}px;
     margin-bottom: 0;
-  }
+  `)};
 `;
 
 const Text = styled('span')`
@@ -40,10 +38,10 @@ const Text = styled('span')`
   font-weight: 600;
   margin-top: ${MARGIN}px;
 
-  @media (min-width: 650px) {
+  ${mediaQuery(`
     margin-left: ${MARGIN}px;
     margin-top: 0;
-  }
+  `)};
 `;
 
 export const StudentHeart = ({ heartFile, wordmarkFile }) => (
