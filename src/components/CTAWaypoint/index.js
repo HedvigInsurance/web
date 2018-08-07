@@ -1,5 +1,5 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
+import VisibiliySensor from 'react-visibility-sensor';
 import { Container } from 'constate';
 
 const actions = {
@@ -9,12 +9,12 @@ const actions = {
 export const CTAWaypoint = ({ children }) => (
   <Container actions={actions} context="CTAWaypoint">
     {({ setCTAWaypointReached }) => (
-      <Waypoint
-        onEnter={() => setCTAWaypointReached(false)}
-        onLeave={() => setCTAWaypointReached(true)}
+      <VisibiliySensor
+        scrollCheck
+        onChange={(isVisible) => setCTAWaypointReached(!isVisible)}
       >
         {children}
-      </Waypoint>
+      </VisibiliySensor>
     )}
   </Container>
 );

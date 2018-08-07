@@ -68,7 +68,6 @@
     "react-router-enzyme-context": "^1.2.0",
     "react-sticky": "^6.0.3",
     "react-visibility-sensor": "^3.11.1",
-    "react-waypoint": "^8.0.3",
     "rimraf": "^2.6.2",
     "stylelint": "^9.4.0",
     "stylelint-config-recommended": "^2.1.0",
