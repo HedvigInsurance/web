@@ -1,13 +1,15 @@
 import React from 'react';
 import { Container } from 'constate';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 import AppLink from 'src/components/AppLink';
 
 const PositionAnimation = styled('div')`
   opacity: 0;
   transition: opacity 250ms;
-  ${({ isVisible }) => isVisible && `opacity: 1;`} margin-right: 15px;
+  margin-right: 15px;
+  ${({ isVisible }) => isVisible && `opacity: 1;`};
 
   @media (min-width: 960px) {
     margin-right: 0;
@@ -37,3 +39,10 @@ export const CTALinkContainer = ({ children }) => (
     </Container>
   </div>
 );
+
+CTALinkContainer.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(React.PropTypes.node),
+    PropTypes.node,
+  ]),
+};
