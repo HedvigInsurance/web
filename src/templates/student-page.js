@@ -310,7 +310,7 @@ class StudentTemplate extends React.Component {
             </div>
 
             {/* Heart slide */}
-            <div className="u-backgroundPrimaryPurple u-flex u-flexJustifyCenter u-flexAlignCenter u-spacePV8">
+            <div className="u-spaceMT6 u-backgroundPrimaryPurple u-flex u-flexJustifyCenter u-flexAlignCenter u-spacePV8">
               {heartFile && (
                 <Img
                   className="Student-heart"
