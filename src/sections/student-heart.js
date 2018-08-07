@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
 import VisibilitySensor from 'react-visibility-sensor';
 
 const mediaQuery = (styles) => css`
@@ -88,6 +87,6 @@ export const StudentHeart = ({ heartFile, wordmarkFile }) => (
 );
 
 StudentHeart.propTypes = {
-  heartFile: PropTypes.object.isRequired,
-  wordmarkFile: PropTypes.object.isRequired,
+  heartFile: Img.propTypes.sizes,
+  wordmarkFile: Img.propTypes.sizes,
 };
