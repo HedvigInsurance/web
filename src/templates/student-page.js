@@ -416,7 +416,7 @@ export const query = graphql`
     heartFile: file(relativePath: { eq: "student/heart.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 80) {
-          ...GatsbyImageSharpSizes_noBase64
+          ...GatsbyImageSharpSizes
         }
       }
     }
@@ -425,7 +425,7 @@ export const query = graphql`
     ) {
       image: childImageSharp {
         sizes(maxWidth: 400) {
-          ...GatsbyImageSharpSizes_noBase64
+          ...GatsbyImageSharpSizes
         }
       }
     }

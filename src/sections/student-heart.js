@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
@@ -19,8 +20,16 @@ const Container = styled('div')`
   align-items: center;
   margin-top: 50px;
   flex-direction: row;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 350ms, transform 350ms;
 
-  ${mediaQuery(`
+  ${({ isVisible }) =>
+    isVisible &&
+    `
+    opacity: 1;
+    transform: scale(1);
+  `} ${mediaQuery(`
     padding-top: 70px;
     padding-bottom: 70px;
   `)};
@@ -55,15 +64,24 @@ const Text = styled('span')`
 `;
 
 export const StudentHeart = ({ heartFile, wordmarkFile }) => (
-  <Container className="u-backgroundPrimaryPurple">
-    {wordmarkFile && (
-      <Wordmark sizes={wordmarkFile.image.sizes} role="presentation" />
-    )}
-    {heartFile && (
-      <Heart sizes={heartFile.image.sizes} alt="Hedvig älskar studenter" />
-    )}
-    <Text role="presentation">studenter</Text>
-  </Container>
+  <div className="u-backgroundPrimaryPurple">
+    <VisibilitySensor partialVisibility>
+      {({ isVisible }) => (
+        <Container isVisible={isVisible}>
+          {wordmarkFile && (
+            <Wordmark sizes={wordmarkFile.image.sizes} role="presentation" />
+          )}
+          {heartFile && (
+            <Heart
+              sizes={heartFile.image.sizes}
+              alt="Hedvig älskar studenter"
+            />
+          )}
+          <Text role="presentation">studenter</Text>
+        </Container>
+      )}
+    </VisibilitySensor>
+  </div>
 );
 
 StudentHeart.propTypes = {
