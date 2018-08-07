@@ -38,7 +38,7 @@ philosophy:
       Resten reserveras till skadeersättningar så att vi kan betala ut
       blixtsnabbt
     card3_paragraph: Blir det något över doneras det till ett gott ändamål
-  heading: "Vanliga försäkringsbolag tjänar mer när du får mindre. Det gör inte\_Hedvig"
+  heading: Byggt på en schysstare filosofi
 customer_source:
   bottom_paragraph: 'Våra användare byter till Hedvig från:'
   heading: Redan försäkrad? Vi sköter bytet
