@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
 
 const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
@@ -64,3 +65,8 @@ export const StudentHeart = ({ heartFile, wordmarkFile }) => (
     <Text role="presentation">studenter</Text>
   </Container>
 );
+
+StudentHeart.propTypes = {
+  heartFile: PropTypes.object.isRequired,
+  wordmarkFile: PropTypes.object.isRequired,
+};
