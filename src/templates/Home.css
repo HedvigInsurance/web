@@ -10,16 +10,27 @@
 }
 
 .Home-hero-content {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .Home-hero-subheading {
+  margin: 0 auto;
   margin-top: 10px;
+  max-width: 290px;
+}
+
+@media (min-width: 500px) {
+
+  .Home-hero-subheading {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 800px) {
 
   .Home-hero-content {
+    margin-top: 150px;
     padding-left: 30px;
   }
 }

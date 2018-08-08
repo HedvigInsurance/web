@@ -123,17 +123,17 @@ class LandingTemplate extends React.Component {
             <div className="u-backgroundAlmostWhite">
               <div className="Home-hero">
                 <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
-                  <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
+                  <div className="u-sizeFull u-lg-size3of5 u-md-spacePT5 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
                     <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                       {landing.heading}
                     </h1>
                     <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                       {landing.subheading}
                     </p>
-                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-lg-spaceMB2 u-textCenter">
                       <AppLink
                         tags={['home-hero']}
-                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
                       >
                         {landing.cta_text}
                       </AppLink>
