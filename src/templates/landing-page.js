@@ -477,7 +477,6 @@ LandingTemplate.propTypes = {
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
     cta_text: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
   }).isRequired,
   threeExplainers: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -514,8 +513,6 @@ LandingTemplate.propTypes = {
     image_alt: PropTypes.string.isRequired,
   }).isRequired,
   safety: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
     item1: PropTypes.string.isRequired,
     item2: PropTypes.string.isRequired,
     item3: PropTypes.string.isRequired,
