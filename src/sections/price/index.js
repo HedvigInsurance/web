@@ -6,11 +6,15 @@ import { PriceBubble } from './bubble';
 
 const Container = styled('div')`
   padding: 50px 0;
+  padding-bottom: 100px;
 `;
 
 const Title = styled('div')`
   text-align: center;
-  margin-bottom: 30px;
+  padding: 50px 20px;
+  padding-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
 `;
 
 const PriceBubbles = styled('div')`
@@ -42,7 +46,7 @@ export const PriceSection = ({
   <div className="u-backgroundWhite">
     <Container>
       <Title>
-        <h2>{heading}</h2>
+        <h2 className="u-fontSize4 u-md-fontSize2 u-lg-fontSize2">{heading}</h2>
       </Title>
       <PriceBubbles>
         <PriceBubble

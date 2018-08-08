@@ -17,7 +17,7 @@ const Bubble = styled('div')`
   border-radius: 65px;
   height: 130px;
   width: 130px;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   font-size: 25px;
   flex-direction: column;
 `;
