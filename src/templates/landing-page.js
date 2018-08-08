@@ -392,7 +392,7 @@ class LandingTemplate extends React.Component {
             {/* Safety */}
             <div className="u-backgroundPrimaryDarkestPurple Home-safety">
               <div className="Grid Grid--withGutter Grid--alignCenter">
-                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                   <figure>
                     {reinsuredFile && (
                       <Img
@@ -407,7 +407,7 @@ class LandingTemplate extends React.Component {
                   </p>
                 </div>
 
-                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
                   <figure>
                     {aaRatedFile && (
                       <Img
