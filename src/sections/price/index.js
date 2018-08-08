@@ -12,9 +12,13 @@ const Container = styled('div')`
 const Title = styled('div')`
   text-align: center;
   padding: 50px 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   max-width: 800px;
   margin: 0 auto;
+
+  @media (min-width: 500px) {
+    padding-bottom: 30px;
+  }
 `;
 
 const PriceBubbles = styled('div')`
