@@ -2,6 +2,8 @@ import 'normalize.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
+import { Provider } from 'constate';
+
 import 'src/css/style.css';
 
 class TemplateWrapper extends React.Component {
@@ -64,7 +66,7 @@ class TemplateWrapper extends React.Component {
     ];
 
     return (
-      <React.Fragment>
+      <Provider initialState={{}}>
         <Helmet>
           <title>{data.site.siteMetadata.title}</title>
           <meta property="og:title" content={data.site.siteMetadata.title} />
@@ -108,7 +110,7 @@ class TemplateWrapper extends React.Component {
           </script>
         </Helmet>
         {children()}
-      </React.Fragment>
+      </Provider>
     );
   }
 }
