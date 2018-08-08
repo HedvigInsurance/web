@@ -127,10 +127,10 @@ class LandingTemplate extends React.Component {
                     <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
                       {landing.heading}
                     </h1>
-                    <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                    <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
                       {landing.subheading}
                     </p>
-                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-lg-spaceMB2 u-textCenter">
+                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
                       <AppLink
                         tags={['home-hero']}
                         className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
