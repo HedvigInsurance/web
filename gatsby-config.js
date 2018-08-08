@@ -53,6 +53,9 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: 'set-static-js-name',
+    },
+    {
       resolve: 'netlify-branch',
     },
     {
