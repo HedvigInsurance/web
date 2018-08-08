@@ -114,7 +114,9 @@
 }
 
 .Home-safety {
+  overflow: hidden;
   padding: 80px 0;
+  width: 100%;
 }
 
 .Home-safety-image-text {
