@@ -31,7 +31,7 @@ peril_forest:
   heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
 philosophy:
   paragraph: >-
-    Jämfört med vanlig försäkring är det typ, tvärtom. Vi har nämligen skapat en försäkringsmodell som sätter ditt intresse framför vårt. Allt bygger på att vi tar ut en fast avgift. Vilket kanske inte låter som en stor grej. Men det är det. För om vi inte hade tagit en fast avgift, då hade vi kunnat tjäna pengar på att betala mindre till dig när du behöver hjälp. Då finns det risk att vi hade krånglat med dig. Tvingat dig fylla i blanketter. Och varit precis som ett gammalt försäkringsbolag.
+    Jämfört med vanlig försäkring fungerar Hedvig typ, tvärtom. Vi har nämligen skapat en försäkringsmodell som sätter ditt intresse framför vårt. Allt bygger på att vi tar ut en fast avgift. Vilket kanske inte låter som en stor grej. Men det är det. För om vi inte hade tagit en fast avgift, då hade vi kunnat tjäna pengar på att betala mindre till dig när du behöver hjälp. Då finns det risk att vi hade krånglat med dig. Tvingat dig fylla i blanketter. Och varit precis som ett gammalt försäkringsbolag.
   cards:
     card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av din månadskostnad
     card2_paragraph: >-
