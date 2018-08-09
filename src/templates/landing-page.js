@@ -9,6 +9,8 @@ import { Helmet } from 'react-helmet';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
+
+import { PriceSection } from 'src/sections/price';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
@@ -108,6 +110,7 @@ class LandingTemplate extends React.Component {
       philosophy,
       customerSource,
       safety,
+      pricing,
     } = this.props;
     return (
       <main className="Site">
@@ -118,62 +121,51 @@ class LandingTemplate extends React.Component {
           <StickyContainer>
             <Header />
             {/* Landing section */}
-            <div className="u-backgroundWhite">
-              <div className="Home-hero-desktop">
-                <div className="Home-hero">
-                  <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
-                    <CTAWaypoint>
-                      <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT6 Home-hero-mobile">
-                        <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-md-spaceMB8 u-lg-spaceMB8 u-colorWhite u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
-                          {landing.heading}
-                        </h1>
-                        <p className="u-colorWhite u-md-spaceMT8 u-lg-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
-                          {landing.subheading}
-                        </p>
-                        <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
-                          <AppLink
-                            tags={['home-hero-1']}
-                            className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-                          >
-                            {landing.cta_text1}
-                          </AppLink>
-                          <AppLink
-                            tags={['home-hero-2']}
-                            className="Button Home-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB10 u-fontWeightBold"
-                          >
-                            {landing.cta_text2}
-                          </AppLink>
-                          <p className="u-colorWhite u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9 u-md-fontSize8 u-lg-fontSize8">
-                            {landing.paragraph}
-                          </p>
-                        </div>
+            <div className="u-backgroundAlmostWhite">
+              <div className="Home-hero">
+                <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
+                  <CTAWaypoint>
+                    <div className="u-sizeFull u-lg-size3of5 u-md-spacePT5 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
+                      <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                        {landing.heading}
+                      </h1>
+                      <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
+                        {landing.subheading}
+                      </p>
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
+                        <AppLink
+                          tags={['home-hero']}
+                          className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                        >
+                          {landing.cta_text}
+                        </AppLink>
                       </div>
-                    </CTAWaypoint>
-                    <div className="u-sizeFull u-lg-size2of5">
-                      <VisibilitySensor
-                        partialVisibility
-                        onChange={this.chatDemoOnVisibilityChange}
-                      >
-                        <div className="u-spaceMV6 u-lg-spaceMT4">
-                          <LottieLoader
-                            ref={(anim) => {
-                              this.chatAnim = anim;
-                            }}
-                            options={{
-                              loop: true,
-                              autoplay: false,
-                              renderer: 'svg',
-                              animationData: claimsAnimation,
-                              rendererSettings: {
-                                progressiveLoad: true,
-                                preserveAspectRatio: 'xMaxYMin meet',
-                              },
-                            }}
-                            width={307}
-                          />
-                        </div>
-                      </VisibilitySensor>
                     </div>
+                  </CTAWaypoint>
+                  <div className="u-sizeFull u-lg-size2of5">
+                    <VisibilitySensor
+                      partialVisibility
+                      onChange={this.chatDemoOnVisibilityChange}
+                    >
+                      <div className="u-spaceMV6 u-lg-spaceMT4">
+                        <LottieLoader
+                          ref={(anim) => {
+                            this.chatAnim = anim;
+                          }}
+                          options={{
+                            loop: true,
+                            autoplay: false,
+                            renderer: 'svg',
+                            animationData: claimsAnimation,
+                            rendererSettings: {
+                              progressiveLoad: true,
+                              preserveAspectRatio: 'xMaxYMin meet',
+                            },
+                          }}
+                          width={307}
+                        />
+                      </div>
+                    </VisibilitySensor>
                   </div>
                 </div>
               </div>
@@ -268,12 +260,79 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
+            {/* Peril forest */}
+            <div className="u-backgroundPrimaryDarkestPurple">
+              <div className="Container u-spacePT2 u-spacePB4">
+                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                  {perilForest.heading}
+                </h2>
+                <figure // eslint-disable-line
+                  className="u-spaceMV6"
+                  onClick={this.registerPerilForestClick}
+                >
+                  {perilForestMobileFile && (
+                    <Img
+                      className="Home-perilForest-image-mobile u-lg-hidden"
+                      sizes={perilForestMobileFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                  {perilForestDesktopFile && (
+                    <Img
+                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
+                      sizes={perilForestDesktopFile.image.sizes}
+                      alt=""
+                    />
+                  )}
+                </figure>
+                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {perilForest.bottom_paragraph}
+                </p>
+              </div>
+            </div>
+
+            <PriceSection {...pricing} />
+
+            {/* Customer source */}
+            <div className="u-backgroundSecondaryGrey">
+              <div className="Container u-spacePT2 u-spacePB5">
+                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
+                  {customerSource.heading}
+                </h1>
+                <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                  {customerSource.paragraph}
+                </p>
+                <figure // eslint-disable-line
+                  className="u-spaceMT8"
+                  onClick={this.registerCustomerSourceClick}
+                >
+                  {customerSourceDesktopFile && (
+                    <Img
+                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
+                      sizes={customerSourceDesktopFile.image.sizes}
+                      alt={customerSource.image_alt}
+                    />
+                  )}
+                  {customerSourceMobileFile && (
+                    <Img
+                      className="Home-customerSource-image-mobile u-lg-hidden"
+                      sizes={customerSourceMobileFile.image.sizes}
+                      alt={customerSource.image_alt}
+                    />
+                  )}
+                </figure>
+              </div>
+            </div>
+
             {/* Model */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
                 <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
                   {philosophy.heading}
                 </h2>
+                <p className="u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter Home-model-paragraph">
+                  {philosophy.paragraph}
+                </p>
                 <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
                   <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
                     <div className="Card u-spaceMT6 Home-model">
@@ -333,119 +392,52 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Peril forest */}
-            <div className="u-backgroundPrimaryDarkestPurple">
-              <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {perilForest.heading}
-                </h2>
-                <figure // eslint-disable-line
-                  className="u-spaceMV6"
-                  onClick={this.registerPerilForestClick}
-                >
-                  {perilForestMobileFile && (
-                    <Img
-                      className="Home-perilForest-image-mobile u-lg-hidden"
-                      sizes={perilForestMobileFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                  {perilForestDesktopFile && (
-                    <Img
-                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
-                      sizes={perilForestDesktopFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                </figure>
-                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {perilForest.bottom_paragraph}
-                </p>
-              </div>
-            </div>
-
-            {/* Customer source */}
-            <div className="u-backgroundSecondaryGrey">
-              <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {customerSource.heading}
-                </h1>
-                <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {customerSource.paragraph}
-                </p>
-                <figure // eslint-disable-line
-                  className="u-spaceMT8"
-                  onClick={this.registerCustomerSourceClick}
-                >
-                  {customerSourceDesktopFile && (
-                    <Img
-                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
-                      sizes={customerSourceDesktopFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                  {customerSourceMobileFile && (
-                    <Img
-                      className="Home-customerSource-image-mobile u-lg-hidden"
-                      sizes={customerSourceMobileFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                </figure>
-              </div>
-            </div>
-
             {/* Safety */}
-            <div>
-              <div className="Container u-spacePT2">
-                <h2 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {safety.heading}
-                </h2>
-                <div className="Grid Grid--withGutter Grid--alignCenter u-spaceMT9 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB3">
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {reinsuredFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={reinsuredFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item1}
-                    </p>
-                  </div>
+            <div className="u-backgroundPrimaryDarkestPurple Home-safety">
+              <div className="Grid Grid--withGutter Grid--alignCenter">
+                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {reinsuredFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={reinsuredFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item1}
+                  </p>
+                </div>
 
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {aaRatedFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={aaRatedFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item2}
-                    </p>
-                  </div>
+                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {aaRatedFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={aaRatedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item2}
+                  </p>
+                </div>
 
-                  <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                    <figure className="u-spaceMB9 u-spaceMT6">
-                      {authorisedFile && (
-                        <Img
-                          className="Home-safety-image"
-                          sizes={authorisedFile.image.sizes}
-                          alt=""
-                        />
-                      )}
-                    </figure>
-                    <p className="u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                      {safety.item3}
-                    </p>
-                  </div>
+                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
+                  <figure>
+                    {authorisedFile && (
+                      <Img
+                        className="Home-safety-image"
+                        sizes={authorisedFile.image.sizes}
+                        alt=""
+                      />
+                    )}
+                  </figure>
+                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                    {safety.item3}
+                  </p>
                 </div>
               </div>
             </div>
@@ -487,9 +479,7 @@ LandingTemplate.propTypes = {
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
-    cta_text1: PropTypes.string.isRequired,
-    cta_text2: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
+    cta_text: PropTypes.string.isRequired,
   }).isRequired,
   threeExplainers: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -526,11 +516,19 @@ LandingTemplate.propTypes = {
     image_alt: PropTypes.string.isRequired,
   }).isRequired,
   safety: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
     item1: PropTypes.string.isRequired,
     item2: PropTypes.string.isRequired,
     item3: PropTypes.string.isRequired,
+  }).isRequired,
+  pricing: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    monthlyLabel: PropTypes.string.isRequired,
+    aroundLabel: PropTypes.string.isRequired,
+    rentalTitle: PropTypes.string.isRequired,
+    rentalPrice: PropTypes.string.isRequired,
+    ownedTitle: PropTypes.string.isRequired,
+    ownedPrice: PropTypes.string.isRequired,
+    bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
 };
 
@@ -557,6 +555,16 @@ const Landing = ({ data }) => {
       philosophy={copy.philosophy}
       customerSource={copy.customer_source}
       safety={copy.safety}
+      pricing={{
+        heading: copy.pricing.heading,
+        rentalTitle: copy.pricing.rental_title,
+        rentalPrice: copy.pricing.rental_price,
+        ownedTitle: copy.pricing.owned_title,
+        ownedPrice: copy.pricing.owned_price,
+        bottomParagraph: copy.pricing.bottom_paragraph,
+        monthlyLabel: copy.pricing.monthly_label,
+        aroundLabel: copy.pricing.around_label,
+      }}
     />
   );
 };
@@ -664,9 +672,7 @@ export const query = graphql`
         landing {
           heading
           subheading
-          cta_text1
-          cta_text2
-          paragraph
+          cta_text
         }
         three_explainers {
           heading
@@ -691,6 +697,7 @@ export const query = graphql`
         }
         philosophy {
           heading
+          paragraph
           cards {
             card1_paragraph
             card2_paragraph
@@ -703,10 +710,19 @@ export const query = graphql`
           paragraph
         }
         safety {
-          heading
           item1
           item2
           item3
+        }
+        pricing {
+          heading
+          monthly_label
+          around_label
+          rental_title
+          rental_price
+          owned_title
+          owned_price
+          bottom_paragraph
         }
       }
     }

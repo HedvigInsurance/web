@@ -105,11 +105,8 @@ collections:
               - label: Subheading
                 name: subheading
                 widget: string
-              - label: CTA 1 text
-                name: cta_text1
-                widget: string
-              - label: CTA 2 text
-                name: cta_text2
+              - label: CTA text
+                name: cta_text
                 widget: string
               - label: paragraph
                 name: paragraph
@@ -184,6 +181,34 @@ collections:
                     widget: text
                   - label: Card 3 paragraph
                     name: card3_paragraph
+          - label: Pricing section
+            name: pricing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Monthly Label
+                name: monthlyLabel
+                widget: string
+              - label: Around Label
+                name: aroundLabel
+                widget: string
+              - label: Rental Title
+                name: rentalTitle
+                widget: string
+              - label: Rental Price
+                name: rentalPrice
+                widget: string
+              - label: Owned Title
+                name: ownedTitle
+                widget: string
+              - label: Owned Price
+                name: ownedPrice
+                widget: string
+              - label: Bottom Paragraph
+                name: bottomParagraph
+                widget: string
           - label: Customer source section
             name: customer_source
             widget: object
@@ -213,6 +238,7 @@ collections:
               - label: Item 3
                 name: item3
                 widget: text
+
       - file: src/pages/giving-back/index.md
         label: Giving Back
         name: giving-back
