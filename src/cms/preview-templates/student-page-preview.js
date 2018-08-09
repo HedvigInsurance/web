@@ -1,26 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'constate';
-import { LandingTemplate } from 'src/templates/landing-page';
+import { StudentTemplate } from 'src/templates/student-page';
 
-const LandingPagePreview = ({ entry }) => (
+const StudentPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
-    <LandingTemplate
+    <StudentTemplate
       title={entry.getIn(['data', 'title'])}
       landing={entry.getIn(['data', 'landing']).toJS()}
       threeExplainers={entry.getIn(['data', 'three_explainers']).toJS()}
       perilForest={entry.getIn(['data', 'peril_forest']).toJS()}
-      philosophy={entry.getIn(['data', 'philosophy']).toJS()}
-      customerSource={entry.getIn(['data', 'customer_source']).toJS()}
-      safety={entry.getIn(['data', 'safety']).toJS()}
+      bottomCta={entry.getIn(['data', 'bottom_cta'])}
     />
   </Provider>
 );
 
-LandingPagePreview.propTypes = {
+StudentPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default LandingPagePreview;
+export default StudentPagePreview;

@@ -238,7 +238,6 @@ collections:
               - label: Item 3
                 name: item3
                 widget: text
-
       - file: src/pages/giving-back/index.md
         label: Giving Back
         name: giving-back

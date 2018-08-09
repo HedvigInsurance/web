@@ -63,4 +63,3 @@ pricing:
   owned_price: 129kr
   bottom_paragraph: PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. 
 ---
-
