@@ -17,6 +17,7 @@ import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
 import PaidRightAway from 'src/components/Animations/PaidRightAway';
 import ChatDemo from 'src/components/Animations/ChatDemo';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
+import { CTAWaypoint } from 'src/components/CTAWaypoint';
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -103,52 +104,54 @@ class StudentTemplate extends React.Component {
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite u-mb-spacePL9 u-lg-spacePL9">
               <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
-                <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT12">
-                  <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB12 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
-                    {landing.heading}
-                  </h1>
-                  <p className="u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
-                    {landing.subheading}{' '}
-                    <span className="u-colorPrimaryGreen">
-                      {landing.subheading_emphasis}
-                    </span>
-                  </p>
-                  <div className="Student-price-container">
-                    <div // eslint-disable-line
-                      onClick={this.registerPriceRentClick}
-                      className="Student-price-circle u-colorWhite u-backgroundPrimaryPurple u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
-                    >
-                      <h3 className="Student-price-text">
-                        {landing.bubble1.price}
-                      </h3>
-                      <p className="Student-price-text-subline">
-                        {landing.bubble1.explainer}
-                      </p>
-                    </div>
-                    <div // eslint-disable-line
-                      onClick={this.registerPriceBrfClick}
-                      className="Student-price-circle Student-price-circle-second u-colorWhite u-backgroundPrimaryPink u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
-                    >
-                      <h3 className="Student-price-text">
-                        {landing.bubble2.price}
-                      </h3>
-                      <p className="Student-price-text-subline">
-                        {landing.bubble2.explainer}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
-                    <AppLink
-                      tags={['student-hero']}
-                      className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
-                    >
-                      {landing.cta_text}
-                    </AppLink>
-                    <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9">
-                      {landing.paragraph}
+                <CTAWaypoint>
+                  <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT12">
+                    <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB12 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
+                      {landing.heading}
+                    </h1>
+                    <p className="u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                      {landing.subheading}{' '}
+                      <span className="u-colorPrimaryGreen">
+                        {landing.subheading_emphasis}
+                      </span>
                     </p>
+                    <div className="Student-price-container">
+                      <div // eslint-disable-line
+                        onClick={this.registerPriceRentClick}
+                        className="Student-price-circle u-colorWhite u-backgroundPrimaryPurple u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
+                      >
+                        <h3 className="Student-price-text">
+                          {landing.bubble1.price}
+                        </h3>
+                        <p className="Student-price-text-subline">
+                          {landing.bubble1.explainer}
+                        </p>
+                      </div>
+                      <div // eslint-disable-line
+                        onClick={this.registerPriceBrfClick}
+                        className="Student-price-circle Student-price-circle-second u-colorWhite u-backgroundPrimaryPink u-flex u-flexAlignCenter u-flexJustifyCenter u-flexCol"
+                      >
+                        <h3 className="Student-price-text">
+                          {landing.bubble2.price}
+                        </h3>
+                        <p className="Student-price-text-subline">
+                          {landing.bubble2.explainer}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                      <AppLink
+                        tags={['student-hero']}
+                        className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
+                      >
+                        {landing.cta_text}
+                      </AppLink>
+                      <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9">
+                        {landing.paragraph}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </CTAWaypoint>
                 <div className="u-sizeFull u-lg-size2of5">
                   <VisibilitySensor
                     partialVisibility
