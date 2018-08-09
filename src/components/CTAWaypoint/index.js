@@ -8,7 +8,7 @@ const actions = {
 };
 
 export const CTAWaypoint = ({ children }) => (
-  <Container actions={actions} context="CTAWaypoint">
+  <Container actions={actions} context="CTAWaypoint" initialState={{}}>
     {({ setCTAWaypointReached }) => (
       <VisibiliySensor
         scrollCheck

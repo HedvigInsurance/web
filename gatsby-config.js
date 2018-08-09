@@ -53,9 +53,6 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
-      resolve: 'gatsby-plugin-emotion',
-    },
-    {
       resolve: 'set-static-js-name',
     },
     {
@@ -69,6 +66,9 @@ module.exports = {
       options: {
         babel: false,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-emotion',
     },
     {
       resolve: 'segment',

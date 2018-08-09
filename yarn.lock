@@ -644,12 +644,12 @@
     to-fast-properties "^2.0.0"
 
 "@emotion/babel-utils@^0.6.4":
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.9.tgz#bb074fadad65c443a575d3379488415fd194fc75"
+  version "0.6.8"
+  resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.8.tgz#1ebb41b789e345bbdf3dd6c73d0df2c4fa7d01db"
   dependencies:
     "@emotion/hash" "^0.6.5"
     "@emotion/memoize" "^0.6.5"
-    "@emotion/serialize" "^0.9.0"
+    "@emotion/serialize" "^0.8.6"
     convert-source-map "^1.5.1"
     find-root "^1.1.0"
     source-map "^0.7.2"
@@ -668,26 +668,26 @@
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.5.tgz#f868c314b889e7c3d84868a1d1cc323fbb40ca86"
 
-"@emotion/serialize@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.9.0.tgz#ac5577cb98c7557c1a24a94cc101c5da6dc18322"
+"@emotion/serialize@^0.8.6":
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.8.6.tgz#ab6c6363fa0be487f1b4dcd196c2359d18af67c0"
   dependencies:
     "@emotion/hash" "^0.6.5"
     "@emotion/memoize" "^0.6.5"
-    "@emotion/unitless" "^0.6.6"
-    "@emotion/utils" "^0.8.1"
+    "@emotion/unitless" "^0.6.5"
+    "@emotion/utils" "^0.8.0"
 
 "@emotion/stylis@^0.6.10":
   version "0.6.12"
   resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.6.12.tgz#3fb58220e0fc9e380bcabbb3edde396ddc1dfe6e"
 
-"@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.6":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.6.tgz#988957ecd0a9be00ee9de27172f8c56d41595a93"
+"@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.5.tgz#6a397794dc78ca7df4bf68893061709590a7ec81"
 
-"@emotion/utils@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.1.tgz#f3a81587ad8d0ef33cdad6f3b4310774fcc1053e"
+"@emotion/utils@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.0.tgz#08ef599fe8c41e6184fa0b5a6ca460d318d3abb1"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1535,10 +1535,10 @@ babel-plugin-jest-hoist@^23.2.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-23.2.0.tgz#e61fae05a1ca8801aadee57a6d66b8cefaf44167"
 
 babel-plugin-macros@^2.0.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.4.0.tgz#6c5f9836e1f6c0a9743b3bab4af29f73e437e544"
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.3.0.tgz#1538e6339cbcbf093f334dc2f10f5f53043e3fda"
   dependencies:
-    cosmiconfig "^5.0.5"
+    cosmiconfig "^4.0.0"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -3308,7 +3308,7 @@ cosmiconfig@^4.0.0:
     parse-json "^4.0.0"
     require-from-string "^2.0.1"
 
-cosmiconfig@^5.0.0, cosmiconfig@^5.0.2, cosmiconfig@^5.0.5:
+cosmiconfig@^5.0.0, cosmiconfig@^5.0.2:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.5.tgz#a809e3c2306891ce17ab70359dc8bdf661fe2cd0"
   dependencies:
@@ -4326,8 +4326,8 @@ enzyme-to-json@^3.3.4:
     lodash "^4.17.4"
 
 enzyme@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.0.tgz#085c66fe647d8c9c4becd1fee3042c040cda88a6"
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.4.1.tgz#d305af5bdb30b8aca56d199110421588c670ea0e"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"

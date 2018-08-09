@@ -105,11 +105,8 @@ collections:
               - label: Subheading
                 name: subheading
                 widget: string
-              - label: CTA 1 text
-                name: cta_text1
-                widget: string
-              - label: CTA 2 text
-                name: cta_text2
+              - label: CTA text
+                name: cta_text
                 widget: string
               - label: paragraph
                 name: paragraph
@@ -184,6 +181,34 @@ collections:
                     widget: text
                   - label: Card 3 paragraph
                     name: card3_paragraph
+          - label: Pricing section
+            name: pricing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Monthly Label
+                name: monthlyLabel
+                widget: string
+              - label: Around Label
+                name: aroundLabel
+                widget: string
+              - label: Rental Title
+                name: rentalTitle
+                widget: string
+              - label: Rental Price
+                name: rentalPrice
+                widget: string
+              - label: Owned Title
+                name: ownedTitle
+                widget: string
+              - label: Owned Price
+                name: ownedPrice
+                widget: string
+              - label: Bottom Paragraph
+                name: bottomParagraph
+                widget: string
           - label: Customer source section
             name: customer_source
             widget: object
@@ -213,145 +238,6 @@ collections:
               - label: Item 3
                 name: item3
                 widget: text
-      - file: src/pages/student/index.md
-        label: Student
-        name: student
-        path: /student
-        fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /student
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: student-page
-          - label: Title
-            name: title
-            widget: string
-          - label: Landing section
-            name: landing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Subheading
-                name: subheading
-                widget: string
-              - label: CTA 1 text
-                name: cta_text1
-                widget: string
-              - label: CTA 2 text
-                name: cta_text2
-                widget: string
-              - label: paragraph
-                name: paragraph
-                widget: string
-              - label: Bubble 1
-                name: bubble1
-                widget: object
-                fields:
-                  - label: Price
-                    name: price
-                    widget: string
-                  - label: Explainer
-                    name: explainer
-                    widget: string
-              - label: Bubble 2
-                name: bubble2
-                widget: object
-                fields:
-                  - label: Price
-                    name: price
-                    widget: string
-                  - label: Explainer
-                    name: explainer
-                    widget: string
-          - label: Three Explainers section
-            name: three_explainers
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Three Explainers
-                name: three_explainers
-                widget: object
-                fields:
-                  - label: Insurance in minutes
-                    name: insurance_in_minutes
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-                  - label: Claim on your phone
-                    name: claim_on_phone
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-                  - label: Paid right away
-                    name: paid_right_away
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-          - label: Peril Forest section
-            name: peril_forest
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Bullet 1
-                name: bullet1
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Paragraph
-                    name: paragraph
-                    widget: text
-              - label: Bullet 2
-                name: bullet2
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Paragraph
-                    name: paragraph
-                    widget: text
-              - label: Bullet 3
-                name: bullet3
-                widget: object
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                  - label: Paragraph
-                    name: paragraph
-                    widget: text
-              - label: Bottom paragraph
-                name: bottom_paragraph
-                widget: string
-          - label: Bottom CTA
-            name: bottom_cta
-            widget: string
       - file: src/pages/giving-back/index.md
         label: Giving Back
         name: giving-back

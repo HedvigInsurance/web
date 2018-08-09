@@ -5,27 +5,34 @@
   max-width: 1600px;
 }
 
-.Home-hero-mobile {
-  background-image: url("/assets/backgrounds/hero-mobile@2x.png");
-  background-size: cover;
+.Home-hero-title {
+  max-width: 500px;
 }
 
-@media (--lg-viewport) {
+.Home-hero-content {
+  margin-top: 50px;
+}
 
-  .Home-hero-mobile {
-    background-image: none;
-  }
+.Home-hero-subheading {
+  margin: 0 auto;
+  margin-top: 10px;
+  max-width: 290px;
+}
 
-  .Home-hero-desktop {
-    background-image: url("/assets/backgrounds/hero-desktop@2x.png");
-    background-size: cover;
+@media (min-width: 500px) {
+
+  .Home-hero-subheading {
+    margin: 0;
+    max-width: 550px;
   }
 }
 
-.Home-cta {
-  border: 0.5px var(--color-primaryBlackPurple) solid !important;
-  padding: 20px 32px !important;
-  width: 320px;
+@media (min-width: 800px) {
+
+  .Home-hero-content {
+    margin-top: 150px;
+    padding-left: 30px;
+  }
 }
 
 /*
@@ -82,7 +89,8 @@
 }
 
 .Home-model-paragraph {
-  height: calc(100% - 210px);
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 .Home-perilForest-image-mobile {
@@ -103,6 +111,16 @@
 .Home-customerSource-image-desktop {
   margin: 0 auto;
   width: 679px;
+}
+
+.Home-safety {
+  overflow: hidden;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.Home-safety-image-text {
+  margin-top: 35px;
 }
 
 .Home-safety-image {

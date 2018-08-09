@@ -20,7 +20,7 @@ const PositionAnimation = styled('div')`
 
 export const CTALinkContainer = ({ children }) => (
   <div className="u-md-inlineBlock u-lg-inlineBlock">
-    <Container context="CTAWaypoint">
+    <Container context="CTAWaypoint" initialState={{}}>
       {({ CTAWaypointReached }) => (
         <PositionAnimation isVisible={CTAWaypointReached}>
           <div>
