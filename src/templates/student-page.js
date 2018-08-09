@@ -101,7 +101,7 @@ class StudentTemplate extends React.Component {
           <StickyContainer>
             <Header />
             {/* Landing section */}
-            <div className="u-backgroundWhite">
+            <div className="u-backgroundAlmostWhite">
               <div className="">
                 <div className="">
                   <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
@@ -139,7 +139,7 @@ class StudentTemplate extends React.Component {
                           </p>
                         </div>
                       </div>
-                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-spaceMB4 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
                         <AppLink
                           tags={['student-hero']}
                           className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"

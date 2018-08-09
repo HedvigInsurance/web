@@ -59,6 +59,7 @@ const Text = styled('span')`
   color: white;
   font-weight: 600;
   margin-left: ${MARGIN}px;
+  font-family: SoRay, sans-serif;
 
   ${mediaQuery(`
     font-size: 45px;
