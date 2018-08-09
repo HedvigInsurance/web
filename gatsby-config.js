@@ -56,6 +56,9 @@ module.exports = {
       resolve: 'gatsby-plugin-emotion',
     },
     {
+      resolve: 'set-static-js-name',
+    },
+    {
       resolve: 'netlify-branch',
     },
     {

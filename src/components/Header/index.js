@@ -7,6 +7,7 @@ import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.sv
 import AppLink from 'src/components/AppLink';
 
 import './Header.css';
+import { CTALinkContainer } from './cta-link-container';
 
 class Header extends React.Component {
   links = [
@@ -85,25 +86,21 @@ class Header extends React.Component {
                 </Link>
               </div>
               <div>
-                <nav className="Header-menu u-hidden u-lg-block">
-                  <div className="u-flex u-flexRow">
-                    {this.links.map((link) => (
-                      <Link
-                        key={link.path}
-                        to={link.path}
-                        className="Header-menu-link u-linkBlock"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </nav>
-                <AppLink
-                  tags={['header']}
-                  className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen u-md-inlineBlock u-lg-inlineBlock u-fontWeightBold"
-                >
-                  Kom igång
-                </AppLink>
+                <CTALinkContainer>
+                  <nav className="Header-menu u-hidden u-lg-block">
+                    <div className="u-flex u-flexRow">
+                      {this.links.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className="Header-menu-link u-linkBlock"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </nav>
+                </CTALinkContainer>
               </div>
               <button
                 type="button"
