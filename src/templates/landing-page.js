@@ -11,6 +11,7 @@ import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
 import { PriceSection } from 'src/sections/price';
+import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
@@ -123,22 +124,24 @@ class LandingTemplate extends React.Component {
             <div className="u-backgroundAlmostWhite">
               <div className="Home-hero">
                 <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
-                  <div className="u-sizeFull u-lg-size3of5 u-md-spacePT5 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
-                    <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
-                      {landing.heading}
-                    </h1>
-                    <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
-                      {landing.subheading}
-                    </p>
-                    <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
-                      <AppLink
-                        tags={['home-hero']}
-                        className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-                      >
-                        {landing.cta_text}
-                      </AppLink>
+                  <CTAWaypoint>
+                    <div className="u-sizeFull u-lg-size3of5 u-md-spacePT5 u-md-spacePH10 u-lg-spacePT6 Home-hero-content">
+                      <h1 className="Home-hero-title u-colorPrimaryBlue u-fontWeightBold u-fontSize2 u-md-fontSize2 u-lg-fontSize1 u-textCenter u-md-textLeft u-lg-textLeft u-fontFamilyHeader">
+                        {landing.heading}
+                      </h1>
+                      <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
+                        {landing.subheading}
+                      </p>
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
+                        <AppLink
+                          tags={['home-hero']}
+                          className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                        >
+                          {landing.cta_text}
+                        </AppLink>
+                      </div>
                     </div>
-                  </div>
+                  </CTAWaypoint>
                   <div className="u-sizeFull u-lg-size2of5">
                     <VisibilitySensor
                       partialVisibility
