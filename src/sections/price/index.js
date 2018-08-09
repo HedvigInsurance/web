@@ -15,6 +15,7 @@ const Title = styled('div')`
   padding-bottom: 20px;
   max-width: 800px;
   margin: 0 auto;
+  font-family: SoRay, sans-serif;
 
   @media (min-width: 500px) {
     padding-bottom: 30px;
