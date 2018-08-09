@@ -13,8 +13,8 @@ landing:
   heading: "Finns i chatten. På\_riktigt."
   paragraph: Månadsvis betalning. Ingen bindningstid.
   subheading: >-
-    Hemförsäkring som gjort för
-  subheading_emphasis: studenter
+    Hemförsäkring som gjort för studenter.
+  subheading_emphasis: Drulle ingår!
 three_explainers:
   heading: Barnsligt enkelt att kamma hem vuxenpoäng
   three_explainers:

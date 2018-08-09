@@ -111,7 +111,7 @@ class StudentTemplate extends React.Component {
                     </h1>
                     <p className="u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                       {landing.subheading}{' '}
-                      <span className="u-colorPrimaryGreen">
+                      <span className="u-colorPrimaryBlue u-fontWeightBold">
                         {landing.subheading_emphasis}
                       </span>
                     </p>
