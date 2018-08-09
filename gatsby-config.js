@@ -53,9 +53,6 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
-      resolve: 'gatsby-plugin-emotion',
-    },
-    {
       resolve: 'set-static-js-name',
     },
     {
