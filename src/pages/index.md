@@ -61,5 +61,6 @@ pricing:
   rental_price: 99kr
   owned_title: För dig i bostadsrätt
   owned_price: 129kr
-  bottom_paragraph: PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. 
+  bottom_paragraph: >-
+    PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. Ladda ner appen för att se ditt pris.
 ---
