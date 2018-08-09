@@ -106,10 +106,10 @@ class StudentTemplate extends React.Component {
               <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
                 <CTAWaypoint>
                   <div className="u-sizeFull u-lg-size3of5 u-md-spacePT7 u-md-spacePH10 u-lg-spacePT12">
-                    <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB12 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
+                    <h1 className="u-spaceMT8 u-md-spaceMT5 u-lg-spaceMT5 u-spaceMB12 u-colorBlack u-fontWeightBold u-fontSize3 u-md-fontSize2 u-lg-fontSize2 u-textCenter u-md-textLeft u-lg-textLeft u-spaceML10 u-md-spaceML0 u-lg-spaceML0 u-fontFamilyHeader">
                       {landing.heading}
                     </h1>
-                    <p className="u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
+                    <p className="Student-hero-subheading u-colorBlack u-spaceMB8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft">
                       {landing.subheading}{' '}
                       <span className="u-colorPrimaryBlue u-fontWeightBold">
                         {landing.subheading_emphasis}

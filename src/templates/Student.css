@@ -1,5 +1,10 @@
 @import "../css/variables.css";
 
+.Student-hero-subheading {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
 .Student-price-container {
   display: flex;
   justify-content: center;
@@ -8,6 +13,11 @@
 }
 
 @media (--md-viewport), (--lg-viewport) {
+
+  .Student-hero-subheading {
+    margin: inherit;
+    max-width: initial;
+  }
 
   .Student-price-container {
     justify-content: flex-start;
