@@ -270,14 +270,14 @@ class StudentTemplate extends React.Component {
                 </figure>
                 <div className="u-flex u-flexJustifyCenter u-lg-size4of5 u-flexExpand">
                   <div className="Grid u-flexJustifyAround u-sizeFull">
-                    <div className="u-flex u-flexRow u-lg-size1of4">
+                    <div className="u-flex u-flexRow u-spaceMB10 u-mb-spaceMB0 u-lg-spaceMB0 u-lg-size1of4">
                       <CheckIcon className="Student-checkmark" />
                       <div>
                         <h4>{perilForest.bullet1.title}</h4>
                         <p>{perilForest.bullet1.paragraph}</p>
                       </div>
                     </div>
-                    <div className="u-flex u-flexRow u-lg-size1of4">
+                    <div className="u-flex u-flexRow u-spaceMB10 u-mb-spaceMB0 u-lg-spaceMB0 u-lg-size1of4">
                       <CheckIcon className="Student-checkmark" />
                       <div>
                         <h4>{perilForest.bullet2.title}</h4>

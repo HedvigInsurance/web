@@ -60,6 +60,7 @@ const Text = styled('span')`
   font-weight: 600;
   margin-left: ${MARGIN}px;
   font-family: SoRay, sans-serif;
+  margin-top: 4px;
 
   ${mediaQuery(`
     font-size: 45px;
