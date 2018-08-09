@@ -108,9 +108,6 @@ collections:
               - label: CTA text
                 name: cta_text
                 widget: string
-              - label: paragraph
-                name: paragraph
-                widget: string
           - label: Three Explainers section
             name: three_explainers
             widget: object
@@ -168,6 +165,9 @@ collections:
             fields:
               - label: Heading
                 name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
                 widget: string
               - label: Cards
                 name: cards
