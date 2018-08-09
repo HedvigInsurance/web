@@ -12,6 +12,10 @@ import { CTALinkContainer } from './cta-link-container';
 class Header extends React.Component {
   links = [
     {
+      path: '/student',
+      label: 'Student',
+    },
+    {
       path: '/giving-back',
       label: 'Hur vi ger tillbaka',
     },
