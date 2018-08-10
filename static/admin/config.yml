@@ -189,25 +189,25 @@ collections:
                 name: heading
                 widget: string
               - label: Monthly Label
-                name: monthlyLabel
+                name: monthly_label
                 widget: string
               - label: Around Label
-                name: aroundLabel
+                name: around_label
                 widget: string
               - label: Rental Title
-                name: rentalTitle
+                name: rental_title
                 widget: string
               - label: Rental Price
-                name: rentalPrice
+                name: rental_price
                 widget: string
               - label: Owned Title
-                name: ownedTitle
+                name: owned_title
                 widget: string
               - label: Owned Price
-                name: ownedPrice
+                name: owned_price
                 widget: string
               - label: Bottom Paragraph
-                name: bottomParagraph
+                name: bottom_paragraph
                 widget: string
           - label: Customer source section
             name: customer_source
