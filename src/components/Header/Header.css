@@ -120,8 +120,8 @@
   top: 0;
   transform: scaleY(0);
   transform-origin: 0% 0% 0;
-  transition-delay: 250ms;
-  transition-duration: 250ms;
+  transition-delay: 200ms;
+  transition-duration: 200ms;
   transition-property: transform, opacity;
   white-space: nowrap;
   will-change: transform, opacity;
@@ -131,7 +131,7 @@
 .Header-popover .Popover-content {
   opacity: 0;
   transform: scale(0.8);
-  transition: transform 500ms, opacity 500ms;
+  transition: transform 400ms, opacity 400ms;
   will-change: transform, opacity;
 }
 
@@ -146,5 +146,5 @@
 .Header-popover.is-active .Popover-content {
   opacity: 1;
   transform: scale(1);
-  transition-delay: 250ms;
+  transition-delay: 200ms;
 }
