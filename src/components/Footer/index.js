@@ -79,7 +79,7 @@ const Footer = (props, { location }) => (
       </div>
       <div className="u-spaceMB7">
         <a
-          href="https://www.facebook.com/hedvigers"
+          href="https://www.fb.me/hedvigapp"
           target="_blank"
           rel="noopener noreferrer"
           className="u-spacePR10"
@@ -97,7 +97,7 @@ const Footer = (props, { location }) => (
           <InstagramIcon role="presentation" />
         </a>
         <a
-          href="https://twitter.com/hedvigers"
+          href="https://twitter.com/hedvigapp"
           target="_blank"
           rel="noopener noreferrer"
           className="u-spacePR10"

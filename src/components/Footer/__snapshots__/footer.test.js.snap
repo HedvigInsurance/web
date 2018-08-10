@@ -69,7 +69,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
       <a
         aria-label="Hedvig på Facebook"
         className="u-spacePR10"
-        href="https://www.facebook.com/hedvigers"
+        href="https://www.fb.me/hedvigapp"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -91,7 +91,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
       <a
         aria-label="Hedvig på Twitter"
         className="u-spacePR10"
-        href="https://twitter.com/hedvigers"
+        href="https://twitter.com/hedvigapp"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -217,7 +217,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
       <a
         aria-label="Hedvig på Facebook"
         className="u-spacePR10"
-        href="https://www.facebook.com/hedvigers"
+        href="https://www.fb.me/hedvigapp"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -239,7 +239,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
       <a
         aria-label="Hedvig på Twitter"
         className="u-spacePR10"
-        href="https://twitter.com/hedvigers"
+        href="https://twitter.com/hedvigapp"
         rel="noopener noreferrer"
         target="_blank"
       >
