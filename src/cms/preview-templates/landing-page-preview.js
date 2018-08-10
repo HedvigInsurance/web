@@ -13,7 +13,7 @@ const LandingPagePreview = ({ entry }) => (
       philosophy={entry.getIn(['data', 'philosophy']).toJS()}
       customerSource={entry.getIn(['data', 'customer_source']).toJS()}
       safety={entry.getIn(['data', 'safety']).toJS()}
-      pricing={entry.get('data', 'pricing').toJS()}
+      pricing={entry.getIn(['data', 'pricing']).toJS()}
     />
   </Provider>
 );
