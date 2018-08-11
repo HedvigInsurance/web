@@ -130,7 +130,7 @@
 
 .Header-popover .Popover-content {
   opacity: 0;
-  transform: scale(0.8);
+  transform: scale(0.9);
   transition: transform 400ms, opacity 400ms;
   will-change: transform, opacity;
 }
