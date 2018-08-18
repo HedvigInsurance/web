@@ -121,24 +121,26 @@ class Header extends React.Component {
                   this.popoverElem = popoverElem;
                 }}
               >
-                <div>
-                  {this.links.map((link) => (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className="u-spacePV11 u-linkBlock"
+                <div className="Popover-content">
+                  <div>
+                    {this.links.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        className="u-spacePV11 u-linkBlock"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="u-textCenter u-spacePT10">
+                    <AppLink
+                      tags={['header']}
+                      className="Button u-colorWhite u-backgroundPrimaryPurple"
                     >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-                <div className="u-textCenter u-spacePT10">
-                  <AppLink
-                    tags={['header']}
-                    className="Button u-colorWhite u-backgroundPrimaryPurple"
-                  >
-                    Ladda ner appen
-                  </AppLink>
+                      Ladda ner appen
+                    </AppLink>
+                  </div>
                 </div>
               </div>
             </div>
