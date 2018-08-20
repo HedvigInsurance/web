@@ -6,6 +6,9 @@ import GivingBackPagePreview from './preview-templates/giving-back-page-preview'
 import DownloadPagePreview from './preview-templates/download-page-preview';
 import StudentPagePreview from './preview-templates/student-page-preview';
 import FAQPagePreview from './preview-templates/faq-page-preview';
+import PrivacyPagePreview from './preview-templates/privacy-page-preview';
+import LegalPagePreview from './preview-templates/legal-page-preview';
+import TermsPagePreview from './preview-templates/terms-page-preview';
 
 CMS.registerPreviewStyle('/styles.css');
 CMS.registerPreviewTemplate('about-us', AboutPagePreview);
@@ -15,3 +18,6 @@ CMS.registerPreviewTemplate('giving-back', GivingBackPagePreview);
 CMS.registerPreviewTemplate('download', DownloadPagePreview);
 CMS.registerPreviewTemplate('student', StudentPagePreview);
 CMS.registerPreviewTemplate('faq', FAQPagePreview);
+CMS.registerPreviewTemplate('privacy', PrivacyPagePreview);
+CMS.registerPreviewTemplate('legal', LegalPagePreview);
+CMS.registerPreviewTemplate('terms', TermsPagePreview);

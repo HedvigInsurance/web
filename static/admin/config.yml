@@ -520,3 +520,79 @@ collections:
               - label: Answer
                 name: answer
                 widget: markdown
+      - file: src/pages/privacy/index.md
+        label: Privacy
+        name: privacy
+        path: /privacy
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /privacy
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: privacy-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+      - file: src/pages/legal/index.md
+        label: Legal
+        name: legal
+        path: /legal
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /legal
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: legal-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+      - file: src/pages/terms/index.md
+        label: Terms
+        name: terms
+        path: /terms
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /terms
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: terms-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+
