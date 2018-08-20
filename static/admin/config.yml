@@ -491,7 +491,7 @@ collections:
           - label: Error Text
             name: error_text
             widget: text
-      - file: src/pages/about-us/index.md
+      - file: src/pages/faq/index.md
         label: FAQ
         name: faq
         path: /faq
