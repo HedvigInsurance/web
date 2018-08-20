@@ -4,7 +4,8 @@ templateKey: faq-page
 title: Vanliga frågor | Hedvig
 heading: Frågor och svar
 questions:
-  -
+  - question: ""
+    answer: ""
   # - question: Vilka typer av försäkringar har Hedvig?
   #   answer: >-
   #     Just nu försäkrar Hedvig dig som äger eller hyr en lägenhet.
