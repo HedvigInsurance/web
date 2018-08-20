@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: hedviginsurance/web
-  branch: master
+  branch: feature/cmsify-the-rest
 
 media_folder: static/assets
 public_folder: assets
@@ -491,5 +491,32 @@ collections:
           - label: Error Text
             name: error_text
             widget: text
-
-
+      - file: src/pages/about-us/index.md
+        label: FAQ
+        name: faq
+        path: /faq
+        fields:
+          - label: Path
+            name: path
+            widget: hidden
+            default: /faq
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: faq-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Questions
+            name: questions
+            widget: list
+            fields:
+              - label: Question
+                name: question
+                widget: string
+              - label: Answer
+                name: answer
+                widget: markdown
