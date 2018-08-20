@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
+import remark from 'remark';
+import reactRenderer from 'remark-react';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -35,12 +37,18 @@ const FAQTemplate = ({ title, heading, questions }) => (
         <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
           {questions &&
             questions.map((question) => (
-              <div className="u-maxWidth1of1">
+              <div key={question.question} className="u-maxWidth1of1">
                 <div>
                   <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
                     {question.question}
                   </h2>
-                  <p className="u-spaceMB9">{question.answer}</p>
+                  <div className="u-spaceMB9">
+                    {
+                      remark()
+                        .use(reactRenderer)
+                        .processSync(question.answer).contents
+                    }
+                  </div>
                 </div>
               </div>
             ))}
