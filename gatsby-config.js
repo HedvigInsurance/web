@@ -23,7 +23,7 @@ if (!hasEnvConfig) {
 }
 
 const siteMetadata = {
-  title: 'Hedvig | Insurance. Unbroken.',
+  title: 'Hedvig | Få hjälp när du behöver det',
   siteName: 'Hedvig',
   siteUrl: 'https://www.hedvig.com',
   siteLogo:
@@ -32,11 +32,11 @@ const siteMetadata = {
   description:
     'Hedvig är en ny typ av försäkring. Byggd på smart teknik, omtanke och sunt förnuft. Så att du kan få hjälp på sekunder, och ersättning på minuter.',
   locale: 'sv_SE',
-  twitterUsername: '@hedvigers',
-  facebookProfile: 'https://www.facebook.com/hedvigers/',
-  twitterProfile: 'https://twitter.com/hedvigers',
+  twitterUsername: '@hedvigapp',
+  facebookProfile: 'https://www.fb.me/hedvigapp/',
+  twitterProfile: 'https://twitter.com/hedvigapp',
   linkedInProfile: 'https://www.linkedin.com/company/hedvig/',
-  instagramProfile: 'https://www.instagram.com/hedvigers/',
+  instagramProfile: 'https://www.instagram.com/hedvig.app/',
   supportEmail: 'help@hedvig.com',
   pressEmail: 'press@hedvig.com',
   contactEmail: 'hedvig@hedvig.com',
