@@ -5,42 +5,64 @@ import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebo
 import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
 import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
 
-const Footer = (props, { location }) => (
+export const footerPropTypes = {
+  linkSection1: PropTypes.arrayOf(
+    PropTypes.shape({ label: PropTypes.string, path: PropTypes.string }),
+  ).isRequired,
+  linkSection2: PropTypes.arrayOf(
+    PropTypes.shape({ label: PropTypes.string, path: PropTypes.string }),
+  ).isRequired,
+  appStoreAlt: PropTypes.string.isRequired,
+  playStoreAlt: PropTypes.string.isRequired,
+  facebookAlt: PropTypes.string.isRequired,
+  instagramAlt: PropTypes.string.isRequired,
+  twitterAlt: PropTypes.string.isRequired,
+  copyrightText: PropTypes.string.isRequired,
+  legalText: PropTypes.string.isRequired,
+};
+
+const Footer = (
+  {
+    data: {
+      linkSection1,
+      linkSection2,
+      appStoreAlt,
+      playStoreAlt,
+      facebookAlt,
+      instagramAlt,
+      twitterAlt,
+      copyrightText,
+      legalText,
+    },
+  },
+  { location },
+) => (
   <div className="u-backgroundPrimaryDarkBlue u-flexNone">
     <div className="Container">
       <div className="u-md-flex u-lg-flex u-flexRow u-spaceMT5 u-spaceMB8">
         <div className="u-flexGrow1">
           <nav className="Grid">
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/faq">
-                Vanliga frågor
-              </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-colorWhite"
-                to="/about-us"
-              >
-                Om Hedvig
-              </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-colorWhite"
-                to="/contact"
-              >
-                Kontakt
-              </Link>
+              {linkSection1 &&
+                linkSection1.map((link) => (
+                  <Link
+                    className="u-spaceMB9 u-linkBlock u-colorWhite"
+                    to={link.path}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
             </div>
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/press">
-                Press
-              </Link>
-              <Link
-                className="u-spaceMB9 u-linkBlock u-colorWhite"
-                to="/privacy"
-              >
-                Personuppgifter
-              </Link>
-              <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/legal">
-                Legal information
-              </Link>
+              {linkSection2 &&
+                linkSection2.map((link) => (
+                  <Link
+                    className="u-spaceMB9 u-linkBlock u-colorWhite"
+                    to={link.path}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
             </div>
           </nav>
         </div>
@@ -57,7 +79,7 @@ const Footer = (props, { location }) => (
               >
                 <img
                   src="/assets/appstores/app-store-badge@2x.png"
-                  alt="Ladda ner på App Store"
+                  alt={appStoreAlt}
                   height={54}
                 />
               </a>
@@ -70,7 +92,7 @@ const Footer = (props, { location }) => (
               >
                 <img
                   src="/assets/appstores/google-play-badge@2x.png"
-                  alt="Ladda ner på Google Play"
+                  alt={playStoreAlt}
                   height={54}
                 />
               </a>
@@ -83,7 +105,7 @@ const Footer = (props, { location }) => (
           target="_blank"
           rel="noopener noreferrer"
           className="u-spacePR10"
-          aria-label="Hedvig på Facebook"
+          aria-label={facebookAlt}
         >
           <FacebookIcon role="presentation" />
         </a>
@@ -92,7 +114,7 @@ const Footer = (props, { location }) => (
           target="_blank"
           rel="noopener noreferrer"
           className="u-spacePR9"
-          aria-label="Hedvig på Instagram"
+          aria-label={instagramAlt}
         >
           <InstagramIcon role="presentation" />
         </a>
@@ -101,25 +123,20 @@ const Footer = (props, { location }) => (
           target="_blank"
           rel="noopener noreferrer"
           className="u-spacePR10"
-          aria-label="Hedvig på Twitter"
+          aria-label={twitterAlt}
         >
           <TwitterIcon role="presentation" />
         </a>
       </div>
       <div className="u-spaceMB7">
-        <p className="u-fontSize10 u-colorWhite u-spaceMB9">
-          © Hedvig AB. Huvudkontor: Artillerigatan 10, 114 51, Stockholm. Org.
-          nr. 559093-0334.
-        </p>
-        <p className="u-fontSize10 u-colorWhite u-spaceMB9">
-          Exklusiv försäkringsgivare för Hedvigs försäkringar är International
-          Insurance Company of Hannover SE, Sverige filial, org. nr.
-          516402-6345. Hedvig står under Finansinspektionens tillsyn.
-        </p>
+        <p className="u-fontSize10 u-colorWhite u-spaceMB9">{copyrightText}</p>
+        <p className="u-fontSize10 u-colorWhite u-spaceMB9">{legalText}</p>
       </div>
     </div>
   </div>
 );
+
+Footer.propTypes = { data: footerPropTypes.isRequired };
 
 // Passed in from layouts/index
 Footer.contextTypes = {
@@ -127,5 +144,25 @@ Footer.contextTypes = {
     pathname: PropTypes.string,
   }).isRequired,
 };
+
+export const footerQuery = graphql`
+  fragment Footer_data on DataYaml {
+    linkSection1 {
+      label
+      path
+    }
+    linkSection2 {
+      label
+      path
+    }
+    appStoreAlt
+    playStoreAlt
+    facebookAlt
+    instagramAlt
+    twitterAlt
+    copyrightText
+    legalText
+  }
+`;
 
 export default Footer;

@@ -1,0 +1,25 @@
+linkSection1:
+  - label: Vanliga frågor
+    path: /faq
+  - label: Om Hedvig
+    path: /about-us
+  - label: Kontakt
+    path: /contact
+linkSection2:
+  - label: Press
+    path: /press
+  - label: Personuppgifter
+    path: /privacy
+  - label: Legal
+    path: /legal
+appStoreAlt: Ladda ner på App Store
+playStoreAlt: Ladda ner på Google Play
+facebookAlt: Hedvig på Facebook
+instagramAlt: Hedvig på Instagram
+twitterAlt: Hedvig på Twitter
+copyrightText: >-
+  © Hedvig AB. Huvudkontor: Artillerigatan 10, 114 51, Stockholm. Org. nr. 559093-0334.
+legalText: >-
+  Exklusiv försäkringsgivare för Hedvigs försäkringar är International
+  Insurance Company of Hannover SE, Sverige filial, org. nr.
+  516402-6345. Hedvig står under Finansinspektionens tillsyn.

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   section1: PropTypes.shape({
@@ -22,13 +22,20 @@ const propTypes = {
   }).isRequired,
 };
 
-const AboutUsTemplate = ({ title, heading, section1, section2 }) => (
+const AboutUsTemplate = ({
+  title,
+  heading,
+  section1,
+  section2,
+  header,
+  footer,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header />
+      <Header data={header} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPink">
           <div className="Container">
@@ -65,11 +72,14 @@ const AboutUsTemplate = ({ title, heading, section1, section2 }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer />
+    <Footer data={footer} />
   </main>
 );
 
-AboutUsTemplate.propTypes = propTypes;
+AboutUsTemplate.propTypes = {
+  ...pagePropTypes,
+  header: headerPropTypes.isRequired,
+};
 
 const AboutUs = ({ data }) => (
   <AboutUsTemplate
@@ -77,14 +87,18 @@ const AboutUs = ({ data }) => (
     heading={data.markdownRemark.frontmatter.heading}
     section1={data.markdownRemark.frontmatter.section1}
     section2={data.markdownRemark.frontmatter.section2}
+    header={data.header}
+    footer={data.footer}
   />
 );
 
 AboutUs.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape(propTypes),
+      frontmatter: PropTypes.shape(pagePropTypes),
     }),
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
 };
 
@@ -110,6 +124,14 @@ export const aboutPageQuery = graphql`
           paragraph3
         }
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

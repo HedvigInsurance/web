@@ -1,0 +1,10 @@
+links:
+  - path: /student
+    label: Student
+  - path: /giving-back
+    label: Hur vi ger tillbaka
+  - path: /faq
+    label: Vanliga frågor
+  - path: /about-us
+    label: Om Hedvig
+ctaText: Kom igång

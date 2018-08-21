@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import classNames from 'classnames';
 import { Sticky } from 'react-sticky';
@@ -9,25 +10,15 @@ import AppLink from 'src/components/AppLink';
 import './Header.css';
 import { CTALinkContainer } from './cta-link-container';
 
+export const headerPropTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({ path: PropTypes.string, label: PropTypes.string }),
+  ),
+  ctaText: PropTypes.string.isRequired,
+};
+
 class Header extends React.Component {
-  links = [
-    {
-      path: '/student',
-      label: 'Student',
-    },
-    {
-      path: '/giving-back',
-      label: 'Hur vi ger tillbaka',
-    },
-    {
-      path: '/faq',
-      label: 'Vanliga frågor',
-    },
-    {
-      path: '/about-us',
-      label: 'Om Hedvig',
-    },
-  ];
+  static propTypes = { data: headerPropTypes.isRequired };
 
   state = { popoverIsActive: false };
 
@@ -65,6 +56,9 @@ class Header extends React.Component {
   }
 
   render() {
+    const {
+      data: { links, ctaText },
+    } = this.props;
     const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
@@ -93,15 +87,16 @@ class Header extends React.Component {
                 <CTALinkContainer>
                   <nav className="Header-menu u-hidden u-lg-block">
                     <div className="u-flex u-flexRow">
-                      {this.links.map((link) => (
-                        <Link
-                          key={link.path}
-                          to={link.path}
-                          className="Header-menu-link u-linkBlock"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
+                      {links &&
+                        links.map((link) => (
+                          <Link
+                            key={link.path}
+                            to={link.path}
+                            className="Header-menu-link u-linkBlock"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
                     </div>
                   </nav>
                 </CTALinkContainer>
@@ -123,22 +118,23 @@ class Header extends React.Component {
               >
                 <div className="Popover-content">
                   <div>
-                    {this.links.map((link) => (
-                      <Link
-                        key={link.path}
-                        to={link.path}
-                        className="u-spacePV11 u-linkBlock"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+                    {links &&
+                      links.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className="u-spacePV11 u-linkBlock"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
                   </div>
                   <div className="u-textCenter u-spacePT10">
                     <AppLink
                       tags={['header']}
                       className="Button u-colorWhite u-backgroundPrimaryPurple"
                     >
-                      Ladda ner appen
+                      {ctaText}
                     </AppLink>
                   </div>
                 </div>
@@ -150,5 +146,15 @@ class Header extends React.Component {
     );
   }
 }
+
+export const headerQuery = graphql`
+  fragment Header_data on DataYaml {
+    links {
+      path
+      label
+    }
+    ctaText
+  }
+`;
 
 export default Header;

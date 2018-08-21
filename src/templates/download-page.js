@@ -4,15 +4,15 @@ import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
 
 import { ReactComponent as AppStoreIcon } from 'assets/appstores/app-store-badge-mini.svg';
 import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-badge-mini.svg';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   paragraph1: PropTypes.string.isRequired,
@@ -24,7 +24,7 @@ const propTypes = {
 };
 
 class DownloadTemplate extends React.Component {
-  static propTypes = propTypes;
+  static propTypes = { ...pagePropTypes, header: headerPropTypes.isRequired };
 
   state = {
     phoneNumber: '',
@@ -93,6 +93,8 @@ class DownloadTemplate extends React.Component {
       ctaText,
       successText,
       errorText,
+      header,
+      footer,
     } = this.props;
     const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
     const isDisabled = !phoneNumber || isSending;
@@ -102,7 +104,7 @@ class DownloadTemplate extends React.Component {
           <title>{title}</title>
         </Helmet>
         <StickyContainer>
-          <Header />
+          <Header data={header} />
           <article className="Site-content u-flexGrow1">
             <div
               className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
@@ -191,7 +193,7 @@ class DownloadTemplate extends React.Component {
             </div>
           </article>
         </StickyContainer>
-        <Footer />
+        <Footer data={footer} />
       </main>
     );
   }
@@ -209,6 +211,8 @@ const Download = ({ data }) => (
     ctaText={data.markdownRemark.frontmatter.cta_text}
     successText={data.markdownRemark.frontmatter.success_text}
     errorText={data.markdownRemark.frontmatter.error_text}
+    header={data.header}
+    footer={data.footer}
   />
 );
 
@@ -217,6 +221,8 @@ Download.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.objectOf(PropTypes.any),
     }),
+    header: headerPropTypes,
+    footer: footerPropTypes,
   }).isRequired,
 };
 
@@ -237,6 +243,14 @@ export const downloadPageQuery = graphql`
         success_text
         error_text
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

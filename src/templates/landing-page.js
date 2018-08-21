@@ -6,8 +6,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
 import { PriceSection } from 'src/sections/price';
@@ -111,6 +111,8 @@ class LandingTemplate extends React.Component {
       customerSource,
       safety,
       pricing,
+      header,
+      footer,
     } = this.props;
     return (
       <main className="Site">
@@ -119,7 +121,7 @@ class LandingTemplate extends React.Component {
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
-            <Header />
+            <Header data={header} />
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite">
               <div className="Home-hero">
@@ -457,7 +459,7 @@ class LandingTemplate extends React.Component {
           </StickyContainer>
         </section>
 
-        <Footer />
+        <Footer data={footer} />
       </main>
     );
   }
@@ -530,6 +532,8 @@ LandingTemplate.propTypes = {
     ownedPrice: PropTypes.string.isRequired,
     bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
+  header: headerPropTypes.isRequired,
+  footer: footerPropTypes.isRequired,
 };
 
 const Landing = ({ data }) => {
@@ -565,6 +569,8 @@ const Landing = ({ data }) => {
         monthlyLabel: copy.pricing.monthly_label,
         aroundLabel: copy.pricing.around_label,
       }}
+      header={data.header}
+      footer={data.footer}
     />
   );
 };
@@ -725,6 +731,14 @@ export const query = graphql`
           bottom_paragraph
         }
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

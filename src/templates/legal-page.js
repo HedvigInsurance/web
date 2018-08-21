@@ -5,10 +5,10 @@ import { StickyContainer } from 'react-sticky';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   sections: PropTypes.arrayOf(
@@ -16,13 +16,13 @@ const propTypes = {
   ).isRequired,
 };
 
-const LegalTemplate = ({ title, heading, sections }) => (
+const LegalTemplate = ({ title, heading, sections, header, footer }) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header />
+      <Header data={header} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPink">
           <div className="Container">
@@ -48,25 +48,32 @@ const LegalTemplate = ({ title, heading, sections }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer />
+    <Footer data={footer} />
   </main>
 );
 
-LegalTemplate.propTypes = propTypes;
+LegalTemplate.propTypes = {
+  ...pagePropTypes,
+  header: headerPropTypes.isRequired,
+};
 
 const Legal = ({ data }) => (
   <LegalTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     sections={data.markdownRemark.frontmatter.sections}
+    header={data.header}
+    footer={data.footer}
   />
 );
 
 Legal.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape(propTypes),
+      frontmatter: PropTypes.shape(pagePropTypes),
     }),
+    header: headerPropTypes,
+    footer: footerPropTypes,
   }).isRequired,
 };
 
@@ -82,6 +89,14 @@ export const legalPageQuery = graphql`
           section
         }
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;
