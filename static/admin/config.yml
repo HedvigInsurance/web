@@ -3,8 +3,8 @@ backend:
   repo: hedviginsurance/web
   branch: feature/cmsify-the-rest
 
-media_folder: static/assets
-public_folder: assets
+media_folder: static/uploads
+public_folder: /uploads
 
 publish_mode: editorial_workflow
 
@@ -662,4 +662,26 @@ collections:
               - label: Section
                 name: section
                 widget: markdown
+  - name: "blogposts"
+    label: Blog Posts
+    folder: src/pages/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: blog-post
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Top Image
+        name: topImage
+        widget: image
+      - label: Content
+        name: content
+        widget: markdown
 

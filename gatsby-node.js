@@ -5,6 +5,7 @@
  */
 
 const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
@@ -25,6 +26,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
               templateKey
               path
@@ -37,9 +41,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
     }
+    // Create regular pages from markdown files
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: node.frontmatter.path || node.fields.slug,
         component: path.resolve(
           __dirname,
           `src/templates/${node.frontmatter.templateKey}.js`,
@@ -48,4 +53,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
+  if (node.internal.type === 'MarkdownRemark') {
+    const value = createFilePath({ node, getNode });
+    createNodeField({ name: 'slug', node, value });
+  }
 };
