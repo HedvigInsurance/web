@@ -18,7 +18,9 @@ export const headerPropTypes = {
 };
 
 class Header extends React.Component {
-  static propTypes = { data: headerPropTypes.isRequired };
+  static propTypes = { data: headerPropTypes };
+
+  static defaultProps = { data: {} };
 
   state = { popoverIsActive: false };
 
