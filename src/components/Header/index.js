@@ -86,7 +86,7 @@ class Header extends React.Component {
                 </Link>
               </div>
               <div>
-                <CTALinkContainer>
+                <CTALinkContainer ctaText={ctaText}>
                   <nav className="Header-menu u-hidden u-lg-block">
                     <div className="u-flex u-flexRow">
                       {links &&
