@@ -27,7 +27,7 @@
     "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react": "^7.11.1",
     "gatsby": "^1.9.277",
     "gatsby-image": "^1.0.31",
     "gatsby-link": "^1.6.46",
