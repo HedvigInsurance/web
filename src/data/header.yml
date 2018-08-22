@@ -7,4 +7,6 @@ links:
     label: Vanliga frågor
   - path: /about-us
     label: Om Hedvig
+  - path: /blog
+    label: Blogg
 ctaText: Kom igång

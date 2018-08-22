@@ -8,6 +8,7 @@ import reactRenderer from 'remark-react';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
+import Link from 'gatsby-link';
 
 const Blog = ({ data }) => {
   const { posts, page, header, footer } = data;
@@ -19,9 +20,11 @@ const Blog = ({ data }) => {
       <StickyContainer>
         <Header data={header} />
         <div className="Site-content">
-          {posts.edges.map(({ node: { frontmatter } }) => (
+          {posts.edges.map(({ node: { frontmatter, fields } }) => (
             <article>
-              <h2>{frontmatter.title}</h2>
+              <h2>
+                <Link to={fields.slug}>{frontmatter.title}</Link>
+              </h2>
               <img src={frontmatter.topImage} alt="" />
               <div>
                 {
@@ -44,6 +47,9 @@ export const blogQuery = graphql`
     posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             date
