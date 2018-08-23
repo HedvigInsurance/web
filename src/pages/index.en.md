@@ -29,7 +29,7 @@ philosophy:
     card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
     card2_paragraph: The rest is set aside for damages so we can pay out quickly.
     card3_paragraph: >-
-      If there is any money left at the end of the year it goes to charities
+      If there is any money left at the end of the year we give it to charities
       selected by our members.
   heading: A different type of insurer
   paragraph: >-
