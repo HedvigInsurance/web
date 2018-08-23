@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
+import format from 'date-fns/format';
+import parse from 'date-fns/parse';
+import svLocale from 'date-fns/locale/sv';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -29,13 +32,11 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} />
       <article className="Site-content">
-        <div className="u-backgroundSecondaryPink">
-          <div className="Container">
-            <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
-              {title}
-            </h1>
-          </div>
-          <p>{date}</p>
+        <div className="Container">
+          <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-colorPrimaryDarkBlue u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
+            {title}
+          </h1>
+          <p>{format(parse(date), 'd MMM, YYYY', { locale: svLocale })}</p>
         </div>
         <img src={topImage} alt="" />
         <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">

@@ -37,7 +37,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
-  } = data[langKey];
+  } = data[langKey || 'se'];
   return (
     <div className="u-backgroundPrimaryDarkBlue u-flexNone">
       <div className="Container">
