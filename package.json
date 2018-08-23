@@ -60,6 +60,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "prettier-stylelint": "^0.4.2",
     "prop-types": "^15.6.2",
+    "ptz-i18n": "^0.4.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",

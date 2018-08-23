@@ -76,18 +76,14 @@ collections:
           - label: Legal text
             name: legalText
             widget: text
-  - name: "pages"
-    label: "Pages"
+  - name: "pagesSwedish"
+    label: "Pages, Swedish"
     files:
       - file: src/pages/about-us/index.md
         label: About Us
         name: about-us
         path: /about-us
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /about-us
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -132,10 +128,6 @@ collections:
         name: contact
         path: /contact
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /contact
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -310,10 +302,6 @@ collections:
         name: student
         path: /student
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /student
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -453,10 +441,6 @@ collections:
             name: templateKey
             widget: hidden
             default: giving-pack-page
-          - label: Path
-            name: path
-            widget: hidden
-            default: /giving-back
           - label: Title
             name: title
             widget: string
@@ -530,10 +514,6 @@ collections:
         name: download
         path: /download
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /download
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -563,10 +543,6 @@ collections:
         name: faq
         path: /faq
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /faq
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -592,10 +568,6 @@ collections:
         name: privacy
         path: /privacy
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /privacy
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -617,10 +589,6 @@ collections:
         name: legal
         path: /legal
         fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /legal
           - label: Template Key
             name: templateKey
             widget: hidden
@@ -642,10 +610,556 @@ collections:
         name: terms
         path: /terms
         fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: terms-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+  - name: "pagesEnglish"
+    label: "Pages, English"
+    files:
+      - file: src/pages/about-us/index.en.md
+        label: About Us
+        name: about-us
+        path: /about-us
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: about-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Section 1
+            name: section1
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph 1
+                name: paragraph1
+                widget: text
+              - label: Paragraph 2
+                name: paragraph2
+                widget: text
+          - label: Section 2
+            name: section2
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph 1
+                name: paragraph1
+                widget: text
+              - label: Paragraph 2
+                name: paragraph2
+                widget: text
+              - label: Paragraph 3
+                name: paragraph3
+                widget: text
+      - file: src/pages/contact/index.en.md
+        label: Contact
+        name: contact
+        path: /contact
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: contact-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+      - file: src/pages/index.en.md
+        label: Landing
+        name: landing
+        path: /
+        fields:
           - label: Path
             name: path
             widget: hidden
-            default: /terms
+            default: /
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: landing-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Landing section
+            name: landing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Subheading
+                name: subheading
+                widget: string
+              - label: CTA text
+                name: cta_text
+                widget: string
+          - label: Three Explainers section
+            name: three_explainers
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Three Explainers
+                name: three_explainers
+                widget: object
+                fields:
+                  - label: Insurance in minutes
+                    name: insurance_in_minutes
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Claim on your phone
+                    name: claim_on_phone
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Paid right away
+                    name: paid_right_away
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+          - label: Peril Forest section
+            name: peril_forest
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bottom paragraph
+                name: bottom_paragraph
+                widget: string
+          - label: Model section
+            name: philosophy
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: string
+              - label: Cards
+                name: cards
+                widget: object
+                fields:
+                  - label: Card 1 paragraph
+                    name: card1_paragraph
+                    widget: text
+                  - label: Card 2 paragraph
+                    name: card2_paragraph
+                    widget: text
+                  - label: Card 3 paragraph
+                    name: card3_paragraph
+          - label: Pricing section
+            name: pricing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Monthly Label
+                name: monthly_label
+                widget: string
+              - label: Around Label
+                name: around_label
+                widget: string
+              - label: Rental Title
+                name: rental_title
+                widget: string
+              - label: Rental Price
+                name: rental_price
+                widget: string
+              - label: Owned Title
+                name: owned_title
+                widget: string
+              - label: Owned Price
+                name: owned_price
+                widget: string
+              - label: Bottom Paragraph
+                name: bottom_paragraph
+                widget: string
+          - label: Customer source section
+            name: customer_source
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Image accessibility text
+                name: image_alt
+                widget: text
+              - label: Bottom paragraph
+                name: bottom_paragraph
+                widget: text
+          - label: Safety section
+            name: safety
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Item 1
+                name: item1
+                widget: text
+              - label: Item 2
+                name: item2
+                widget: text
+              - label: Item 3
+                name: item3
+                widget: text
+      - file: src/pages/student/index.en.md
+        label: Student
+        name: student
+        path: /student
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: student-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Landing section
+            name: landing
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Subheading
+                name: subheading
+                widget: string
+              - label: CTA 1 text
+                name: cta_text1
+                widget: string
+              - label: CTA 2 text
+                name: cta_text2
+                widget: string
+              - label: paragraph
+                name: paragraph
+                widget: string
+              - label: Bubble 1
+                name: bubble1
+                widget: object
+                fields:
+                  - label: Price
+                    name: price
+                    widget: string
+                  - label: Explainer
+                    name: explainer
+                    widget: string
+              - label: Bubble 2
+                name: bubble2
+                widget: object
+                fields:
+                  - label: Price
+                    name: price
+                    widget: string
+                  - label: Explainer
+                    name: explainer
+                    widget: string
+          - label: Three Explainers section
+            name: three_explainers
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Three Explainers
+                name: three_explainers
+                widget: object
+                fields:
+                  - label: Insurance in minutes
+                    name: insurance_in_minutes
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Claim on your phone
+                    name: claim_on_phone
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+                  - label: Paid right away
+                    name: paid_right_away
+                    widget: object
+                    fields:
+                      - label: Title
+                        name: title
+                        widget: string
+                      - label: Paragraph
+                        name: paragraph
+                        widget: text
+          - label: Peril Forest section
+            name: peril_forest
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bullet 1
+                name: bullet1
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Paragraph
+                    name: paragraph
+                    widget: text
+              - label: Bullet 2
+                name: bullet2
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Paragraph
+                    name: paragraph
+                    widget: text
+              - label: Bullet 3
+                name: bullet3
+                widget: object
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Paragraph
+                    name: paragraph
+                    widget: text
+              - label: Bottom paragraph
+                name: bottom_paragraph
+                widget: string
+          - label: Bottom CTA
+            name: bottom_cta
+            widget: string
+      - file: src/pages/giving-back/index.en.md
+        label: Giving Back
+        name: giving-back
+        path: /giving-back
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: giving-pack-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Section 1
+            name: section1
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+          - label: Section 2
+            name: section2
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+              - label: Subheading
+                name: subheading
+                widget: string
+              - label: Bullets
+                name: bullets
+                widget: list
+                fields:
+                  - label: Bullet
+                    name: bullet
+                    widget: text
+          - label: Section 3
+            name: section3
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Bullet 1
+                name: bullet1
+                widget: text
+              - label: Bullet 2
+                name: bullet2
+                widget: text
+              - label: Bullet 3
+                name: bullet3
+                widget: text
+          - label: Section 4
+            name: section4
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: SOS Barnbyar text
+                name: sos_barnbyar
+                widget: text
+              - label: Barncancerfonden text
+                name: barncancerfonden
+                widget: text
+          - label: CTA Text
+            name: cta_text
+            widget: string
+      - file: src/pages/download/index.en.md
+        label: Download
+        name: download
+        path: /download
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: download-page
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Paragraph 1
+            name: paragraph1
+            widget: text
+          - label: Paragraph 2
+            name: paragraph2
+          - label: Phone Number-placeholder
+            name: phone_number_placeholder
+            widget: string
+          - label: CTA Text
+            name: cta_text
+            widget: string
+          - label: Success Text
+            name: success_text
+            widget: text
+          - label: Error Text
+            name: error_text
+            widget: text
+      - file: src/pages/faq/index.en.md
+        label: FAQ
+        name: faq
+        path: /faq
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: faq-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Questions
+            name: questions
+            widget: list
+            fields:
+              - label: Question
+                name: question
+                widget: string
+              - label: Answer
+                name: answer
+                widget: markdown
+      - file: src/pages/privacy/index.en.md
+        label: Privacy
+        name: privacy
+        path: /privacy
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: privacy-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+      - file: src/pages/legal/index.en.md
+        label: Legal
+        name: legal
+        path: /legal
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: legal-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Heading
+            name: heading
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - label: Section
+                name: section
+                widget: markdown
+      - file: src/pages/terms/index.en.md
+        label: Terms
+        name: terms
+        path: /terms
+        fields:
           - label: Template Key
             name: templateKey
             widget: hidden
