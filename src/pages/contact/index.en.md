@@ -1,5 +1,6 @@
 ---
 templateKey: contact-page
-title: Kontakt | Hedvig
-heading: Vill du komma i kontakt med oss?
+title: Contact | Hedvig
+heading: Don't hesitate to contact us.
 ---
+
