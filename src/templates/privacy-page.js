@@ -16,13 +16,20 @@ const pagePropTypes = {
   ).isRequired,
 };
 
-const PrivacyTemplate = ({ title, heading, sections, header, footer }) => (
+const PrivacyTemplate = ({
+  title,
+  heading,
+  sections,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPink">
           <div className="Container">
@@ -48,7 +55,7 @@ const PrivacyTemplate = ({ title, heading, sections, header, footer }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
@@ -56,15 +63,17 @@ PrivacyTemplate.propTypes = {
   ...pagePropTypes,
   header: headerPropTypes.isRequired,
   footer: footerPropTypes.isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const Privacy = ({ data }) => (
+const Privacy = ({ data, pathContext }) => (
   <PrivacyTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     sections={data.markdownRemark.frontmatter.sections}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -76,6 +85,7 @@ Privacy.propTypes = {
     header: headerPropTypes,
     footer: footerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { PrivacyTemplate };

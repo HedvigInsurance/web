@@ -47,13 +47,14 @@ const GivingBackTemplate = ({
   ctaText,
   header,
   footer,
+  langKey,
 }) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPurple">
           <div className="Container">
@@ -160,7 +161,7 @@ const GivingBackTemplate = ({
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
@@ -169,7 +170,7 @@ GivingBackTemplate.propTypes = {
   header: headerPropTypes.isRequired,
 };
 
-const GivingBack = ({ data }) => (
+const GivingBack = ({ data, pathContext }) => (
   <GivingBackTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
@@ -180,6 +181,7 @@ const GivingBack = ({ data }) => (
     ctaText={data.markdownRemark.frontmatter.cta_text}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -190,6 +192,7 @@ GivingBack.propTypes = {
     }),
     header: headerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { GivingBackTemplate };

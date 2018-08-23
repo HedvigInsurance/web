@@ -17,65 +17,135 @@ collections:
         name: header
         path: /header
         fields:
-          - label: Links
-            name: links
-            widget: list
+          - label: Swedish
+            name: se
+            widget: object
             fields:
-              - label: Label
-                name: label
-                widget: string
-              - label: Path
-                name: path
-                widget: string
-          - label: CTA Text
-            name: ctaText
-            widget: string
+            - label: Links
+              name: links
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: CTA Text
+              name: ctaText
+              widget: string
+          - label: English
+            name: en
+            widget: object
+            fields:
+            - label: Links
+              name: links
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: CTA Text
+              name: ctaText
+              widget: string
       - file: src/data/footer.yml
         label: Footer
         name: footer
         path: /footer
         fields:
-          - label: Link Section 1
-            name: linkSection1
-            widget: list
+          - label: Swedish
+            name: se
+            widget: object
             fields:
-              - label: Label
-                name: label
-                widget: string
-              - label: Path
-                name: path
-                widget: string
-          - label: Link Section 2
-            name: linkSection2
-            widget: list
+            - label: Link Section 1
+              name: linkSection1
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: Link Section 2
+              name: linkSection2
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: App Store Alt text
+              name: appStoreAlt
+              widget: string
+            - label: Play Store Alt text
+              name: playStoreAlt
+              widget: string
+            - label: Facebook Alt text
+              name: facebookAlt
+              widget: string
+            - label: Instagram Alt text
+              name: instagramAlt
+              widget: string
+            - label: Twitter Alt text
+              name: twitterAlt
+              widget: string
+            - label: Copyright text
+              name: copyrightText
+              widget: text
+            - label: Legal text
+              name: legalText
+              widget: text
+          - label: English
+            name: en
+            widget: object
             fields:
-              - label: Label
-                name: label
-                widget: string
-              - label: Path
-                name: path
-                widget: string
-          - label: App Store Alt text
-            name: appStoreAlt
-            widget: string
-          - label: Play Store Alt text
-            name: playStoreAlt
-            widget: string
-          - label: Facebook Alt text
-            name: facebookAlt
-            widget: string
-          - label: Instagram Alt text
-            name: instagramAlt
-            widget: string
-          - label: Twitter Alt text
-            name: twitterAlt
-            widget: string
-          - label: Copyright text
-            name: copyrightText
-            widget: text
-          - label: Legal text
-            name: legalText
-            widget: text
+            - label: Link Section 1
+              name: linkSection1
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: Link Section 2
+              name: linkSection2
+              widget: list
+              fields:
+                - label: Label
+                  name: label
+                  widget: string
+                - label: Path
+                  name: path
+                  widget: string
+            - label: App Store Alt text
+              name: appStoreAlt
+              widget: string
+            - label: Play Store Alt text
+              name: playStoreAlt
+              widget: string
+            - label: Facebook Alt text
+              name: facebookAlt
+              widget: string
+            - label: Instagram Alt text
+              name: instagramAlt
+              widget: string
+            - label: Twitter Alt text
+              name: twitterAlt
+              widget: string
+            - label: Copyright text
+              name: copyrightText
+              widget: text
+            - label: Legal text
+              name: legalText
+              widget: text
   - name: "pagesSwedish"
     label: "Pages, Swedish"
     files:

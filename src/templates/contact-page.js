@@ -89,18 +89,20 @@ ContactTemplate.propTypes = {
   footer: footerPropTypes.isRequired,
 };
 
-const Contact = ({ data }) => (
+const Contact = ({ data, pathContext }) => (
   <ContactTemplate
     image={data.file}
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
 Contact.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { ContactTemplate };

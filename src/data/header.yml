@@ -1,12 +1,31 @@
-links:
-  - path: /student
-    label: Student
-  - path: /giving-back
-    label: Hur vi ger tillbaka
-  - path: /faq
-    label: Vanliga frågor
-  - path: /about-us
-    label: Om Hedvig
-  - path: /blog
-    label: Blogg
-ctaText: Kom igång
+se:
+  links:
+    - path: /student
+      label: Student
+    - path: /giving-back
+      label: Hur vi ger tillbaka
+    - path: /faq
+      label: Vanliga frågor
+    - path: /about-us
+      label: Om Hedvig
+    - path: /blog
+      label: Blogg
+  ctaText: Kom igång
+  logoLink:
+    path: /
+    altText: Hedvig hem
+en:
+  links:
+    - path: /en/student
+      label: Student
+    - path: /en/giving-back
+      label: How we give back
+    - path: /en/faq
+      label: FAQ
+    - path: /en/about-us
+      label: About Hedvig
+  ctaText: Kom igång
+  logoLink:
+    path: /en
+    altText: Hedvig hem
+

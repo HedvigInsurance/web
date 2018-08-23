@@ -21,7 +21,7 @@ export const footerPropTypes = {
   legalText: PropTypes.string.isRequired,
 };
 
-const Footer = ({ data = {} }, { location }) => {
+const Footer = ({ data = {}, langKey }, { location }) => {
   const {
     linkSection1,
     linkSection2,
@@ -32,7 +32,7 @@ const Footer = ({ data = {} }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
-  } = data;
+  } = data[langKey];
   return (
     <div className="u-backgroundPrimaryDarkBlue u-flexNone">
       <div className="Container">
@@ -125,6 +125,18 @@ const Footer = ({ data = {} }, { location }) => {
             <TwitterIcon role="presentation" />
           </a>
         </div>
+        <div>
+          <Link to="/">
+            <span role="img" aria-label="Swedish">
+              🇸🇪
+            </span>
+          </Link>
+          <Link to="/en">
+            <span role="img" aria-label="English">
+              🇬🇧
+            </span>
+          </Link>
+        </div>
         <div className="u-spaceMB7">
           <p className="u-fontSize10 u-colorWhite u-spaceMB9">
             {copyrightText}
@@ -136,7 +148,11 @@ const Footer = ({ data = {} }, { location }) => {
   );
 };
 
-Footer.propTypes = { data: footerPropTypes.isRequired };
+Footer.propTypes = {
+  data: PropTypes.shape({ se: footerPropTypes, en: footerPropTypes })
+    .isRequired,
+  langKey: PropTypes.string.isRequired,
+};
 
 // Passed in from layouts/index
 Footer.contextTypes = {
@@ -147,21 +163,40 @@ Footer.contextTypes = {
 
 export const footerQuery = graphql`
   fragment Footer_data on DataYaml {
-    linkSection1 {
-      label
-      path
+    en {
+      linkSection1 {
+        label
+        path
+      }
+      linkSection2 {
+        label
+        path
+      }
+      appStoreAlt
+      playStoreAlt
+      facebookAlt
+      instagramAlt
+      twitterAlt
+      copyrightText
+      legalText
     }
-    linkSection2 {
-      label
-      path
+    se {
+      linkSection1 {
+        label
+        path
+      }
+      linkSection2 {
+        label
+        path
+      }
+      appStoreAlt
+      playStoreAlt
+      facebookAlt
+      instagramAlt
+      twitterAlt
+      copyrightText
+      legalText
     }
-    appStoreAlt
-    playStoreAlt
-    facebookAlt
-    instagramAlt
-    twitterAlt
-    copyrightText
-    legalText
   }
 `;
 

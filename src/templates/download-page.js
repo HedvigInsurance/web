@@ -95,6 +95,7 @@ class DownloadTemplate extends React.Component {
       errorText,
       header,
       footer,
+      langKey,
     } = this.props;
     const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
     const isDisabled = !phoneNumber || isSending;
@@ -104,7 +105,7 @@ class DownloadTemplate extends React.Component {
           <title>{title}</title>
         </Helmet>
         <StickyContainer>
-          <Header data={header} />
+          <Header data={header} langKey={langKey} />
           <article className="Site-content u-flexGrow1">
             <div
               className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
@@ -193,13 +194,13 @@ class DownloadTemplate extends React.Component {
             </div>
           </article>
         </StickyContainer>
-        <Footer data={footer} />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
 }
 
-const Download = ({ data }) => (
+const Download = ({ data, pathContext }) => (
   <DownloadTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
@@ -213,6 +214,7 @@ const Download = ({ data }) => (
     errorText={data.markdownRemark.frontmatter.error_text}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -224,6 +226,7 @@ Download.propTypes = {
     header: headerPropTypes,
     footer: footerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { DownloadTemplate };

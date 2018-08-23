@@ -18,7 +18,10 @@ export const headerPropTypes = {
 };
 
 class Header extends React.Component {
-  static propTypes = { data: headerPropTypes };
+  static propTypes = {
+    data: PropTypes.shape({ se: headerPropTypes, en: headerPropTypes }),
+    langKey: PropTypes.string.isRequired,
+  };
 
   static defaultProps = { data: {} };
 
@@ -58,9 +61,9 @@ class Header extends React.Component {
   }
 
   render() {
-    const {
-      data: { links, ctaText },
-    } = this.props;
+    const { data, langKey } = this.props;
+    console.log(data);
+    const { links, ctaText, logoLink } = data[langKey];
     const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
@@ -81,7 +84,7 @@ class Header extends React.Component {
           <header className="Header" style={style}>
             <div className="u-flex">
               <div className="u-flexGrow1 Header-logo">
-                <Link to="/" aria-label="Hedvig hem">
+                <Link to={logoLink.path} aria-label={logoLink.altText}>
                   <Logo />
                 </Link>
               </div>
@@ -151,11 +154,29 @@ class Header extends React.Component {
 
 export const headerQuery = graphql`
   fragment Header_data on DataYaml {
-    links {
-      path
-      label
+    se {
+      links {
+        path
+        label
+      }
+      ctaText
+      logoLink {
+        path
+        altText
+      }
     }
-    ctaText
+
+    en {
+      links {
+        path
+        label
+      }
+      ctaText
+      logoLink {
+        path
+        altText
+      }
+    }
   }
 `;
 

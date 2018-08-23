@@ -19,13 +19,20 @@ const pagePropTypes = {
   ).isRequired,
 };
 
-const FAQTemplate = ({ title, heading, questions, header, footer }) => (
+const FAQTemplate = ({
+  title,
+  heading,
+  questions,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryGreen">
           <div className="Container">
@@ -55,7 +62,7 @@ const FAQTemplate = ({ title, heading, questions, header, footer }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
@@ -64,13 +71,14 @@ FAQTemplate.propTypes = {
   header: headerPropTypes.isRequired,
 };
 
-const FAQ = ({ data }) => (
+const FAQ = ({ data, pathContext }) => (
   <FAQTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     questions={data.markdownRemark.frontmatter.questions}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -82,6 +90,7 @@ FAQ.propTypes = {
     header: headerPropTypes,
     footer: footerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { FAQTemplate };

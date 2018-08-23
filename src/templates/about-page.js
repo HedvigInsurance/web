@@ -29,13 +29,14 @@ const AboutUsTemplate = ({
   section2,
   header,
   footer,
+  langKey,
 }) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPink">
           <div className="Container">
@@ -72,16 +73,18 @@ const AboutUsTemplate = ({
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
 AboutUsTemplate.propTypes = {
   ...pagePropTypes,
   header: headerPropTypes.isRequired,
+  footer: footerPropTypes.isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const AboutUs = ({ data }) => (
+const AboutUs = ({ data, pathContext }) => (
   <AboutUsTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
@@ -89,6 +92,7 @@ const AboutUs = ({ data }) => (
     section2={data.markdownRemark.frontmatter.section2}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -100,6 +104,8 @@ AboutUs.propTypes = {
     header: PropTypes.shape(headerPropTypes),
     footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string.isRequired })
+    .isRequired,
 };
 
 export { AboutUsTemplate };

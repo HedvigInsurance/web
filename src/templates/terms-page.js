@@ -16,13 +16,20 @@ const pagePropTypes = {
   ).isRequired,
 };
 
-const TermsTemplate = ({ title, heading, sections, header, footer }) => (
+const TermsTemplate = ({
+  title,
+  heading,
+  sections,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPurple">
           <div className="Container">
@@ -47,7 +54,7 @@ const TermsTemplate = ({ title, heading, sections, header, footer }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
@@ -57,13 +64,14 @@ TermsTemplate.propTypes = {
   footer: footerPropTypes.isRequired,
 };
 
-const Terms = ({ data }) => (
+const Terms = ({ data, pathContext }) => (
   <TermsTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     sections={data.markdownRemark.frontmatter.sections}
     header={data.header}
     footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -75,6 +83,7 @@ Terms.propTypes = {
     header: headerPropTypes,
     footer: footerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { TermsTemplate };

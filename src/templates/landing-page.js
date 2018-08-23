@@ -113,6 +113,7 @@ class LandingTemplate extends React.Component {
       pricing,
       header,
       footer,
+      langKey,
     } = this.props;
     return (
       <main className="Site">
@@ -121,7 +122,7 @@ class LandingTemplate extends React.Component {
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
-            <Header data={header} />
+            <Header data={header} langKey={langKey} />
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite">
               <div className="Home-hero">
@@ -459,7 +460,7 @@ class LandingTemplate extends React.Component {
           </StickyContainer>
         </section>
 
-        <Footer data={footer} />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
@@ -534,9 +535,10 @@ LandingTemplate.propTypes = {
   }).isRequired,
   header: headerPropTypes.isRequired,
   footer: footerPropTypes.isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const Landing = ({ data }) => {
+const Landing = ({ data, pathContext }) => {
   const copy = data.landingPage.frontmatter;
   return (
     <LandingTemplate
@@ -571,12 +573,14 @@ const Landing = ({ data }) => {
       }}
       header={data.header}
       footer={data.footer}
+      langKey={pathContext.langKey}
     />
   );
 };
 
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { LandingTemplate };

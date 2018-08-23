@@ -94,6 +94,7 @@ class StudentTemplate extends React.Component {
       wordmarkFile,
       header,
       footer,
+      langKey,
     } = this.props;
     return (
       <main className="Site">
@@ -102,7 +103,7 @@ class StudentTemplate extends React.Component {
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
-            <Header data={header} />
+            <Header data={header} langKey={langKey} />
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite u-mb-spacePL9 u-lg-spacePL9">
               <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
@@ -316,7 +317,7 @@ class StudentTemplate extends React.Component {
           </StickyContainer>
         </section>
 
-        <Footer data={footer} />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
@@ -360,9 +361,10 @@ StudentTemplate.propTypes = {
   bottomCta: PropTypes.string.isRequired,
   header: headerPropTypes.isRequired,
   footer: footerPropTypes.isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const Student = ({ data }) => {
+const Student = ({ data, pathContext }) => {
   const copy = data.studentPage.frontmatter;
   return (
     <StudentTemplate
@@ -379,12 +381,14 @@ const Student = ({ data }) => {
       bottomCta={copy.bottom_cta}
       header={data.header}
       footer={data.footer}
+      langKey={pathContext.langKey}
     />
   );
 };
 
 Student.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { StudentTemplate };
