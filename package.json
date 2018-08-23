@@ -16,7 +16,7 @@
     "constate": "^0.7.2",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
-    "enzyme": "^3.4.0",
+    "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^5.4.0",
