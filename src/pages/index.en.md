@@ -1,65 +1,64 @@
 ---
 templateKey: landing-page
-title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
+title: "Hedvig Insurance |\_Help when you need it"
 landing:
-  cta_text: Kom igång
-  heading: "Få hjälp när du behöver det"
+  cta_text: Get started
+  heading: Get help when you need it
   subheading: >-
-    Hedvig är en ny sorts hemförsäkring för dig, din lägenhet och dina
-    favoritsaker. Det är enkelt, snabbt och rättvist.
+    Hedvig is a new type of insurance. It protects you, your apartment and your
+    favourite things. It’s simple, fast and fair.
 three_explainers:
-  heading: Slipp telefonköer och hissmusik
+  heading: Skip the phone queues and elevator music
   three_explainers:
     claim_on_phone:
-      paragraph: >-
-        Fråga vad som helst om din försäkring. Hedvig är alltid bara ett
-        knapptryck bort
-      title: "Få svar på dina frågor på\_nolltid"
+      paragraph: 'Have a question about your insurance? Hedvig is just a tap away. '
+      title: Get immediate answers
     insurance_in_minutes:
-      paragraph: >-
-        Ladda ner appen, svara på Hedvigs frågor i chatten och signera med
-        mobilt BankID
-      title: "Signa upp snabbt och\_enkelt"
+      paragraph: Download the app. Answer a few questions. Sign with your mobile BankID.
+      title: Signup in seconds
     paid_right_away:
       paragraph: >-
-        Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
-        intelligens
-      title: 'Hjälp på sekunder, ersättning på minuter'
+        With our advanced AI we have drastically reduced how long it takes to
+        file a claim. 
+      title: Help in seconds. Replacement in minutes.
 peril_forest:
-  bottom_paragraph: Läs allt om skyddet i appen.
-  heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
+  bottom_paragraph: Read all about the protection in the app.
+  heading: Hedvig covers everything a typical insurance covers – even your gadgets.
 philosophy:
-  paragraph: >-
-    Jämfört med vanlig försäkring fungerar Hedvig typ, tvärtom. Vi har nämligen skapat en försäkringsmodell som sätter ditt intresse framför vårt. Allt bygger på att vi tar ut en fast avgift. Vilket kanske inte låter som en stor grej. Men det är det. För om vi inte hade tagit en fast avgift, då hade vi kunnat tjäna pengar på att betala mindre till dig när du behöver hjälp. Då finns det risk att vi hade krånglat med dig. Tvingat dig fylla i blanketter. Och varit precis som ett gammalt försäkringsbolag.
   cards:
-    card1_paragraph: Hedvig tar ut en låg fast serviceavgift som en andel av din månadskostnad
-    card2_paragraph: >-
-      Resten reserveras till skadeersättningar så att vi kan betala ut
-      blixtsnabbt
-    card3_paragraph: Blir det något över doneras det till ett gott ändamål
-  heading: Byggt på en schysstare filosofi
-customer_source:
-  bottom_paragraph: 'Våra användare byter till Hedvig från:'
-  heading: Redan försäkrad? Vi sköter bytet
-  image_alt: >-
-    Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
-    If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
+    card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
+    card2_paragraph: The rest is set aside for damages so we can pay out quickly.
+    card3_paragraph: >-
+      If there is any money left at the end of the year we give it to charities
+      selected by our members.
+  heading: A different type of insurer
   paragraph: >-
-    Våra användare byter till Hedvig från:
+    Hedvig does things differently from traditional insurers. Our model puts
+    your interests first. It starts with us only taking a fixed fee. By doing
+    this we have no incentive to pay out less in claims or create unnecessary
+    delays or hassles in the claims process. 
+pricing:
+  around_label: 'Starting at '
+  bottom_paragraph: >-
+    PS! These prices are estimates based on a single occupant living in a
+    small-ish apartment. Get your personal price in the app.
+  heading: Billed monthly. No fixed contracts!
+  monthly_label: / month
+  owned_price: 129kr
+  owned_title: Owned apartment
+  rental_price: 99kr
+  rental_title: Rental apartment
+customer_source:
+  bottom_paragraph: 'Hedvig members are switching from the following traditional insurers:'
+  heading: 'Already insured? No problem, we handle the change for you.'
+  image_alt: >-
+    Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
+    Trygg Hansa, 17% Övriga och 11% Folksam.
 safety:
   item1: >-
-    Hedvig är tryggat av Inter Hannover, del av en av världens största
-    försäkringsgrupper
-  item2: Med AA-rating från Standard & Poor's
-  item3: Hedvig är auktoriserat av Finansinspektionen
-pricing:
-  heading: Månadsvis betalning. Ingen bindningstid
-  monthly_label: / mån
-  around_label: omkring
-  rental_title: För dig i hyresrätt
-  rental_price: 99kr
-  owned_title: För dig i bostadsrätt
-  owned_price: 129kr
-  bottom_paragraph: >-
-    PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. Ladda ner appen för att se ditt pris.
+    Hedvig is re-insured by Inter Hannover, part of one of the world’s largest
+    insurance groups.
+  item2: Received a AA-rating from Standard & Poor's
+  item3: Authorized by the Swedish Finansinspektionen
 ---
+
