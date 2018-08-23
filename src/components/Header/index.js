@@ -62,8 +62,7 @@ class Header extends React.Component {
 
   render() {
     const { data, langKey } = this.props;
-    console.log(data);
-    const { links, ctaText, logoLink } = data[langKey];
+    const { links, ctaTextDesktop, ctaTextMobile, logoLink } = data[langKey];
     const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
@@ -89,7 +88,7 @@ class Header extends React.Component {
                 </Link>
               </div>
               <div>
-                <CTALinkContainer ctaText={ctaText}>
+                <CTALinkContainer ctaText={ctaTextDesktop}>
                   <nav className="Header-menu u-hidden u-lg-block">
                     <div className="u-flex u-flexRow">
                       {links &&
@@ -139,7 +138,7 @@ class Header extends React.Component {
                       tags={['header']}
                       className="Button u-colorWhite u-backgroundPrimaryPurple"
                     >
-                      {ctaText}
+                      {ctaTextMobile}
                     </AppLink>
                   </div>
                 </div>
@@ -159,7 +158,8 @@ export const headerQuery = graphql`
         path
         label
       }
-      ctaText
+      ctaTextDesktop
+      ctaTextMobile
       logoLink {
         path
         altText
@@ -171,7 +171,8 @@ export const headerQuery = graphql`
         path
         label
       }
-      ctaText
+      ctaTextDesktop
+      ctaTextMobile
       logoLink {
         path
         altText

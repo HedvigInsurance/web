@@ -34,6 +34,19 @@ collections:
             - label: CTA Text
               name: ctaText
               widget: string
+            - label: CTA Text Mobile
+              name: ctaTextMobile
+              widget: string
+            - label: Logo link
+              name: logoLink
+              widget: object
+              fields:
+                - label: Path
+                  name: path
+                  widget: string
+                - label: Alt Text
+                  name: altText
+                  widget: string
           - label: English
             name: en
             widget: object
@@ -48,9 +61,22 @@ collections:
                 - label: Path
                   name: path
                   widget: string
-            - label: CTA Text
-              name: ctaText
+            - label: CTA Text Desktop
+              name: ctaTextDesktop
               widget: string
+            - label: CTA Text Mobile
+              name: ctaTextMobile
+              widget: string
+            - label: Logo link
+              name: logoLink
+              widget: object
+              fields:
+                - label: Path
+                  name: path
+                  widget: string
+                - label: Alt Text
+                  name: altText
+                  widget: string
       - file: src/data/footer.yml
         label: Footer
         name: footer

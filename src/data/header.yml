@@ -10,7 +10,8 @@ se:
       label: Om Hedvig
     - path: /blog
       label: Blogg
-  ctaText: Kom igång
+  ctaTextDesktop: Kom igång
+  ctaTextMobile: Ladda ner appen
   logoLink:
     path: /
     altText: Hedvig hem
@@ -24,7 +25,8 @@ en:
       label: FAQ
     - path: /en/about-us
       label: About Hedvig
-  ctaText: Kom igång
+  ctaTextDesktop: Get started
+  ctaTextMobile: Download the app
   logoLink:
     path: /en
     altText: Hedvig hem
