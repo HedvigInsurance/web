@@ -167,7 +167,7 @@ const GivingBackTemplate = ({
 
 GivingBackTemplate.propTypes = {
   ...pagePropTypes,
-  header: headerPropTypes.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
 };
 
 const GivingBack = ({ data, pathContext }) => (

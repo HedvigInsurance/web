@@ -61,8 +61,8 @@ const LegalTemplate = ({
 
 LegalTemplate.propTypes = {
   ...pagePropTypes,
-  header: headerPropTypes.isRequired,
-  footer: footerPropTypes.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
 };
 

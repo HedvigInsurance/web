@@ -68,7 +68,7 @@ const FAQTemplate = ({
 
 FAQTemplate.propTypes = {
   ...pagePropTypes,
-  header: headerPropTypes.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
 };
 
 const FAQ = ({ data, pathContext }) => (
@@ -87,8 +87,8 @@ FAQ.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape(pagePropTypes),
     }),
-    header: headerPropTypes,
-    footer: footerPropTypes,
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };

@@ -10,16 +10,26 @@ import AppLink from 'src/components/AppLink';
 import './Header.css';
 import { CTALinkContainer } from './cta-link-container';
 
-export const headerPropTypes = {
+const propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({ path: PropTypes.string, label: PropTypes.string }),
   ),
-  ctaText: PropTypes.string.isRequired,
+  ctaTextDesktop: PropTypes.string.isRequired,
+  ctaTextMobile: PropTypes.string.isRequired,
+  logoLink: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    altText: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export const headerPropTypes = {
+  se: PropTypes.shape(propTypes),
+  en: PropTypes.shape(propTypes),
 };
 
 class Header extends React.Component {
   static propTypes = {
-    data: PropTypes.shape({ se: headerPropTypes, en: headerPropTypes }),
+    data: PropTypes.shape(headerPropTypes),
     langKey: PropTypes.string.isRequired,
   };
 

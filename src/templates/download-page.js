@@ -24,7 +24,10 @@ const pagePropTypes = {
 };
 
 class DownloadTemplate extends React.Component {
-  static propTypes = { ...pagePropTypes, header: headerPropTypes.isRequired };
+  static propTypes = {
+    ...pagePropTypes,
+    header: PropTypes.shape(headerPropTypes).isRequired,
+  };
 
   state = {
     phoneNumber: '',
@@ -223,8 +226,8 @@ Download.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.objectOf(PropTypes.any),
     }),
-    header: headerPropTypes,
-    footer: footerPropTypes,
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };

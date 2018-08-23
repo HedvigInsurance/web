@@ -60,8 +60,8 @@ const TermsTemplate = ({
 
 TermsTemplate.propTypes = {
   ...pagePropTypes,
-  header: headerPropTypes.isRequired,
-  footer: footerPropTypes.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
 };
 
 const Terms = ({ data, pathContext }) => (

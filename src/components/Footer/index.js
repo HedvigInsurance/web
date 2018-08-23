@@ -5,7 +5,7 @@ import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebo
 import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
 import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
 
-export const footerPropTypes = {
+const propTypes = {
   linkSection1: PropTypes.arrayOf(
     PropTypes.shape({ label: PropTypes.string, path: PropTypes.string }),
   ).isRequired,
@@ -19,6 +19,11 @@ export const footerPropTypes = {
   twitterAlt: PropTypes.string.isRequired,
   copyrightText: PropTypes.string.isRequired,
   legalText: PropTypes.string.isRequired,
+};
+
+export const footerPropTypes = {
+  se: PropTypes.shape(propTypes),
+  en: PropTypes.shape(propTypes),
 };
 
 const Footer = ({ data = {}, langKey }, { location }) => {
@@ -43,6 +48,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
                 {linkSection1 &&
                   linkSection1.map((link) => (
                     <Link
+                      key={link.path}
                       className="u-spaceMB9 u-linkBlock u-colorWhite"
                       to={link.path}
                     >
@@ -54,6 +60,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
                 {linkSection2 &&
                   linkSection2.map((link) => (
                     <Link
+                      key={link.path}
                       className="u-spaceMB9 u-linkBlock u-colorWhite"
                       to={link.path}
                     >
@@ -149,8 +156,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
 };
 
 Footer.propTypes = {
-  data: PropTypes.shape({ se: footerPropTypes, en: footerPropTypes })
-    .isRequired,
+  data: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
 };
 

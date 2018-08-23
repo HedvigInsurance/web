@@ -61,8 +61,8 @@ const Press = ({ data: { header, footer } }) => (
 
 Press.propTypes = {
   data: PropTypes.shape({
-    header: headerPropTypes,
-    footer: footerPropTypes,
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
 };
 

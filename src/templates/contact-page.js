@@ -85,8 +85,8 @@ const ContactTemplate = ({ image, title, heading, header, footer }) => (
 ContactTemplate.propTypes = {
   image: PropTypes.objectOf(PropTypes.object).isRequired,
   ...pagePropTypes,
-  header: headerPropTypes.isRequired,
-  footer: footerPropTypes.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
 };
 
 const Contact = ({ data, pathContext }) => (
