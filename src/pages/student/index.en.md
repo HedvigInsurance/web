@@ -12,7 +12,7 @@ landing:
   paragraph: Billed monthly. No fixed contracts!
   subheading: Home insurance designed for students.
 three_explainers:
-  heading: Barnsligt enkelt att kamma hem vuxenpoäng
+  heading: An easy way to earn some 'adult points'.
   three_explainers:
     claim_on_phone:
       paragraph: 'Have a question about your insurance? Hedvig is just a tap away. '
