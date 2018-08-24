@@ -29,14 +29,15 @@ peril_forest:
   bottom_paragraph: Läs allt om ditt skydd i appen
   bullet1:
     paragraph: >-
-      Skulle något hända så är det enkelt att få hjälp med Hedvig. Det kan vara
-      en skada på resan eller ett krossat fönster på hemmafesten.  
+      If something were to happen it's easy to get help with Hedvig. For
+      instance, if you get sick while on vacation or break a window during a
+      house party.
     title: För att få hjälp
   bullet2:
     paragraph: >-
-      När mobilen går sönder eller cykeln blir stulen ska du inte behöva offra
-      hela månadens CSN för att fortsätta som vanligt.
-    title: För att få ersättning
+      If your phone breaks or your bike is stolen, you won't have to sacrifice a
+      whole month's CSN to get back up and running.
+    title: To get compensation
   bullet3:
     paragraph: >-
       Du har bättre saker för dig än att gå runt och oroa dig. Det löser sig med
