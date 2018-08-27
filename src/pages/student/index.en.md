@@ -3,16 +3,16 @@ templateKey: student-page
 title: Hedvig Insurance | Help when you need it
 landing:
   bubble1:
-    explainer: per month for rentals
+    explainer: a month for renters
     price: 79 kr
   bubble2:
-    explainer: per month for owned
+    explainer: a month for owners
     price: 99 kr
   heading: All by chat. For real.
   paragraph: Billed monthly. No fixed contracts!
   subheading: Home insurance designed for students.
 three_explainers:
-  heading: Barnsligt enkelt att kamma hem vuxenpoäng
+  heading: An easy way to earn some 'adult points'.
   three_explainers:
     claim_on_phone:
       paragraph: 'Have a question about your insurance? Hedvig is just a tap away. '
@@ -24,7 +24,7 @@ three_explainers:
       paragraph: >-
         With our advanced AI we have drastically reduced how long it take to
         file a claim. So you get help 
-      title: For quick compensation
+      title: Quick compensation
 peril_forest:
   bottom_paragraph: Read all about the protection in the app.
   bullet1:
