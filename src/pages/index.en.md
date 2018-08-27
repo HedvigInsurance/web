@@ -22,8 +22,8 @@ three_explainers:
         file a claim. 
       title: Help in seconds. Replacement in minutes.
 peril_forest:
-  bottom_paragraph: Read all about the protection in the app.
-  heading: Hedvig covers everything a typical insurance covers – even your gadgets.
+  bottom_paragraph: Read the full terms of the insurance in the app.
+  heading: Hedvig covers everything a traditional insurance covers – even your gadgets.
 philosophy:
   cards:
     card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
