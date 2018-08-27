@@ -8,6 +8,7 @@ import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
+import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
 
 import { ReactComponent as AppStoreIcon } from 'assets/appstores/app-store-badge-mini.svg';
 import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-badge-mini.svg';
@@ -187,6 +188,7 @@ class DownloadTemplate extends React.Component {
                     <PlayStoreIcon />
                   </a>
                 </div>
+                <FakeHedvigWebButton />
               </div>
             </div>
           </article>
