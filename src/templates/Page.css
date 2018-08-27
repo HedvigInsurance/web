@@ -3,19 +3,31 @@ section {
 }
 
 section > div > h1 {
+  font-family: SoRay, sans-serif !important;
   font-size: 25px !important;
+  font-weight: 700;
   line-height: 33px !important;
   margin-bottom: 20px;
   margin-top: 62.5px;
 }
 
 section > div > h2 {
+  font-family: SoRay, sans-serif !important;
   font-size: 22px !important;
+  font-weight: 700;
   line-height: 30px !important;
   margin-bottom: 20px;
   margin-top: 62.5px;
 }
 
+section > div > h3 {
+  font-family: CircularStd, sans-serif;
+  font-size: 20px !important;
+  font-weight: 700;
+  line-height: 29px !important;
+  margin-top: 30px;
+}
+
 section > div > p {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
