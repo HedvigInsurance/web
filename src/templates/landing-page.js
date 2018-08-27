@@ -150,7 +150,7 @@ class LandingTemplate extends React.Component {
                       partialVisibility
                       onChange={this.chatDemoOnVisibilityChange}
                     >
-                      <div className="u-spaceMV6 u-lg-spaceMT4">
+                      <div className="Home-chatDemo-phone u-spaceMV6 u-lg-spaceMT4">
                         <LottieLoader
                           ref={(anim) => {
                             this.chatAnim = anim;
