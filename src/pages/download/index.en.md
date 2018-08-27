@@ -1,14 +1,16 @@
 ---
 templateKey: download-page
-title: Ladda ner appen | Hedvig
-heading: Skaffa Hedvig-appen
+heading: Download the Hedvig app
 paragraph1: >-
-  För att kunna erbjuda de bästa priserna och den bästa servicen har vi gjort Hedvig till en app. Den är enkel att ladda ner 
-  och installera och inom bara ett par minuter kan vi ge dig ditt personliga pris.
-paragraph2: >-
-  Oroa dig inte – vi kommer inte ringa eller använda ditt nummer för att sälja något.
-phone_number_placeholder: Skriv in ditt mobilnummer
-cta_text: Få en länk till appen
-success_text: Vi har skickat dig ett sms med en länk för att ladda ner Hedvig-appen
-error_text: Ojdå! Det gick inte att skicka sms till det angivna numret. Dubbelkolla numret och prova igen.
+  In order to give you the best price and best possible service we made Hedvig
+  into an app. It's easy to download and in a few short minutes we can give you
+  your own, personalised insurance price.
+paragraph2: Don't worry - we won't use your number to call or sell you anything!
+phone_number_placeholder: Enter you mobile number
+cta_text: Get a link to the app
+success_text: Great! We have sent you an SMS with a link to the Hedvig app.
+error_text: >-
+  Oops. We couldn't send an SMS to that number. Please double-check the number
+  and try again.
 ---
+
