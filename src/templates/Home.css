@@ -41,7 +41,12 @@
 */
 
 .Home-chatDemo-phone {
-  width: 375px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.Home-chatDemo-phone > div {
+  width: 100% !important;
 }
 
 @media (min-width: 745px) {
@@ -52,6 +57,7 @@
   }
 
   .Home-chatDemo-phone {
+    margin: 0 auto;
     width: 550px;
   }
 }
