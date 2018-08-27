@@ -27,6 +27,10 @@ export const footerPropTypes = {
 };
 
 const Footer = ({ data = {}, langKey }, { location }) => {
+  const dataForLanguage = data[langKey || 'se'];
+
+  if (!dataForLanguage) return null;
+
   const {
     linkSection1,
     linkSection2,
@@ -37,7 +41,8 @@ const Footer = ({ data = {}, langKey }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
-  } = data[langKey || 'se'];
+  } = dataForLanguage;
+
   return (
     <div className="u-backgroundPrimaryDarkBlue u-flexNone">
       <div className="Container">
