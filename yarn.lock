@@ -654,6 +654,12 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.51"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.51"
 
+"@babel/runtime@7.0.0-rc.3":
+  version "7.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-rc.3.tgz#7b0d6762220d2efa2958e72f8a661e1409c2d5d9"
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -793,6 +799,10 @@
 "@emotion/utils@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.0.tgz#08ef599fe8c41e6184fa0b5a6ca460d318d3abb1"
+
+"@hedviginsurance/brand@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.0.0.tgz#4209c89eb2ec500583233e4a5bd173e767f63ee8"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -11625,6 +11635,10 @@ react-deep-force-update@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"
 
+react-delayed@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-delayed/-/react-delayed-0.2.3.tgz#6432d2d20c8d3b242e278b4087046fda243d1131"
+
 react-dev-utils@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.1.tgz#9f2763e7bafa1a1b9c52254d2a479deec280f111"
@@ -11774,6 +11788,12 @@ react-portal@^3.1.0:
   dependencies:
     prop-types "^15.5.8"
 
+react-portal@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.1.5.tgz#6665d4d2a92d47d6f8b07a6529e26fc52d5cccde"
+  dependencies:
+    prop-types "^15.5.8"
+
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"
@@ -11865,6 +11885,12 @@ react-split-pane@^0.1.66:
     inline-style-prefixer "^3.0.6"
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
+
+react-spring@^5.6.9:
+  version "5.6.9"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.9.tgz#df4243460bd82b5406b830ac0054429541844151"
+  dependencies:
+    "@babel/runtime" "7.0.0-rc.3"
 
 react-sticky@^6.0.3:
   version "6.0.3"
@@ -12196,6 +12222,10 @@ regenerator-runtime@^0.10.5:
 regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
 
 regenerator-transform@^0.10.0:
   version "0.10.1"
