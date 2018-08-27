@@ -3,7 +3,7 @@ templateKey: student-page
 title: Hedvig Insurance | Help when you need it
 landing:
   bubble1:
-    explainer: per month for rentals
+    explainer: /month for rentals
     price: 79 kr
   bubble2:
     explainer: per month for owned
