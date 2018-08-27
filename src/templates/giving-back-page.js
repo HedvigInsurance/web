@@ -9,6 +9,7 @@ import AppLink from 'src/components/AppLink';
 import { ReactComponent as SosBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg';
 import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
+import './Page.css';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,

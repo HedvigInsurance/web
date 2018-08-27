@@ -7,6 +7,7 @@ import reactRenderer from 'remark-react';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
+import './Page.css';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,

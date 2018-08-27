@@ -1,0 +1,19 @@
+section {
+  margin-bottom: 20px;
+}
+
+section > div > h1 {
+  margin-bottom: 20px;
+}
+
+section > div > h2 {
+  margin-bottom: 20px;
+}
+
+section > div > p {
+  margin-bottom: 15px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
