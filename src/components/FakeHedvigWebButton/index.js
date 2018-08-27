@@ -42,7 +42,7 @@ export const FakeHedvigWebButton = () => (
             trackEvent('Click fake web button');
           }}
         >
-          <Button>Skaffa hedvig på webben</Button>
+          <Button>Skaffa Hedvig på webben</Button>
         </ButtonContainer>
         <Dialog onRequestClose={() => setVisible(false)} visible={visible} />
       </React.Fragment>
