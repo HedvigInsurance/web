@@ -11,14 +11,10 @@ sections:
       försäkringstjänster till dig genom vår app eller web.
 
 
-
-
       När du använder tjänsten och interagerar med oss delar du samtidigt
       personlig information. Vi använder den informationen för att
       tillhandahålla dig försäkring, men också för att anpassa våra erbjudanden
       till dig och för att utveckla och förbättra våra produkter och service.
-
-
 
 
       När vi säger personuppgifter menar vi information som direkt eller
@@ -32,19 +28,17 @@ sections:
       på vår hemsida.
 
 
-
-
       Din integritet är viktig för oss. Därför gör vi vårt yttersta för att
       skydda dina uppgifter och hantera din information försiktigt och varsamt,
       och krypterar all känslig data.
   - section: >-
-      ## Personuppgifterna vi samlar in
+      ## **Personuppgifterna vi samlar in**
 
 
       De personuppgifter som vi samlar in är beroende av vilken relation vi har
       till dig. Informationen här nedanför anger exempel på information vi kan
       komma att behandla. Informationen behöver inte gälla för dig, utan är
       exempel på typer av informationen vi kan behandla om våra användare.
-  - {}
+  - section: '## Allmän information'
 ---
 
