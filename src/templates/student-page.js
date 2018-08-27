@@ -157,7 +157,7 @@ class StudentTemplate extends React.Component {
                     partialVisibility
                     onChange={this.chatDemoOnVisibilityChange}
                   >
-                    <div className="u-spaceMV6 u-lg-spaceMT4">
+                    <div className="Home-chatDemo-phone u-spaceMV6 u-lg-spaceMT4">
                       <ChatDemo ref={this.chatAnimRef} width={307} />
                     </div>
                   </VisibilitySensor>
