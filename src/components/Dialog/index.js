@@ -82,7 +82,7 @@ export const Dialog = ({ visible, onRequestClose }) => {
                 <Spacing />
                 <p>
                   Du kan snart skaffa Hedvig på webben, tack för visat intresse!
-                  🙌
+                  <span role="img">🙌</span>
                 </p>
                 <Spacing />
                 <Button onClick={onRequestClose}>Okej</Button>
@@ -95,7 +95,7 @@ export const Dialog = ({ visible, onRequestClose }) => {
   );
 };
 
-Modal.propTypes = {
+Dialog.propTypes = {
   visible: PropTypes.bool.isRequired,
   onRequestClose: PropTypes.func.isRequired,
 };
