@@ -82,7 +82,9 @@ export const Dialog = ({ visible, onRequestClose }) => {
                 <Spacing />
                 <p>
                   Du kan snart skaffa Hedvig på webben, tack för visat intresse!
-                  <span role="img">🙌</span>
+                  <span role="img" aria-label="Raised hands emoji">
+                    🙌
+                  </span>
                 </p>
                 <Spacing />
                 <Button onClick={onRequestClose}>Okej</Button>
