@@ -1,19 +1,21 @@
 section {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 section > div > h1 {
+  font-size: 25px !important;
+  line-height: 33px !important;
   margin-bottom: 20px;
+  margin-top: 62.5px;
 }
 
 section > div > h2 {
+  font-size: 22px !important;
+  line-height: 30px !important;
   margin-bottom: 20px;
+  margin-top: 62.5px;
 }
 
 section > div > p {
   margin-bottom: 15px;
-}
-
-section:last-child {
-  margin-bottom: 0;
 }
