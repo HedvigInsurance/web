@@ -72,8 +72,12 @@ class Header extends React.Component {
 
   render() {
     const { data, langKey } = this.props;
-    const { links, ctaTextDesktop, ctaTextMobile, logoLink } =
-      data[langKey || 'se'] || {};
+
+    const dataForLanguage = data[langKey || 'se'];
+
+    if (!dataForLanguage) return null;
+
+    const { links, ctaTextDesktop, ctaTextMobile, logoLink } = dataForLanguage;
     const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
