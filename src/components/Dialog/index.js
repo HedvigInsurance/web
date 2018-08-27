@@ -3,6 +3,7 @@ import { colors } from '@hedviginsurance/brand';
 import styled from 'react-emotion';
 import { Spring } from 'react-spring';
 import Delayed from 'react-delayed';
+import PropTypes from 'prop-types';
 
 import { Button } from 'src/components/Button';
 import { Modal } from './modal';
@@ -92,4 +93,9 @@ export const Dialog = ({ visible, onRequestClose }) => {
       </Modal>
     </Delayed>
   );
+};
+
+Modal.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  onRequestClose: PropTypes.func.isRequired,
 };

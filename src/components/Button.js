@@ -1,6 +1,7 @@
 import React from 'react';
 import { colors } from '@hedviginsurance/brand';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 const ButtonStyling = styled('button')({
   backgroundColor: colors.GREEN,
@@ -13,3 +14,11 @@ const ButtonStyling = styled('button')({
 export const Button = ({ children, onClick }) => (
   <ButtonStyling onClick={onClick}>{children}</ButtonStyling>
 );
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  onClick: PropTypes.func.isRequired,
+};
