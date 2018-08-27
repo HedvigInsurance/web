@@ -21,7 +21,7 @@ section > div > h2 {
 }
 
 section > div > h3 {
-  font-family: CircularStd, sans-serif;
+  font-family: SoRay, sans-serif !important;
   font-size: 20px !important;
   font-weight: 700;
   line-height: 29px !important;
