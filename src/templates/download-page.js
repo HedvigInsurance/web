@@ -13,8 +13,6 @@ import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
 const propTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-  paragraph1: PropTypes.string.isRequired,
-  paragraph2: PropTypes.string.isRequired,
   phoneNumberPlaceholder: PropTypes.string.isRequired,
   ctaText: PropTypes.string.isRequired,
   successText: PropTypes.string.isRequired,
