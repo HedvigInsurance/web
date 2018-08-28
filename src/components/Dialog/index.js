@@ -83,7 +83,7 @@ export const Dialog = ({ visible, onRequestClose }) => {
                 <p>
                   Du kan snart skaffa Hedvig på webben, tack för visat intresse!
                   <span role="img" aria-label="Raised hands emoji">
-                    🙌
+                    &nbsp;🙌
                   </span>
                 </p>
                 <Spacing />
