@@ -85,8 +85,6 @@ class DownloadTemplate extends React.Component {
     const {
       title,
       heading,
-      paragraph1,
-      paragraph2,
       phoneNumberPlaceholder,
       ctaText,
       successText,
