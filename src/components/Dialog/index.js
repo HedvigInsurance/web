@@ -40,8 +40,8 @@ const InnerContent = styled('div')({
   padding: '50px 30px',
   textAlign: 'center',
   borderRadius: 20,
-  width: 450,
-  maxWidth: '90%',
+  width: '85vw',
+  maxWidth: 450,
   height: 300,
   transform: 'translateX(-50%) translateY(-50%)',
 });
@@ -83,7 +83,7 @@ export const Dialog = ({ visible, onRequestClose }) => {
                 <p>
                   Du kan snart skaffa Hedvig på webben, tack för visat intresse!
                   <span role="img" aria-label="Raised hands emoji">
-                    🙌
+                    &nbsp;🙌
                   </span>
                 </p>
                 <Spacing />
