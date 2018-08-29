@@ -27,13 +27,13 @@ const Footer = (props, { location }) => (
               >
                 Kontakt
               </Link>
-              <Link
+              <a
                 className="u-spaceMB9 u-linkBlock u-colorWhite"
-                to="https://join.hedvig.com"
+                href="https://join.hedvig.com"
                 target="_blank"
               >
                 Jobb
-              </Link>
+              </a>
             </div>
             <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
               <Link className="u-spaceMB9 u-linkBlock u-colorWhite" to="/press">
