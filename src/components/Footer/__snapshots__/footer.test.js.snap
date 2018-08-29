@@ -40,6 +40,7 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
             <a
               className="u-spaceMB9 u-linkBlock u-colorWhite"
               href="https://join.hedvig.com"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Jobb
@@ -165,6 +166,7 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
             <a
               className="u-spaceMB9 u-linkBlock u-colorWhite"
               href="https://join.hedvig.com"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Jobb
