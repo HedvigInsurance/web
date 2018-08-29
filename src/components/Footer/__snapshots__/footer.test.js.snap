@@ -37,13 +37,14 @@ exports[`<Footer /> Should hide app store badges when on /download page 1`] = `
             >
               Kontakt
             </GatsbyLink>
-            <GatsbyLink
+            <a
               className="u-spaceMB9 u-linkBlock u-colorWhite"
+              href="https://join.hedvig.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://join.hedvig.com"
             >
               Jobb
-            </GatsbyLink>
+            </a>
           </div>
           <div
             className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
@@ -162,13 +163,14 @@ exports[`<Footer /> Should render correctly with app store downloads 1`] = `
             >
               Kontakt
             </GatsbyLink>
-            <GatsbyLink
+            <a
               className="u-spaceMB9 u-linkBlock u-colorWhite"
+              href="https://join.hedvig.com"
+              rel="noopener noreferrer"
               target="_blank"
-              to="https://join.hedvig.com"
             >
               Jobb
-            </GatsbyLink>
+            </a>
           </div>
           <div
             className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3"
