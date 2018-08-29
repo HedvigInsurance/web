@@ -31,6 +31,7 @@ const Footer = (props, { location }) => (
                 className="u-spaceMB9 u-linkBlock u-colorWhite"
                 href="https://join.hedvig.com"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Jobb
               </a>
