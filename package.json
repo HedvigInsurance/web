@@ -14,7 +14,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "classnames": "^2.2.6",
-    "constate": "^0.7.2",
+    "constate": "^0.8.0",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.8",
     "enzyme": "^3.4.4",
