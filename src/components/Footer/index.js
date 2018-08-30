@@ -19,6 +19,7 @@ const propTypes = {
   twitterAlt: PropTypes.string.isRequired,
   copyrightText: PropTypes.string.isRequired,
   legalText: PropTypes.string.isRequired,
+  jobsText: PropTypes.string.isRequired,
 };
 
 export const footerPropTypes = {
@@ -41,6 +42,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
+    jobsText,
   } = dataForLanguage;
 
   return (
@@ -73,6 +75,14 @@ const Footer = ({ data = {}, langKey }, { location }) => {
                     </Link>
                   ))}
               </div>
+              <a
+                className="u-spaceMB9 u-linkBlock u-colorWhite"
+                href="https://join.hedvig.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {jobsText}
+              </a>
             </nav>
           </div>
           {location &&
@@ -207,6 +217,7 @@ export const footerQuery = graphql`
       twitterAlt
       copyrightText
       legalText
+      jobsText
     }
   }
 `;

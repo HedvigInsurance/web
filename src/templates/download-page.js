@@ -9,15 +9,11 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
-
-import { ReactComponent as AppStoreIcon } from 'assets/appstores/app-store-badge-mini.svg';
-import { ReactComponent as PlayStoreIcon } from 'assets/appstores/google-play-badge-mini.svg';
+import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-  paragraph1: PropTypes.string.isRequired,
-  paragraph2: PropTypes.string.isRequired,
   phoneNumberPlaceholder: PropTypes.string.isRequired,
   ctaText: PropTypes.string.isRequired,
   successText: PropTypes.string.isRequired,
@@ -91,8 +87,6 @@ class DownloadTemplate extends React.Component {
     const {
       title,
       heading,
-      paragraph1,
-      paragraph2,
       phoneNumberPlaceholder,
       ctaText,
       successText,
@@ -122,13 +116,9 @@ class DownloadTemplate extends React.Component {
                   {heading}
                 </h1>
               </div>
-              <div className="u-textCenter u-spaceMB8 u-lg-spacePH3">
-                <p className="u-spaceMT8">{paragraph1}</p>
-                <p className="u-spaceMT8">{paragraph2}</p>
-              </div>
               <div className="u-spaceMB5">
                 <div className="u-textCenter">
-                  <div className="u-spaceMB5">
+                  <div>
                     {isSuccessful ? (
                       <div>{successText}</div>
                     ) : (
@@ -177,23 +167,8 @@ class DownloadTemplate extends React.Component {
                       </div>
                     )}
                   </div>
-                  <a
-                    href="https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="u-spaceMH12 u-spacePH11 u-spacePV11"
-                  >
-                    <AppStoreIcon />
-                  </a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.hedvig.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="u-spaceMH12 u-spacePH11 u-spacePV11"
-                  >
-                    <PlayStoreIcon />
-                  </a>
                 </div>
+                <FakeHedvigWebButton />
               </div>
             </div>
           </article>
@@ -208,8 +183,6 @@ const Download = ({ data, pathContext }) => (
   <DownloadTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
-    paragraph1={data.markdownRemark.frontmatter.paragraph1}
-    paragraph2={data.markdownRemark.frontmatter.paragraph2}
     phoneNumberPlaceholder={
       data.markdownRemark.frontmatter.phone_number_placeholder
     }
@@ -243,8 +216,6 @@ export const downloadPageQuery = graphql`
       frontmatter {
         title
         heading
-        paragraph1
-        paragraph2
         phone_number_placeholder
         cta_text
         success_text
