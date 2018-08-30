@@ -27,7 +27,6 @@ const propTypes = {
   twitterAlt: PropTypes.string.isRequired,
   copyrightText: PropTypes.string.isRequired,
   legalText: PropTypes.string.isRequired,
-  jobsText: PropTypes.string.isRequired,
 };
 
 export const footerPropTypes = {
@@ -226,7 +225,6 @@ export const footerQuery = graphql`
       twitterAlt
       copyrightText
       legalText
-      jobsText
     }
   }
 `;
