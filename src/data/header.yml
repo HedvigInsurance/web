@@ -10,8 +10,6 @@ se:
       path: /faq
     - label: Om Hedvig
       path: /about-us
-    - label: Blogg
-      path: /blog
   logoLink:
     altText: Hedvig hem
     path: /
