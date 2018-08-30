@@ -654,9 +654,9 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.51"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.51"
 
-"@babel/runtime@7.0.0-rc.3":
-  version "7.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-rc.3.tgz#7b0d6762220d2efa2958e72f8a661e1409c2d5d9"
+"@babel/runtime@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
   dependencies:
     regenerator-runtime "^0.12.0"
 
@@ -800,15 +800,15 @@
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.0.tgz#08ef599fe8c41e6184fa0b5a6ca460d318d3abb1"
 
+"@hedviginsurance/brand@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.0.0.tgz#4209c89eb2ec500583233e4a5bd173e767f63ee8"
+
 "@mapbox/hast-util-table-cell-style@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.1.3.tgz#5b7166ae01297d72216932b245e4b2f0b642dca6"
   dependencies:
     unist-util-visit "^1.3.0"
-
-"@hedviginsurance/brand@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.0.0.tgz#4209c89eb2ec500583233e4a5bd173e767f63ee8"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -11984,11 +11984,11 @@ react-split-pane@^0.1.66:
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
 
-react-spring@^5.6.9:
-  version "5.6.9"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.9.tgz#df4243460bd82b5406b830ac0054429541844151"
+react-spring@^5.6.10:
+  version "5.6.10"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.10.tgz#646e428e77d687ea190984c8726a73fe54bfbc00"
   dependencies:
-    "@babel/runtime" "7.0.0-rc.3"
+    "@babel/runtime" "^7.0.0"
 
 react-sticky@^6.0.3:
   version "6.0.3"
