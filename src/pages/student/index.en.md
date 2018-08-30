@@ -6,7 +6,7 @@ landing:
     explainer: /month for rentals
     price: 79 kr
   bubble2:
-    explainer: per month for owned
+    explainer: /month for owned
     price: 99 kr
   heading: All by chat. For real.
   paragraph: Billed monthly. No fixed contracts!
