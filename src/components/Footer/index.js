@@ -210,10 +210,12 @@ export const footerQuery = graphql`
       linkSection1 {
         label
         path
+        external
       }
       linkSection2 {
         label
         path
+        external
       }
       appStoreAlt
       playStoreAlt
