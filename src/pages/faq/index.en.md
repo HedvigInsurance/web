@@ -5,7 +5,7 @@ heading: Questions and answers
 questions:
   - answer: >-
       Hedvig currently only offers apartment insurance - both for rental
-      apartment and owned apartments. This insurance also include travel
+      apartments and owned apartments. This insurance also include travel
       insurance for trips up to 45 days as well as insurance for all your
       gadgets and items - as long as they cost less than 50 000sek.
     question: What type of insurance does Hedvig offer?
