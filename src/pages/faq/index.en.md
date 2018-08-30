@@ -1,7 +1,7 @@
 ---
 templateKey: faq-page
-title: Vanliga frågor | Hedvig
-heading: Frågor och svar
+title: FAQs | Hedvig
+heading: Questions and answers
 questions:
   - answer: >-
       Hedvig currently only offers apartment insurance - both for rental
