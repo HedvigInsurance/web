@@ -7,10 +7,18 @@ import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-insta
 
 const propTypes = {
   linkSection1: PropTypes.arrayOf(
-    PropTypes.shape({ label: PropTypes.string, path: PropTypes.string }),
+    PropTypes.shape({
+      label: PropTypes.string,
+      path: PropTypes.string,
+      external: PropTypes.bool,
+    }),
   ).isRequired,
   linkSection2: PropTypes.arrayOf(
-    PropTypes.shape({ label: PropTypes.string, path: PropTypes.string }),
+    PropTypes.shape({
+      label: PropTypes.string,
+      path: PropTypes.string,
+      external: PropTypes.bool,
+    }),
   ).isRequired,
   appStoreAlt: PropTypes.string.isRequired,
   playStoreAlt: PropTypes.string.isRequired,
@@ -25,6 +33,30 @@ const propTypes = {
 export const footerPropTypes = {
   se: PropTypes.shape(propTypes),
   en: PropTypes.shape(propTypes),
+};
+
+const renderLink = (link) => {
+  if (link.external) {
+    return (
+      <a
+        key={link.path}
+        className="u-spaceMB9 u-linkBlock u-colorWhite"
+        href={link.path}
+      >
+        {link.label}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      key={link.path}
+      className="u-spaceMB9 u-linkBlock u-colorWhite"
+      to={link.path}
+    >
+      {link.label}
+    </Link>
+  );
 };
 
 const Footer = ({ data = {}, langKey }, { location }) => {
@@ -42,7 +74,6 @@ const Footer = ({ data = {}, langKey }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
-    jobsText,
   } = dataForLanguage;
 
   return (
@@ -52,37 +83,11 @@ const Footer = ({ data = {}, langKey }, { location }) => {
           <div className="u-flexGrow1">
             <nav className="Grid">
               <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-                {linkSection1 &&
-                  linkSection1.map((link) => (
-                    <Link
-                      key={link.path}
-                      className="u-spaceMB9 u-linkBlock u-colorWhite"
-                      to={link.path}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                {linkSection1 && linkSection1.map(renderLink)}
               </div>
               <div className="u-md-size1of2 u-lg-size1of2 u-maxWidth1of3">
-                {linkSection2 &&
-                  linkSection2.map((link) => (
-                    <Link
-                      key={link.path}
-                      className="u-spaceMB9 u-linkBlock u-colorWhite"
-                      to={link.path}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                {linkSection2 && linkSection2.map(renderLink)}
               </div>
-              <a
-                className="u-spaceMB9 u-linkBlock u-colorWhite"
-                href="https://join.hedvig.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {jobsText}
-              </a>
             </nav>
           </div>
           {location &&

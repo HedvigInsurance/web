@@ -93,6 +93,9 @@ collections:
                 - label: Label
                   name: label
                   widget: string
+                - label: External
+                  name: external
+                  widget: boolean
                 - label: Path
                   name: path
                   widget: string
@@ -103,6 +106,9 @@ collections:
                 - label: Label
                   name: label
                   widget: string
+                - label: External
+                  name: external
+                  widget: boolean
                 - label: Path
                   name: path
                   widget: string
@@ -138,6 +144,9 @@ collections:
                 - label: Label
                   name: label
                   widget: string
+                - label: External
+                  name: external
+                  widget: boolean
                 - label: Path
                   name: path
                   widget: string
@@ -148,6 +157,9 @@ collections:
                 - label: Label
                   name: label
                   widget: string
+                - label: External
+                  name: external
+                  widget: boolean
                 - label: Path
                   name: path
                   widget: string

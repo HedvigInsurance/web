@@ -2,17 +2,26 @@ se:
   linkSection1:
     - label: Vanliga frågor
       path: /faq
+      external: false
     - label: Om Hedvig
       path: /about-us
+      external: false
     - label: Kontakt
       path: /contact
+      external: false
+    - label: Jobb
+      path: https://join.hedvig.com
+      external: true
   linkSection2:
     - label: Press
       path: /press
+      external: false
     - label: Personuppgifter
       path: /privacy
+      external: false
     - label: Legal
       path: /legal
+      external: false
   appStoreAlt: Ladda ner på App Store
   playStoreAlt: Ladda ner på Google Play
   facebookAlt: Hedvig på Facebook
@@ -29,17 +38,26 @@ en:
   linkSection1:
     - label: FAQ
       path: /en/faq
+      external: false
     - label: About Hedvig
       path: /en/about-us
+      external: false
     - label: Contact
       path: /en/contact
+      external: false
+    - label: Jobs
+      path: https://join.hedvig.com
+      external: true
   linkSection2:
     - label: Press
       path: /en/press
+      external: false
     - label: Personal information
       path: /en/privacy
+      external: false
     - label: Legal
       path: /en/legal
+      external: false
   appStoreAlt: Download on App Store
   playStoreAlt: Download on Google Play
   facebookAlt: Hedvig on Facebook
@@ -51,4 +69,3 @@ en:
     Exklusiv försäkringsgivare för Hedvigs försäkringar är International
     Insurance Company of Hannover SE, Sverige filial, org. nr.
     516402-6345. Hedvig står under Finansinspektionens tillsyn.
-  jobsText: Careers
