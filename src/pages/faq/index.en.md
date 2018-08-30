@@ -3,93 +3,95 @@ templateKey: faq-page
 title: Vanliga frågor | Hedvig
 heading: Frågor och svar
 questions:
-  - question: Vilka typer av försäkringar har Hedvig?
-    answer: |-
-      Just nu försäkrar Hedvig dig som äger eller hyr en lägenhet.
-      Försäkringen täcker inte bara din lägenhet utan också dig – till
-      exempel när du reser. Självklart ingår även ”drulleförsäkring”
-      för alla dina prylar – så länge de inte kostar mer än
-      50 000 kronor styck.
-  - question: Jag vill byta till Hedvig men har redan en försäkring, hur gör jag?
-    answer: |-
-      Det är inga problem, Hedvig sköter bytet åt dig. Allt du behöver
-      göra är att signera med Mobilt BankID. Hedvig aktiverar din
-      försäkring så fort bindningstiden går ut på din gamla. Du blir
-      aldrig utan försäkring och behöver inte krångla med
-      uppsägningen.
-  - question: Hur lång är bindningstiden?
-    answer: |-
-      Det finns ingen bindningstid! Hedvig är Sveriges enda
-      hemförsäkring utan. Det betyder att du kan säga upp din
-      försäkring precis när du vill, utan anledning.
-  - question: Är Hedvig tryggt?
-    answer: |-
-      Hedvig tryggas av ett globalt försäkrings&shy;bolag som heter
-      International Insurance Company of Hannover. De är del av en av
-      världens största försäkringsgrupper. Tryggare kan det nog inte
-      bli!
-  - question: Varför samarbetar Hedvig med välgörenhetsorganisationer?
-    answer: |-
-      Vissa år är skadorna låga, och då blir det pengar över. Ett
-      vanligt försäkrings&shy;bolag hade tagit pengarna som extra
-      vinst. Det gör inte Hedvig. När det blir pengar över skänks de
-      istället till ett gott ändamål. Du bestämmer vilket!
-  - question: Är Hedvig icke-vinstdrivande?
-    answer: |-
-      Nej, Hedvig är ett vanligt bolag. Hedvig tar en fast avgift på
-      20% av det du betalar varje månad för att kunna ge dig bra
-      service. Men aldrig mer än så! Det blir schysstare med en fast
-      avgift. Då kan du känna dig trygg med att Hedvig behandlar dig
-      rättvist när du har en skada, eftersom Hedvig aldrig vinner
-      något på att hålla inne med dina pengar.
-  - question: Hur vet jag vad min försäkring täcker?
-    answer: |-
-      Det ser du tydligt i appen, men om du är intresserad finns så
-      klart hela försäkringsvillkor också! De hittar du här:
+  - answer: >-
+      Hedvig currently only offers apartment insurance - both for rental
+      apartment and owned apartments. This insurance also include travel
+      insurance for trips up to 45 days as well as insurance for all your
+      gadgets and items - as long as they cost less than 50 000sek.
+    question: What type of insurance does Hedvig offer?
+  - answer: >-
+      No problem. Hedvig takes care of the switch for you. Simply sign up with
+      your Mobile Bank ID and we will activate your Hedvig insurance when your
+      existing insurance expires. You're never without insurance and don't have
+      to worry about terminating your existing policy.
+    question: 'I want to switch to Hedvig but already have insurance, how can I change? '
+  - answer: >-
+      Hedvig is Sweden's only insurance without a fixed contract length. We
+      think you should have the freedom to pick and switch insurances as you
+      like so that means you can cancel at any time.
+    question: How long is the contract for?
+  - answer: >-
+      Absolutely. Hedvig is reinsured by International Insurance Company of
+      Hannover. One of the largest insurance companies in the world. You can't
+      get much safer than that.
+    question: Is Hedvig safe?
+  - answer: >-
+      Some years there might be fewer claims which means there's money left
+      over. Traditional insurance companies normally take that money themselves
+      as profit. But Hedvig is different. If there is money left over we donate
+      it to charities - you get decide which ones!
+    question: How does Hedvig work with charities?
+  - answer: >-
+      No, Hedvig is a for-profit company. We take a fixed 20%  from your monthly
+      payment and that's it. This allows us to focus on providing the best
+      service possible to you and not on making more money from denying claims.
+    question: Is Hedvig a non-profit?
+  - answer: >-
+      You can see exactly what your insurance covers in the app but if you want
+      you can read the details here:
 
 
-      [För dig som hyr din lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
-      
-
-      [För dig som äger din lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+      [For those who rent their
+      apartments](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
 
 
-      [För dig som försäkrar en extra dyr pryl](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf)
+      [For those who own their
+      apartments](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
 
 
-      Vill du inte läsa hela villkoren finns sammanfattningar här:
+      [For those who need extra coverage for their
+      items](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf)
 
-      [Förköpsinformation för dig som hyr lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+
+      If you don't want to read the entire terms you can find summaries here:
 
 
-      [Förköpsinformation för dig som äger lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
-  - question: Vad kostar Hedvig?
-    answer: |-
-      Ditt pris beror på lite olika saker, till exempel hur du bor,
-      var du bor och hur många du bor med. Så för att kunna ge dig ett
-      pris behöver Hedvig lära känna dig lite först. Ladda ner appen,
-      så tar vi det därifrån!
-  - question: Hur betalar jag för min försäkring?
-    answer: |-
-      Eftersom du inte har någon bindningstid betalar du per månad.
-      Hedvig tar betalt via ett digitalt autogiro som kopplas till
-      ditt bankkonto. Det sätts upp direkt i appen när du blir medlem,
-      allt du behöver göra är att signera en gång med Mobilt BankID.
-  - question: Hur kommer jag i kontakt med Hedvig?
-    answer: |-
-      Du kan fråga Hedvig vad som helst när som helst direkt i appen.
-      Du kan självklart också be en av oss att ringa upp dig. Om du
-      gillar att maila når du Hedvig på [hedvig@hedvig.com](mailto:hedvig@hedvig.com)
-  - question: Hur rapporterar man en skada till Hedvig?
-    answer: |-
-      Det gör du direkt i appen. När du öppnat upp den trycker du bara
-      på Hedvig-knappen och spelar in ett kort röstmeddelande - sen
-      tar Hedvig hand om resten!
-  - question: Hur anmäler jag en skada om jag har blivit av med min mobil och inte kan använda appen?
-    answer: |-
-      Enkelt - skicka ett mail till [help@hedvig.com](mailto:help@hedvig.com) så fixar vi det på nolltid
-  - question: Vad händer om jag blir sjuk på resa?
-    answer: |-
-      Om du har skadats eller blivit sjuk utomlands och behöver akut
-      vård, ring Hedvig Global Assistance dygnet runt på [+45 38 48 94 61]("tel:+4538489461")
+      [Pre-sale information for
+      renters](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+
+
+      [Pre-sale information for
+      owners](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+    question: 'What does my insurance cover? '
+  - answer: >-
+      The price depends on a few different variables such as where you live, how
+      big an apartment you have, how many people you live with. To get your own
+      personalised price download the app and we'll take it from there.
+    question: How much does Hedvig cost?
+  - answer: >-
+      Since Hedvig has no fixed contract length you'll be billed on a monthly
+      basis. Simply sign up with your Mobile Bank ID and you'll be able to link
+      your bank account to Hedvig.
+    question: 'How do I pay for my insurance? '
+  - answer: >-
+      You can ask anything you want from Hedvig via the app, even if you're not
+      yet a member. You can also request that we give you a call or if you
+      prefer you can email us at <mailto:hedvig@hedvig.com>.
+    question: How do I contact Hedvig?
+  - answer: >-
+      You can report claims directly from the app. Open the app and press the
+      record button to leave your message and we'll take it from there.
+    question: 'How do I report a claim to Hedvig? '
+  - answer: >-
+      Easy - just send an email to <mailto:help@hedvig.com> and we'll take care
+      of it in no time.
+    question: >-
+      If I've lost my phone and don't have access to the app how do I report a
+      claim?
+  - answer: >-
+      If you get injured or ill while traveling and need emergency assistance
+      please call Hedvig Global Assistance  [+45 38 48 94
+      61]("tel:+4538489461"), this is available 24/7.
+    question: 'What happens if I get sick or hurt while traveling? '
 ---
+
