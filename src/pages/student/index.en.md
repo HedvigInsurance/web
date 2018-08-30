@@ -8,6 +8,7 @@ landing:
   bubble2:
     explainer: /month for owned
     price: 99 kr
+  cta_text: Get Hedvig for student
   heading: All by chat. For real.
   paragraph: Billed monthly. No fixed contracts!
   subheading: Home insurance designed for students.
