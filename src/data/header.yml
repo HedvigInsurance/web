@@ -1,33 +1,29 @@
 se:
-  links:
-    - path: /student
-      label: Student
-    - path: /giving-back
-      label: Hur vi ger tillbaka
-    - path: /faq
-      label: Vanliga frågor
-    - path: /about-us
-      label: Om Hedvig
-    - path: /blog
-      label: Blogg
-  ctaTextDesktop: Kom igång
   ctaTextMobile: Ladda ner appen
-  logoLink:
-    path: /
-    altText: Hedvig hem
-en:
   links:
-    - path: /en/student
-      label: Student
-    - path: /en/giving-back
-      label: How we give back
-    - path: /en/faq
-      label: FAQ
-    - path: /en/about-us
-      label: About Hedvig
+    - label: Student
+      path: /student
+    - label: Hur vi ger tillbaka
+      path: /giving-back
+    - label: Vanliga frågor
+      path: /faq
+    - label: Om Hedvig
+      path: /about-us
+    - label: Blogg
+      path: /blog
+  logoLink:
+    altText: Hedvig hem
+    path: /
+en:
   ctaTextDesktop: Get started
   ctaTextMobile: Download the app
+  links:
+    - label: Student
+      path: /en/student
+    - label: FAQ
+      path: /en/faq
+    - label: About Hedvig
+      path: /en/about-us
   logoLink:
-    path: /en
     altText: Hedvig hem
-
+    path: /en
