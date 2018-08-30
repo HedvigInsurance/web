@@ -13,13 +13,20 @@ const pagePropTypes = {
   heading: PropTypes.string.isRequired,
 };
 
-const ContactTemplate = ({ image, title, heading, header, footer }) => (
+const ContactTemplate = ({
+  image,
+  title,
+  heading,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header data={header} />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryGrey">
           <div className="Container">
@@ -79,7 +86,7 @@ const ContactTemplate = ({ image, title, heading, header, footer }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer data={footer} />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
