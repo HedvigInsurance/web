@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 
-import Header from 'src/components/Header';
+import Header, { headerPropTypes } from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 import { ReactComponent as SosBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg';
 import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
+import './Page.css';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   section1: PropTypes.shape({
@@ -45,13 +46,16 @@ const GivingBackTemplate = ({
   section3,
   section4,
   ctaText,
+  header,
+  footer,
+  langKey,
 }) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPurple">
           <div className="Container">
@@ -158,13 +162,16 @@ const GivingBackTemplate = ({
         </div>
       </article>
     </StickyContainer>
-    <Footer />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
-GivingBackTemplate.propTypes = propTypes;
+GivingBackTemplate.propTypes = {
+  ...pagePropTypes,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+};
 
-const GivingBack = ({ data }) => (
+const GivingBack = ({ data, pathContext }) => (
   <GivingBackTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
@@ -173,15 +180,20 @@ const GivingBack = ({ data }) => (
     section3={data.markdownRemark.frontmatter.section3}
     section4={data.markdownRemark.frontmatter.section4}
     ctaText={data.markdownRemark.frontmatter.cta_text}
+    header={data.header}
+    footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
 GivingBack.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape(propTypes),
+      frontmatter: PropTypes.shape(pagePropTypes),
     }),
+    header: headerPropTypes,
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { GivingBackTemplate };
@@ -217,6 +229,14 @@ export const givingBackPageQuery = graphql`
         }
         cta_text
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

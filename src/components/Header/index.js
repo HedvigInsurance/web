@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import classNames from 'classnames';
 import { Sticky } from 'react-sticky';
@@ -9,25 +10,30 @@ import AppLink from 'src/components/AppLink';
 import './Header.css';
 import { CTALinkContainer } from './cta-link-container';
 
+const propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({ path: PropTypes.string, label: PropTypes.string }),
+  ),
+  ctaTextDesktop: PropTypes.string.isRequired,
+  ctaTextMobile: PropTypes.string.isRequired,
+  logoLink: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    altText: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export const headerPropTypes = {
+  se: PropTypes.shape(propTypes),
+  en: PropTypes.shape(propTypes),
+};
+
 class Header extends React.Component {
-  links = [
-    {
-      path: '/student',
-      label: 'Student',
-    },
-    {
-      path: '/giving-back',
-      label: 'Hur vi ger tillbaka',
-    },
-    {
-      path: '/faq',
-      label: 'Vanliga frågor',
-    },
-    {
-      path: '/about-us',
-      label: 'Om Hedvig',
-    },
-  ];
+  static propTypes = {
+    data: PropTypes.shape(headerPropTypes),
+    langKey: PropTypes.string.isRequired,
+  };
+
+  static defaultProps = { data: {} };
 
   state = { popoverIsActive: false };
 
@@ -65,6 +71,13 @@ class Header extends React.Component {
   }
 
   render() {
+    const { data, langKey } = this.props;
+
+    const dataForLanguage = data[langKey || 'se'];
+
+    if (!dataForLanguage) return null;
+
+    const { links, ctaTextDesktop, ctaTextMobile, logoLink } = dataForLanguage;
     const { popoverIsActive } = this.state;
 
     const burgerClassNames = classNames({
@@ -85,23 +98,24 @@ class Header extends React.Component {
           <header className="Header" style={style}>
             <div className="u-flex">
               <div className="u-flexGrow1 Header-logo">
-                <Link to="/" aria-label="Hedvig hem">
+                <Link to={logoLink.path} aria-label={logoLink.altText}>
                   <Logo />
                 </Link>
               </div>
               <div>
-                <CTALinkContainer>
+                <CTALinkContainer ctaText={ctaTextDesktop}>
                   <nav className="Header-menu u-hidden u-lg-block">
                     <div className="u-flex u-flexRow">
-                      {this.links.map((link) => (
-                        <Link
-                          key={link.path}
-                          to={link.path}
-                          className="Header-menu-link u-linkBlock"
-                        >
-                          {link.label}
-                        </Link>
-                      ))}
+                      {links &&
+                        links.map((link) => (
+                          <Link
+                            key={link.path}
+                            to={link.path}
+                            className="Header-menu-link u-linkBlock"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
                     </div>
                   </nav>
                 </CTALinkContainer>
@@ -123,22 +137,23 @@ class Header extends React.Component {
               >
                 <div className="Popover-content">
                   <div>
-                    {this.links.map((link) => (
-                      <Link
-                        key={link.path}
-                        to={link.path}
-                        className="u-spacePV11 u-linkBlock"
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+                    {links &&
+                      links.map((link) => (
+                        <Link
+                          key={link.path}
+                          to={link.path}
+                          className="u-spacePV11 u-linkBlock"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
                   </div>
                   <div className="u-textCenter u-spacePT10">
                     <AppLink
                       tags={['header']}
                       className="Button u-colorWhite u-backgroundPrimaryPurple"
                     >
-                      Ladda ner appen
+                      {ctaTextMobile}
                     </AppLink>
                   </div>
                 </div>
@@ -150,5 +165,35 @@ class Header extends React.Component {
     );
   }
 }
+
+export const headerQuery = graphql`
+  fragment Header_data on DataYaml {
+    se {
+      links {
+        path
+        label
+      }
+      ctaTextDesktop
+      ctaTextMobile
+      logoLink {
+        path
+        altText
+      }
+    }
+
+    en {
+      links {
+        path
+        label
+      }
+      ctaTextDesktop
+      ctaTextMobile
+      logoLink {
+        path
+        altText
+      }
+    }
+  }
+`;
 
 export default Header;

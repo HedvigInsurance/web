@@ -1,5 +1,4 @@
 ---
-path: /
 templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 landing:

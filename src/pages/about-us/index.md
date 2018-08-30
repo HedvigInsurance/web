@@ -1,5 +1,4 @@
 ---
-path: /about-us
 templateKey: about-page
 title: Om Hedvig | Hedvig
 heading: Om Hedvig

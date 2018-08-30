@@ -1,0 +1,69 @@
+se:
+  appStoreAlt: Ladda ner på App Store
+  copyrightText: >-
+    © Hedvig AB. Huvudkontor: Artillerigatan 10, 114 51, Stockholm. Org. nr.
+    559093-0334.
+  facebookAlt: Hedvig på Facebook
+  instagramAlt: Hedvig på Instagram
+  legalText: >-
+    Exklusiv försäkringsgivare för Hedvigs försäkringar är International
+    Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
+    Hedvig står under Finansinspektionens tillsyn.
+  linkSection1:
+    - external: false
+      label: Vanliga frågor
+      path: /faq
+    - external: false
+      label: Om Hedvig
+      path: /about-us
+    - external: false
+      label: Kontakt
+      path: /contact
+    - external: true
+      label: Jobb
+      path: 'https://join.hedvig.com'
+  linkSection2:
+    - external: false
+      label: Personuppgifter
+      path: /privacy
+    - external: false
+      label: Legal
+      path: /legal
+  playStoreAlt: Ladda ner på Google Play
+  twitterAlt: Hedvig på Twitter
+en:
+  appStoreAlt: Download on App Store
+  copyrightText: >-
+    © Hedvig AB. Huvudkontor: Artillerigatan 10, 114 51, Stockholm. Org. nr.
+    559093-0334.
+  facebookAlt: Hedvig on Facebook
+  instagramAlt: Hedvig on Instagram
+  legalText: >-
+    Exklusiv försäkringsgivare för Hedvigs försäkringar är International
+    Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
+    Hedvig står under Finansinspektionens tillsyn.
+  linkSection1:
+    - external: false
+      label: FAQ
+      path: /en/faq
+    - external: false
+      label: About Hedvig
+      path: /en/about-us
+    - external: false
+      label: Contact
+      path: /en/contact
+    - external: true
+      label: Jobs
+      path: 'https://join.hedvig.com'
+  linkSection2:
+    - external: false
+      label: Press
+      path: /en/press
+    - external: false
+      label: Personal information
+      path: /en/privacy
+    - external: false
+      label: Legal
+      path: /en/legal
+  playStoreAlt: Download on Google Play
+  twitterAlt: Hedvig on Twitter

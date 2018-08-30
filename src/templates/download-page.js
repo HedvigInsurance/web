@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
+import './Page.css';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
 import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   phoneNumberPlaceholder: PropTypes.string.isRequired,
@@ -20,7 +21,10 @@ const propTypes = {
 };
 
 class DownloadTemplate extends React.Component {
-  static propTypes = propTypes;
+  static propTypes = {
+    ...pagePropTypes,
+    header: PropTypes.shape(headerPropTypes).isRequired,
+  };
 
   state = {
     phoneNumber: '',
@@ -87,6 +91,9 @@ class DownloadTemplate extends React.Component {
       ctaText,
       successText,
       errorText,
+      header,
+      footer,
+      langKey,
     } = this.props;
     const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
     const isDisabled = !phoneNumber || isSending;
@@ -96,7 +103,7 @@ class DownloadTemplate extends React.Component {
           <title>{title}</title>
         </Helmet>
         <StickyContainer>
-          <Header />
+          <Header data={header} langKey={langKey} />
           <article className="Site-content u-flexGrow1">
             <div
               className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
@@ -166,13 +173,13 @@ class DownloadTemplate extends React.Component {
             </div>
           </article>
         </StickyContainer>
-        <Footer />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
 }
 
-const Download = ({ data }) => (
+const Download = ({ data, pathContext }) => (
   <DownloadTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
@@ -182,6 +189,9 @@ const Download = ({ data }) => (
     ctaText={data.markdownRemark.frontmatter.cta_text}
     successText={data.markdownRemark.frontmatter.success_text}
     errorText={data.markdownRemark.frontmatter.error_text}
+    header={data.header}
+    footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
@@ -190,7 +200,10 @@ Download.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.objectOf(PropTypes.any),
     }),
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { DownloadTemplate };
@@ -208,6 +221,14 @@ export const downloadPageQuery = graphql`
         success_text
         error_text
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

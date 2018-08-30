@@ -1,0 +1,28 @@
+se:
+  ctaTextDesktop: Kom igång
+  ctaTextMobile: Ladda ner appen
+  links:
+    - label: Student
+      path: /student
+    - label: Hur vi ger tillbaka
+      path: /giving-back
+    - label: Vanliga frågor
+      path: /faq
+    - label: Om Hedvig
+      path: /about-us
+  logoLink:
+    altText: Hedvig hem
+    path: /
+en:
+  ctaTextDesktop: Get started
+  ctaTextMobile: Download the app
+  links:
+    - label: Student
+      path: /en/student
+    - label: FAQ
+      path: /en/faq
+    - label: About Hedvig
+      path: /en/about-us
+  logoLink:
+    altText: Hedvig hem
+    path: /en

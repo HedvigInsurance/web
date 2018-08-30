@@ -5,6 +5,9 @@
  */
 
 const path = require('path');
+const { getSlugAndLang } = require('ptz-i18n');
+
+const DEFAULT_LANGUAGE = 'se';
 
 exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
@@ -25,9 +28,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         edges {
           node {
             id
+            fields {
+              slug
+              langKey
+            }
             frontmatter {
               templateKey
-              path
             }
           }
         }
@@ -37,15 +43,29 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
     }
+    // Create regular pages from markdown files
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const { slug, langKey } = node.fields;
       createPage({
-        path: node.frontmatter.path,
+        path: slug,
         component: path.resolve(
           __dirname,
           `src/templates/${node.frontmatter.templateKey}.js`,
         ),
-        context: { id: node.id },
+        context: { id: node.id, langKey },
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators;
+  if (node.internal.type === 'MarkdownRemark') {
+    const slugAndLang = getSlugAndLang(
+      { langKeyDefault: DEFAULT_LANGUAGE },
+      node.fileAbsolutePath,
+    );
+    createNodeField({ name: 'slug', node, value: slugAndLang.slug });
+    createNodeField({ name: 'langKey', node, value: slugAndLang.langKey });
+  }
 };

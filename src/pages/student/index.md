@@ -1,5 +1,4 @@
 ---
-path: /student
 templateKey: student-page
 title: Hedvig Försäkring | Få hjälp när du behöver det
 landing:

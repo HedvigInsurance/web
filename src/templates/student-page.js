@@ -5,8 +5,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 import { StudentHeart } from 'src/sections/student-heart';
 
@@ -92,6 +92,9 @@ class StudentTemplate extends React.Component {
       perilForest,
       bottomCta,
       wordmarkFile,
+      header,
+      footer,
+      langKey,
     } = this.props;
     return (
       <main className="Site">
@@ -100,7 +103,7 @@ class StudentTemplate extends React.Component {
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
-            <Header />
+            <Header data={header} langKey={langKey} />
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite u-mb-spacePL9 u-lg-spacePL9">
               <div className="Grid Container Container--withoutGutter u-lg-flexNoWrap">
@@ -314,7 +317,7 @@ class StudentTemplate extends React.Component {
           </StickyContainer>
         </section>
 
-        <Footer />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
@@ -356,9 +359,12 @@ StudentTemplate.propTypes = {
     bottom_paragraph: PropTypes.string.isRequired,
   }).isRequired,
   bottomCta: PropTypes.string.isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const Student = ({ data }) => {
+const Student = ({ data, pathContext }) => {
   const copy = data.studentPage.frontmatter;
   return (
     <StudentTemplate
@@ -373,12 +379,16 @@ const Student = ({ data }) => {
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       bottomCta={copy.bottom_cta}
+      header={data.header}
+      footer={data.footer}
+      langKey={pathContext.langKey}
     />
   );
 };
 
 Student.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { StudentTemplate };
@@ -481,6 +491,14 @@ export const query = graphql`
         }
         bottom_cta
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

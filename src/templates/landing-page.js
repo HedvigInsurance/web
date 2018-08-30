@@ -6,8 +6,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
 import { PriceSection } from 'src/sections/price';
@@ -111,6 +111,9 @@ class LandingTemplate extends React.Component {
       customerSource,
       safety,
       pricing,
+      header,
+      footer,
+      langKey,
     } = this.props;
     return (
       <main className="Site">
@@ -119,7 +122,7 @@ class LandingTemplate extends React.Component {
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
-            <Header />
+            <Header data={header} langKey={langKey} />
             {/* Landing section */}
             <div className="u-backgroundAlmostWhite">
               <div className="Home-hero">
@@ -457,7 +460,7 @@ class LandingTemplate extends React.Component {
           </StickyContainer>
         </section>
 
-        <Footer />
+        <Footer data={footer} langKey={langKey} />
       </main>
     );
   }
@@ -530,9 +533,12 @@ LandingTemplate.propTypes = {
     ownedPrice: PropTypes.string.isRequired,
     bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
-const Landing = ({ data }) => {
+const Landing = ({ data, pathContext }) => {
   const copy = data.landingPage.frontmatter;
   return (
     <LandingTemplate
@@ -565,12 +571,16 @@ const Landing = ({ data }) => {
         monthlyLabel: copy.pricing.monthly_label,
         aroundLabel: copy.pricing.around_label,
       }}
+      header={data.header}
+      footer={data.footer}
+      langKey={pathContext.langKey}
     />
   );
 };
 
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { LandingTemplate };
@@ -725,6 +735,14 @@ export const query = graphql`
           bottom_paragraph
         }
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

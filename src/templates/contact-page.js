@@ -3,17 +3,30 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Img from 'gatsby-image';
 import { StickyContainer } from 'react-sticky';
+import './Page.css';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 
-const ContactTemplate = ({ image, title, heading }) => (
+const pagePropTypes = {
+  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+};
+
+const ContactTemplate = ({
+  image,
+  title,
+  heading,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryGrey">
           <div className="Container">
@@ -73,26 +86,31 @@ const ContactTemplate = ({ image, title, heading }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
 ContactTemplate.propTypes = {
   image: PropTypes.objectOf(PropTypes.object).isRequired,
-  title: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
+  ...pagePropTypes,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
 };
 
-const Contact = ({ data }) => (
+const Contact = ({ data, pathContext }) => (
   <ContactTemplate
     image={data.file}
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
+    header={data.header}
+    footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
 Contact.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
 };
 
 export { ContactTemplate };
@@ -113,6 +131,14 @@ export const query = graphql`
         title
         heading
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;

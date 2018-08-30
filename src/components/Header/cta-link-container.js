@@ -13,12 +13,12 @@ const PositionAnimation = styled('div')`
 
   @media (min-width: 960px) {
     margin-right: 0;
-    transform: translateX(150px);
+    transform: translateX(170px);
     ${({ isVisible }) => isVisible && `transform: translateX(0);`};
   }
 `;
 
-export const CTALinkContainer = ({ children }) => (
+export const CTALinkContainer = ({ ctaText, children }) => (
   <div className="u-md-inlineBlock u-lg-inlineBlock">
     <Container context="CTAWaypoint" initialState={{}}>
       {({ CTAWaypointReached }) => (
@@ -29,7 +29,7 @@ export const CTALinkContainer = ({ children }) => (
               tags={['header']}
               className="Button Header-cta-button u-colorWhite u-backgroundPrimaryGreen u-fontWeightBold"
             >
-              Kom igång
+              {ctaText}
             </AppLink>
           </div>
         </PositionAnimation>
@@ -43,6 +43,7 @@ CTALinkContainer.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
+  ctaText: PropTypes.string.isRequired,
 };
 
 CTALinkContainer.defaultProps = {

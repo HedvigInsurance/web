@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
+import './Page.css';
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header';
+import Footer, { footerPropTypes } from 'src/components/Footer';
 
-const propTypes = {
+const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   section1: PropTypes.shape({
@@ -22,13 +23,21 @@ const propTypes = {
   }).isRequired,
 };
 
-const AboutUsTemplate = ({ title, heading, section1, section2 }) => (
+const AboutUsTemplate = ({
+  title,
+  heading,
+  section1,
+  section2,
+  header,
+  footer,
+  langKey,
+}) => (
   <main className="Site">
     <Helmet>
       <title>{title}</title>
     </Helmet>
     <StickyContainer>
-      <Header />
+      <Header data={header} langKey={langKey} />
       <article className="Site-content">
         <div className="u-backgroundSecondaryPink">
           <div className="Container">
@@ -65,27 +74,39 @@ const AboutUsTemplate = ({ title, heading, section1, section2 }) => (
         </div>
       </article>
     </StickyContainer>
-    <Footer />
+    <Footer data={footer} langKey={langKey} />
   </main>
 );
 
-AboutUsTemplate.propTypes = propTypes;
+AboutUsTemplate.propTypes = {
+  ...pagePropTypes,
+  header: PropTypes.shape(headerPropTypes).isRequired,
+  footer: PropTypes.shape(footerPropTypes).isRequired,
+  langKey: PropTypes.string.isRequired,
+};
 
-const AboutUs = ({ data }) => (
+const AboutUs = ({ data, pathContext }) => (
   <AboutUsTemplate
     title={data.markdownRemark.frontmatter.title}
     heading={data.markdownRemark.frontmatter.heading}
     section1={data.markdownRemark.frontmatter.section1}
     section2={data.markdownRemark.frontmatter.section2}
+    header={data.header}
+    footer={data.footer}
+    langKey={pathContext.langKey}
   />
 );
 
 AboutUs.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape(propTypes),
+      frontmatter: PropTypes.shape(pagePropTypes),
     }),
+    header: PropTypes.shape(headerPropTypes),
+    footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
+  pathContext: PropTypes.shape({ langKey: PropTypes.string.isRequired })
+    .isRequired,
 };
 
 export { AboutUsTemplate };
@@ -110,6 +131,14 @@ export const aboutPageQuery = graphql`
           paragraph3
         }
       }
+    }
+
+    header: dataYaml(id: { regex: "/header/" }) {
+      ...Header_data
+    }
+
+    footer: dataYaml(id: { regex: "/footer/" }) {
+      ...Footer_data
     }
   }
 `;
