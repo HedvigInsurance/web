@@ -31,8 +31,8 @@ collections:
                 - label: Path
                   name: path
                   widget: string
-            - label: CTA Text
-              name: ctaText
+            - label: CTA Text Desktop
+              name: ctaTextDesktop
               widget: string
             - label: CTA Text Mobile
               name: ctaTextMobile
