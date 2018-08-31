@@ -25,21 +25,11 @@ sections:
       begränsningar. Förköpsinformation är sådan information som du har rätt att
       få innan du köper en försäkring. Informationen finns så klart tillgänglig
       i appen också.
-  - section: >-
+  - section: |-
       # Försäkringsvillkor
-
 
       För dig som äger bostadsrätt
 
-
       För dig som hyr hyresrätt
-
-
-      För dig som hyr hyresrätt i andra hand och vill att din hyresvärds saker
-      ska täckas av försäkringen
-
-
-      För dig som hyr bostadsrätt i andra hand och vill att din hyresvärds saker
-      och lägenhet ska täckas av försäkringen
 ---
 
