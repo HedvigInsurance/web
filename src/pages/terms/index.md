@@ -25,10 +25,13 @@ sections:
       begränsningar. Förköpsinformation är sådan information som du har rätt att
       få innan du köper en försäkring. Informationen finns så klart tillgänglig
       i appen också.
-  - section: |-
+  - section: >-
       # Försäkringsvillkor
 
-      För dig som äger bostadsrätt
+
+      [För dig som äger
+      bostadsrätt](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Försäkringsvillkor+-+Bostadsrätt+(Februari+2018).pdf)
+
 
       För dig som hyr hyresrätt
 ---
