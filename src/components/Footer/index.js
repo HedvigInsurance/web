@@ -154,10 +154,10 @@ const Footer = ({ data = {}, langKey }, { location }) => {
           </a>
         </div>
         <div>
-          <Link to="/" className="u-spaceMR12">
+          <Link to="/" className="u-spaceMR12" aria-label="Svenska">
             <FlagSe role="presentation" width={40} height={25} />
           </Link>
-          <Link to="/en">
+          <Link to="/en" aria-label="English">
             <FlagEn role="presentation" width={48} height={24} />
           </Link>
         </div>
