@@ -33,6 +33,7 @@ sections:
       bostadsrätt](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Försäkringsvillkor+-+Bostadsrätt+(Februari+2018).pdf)
 
 
-      För dig som hyr hyresrätt
+      [För dig som hyr
+      hyresrätt](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
 ---
 
