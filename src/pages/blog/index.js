@@ -44,21 +44,21 @@ const Blog = ({ data }) => {
 
 export const blogQuery = graphql`
   query BlogQuery {
-    posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date
-            topImage
-            content
-          }
-        }
-      }
-    }
+    # posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
+    #   edges {
+    #     node {
+    #       fields {
+    #         slug
+    #       }
+    #       frontmatter {
+    #         title
+    #         date
+    #         topImage
+    #         content
+    #       }
+    #     }
+    #   }
+    # }
 
     page: dataYaml(id: { regex: "/blog/" }) {
       title
