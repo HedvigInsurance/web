@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
       <StickyContainer>
         <Header data={header} />
         <div className="Site-content">
-          {posts.edges.map(({ node: { frontmatter, fields } }) => (
+          {/* {posts.edges.map(({ node: { frontmatter, fields } }) => (
             <article>
               <h2>
                 <Link to={fields.slug}>{frontmatter.title}</Link>
@@ -34,7 +34,7 @@ const Blog = ({ data }) => {
                 }
               </div>
             </article>
-          ))}
+          ))} */}
         </div>
         <Footer data={footer} />
       </StickyContainer>
