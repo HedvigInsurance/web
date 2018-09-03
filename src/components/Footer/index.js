@@ -4,6 +4,8 @@ import Link from 'gatsby-link';
 import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebook.svg';
 import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
 import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
+import { ReactComponent as FlagSe } from 'assets/flags/se.svg';
+import { ReactComponent as FlagEn } from 'assets/flags/en.svg';
 
 const propTypes = {
   linkSection1: PropTypes.arrayOf(
@@ -152,15 +154,11 @@ const Footer = ({ data = {}, langKey }, { location }) => {
           </a>
         </div>
         <div>
-          <Link to="/">
-            <span role="img" aria-label="Swedish">
-              🇸🇪
-            </span>
+          <Link to="/" className="u-spaceMR12">
+            <FlagSe role="presentation" width={40} height={25} />
           </Link>
           <Link to="/en">
-            <span role="img" aria-label="English">
-              🇬🇧
-            </span>
+            <FlagEn role="presentation" width={48} height={24} />
           </Link>
         </div>
         <div className="u-spaceMB7">
