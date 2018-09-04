@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-1pkti2q"
+>
+  <div
+    className="css-nevea4"
+  >
+    <h3
+      className="css-7k4qix"
+    >
+      Hedvigers
+    </h3>
+    <ul
+      className="css-1hdm3lc"
+    >
+      <li
+        className="css-dnk9v3"
+        onClick={[Function]}
+      >
+        <span
+          className="css-ty7r4z"
+        >
+          mock
+        </span>
+        <span
+          className="css-9hxyqy"
+        >
+          mock
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="css-1m6x5cw"
+  >
+    <div>
+      <div
+        className="css-a7osw5"
+      >
+        <img
+          className="css-6jrdpz"
+          src="https://mockimage.com"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

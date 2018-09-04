@@ -66,13 +66,14 @@ export const List: React.SFC<ListProps> = ({
     <Container>
       <Title>Hedvigers</Title>
       <ListContainer>
-        {users.map((user) => (
+        {users.map(({ name, title, picture }) => (
           <ListItem
-            active={user.picture.large === selectedImage}
-            onClick={() => onSelect(user)}
+            key={name}
+            active={picture.large === selectedImage}
+            onClick={() => onSelect({ name, title, picture })}
           >
-            <ListName>{user.name}</ListName>
-            <ListTitle>{user.title}</ListTitle>
+            <ListName>{name}</ListName>
+            <ListTitle>{title}</ListTitle>
           </ListItem>
         ))}
       </ListContainer>

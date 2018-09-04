@@ -2,7 +2,6 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import jsdom from 'jsdom';
 import Node from 'jsdom/lib/jsdom/living/node-document-position';
-import PropTypes from 'prop-types';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -32,6 +31,7 @@ jest.mock('react-responsive', () => {
   const React = require('react');
   const MediaQuery = require.requireActual('react-responsive').default;
 
+  // eslint-disable-next-line react/prop-types
   const MockMediaQuery = ({ values, ...rest }) => {
     const defaultWidth = global.window.innerWidth;
     const defaultHeight = global.window.innerHeight;
@@ -39,11 +39,6 @@ jest.mock('react-responsive', () => {
       ...rest,
       values: { ...values, width: defaultWidth, height: defaultHeight },
     });
-  };
-
-  MockMediaQuery.propTypes = {
-    // eslint-disable-next-line react/forbid-prop-types
-    values: PropTypes.object.isRequired,
   };
 
   return MockMediaQuery;
