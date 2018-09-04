@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import { colors } from '@hedviginsurance/brand';
 
-import { TeamtailorUser } from '../index';
+import { TeamtailorUser } from '..';
 
 interface ListProps {
   users: Array<TeamtailorUser>;
@@ -63,18 +63,18 @@ export const List: React.SFC<ListProps> = ({
   selectedImage,
   onSelect,
 }) => (
-  <Container>
-    <Title>Hedvigers</Title>
-    <ListContainer>
-      {users.map((user) => (
-        <ListItem
-          active={user.picture.large === selectedImage}
-          onClick={() => onSelect(user)}
-        >
-          <ListName>{user.name}</ListName>
-          <ListTitle>{user.title}</ListTitle>
-        </ListItem>
-      ))}
-    </ListContainer>
-  </Container>
-);
+    <Container>
+      <Title>Hedvigers</Title>
+      <ListContainer>
+        {users.map((user) => (
+          <ListItem
+            active={user.picture.large === selectedImage}
+            onClick={() => onSelect(user)}
+          >
+            <ListName>{user.name}</ListName>
+            <ListTitle>{user.title}</ListTitle>
+          </ListItem>
+        ))}
+      </ListContainer>
+    </Container>
+  );

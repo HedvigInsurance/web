@@ -4,7 +4,7 @@ import { Container, ActionMap } from 'constate';
 
 import { List } from './list';
 import { SelectedImage } from './selected-image';
-import { TeamtailorUser } from '../index';
+import { TeamtailorUser } from '..';
 
 const Box = styled('div')({
   display: 'flex',
