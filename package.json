@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@hedviginsurance/brand": "^1.0.0",
-    "@hedviginsurance/react-swipeable-views": "^0.12.19",
+    "@hedviginsurance/react-swipeable-views": "^0.12.20",
     "@segment/snippet": "^4.4.0",
     "@segment/utm-params": "^2.0.0",
     "@types/jest": "^23.3.1",
