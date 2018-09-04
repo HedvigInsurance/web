@@ -2,6 +2,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import jsdom from 'jsdom';
 import Node from 'jsdom/lib/jsdom/living/node-document-position';
+import * as emotion from 'emotion';
+import { createSerializer } from 'jest-emotion';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -43,3 +45,5 @@ jest.mock('react-responsive', () => {
 
   return MockMediaQuery;
 });
+
+expect.addSnapshotSerializer(createSerializer(emotion));

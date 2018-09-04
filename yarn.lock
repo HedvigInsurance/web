@@ -654,7 +654,7 @@
     "@babel/plugin-transform-react-jsx-self" "7.0.0-beta.51"
     "@babel/plugin-transform-react-jsx-source" "7.0.0-beta.51"
 
-"@babel/runtime@7.0.0":
+"@babel/runtime@7.0.0", "@babel/runtime@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
   dependencies:
@@ -663,12 +663,6 @@
 "@babel/runtime@7.0.0-rc.1":
   version "7.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-rc.1.tgz#42f36fc5817911c89ea75da2b874054922967616"
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
-"@babel/runtime@7.0.0-rc.3":
-  version "7.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-rc.3.tgz#7b0d6762220d2efa2958e72f8a661e1409c2d5d9"
   dependencies:
     regenerator-runtime "^0.12.0"
 
@@ -804,6 +798,10 @@
   version "0.6.12"
   resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.6.12.tgz#3fb58220e0fc9e380bcabbb3edde396ddc1dfe6e"
 
+"@emotion/stylis@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.7.0.tgz#4c30e6fccc9555e42fa6fef98b3bd0788b954684"
+
 "@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.5":
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.5.tgz#6a397794dc78ca7df4bf68893061709590a7ec81"
@@ -816,9 +814,9 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.0.0.tgz#4209c89eb2ec500583233e4a5bd173e767f63ee8"
 
-"@hedviginsurance/react-swipeable-views@^0.12.19":
-  version "0.12.19"
-  resolved "https://registry.yarnpkg.com/@hedviginsurance/react-swipeable-views/-/react-swipeable-views-0.12.19.tgz#ed7c35e225893a8c86d5924bb2bfa53d2e41bfe1"
+"@hedviginsurance/react-swipeable-views@^0.12.20":
+  version "0.12.20"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/react-swipeable-views/-/react-swipeable-views-0.12.20.tgz#ab3333af5927e8addea0f76d512831d8766cda60"
   dependencies:
     "@babel/runtime" "7.0.0"
     dom-helpers "^3.2.1"
@@ -917,7 +915,7 @@
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
-"@types/jest@^23.3.1":
+"@types/jest@^23.0.2", "@types/jest@^23.3.1":
   version "23.3.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.1.tgz#a4319aedb071d478e6f407d1c4578ec8156829cf"
 
@@ -1708,6 +1706,24 @@ babel-plugin-emotion@^9.2.6:
     "@emotion/hash" "^0.6.2"
     "@emotion/memoize" "^0.6.1"
     "@emotion/stylis" "^0.6.10"
+    babel-core "^6.26.3"
+    babel-plugin-macros "^2.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
+    convert-source-map "^1.5.0"
+    find-root "^1.1.0"
+    mkdirp "^0.5.1"
+    source-map "^0.5.7"
+    touch "^1.0.0"
+
+babel-plugin-emotion@^9.2.8:
+  version "9.2.8"
+  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.2.8.tgz#4df55ef10625c391f25b031f7e3006abac359e09"
+  dependencies:
+    "@babel/helper-module-imports" "7.0.0-beta.51"
+    "@emotion/babel-utils" "^0.6.4"
+    "@emotion/hash" "^0.6.2"
+    "@emotion/memoize" "^0.6.1"
+    "@emotion/stylis" "^0.7.0"
     babel-core "^6.26.3"
     babel-plugin-macros "^2.0.0"
     babel-plugin-syntax-jsx "^6.18.0"
@@ -3531,9 +3547,9 @@ create-emotion-server@^9.2.8:
     multipipe "^1.0.2"
     through "^2.3.8"
 
-create-emotion-styled@^9.2.6:
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.2.6.tgz#25be44a298e6e49d833ecf2247836284dc9c2042"
+create-emotion-styled@^9.2.8:
+  version "9.2.8"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.2.8.tgz#c0050e768ba439609bec108600467adf2de67cc3"
   dependencies:
     "@emotion/is-prop-valid" "^0.6.1"
 
@@ -3751,6 +3767,15 @@ css-what@1.0:
 css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
+
+css@^2.2.1:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
+  dependencies:
+    inherits "^2.0.3"
+    source-map "^0.6.1"
+    source-map-resolve "^0.5.2"
+    urix "^0.1.0"
 
 cssesc@^0.1.0:
   version "0.1.0"
@@ -5930,8 +5955,8 @@ gatsby-source-filesystem@^1.5.39:
     valid-url "^1.0.9"
 
 gatsby-teamtailor-users@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-teamtailor-users/-/gatsby-teamtailor-users-1.0.0.tgz#3545f4a90471153c18f50a3787bacbe14aef6d81"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-teamtailor-users/-/gatsby-teamtailor-users-1.1.0.tgz#94cb89298fa49ff7b54e91243f2638a4ec14091b"
   dependencies:
     node-fetch "^2.2.0"
 
@@ -8002,6 +8027,14 @@ jest-each@^23.5.0:
   dependencies:
     chalk "^2.0.1"
     pretty-format "^23.5.0"
+
+jest-emotion@^9.2.7:
+  version "9.2.7"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.7.tgz#7a854156d1d5ceb95d8f36095a3f81d04109f125"
+  dependencies:
+    "@types/jest" "^23.0.2"
+    chalk "^2.4.1"
+    css "^2.2.1"
 
 jest-environment-jsdom@^23.4.0:
   version "23.4.0"
@@ -11908,11 +11941,11 @@ react-dom@^16.0.0, react-dom@^16.4.2:
     prop-types "^15.6.0"
 
 react-emotion@^9.2.6:
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.6.tgz#3941f78779f9a8ad8300042ddfa9b2cb111442c2"
+  version "9.2.8"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.8.tgz#e4e24540bdcb7daacf87c405760ed619bddbb61b"
   dependencies:
-    babel-plugin-emotion "^9.2.6"
-    create-emotion-styled "^9.2.6"
+    babel-plugin-emotion "^9.2.8"
+    create-emotion-styled "^9.2.8"
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
@@ -12113,10 +12146,10 @@ react-split-pane@^0.1.66:
     react-style-proptype "^3.0.0"
 
 react-spring@^5.6.9:
-  version "5.6.9"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.9.tgz#df4243460bd82b5406b830ac0054429541844151"
+  version "5.6.13"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.13.tgz#afbdb95c2d157d1f32d699208238042560ba318d"
   dependencies:
-    "@babel/runtime" "7.0.0-rc.3"
+    "@babel/runtime" "^7.0.0"
 
 react-sticky@^6.0.3:
   version "6.0.3"
@@ -13764,7 +13797,7 @@ source-list-map@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-1.1.2.tgz#9889019d1024cce55cdc069498337ef6186a11a1"
 
-source-map-resolve@^0.5.0:
+source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
   dependencies:
