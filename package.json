@@ -98,7 +98,7 @@
     "lint": "./scripts/lint.sh",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info",
+    "format-js": "prettier-eslint --write \"**/*.{js,tsx}\" --log-level info",
     "format-css": "prettier-stylelint --write -q \"**/*.css\""
   },
   "husky": {
@@ -109,6 +109,7 @@
   "lint-staged": {
     "*.js": [
       "prettier-eslint --write",
+      "yarn run lint",
       "git add"
     ],
     "*.css": [
