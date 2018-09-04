@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-1is0qkf"
+>
+  <div
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "overflowX": "hidden",
+        "padding": "0 15%",
+      }
+    }
+  >
+    <div
+      className="react-swipeable-view-container"
+      style={
+        Object {
+          "WebkitFlexDirection": "row",
+          "WebkitTransform": "translate(0%, 0)",
+          "WebkitTransition": "all 0s ease 0s",
+          "direction": "ltr",
+          "display": "flex",
+          "flexDirection": "row",
+          "height": null,
+          "transform": "translate(0%, 0)",
+          "transition": "all 0s ease 0s",
+          "willChange": "transform",
+        }
+      }
+    >
+      <div
+        aria-hidden={false}
+        data-swipeable="true"
+        style={
+          Object {
+            "WebkitFlexShrink": 0,
+            "display": "flex",
+            "flexShrink": 0,
+            "overflow": "auto",
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="css-f57n28"
+        >
+          <div
+            className="css-11oluo3"
+          >
+            <img
+              className="css-tlmr97"
+              src="https://mockimage.com"
+            />
+          </div>
+          <div
+            className="css-w0xggg"
+          >
+            <span
+              className="css-oonezy"
+            >
+              mock
+            </span>
+            <span
+              className="css-6xix1i"
+            >
+              mock
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

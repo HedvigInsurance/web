@@ -42,7 +42,7 @@ const ListItem = styled('li')(
     transition: 'color 500ms',
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: 10
+    marginBottom: 10,
   },
   ({ active }: ListItemProps) => ({
     color: active ? colors.PURPLE : colors.BLACK,
@@ -63,18 +63,18 @@ export const List: React.SFC<ListProps> = ({
   selectedImage,
   onSelect,
 }) => (
-    <Container>
-      <Title>Hedvigers</Title>
-      <ListContainer>
-        {users.map((user) => (
-          <ListItem
-            active={user.picture.large === selectedImage}
-            onClick={() => onSelect(user)}
-          >
-            <ListName>{user.name}</ListName>
-            <ListTitle>{user.title}</ListTitle>
-          </ListItem>
-        ))}
-      </ListContainer>
-    </Container>
-  );
+  <Container>
+    <Title>Hedvigers</Title>
+    <ListContainer>
+      {users.map((user) => (
+        <ListItem
+          active={user.picture.large === selectedImage}
+          onClick={() => onSelect(user)}
+        >
+          <ListName>{user.name}</ListName>
+          <ListTitle>{user.title}</ListTitle>
+        </ListItem>
+      ))}
+    </ListContainer>
+  </Container>
+);

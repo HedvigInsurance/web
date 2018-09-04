@@ -4,7 +4,7 @@ import { Container, ActionMap } from 'constate';
 
 import { List } from './list';
 import { SelectedImage } from './selected-image';
-import { TeamtailorUser } from '../index'
+import { TeamtailorUser } from '../index';
 
 const Box = styled('div')({
   display: 'flex',
@@ -16,7 +16,7 @@ const Box = styled('div')({
 });
 
 interface DesktopProps {
-  teamtailorUsers: Array<TeamtailorUser>
+  teamtailorUsers: Array<TeamtailorUser>;
 }
 
 interface State {

@@ -1,17 +1,21 @@
 module.exports = {
   globals: {},
-  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx,tsx}'],
   setupTestFrameworkScriptFile: '<rootDir>/src/setupTests.js',
-  testMatch: ['**/__tests__/**/*.{js,jsx}', '**/?(*.)(spec|test).{js,jsx}'],
+  testMatch: [
+    '**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '**/?(*.)(spec|test).{js,jsx,ts,tsx}',
+  ],
   roots: ['<rootDir>/src'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.cache/'],
   transform: {
+    '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.(js|jsx)$': 'babel-jest',
     '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
     '^(?!.*\\.(js|jsx|css|json)$)': '<rootDir>/config/jest/fileTransform.js',
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  moduleFileExtensions: ['js', 'json', 'jsx', 'node'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'node', 'ts', 'tsx'],
   moduleNameMapper: {
     '^src(.*)$': '<rootDir>/src$1',
     '^assets(.*)$': '<rootDir>/static/assets$1',
