@@ -153,15 +153,15 @@ const Footer = ({ data = {}, langKey }, { location }) => {
             <TwitterIcon role="presentation" />
           </a>
         </div>
-        <div>
+        <div className="u-spaceMB8">
           <Link to="/" className="u-spaceMR12" aria-label="Svenska">
             <FlagSe role="presentation" width={40} height={25} />
           </Link>
           <Link to="/en" aria-label="English">
-            <FlagEn role="presentation" width={48} height={24} />
+            <FlagEn role="presentation" width={40} height={25} />
           </Link>
         </div>
-        <div className="u-spaceMB7">
+        <div className="u-spaceMB10">
           <p className="u-fontSize10 u-colorWhite u-spaceMB9">
             {copyrightText}
           </p>
