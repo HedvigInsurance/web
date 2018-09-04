@@ -71,9 +71,11 @@ export const SelectedImage: React.SFC<SelectedImageProps> = ({ images, selectedI
         <TransitionGroup>
             {images.filter(image => image === selectedImage).map(image => (
                 <Transition key={image} timeout={{ exit: 850, enter: 50 }}>
-                    {(status: string) => {
-                        return <ImageContainer status={status}><Image src={image} /></ImageContainer>
-                    }}
+                    {(status: string) => (
+                        <ImageContainer status={status}>
+                            <Image src={image} />
+                        </ImageContainer>
+                    )}
                 </Transition>
             ))}
         </TransitionGroup>
