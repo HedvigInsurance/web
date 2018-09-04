@@ -37,8 +37,11 @@ const exit = keyframes({
 
 const getTransform = (status: string) => {
   switch (status) {
-    case 'entering':
     case 'entered':
+      return {
+        animation: `${enter} 0ms ease forwards`,
+      }
+    case 'entering':
       return {
         animation: `${enter} 800ms ease forwards`,
       };
@@ -73,17 +76,17 @@ export const SelectedImage: React.SFC<SelectedImageProps> = ({
   images,
   selectedImage,
 }) => (
-  <Container>
-    <TransitionGroup>
-      {images.filter((image) => image === selectedImage).map((image) => (
-        <Transition key={image} timeout={{ exit: 850, enter: 50 }}>
-          {(status: string) => (
-            <ImageContainer status={status}>
-              <Image src={image} />
-            </ImageContainer>
-          )}
-        </Transition>
-      ))}
-    </TransitionGroup>
-  </Container>
-);
+    <Container>
+      <TransitionGroup>
+        {images.filter((image) => image === selectedImage).map((image) => (
+          <Transition key={image} timeout={{ exit: 850, enter: 850 }}>
+            {(status: string) => (
+              <ImageContainer status={status}>
+                <Image src={image} />
+              </ImageContainer>
+            )}
+          </Transition>
+        ))}
+      </TransitionGroup>
+    </Container>
+  );
