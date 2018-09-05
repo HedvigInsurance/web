@@ -7,6 +7,7 @@ import reactRenderer from 'remark-react';
 import { Badge } from 'src/components/Badge';
 import { BlogLink, BlogPostAuthor, PostContainer, PostHeader } from 'src/components/Blog';
 import { Author } from 'src/components/Blog/types';
+import { Spacing } from 'src/components/Spacing';
 
 
 interface BlogPostProps {
@@ -32,6 +33,7 @@ const BlogPost: React.SFC<BlogPostProps> = ({ title, excerpt, topImage, date, au
       />
     )}
     <TopImage src={topImage} alt="" />
+    <Spacing height={22} />
     <BlogLink to={slug}>
       <PostHeader>
         {title}

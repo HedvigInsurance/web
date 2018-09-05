@@ -29,9 +29,8 @@ const Blog = ({ data }) => {
                 (poster) => poster.node.name === frontmatter.author,
               )[0];
               return (
-                <React.Fragment>
+                <React.Fragment key={slug}>
                   <BlogPost
-                    key={slug}
                     title={title}
                     excerpt={excerpt}
                     date={date}
@@ -58,7 +57,7 @@ const Blog = ({ data }) => {
 };
 
 export const blogQuery = graphql`
-  query BlogQuery {
+  query BlogPage {
     posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
       edges {
         node {
