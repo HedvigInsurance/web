@@ -42,7 +42,7 @@ pricing:
   bottom_paragraph: >-
     PS! These prices are estimates based on a single occupant living in a
     small-ish apartment. Get your personal price in the app.
-  heading: Don't lock yourself in. You decide when you need us.
+  heading: Don't let insurers lock you in. Hedvig bills monthly.
   monthly_label: / month
   owned_price: 129kr
   owned_title: Owned apartment
@@ -50,7 +50,9 @@ pricing:
   rental_title: Rental apartment
 customer_source:
   bottom_paragraph: 'Hedvig members are switching from the following traditional insurers:'
-  heading: 'Already insured? No problem, we handle the switch for you.'
+  heading: >-
+    Switching from your existing insurer is as simple. Tell us who it is and we
+    handle the rest.
   image_alt: >-
     Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
     Trygg Hansa, 17% Övriga och 11% Folksam.
