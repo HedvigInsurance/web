@@ -16,9 +16,9 @@ three_explainers:
       title: Sign up in seconds
     paid_right_away:
       paragraph: >-
-        With our advanced AI we have drastically reduced how long it takes to
-        file a claim. 
-      title: Help in seconds. Replacement in minutes.
+        We have drastically reduced how long it takes to file a claim which
+        allows us to focus on helping you in the best way possible.
+      title: Help in seconds. Personalised for you.
 peril_forest:
   bottom_paragraph: Read the full terms of the insurance in the app.
   heading: >-
