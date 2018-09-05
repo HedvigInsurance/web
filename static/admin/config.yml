@@ -1300,7 +1300,15 @@ collections:
       - label: Top Image
         name: topImage
         widget: image
+      - label: author
+        name: Author (Exact name as shown on TeamTailor)
+        widget: number
+      - label: tags
+        name: Tags
+        widget: list
+      - label: Excerpt
+        name: excerpt
+        widget: markdown
       - label: Content
         name: content
         widget: markdown
-

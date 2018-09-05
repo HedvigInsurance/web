@@ -1,0 +1,56 @@
+import * as React from 'react';
+import styled from 'react-emotion';
+import format from 'date-fns/format';
+import parse from 'date-fns/parse';
+import svLocale from 'date-fns/locale/sv';
+import { Author } from 'src/components/Blog/types';
+
+interface BlogPostAuthorProps {
+  author: Author,
+  date: string, // DateString, maybe better representation aswell?
+}
+
+const PortraitContainer = styled('div')({
+  width: 40,
+  height: 40,
+  borderRadius: '50%',
+  overflow: 'hidden',
+  position: 'relative',
+});
+
+const Portrait = styled('img')({
+  display: 'inline',
+  margin: '0 auto',
+  height: '100%',
+  width: 'auto',
+});
+
+const AuthorContainer = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  marginBottom: 24,
+});
+
+const AuthorTextContainer = styled('div')({
+  lineHeight: 1,
+  marginLeft: 12,
+});
+
+const BlogPostAuthor: React.SFC<BlogPostAuthorProps> = ({ author, date }) => (
+  <AuthorContainer>
+    <PortraitContainer>
+      <Portrait src={author.image} alt={`Porträtt av ${author.name}`} />
+    </PortraitContainer>
+    <AuthorTextContainer>
+      <div>{author.name}</div>
+      <div>
+        {format(parse(date), 'd MMM, YYYY', {
+          locale: svLocale,
+        })}
+      </div>
+    </AuthorTextContainer>
+  </AuthorContainer>
+);
+
+export { BlogPostAuthor };

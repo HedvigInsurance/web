@@ -6,6 +6,8 @@
 
 const path = require('path');
 const { getSlugAndLang } = require('ptz-i18n');
+const uniq = require('lodash/uniq');
+const kebabCase = require('lodash/kebabCase');
 
 const DEFAULT_LANGUAGE = 'se';
 
@@ -34,6 +36,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
             frontmatter {
               templateKey
+              tags
             }
           }
         }
@@ -53,6 +56,22 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           `src/templates/${node.frontmatter.templateKey}.js`,
         ),
         context: { id: node.id, langKey },
+      });
+    });
+
+    let tags = [];
+    result.data.allMarkdownRemark.edges.forEach((edge) => {
+      if (edge.node.frontmatter.tags) {
+        tags = tags.concat(edge.node.frontmatter.tags);
+      }
+    });
+    tags = uniq(tags);
+    const tagPage = path.resolve('src/templates/tag-page.js');
+    tags.forEach((tag) => {
+      createPage({
+        path: `/blog/tags/${kebabCase(tag)}`,
+        component: tagPage,
+        context: { tag },
       });
     });
   });

@@ -25,6 +25,7 @@ module.exports = {
     'no-console': OFF,
     'import/default': ERROR,
     'import/prefer-default-export': OFF,
+    'import/no-unresolved': OFF,
     'react/jsx-filename-extension': [ERROR, { extensions: ['.js'] }],
     'react/jsx-one-expression-per-line': OFF,
     'jsx-a11y/anchor-is-valid': [

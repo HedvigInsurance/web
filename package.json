@@ -45,7 +45,9 @@
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-svgr": "^1.0.1",
+    "gatsby-plugin-typescript": "^1.4.20",
     "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-teamtailor-users": "^1.1.0",
     "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
@@ -56,6 +58,7 @@
     "js-cookie": "^2.2.0",
     "jsdom": "^12.0.0",
     "lint-staged": "^7.2.0",
+    "lodash": "^4.17.10",
     "netlify-cms": "^1.9.3",
     "normalize.css": "^8.0.0",
     "prettier": "^1.14.2",
@@ -91,7 +94,7 @@
     "lint": "./scripts/lint.sh",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"**/*.js\" --log-level info",
+    "format-js": "prettier-eslint --write \"**/*.{js,tsx}\" --log-level info",
     "format-css": "prettier-stylelint --write -q \"**/*.css\""
   },
   "husky": {

@@ -1,6 +1,6 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import remark from 'remark';
@@ -8,35 +8,50 @@ import reactRenderer from 'remark-react';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
-import Link from 'gatsby-link';
+import { BlogContainer, BlogPost } from 'src/components/Blog';
+import { Spacing } from 'src/components/Spacing';
 
 const Blog = ({ data }) => {
-  const { posts, page, header, footer } = data;
+  const { posters, posts, page, header, footer } = data;
   return (
     <main className="Site">
       <Helmet>
         <title>{page.title}</title>
       </Helmet>
       <StickyContainer>
-        <Header data={header} />
+        <Header data={header} langKey="se" />
         <div className="Site-content">
-          {/* {posts.edges.map(({ node: { frontmatter, fields } }) => (
-            <article>
-              <h2>
-                <Link to={fields.slug}>{frontmatter.title}</Link>
-              </h2>
-              <img src={frontmatter.topImage} alt="" />
-              <div>
-                {
-                  remark()
-                    .use(reactRenderer)
-                    .processSync(frontmatter.content).contents
-                }
-              </div>
-            </article>
-          ))} */}
+          <BlogContainer>
+            {posts.edges.map(({ node: { frontmatter, fields } }) => {
+              const { title, date, topImage, tags, excerpt } = frontmatter;
+              const { slug } = fields;
+              const author = posters.edges.filter(
+                (poster) => poster.node.name === frontmatter.author,
+              )[0];
+              return (
+                <React.Fragment>
+                  <BlogPost
+                    key={slug}
+                    title={title}
+                    excerpt={excerpt}
+                    date={date}
+                    topImage={topImage}
+                    slug={slug}
+                    tags={tags}
+                    author={
+                      author && {
+                        name: author.node.name,
+                        image: author.node.picture.standard,
+                      }
+                    }
+                  />
+                  <Spacing height={20} />
+                </React.Fragment>
+              );
+            })}
+          </BlogContainer>
         </div>
-        <Footer data={footer} />
+        <Footer data={footer} langKey="se" />
       </StickyContainer>
     </main>
   );
@@ -44,21 +59,36 @@ const Blog = ({ data }) => {
 
 export const blogQuery = graphql`
   query BlogQuery {
-    # posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
-    #   edges {
-    #     node {
-    #       fields {
-    #         slug
-    #       }
-    #       frontmatter {
-    #         title
-    #         date
-    #         topImage
-    #         content
-    #       }
-    #     }
-    #   }
-    # }
+    posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date
+            topImage
+            author
+            tags
+            excerpt
+          }
+        }
+      }
+    }
+
+    posters: allTeamtailorUser {
+      edges {
+        node {
+          teamtailorId
+          name
+          picture {
+            standard
+            large
+          }
+        }
+      }
+    }
 
     page: dataYaml(id: { regex: "/blog/" }) {
       title
