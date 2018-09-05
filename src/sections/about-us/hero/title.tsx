@@ -25,15 +25,28 @@ const Mission = styled(animated.h1)({
   },
 });
 
+const PlayButtonContainer = styled('div')({
+  display: 'inline-block',
+  width: 140,
+  transition: 'transform 350ms',
+  ':active': {
+    transform: 'scale(0.9)',
+  },
+});
+
 const PlayButton = styled(animated.button)({
   color: 'white',
   display: 'flex',
   alignItems: 'center',
   textAlign: 'left',
   justifyContent: 'space-between',
-  width: 140,
+  width: '100%',
   fontSize: 18,
   marginTop: 30,
+  cursor: 'pointer',
+  ':focus': {
+    outline: 0,
+  },
 });
 
 const DELAY = 500;
@@ -70,9 +83,11 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       to={{ opacity: 1, transform: 'translateY(0)' }}
     >
       {(styles) => (
-        <PlayButton onClick={clickedPlayButton} style={styles}>
-          <PlayIcon width={50} height={50} /> Se filmen
-        </PlayButton>
+        <PlayButtonContainer>
+          <PlayButton onClick={clickedPlayButton} style={styles}>
+            <PlayIcon width={50} height={50} /> Se filmen
+          </PlayButton>
+        </PlayButtonContainer>
       )}
     </Spring>
   </>
