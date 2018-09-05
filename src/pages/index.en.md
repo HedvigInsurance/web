@@ -3,19 +3,17 @@ templateKey: landing-page
 title: "Hedvig Insurance |\_Help when you need it"
 landing:
   cta_text: Get started
-  heading: Get help when you need it
-  subheading: >-
-    Hedvig is a new type of insurance. It protects you, your apartment and your
-    favourite things. It’s simple, fast and fair.
+  heading: Life happens. Let Hedvig help.
+  subheading: 'Home insurance reimagined for your lifestyle. It''s simple, fast and fair.'
 three_explainers:
   heading: Skip the phone queues and elevator music
   three_explainers:
     claim_on_phone:
       paragraph: 'Have a question about your insurance? Hedvig is just a tap away. '
-      title: Get immediate answers
+      title: Get instant answers
     insurance_in_minutes:
       paragraph: Download the app. Answer a few questions. Sign with your mobile BankID.
-      title: Signup in seconds
+      title: Sign up in seconds
     paid_right_away:
       paragraph: >-
         With our advanced AI we have drastically reduced how long it takes to
