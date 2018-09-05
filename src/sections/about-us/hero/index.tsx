@@ -1,6 +1,12 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import { Container, ActionMap } from 'constate';
+import isIOS from 'is-ios';
+
+declare module '*.mp4' {
+  const content: any;
+  export default content;
+}
 
 import { Title } from './title';
 import { Player } from './player';
@@ -54,14 +60,6 @@ const actions: ActionMap<State, Actions> = {
   }),
 };
 
-const handleVideoRef = (setVideoRef) => (ref) => {
-  setVideoRef({
-    onFullscreen: () => {
-      ref.webkitEnterFullscreen();
-    },
-  });
-};
-
 const onPlay = ({
   videoRef,
   setFullScreen,
@@ -69,7 +67,7 @@ const onPlay = ({
   videoRef: React.RefObject<HTMLVideoElement>;
   setFullScreen: (isFullScreen: boolean) => void;
 }) => () => {
-  if (videoRef.current && videoRef.current.webkitEnterFullscreen) {
+  if (videoRef.current && isIOS) {
     const video = videoRef.current;
     video.muted = false;
     video.pause();
