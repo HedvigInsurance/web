@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 
 import heroVideo from 'assets/about-us-hero.mp4';
+import heroVideoPoster from 'assets/about-us-hero-poster.png';
 
 interface HeightContainerProps {
   isFullScreen: boolean;
@@ -58,6 +59,7 @@ const restartVideo = (event: React.SyntheticEvent) => {
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
   <HeightContainer isFullScreen={isFullScreen}>
     <Video
+      poster={heroVideoPoster}
       innerRef={videoRef}
       onVolumeChange={restartVideo}
       playsInline

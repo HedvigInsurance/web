@@ -3,6 +3,16 @@ declare module '*.mp4' {
   export default content;
 }
 
+declare module '*.jpg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.png' {
+  const content: string;
+  export default content;
+}
+
 declare module '*.svg' {
   interface ReactComponentProps {
     width: number;
