@@ -1,6 +1,15 @@
 import * as React from "react"
 import styled, { keyframes } from "react-emotion"
+
 import heroVideo from "assets/about-us-hero.mp4"
+
+interface PlayerProps {
+    isFullScreen: boolean
+}
+
+interface HeightContainerProps {
+    isFullScreen: boolean
+}
 
 const fadeInKeyframe = keyframes({
     from: {
@@ -11,25 +20,23 @@ const fadeInKeyframe = keyframes({
     }
 })
 
-interface PlayerProps {
-    isFullScreen: boolean
-}
+const HeightContainer = styled("div")({
+    animation: `${fadeInKeyframe} 2000ms forwards`,
+    transition: "height 1500ms, padding 1500ms",
+    height: 600,
+    backgroundColor: "black",
+}, ({ isFullScreen }: HeightContainerProps) => isFullScreen ? ({
+    height: "calc(100vh - 70px)",
+    padding: "20vh 0"
+}) : null)
+
 
 const Video = styled("video")({
     width: "100%",
+    height: "100%",
     objectFit: "cover",
-    animation: `${fadeInKeyframe} 2000ms forwards`,
-    transition: "height 1500ms",
-    height: 600,
-    "@media (max-width: 1100px)": {
-        height: 700
-    }
-}, ({ isFullScreen }: PlayerProps) => ({
-    height: isFullScreen ? "calc(100vh - 70px)" : 600,
-    "@media (max-width: 1100px)": {
-        height: isFullScreen ? "calc(100vh - 70px)" : 700
-    }
-}))
+    transition: "height 1500ms"
+})
 
 const restartVideo = (event: React.SyntheticEvent) => {
     const video = event.nativeEvent.target as HTMLVideoElement
@@ -42,6 +49,8 @@ const restartVideo = (event: React.SyntheticEvent) => {
 }
 
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen }) =>
-    <Video onVolumeChange={restartVideo} playsInline autoPlay muted={!isFullScreen} loop={!isFullScreen} isFullScreen={isFullScreen}>
-        <source src={heroVideo} type="video/mp4" />
-    </Video>
+    <HeightContainer isFullScreen={isFullScreen}>
+        <Video onVolumeChange={restartVideo} playsInline autoPlay muted={!isFullScreen} loop={!isFullScreen}>
+            <source src={heroVideo} type="video/mp4" />
+        </Video>
+    </HeightContainer>
