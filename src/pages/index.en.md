@@ -21,15 +21,17 @@ three_explainers:
       title: Help in seconds. Replacement in minutes.
 peril_forest:
   bottom_paragraph: Read the full terms of the insurance in the app.
-  heading: Hedvig covers everything a traditional insurance covers – even your gadgets.
+  heading: >-
+    Hedvig covers everything a traditional home insurance covers – even your
+    gadgets
 philosophy:
   cards:
     card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
-    card2_paragraph: The rest is set aside for damages so we can pay out quickly.
+    card2_paragraph: The rest is set aside for claims so we can pay out quickly.
     card3_paragraph: >-
       If there is any money left at the end of the year we give it to charities
       selected by our members.
-  heading: A different type of insurer
+  heading: A different kind of insurer
   paragraph: >-
     Hedvig does things differently from traditional insurers. Our model puts
     your interests first. It starts with us only taking a fixed fee. By doing
@@ -40,7 +42,7 @@ pricing:
   bottom_paragraph: >-
     PS! These prices are estimates based on a single occupant living in a
     small-ish apartment. Get your personal price in the app.
-  heading: Billed monthly. No fixed contracts!
+  heading: Don't lock yourself in. You decide when you need us.
   monthly_label: / month
   owned_price: 129kr
   owned_title: Owned apartment
@@ -48,7 +50,7 @@ pricing:
   rental_title: Rental apartment
 customer_source:
   bottom_paragraph: 'Hedvig members are switching from the following traditional insurers:'
-  heading: 'Already insured? No problem, we handle the change for you.'
+  heading: 'Already insured? No problem, we handle the switch for you.'
   image_alt: >-
     Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
     Trygg Hansa, 17% Övriga och 11% Folksam.
@@ -56,7 +58,7 @@ safety:
   item1: >-
     Hedvig is re-insured by Inter Hannover, part of one of the world’s largest
     insurance groups.
-  item2: Received a AA-rating from Standard & Poor's
+  item2: Has a AA-rating from Standard & Poor's
   item3: Authorized by the Swedish Finansinspektionen
 ---
 
