@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: hedviginsurance/web
-  branch: master
+  branch: feature/blog-for-real
 
 media_folder: static/uploads
 public_folder: /uploads

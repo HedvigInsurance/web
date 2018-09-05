@@ -1,8 +1,8 @@
 import styled from 'react-emotion'
 
 interface SpacingProps {
-  width: number,
-  height: number,
+  width?: number,
+  height?: number,
 }
 
 const Spacing = styled('div')({}, ({ width, height }: SpacingProps) => ({

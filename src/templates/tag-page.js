@@ -34,9 +34,8 @@ const TagTemplate = ({ data, pathContext }) => {
               (poster) => poster.node.name === frontmatter.author,
             )[0];
             return (
-              <React.Fragment>
+              <React.Fragment key={slug}>
                 <BlogPost
-                  key={slug}
                   title={title}
                   excerpt={excerpt}
                   date={date}

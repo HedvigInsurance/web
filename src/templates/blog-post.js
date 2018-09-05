@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
+import sortBy from 'lodash/sortBy';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -15,7 +16,7 @@ import {
   PostContainer,
   PostHeader,
 } from 'src/components/Blog';
-import { Spacing } from 'src/components/Spacing';
+import Link from 'gatsby-link';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -35,6 +36,8 @@ const BlogPostTemplate = ({
   header,
   footer,
   topImage,
+  prevPost,
+  nextPost,
 }) => (
   <main className="Site">
     <Helmet>
@@ -44,12 +47,10 @@ const BlogPostTemplate = ({
       <Header data={header} />
       <article className="Site-content">
         <BlogContainer>
-          <HeroImage src={topImage} alt="" />
           <PostContainer>
+            <HeroImage src={topImage} alt="" />
             <PostHeader>{title}</PostHeader>
-            <Spacing height={44} />
             <BlogPostAuthor author={author} date={date} />
-            <Spacing height={44} />
             <div>
               {
                 remark()
@@ -57,6 +58,12 @@ const BlogPostTemplate = ({
                   .processSync(content).contents
               }
             </div>
+            {prevPost && (
+              <Link to={prevPost.node.fields.slug}>Föregående inlägg</Link>
+            )}
+            {nextPost && (
+              <Link to={nextPost.node.fields.slug}>Nästa inlägg</Link>
+            )}
           </PostContainer>
         </BlogContainer>
       </article>
@@ -75,6 +82,17 @@ const BlogPost = ({ data }) => {
   const author = data.posters.edges.filter(
     (poster) => poster.node.name === data.post.frontmatter.author,
   )[0];
+  const sortedPosts = sortBy(
+    data.posts.edges,
+    (p) => new Date(p.node.frontmatter.date),
+  );
+  const currentPostIndex = sortedPosts.findIndex(
+    (p) => p.node.frontmatter.date === data.post.frontmatter.date,
+  );
+  const prevPost = currentPostIndex > 0 && sortedPosts[currentPostIndex - 1];
+  const nextPost =
+    currentPostIndex !== sortedPosts.length &&
+    sortedPosts[currentPostIndex + 1];
   return (
     <BlogPostTemplate
       title={data.post.frontmatter.title}
@@ -84,6 +102,8 @@ const BlogPost = ({ data }) => {
       content={data.post.frontmatter.content}
       header={data.header}
       footer={data.footer}
+      prevPost={prevPost}
+      nextPost={nextPost}
     />
   );
 };
@@ -108,6 +128,19 @@ export const BlogPostQuery = graphql`
         author
         content
         tags
+      }
+    }
+
+    posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date
+          }
+        }
       }
     }
 
