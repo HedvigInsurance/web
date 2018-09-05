@@ -27,7 +27,7 @@ const HeightContainer = styled("div")({
     backgroundColor: "black",
 }, ({ isFullScreen }: HeightContainerProps) => isFullScreen ? ({
     height: "calc(100vh - 70px)",
-    padding: "20vh 0"
+    padding: "calc(15vh - 35px) 0"
 }) : null)
 
 
@@ -35,7 +35,8 @@ const Video = styled("video")({
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    transition: "height 1500ms"
+    transition: "height 1500ms",
+    overflow: "hidden"
 })
 
 const restartVideo = (event: React.SyntheticEvent) => {
