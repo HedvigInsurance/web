@@ -49,11 +49,9 @@ pricing:
   rental_price: 99kr
   rental_title: Rental apartment
 customer_source:
-  paragraph: >- 
-    Hedvig members are switching from the following traditional insurers:
   heading: >-
-    Switching from your existing insurer is as simple. Tell us who it is and we
-    handle the rest.
+    Switching from your existing insurer is dead simple. Tell us who it is and
+    we handle the rest.
   image_alt: >-
     Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
     Trygg Hansa, 17% Övriga och 11% Folksam.
@@ -64,3 +62,4 @@ safety:
   item2: Has a AA-rating from Standard & Poor's
   item3: Authorized by the Swedish Finansinspektionen
 ---
+
