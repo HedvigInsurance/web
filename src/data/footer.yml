@@ -19,6 +19,9 @@ se:
     - external: false
       label: Kontakt
       path: /contact
+    - external: false
+      label: Blogg
+      path: /blog
   linkSection2:
     - external: false
       label: Personuppgifter

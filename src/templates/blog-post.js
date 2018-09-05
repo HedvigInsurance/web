@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
-import format from 'date-fns/format';
-import parse from 'date-fns/parse';
-import svLocale from 'date-fns/locale/sv';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
+
+import {
+  BlogPostAuthor,
+  BlogContainer,
+  PostContainer,
+  PostHeader,
+} from 'src/components/Blog';
+import { Spacing } from 'src/components/Spacing';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -17,9 +23,14 @@ const pagePropTypes = {
   content: PropTypes.string.isRequired,
 };
 
+const HeroImage = styled('img')({
+  maxWidth: '100%',
+});
+
 const BlogPostTemplate = ({
   title,
   date,
+  author,
   content,
   header,
   footer,
@@ -32,22 +43,22 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} />
       <article className="Site-content">
-        <div className="Container">
-          <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-colorPrimaryDarkBlue u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
-            {title}
-          </h1>
-          <p>{format(parse(date), 'd MMM, YYYY', { locale: svLocale })}</p>
-        </div>
-        <img src={topImage} alt="" />
-        <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-          <div className="u-maxWidth1of1">
-            {
-              remark()
-                .use(reactRenderer)
-                .processSync(content).contents
-            }
-          </div>
-        </div>
+        <BlogContainer>
+          <HeroImage src={topImage} alt="" />
+          <PostContainer>
+            <PostHeader>{title}</PostHeader>
+            <Spacing height={44} />
+            <BlogPostAuthor author={author} date={date} />
+            <Spacing height={44} />
+            <div>
+              {
+                remark()
+                  .use(reactRenderer)
+                  .processSync(content).contents
+              }
+            </div>
+          </PostContainer>
+        </BlogContainer>
       </article>
     </StickyContainer>
     <Footer data={footer} />
@@ -60,16 +71,22 @@ BlogPostTemplate.propTypes = {
   footer: PropTypes.shape(footerPropTypes).isRequired,
 };
 
-const BlogPost = ({ data }) => (
-  <BlogPostTemplate
-    title={data.markdownRemark.frontmatter.title}
-    date={data.markdownRemark.frontmatter.date}
-    topImage={data.markdownRemark.frontmatter.topImage}
-    content={data.markdownRemark.frontmatter.content}
-    header={data.header}
-    footer={data.footer}
-  />
-);
+const BlogPost = ({ data }) => {
+  const author = data.posters.edges.filter(
+    (poster) => poster.node.name === data.post.frontmatter.author,
+  )[0];
+  return (
+    <BlogPostTemplate
+      title={data.post.frontmatter.title}
+      date={data.post.frontmatter.date}
+      topImage={data.post.frontmatter.topImage}
+      author={{ name: author.node.name, image: author.node.picture.standard }}
+      content={data.post.frontmatter.content}
+      header={data.header}
+      footer={data.footer}
+    />
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
@@ -83,14 +100,28 @@ BlogPost.propTypes = {
 
 export const BlogPostQuery = graphql`
   query BlogPost($id: String!) {
-    # markdownRemark(id: { eq: $id }) {
-    #   frontmatter {
-    #     title
-    #     date
-    #     topImage
-    #     content
-    #   }
-    # }
+    post: markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        title
+        date
+        topImage
+        author
+        content
+        tags
+      }
+    }
+
+    posters: allTeamtailorUser {
+      edges {
+        node {
+          name
+          picture {
+            standard
+            large
+          }
+        }
+      }
+    }
 
     header: dataYaml(id: { regex: "/header/" }) {
       ...Header_data

@@ -1,10 +1,15 @@
 {
-  "include": ["./**/*"],
+  "include": [
+    "./**/*"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
     "typeRoots": ["node_modules/@types", "./typings"],
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
@@ -16,8 +21,12 @@
     "baseUrl": "./",
     "types": ["jest"],
     "paths": {
-      "src/*": ["src/*"],
-      "assets/*": ["static/assets/*"]
+      "src/*": [
+        "src/*"
+      ],
+      "assets/*": [
+        "static/assets/*"
+      ]
     }
   }
 }

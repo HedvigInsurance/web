@@ -12,6 +12,7 @@ const hasEnvConfig = [
   SEGMENT_JS_WRITE_KEY_TEST,
   BRANCH_KEY_PRODUCTION,
   BRANCH_KEY_TEST,
+  TEAMTAILOR_TOKEN,
 ].every((value) => !!value);
 
 if (!hasEnvConfig) {
