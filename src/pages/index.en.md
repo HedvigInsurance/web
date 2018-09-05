@@ -49,7 +49,8 @@ pricing:
   rental_price: 99kr
   rental_title: Rental apartment
 customer_source:
-  bottom_paragraph: 'Hedvig members are switching from the following traditional insurers:'
+  paragraph: >- 
+    Hedvig members are switching from the following traditional insurers:
   heading: >-
     Switching from your existing insurer is as simple. Tell us who it is and we
     handle the rest.
@@ -63,4 +64,3 @@ safety:
   item2: Has a AA-rating from Standard & Poor's
   item3: Authorized by the Swedish Finansinspektionen
 ---
-
