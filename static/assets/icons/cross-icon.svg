@@ -1,14 +1,15 @@
-<svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="Canvas" fill="none">
-<g id="icons/list_items/states/insured copy 9.1">
-<g id="Oval">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M 12 24C 18.6274 24 24 18.6274 24 12C 24 5.37258 18.6274 0 12 0C 5.37258 0 0 5.37258 0 12C 0 18.6274 5.37258 24 12 24Z" fill="#FF8A80"/>
-</g>
-<g id="Combined Shape">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M 7.35073 0.000690534L 6.65122 0L 6.65122 6.65122L 0 6.65122L 0.000690534 7.35073L 6.64984 7.35142L 6.65053 14.0006L 7.35142 13.9999L 7.35142 7.35142L 13.9999 7.35142L 14.0006 6.65053L 7.35142 6.64984L 7.35073 0.000690534Z" transform="matrix(0.707107 0.707107 -0.707107 0.707107 11.8574 2.24121)" fill="white"/>
-<path d="M 6.65122 0L 7.35073 0.000690534L 7.35142 6.64984L 14.0006 6.65053L 13.9999 7.35142L 7.35142 7.35142L 7.35142 13.9999L 6.65053 14.0006L 6.64984 7.35142L 0.000690534 7.35073L 0 6.65122L 6.65122 6.65122L 6.65122 0Z" transform="matrix(0.707107 0.707107 -0.707107 0.707107 11.8574 2.24121)" stroke="white"/>
-</g>
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)" stroke="#FFFFFF" stroke-width="0.5">
+            <circle id="Oval-3" cx="13.5" cy="13.5" r="13.5"></circle>
+            <g id="cross-icon" transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
+                <path d="M10.7583199,3.39107701 L10.7583199,10.0420522 L4.10734475,10.0420522 L4.10754172,10.2415883 L10.756914,10.2422783 L10.7576039,16.8911846 L10.9585201,16.890984 L10.9585201,10.2422524 L17.6072517,10.2422524 L17.6074524,10.0413362 L10.958546,10.0406462 L10.957856,3.39127399 L10.7583199,3.39107701 Z" id="Shape" transform="translate(10.857400, 10.141132) rotate(45.000000) translate(-10.857400, -10.141132) "></path>
+            </g>
+        </g>
+    </g>
 </svg>
-
