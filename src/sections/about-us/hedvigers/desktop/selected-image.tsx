@@ -1,6 +1,20 @@
 import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import { TransitionGroup, Transition } from 'react-transition-group';
+import {
+  ENTERING,
+  ENTERED,
+  EXITING,
+  EXITED,
+  UNMOUNTED,
+} from 'react-transition-group/Transition';
+
+type TransitionStatus =
+  | typeof ENTERING
+  | typeof ENTERED
+  | typeof EXITING
+  | typeof EXITED
+  | typeof UNMOUNTED;
 
 interface SelectedImageProps {
   images: Array<string>;
@@ -14,7 +28,7 @@ const Container = styled('div')({
 });
 
 interface ImageContainerProps {
-  status: string;
+  status: TransitionStatus;
 }
 
 const enter = keyframes({
@@ -35,13 +49,13 @@ const exit = keyframes({
   },
 });
 
-const getTransform = (status: string) => {
+const getTransform = (status: TransitionStatus) => {
   switch (status) {
-    case 'entered':
+    case ENTERED:
       return {
         animation: `${enter} 0ms ease forwards`,
-      }
-    case 'entering':
+      };
+    case ENTERING:
       return {
         animation: `${enter} 800ms ease forwards`,
       };
@@ -76,17 +90,17 @@ export const SelectedImage: React.SFC<SelectedImageProps> = ({
   images,
   selectedImage,
 }) => (
-    <Container>
-      <TransitionGroup>
-        {images.filter((image) => image === selectedImage).map((image) => (
-          <Transition key={image} timeout={{ exit: 850, enter: 850 }}>
-            {(status: string) => (
-              <ImageContainer status={status}>
-                <Image src={image} />
-              </ImageContainer>
-            )}
-          </Transition>
-        ))}
-      </TransitionGroup>
-    </Container>
-  );
+  <Container>
+    <TransitionGroup>
+      {images.filter((image) => image === selectedImage).map((image) => (
+        <Transition key={image} timeout={{ exit: 850, enter: 850 }}>
+          {(status) => (
+            <ImageContainer status={status}>
+              <Image src={image} />
+            </ImageContainer>
+          )}
+        </Transition>
+      ))}
+    </TransitionGroup>
+  </Container>
+);

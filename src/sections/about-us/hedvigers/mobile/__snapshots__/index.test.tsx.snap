@@ -52,82 +52,173 @@ exports[`renders correctly 1`] = `
   font-size: 16px;
 }
 
-<div
-  className="emotion-6"
->
-  <div
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseMove={[Function]}
-    onMouseUp={[Function]}
-    onScroll={[Function]}
-    onTouchEnd={[Function]}
-    onTouchStart={[Function]}
-    style={
+<Component
+  teamtailorUsers={
+    Array [
       Object {
-        "overflowX": "hidden",
-        "padding": "0 15%",
-      }
-    }
-  >
+        "name": "mock",
+        "picture": Object {
+          "large": "https://mockimage.com",
+        },
+        "title": "mock",
+      },
+    ]
+  }
+>
+  <Styled(div)>
     <div
-      className="react-swipeable-view-container"
-      style={
-        Object {
-          "WebkitFlexDirection": "row",
-          "WebkitTransform": "translate(0%, 0)",
-          "WebkitTransition": "all 0s ease 0s",
-          "direction": "ltr",
-          "display": "flex",
-          "flexDirection": "row",
-          "height": null,
-          "transform": "translate(0%, 0)",
-          "transition": "all 0s ease 0s",
-          "willChange": "transform",
-        }
-      }
+      className="emotion-6"
     >
-      <div
-        aria-hidden={false}
-        data-swipeable="true"
-        style={
-          Object {
-            "WebkitFlexShrink": 0,
-            "display": "flex",
-            "flexShrink": 0,
-            "overflow": "auto",
-            "width": "100%",
-          }
-        }
+      <MockMediaQuery
+        query="(max-width: 700px)"
       >
-        <div
-          className="emotion-5"
+        <MediaQuery
+          query="(max-width: 700px)"
+          values={
+            Object {
+              "height": 768,
+              "width": 600,
+            }
+          }
         >
-          <div
-            className="emotion-1"
+          <ReactSwipableView
+            animateHeight={false}
+            animateTransitions={true}
+            axis="x"
+            disableLazyLoading={false}
+            disabled={false}
+            enableMouseEvents={true}
+            hysteresis={0.6}
+            ignoreNativeScroll={false}
+            index={0}
+            resistance={true}
+            slideStyle={
+              Object {
+                "display": "flex",
+              }
+            }
+            springConfig={
+              Object {
+                "delay": "0s",
+                "duration": "0.35s",
+                "easeFunction": "cubic-bezier(0.15, 0.3, 0.25, 1)",
+              }
+            }
+            style={
+              Object {
+                "padding": "0 15%",
+              }
+            }
+            threshold={5}
           >
-            <img
-              className="emotion-0"
-              src="https://mockimage.com"
-            />
-          </div>
-          <div
-            className="emotion-4"
-          >
-            <span
-              className="emotion-2"
+            <div
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseMove={[Function]}
+              onMouseUp={[Function]}
+              onScroll={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "overflowX": "hidden",
+                  "padding": "0 15%",
+                }
+              }
             >
-              mock
-            </span>
-            <span
-              className="emotion-3"
-            >
-              mock
-            </span>
-          </div>
-        </div>
-      </div>
+              <div
+                className="react-swipeable-view-container"
+                style={
+                  Object {
+                    "WebkitFlexDirection": "row",
+                    "WebkitTransform": "translate(0%, 0)",
+                    "WebkitTransition": "all 0s ease 0s",
+                    "direction": "ltr",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "height": null,
+                    "transform": "translate(0%, 0)",
+                    "transition": "all 0s ease 0s",
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <div
+                  aria-hidden={false}
+                  data-swipeable="true"
+                  key=".$mock"
+                  style={
+                    Object {
+                      "WebkitFlexShrink": 0,
+                      "display": "flex",
+                      "flexShrink": 0,
+                      "overflow": "auto",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Styled(div)
+                    key="mock"
+                  >
+                    <div
+                      className="emotion-5"
+                    >
+                      <Styled(div)>
+                        <div
+                          className="emotion-1"
+                        >
+                          <Styled(img)
+                            src="https://mockimage.com"
+                          >
+                            <img
+                              className="emotion-0"
+                              src="https://mockimage.com"
+                            />
+                          </Styled(img)>
+                        </div>
+                      </Styled(div)>
+                      <Styled(div)>
+                        <div
+                          className="emotion-4"
+                        >
+                          <Styled(span)>
+                            <span
+                              className="emotion-2"
+                            >
+                              mock
+                            </span>
+                          </Styled(span)>
+                          <Styled(span)>
+                            <span
+                              className="emotion-3"
+                            >
+                              mock
+                            </span>
+                          </Styled(span)>
+                        </div>
+                      </Styled(div)>
+                    </div>
+                  </Styled(div)>
+                </div>
+              </div>
+            </div>
+          </ReactSwipableView>
+        </MediaQuery>
+      </MockMediaQuery>
+      <MockMediaQuery
+        query="(min-width: 700px)"
+      >
+        <MediaQuery
+          query="(min-width: 700px)"
+          values={
+            Object {
+              "height": 768,
+              "width": 600,
+            }
+          }
+        />
+      </MockMediaQuery>
     </div>
-  </div>
-</div>
+  </Styled(div)>
+</Component>
 `;
