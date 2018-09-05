@@ -3,10 +3,6 @@ import styled, { keyframes } from "react-emotion"
 
 import heroVideo from "assets/about-us-hero.mp4"
 
-interface PlayerProps {
-    isFullScreen: boolean
-}
-
 interface HeightContainerProps {
     isFullScreen: boolean
 }
@@ -39,19 +35,24 @@ const Video = styled("video")({
     overflow: "hidden"
 })
 
+interface PlayerProps {
+    isFullScreen: boolean,
+    videoRef: React.RefObject<HTMLVideoElement>
+}
+
 const restartVideo = (event: React.SyntheticEvent) => {
     const video = event.nativeEvent.target as HTMLVideoElement
 
-    if (video.volume === 1) {
+    if (!video.muted) {
         video.pause();
         video.currentTime = 0;
         video.play();
     }
 }
 
-export const Player: React.SFC<PlayerProps> = ({ isFullScreen }) =>
+export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) =>
     <HeightContainer isFullScreen={isFullScreen}>
-        <Video onVolumeChange={restartVideo} playsInline={!isFullScreen} autoPlay muted={!isFullScreen} loop={!isFullScreen}>
+        <Video innerRef={videoRef} onVolumeChange={restartVideo} playsInline autoPlay muted={!isFullScreen} loop={!isFullScreen}>
             <source src={heroVideo} type="video/mp4" />
         </Video>
     </HeightContainer>

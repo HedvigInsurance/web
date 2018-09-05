@@ -33,27 +33,53 @@ const Shadow = styled("div")({
 }))
 
 interface State {
-    isFullScreen: boolean
+    isFullScreen: boolean,
+    videoRef: React.RefObject<HTMLVideoElement>
 }
 
 interface Actions {
-    setFullScreen: (isFullScreen: boolean) => void
+    setFullScreen: (isFullScreen: boolean) => void,
+    setVideoRef: (videoRef: React.RefObject<HTMLVideoElement>) => void
 }
 
 const actions: ActionMap<State, Actions> = {
     setFullScreen: isFullScreen => () => ({
         isFullScreen
+    }),
+    setVideoRef: videoRef => () => ({
+        videoRef
     })
 }
 
+const handleVideoRef = setVideoRef => ref => {
+    setVideoRef({
+        onFullscreen: () => {
+            ref.webkitEnterFullscreen();
+        }
+    })
+}
+
+const onPlay = ({ videoRef, setFullScreen }: { videoRef: React.RefObject<HTMLVideoElement>, setFullScreen: (isFullScreen: boolean) => void }) => () => {
+    if (videoRef.current && videoRef.current.webkitEnterFullscreen) {
+        const video = videoRef.current
+        video.muted = false
+        video.pause()
+        video.currentTime = 0
+        video.play()
+        video.webkitEnterFullscreen()
+        return
+    }
+
+    setFullScreen(true)
+}
 
 export const Hero = () =>
-    <Container actions={actions} initialState={{ isFullScreen: false }}>
-        {({ isFullScreen, setFullScreen }) => (
+    <Container actions={actions} initialState={{ isFullScreen: false, videoRef: React.createRef<HTMLVideoElement>() }}>
+        {({ isFullScreen, setFullScreen, videoRef }) => (
             <HeroContainer>
-                <Player isFullScreen={isFullScreen} />
+                <Player isFullScreen={isFullScreen} videoRef={videoRef} />
                 <Shadow hidden={isFullScreen}>
-                    <Title clickedPlayButton={() => setFullScreen(true)} />
+                    <Title clickedPlayButton={onPlay({ videoRef, setFullScreen })} />
                 </Shadow>
                 <CloseButton onClick={() => setFullScreen(false)} hidden={!isFullScreen} />
             </HeroContainer>
