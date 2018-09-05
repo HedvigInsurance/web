@@ -56,7 +56,8 @@ pricing:
   rental_price: 99kr
   rental_title: För dig i hyresrätt
 customer_source:
-  bottom_paragraph: 'Våra användare byter till Hedvig från:'
+  paragraph: >-
+    Våra användare byter till Hedvig från:
   heading: Redan försäkrad? Vi sköter bytet
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
@@ -68,4 +69,3 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
-
