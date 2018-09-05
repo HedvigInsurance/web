@@ -12015,6 +12015,10 @@ react-is@^16.4.2:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.2.tgz#84891b56c2b6d9efdee577cc83501dfc5ecead88"
 
+react-lifecycle-components@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-lifecycle-components/-/react-lifecycle-components-1.0.0.tgz#fd5c77899acc5cc6cc76da0c6dadd19701801a6f"
+
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"

@@ -3,11 +3,6 @@ import styled from 'react-emotion';
 import { Container, ActionMap } from 'constate';
 import isIOS from 'is-ios';
 
-declare module '*.mp4' {
-  const content: any;
-  export default content;
-}
-
 import { Title } from './title';
 import { Player } from './player';
 import { CloseButton } from './close-button';
@@ -38,6 +33,7 @@ const Shadow = styled('div')(
   },
   ({ hidden }: ShadowProps) => ({
     opacity: hidden ? 0 : 1,
+    pointerEvents: hidden ? 'none' : 'all',
   }),
 );
 
