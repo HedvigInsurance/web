@@ -1,16 +1,16 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { Spring, config } from 'react-spring';
+import { Spring, config, animated } from 'react-spring';
 
 import { ReactComponent as PlayIcon } from 'assets/icons/play.svg';
 
-const MissionTitle = styled('span')({
+const MissionTitle = styled(animated.span)({
   color: 'white',
   fontSize: '30px',
   lineHeight: '40px',
 });
 
-const Mission = styled('h1')({
+const Mission = styled(animated.h1)({
   color: 'white',
   fontSize: '100px',
   lineHeight: '120px',
@@ -25,7 +25,7 @@ const Mission = styled('h1')({
   },
 });
 
-const PlayButton = styled('button')({
+const PlayButton = styled(animated.button)({
   color: 'white',
   display: 'flex',
   alignItems: 'center',
@@ -45,6 +45,7 @@ interface TitleProps {
 export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
   <>
     <Spring
+      native
       delay={DELAY + 200}
       config={config.slow}
       from={{ opacity: 0, transform: 'translateX(-300px)' }}
@@ -53,6 +54,7 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       {(styles) => <MissionTitle style={styles}>Our mission:</MissionTitle>}
     </Spring>
     <Spring
+      native
       delay={DELAY}
       config={config.slow}
       from={{ opacity: 0, transform: 'translateY(-300px)' }}
@@ -61,6 +63,7 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       {(styles) => <Mission style={styles}>Making minds more peaceful</Mission>}
     </Spring>
     <Spring
+      native
       delay={DELAY + 900}
       config={config.slow}
       from={{ opacity: 0, transform: 'translateY(50px)' }}
