@@ -50,7 +50,9 @@ pricing:
   rental_title: Rental apartment
 customer_source:
   bottom_paragraph: 'Hedvig members are switching from the following traditional insurers:'
-  heading: 'Already insured? No problem, we handle the switch for you.'
+  heading: >-
+    Switching from your existing insurer is as simple. Tell us who it is and we
+    handle the rest.
   image_alt: >-
     Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
     Trygg Hansa, 17% Övriga och 11% Folksam.
