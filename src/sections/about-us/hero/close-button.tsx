@@ -4,19 +4,28 @@ import { Spring } from 'react-spring';
 
 import { ReactComponent as CrossIcon } from 'assets/icons/cross-icon.svg';
 
-const Button = styled('button')({
-  position: 'absolute',
-  top: 20,
-  left: 20,
-  cursor: 'pointer',
-  transition: 'transform 350ms',
-  ':focus': {
-    outline: 0,
+interface ButtonProps {
+  hidden: boolean;
+}
+
+const Button = styled('button')(
+  {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    cursor: 'pointer',
+    transition: 'transform 350ms',
+    ':focus': {
+      outline: 0,
+    },
+    ':active': {
+      transform: 'scale(0.9)',
+    },
   },
-  ':active': {
-    transform: 'scale(0.9)',
-  },
-});
+  ({ hidden }: ButtonProps) => ({
+    pointerEvents: hidden ? 'none' : 'all',
+  }),
+);
 
 interface CloseButtonProps {
   onClick: () => void;
@@ -34,7 +43,7 @@ export const CloseButton: React.SFC<CloseButtonProps> = ({
     }}
   >
     {(styles) => (
-      <Button style={styles} onClick={onClick}>
+      <Button hidden={hidden} style={styles} onClick={onClick}>
         <CrossIcon width={40} height={40} />
       </Button>
     )}
