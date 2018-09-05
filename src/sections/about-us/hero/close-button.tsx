@@ -15,6 +15,6 @@ interface CloseButtonProps {
 }
 
 export const CloseButton: React.SFC<CloseButtonProps> = ({ onClick, hidden }) =>
-    <Spring from={{ opacity: hidden ? 1 : 0 }} to={{ opacity: hidden ? 0 : 1 }}>
+    <Spring from={{ opacity: 0 }} to={{ opacity: hidden ? 0 : 1 }}>
         {styles => <Button style={styles} onClick={onClick}>Stoppa</Button>}
     </Spring>
