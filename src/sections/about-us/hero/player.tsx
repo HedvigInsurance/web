@@ -51,7 +51,7 @@ const restartVideo = (event: React.SyntheticEvent) => {
 
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen }) =>
     <HeightContainer isFullScreen={isFullScreen}>
-        <Video onVolumeChange={restartVideo} playsInline autoPlay muted={!isFullScreen} loop={!isFullScreen}>
+        <Video onVolumeChange={restartVideo} playsInline={!isFullScreen} autoPlay muted={!isFullScreen} loop={!isFullScreen}>
             <source src={heroVideo} type="video/mp4" />
         </Video>
     </HeightContainer>
