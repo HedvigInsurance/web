@@ -6,6 +6,9 @@ import './Page.css';
 
 import { Hedvigers } from 'src/sections/about-us/hedvigers';
 import { Hero } from 'src/sections/about-us/hero';
+import { Body } from 'src/sections/about-us/body';
+import { Founders } from 'src/sections/about-us/founders';
+import { Facts } from 'src/sections/about-us/facts';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -13,10 +16,16 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   teamtailorUsers: PropTypes.object.isRequired,
+  body: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 const AboutUsTemplate = ({
   title,
+  body,
+  foundersImageFile,
   header,
   footer,
   teamtailorUsers,
@@ -29,7 +38,10 @@ const AboutUsTemplate = ({
     <StickyContainer>
       <Header data={header} langKey={langKey} />
       <Hero />
+      <Body title={body.title} text={body.text} />
+      <Founders imageFile={foundersImageFile} />
       <Hedvigers teamtailorUsers={teamtailorUsers} />
+      <Facts />
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
@@ -47,6 +59,8 @@ const AboutUs = ({ data, pathContext }) => (
     teamtailorUsers={data.allTeamtailorUser.edges
       .map(({ node }) => node)
       .filter((user) => user.picture.large)}
+    body={data.markdownRemark.frontmatter.body}
+    foundersImageFile={data.foundersImageFile}
     title={data.markdownRemark.frontmatter.title}
     header={data.header}
     footer={data.footer}
@@ -72,9 +86,21 @@ export default AboutUs;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
+    foundersImageFile: file(relativePath: { eq: "about-us/founders.jpg" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 2000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        body {
+          title
+          text
+        }
       }
     }
 

@@ -46,7 +46,7 @@ const UserInfo = styled('div')({
 
 const Name = styled('span')({
   fontSize: 18,
-  fontFamily: 'So Ray',
+  fontFamily: 'SoRay',
 });
 
 const Title = styled('span')({
