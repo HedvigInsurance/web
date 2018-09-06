@@ -55,7 +55,7 @@
     "gatsby-plugin-svgr": "^1.0.1",
     "gatsby-plugin-typescript": "^1.4.20",
     "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-teamtailor-users": "^1.0.0",
+    "gatsby-teamtailor-users": "^1.2.0",
     "gatsby-transformer-json": "^1.0.20",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.27",
