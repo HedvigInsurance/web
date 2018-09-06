@@ -9,6 +9,7 @@ import { Hero } from 'src/sections/about-us/hero';
 import { Body } from 'src/sections/about-us/body';
 import { Founders } from 'src/sections/about-us/founders';
 import { Facts } from 'src/sections/about-us/facts';
+import { Press } from 'src/sections/about-us/press';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -42,6 +43,7 @@ const AboutUsTemplate = ({
       <Founders imageFile={foundersImageFile} />
       <Hedvigers teamtailorUsers={teamtailorUsers} />
       <Facts />
+      <Press />
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
