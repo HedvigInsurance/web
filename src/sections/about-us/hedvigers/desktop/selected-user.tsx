@@ -120,8 +120,8 @@ interface DetailsProps {
 const Details = styled('div')(
   {
     position: 'absolute',
-    padding: '10%',
-    bottom: 30,
+    padding: '5% 10%',
+    bottom: 10,
     display: 'flex',
     flexDirection: 'column',
   },
