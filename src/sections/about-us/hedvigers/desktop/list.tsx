@@ -36,7 +36,6 @@ interface ListItemProps {
 const ListItem = styled('li')(
   {
     flexGrow: 0,
-    height: 150,
     width: '48%',
     maxWidth: '48%',
     cursor: 'pointer',
