@@ -3,7 +3,7 @@ templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 landing:
   cta_text: Kom igång
-  heading: Livet händer. Låt Hedvig hjälpa dig.
+  heading: "Livet händer. Låt\_Hedvig hjälpa dig."
   subheading: >-
     Hedvig är hemförsäkring skapat för din livsstil. Det är enkelt, snabbt och
     rättvist.
@@ -67,4 +67,3 @@ safety:
   item2: Med AA-rating från Standard & Poor's
   item3: Hedvig är auktoriserat av Finansinspektionen
 ---
-
