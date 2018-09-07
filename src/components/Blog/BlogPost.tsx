@@ -26,12 +26,10 @@ const TopImage = styled('img')({
 
 const BlogPost: React.SFC<BlogPostProps> = ({ title, excerpt, topImage, date, author, slug, tags }) => (
   <PostContainer>
-    {author && (
-      <BlogPostAuthor
-        author={author}
-        date={date}
-      />
-    )}
+    <BlogPostAuthor
+      author={author}
+      date={date}
+    />
     <TopImage src={topImage} alt="" />
     <Spacing height={22} />
     <BlogLink to={slug}>

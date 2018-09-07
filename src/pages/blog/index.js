@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
+import sortBy from 'lodash/sortBy';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -22,32 +20,34 @@ const Blog = ({ data }) => {
         <Header data={header} langKey="se" />
         <div className="Site-content">
           <BlogContainer>
-            {posts.edges.map(({ node: { frontmatter, fields } }) => {
-              const { title, date, topImage, tags, excerpt } = frontmatter;
-              const { slug } = fields;
-              const author = posters.edges.filter(
-                (poster) => poster.node.name === frontmatter.author,
-              )[0];
-              return (
-                <React.Fragment key={slug}>
-                  <BlogPost
-                    title={title}
-                    excerpt={excerpt}
-                    date={date}
-                    topImage={topImage}
-                    slug={slug}
-                    tags={tags}
-                    author={
-                      author && {
-                        name: author.node.name,
-                        image: author.node.picture.standard,
+            {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
+              .reverse()
+              .map(({ node: { frontmatter, fields } }) => {
+                const { title, date, topImage, tags, excerpt } = frontmatter;
+                const { slug } = fields;
+                const author = posters.edges.filter(
+                  (poster) => poster.node.name === frontmatter.author,
+                )[0];
+                return (
+                  <React.Fragment key={slug}>
+                    <BlogPost
+                      title={title}
+                      excerpt={excerpt}
+                      date={date}
+                      topImage={topImage}
+                      slug={slug}
+                      tags={tags}
+                      author={
+                        author && {
+                          name: author.node.name,
+                          image: author.node.picture.standard,
+                        }
                       }
-                    }
-                  />
-                  <Spacing height={20} />
-                </React.Fragment>
-              );
-            })}
+                    />
+                    <Spacing height={75} />
+                  </React.Fragment>
+                );
+              })}
           </BlogContainer>
         </div>
         <Footer data={footer} langKey="se" />
