@@ -42,15 +42,27 @@ const UserInfo = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   padding: 20,
+  userSelect: 'none',
 });
 
-const Name = styled('span')({
+const CardName = styled('span')({
   fontSize: 18,
   fontFamily: 'SoRay',
 });
 
-const Title = styled('span')({
+const CardTitle = styled('span')({
   fontSize: 16,
+});
+
+const Title = styled('h3')({
+  fontSize: 45,
+  lineHeight: '50px',
+  fontFamily: 'SoRay',
+  padding: '20px 60px',
+  textAlign: 'center',
+  '@media (min-width: 700px)': {
+    textAlign: 'left',
+  },
 });
 
 export const Mobile: React.SFC<MobileProps> = ({ teamtailorUsers }) => {
@@ -60,14 +72,15 @@ export const Mobile: React.SFC<MobileProps> = ({ teamtailorUsers }) => {
         <Image src={user.picture.large} />
       </ImageContainer>
       <UserInfo>
-        <Name>{user.name}</Name>
-        <Title>{user.title}</Title>
+        <CardName>{user.name}</CardName>
+        <CardTitle>{user.title}</CardTitle>
       </UserInfo>
     </Card>
   ));
 
   return (
     <Box>
+      <Title>The team</Title>
       <MediaQuery query="(max-width: 700px)">
         <SwipeableViews
           resistance

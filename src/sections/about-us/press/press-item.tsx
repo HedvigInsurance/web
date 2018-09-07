@@ -1,18 +1,53 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 
-interface PressItemProps {
-  image: string;
-  title: string;
-  text: string;
-}
+import { PressItem as PressItemType } from '.';
+
+const Link = styled('a')({
+  textDecoration: 'none',
+});
 
 const PressItemContainer = styled('div')({
   borderRadius: 5,
-  height: 100,
   boxShadow: '-1px 0 10px rgba(0,0,0,0.14)',
+  padding: 20,
+  display: 'flex',
+  alignItems: 'center',
+  backgroundColor: 'white',
 });
 
-export const PressItem: React.SFC<PressItemProps> = () => (
-  <PressItemContainer />
+const Logo = styled('img')({
+  width: '75px',
+  height: '75px',
+  objectFit: 'contain',
+});
+
+const Content = styled('div')({
+  paddingLeft: 20,
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+const Title = styled('span')({
+  fontSize: 20,
+  lineHeight: '21px',
+  fontFamily: 'SoRay',
+});
+
+const Text = styled('span')({
+  fontSize: 14,
+  lineHeight: '16px',
+  marginTop: 5,
+});
+
+export const PressItem: React.SFC<PressItemType> = ({ logo, title, text }) => (
+  <Link href="https://hello.com">
+    <PressItemContainer>
+      <Logo src={logo} />
+      <Content>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
+      </Content>
+    </PressItemContainer>
+  </Link>
 );

@@ -12,16 +12,20 @@ const MissionTitle = styled(animated.span)({
 
 const Mission = styled(animated.h1)({
   color: 'white',
-  fontSize: '100px',
-  lineHeight: '120px',
+  fontSize: '50px',
+  lineHeight: '70px',
   maxWidth: '60%',
-  '@media (max-width: 700px)': {
+  '@media (min-width: 500px)': {
     fontSize: '70px',
     lineHeight: '90px',
   },
-  '@media (max-width: 1100px)': {
+  '@media (min-width: 700px)': {
     fontSize: '80px',
-    lineHeight: '100px',
+    lineHeight: '90px',
+  },
+  '@media (min-width: 1100px)': {
+    fontSize: '100px',
+    lineHeight: '120px',
   },
 });
 
