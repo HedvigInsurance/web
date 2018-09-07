@@ -56,10 +56,8 @@ const getTransform = (status: string) => {
 const ImageContainer = styled('div')(
   {
     position: 'absolute',
-    top: '-5%',
-    left: '-5%',
-    width: '110%',
-    height: '110%',
+    width: '100%',
+    height: '100%',
     willChange: 'transform',
     animationTimingFunction: 'cubic-bezier(.17,.67,.83,.67)',
   },
@@ -120,8 +118,8 @@ interface DetailsProps {
 const Details = styled('div')(
   {
     position: 'absolute',
-    padding: '5% 10%',
-    bottom: 10,
+    padding: '5%',
+    bottom: 0,
     display: 'flex',
     flexDirection: 'column',
   },

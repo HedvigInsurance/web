@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
+import { it, expect } from 'jest';
 
 import { Desktop } from './';
 

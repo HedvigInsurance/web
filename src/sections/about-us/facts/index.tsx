@@ -8,11 +8,18 @@ const FactsContainer = styled('div')({
   color: colors.BLACK_PURPLE,
 });
 
+const MEDIA_QUERY_WIDTH = '650px';
+const MEDIA_QUERY = `@media (min-width: ${MEDIA_QUERY_WIDTH})`;
+
 const Title = styled('h3')({
-  fontSize: 60,
-  lineHeight: '65px',
+  fontSize: 45,
+  lineHeight: '50px',
   textAlign: 'center',
   fontFamily: 'SoRay',
+  [MEDIA_QUERY]: {
+    fontSize: 60,
+    lineHeight: '65px',
+  },
 });
 
 const Grid = styled('div')({
@@ -21,25 +28,39 @@ const Grid = styled('div')({
   width: '80%',
   maxWidth: 700,
   margin: '0 auto',
-  marginTop: 40,
+  flexDirection: 'column',
+  [MEDIA_QUERY]: {
+    flexDirection: 'row',
+  },
 });
 
 const Fact = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  marginTop: 40,
 });
 
 const FactNumber = styled('span')({
-  fontSize: 90,
-  lineHeight: '95px',
+  fontSize: 70,
+  lineHeight: '75px',
   fontFamily: 'SoRay',
+  [MEDIA_QUERY]: {
+    fontSize: 90,
+    lineHeight: '95px',
+  },
 });
 
 const FactExplainer = styled('span')({
-  fontSize: 18,
+  fontSize: 14,
+  lineHeight: '15px',
   textAlign: 'center',
-  marginTop: 20,
+  marginTop: 0,
+  [MEDIA_QUERY]: {
+    marginTop: 20,
+    fontSize: 18,
+    lineHeight: '19px',
+  },
 });
 
 export const Facts = () => (

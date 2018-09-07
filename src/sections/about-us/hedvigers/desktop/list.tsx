@@ -26,7 +26,6 @@ const ListContainer = styled('ul')({
   display: 'flex',
   flexWrap: 'wrap',
   marginTop: 10,
-  justifyContent: 'space-between',
 });
 
 interface ListItemProps {
@@ -35,13 +34,11 @@ interface ListItemProps {
 
 const ListItem = styled('li')(
   {
-    flexGrow: 0,
     width: '48%',
     maxWidth: '48%',
     cursor: 'pointer',
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: 10,
     boxShadow: '-1px 0 10px rgba(0,0,0,0.09)',
     border: '1px solid rgba(0,0,0,0.10)',
     borderRadius: 5,
@@ -50,12 +47,18 @@ const ListItem = styled('li')(
     padding: 15,
     textAlign: 'center',
     willChange: 'color, transform, background',
+    margin: '0 1% 8px 1%',
     ':active': {
       transform: 'scale(0.95)',
     },
     '@media(min-width: 1150px)': {
       width: '32.33%',
       maxWidth: '32.33%',
+      marginLeft: 0,
+      marginRight: 0,
+      ':nth-child(3n + 2)': {
+        margin: '0 1.5% 8px 1.5%',
+      },
     },
   },
   ({ active }: ListItemProps) => ({
@@ -86,7 +89,7 @@ export const List: React.SFC<ListProps> = ({
   onSelect,
 }) => (
   <Container>
-    <Title>Hedvigers</Title>
+    <Title>The team</Title>
     <ListContainer>
       {users.map((user) => (
         <ListItem

@@ -10,6 +10,7 @@ import { Body } from 'src/sections/about-us/body';
 import { Founders } from 'src/sections/about-us/founders';
 import { Facts } from 'src/sections/about-us/facts';
 import { Press } from 'src/sections/about-us/press';
+import { Investors } from 'src/sections/about-us/investors';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -21,6 +22,23 @@ const pagePropTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired,
+  press: PropTypes.shape({
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        logo: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+  investors: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+    }).isRequired,
+  }),
 };
 
 const AboutUsTemplate = ({
@@ -31,6 +49,8 @@ const AboutUsTemplate = ({
   footer,
   teamtailorUsers,
   langKey,
+  press,
+  investors,
 }) => (
   <main className="Site">
     <Helmet>
@@ -43,7 +63,8 @@ const AboutUsTemplate = ({
       <Founders imageFile={foundersImageFile} />
       <Hedvigers teamtailorUsers={teamtailorUsers} />
       <Facts />
-      <Press />
+      <Press {...press} />
+      <Investors {...investors} />
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
@@ -64,6 +85,8 @@ const AboutUs = ({ data, pathContext }) => (
     body={data.markdownRemark.frontmatter.body}
     foundersImageFile={data.foundersImageFile}
     title={data.markdownRemark.frontmatter.title}
+    press={data.markdownRemark.frontmatter.press}
+    investors={data.markdownRemark.frontmatter.investors}
     header={data.header}
     footer={data.footer}
     langKey={pathContext.langKey}
@@ -102,6 +125,21 @@ export const aboutPageQuery = graphql`
         body {
           title
           text
+        }
+        press {
+          items {
+            logo
+            title
+            text
+          }
+        }
+        investors {
+          title
+          list {
+            name
+            image
+            type
+          }
         }
       }
     }

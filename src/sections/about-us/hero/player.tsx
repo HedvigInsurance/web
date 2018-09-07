@@ -22,16 +22,22 @@ const HeightContainer = styled('div')(
   {
     animation: `${fadeInKeyframe} 2000ms forwards`,
     transition: 'height 1500ms, padding 1500ms',
-    height: 600,
+    height: 475,
     backgroundColor: 'black',
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
+    '@media (min-width: 500px)': {
+      height: 550,
+    },
+    '@media (min-width: 700px)': {
+      height: 600,
+    },
   },
   ({ isFullScreen }: HeightContainerProps) =>
     isFullScreen
       ? {
-          height: 'calc(100vh - 70px)',
+          height: 'calc(100vh - 70px) !important',
         }
       : null,
 );
