@@ -59,6 +59,12 @@ investors:
     - image: /uploads/43d8ba03d8c67fed1755c0ca42f6327a.png
       name: Sophia Bendz
       type: Angel Investor
+    - image: /uploads/1440b129c58e8396b83c51f9fd07eaa2.png
+      name: Nicklas Storåkers
+      type: Angel Investor
+    - image: /uploads/10c033d355e30a20399948d14a13af70.png
+      name: Khaled Helioui
+      type: Angel Investor
   title: Hedvigs investerare
 ---
 
