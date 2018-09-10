@@ -28,7 +28,9 @@ export const CSSInjector: React.SFC = ({ children }) => (
         ref={(ref) => {
           if (ref && !hasInjectedCSS) {
             setHasInjectedCSS(true);
-            const css = renderStylesToString(renderToString(children));
+            const css = renderStylesToString(
+              renderToString(React.Children.only(children)),
+            );
             ref.ownerDocument.head.innerHTML += css;
           }
         }}
