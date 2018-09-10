@@ -93,50 +93,188 @@ exports[`renders correctly 1`] = `
   object-fit: cover;
 }
 
-<div
-  className="emotion-9"
+<Component
+  teamtailorUsers={
+    Array [
+      Object {
+        "name": "mock",
+        "picture": Object {
+          "large": "https://mockimage.com",
+        },
+        "title": "mock",
+      },
+    ]
+  }
 >
-  <div
-    className="emotion-5"
+  <Container
+    actions={
+      Object {
+        "setSelectedImage": [Function],
+      }
+    }
+    initialState={
+      Object {
+        "selectedImage": "https://mockimage.com",
+        "users": Array [
+          Object {
+            "name": "mock",
+            "picture": Object {
+              "large": "https://mockimage.com",
+            },
+            "title": "mock",
+          },
+        ],
+      }
+    }
   >
-    <h3
-      className="emotion-0"
+    <InnerContainer
+      actions={
+        Object {
+          "setSelectedImage": [Function],
+        }
+      }
+      initialState={
+        Object {
+          "selectedImage": "https://mockimage.com",
+          "users": Array [
+            Object {
+              "name": "mock",
+              "picture": Object {
+                "large": "https://mockimage.com",
+              },
+              "title": "mock",
+            },
+          ],
+        }
+      }
     >
-      Hedvigers
-    </h3>
-    <ul
-      className="emotion-4"
-    >
-      <li
-        className="emotion-3"
-        onClick={[Function]}
-      >
-        <span
-          className="emotion-1"
+      <Styled(div)>
+        <div
+          className="emotion-9"
         >
-          mock
-        </span>
-        <span
-          className="emotion-2"
-        >
-          mock
-        </span>
-      </li>
-    </ul>
-  </div>
-  <div
-    className="emotion-8"
-  >
-    <div>
-      <div
-        className="emotion-7"
-      >
-        <img
-          className="emotion-6"
-          src="https://mockimage.com"
-        />
-      </div>
-    </div>
-  </div>
-</div>
+          <Component
+            onSelect={[Function]}
+            selectedImage="https://mockimage.com"
+            users={
+              Array [
+                Object {
+                  "name": "mock",
+                  "picture": Object {
+                    "large": "https://mockimage.com",
+                  },
+                  "title": "mock",
+                },
+              ]
+            }
+          >
+            <Styled(div)>
+              <div
+                className="emotion-5"
+              >
+                <Styled(h3)>
+                  <h3
+                    className="emotion-0"
+                  >
+                    Hedvigers
+                  </h3>
+                </Styled(h3)>
+                <Styled(ul)>
+                  <ul
+                    className="emotion-4"
+                  >
+                    <Styled(li)
+                      active={true}
+                      key="mock"
+                      onClick={[Function]}
+                    >
+                      <li
+                        className="emotion-3"
+                        onClick={[Function]}
+                      >
+                        <Styled(span)>
+                          <span
+                            className="emotion-1"
+                          >
+                            mock
+                          </span>
+                        </Styled(span)>
+                        <Styled(span)>
+                          <span
+                            className="emotion-2"
+                          >
+                            mock
+                          </span>
+                        </Styled(span)>
+                      </li>
+                    </Styled(li)>
+                  </ul>
+                </Styled(ul)>
+              </div>
+            </Styled(div)>
+          </Component>
+          <Component
+            images={
+              Array [
+                "https://mockimage.com",
+              ]
+            }
+            selectedImage="https://mockimage.com"
+          >
+            <Styled(div)>
+              <div
+                className="emotion-8"
+              >
+                <TransitionGroup
+                  childFactory={[Function]}
+                  component="div"
+                >
+                  <div>
+                    <Transition
+                      appear={false}
+                      enter={true}
+                      exit={true}
+                      in={true}
+                      key=".$https=2//mockimage.com"
+                      mountOnEnter={false}
+                      onEnter={[Function]}
+                      onEntered={[Function]}
+                      onEntering={[Function]}
+                      onExit={[Function]}
+                      onExited={[Function]}
+                      onExiting={[Function]}
+                      timeout={
+                        Object {
+                          "enter": 850,
+                          "exit": 850,
+                        }
+                      }
+                      unmountOnExit={false}
+                    >
+                      <Styled(div)
+                        status="entered"
+                      >
+                        <div
+                          className="emotion-7"
+                        >
+                          <Styled(img)
+                            src="https://mockimage.com"
+                          >
+                            <img
+                              className="emotion-6"
+                              src="https://mockimage.com"
+                            />
+                          </Styled(img)>
+                        </div>
+                      </Styled(div)>
+                    </Transition>
+                  </div>
+                </TransitionGroup>
+              </div>
+            </Styled(div)>
+          </Component>
+        </div>
+      </Styled(div)>
+    </InnerContainer>
+  </Container>
+</Component>
 `;

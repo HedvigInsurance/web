@@ -1,5 +1,5 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 
 import { Mobile } from './';
 
@@ -9,10 +9,6 @@ interface Global {
 }
 
 declare var global: Global;
-
-const createNodeMock = () => ({
-  addEventListener: () => {},
-});
 
 it('renders correctly', () => {
   const teamtailorUsers = [
@@ -27,9 +23,6 @@ it('renders correctly', () => {
 
   global.innerWidth = 600;
 
-  const tree = renderer
-    .create(<Mobile teamtailorUsers={teamtailorUsers} />, { createNodeMock })
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const wrapper = mount(<Mobile teamtailorUsers={teamtailorUsers} />);
+  expect(wrapper).toMatchSnapshot();
 });

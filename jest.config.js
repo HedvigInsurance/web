@@ -6,6 +6,7 @@ module.exports = {
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
     '**/?(*.)(spec|test).{js,jsx,ts,tsx}',
   ],
+  snapshotSerializers: ['jest-emotion/serializer', 'enzyme-to-json/serializer'],
   roots: ['<rootDir>/src'],
   testPathIgnorePatterns: ['/node_modules/', '<rootDir>/.cache/'],
   transform: {
