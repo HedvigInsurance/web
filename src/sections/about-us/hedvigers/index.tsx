@@ -18,13 +18,19 @@ interface HedvigersProps {
   teamtailorUsers: Array<TeamtailorUser>;
 }
 
-export const Hedvigers: React.SFC<HedvigersProps> = ({ teamtailorUsers }) => (
-  <>
-    <MediaQuery query="(max-width: 900px)">
-      <Mobile teamtailorUsers={teamtailorUsers} />
-    </MediaQuery>
-    <MediaQuery query="(min-width: 900px)">
-      <Desktop teamtailorUsers={teamtailorUsers} />
-    </MediaQuery>
-  </>
-);
+export const Hedvigers: React.SFC<HedvigersProps> = ({ teamtailorUsers }) => {
+  if (teamtailorUsers.length === 0) {
+    return null;
+  }
+
+  return (
+    <>
+      <MediaQuery query="(max-width: 900px)">
+        <Mobile teamtailorUsers={teamtailorUsers} />
+      </MediaQuery>
+      <MediaQuery query="(min-width: 900px)">
+        <Desktop teamtailorUsers={teamtailorUsers} />
+      </MediaQuery>
+    </>
+  );
+};
