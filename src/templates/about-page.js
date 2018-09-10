@@ -82,7 +82,7 @@ const AboutUs = ({ data, pathContext }) => (
     teamtailorUsers={data.allTeamtailorUser.edges
       .map(({ node }) => node)
       .filter((user) => user.picture.large)}
-    body={data.markdownRemark.frontmatter.body}
+    mainSection={data.markdownRemark.frontmatter.mainSection}
     foundersImageFile={data.foundersImageFile}
     title={data.markdownRemark.frontmatter.title}
     press={data.markdownRemark.frontmatter.press}
