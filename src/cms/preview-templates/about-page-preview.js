@@ -6,6 +6,7 @@ import { AboutUsTemplate } from 'src/templates/about-page';
 const AboutPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
     <AboutUsTemplate
+      hej={console.log(entry.getIn(['data']).toJS())}
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}
       body={entry.getIn(['data', 'body']).toJS()}
