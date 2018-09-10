@@ -9,7 +9,7 @@ public_folder: /uploads
 publish_mode: editorial_workflow
 
 collections:
-  - name: "metadata"
+  - name: 'metadata'
     label: Metadata
     files:
       - file: src/data/header.yml
@@ -21,62 +21,62 @@ collections:
             name: se
             widget: object
             fields:
-            - label: Links
-              name: links
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: Path
-                  name: path
-                  widget: string
-            - label: CTA Text Desktop
-              name: ctaTextDesktop
-              widget: string
-            - label: CTA Text Mobile
-              name: ctaTextMobile
-              widget: string
-            - label: Logo link
-              name: logoLink
-              widget: object
-              fields:
-                - label: Path
-                  name: path
-                  widget: string
-                - label: Alt Text
-                  name: altText
-                  widget: string
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: CTA Text Desktop
+                name: ctaTextDesktop
+                widget: string
+              - label: CTA Text Mobile
+                name: ctaTextMobile
+                widget: string
+              - label: Logo link
+                name: logoLink
+                widget: object
+                fields:
+                  - label: Path
+                    name: path
+                    widget: string
+                  - label: Alt Text
+                    name: altText
+                    widget: string
           - label: English
             name: en
             widget: object
             fields:
-            - label: Links
-              name: links
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: Path
-                  name: path
-                  widget: string
-            - label: CTA Text Desktop
-              name: ctaTextDesktop
-              widget: string
-            - label: CTA Text Mobile
-              name: ctaTextMobile
-              widget: string
-            - label: Logo link
-              name: logoLink
-              widget: object
-              fields:
-                - label: Path
-                  name: path
-                  widget: string
-                - label: Alt Text
-                  name: altText
-                  widget: string
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: CTA Text Desktop
+                name: ctaTextDesktop
+                widget: string
+              - label: CTA Text Mobile
+                name: ctaTextMobile
+                widget: string
+              - label: Logo link
+                name: logoLink
+                widget: object
+                fields:
+                  - label: Path
+                    name: path
+                    widget: string
+                  - label: Alt Text
+                    name: altText
+                    widget: string
       - file: src/data/footer.yml
         label: Footer
         name: footer
@@ -86,106 +86,106 @@ collections:
             name: se
             widget: object
             fields:
-            - label: Link Section 1
-              name: linkSection1
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: External
-                  name: external
-                  widget: boolean
-                - label: Path
-                  name: path
-                  widget: string
-            - label: Link Section 2
-              name: linkSection2
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: External
-                  name: external
-                  widget: boolean
-                - label: Path
-                  name: path
-                  widget: string
-            - label: App Store Alt text
-              name: appStoreAlt
-              widget: string
-            - label: Play Store Alt text
-              name: playStoreAlt
-              widget: string
-            - label: Facebook Alt text
-              name: facebookAlt
-              widget: string
-            - label: Instagram Alt text
-              name: instagramAlt
-              widget: string
-            - label: Twitter Alt text
-              name: twitterAlt
-              widget: string
-            - label: Copyright text
-              name: copyrightText
-              widget: text
-            - label: Legal text
-              name: legalText
-              widget: text
+              - label: Link Section 1
+                name: linkSection1
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: External
+                    name: external
+                    widget: boolean
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: Link Section 2
+                name: linkSection2
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: External
+                    name: external
+                    widget: boolean
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: App Store Alt text
+                name: appStoreAlt
+                widget: string
+              - label: Play Store Alt text
+                name: playStoreAlt
+                widget: string
+              - label: Facebook Alt text
+                name: facebookAlt
+                widget: string
+              - label: Instagram Alt text
+                name: instagramAlt
+                widget: string
+              - label: Twitter Alt text
+                name: twitterAlt
+                widget: string
+              - label: Copyright text
+                name: copyrightText
+                widget: text
+              - label: Legal text
+                name: legalText
+                widget: text
           - label: English
             name: en
             widget: object
             fields:
-            - label: Link Section 1
-              name: linkSection1
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: External
-                  name: external
-                  widget: boolean
-                - label: Path
-                  name: path
-                  widget: string
-            - label: Link Section 2
-              name: linkSection2
-              widget: list
-              fields:
-                - label: Label
-                  name: label
-                  widget: string
-                - label: External
-                  name: external
-                  widget: boolean
-                - label: Path
-                  name: path
-                  widget: string
-            - label: App Store Alt text
-              name: appStoreAlt
-              widget: string
-            - label: Play Store Alt text
-              name: playStoreAlt
-              widget: string
-            - label: Facebook Alt text
-              name: facebookAlt
-              widget: string
-            - label: Instagram Alt text
-              name: instagramAlt
-              widget: string
-            - label: Twitter Alt text
-              name: twitterAlt
-              widget: string
-            - label: Copyright text
-              name: copyrightText
-              widget: text
-            - label: Legal text
-              name: legalText
-              widget: text
-  - name: "pagesSwedish"
-    label: "Pages, Swedish"
+              - label: Link Section 1
+                name: linkSection1
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: External
+                    name: external
+                    widget: boolean
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: Link Section 2
+                name: linkSection2
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: External
+                    name: external
+                    widget: boolean
+                  - label: Path
+                    name: path
+                    widget: string
+              - label: App Store Alt text
+                name: appStoreAlt
+                widget: string
+              - label: Play Store Alt text
+                name: playStoreAlt
+                widget: string
+              - label: Facebook Alt text
+                name: facebookAlt
+                widget: string
+              - label: Instagram Alt text
+                name: instagramAlt
+                widget: string
+              - label: Twitter Alt text
+                name: twitterAlt
+                widget: string
+              - label: Copyright text
+                name: copyrightText
+                widget: text
+              - label: Legal text
+                name: legalText
+                widget: text
+  - name: 'pagesSwedish'
+    label: 'Pages, Swedish'
     files:
       - file: src/pages/about-us/index.md
         label: About Us
@@ -202,35 +202,53 @@ collections:
           - label: Heading
             name: heading
             widget: string
-          - label: Section 1
-            name: section1
+          - label: Body
+            name: body
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Title
+                name: title
                 widget: string
-              - label: Paragraph 1
-                name: paragraph1
+              - label: Text
+                name: text
                 widget: text
-              - label: Paragraph 2
-                name: paragraph2
-                widget: text
-          - label: Section 2
-            name: section2
+          - label: Press
+            name: press
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - label: Logo
+                    name: logo
+                    widget: image
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Investors
+            name: investors
+            widget: object
+            fields:
+              - label: Title
+                name: title
                 widget: string
-              - label: Paragraph 1
-                name: paragraph1
-                widget: text
-              - label: Paragraph 2
-                name: paragraph2
-                widget: text
-              - label: Paragraph 3
-                name: paragraph3
-                widget: text
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Type
+                    name: type
+                    widget: string
       - file: src/pages/contact/index.md
         label: Contact
         name: contact
@@ -731,8 +749,8 @@ collections:
               - label: Section
                 name: section
                 widget: markdown
-  - name: "pagesEnglish"
-    label: "Pages, English"
+  - name: 'pagesEnglish'
+    label: 'Pages, English'
     files:
       - file: src/pages/about-us/index.en.md
         label: About Us
@@ -1281,11 +1299,11 @@ collections:
               - label: Section
                 name: section
                 widget: markdown
-  - name: "blogposts"
+  - name: 'blogposts'
     label: Blog Posts
     folder: src/pages/blog
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - label: Template Key
         name: templateKey
@@ -1303,4 +1321,3 @@ collections:
       - label: Content
         name: content
         widget: markdown
-
