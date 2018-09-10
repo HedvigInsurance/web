@@ -817,35 +817,103 @@ collections:
           - label: Heading
             name: heading
             widget: string
-          - label: Section 1
-            name: section1
+          - label: Hero
+            name: hero
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Headline
+                name: headline
                 widget: string
-              - label: Paragraph 1
-                name: paragraph1
-                widget: text
-              - label: Paragraph 2
-                name: paragraph2
-                widget: text
-          - label: Section 2
-            name: section2
+              - label: Title
+                name: title
+                widget: string
+              - label: Play Button Text
+                name: playButtonText
+                widget: string
+          - label: Main Section
+            name: mainSection
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Title
+                name: title
                 widget: string
-              - label: Paragraph 1
-                name: paragraph1
-                widget: text
-              - label: Paragraph 2
-                name: paragraph2
-                widget: text
-              - label: Paragraph 3
-                name: paragraph3
-                widget: text
+              - label: Text
+                name: text
+                widget: markdown
+          - label: Founders
+            name: founders
+            widget: object
+            fields:
+              - label: Image Text
+                name: imageText
+                widget: string
+          - label: Hedvigers
+            name: hedvigers
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+          - label: Facts
+            name: facts
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - label: Number
+                    name: number
+                    widget: string
+                  - label: Explainer
+                    name: explainer
+                    widget: string
+          - label: Press
+            name: press
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Footnote
+                name: footnote
+                widget: markdown
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - label: Logo
+                    name: logo
+                    widget: image
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Investors
+            name: investors
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - label: Image
+                    name: image
+                    widget: image
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Type
+                    name: type
+                    widget: string
       - file: src/pages/contact/index.en.md
         label: Contact
         name: contact
