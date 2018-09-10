@@ -11,7 +11,7 @@ import kebabCase from 'lodash/kebabCase';
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 
-import { colors } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand';
 
 import {
   BlogPostAuthor,
@@ -45,6 +45,30 @@ const PrevNextSection = styled('div')({
   paddingBottom: 20,
 });
 
+const BlogParagraph = styled('p')({
+  marginBottom: 20,
+  lineHeight: '24px',
+});
+
+const BlogImage = styled('img')({
+  maxWidth: '110%',
+  position: 'relative',
+  left: '-5%',
+  marginTop: 20,
+  marginBottom: 20,
+});
+
+const BlogQuote = styled('blockquote')({
+  backgroundColor: '#FFF3F2',
+  borderRadius: 10,
+  padding: 48,
+  fontFamily: fonts.SORAY,
+  fontSize: 48,
+  p: {
+    marginBottom: 0,
+  },
+});
+
 const BlogPostTemplate = ({
   title,
   date,
@@ -72,7 +96,15 @@ const BlogPostTemplate = ({
             <div>
               {
                 remark()
-                  .use(reactRenderer)
+                  .use(reactRenderer, {
+                    remarkReactComponents: {
+                      p: BlogParagraph,
+                      img: BlogImage,
+                      blockquote: BlogQuote,
+                      br: () => <br />,
+                    },
+                    sanitize: false,
+                  })
                   .processSync(content).contents
               }
             </div>
