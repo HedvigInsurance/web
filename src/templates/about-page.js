@@ -18,7 +18,7 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   teamtailorUsers: PropTypes.object.isRequired,
-  hero: PropTypes.shap({
+  hero: PropTypes.shape({
     headline: PropTypes.string.isRequired,
     playButtonText: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
