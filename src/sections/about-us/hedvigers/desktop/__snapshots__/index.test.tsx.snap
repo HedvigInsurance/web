@@ -1,12 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.emotion-9 {
+.emotion-14 {
+  background-color: #F9FAFC;
+}
+
+.emotion-13 {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px;
   background-color: white;
   border-radius: 5px;
   box-shadow: -1px 0 10px rgba(0,0,0,0.14);
@@ -20,9 +29,9 @@ exports[`renders correctly 1`] = `
 
 .emotion-0 {
   font-size: 40px;
-  font-family: So Ray;
+  font-family: SoRay;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .emotion-4 {
@@ -33,23 +42,13 @@ exports[`renders correctly 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: 20px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  margin-top: 10px;
 }
 
 .emotion-3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  width: 50%;
-  height: 100px;
+  width: 48%;
+  max-width: 48%;
   cursor: pointer;
-  -webkit-transition: color 500ms;
-  transition: color 500ms;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,40 +56,108 @@ exports[`renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 10px;
-  color: #651EFF;
+  box-shadow: -1px 0 10px rgba(0,0,0,0.09);
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 5px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  will-change: color,transform,background;
+  margin: 0 1% 8px 1%;
+  color: #FFFFFF;
+  background-color: #651EFF;
+  -webkit-transition: color 500ms,-webkit-transform 350ms 150ms,background 350ms;
+  -webkit-transition: color 500ms,transform 350ms 150ms,background 350ms;
+  transition: color 500ms,transform 350ms 150ms,background 350ms;
+}
+
+.emotion-3:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+@media (min-width:1150px) {
+  .emotion-3 {
+    width: 32.33%;
+    max-width: 32.33%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .emotion-3:nth-child(3n + 2) {
+    margin: 0 1.5% 8px 1.5%;
+  }
 }
 
 .emotion-1 {
   font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .emotion-2 {
   margin-top: 5px;
-  font-size: 15px;
+  font-size: 12px;
+  max-width: 90%;
+  line-height: 17px;
 }
 
-.emotion-8 {
+.emotion-11 {
   width: 50%;
   overflow: hidden;
   position: relative;
 }
 
-.emotion-7 {
+.emotion-10 {
   position: absolute;
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   will-change: transform;
-  -webkit-animation: animation-3izfwu 0ms ease forwards;
-  animation: animation-3izfwu 0ms ease forwards;
+  -webkit-animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+  -webkit-animation: animation-6dyix4 0ms ease forwards;
+  animation: animation-6dyix4 0ms ease forwards;
 }
 
 .emotion-6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.emotion-9 {
+  position: absolute;
+  padding: 5%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-animation: animation-1tps72s 0ms ease forwards;
+  animation: animation-1tps72s 0ms ease forwards;
+}
+
+.emotion-7 {
+  font-family: SoRay;
+  font-size: 35px;
+  line-height: 40px;
+  color: white;
+}
+
+.emotion-8 {
+  font-size: 20px;
+  color: white;
 }
 
 <Component
@@ -106,57 +173,53 @@ exports[`renders correctly 1`] = `
     ]
   }
 >
-  <Container
-    actions={
-      Object {
-        "setSelectedImage": [Function],
-      }
-    }
-    initialState={
-      Object {
-        "selectedImage": "https://mockimage.com",
-        "users": Array [
+  <Styled(div)>
+    <div
+      className="emotion-14"
+    >
+      <Container
+        actions={
           Object {
-            "name": "mock",
-            "picture": Object {
-              "large": "https://mockimage.com",
-            },
-            "title": "mock",
-          },
-        ],
-      }
-    }
-  >
-    <InnerContainer
-      actions={
-        Object {
-          "setSelectedImage": [Function],
+            "setSelectedUser": [Function],
+          }
         }
-      }
-      initialState={
-        Object {
-          "selectedImage": "https://mockimage.com",
-          "users": Array [
-            Object {
+        initialState={
+          Object {
+            "selectedUser": Object {
               "name": "mock",
               "picture": Object {
                 "large": "https://mockimage.com",
               },
               "title": "mock",
             },
-          ],
+            "users": Array [
+              Object {
+                "name": "mock",
+                "picture": Object {
+                  "large": "https://mockimage.com",
+                },
+                "title": "mock",
+              },
+            ],
+          }
         }
-      }
-    >
-      <Styled(div)>
-        <div
-          className="emotion-9"
-        >
-          <Component
-            onSelect={[Function]}
-            selectedImage="https://mockimage.com"
-            users={
-              Array [
+      >
+        <InnerContainer
+          actions={
+            Object {
+              "setSelectedUser": [Function],
+            }
+          }
+          initialState={
+            Object {
+              "selectedUser": Object {
+                "name": "mock",
+                "picture": Object {
+                  "large": "https://mockimage.com",
+                },
+                "title": "mock",
+              },
+              "users": Array [
                 Object {
                   "name": "mock",
                   "picture": Object {
@@ -164,117 +227,189 @@ exports[`renders correctly 1`] = `
                   },
                   "title": "mock",
                 },
-              ]
+              ],
             }
-          >
-            <Styled(div)>
-              <div
-                className="emotion-5"
-              >
-                <Styled(h3)>
-                  <h3
-                    className="emotion-0"
-                  >
-                    Hedvigers
-                  </h3>
-                </Styled(h3)>
-                <Styled(ul)>
-                  <ul
-                    className="emotion-4"
-                  >
-                    <Styled(li)
-                      active={true}
-                      key="mock"
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="emotion-3"
-                        onClick={[Function]}
-                      >
-                        <Styled(span)>
-                          <span
-                            className="emotion-1"
-                          >
-                            mock
-                          </span>
-                        </Styled(span)>
-                        <Styled(span)>
-                          <span
-                            className="emotion-2"
-                          >
-                            mock
-                          </span>
-                        </Styled(span)>
-                      </li>
-                    </Styled(li)>
-                  </ul>
-                </Styled(ul)>
-              </div>
-            </Styled(div)>
-          </Component>
-          <Component
-            images={
-              Array [
-                "https://mockimage.com",
-              ]
-            }
-            selectedImage="https://mockimage.com"
-          >
-            <Styled(div)>
-              <div
-                className="emotion-8"
-              >
-                <TransitionGroup
-                  childFactory={[Function]}
-                  component="div"
+          }
+        >
+          <Styled(div)>
+            <div
+              className="emotion-13"
+            >
+              <Styled(div)>
+                <div
+                  className="emotion-12"
                 >
-                  <div>
-                    <Transition
-                      appear={false}
-                      enter={true}
-                      exit={true}
-                      in={true}
-                      key=".$https=2//mockimage.com"
-                      mountOnEnter={false}
-                      onEnter={[Function]}
-                      onEntered={[Function]}
-                      onEntering={[Function]}
-                      onExit={[Function]}
-                      onExited={[Function]}
-                      onExiting={[Function]}
-                      timeout={
-                        Object {
-                          "enter": 850,
-                          "exit": 850,
-                        }
+                  <Component
+                    onSelect={[Function]}
+                    selectedUser={
+                      Object {
+                        "name": "mock",
+                        "picture": Object {
+                          "large": "https://mockimage.com",
+                        },
+                        "title": "mock",
                       }
-                      unmountOnExit={false}
-                    >
-                      <Styled(div)
-                        status="entered"
+                    }
+                    users={
+                      Array [
+                        Object {
+                          "name": "mock",
+                          "picture": Object {
+                            "large": "https://mockimage.com",
+                          },
+                          "title": "mock",
+                        },
+                      ]
+                    }
+                  >
+                    <Styled(div)>
+                      <div
+                        className="emotion-5"
                       >
-                        <div
-                          className="emotion-7"
-                        >
-                          <Styled(img)
-                            src="https://mockimage.com"
+                        <Styled(h3)>
+                          <h3
+                            className="emotion-0"
                           >
-                            <img
-                              className="emotion-6"
-                              src="https://mockimage.com"
-                            />
-                          </Styled(img)>
-                        </div>
-                      </Styled(div)>
-                    </Transition>
-                  </div>
-                </TransitionGroup>
-              </div>
-            </Styled(div)>
-          </Component>
-        </div>
-      </Styled(div)>
-    </InnerContainer>
-  </Container>
+                            The team
+                          </h3>
+                        </Styled(h3)>
+                        <Styled(ul)>
+                          <ul
+                            className="emotion-4"
+                          >
+                            <Styled(li)
+                              active={true}
+                              key="mock"
+                              onClick={[Function]}
+                            >
+                              <li
+                                className="emotion-3"
+                                onClick={[Function]}
+                              >
+                                <Styled(span)>
+                                  <span
+                                    className="emotion-1"
+                                  >
+                                    mock
+                                  </span>
+                                </Styled(span)>
+                                <Styled(span)>
+                                  <span
+                                    className="emotion-2"
+                                  >
+                                    mock
+                                  </span>
+                                </Styled(span)>
+                              </li>
+                            </Styled(li)>
+                          </ul>
+                        </Styled(ul)>
+                      </div>
+                    </Styled(div)>
+                  </Component>
+                  <Component
+                    selectedUser={
+                      Object {
+                        "name": "mock",
+                        "picture": Object {
+                          "large": "https://mockimage.com",
+                        },
+                        "title": "mock",
+                      }
+                    }
+                    users={
+                      Array [
+                        Object {
+                          "name": "mock",
+                          "picture": Object {
+                            "large": "https://mockimage.com",
+                          },
+                          "title": "mock",
+                        },
+                      ]
+                    }
+                  >
+                    <Styled(div)>
+                      <div
+                        className="emotion-11"
+                      >
+                        <TransitionGroup
+                          childFactory={[Function]}
+                          component="div"
+                        >
+                          <div>
+                            <Transition
+                              appear={false}
+                              enter={true}
+                              exit={true}
+                              in={true}
+                              key=".$mock"
+                              mountOnEnter={false}
+                              onEnter={[Function]}
+                              onEntered={[Function]}
+                              onEntering={[Function]}
+                              onExit={[Function]}
+                              onExited={[Function]}
+                              onExiting={[Function]}
+                              timeout={
+                                Object {
+                                  "enter": 1500,
+                                  "exit": 850,
+                                }
+                              }
+                              unmountOnExit={false}
+                            >
+                              <Styled(div)
+                                status="entered"
+                              >
+                                <div
+                                  className="emotion-10"
+                                >
+                                  <Styled(img)
+                                    src="https://mockimage.com"
+                                  >
+                                    <img
+                                      className="emotion-6"
+                                      src="https://mockimage.com"
+                                    />
+                                  </Styled(img)>
+                                  <Styled(div)
+                                    status="entered"
+                                  >
+                                    <div
+                                      className="emotion-9"
+                                    >
+                                      <Styled(span)>
+                                        <span
+                                          className="emotion-7"
+                                        >
+                                          mock
+                                        </span>
+                                      </Styled(span)>
+                                      <Styled(span)>
+                                        <span
+                                          className="emotion-8"
+                                        >
+                                          mock
+                                        </span>
+                                      </Styled(span)>
+                                    </div>
+                                  </Styled(div)>
+                                </div>
+                              </Styled(div)>
+                            </Transition>
+                          </div>
+                        </TransitionGroup>
+                      </div>
+                    </Styled(div)>
+                  </Component>
+                </div>
+              </Styled(div)>
+            </div>
+          </Styled(div)>
+        </InnerContainer>
+      </Container>
+    </div>
+  </Styled(div)>
 </Component>
 `;
