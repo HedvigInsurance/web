@@ -10,6 +10,7 @@ const AboutPagePreview = ({ entry }) => (
       <AboutUsTemplate
         title={entry.getIn(['data', 'title'])}
         heading={entry.getIn(['data', 'heading'])}
+        hero={entry.getIn(['data', 'hero']).toJS()}
         mainSection={entry.getIn(['data', 'mainSection']).toJS()}
         hedvigers={entry.getIn(['data', 'hedvigers']).toJS()}
         press={entry.getIn(['data', 'press']).toJS()}

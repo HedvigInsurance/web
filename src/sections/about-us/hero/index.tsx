@@ -7,6 +7,12 @@ import { Title } from './title';
 import { Player } from './player';
 import { CloseButton } from './close-button';
 
+interface HeroProps {
+  headline: string;
+  title: string;
+  playButtonText: string;
+}
+
 const Background = styled('div')({
   backgroundColor: 'black',
 });
@@ -82,7 +88,11 @@ const onPlay = ({
   setFullScreen(true);
 };
 
-export const Hero = () => (
+export const Hero: React.SFC<HeroProps> = ({
+  headline,
+  title,
+  playButtonText,
+}) => (
   <Background>
     <Container
       actions={actions}
@@ -95,7 +105,12 @@ export const Hero = () => (
         <HeroContainer>
           <Player isFullScreen={isFullScreen} videoRef={videoRef} />
           <Shadow hidden={isFullScreen}>
-            <Title clickedPlayButton={onPlay({ videoRef, setFullScreen })} />
+            <Title
+              headline={headline}
+              title={title}
+              playButtonText={playButtonText}
+              clickedPlayButton={onPlay({ videoRef, setFullScreen })}
+            />
           </Shadow>
           <CloseButton
             onClick={() => setFullScreen(false)}

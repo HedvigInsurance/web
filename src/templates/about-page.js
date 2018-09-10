@@ -18,6 +18,11 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   teamtailorUsers: PropTypes.object.isRequired,
+  hero: PropTypes.shap({
+    headline: PropTypes.string.isRequired,
+    playButtonText: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
   mainSection: PropTypes.shape({
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
@@ -48,6 +53,7 @@ const pagePropTypes = {
 
 const AboutUsTemplate = ({
   title,
+  hero,
   mainSection,
   foundersImageFile,
   hedvigers,
@@ -64,8 +70,8 @@ const AboutUsTemplate = ({
     </Helmet>
     <StickyContainer>
       <Header data={header} langKey={langKey} />
-      <Hero />
-      <Body title={mainSection.title} text={mainSection.text} />
+      <Hero {...hero} />
+      <Body {...mainSection} />
       <Founders imageFile={foundersImageFile} />
       <Hedvigers {...hedvigers} teamtailorUsers={teamtailorUsers} />
       <Facts />
@@ -88,6 +94,7 @@ const AboutUs = ({ data, pathContext }) => (
     teamtailorUsers={data.allTeamtailorUser.edges
       .map(({ node }) => node)
       .filter((user) => user.picture.large)}
+    hero={data.markdownRemark.frontmatter.hero}
     mainSection={data.markdownRemark.frontmatter.mainSection}
     hedvigers={data.markdownRemark.frontmatter.hedvigers}
     foundersImageFile={data.foundersImageFile}
@@ -132,6 +139,11 @@ export const aboutPageQuery = graphql`
         mainSection {
           title
           text
+        }
+        hero {
+          headline
+          title
+          playButtonText
         }
         hedvigers {
           title

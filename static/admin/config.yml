@@ -202,6 +202,19 @@ collections:
           - label: Heading
             name: heading
             widget: string
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Headline
+                name: headline
+                widget: string
+              - label: Title
+                name: title
+                widget: string
+              - label: Play Button Text
+                name: playButtonText
+                widget: string
           - label: Main Section
             name: mainSection
             widget: object
