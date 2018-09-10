@@ -7,6 +7,7 @@ import { TeamtailorUser } from '..';
 
 interface MobileProps {
   teamtailorUsers: Array<TeamtailorUser>;
+  title: string;
 }
 
 const Box = styled('div')({
@@ -65,7 +66,7 @@ const Title = styled('h3')({
   },
 });
 
-export const Mobile: React.SFC<MobileProps> = ({ teamtailorUsers }) => {
+export const Mobile: React.SFC<MobileProps> = ({ title, teamtailorUsers }) => {
   const cards = teamtailorUsers.map((user) => (
     <Card key={user.name}>
       <ImageContainer>
@@ -80,7 +81,7 @@ export const Mobile: React.SFC<MobileProps> = ({ teamtailorUsers }) => {
 
   return (
     <Box>
-      <Title>The team</Title>
+      <Title>{title}</Title>
       <MediaQuery query="(max-width: 700px)">
         <SwipeableViews
           resistance

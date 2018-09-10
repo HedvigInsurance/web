@@ -16,7 +16,10 @@ mainSection:
 
 
     Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och när du inte gör det, så hjälper vi dig hjälpa andra.
+hedvigers:
+  title: The Team
 press:
+  title: Press
   footnote: hej123
   items:
     - logo: https://pbs.twimg.com/profile_images/499539988833267712/mjnAZmLH_400x400.jpeg

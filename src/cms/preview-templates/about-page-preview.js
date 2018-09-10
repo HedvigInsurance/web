@@ -8,10 +8,10 @@ const AboutPagePreview = ({ entry }) => (
   <CSSInjector>
     <Provider initialState={{}}>
       <AboutUsTemplate
-        hej={console.log(entry.getIn(['data']).toJS())}
         title={entry.getIn(['data', 'title'])}
         heading={entry.getIn(['data', 'heading'])}
         mainSection={entry.getIn(['data', 'mainSection']).toJS()}
+        hedvigers={entry.getIn(['data', 'hedvigers']).toJS()}
         press={entry.getIn(['data', 'press']).toJS()}
         investors={entry.getIn(['data', 'investors']).toJS()}
         teamtailorUsers={[]}

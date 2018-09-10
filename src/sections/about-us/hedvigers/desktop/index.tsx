@@ -26,6 +26,7 @@ const Box = styled('div')({
 
 interface DesktopProps {
   teamtailorUsers: Array<TeamtailorUser>;
+  title: string;
 }
 
 interface State {
@@ -43,21 +44,23 @@ const actions: ActionMap<State, Actions> = {
   }),
 };
 
-export const Desktop: React.SFC<DesktopProps> = ({ teamtailorUsers }) => (
+export const Desktop: React.SFC<DesktopProps> = ({
+  title,
+  teamtailorUsers,
+}) => (
   <Background>
     <Container
       actions={actions}
-      initialState={
-        {
-          selectedUser: teamtailorUsers[0],
-          users: teamtailorUsers.filter((user) => user.picture),
-        } as State
-      }
+      initialState={{
+        selectedUser: teamtailorUsers[0],
+        users: teamtailorUsers.filter((user) => user.picture),
+      }}
     >
       {({ selectedUser, users, setSelectedUser }) => (
         <CenterAlign>
           <Box>
             <List
+              title={title}
               users={users}
               onSelect={(user) => setSelectedUser(user)}
               selectedUser={selectedUser}
