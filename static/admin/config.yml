@@ -225,6 +225,13 @@ collections:
               - label: Text
                 name: text
                 widget: markdown
+          - label: Founders
+            name: founders
+            widget: object
+            fields:
+              - label: Image Text
+                name: imageText
+                widget: string
           - label: Hedvigers
             name: hedvigers
             widget: object

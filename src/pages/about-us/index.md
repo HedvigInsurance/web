@@ -20,6 +20,8 @@ mainSection:
 
 
     Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och när du inte gör det, så hjälper vi dig hjälpa andra.
+founders:
+  imageText: Fredrik Fors, (COO & Co-founder)
 hedvigers:
   title: The Team
 facts:
