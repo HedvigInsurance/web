@@ -1,11 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.emotion-6 {
+.emotion-7 {
   padding: 20px 0;
 }
 
-.emotion-5 {
+.emotion-0 {
+  font-size: 45px;
+  line-height: 50px;
+  font-family: SoRay;
+  padding: 20px 60px;
+  text-align: center;
+}
+
+@media (min-width:700px) {
+  .emotion-0 {
+    text-align: left;
+  }
+}
+
+.emotion-6 {
   margin: 20px;
   box-shadow: 0px 0 10px rgba(0,0,0,0.14);
   border-radius: 5px;
@@ -15,14 +29,14 @@ exports[`renders correctly 1`] = `
   flex: 1;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   overflow: hidden;
   height: 240px;
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,7 +45,7 @@ exports[`renders correctly 1`] = `
   object-fit: cover;
 }
 
-.emotion-4 {
+.emotion-5 {
   background-color: white;
   display: -webkit-box;
   display: -webkit-flex;
@@ -41,14 +55,18 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 20px;
-}
-
-.emotion-2 {
-  font-size: 18px;
-  font-family: So Ray;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-3 {
+  font-size: 18px;
+  font-family: SoRay;
+}
+
+.emotion-4 {
   font-size: 16px;
 }
 
@@ -67,8 +85,15 @@ exports[`renders correctly 1`] = `
 >
   <Styled(div)>
     <div
-      className="emotion-6"
+      className="emotion-7"
     >
+      <Styled(h3)>
+        <h3
+          className="emotion-0"
+        >
+          The team
+        </h3>
+      </Styled(h3)>
       <MockMediaQuery
         query="(max-width: 700px)"
       >
@@ -161,17 +186,17 @@ exports[`renders correctly 1`] = `
                     key="mock"
                   >
                     <div
-                      className="emotion-5"
+                      className="emotion-6"
                     >
                       <Styled(div)>
                         <div
-                          className="emotion-1"
+                          className="emotion-2"
                         >
                           <Styled(img)
                             src="https://mockimage.com"
                           >
                             <img
-                              className="emotion-0"
+                              className="emotion-1"
                               src="https://mockimage.com"
                             />
                           </Styled(img)>
@@ -179,18 +204,18 @@ exports[`renders correctly 1`] = `
                       </Styled(div)>
                       <Styled(div)>
                         <div
-                          className="emotion-4"
+                          className="emotion-5"
                         >
                           <Styled(span)>
                             <span
-                              className="emotion-2"
+                              className="emotion-3"
                             >
                               mock
                             </span>
                           </Styled(span)>
                           <Styled(span)>
                             <span
-                              className="emotion-3"
+                              className="emotion-4"
                             >
                               mock
                             </span>
