@@ -82,6 +82,7 @@ exports[`renders correctly 1`] = `
       },
     ]
   }
+  title="mock title"
 >
   <Styled(div)>
     <div
@@ -91,7 +92,7 @@ exports[`renders correctly 1`] = `
         <h3
           className="emotion-0"
         >
-          The team
+          mock title
         </h3>
       </Styled(h3)>
       <MockMediaQuery
