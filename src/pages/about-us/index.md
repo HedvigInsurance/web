@@ -3,7 +3,7 @@ templateKey: about-page
 title: Om Hedvig | Hedvig
 heading: Om Hedvig
 hero:
-  headline: Our Mission
+  headline: 'Our Mission:'
   playButtonText: Se filmen
   title: Making minds more peaceful
 mainSection:
