@@ -239,6 +239,23 @@ collections:
               - label: Title
                 name: title
                 widget: string
+          - label: Facts
+            name: facts
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: List
+                name: list
+                widget: list
+                fields:
+                  - label: Number
+                    name: number
+                    widget: string
+                  - label: Explainer
+                    name: explainer
+                    widget: string
           - label: Press
             name: press
             widget: object
