@@ -18,7 +18,7 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   teamtailorUsers: PropTypes.object.isRequired,
-  body: PropTypes.shape({
+  mainSection: PropTypes.shape({
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired,
@@ -43,7 +43,7 @@ const pagePropTypes = {
 
 const AboutUsTemplate = ({
   title,
-  body,
+  mainSection,
   foundersImageFile,
   header,
   footer,
@@ -59,7 +59,7 @@ const AboutUsTemplate = ({
     <StickyContainer>
       <Header data={header} langKey={langKey} />
       <Hero />
-      <Body title={body.title} text={body.text} />
+      <Body title={mainSection.title} text={mainSection.text} />
       <Founders imageFile={foundersImageFile} />
       <Hedvigers teamtailorUsers={teamtailorUsers} />
       <Facts />
@@ -122,7 +122,7 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        body {
+        mainSection {
           title
           text
         }

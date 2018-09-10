@@ -202,8 +202,8 @@ collections:
           - label: Heading
             name: heading
             widget: string
-          - label: Body
-            name: body
+          - label: Main Section
+            name: mainSection
             widget: object
             fields:
               - label: Title

@@ -2,7 +2,7 @@
 templateKey: about-page
 title: Om Hedvig | Hedvig
 heading: Om Hedvig
-body:
+mainSection:
   title: Om Hedvig
   text: >-
     Om sanningen ska fram, vem gillar att köpa försäkring Fullt förståeligt om man tänker på hur försäkringar fungerar idag. Du betalar dina räkningar utan att veta riktigt vart pengarna tar vägen. När du väl behöver den hjälp du betalat för så får du känslan av att bli lite motarbetad eller kanske till och med misstrodd. Varför är det så?
