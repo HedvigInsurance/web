@@ -23,6 +23,12 @@ const ImgWithMaxHeight = styled(Img)({
   maxHeight: 500,
 });
 
+const PlaceholderImage = styled('div')({
+  height: 500,
+  backgroundColor: 'black',
+  width: '100%',
+});
+
 const Shadow = styled('div')({
   position: 'absolute',
   top: 0,
@@ -50,7 +56,11 @@ const FounderName = styled('span')({
 
 export const Founders: React.SFC<FoundersProps> = ({ imageFile }) => (
   <FoundersContainer role="presentation">
-    {imageFile && <ImgWithMaxHeight sizes={imageFile.image.sizes} />}
+    {imageFile ? (
+      <ImgWithMaxHeight sizes={imageFile.image.sizes} />
+    ) : (
+      <PlaceholderImage />
+    )}
     <Shadow>
       <FounderName>
         Fredrik Fors, (COO & Co-founder), John Ardelius (CTO & Co-founder),
