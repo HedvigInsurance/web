@@ -5,6 +5,7 @@ import { StickyContainer } from 'react-sticky';
 import './Page.css';
 
 import { Hedvigers } from 'src/sections/about-us/hedvigers';
+import { Hero } from 'src/sections/about-us/hero';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -27,6 +28,7 @@ const AboutUsTemplate = ({
     </Helmet>
     <StickyContainer>
       <Header data={header} langKey={langKey} />
+      <Hero />
       <Hedvigers teamtailorUsers={teamtailorUsers} />
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
