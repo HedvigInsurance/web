@@ -48,12 +48,14 @@ export interface PressItem {
 
 interface PressProps {
   items: Array<PressItem>;
+  footnote: string;
+  title: string;
 }
 
-export const Press: React.SFC<PressProps> = ({ items, footnote }) => (
+export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
   <Background>
     <PressContainer>
-      <Title>Press</Title>
+      <Title>{title}</Title>
       {items.map(({ logo, title, text }) => (
         <PressItem title={title} logo={logo} text={text} />
       ))}

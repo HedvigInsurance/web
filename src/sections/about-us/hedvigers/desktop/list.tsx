@@ -8,6 +8,7 @@ interface ListProps {
   users: Array<TeamtailorUser>;
   onSelect: (user: TeamtailorUser) => void;
   selectedUser: TeamtailorUser;
+  title: string;
 }
 
 const Container = styled('div')({
@@ -87,9 +88,10 @@ export const List: React.SFC<ListProps> = ({
   users,
   selectedUser,
   onSelect,
+  title,
 }) => (
   <Container>
-    <Title>The team</Title>
+    <Title>{title}</Title>
     <ListContainer>
       {users.map((user) => (
         <ListItem

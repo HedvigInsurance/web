@@ -24,6 +24,8 @@ it('renders correctly', () => {
 
   global.innerWidth = 600;
 
-  const wrapper = mount(<Mobile teamtailorUsers={teamtailorUsers} />);
+  const wrapper = mount(
+    <Mobile title="mock title" teamtailorUsers={teamtailorUsers} />,
+  );
   expect(wrapper).toMatchSnapshot();
 });

@@ -212,10 +212,20 @@ collections:
               - label: Text
                 name: text
                 widget: text
+          - label: Hedvigers
+            name: hedvigers
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
           - label: Press
             name: press
             widget: object
             fields:
+              - label: Title
+                name: title
+                widget: string
               - label: Footnote
                 name: footnote
                 widget: text
