@@ -63,22 +63,26 @@ const FactExplainer = styled('span')({
   },
 });
 
-export const Facts = () => (
+interface Fact {
+  number: string;
+  explainer: string;
+}
+
+interface FactsProps {
+  title: string;
+  list: Array<Fact>;
+}
+
+export const Facts: React.SFC<FactsProps> = ({ title, list }) => (
   <FactsContainer>
-    <Title>Korta fakta</Title>
+    <Title>{title}</Title>
     <Grid>
-      <Fact>
-        <FactNumber>0</FactNumber>
-        <FactExplainer>formulär ifyllda av våra medlemmar</FactExplainer>
-      </Fact>
-      <Fact>
-        <FactNumber>0</FactNumber>
-        <FactExplainer>minuters telefonkö</FactExplainer>
-      </Fact>
-      <Fact>
-        <FactNumber>2.7</FactNumber>
-        <FactExplainer>minuter att få svar i Hedvig-chatten</FactExplainer>
-      </Fact>
+      {list.map(({ number, explainer }) => (
+        <Fact>
+          <FactNumber>{number}</FactNumber>
+          <FactExplainer>{explainer}</FactExplainer>
+        </Fact>
+      ))}
     </Grid>
   </FactsContainer>
 );
