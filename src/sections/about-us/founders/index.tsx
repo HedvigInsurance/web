@@ -12,6 +12,7 @@ interface GatsbyImage {
 
 interface FoundersProps {
   imageFile: GatsbyImage;
+  imageText: string;
 }
 
 const FoundersContainer = styled('div')({
@@ -54,7 +55,10 @@ const FounderName = styled('span')({
   maxWidth: '80%',
 });
 
-export const Founders: React.SFC<FoundersProps> = ({ imageFile }) => (
+export const Founders: React.SFC<FoundersProps> = ({
+  imageFile,
+  imageText,
+}) => (
   <FoundersContainer role="presentation">
     {imageFile ? (
       <ImgWithMaxHeight sizes={imageFile.image.sizes} />
@@ -62,10 +66,7 @@ export const Founders: React.SFC<FoundersProps> = ({ imageFile }) => (
       <PlaceholderImage />
     )}
     <Shadow>
-      <FounderName>
-        Fredrik Fors, (COO & Co-founder), John Ardelius (CTO & Co-founder),
-        Lucas Carlsén (CEO & Co-founder)
-      </FounderName>
+      <FounderName>{imageText}</FounderName>
     </Shadow>
   </FoundersContainer>
 );

@@ -27,6 +27,9 @@ const pagePropTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired,
+  founders: PropTypes.shape({
+    imageText: PropTypes.string.isRequired,
+  }),
   hedvigers: PropTypes.shape({
     title: PropTypes.string.isRequired,
   }),
@@ -65,6 +68,7 @@ const AboutUsTemplate = ({
   hero,
   mainSection,
   foundersImageFile,
+  founders,
   hedvigers,
   facts,
   header,
@@ -82,7 +86,7 @@ const AboutUsTemplate = ({
       <Header data={header} langKey={langKey} />
       <Hero {...hero} />
       <Body {...mainSection} />
-      <Founders imageFile={foundersImageFile} />
+      <Founders {...founders} imageFile={foundersImageFile} />
       <Hedvigers {...hedvigers} teamtailorUsers={teamtailorUsers} />
       <Facts {...facts} />
       <Press {...press} />
@@ -109,6 +113,7 @@ const AboutUs = ({ data, pathContext }) => (
     hedvigers={data.markdownRemark.frontmatter.hedvigers}
     facts={data.markdownRemark.frontmatter.facts}
     foundersImageFile={data.foundersImageFile}
+    founders={data.markdownRemark.frontmatter.founders}
     title={data.markdownRemark.frontmatter.title}
     press={data.markdownRemark.frontmatter.press}
     investors={data.markdownRemark.frontmatter.investors}
@@ -155,6 +160,9 @@ export const aboutPageQuery = graphql`
           headline
           title
           playButtonText
+        }
+        founders {
+          imageText
         }
         hedvigers {
           title
