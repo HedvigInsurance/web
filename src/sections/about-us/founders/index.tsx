@@ -50,7 +50,7 @@ const FounderName = styled('span')({
 
 export const Founders: React.SFC<FoundersProps> = ({ imageFile }) => (
   <FoundersContainer role="presentation">
-    <ImgWithMaxHeight sizes={imageFile.image.sizes} />
+    {imageFile && <ImgWithMaxHeight sizes={imageFile.image.sizes} />}
     <Shadow>
       <FounderName>
         Fredrik Fors, (COO & Co-founder), John Ardelius (CTO & Co-founder),

@@ -12,6 +12,7 @@ const AboutPagePreview = ({ entry }) => (
       mainSection={entry.getIn(['data', 'mainSection']).toJS()}
       press={entry.getIn(['data', 'press']).toJS()}
       investors={entry.getIn(['data', 'investors']).toJS()}
+      teamtailorUsers={[]}
     />
   </Provider>
 );
