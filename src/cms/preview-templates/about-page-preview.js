@@ -9,7 +9,7 @@ const AboutPagePreview = ({ entry }) => (
       hej={console.log(entry.getIn(['data']).toJS())}
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}
-      body={entry.getIn(['data', 'body']).toJS()}
+      mainSection={entry.getIn(['data', 'mainSection']).toJS()}
       press={entry.getIn(['data', 'press']).toJS()}
       investors={entry.getIn(['data', 'investors']).toJS()}
     />
