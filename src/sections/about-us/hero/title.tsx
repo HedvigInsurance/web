@@ -57,9 +57,17 @@ const DELAY = 500;
 
 interface TitleProps {
   clickedPlayButton: () => void;
+  headline: string;
+  title: string;
+  playButtonText: string;
 }
 
-export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
+export const Title: React.SFC<TitleProps> = ({
+  headline,
+  title,
+  playButtonText,
+  clickedPlayButton,
+}) => (
   <>
     <Spring
       native
@@ -68,7 +76,7 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       from={{ opacity: 0, transform: 'translateX(-300px)' }}
       to={{ opacity: 1, transform: 'translateX(0)' }}
     >
-      {(styles) => <MissionTitle style={styles}>Our mission:</MissionTitle>}
+      {(styles) => <MissionTitle style={styles}>{headline}</MissionTitle>}
     </Spring>
     <Spring
       native
@@ -77,7 +85,7 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       from={{ opacity: 0, transform: 'translateY(-300px)' }}
       to={{ opacity: 1, transform: 'translateY(0)' }}
     >
-      {(styles) => <Mission style={styles}>Making minds more peaceful</Mission>}
+      {(styles) => <Mission style={styles}>{title}</Mission>}
     </Spring>
     <Spring
       native
@@ -89,7 +97,8 @@ export const Title: React.SFC<TitleProps> = ({ clickedPlayButton }) => (
       {(styles) => (
         <PlayButtonContainer>
           <PlayButton onClick={clickedPlayButton} style={styles}>
-            <PlayIcon width={50} height={50} /> Se filmen
+            <PlayIcon width={50} height={50} />
+            {playButtonText}
           </PlayButton>
         </PlayButtonContainer>
       )}
