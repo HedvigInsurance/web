@@ -1444,7 +1444,7 @@ collections:
         widget: image
       - label: Author (Exact name as shown on TeamTailor)
         name: author
-        widget: number
+        widget: string
       - label: Tags
         name: tags
         widget: list
