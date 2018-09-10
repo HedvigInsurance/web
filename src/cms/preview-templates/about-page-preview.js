@@ -8,8 +8,9 @@ const AboutPagePreview = ({ entry }) => (
     <AboutUsTemplate
       title={entry.getIn(['data', 'title'])}
       heading={entry.getIn(['data', 'heading'])}
-      section1={entry.getIn(['data', 'section1']).toJS()}
-      section2={entry.getIn(['data', 'section2'])}
+      body={entry.getIn(['data', 'body']).toJS()}
+      press={entry.getIn(['data', 'press']).toJS()}
+      investors={entry.getIn(['data', 'investors']).toJS()}
     />
   </Provider>
 );
