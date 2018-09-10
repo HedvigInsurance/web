@@ -30,6 +30,15 @@ const pagePropTypes = {
   hedvigers: PropTypes.shape({
     title: PropTypes.string.isRequired,
   }),
+  facts: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        number: PropTypes.string.isRequired,
+        explainer: PropTypes.string.isRequired,
+      }),
+    ),
+  }),
   press: PropTypes.shape({
     title: PropTypes.string.isRequired,
     footnote: PropTypes.string.isRequired,
@@ -57,6 +66,7 @@ const AboutUsTemplate = ({
   mainSection,
   foundersImageFile,
   hedvigers,
+  facts,
   header,
   footer,
   teamtailorUsers,
@@ -74,7 +84,7 @@ const AboutUsTemplate = ({
       <Body {...mainSection} />
       <Founders imageFile={foundersImageFile} />
       <Hedvigers {...hedvigers} teamtailorUsers={teamtailorUsers} />
-      <Facts />
+      <Facts {...facts} />
       <Press {...press} />
       <Investors {...investors} />
     </StickyContainer>
@@ -97,6 +107,7 @@ const AboutUs = ({ data, pathContext }) => (
     hero={data.markdownRemark.frontmatter.hero}
     mainSection={data.markdownRemark.frontmatter.mainSection}
     hedvigers={data.markdownRemark.frontmatter.hedvigers}
+    facts={data.markdownRemark.frontmatter.facts}
     foundersImageFile={data.foundersImageFile}
     title={data.markdownRemark.frontmatter.title}
     press={data.markdownRemark.frontmatter.press}
@@ -147,6 +158,13 @@ export const aboutPageQuery = graphql`
         }
         hedvigers {
           title
+        }
+        facts {
+          title
+          list {
+            number
+            explainer
+          }
         }
         press {
           title

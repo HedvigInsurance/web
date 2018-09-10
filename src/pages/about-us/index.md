@@ -22,6 +22,11 @@ mainSection:
     Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och när du inte gör det, så hjälper vi dig hjälpa andra.
 hedvigers:
   title: The Team
+facts:
+  title: Korta fakta
+  list:
+    - number: '0'
+      explainer: hej 123
 press:
   title: Press
   footnote: hej123
