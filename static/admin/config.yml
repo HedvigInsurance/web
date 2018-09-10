@@ -216,6 +216,9 @@ collections:
             name: press
             widget: object
             fields:
+              - label: Footnote
+                name: footnote
+                widget: text
               - label: Items
                 name: items
                 widget: list
