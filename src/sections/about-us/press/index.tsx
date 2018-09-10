@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import { colors } from '@hedviginsurance/brand';
+import remark from 'remark';
+import reactRenderer from 'remark-react';
 
 import { PressItem } from './press-item';
 
@@ -48,7 +50,7 @@ interface PressProps {
   items: Array<PressItem>;
 }
 
-export const Press: React.SFC<PressProps> = ({ items }) => (
+export const Press: React.SFC<PressProps> = ({ items, footnote }) => (
   <Background>
     <PressContainer>
       <Title>Press</Title>
@@ -56,9 +58,15 @@ export const Press: React.SFC<PressProps> = ({ items }) => (
         <PressItem title={title} logo={logo} text={text} />
       ))}
       <Footnote>
-        Vi finns på <Link href="mailto:press@hedvig.com">press@hedvig.com</Link>{' '}
-        och våra presskit finns att ladda ner{' '}
-        <Link href="/assets/press/hedvig-press-assets.zip">här</Link>.
+        {
+          remark()
+            .use(reactRenderer, {
+              remarkReactComponents: {
+                a: Link,
+              },
+            })
+            .processSync(footnote).contents
+        }
       </Footnote>
     </PressContainer>
   </Background>

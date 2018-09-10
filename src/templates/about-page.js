@@ -23,6 +23,7 @@ const pagePropTypes = {
     text: PropTypes.string.isRequired,
   }).isRequired,
   press: PropTypes.shape({
+    footnote: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(
       PropTypes.shape({
         logo: PropTypes.string.isRequired,
