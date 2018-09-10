@@ -1442,11 +1442,11 @@ collections:
       - label: Top Image
         name: topImage
         widget: image
-      - label: author
-        name: Author (Exact name as shown on TeamTailor)
+      - label: Author (Exact name as shown on TeamTailor)
+        name: author
         widget: number
-      - label: tags
-        name: Tags
+      - label: Tags
+        name: tags
         widget: list
       - label: Excerpt
         name: excerpt
