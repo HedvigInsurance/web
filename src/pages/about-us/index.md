@@ -66,5 +66,9 @@ investors:
     - image: /uploads/1440b129c58e8396b83c51f9fd07eaa2.png
       name: Nicklas Storåkers
       type: Angel Investor
+    - image: /uploads/creades.png
+      name: Creades
+      type: Investment Company
   title: Hedvigs investerare
 ---
+
