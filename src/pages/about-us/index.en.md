@@ -53,10 +53,10 @@ press:
     We can be reached at <mailto:press@hedvig.com> and our press assets are
     available for download [here](/assets/press/hedvig-press-assets.zip).
   items:
-    - logo: /uploads/wired_logo.svg.png
-      title: Hedvig is one of Europe’s 100 hottest startups
+    - link: 'https://www.wired.co.uk/magazine'
+      logo: /uploads/wired_logo.svg.png
       text: Designated by Wired UK
-      link: 'https://www.wired.co.uk/magazine'
+      title: Hedvig is one of Europe’s 100 hottest startups
   title: Press
 investors:
   list:
@@ -66,5 +66,9 @@ investors:
     - image: /uploads/1440b129c58e8396b83c51f9fd07eaa2.png
       name: Nicklas Storåkers
       type: Angel Investor
+    - image: /uploads/creades.png
+      name: Creades
+      type: Investment Company
   title: Hedvigs investors
 ---
+
