@@ -177,6 +177,7 @@ export const aboutPageQuery = graphql`
         }
         press {
           title
+          footnote
           items {
             logo
             title
