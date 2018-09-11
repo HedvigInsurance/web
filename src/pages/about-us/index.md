@@ -41,7 +41,7 @@ hedvigers:
   title: Teamet
 facts:
   list:
-    - explainer: "formulär ifyllda av \Lvåra medlemmar"
+    - explainer: formulär ifyllda av våra medlemmar
       number: '0'
     - explainer: minuters telefonkö
       number: '0'
