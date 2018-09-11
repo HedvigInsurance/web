@@ -13,6 +13,8 @@ interface FoundersProps {
 
 const FoundersContainer = styled('div')({
   maxHeight: 500,
+  maxWidth: 1500,
+  margin: '0 auto',
   position: 'relative',
 });
 
