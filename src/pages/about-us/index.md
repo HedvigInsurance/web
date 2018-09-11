@@ -41,7 +41,7 @@ facts:
       number: '0'
     - explainer: minuters telefonkö
       number: '0'
-    - explainer: "minuter att få svar \Li Hedvig-chatten"
+    - explainer: minuter att få svar i Hedvig-chatten
       number: '2.7'
   title: Korta fakta
 press:
