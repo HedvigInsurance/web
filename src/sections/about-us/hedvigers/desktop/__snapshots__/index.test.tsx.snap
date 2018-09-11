@@ -29,7 +29,7 @@ exports[`renders correctly 1`] = `
 
 .emotion-0 {
   font-size: 40px;
-  font-family: SoRay;
+  font-family: SoRay-ExtraBold;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -149,7 +149,7 @@ exports[`renders correctly 1`] = `
 }
 
 .emotion-7 {
-  font-family: SoRay;
+  font-family: SoRay-ExtraBold;
   font-size: 35px;
   line-height: 40px;
   color: white;
