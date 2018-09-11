@@ -55,8 +55,8 @@ press:
   items:
     - link: 'https://www.wired.co.uk/magazine'
       logo: /uploads/wired_logo.svg.png
-      text: ''
-      title: Hedvig is one of Europe’s 100 hottest startups
+      text: Utsedda av Wired UK.
+      title: Hedvig är en av Europas 100 hetaste startups
   title: Press
 investors:
   list:
