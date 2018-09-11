@@ -136,7 +136,7 @@ const Details = styled('div')(
 );
 
 const Name = styled('span')({
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   fontSize: 35,
   lineHeight: '40px',
   color: 'white',

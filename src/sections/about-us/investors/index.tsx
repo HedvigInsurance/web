@@ -25,7 +25,7 @@ const InvestorsContainer = styled('div')({
 const Title = styled('h3')({
   fontSize: 60,
   lineHeight: '65px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   marginBottom: 50,
   textAlign: 'center',
   [MEDIA_QUERY]: {
@@ -60,7 +60,7 @@ const InvestorImage = styled('img')({
 });
 
 const InvestorName = styled('span')({
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   fontSize: 18,
   lineHeight: '19px',
   marginTop: 15,

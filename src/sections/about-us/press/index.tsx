@@ -20,7 +20,7 @@ const PressContainer = styled('div')({
 const Title = styled('h3')({
   fontSize: 60,
   lineHeight: '65px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   marginBottom: 40,
   '@media (max-width: 650px)': {
     fontSize: 45,

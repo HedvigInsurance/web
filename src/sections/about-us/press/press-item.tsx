@@ -32,7 +32,7 @@ const Content = styled('div')({
 const Title = styled('span')({
   fontSize: 20,
   lineHeight: '21px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
 });
 
 const Text = styled('span')({

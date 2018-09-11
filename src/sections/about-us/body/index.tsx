@@ -13,7 +13,7 @@ const BodyContainer = styled('div')({
 
 const Title = styled('h1')({
   fontSize: 60,
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   lineHeight: '65px',
   '@media (max-width: 600px)': {
     fontSize: 48,
