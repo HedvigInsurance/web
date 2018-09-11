@@ -66,8 +66,5 @@ investors:
     - image: /uploads/1440b129c58e8396b83c51f9fd07eaa2.png
       name: Nicklas Storåkers
       type: Angel Investor
-    - image: /uploads/10c033d355e30a20399948d14a13af70.png
-      name: Khaled Helioui
-      type: Angel Investor
   title: Hedvigs investerare
 ---
