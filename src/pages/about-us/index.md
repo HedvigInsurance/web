@@ -8,13 +8,11 @@ hero:
   title: Making minds more peaceful
 main:
   text: >-
-    Om sanningen ska fram, vem gillar att köpa försäkring Fullt förståeligt om
+    Om sanningen ska fram, vem gillar att köpa försäkring. Fullt förståeligt om
     man tänker på hur försäkringar fungerar idag. Du betalar dina räkningar utan
     att veta riktigt vart pengarna tar vägen. När du väl behöver den hjälp du
     betalat för så får du känslan av att bli lite motarbetad eller kanske till
     och med misstrodd. Varför är det så?
-
-
 
 
     Problemet med vanliga försäkringsbolag är att de tjänar mer när de betalar
@@ -26,8 +24,6 @@ main:
     våra medlemmar. När alla skador har betalats skänks överskottet till
     organisationer som gör världen bättre. Du väljer själv vad ditt hjärta
     klappar för.
-
-
 
 
     Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och när du inte
