@@ -53,10 +53,10 @@ press:
     We can be reached at <mailto:press@hedvig.com> and our press assets are
     available for download [here](/assets/press/hedvig-press-assets.zip).
   items:
-    - logo: https://pbs.twimg.com/profile_images/499539988833267712/mjnAZmLH_400x400.jpeg
+    - logo: /uploads/wired_logo.svg.png
       title: Hedvig is one of Europe’s 100 hottest startups
-      text: hello 123
-      link: http://www.hedvig.com
+      text: Designated by Wired UK
+      link: 'https://www.wired.co.uk/magazine'
   title: Press
 investors:
   list:
