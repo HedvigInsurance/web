@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
+import { fonts } from '@hedviginsurance/brand';
 
 const BodyContainer = styled('div')({
   padding: '70px 0',
@@ -12,7 +13,7 @@ const BodyContainer = styled('div')({
 
 const Title = styled('h1')({
   fontSize: 60,
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   lineHeight: '65px',
   '@media (max-width: 600px)': {
     fontSize: 48,
@@ -24,7 +25,7 @@ const BodyText = styled('div')({
   marginTop: 20,
   fontSize: 16,
   lineHeight: '24px',
-  fontFamily: 'CircularStd',
+  fontFamily: fonts.CIRCULAR,
   'div > p': {
     marginTop: 25,
   },

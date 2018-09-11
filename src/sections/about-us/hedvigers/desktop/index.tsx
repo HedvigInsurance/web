@@ -25,13 +25,13 @@ const Box = styled('div')({
 });
 
 interface DesktopProps {
-  teamtailorUsers: Array<TeamtailorUser>;
+  teamtailorUsers: TeamtailorUser[];
   title: string;
 }
 
 interface State {
   selectedUser: TeamtailorUser;
-  users: Array<TeamtailorUser>;
+  users: TeamtailorUser[];
 }
 
 interface Actions {

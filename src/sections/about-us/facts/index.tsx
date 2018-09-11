@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand';
 
 const FactsContainer = styled('div')({
   backgroundColor: '#FFF3F2',
@@ -15,7 +15,7 @@ const Title = styled('h3')({
   fontSize: 45,
   lineHeight: '50px',
   textAlign: 'center',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   [MEDIA_QUERY]: {
     fontSize: 60,
     lineHeight: '65px',
@@ -44,7 +44,7 @@ const Fact = styled('div')({
 const FactNumber = styled('span')({
   fontSize: 70,
   lineHeight: '75px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   [MEDIA_QUERY]: {
     fontSize: 90,
     lineHeight: '95px',
@@ -70,7 +70,7 @@ interface Fact {
 
 interface FactsProps {
   title: string;
-  list: Array<Fact>;
+  list: Fact[];
 }
 
 export const Facts: React.SFC<FactsProps> = ({ title, list }) => (

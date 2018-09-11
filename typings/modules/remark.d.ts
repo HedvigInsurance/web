@@ -8,7 +8,7 @@ declare module 'remark' {
   }
 
   interface RemarkReactComponentsOptions {
-    a?: React.StatelessComponent<any> | React.ComponentClass<any>;
+    [component: string]: React.ComponentType;
   }
 
   interface RemarkOptions {

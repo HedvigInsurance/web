@@ -2,11 +2,12 @@ import * as React from 'react';
 import SwipeableViews from '@hedviginsurance/react-swipeable-views';
 import styled from 'react-emotion';
 import MediaQuery from 'react-responsive';
+import { fonts } from '@hedviginsurance/brand';
 
 import { TeamtailorUser } from '..';
 
 interface MobileProps {
-  teamtailorUsers: Array<TeamtailorUser>;
+  teamtailorUsers: TeamtailorUser[];
   title: string;
 }
 
@@ -48,7 +49,7 @@ const UserInfo = styled('div')({
 
 const CardName = styled('span')({
   fontSize: 18,
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
 });
 
 const CardTitle = styled('span')({
@@ -58,7 +59,7 @@ const CardTitle = styled('span')({
 const Title = styled('h3')({
   fontSize: 45,
   lineHeight: '50px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   padding: '20px 60px',
   textAlign: 'center',
   '@media (min-width: 700px)': {

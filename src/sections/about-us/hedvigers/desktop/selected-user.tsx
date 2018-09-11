@@ -1,10 +1,17 @@
 import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import { TransitionGroup, Transition } from 'react-transition-group';
+import {
+  TransitionStatus,
+  ENTERED,
+  ENTERING,
+} from 'react-transition-group/Transition';
+import { fonts } from '@hedviginsurance/brand';
+
 import { TeamtailorUser } from 'src/sections/about-us/hedvigers';
 
 interface SelectedUserProps {
-  users: Array<TeamtailorUser>;
+  users: TeamtailorUser[];
   selectedUser: TeamtailorUser;
 }
 
@@ -15,7 +22,7 @@ const Container = styled('div')({
 });
 
 interface ImageContainerProps {
-  status: string;
+  status: TransitionStatus;
 }
 
 const enter = keyframes({
@@ -36,13 +43,13 @@ const exit = keyframes({
   },
 });
 
-const getTransform = (status: string) => {
+const getTransform = (status: TransitionStatus) => {
   switch (status) {
-    case 'entered':
+    case ENTERED:
       return {
         animation: `${enter} 0ms ease forwards`,
       };
-    case 'entering':
+    case ENTERING:
       return {
         animation: `${enter} 800ms ease forwards`,
       };
@@ -94,9 +101,9 @@ const exitDetails = keyframes({
   },
 });
 
-const getDetailsAnimation = (status: string) => {
+const getDetailsAnimation = (status: TransitionStatus) => {
   switch (status) {
-    case 'entered':
+    case ENTERED:
       return {
         animation: `${enterDetails} 0ms ease forwards`,
       };
@@ -112,7 +119,7 @@ const getDetailsAnimation = (status: string) => {
 };
 
 interface DetailsProps {
-  status: string;
+  status: TransitionStatus;
 }
 
 const Details = styled('div')(
@@ -129,7 +136,7 @@ const Details = styled('div')(
 );
 
 const Name = styled('span')({
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   fontSize: 35,
   lineHeight: '40px',
   color: 'white',
@@ -150,7 +157,7 @@ export const SelectedUser: React.SFC<SelectedUserProps> = ({
         (user) =>
           user === selectedUser ? (
             <Transition key={user.name} timeout={{ exit: 850, enter: 1500 }}>
-              {(status: string) => (
+              {(status) => (
                 <ImageContainer status={status}>
                   <Image src={user.picture.large} />
                   <Details status={status}>

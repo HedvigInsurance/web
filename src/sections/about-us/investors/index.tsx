@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import { fonts } from '@hedviginsurance/brand';
 
 interface Investor {
   image: string;
@@ -9,7 +10,7 @@ interface Investor {
 
 interface InverstorsProps {
   title: string;
-  list: Array<Investor>;
+  list: Investor[];
 }
 
 const InvestorsContainer = styled('div')({
@@ -22,7 +23,7 @@ const InvestorsContainer = styled('div')({
 const Title = styled('h3')({
   fontSize: 60,
   lineHeight: '65px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   marginBottom: 50,
   textAlign: 'center',
   '@media (max-width: 650px)': {
@@ -57,7 +58,7 @@ const InvestorImage = styled('img')({
 });
 
 const InvestorName = styled('span')({
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   fontSize: 18,
   lineHeight: '19px',
   marginTop: 15,

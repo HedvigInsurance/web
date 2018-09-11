@@ -15,7 +15,7 @@ export interface TeamtailorUser {
 }
 
 interface HedvigersProps {
-  teamtailorUsers: Array<TeamtailorUser>;
+  teamtailorUsers: TeamtailorUser[];
   title: string;
 }
 

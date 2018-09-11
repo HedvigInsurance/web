@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand';
 import remark from 'remark';
 import reactRenderer from 'remark-react';
 
@@ -20,7 +20,7 @@ const PressContainer = styled('div')({
 const Title = styled('h3')({
   fontSize: 60,
   lineHeight: '65px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   marginBottom: 40,
   '@media (max-width: 650px)': {
     fontSize: 45,
@@ -48,7 +48,7 @@ export interface PressItem {
 }
 
 interface PressProps {
-  items: Array<PressItem>;
+  items: PressItem[];
   footnote: string;
   title: string;
 }
@@ -58,7 +58,13 @@ export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
     <PressContainer>
       <Title>{title}</Title>
       {items.map(({ logo, title, text, link }) => (
-        <PressItem link={link} title={title} logo={logo} text={text} />
+        <PressItem
+          key={link}
+          link={link}
+          title={title}
+          logo={logo}
+          text={text}
+        />
       ))}
       <Footnote>
         {

@@ -1,17 +1,13 @@
 import * as React from 'react';
-import Img from 'gatsby-image';
+import Img, { GatsbyImageProps } from 'gatsby-image';
 import styled from 'react-emotion';
 
-interface GatsbyImageSizes {
-  sizes: any;
-}
-
-interface GatsbyImage {
-  image: GatsbyImageSizes;
+interface ImageFile {
+  image: GatsbyImageProps;
 }
 
 interface FoundersProps {
-  imageFile: GatsbyImage;
+  imageFile: ImageFile;
   imageText: string;
 }
 
@@ -61,7 +57,7 @@ export const Founders: React.SFC<FoundersProps> = ({
 }) => (
   <FoundersContainer role="presentation">
     {imageFile ? (
-      <ImgWithMaxHeight sizes={imageFile.image.sizes} />
+      <ImgWithMaxHeight {...imageFile.image} />
     ) : (
       <PlaceholderImage />
     )}

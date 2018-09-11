@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand';
 
 import { TeamtailorUser } from '..';
 
 interface ListProps {
-  users: Array<TeamtailorUser>;
+  users: TeamtailorUser[];
   onSelect: (user: TeamtailorUser) => void;
   selectedUser: TeamtailorUser;
   title: string;
@@ -18,7 +18,7 @@ const Container = styled('div')({
 
 const Title = styled('h3')({
   fontSize: 40,
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
   marginTop: 20,
   marginBottom: 30,
 });

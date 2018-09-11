@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import { fonts } from '@hedviginsurance/brand';
 
 import { PressItem as PressItemType } from '.';
 
@@ -31,7 +32,7 @@ const Content = styled('div')({
 const Title = styled('span')({
   fontSize: 20,
   lineHeight: '21px',
-  fontFamily: 'SoRay',
+  fontFamily: fonts.SORAY,
 });
 
 const Text = styled('span')({

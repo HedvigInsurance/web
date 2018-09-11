@@ -810,9 +810,9 @@
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.0.tgz#08ef599fe8c41e6184fa0b5a6ca460d318d3abb1"
 
-"@hedviginsurance/brand@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.0.0.tgz#4209c89eb2ec500583233e4a5bd173e767f63ee8"
+"@hedviginsurance/brand@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.1.1.tgz#d4a377645cab9ebaf7e011744d2cb230c86a4b8d"
 
 "@hedviginsurance/react-swipeable-views@^0.12.20":
   version "0.12.20"
@@ -986,9 +986,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-transition-group@^2.0.13":
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.13.tgz#7769fb61eb71d64d087a713956f086a42c3ee171"
+"@types/react-transition-group@^2.0.14":
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.14.tgz#afd0cd785a97f070b55765e9f9d76ff568269001"
   dependencies:
     "@types/react" "*"
 
