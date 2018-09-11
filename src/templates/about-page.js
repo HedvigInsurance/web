@@ -4,33 +4,80 @@ import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import './Page.css';
 
+import { Hedvigers } from 'src/sections/about-us/hedvigers';
+import { Hero } from 'src/sections/about-us/hero';
+import { Body } from 'src/sections/about-us/body';
+import { Founders } from 'src/sections/about-us/founders';
+import { Facts } from 'src/sections/about-us/facts';
+import { Press } from 'src/sections/about-us/press';
+import { Investors } from 'src/sections/about-us/investors';
+
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
-  section1: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    paragraph1: PropTypes.string.isRequired,
-    paragraph2: PropTypes.string.isRequired,
+  teamtailorUsers: PropTypes.object.isRequired,
+  hero: PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    playButtonText: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
+  main: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
   }).isRequired,
-  section2: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    paragraph1: PropTypes.string.isRequired,
-    paragraph2: PropTypes.string.isRequired,
-    paragraph3: PropTypes.string.isRequired,
+  founders: PropTypes.shape({
+    imageText: PropTypes.string.isRequired,
+  }),
+  hedvigers: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }),
+  facts: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf(
+      PropTypes.shape({
+        number: PropTypes.string.isRequired,
+        explainer: PropTypes.string.isRequired,
+      }),
+    ),
+  }),
+  press: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    footnote: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        logo: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
   }).isRequired,
+  investors: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    list: PropTypes.arrayOf({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+    }).isRequired,
+  }),
 };
 
 const AboutUsTemplate = ({
   title,
-  heading,
-  section1,
-  section2,
+  hero,
+  main,
+  foundersImageFile,
+  founders,
+  hedvigers,
+  facts,
   header,
   footer,
+  teamtailorUsers,
   langKey,
+  press,
+  investors,
 }) => (
   <main className="Site">
     <Helmet>
@@ -38,41 +85,13 @@ const AboutUsTemplate = ({
     </Helmet>
     <StickyContainer>
       <Header data={header} langKey={langKey} />
-      <article className="Site-content">
-        <div className="u-backgroundSecondaryPink">
-          <div className="Container">
-            <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB6 u-lg-spaceMB6 u-fontFamilyHeader u-fontSize5 u-md-fontSize3 u-lg-fontSize2">
-              {heading}
-            </h1>
-          </div>
-        </div>
-
-        <div className="Container u-md-spaceMT10 u-lg-spaceMT10 u-spaceMB5 u-md-spaceMB3 u-lg-spaceMB3">
-          <div className="u-maxWidth1of1">
-            <div>
-              <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-                {section1.heading}
-              </h2>
-              <div>
-                <p className="u-spaceMB9">{section1.paragraph1}</p>
-                <p className="u-spaceMB9">{section1.paragraph2}</p>
-              </div>
-            </div>
-          </div>
-          <div className="u-maxWidth1of1">
-            <div>
-              <h2 className="u-spaceMT5 u-spaceMB10 u-fontFamilyHeader u-fontSize8 u-md-fontSize7 u-lg-fontSize7">
-                {section2.heading}
-              </h2>
-              <div>
-                <p className="u-spaceMB9">{section2.paragraph1}</p>
-                <p className="u-spaceMB9">{section2.paragraph2}</p>
-                <p className="u-spaceMB9">{section2.paragraph3}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+      <Hero {...hero} />
+      <Body {...main} />
+      <Founders {...founders} imageFile={foundersImageFile} />
+      <Hedvigers {...hedvigers} teamtailorUsers={teamtailorUsers} />
+      <Facts {...facts} />
+      <Press {...press} />
+      <Investors {...investors} />
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
@@ -87,10 +106,18 @@ AboutUsTemplate.propTypes = {
 
 const AboutUs = ({ data, pathContext }) => (
   <AboutUsTemplate
+    teamtailorUsers={data.allTeamtailorUser.edges
+      .map(({ node }) => node)
+      .filter((user) => user.picture.large)}
+    hero={data.markdownRemark.frontmatter.hero}
+    main={data.markdownRemark.frontmatter.main}
+    hedvigers={data.markdownRemark.frontmatter.hedvigers}
+    facts={data.markdownRemark.frontmatter.facts}
+    foundersImageFile={data.foundersImageFile}
+    founders={data.markdownRemark.frontmatter.founders}
     title={data.markdownRemark.frontmatter.title}
-    heading={data.markdownRemark.frontmatter.heading}
-    section1={data.markdownRemark.frontmatter.section1}
-    section2={data.markdownRemark.frontmatter.section2}
+    press={data.markdownRemark.frontmatter.press}
+    investors={data.markdownRemark.frontmatter.investors}
     header={data.header}
     footer={data.footer}
     langKey={pathContext.langKey}
@@ -115,20 +142,68 @@ export default AboutUs;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
+    foundersImageFile: file(relativePath: { eq: "about-us/founders.jpg" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 2000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        heading
-        section1 {
-          heading
-          paragraph1
-          paragraph2
+        main {
+          title
+          text
         }
-        section2 {
-          heading
-          paragraph1
-          paragraph2
-          paragraph3
+        hero {
+          headline
+          title
+          playButtonText
+        }
+        founders {
+          imageText
+        }
+        hedvigers {
+          title
+        }
+        facts {
+          title
+          list {
+            number
+            explainer
+          }
+        }
+        press {
+          title
+          footnote
+          items {
+            logo
+            title
+            link
+            text
+          }
+        }
+        investors {
+          title
+          list {
+            name
+            image
+            type
+          }
+        }
+      }
+    }
+
+    allTeamtailorUser {
+      edges {
+        node {
+          title
+          name
+          picture {
+            large
+          }
         }
       }
     }
