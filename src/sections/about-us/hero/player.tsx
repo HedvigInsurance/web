@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import { Update } from 'react-lifecycle-components';
 
-import heroVideo from 'assets/about-us-hero.mp4';
 import heroVideoPoster from 'assets/about-us-hero-poster.png';
 
 interface HeightContainerProps {
