@@ -56,6 +56,7 @@ press:
     - logo: https://pbs.twimg.com/profile_images/499539988833267712/mjnAZmLH_400x400.jpeg
       title: Hedvig is one of Europe’s 100 hottest startups
       text: hello 123
+      link: http://www.hedvig.com
   title: Press
 investors:
   list:

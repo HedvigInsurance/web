@@ -276,6 +276,9 @@ collections:
                   - label: Title
                     name: title
                     widget: string
+                  - label: Link
+                    name: link
+                    widget: link
                   - label: Text
                     name: text
                     widget: text
@@ -888,6 +891,9 @@ collections:
                   - label: Logo
                     name: logo
                     widget: image
+                  - label: Link
+                    name: link
+                    widget: link
                   - label: Title
                     name: title
                     widget: string

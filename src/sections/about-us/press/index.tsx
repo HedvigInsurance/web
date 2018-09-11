@@ -44,6 +44,7 @@ export interface PressItem {
   logo: string;
   title: string;
   text: string;
+  link: string;
 }
 
 interface PressProps {
@@ -56,8 +57,8 @@ export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
   <Background>
     <PressContainer>
       <Title>{title}</Title>
-      {items.map(({ logo, title, text }) => (
-        <PressItem title={title} logo={logo} text={text} />
+      {items.map(({ logo, title, text, link }) => (
+        <PressItem link={link} title={title} logo={logo} text={text} />
       ))}
       <Footnote>
         {

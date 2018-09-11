@@ -49,6 +49,7 @@ const pagePropTypes = {
       PropTypes.shape({
         logo: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
       }).isRequired,
     ).isRequired,
@@ -179,6 +180,7 @@ export const aboutPageQuery = graphql`
           items {
             logo
             title
+            link
             text
           }
         }

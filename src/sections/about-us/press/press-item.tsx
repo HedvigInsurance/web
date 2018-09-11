@@ -40,8 +40,13 @@ const Text = styled('span')({
   marginTop: 5,
 });
 
-export const PressItem: React.SFC<PressItemType> = ({ logo, title, text }) => (
-  <Link href="https://hello.com">
+export const PressItem: React.SFC<PressItemType> = ({
+  logo,
+  link,
+  title,
+  text,
+}) => (
+  <Link href={link}>
     <PressItemContainer>
       <Logo src={logo} />
       <Content>
