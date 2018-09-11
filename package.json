@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "dependencies": {
-    "@hedviginsurance/brand": "1.1.1",
+    "@hedviginsurance/brand": "1.2.1",
     "@hedviginsurance/react-swipeable-views": "^0.12.20",
     "@segment/snippet": "^4.4.0",
     "@segment/utm-params": "^2.0.0",

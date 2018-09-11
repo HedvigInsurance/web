@@ -810,9 +810,9 @@
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.0.tgz#08ef599fe8c41e6184fa0b5a6ca460d318d3abb1"
 
-"@hedviginsurance/brand@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.1.1.tgz#d4a377645cab9ebaf7e011744d2cb230c86a4b8d"
+"@hedviginsurance/brand@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@hedviginsurance/brand/-/brand-1.2.1.tgz#1447e6904a9c06b0032412c2a6231f38d243a69f"
 
 "@hedviginsurance/react-swipeable-views@^0.12.20":
   version "0.12.20"
