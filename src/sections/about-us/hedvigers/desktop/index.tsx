@@ -62,7 +62,7 @@ export const Desktop: React.SFC<DesktopProps> = ({
             <List
               title={title}
               users={users}
-              onSelect={(user) => setSelectedUser(user)}
+              onSelect={setSelectedUser}
               selectedUser={selectedUser}
             />
             <SelectedUser users={users} selectedUser={selectedUser} />
