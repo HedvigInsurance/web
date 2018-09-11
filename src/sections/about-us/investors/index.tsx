@@ -13,6 +13,8 @@ interface InverstorsProps {
   list: Investor[];
 }
 
+const MEDIA_QUERY = '@media (max-width: 650px)';
+
 const InvestorsContainer = styled('div')({
   width: '80%',
   padding: '70px 0',
@@ -26,7 +28,7 @@ const Title = styled('h3')({
   fontFamily: fonts.SORAY,
   marginBottom: 50,
   textAlign: 'center',
-  '@media (max-width: 650px)': {
+  [MEDIA_QUERY]: {
     fontSize: 45,
     lineHeight: '50px',
   },
@@ -36,7 +38,7 @@ const InvestorList = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  '@media (max-width: 650px)': {
+  [MEDIA_QUERY]: {
     flexDirection: 'column',
   },
 });
@@ -45,7 +47,7 @@ const InvestorContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  '@media (max-width: 650px)': {
+  [MEDIA_QUERY]: {
     marginBottom: 30,
   },
 });
