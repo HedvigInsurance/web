@@ -11,7 +11,7 @@ const AboutPagePreview = ({ entry }) => (
         title={entry.getIn(['data', 'title'])}
         heading={entry.getIn(['data', 'heading'])}
         hero={entry.getIn(['data', 'hero']).toJS()}
-        mainSection={entry.getIn(['data', 'mainSection']).toJS()}
+        main={entry.getIn(['data', 'main']).toJS()}
         founders={entry.getIn(['data', 'founders']).toJS()}
         hedvigers={entry.getIn(['data', 'hedvigers']).toJS()}
         facts={entry.getIn(['data', 'facts']).toJS()}

@@ -6,7 +6,7 @@ hero:
   headline: 'Our Mission:'
   playButtonText: Play
   title: Making minds more peaceful
-mainSection:
+main:
   text: >-
     Om sanningen ska fram, vem gillar att köpa försäkring Fullt förståeligt om
     man tänker på hur försäkringar fungerar idag. Du betalar dina räkningar utan
@@ -70,4 +70,3 @@ investors:
       type: Angel Investor
   title: Hedvigs investors
 ---
-

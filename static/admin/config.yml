@@ -216,7 +216,7 @@ collections:
                 name: playButtonText
                 widget: string
           - label: Main Section
-            name: mainSection
+            name: main
             widget: object
             fields:
               - label: Title
@@ -831,7 +831,7 @@ collections:
                 name: playButtonText
                 widget: string
           - label: Main Section
-            name: mainSection
+            name: main
             widget: object
             fields:
               - label: Title

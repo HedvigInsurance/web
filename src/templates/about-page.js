@@ -23,7 +23,7 @@ const pagePropTypes = {
     playButtonText: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }),
-  mainSection: PropTypes.shape({
+  main: PropTypes.shape({
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
   }).isRequired,
@@ -66,7 +66,7 @@ const pagePropTypes = {
 const AboutUsTemplate = ({
   title,
   hero,
-  mainSection,
+  main,
   foundersImageFile,
   founders,
   hedvigers,
@@ -85,7 +85,7 @@ const AboutUsTemplate = ({
     <StickyContainer>
       <Header data={header} langKey={langKey} />
       <Hero {...hero} />
-      <Body {...mainSection} />
+      <Body {...main} />
       <Founders {...founders} imageFile={foundersImageFile} />
       <Hedvigers {...hedvigers} teamtailorUsers={teamtailorUsers} />
       <Facts {...facts} />
@@ -109,7 +109,7 @@ const AboutUs = ({ data, pathContext }) => (
       .map(({ node }) => node)
       .filter((user) => user.picture.large)}
     hero={data.markdownRemark.frontmatter.hero}
-    mainSection={data.markdownRemark.frontmatter.mainSection}
+    main={data.markdownRemark.frontmatter.main}
     hedvigers={data.markdownRemark.frontmatter.hedvigers}
     facts={data.markdownRemark.frontmatter.facts}
     foundersImageFile={data.foundersImageFile}
@@ -152,7 +152,7 @@ export const aboutPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        mainSection {
+        main {
           title
           text
         }
