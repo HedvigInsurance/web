@@ -50,3 +50,10 @@ it('renders custom components', () => {
 
   expect(wrapper.find(AParagraph)).toHaveLength(1);
 });
+
+it('renders weird characters', () => {
+  const markdown = `While other tech teams live in the year 2018, the Hedvig tech team lives in the year 3018 👌 `;
+
+  const wrapper = mount(renderMarkdownToReactComponent()(markdown));
+  expect(wrapper.containsMatchingElement(<p>{markdown}</p>)).toBe(true);
+});

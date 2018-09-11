@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
 import sortBy from 'lodash/sortBy';
 import kebabCase from 'lodash/kebabCase';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
+import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
 
 import { colors, fonts } from '@hedviginsurance/brand';
 
@@ -69,6 +68,12 @@ const BlogQuote = styled('blockquote')({
   },
 });
 
+const renderMarkdown = renderMarkdownToReactComponent({
+  p: BlogParagraph,
+  img: BlogImage,
+  blockquote: BlogQuote,
+});
+
 const BlogPostTemplate = ({
   title,
   date,
@@ -93,21 +98,7 @@ const BlogPostTemplate = ({
             <HeroImage src={topImage} alt="" />
             <PostHeader>{title}</PostHeader>
             <BlogPostAuthor author={author} date={date} />
-            <div>
-              {
-                remark()
-                  .use(reactRenderer, {
-                    remarkReactComponents: {
-                      p: BlogParagraph,
-                      img: BlogImage,
-                      blockquote: BlogQuote,
-                      br: () => <br />,
-                    },
-                    sanitize: false,
-                  })
-                  .processSync(content).contents
-              }
-            </div>
+            <div>{renderMarkdown(content)}</div>
             <div>
               {tags &&
                 tags.map((tag) => (
