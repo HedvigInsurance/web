@@ -893,7 +893,7 @@ collections:
                     widget: image
                   - label: Link
                     name: link
-                    widget: link
+                    widget: string
                   - label: Title
                     name: title
                     widget: string
