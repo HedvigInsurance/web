@@ -19,9 +19,6 @@ se:
     - external: false
       label: Kontakt
       path: /contact
-    - external: true
-      label: Jobb
-      path: 'https://join.hedvig.com'
   linkSection2:
     - external: false
       label: Personuppgifter
@@ -29,6 +26,9 @@ se:
     - external: false
       label: Legal
       path: /legal
+    - external: true
+      label: Jobb
+      path: 'https://join.hedvig.com'
   playStoreAlt: Ladda ner på Google Play
   twitterAlt: Hedvig på Twitter
 en:
@@ -52,18 +52,15 @@ en:
     - external: false
       label: Contact
       path: /en/contact
-    - external: true
-      label: Jobs
-      path: 'https://join.hedvig.com'
   linkSection2:
-    - external: false
-      label: Press
-      path: /en/press
     - external: false
       label: Personal information
       path: /en/privacy
     - external: false
       label: Legal
       path: /en/legal
+    - external: true
+      label: Jobs
+      path: 'https://join.hedvig.com'
   playStoreAlt: Download on Google Play
   twitterAlt: Hedvig on Twitter

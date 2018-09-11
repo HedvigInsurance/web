@@ -19,6 +19,7 @@
 Autoprefixed is configured in package.json under `browserlist`
 
 ## Dev setup
+You'll need an `.envrc` file with credentials etc to be able to start the dev build. Either you `source` it manually or use the [direnv](https://github.com/direnv/direnv) package. To run the project in dev mode run `yarn start`. The project will bind on `0.0.0.0:8000`.
 
 ### Editor
 

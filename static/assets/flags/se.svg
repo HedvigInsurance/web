@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 12">
+  <defs>
+    <rect id="path-1" width="16" height="12" rx="1"/>
+  </defs>
+  <g id="SE" fill="none" fill-rule="evenodd">
+    <g id="Sweden">
+      <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"/>
+      </mask>
+      <use id="Rectangle-77" fill="#FFFFFF" xlink:href="#path-1"/>
+      <rect id="Rectangle-74" width="16" height="12" fill="#006AA7" mask="url(#mask-2)"/>
+      <polygon id="Combined-Shape" fill="#FECC00" points="4 5 0 5 0 7 4 7 4 12 6 12 6 7 16 7 16 5 6 5 6 0 4 0" mask="url(#mask-2)"/>
+      <g id="Overlay" stroke="#000000" stroke-opacity=".1" mask="url(#mask-2)">
+        <rect width="15" height="11" x=".5" y=".5" style="mix-blend-mode:multiply"/>
+      </g>
+    </g>
+  </g>
+</svg>

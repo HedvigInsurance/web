@@ -83,14 +83,14 @@ BlogPost.propTypes = {
 
 export const BlogPostQuery = graphql`
   query BlogPost($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        date
-        topImage
-        content
-      }
-    }
+    # markdownRemark(id: { eq: $id }) {
+    #   frontmatter {
+    #     title
+    #     date
+    #     topImage
+    #     content
+    #   }
+    # }
 
     header: dataYaml(id: { regex: "/header/" }) {
       ...Header_data

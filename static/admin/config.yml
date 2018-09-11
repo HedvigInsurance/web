@@ -457,8 +457,8 @@ collections:
               - label: Image accessibility text
                 name: image_alt
                 widget: text
-              - label: Bottom paragraph
-                name: bottom_paragraph
+              - label: Paragraph
+                name: paragraph
                 widget: text
           - label: Safety section
             name: safety
@@ -1075,8 +1075,8 @@ collections:
               - label: Image accessibility text
                 name: image_alt
                 widget: text
-              - label: Bottom paragraph
-                name: bottom_paragraph
+              - label: Paragraph
+                name: paragraph
                 widget: text
           - label: Safety section
             name: safety

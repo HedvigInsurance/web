@@ -302,9 +302,6 @@ class LandingTemplate extends React.Component {
                 <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
                   {customerSource.heading}
                 </h1>
-                <p className="u-spaceMT8 u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {customerSource.paragraph}
-                </p>
                 <figure // eslint-disable-line
                   className="u-spaceMT8"
                   onClick={this.registerCustomerSourceClick}
@@ -717,7 +714,6 @@ export const query = graphql`
         customer_source {
           heading
           image_alt
-          paragraph
         }
         safety {
           item1
