@@ -16,7 +16,7 @@ module.exports = {
     '^(?!.*\\.(js|jsx|css|json)$)': '<rootDir>/config/jest/fileTransform.js',
   },
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  moduleFileExtensions: ['js', 'json', 'jsx', 'node', 'ts', 'tsx'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'node'],
   moduleNameMapper: {
     '^src(.*)$': '<rootDir>/src$1',
     '^assets(.*)$': '<rootDir>/static/assets$1',

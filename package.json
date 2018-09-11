@@ -112,7 +112,7 @@
     "lint": "./scripts/lint.sh",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "format-js": "prettier-eslint --write \"**/*.{js,tsx}\" --log-level info",
+    "format-js": "prettier-eslint --write \"**/*.{js,ts,tsx}\" --log-level info",
     "format-css": "prettier-stylelint --write -q \"**/*.css\""
   },
   "husky": {
