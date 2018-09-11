@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "typeRoots": ["./typings"],
+    "typeRoots": ["node_modules/@types", "./typings"],
     "lib": ["dom", "es2017"],
     "jsx": "react",
     "strict": true,
@@ -14,6 +14,7 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": "./",
+    "types": ["jest"],
     "paths": {
       "src/*": ["src/*"],
       "assets/*": ["static/assets/*"]

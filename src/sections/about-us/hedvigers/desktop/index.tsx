@@ -3,12 +3,21 @@ import styled from 'react-emotion';
 import { Container, ActionMap } from 'constate';
 
 import { List } from './list';
-import { SelectedImage } from './selected-image';
+import { SelectedUser } from './selected-user';
 import { TeamtailorUser } from '..';
+
+const Background = styled('div')({
+  backgroundColor: '#F9FAFC',
+});
+
+const CenterAlign = styled('div')({
+  maxWidth: '80%',
+  margin: '0 auto',
+  padding: '70px 0',
+});
 
 const Box = styled('div')({
   display: 'flex',
-  margin: 20,
   backgroundColor: 'white',
   borderRadius: 5,
   boxShadow: '-1px 0 10px rgba(0,0,0,0.14)',
@@ -16,44 +25,50 @@ const Box = styled('div')({
 });
 
 interface DesktopProps {
-  teamtailorUsers: Array<TeamtailorUser>;
+  teamtailorUsers: TeamtailorUser[];
+  title: string;
 }
 
 interface State {
-  selectedImage: string;
-  users: Array<TeamtailorUser>;
+  selectedUser: TeamtailorUser;
+  users: TeamtailorUser[];
 }
 
 interface Actions {
-  setSelectedImage: (selectedImage: string) => void;
+  setSelectedUser: (selectedUser: TeamtailorUser) => void;
 }
 
 const actions: ActionMap<State, Actions> = {
-  setSelectedImage: (selectedImage) => ({ selectedImage }),
+  setSelectedUser: (selectedUser) => ({
+    selectedUser,
+  }),
 };
 
-export const Desktop: React.SFC<DesktopProps> = ({ teamtailorUsers }) => (
-  <Container
-    actions={actions}
-    initialState={
-      {
-        selectedImage: teamtailorUsers[0].picture.large,
+export const Desktop: React.SFC<DesktopProps> = ({
+  title,
+  teamtailorUsers,
+}) => (
+  <Background>
+    <Container
+      actions={actions}
+      initialState={{
+        selectedUser: teamtailorUsers[0],
         users: teamtailorUsers.filter((user) => user.picture),
-      } as State
-    }
-  >
-    {({ selectedImage, users, setSelectedImage }) => (
-      <Box>
-        <List
-          users={users}
-          onSelect={(user) => setSelectedImage(user.picture.large)}
-          selectedImage={selectedImage}
-        />
-        <SelectedImage
-          images={users.map((user) => user.picture.large)}
-          selectedImage={selectedImage}
-        />
-      </Box>
-    )}
-  </Container>
+      }}
+    >
+      {({ selectedUser, users, setSelectedUser }) => (
+        <CenterAlign>
+          <Box>
+            <List
+              title={title}
+              users={users}
+              onSelect={setSelectedUser}
+              selectedUser={selectedUser}
+            />
+            <SelectedUser users={users} selectedUser={selectedUser} />
+          </Box>
+        </CenterAlign>
+      )}
+    </Container>
+  </Background>
 );

@@ -14,6 +14,8 @@ it('renders correctly', () => {
     },
   ];
 
-  const wrapper = mount(<Desktop teamtailorUsers={teamtailorUsers} />);
+  const wrapper = mount(
+    <Desktop title="mock title" teamtailorUsers={teamtailorUsers} />,
+  );
   expect(wrapper).toMatchSnapshot();
 });

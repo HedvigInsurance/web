@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import { Update } from 'react-lifecycle-components';
 
-import heroVideo from 'assets/about-us-hero.mp4';
 import heroVideoPoster from 'assets/about-us-hero-poster.png';
 
 interface HeightContainerProps {
@@ -22,16 +21,22 @@ const HeightContainer = styled('div')(
   {
     animation: `${fadeInKeyframe} 2000ms forwards`,
     transition: 'height 1500ms, padding 1500ms',
-    height: 600,
+    height: 475,
     backgroundColor: 'black',
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
+    '@media (min-width: 500px)': {
+      height: 550,
+    },
+    '@media (min-width: 700px)': {
+      height: 600,
+    },
   },
   ({ isFullScreen }: HeightContainerProps) =>
     isFullScreen
       ? {
-          height: 'calc(100vh - 70px)',
+          height: 'calc(100vh - 70px) !important',
         }
       : null,
 );
@@ -79,6 +84,8 @@ interface FullScreenUpdate {
   isFullScreen: boolean;
 }
 
+const baseVideoUrl = `https://s3.eu-central-1.amazonaws.com/www.hedvig.com/about-us-video`;
+
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
   <Update<FullScreenUpdate>
     was={restartVideo({ isFullScreen, videoRef })}
@@ -95,7 +102,12 @@ export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
         controls={isFullScreen}
         isFullScreen={isFullScreen}
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source
+          src={`${baseVideoUrl}/about-us-video.m3u8`}
+          type="application/vnd.apple.mpegurl"
+        />
+        <source src={`${baseVideoUrl}/web.mp4`} type="video/mp4" />
+        <source src={`${baseVideoUrl}/web.webm`} type="video/webm" />
       </Video>
     </HeightContainer>
   </Update>

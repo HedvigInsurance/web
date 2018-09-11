@@ -7,10 +7,22 @@ import { Title } from './title';
 import { Player } from './player';
 import { CloseButton } from './close-button';
 
+interface HeroProps {
+  headline: string;
+  title: string;
+  playButtonText: string;
+}
+
+const Background = styled('div')({
+  backgroundColor: 'black',
+});
+
 const HeroContainer = styled('div')({
   width: '100%',
-  overflow: 'hidden',
   position: 'relative',
+  overflow: 'hidden',
+  maxWidth: 1500,
+  margin: '0 auto',
 });
 
 interface ShadowProps {
@@ -76,25 +88,36 @@ const onPlay = ({
   setFullScreen(true);
 };
 
-export const Hero = () => (
-  <Container
-    actions={actions}
-    initialState={{
-      isFullScreen: false,
-      videoRef: React.createRef<HTMLVideoElement>(),
-    }}
-  >
-    {({ isFullScreen, setFullScreen, videoRef }) => (
-      <HeroContainer>
-        <Player isFullScreen={isFullScreen} videoRef={videoRef} />
-        <Shadow hidden={isFullScreen}>
-          <Title clickedPlayButton={onPlay({ videoRef, setFullScreen })} />
-        </Shadow>
-        <CloseButton
-          onClick={() => setFullScreen(false)}
-          hidden={!isFullScreen}
-        />
-      </HeroContainer>
-    )}
-  </Container>
+export const Hero: React.SFC<HeroProps> = ({
+  headline,
+  title,
+  playButtonText,
+}) => (
+  <Background>
+    <Container
+      actions={actions}
+      initialState={{
+        isFullScreen: false,
+        videoRef: React.createRef<HTMLVideoElement>(),
+      }}
+    >
+      {({ isFullScreen, setFullScreen, videoRef }) => (
+        <HeroContainer>
+          <Player isFullScreen={isFullScreen} videoRef={videoRef} />
+          <Shadow hidden={isFullScreen}>
+            <Title
+              headline={headline}
+              title={title}
+              playButtonText={playButtonText}
+              clickedPlayButton={onPlay({ videoRef, setFullScreen })}
+            />
+          </Shadow>
+          <CloseButton
+            onClick={() => setFullScreen(false)}
+            hidden={!isFullScreen}
+          />
+        </HeroContainer>
+      )}
+    </Container>
+  </Background>
 );

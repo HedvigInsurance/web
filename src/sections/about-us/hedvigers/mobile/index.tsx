@@ -2,11 +2,13 @@ import * as React from 'react';
 import SwipeableViews from '@hedviginsurance/react-swipeable-views';
 import styled from 'react-emotion';
 import MediaQuery from 'react-responsive';
+import { fonts } from '@hedviginsurance/brand';
 
 import { TeamtailorUser } from '..';
 
 interface MobileProps {
-  teamtailorUsers: Array<TeamtailorUser>;
+  teamtailorUsers: TeamtailorUser[];
+  title: string;
 }
 
 const Box = styled('div')({
@@ -42,32 +44,45 @@ const UserInfo = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   padding: 20,
+  userSelect: 'none',
 });
 
-const Name = styled('span')({
+const CardName = styled('span')({
   fontSize: 18,
-  fontFamily: 'So Ray',
+  fontFamily: fonts.SORAY,
 });
 
-const Title = styled('span')({
+const CardTitle = styled('span')({
   fontSize: 16,
 });
 
-export const Mobile: React.SFC<MobileProps> = ({ teamtailorUsers }) => {
+const Title = styled('h3')({
+  fontSize: 45,
+  lineHeight: '50px',
+  fontFamily: fonts.SORAY,
+  padding: '20px 60px',
+  textAlign: 'center',
+  '@media (min-width: 700px)': {
+    textAlign: 'left',
+  },
+});
+
+export const Mobile: React.SFC<MobileProps> = ({ title, teamtailorUsers }) => {
   const cards = teamtailorUsers.map((user) => (
     <Card key={user.name}>
       <ImageContainer>
         <Image src={user.picture.large} />
       </ImageContainer>
       <UserInfo>
-        <Name>{user.name}</Name>
-        <Title>{user.title}</Title>
+        <CardName>{user.name}</CardName>
+        <CardTitle>{user.title}</CardTitle>
       </UserInfo>
     </Card>
   ));
 
   return (
     <Box>
+      <Title>{title}</Title>
       <MediaQuery query="(max-width: 700px)">
         <SwipeableViews
           resistance
