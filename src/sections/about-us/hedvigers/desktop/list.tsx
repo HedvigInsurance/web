@@ -18,7 +18,7 @@ const Container = styled('div')({
 
 const Title = styled('h3')({
   fontSize: 40,
-  fontFamily: fonts.SORAY,
+  fontFamily: 'SoRay',
   marginTop: 20,
   marginBottom: 30,
 });
