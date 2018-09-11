@@ -94,8 +94,14 @@
     "react-transition-group": "^2.4.0",
     "react-transitions": "^1.0.0",
     "react-visibility-sensor": "^3.11.1",
+    "rehype-raw": "^3.0.0",
+    "rehype-react": "^3.0.3",
+    "rehype-sanitize": "^2.0.1",
     "remark": "^9.0.0",
+    "remark-html": "^8.0.0",
+    "remark-parse": "^5.0.0",
     "remark-react": "^4.0.3",
+    "remark-rehype": "^3.0.1",
     "rimraf": "^2.6.2",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
@@ -124,6 +130,10 @@
     "*.js": [
       "prettier-eslint --write",
       "yarn run lint",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --write",
       "git add"
     ],
     "*.css": [
