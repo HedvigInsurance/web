@@ -103,15 +103,7 @@ export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
         isFullScreen={isFullScreen}
       >
         <source
-          src={`${baseVideoUrl}/web1.m3u8`}
-          type="application/vnd.apple.mpegurl"
-        />
-        <source
-          src={`${baseVideoUrl}/web15.m3u8`}
-          type="application/vnd.apple.mpegurl"
-        />
-        <source
-          src={`${baseVideoUrl}/web2.m3u8`}
+          src={`${baseVideoUrl}/about-us-video.m3u8`}
           type="application/vnd.apple.mpegurl"
         />
         <source src={`${baseVideoUrl}/web.mp4`} type="video/mp4" />
