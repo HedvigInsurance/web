@@ -1,10 +1,9 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
 
 import { PressItem } from './press-item';
+import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
 
 const Background = styled('div')({
   backgroundColor: '#F9FAFC',
@@ -67,15 +66,9 @@ export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
         />
       ))}
       <Footnote>
-        {
-          remark()
-            .use(reactRenderer, {
-              remarkReactComponents: {
-                a: Link,
-              },
-            })
-            .processSync(footnote).contents
-        }
+        {renderMarkdownToReactComponent({
+          a: Link,
+        })(footnote)}
       </Footnote>
     </PressContainer>
   </Background>

@@ -1,3 +1,7 @@
+declare const graphql: {
+  (strings: TemplateStringsArray, ...interpolations: any[]);
+};
+
 declare module '*.mp4' {
   const content: string;
   export default content;

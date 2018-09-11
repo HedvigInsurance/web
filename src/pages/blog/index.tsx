@@ -1,15 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import sortBy from 'lodash/sortBy';
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header from 'src/components/Header';
+import Footer from 'src/components/Footer';
 import { BlogContainer, BlogPost } from 'src/components/Blog';
 import { Spacing } from 'src/components/Spacing';
 
-const Blog = ({ data }) => {
+interface BlogPost {
+  fields: { slug: string };
+  frontmatter: {
+    title: string;
+    date: string;
+    topImage: string;
+    author: string;
+    tags: string[];
+    excerpt: string;
+  };
+}
+
+interface Poster {
+  teamtailorId: string;
+  name: string;
+  picture: {
+    standard: string;
+    large: string;
+  };
+}
+
+interface BlogProps {
+  data: {
+    posts: { edges: { node: BlogPost }[] };
+    posters: { edges: { node: Poster }[] };
+    page: { title: string };
+    footer: any; // TODO add proper props when footer is typescript
+    header: any; // TODO add proper props when header is typescript
+  };
+}
+
+const Blog: React.SFC<BlogProps> = ({ data }) => {
   const { posters, posts, page, header, footer } = data;
   return (
     <main className="Site">

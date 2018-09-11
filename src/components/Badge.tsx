@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'react-emotion';
 import { colors } from '@hedviginsurance/brand';
 
@@ -11,6 +11,6 @@ const BadgeStyle = styled('span')({
   fontSize: 12,
 });
 
-const Badge = ({ children }) => <BadgeStyle>{children}</BadgeStyle>;
+const Badge: React.SFC = ({ children }) => <BadgeStyle>{children}</BadgeStyle>;
 
 export { Badge };

@@ -1,10 +1,11 @@
 declare module 'remark' {
-  interface RemarkResult {
-    contents: string;
+  import { UnifiedMiddleware } from 'unified';
+  interface RemarkResult<T = string> {
+    contents: T;
   }
 
   interface RemarkRenderInstance {
-    processSync: (text: string) => RemarkResult;
+    processSync: <TResult>(text: string) => RemarkResult<TResult>;
   }
 
   interface RemarkReactComponentsOptions {
@@ -15,7 +16,7 @@ declare module 'remark' {
     remarkReactComponents?: RemarkReactComponentsOptions;
   }
 
-  type RemarkRenderer = () => any;
+  type RemarkRenderer = () => UnifiedMiddleware;
   interface Remark {
     use: (
       renderer: RemarkRenderer,

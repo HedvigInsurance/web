@@ -19,6 +19,6 @@ const renderMarkdownToReactComponent = (
     .use(rehypeRaw)
     .use(rehypeSanitize)
     .use(rehype2React, { createElement: React.createElement, components })
-    .processSync(content).contents;
+    .processSync<React.ReactElement<{}>>(content).contents;
 
 export { renderMarkdownToReactComponent };

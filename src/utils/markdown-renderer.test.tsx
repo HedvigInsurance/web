@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import remark from 'remark';
-import remarkHtml from 'remark-html';
 import { renderMarkdownToReactComponent } from './markdown-renderer';
 
 it('renders standard markdown', () => {

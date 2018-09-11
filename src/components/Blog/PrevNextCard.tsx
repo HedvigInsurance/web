@@ -1,26 +1,24 @@
-import * as React from 'react'
-import Link from 'gatsby-link'
-import remark from 'remark'
-import reactRenderer from 'remark-react'
+import * as React from 'react';
 
 import { Card, CardHeader, CardBody } from 'src/components/Card';
 import styled from 'react-emotion';
 import { Spacing } from 'src/components/Spacing';
 import { BlogLink } from 'src/components/Blog/BlogStyles';
+import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
 
 interface Props {
   post?: {
     node: {
       fields: {
-        slug: string
-      },
+        slug: string;
+      };
       frontmatter: {
-        title: string,
-        topImage: string,
-        excerpt: string
-      }
-    }
-  }
+        title: string;
+        topImage: string;
+        excerpt: string;
+      };
+    };
+  };
 }
 
 const CustomCard = styled(Card)({
@@ -28,29 +26,29 @@ const CustomCard = styled(Card)({
   height: 300,
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'space-around'
-})
+  justifyContent: 'space-around',
+});
 
 const CardImage = styled('img')({
-  maxWidth: '100%'
-})
+  maxWidth: '100%',
+});
 
 const CardTitle = styled('h3')({
-  fontWeight: 'bold'
-})
+  fontWeight: 'bold',
+});
 
-const PrevNextCard: React.SFC<Props> = ({ post }) => (
+const PrevNextCard: React.SFC<Props> = ({ post }) =>
   post ? (
     <BlogLink to={post.node.fields.slug}>
       <CustomCard>
         <CardHeader>
-          <CardImage src={post.node.frontmatter.topImage}></CardImage>
+          <CardImage src={post.node.frontmatter.topImage} />
         </CardHeader>
         <CardBody>
           <CardTitle>{post.node.frontmatter.title}</CardTitle>
           <Spacing height={8} />
           <div>
-            {remark().use(reactRenderer).processSync(post.node.frontmatter.excerpt).contents}
+            {renderMarkdownToReactComponent()(post.node.frontmatter.excerpt)}
           </div>
           <Spacing height={8} />
           <p>Läs inlägget</p>
@@ -58,8 +56,7 @@ const PrevNextCard: React.SFC<Props> = ({ post }) => (
       </CustomCard>
     </BlogLink>
   ) : (
-      <Spacing width={1000} />
-    )
-)
+    <Spacing width={1000} />
+  );
 
-export { PrevNextCard }
+export { PrevNextCard };
