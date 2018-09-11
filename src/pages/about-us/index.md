@@ -53,10 +53,10 @@ press:
     Vi finns på <mailto:press@hedvig.com> och våra presskit finns att ladda ner
     [här](/assets/press/hedvig-press-assets.zip).
   items:
-    - logo: https://pbs.twimg.com/profile_images/499539988833267712/mjnAZmLH_400x400.jpeg
+    - link: 'http://www.hedvig.com'
+      logo: /uploads/wired_logo.svg.png
+      text: ''
       title: Hedvig is one of Europe’s 100 hottest startups
-      text: hello 123
-      link: http://www.hedvig.com
   title: Press
 investors:
   list:
@@ -71,3 +71,4 @@ investors:
       type: Angel Investor
   title: Hedvigs investerare
 ---
+
