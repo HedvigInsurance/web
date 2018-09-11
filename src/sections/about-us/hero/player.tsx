@@ -85,6 +85,8 @@ interface FullScreenUpdate {
   isFullScreen: boolean;
 }
 
+const baseVideoUrl = `https://s3.eu-central-1.amazonaws.com/www.hedvig.com/about-us-video`;
+
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
   <Update<FullScreenUpdate>
     was={restartVideo({ isFullScreen, videoRef })}
@@ -101,7 +103,20 @@ export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
         controls={isFullScreen}
         isFullScreen={isFullScreen}
       >
-        <source src={heroVideo} type="video/mp4" />
+        <source
+          src={`${baseVideoUrl}/web1.m3u8`}
+          type="application/vnd.apple.mpegurl"
+        />
+        <source
+          src={`${baseVideoUrl}/web15.m3u8`}
+          type="application/vnd.apple.mpegurl"
+        />
+        <source
+          src={`${baseVideoUrl}/web2.m3u8`}
+          type="application/vnd.apple.mpegurl"
+        />
+        <source src={`${baseVideoUrl}/web.mp4`} type="video/mp4" />
+        <source src={`${baseVideoUrl}/web.webm`} type="video/webm" />
       </Video>
     </HeightContainer>
   </Update>
