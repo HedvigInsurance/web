@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { Markdown } from './Markdown';
+import { Markdown } from './markdown';
 
 it('renders markdown like it should', () => {
   const markdown = `
