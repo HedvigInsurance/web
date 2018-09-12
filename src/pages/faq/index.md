@@ -101,8 +101,9 @@ questions:
       tar Hedvig hand om resten!
     question: Hur rapporterar man en skada till Hedvig?
   - answer: >-
-      Enkelt - skicka ett mail till [help@hedvig.com](mailto:help@hedvig.com) så
-      fixar vi det på nolltid
+      Enkelt - skicka ett mail till <mailto:help@hedvig.com> så fixar vi det på
+      nolltid, eller be om att bli uppringd i chatten nere till höger på denna
+      sidan!
     question: >-
       Hur anmäler jag en skada om jag har blivit av med min mobil och inte kan
       använda appen?
