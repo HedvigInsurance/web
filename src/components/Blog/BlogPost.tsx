@@ -11,7 +11,7 @@ import {
 } from 'src/components/Blog';
 import { Author } from 'src/components/Blog/types';
 import { Spacing } from 'src/components/Spacing';
-import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
+import { Markdown } from 'src/cms/utils/markdown';
 
 interface BlogPostProps {
   title: string;
@@ -43,7 +43,9 @@ const BlogPost: React.SFC<BlogPostProps> = ({
     <BlogLink to={slug}>
       <PostHeader>{title}</PostHeader>
     </BlogLink>
-    <div>{renderMarkdownToReactComponent()(excerpt)}</div>
+    <div>
+      <Markdown source={excerpt} />
+    </div>
     <Link to={slug}>Read more</Link>
     <div>
       {tags.map((tag) => (

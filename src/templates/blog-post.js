@@ -8,7 +8,6 @@ import kebabCase from 'lodash/kebabCase';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
-import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
 
 import { colors, fonts } from '@hedviginsurance/brand';
 
@@ -21,6 +20,7 @@ import {
   BlogLink,
 } from 'src/components/Blog';
 import { Badge } from 'src/components/Badge';
+import { Markdown } from 'src/cms/utils/markdown';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -68,12 +68,6 @@ const BlogQuote = styled('blockquote')({
   },
 });
 
-const renderMarkdown = renderMarkdownToReactComponent({
-  p: BlogParagraph,
-  img: BlogImage,
-  blockquote: BlogQuote,
-});
-
 const BlogPostTemplate = ({
   title,
   date,
@@ -98,7 +92,16 @@ const BlogPostTemplate = ({
             <HeroImage src={topImage} alt="" />
             <PostHeader>{title}</PostHeader>
             <BlogPostAuthor author={author} date={date} />
-            <div>{renderMarkdown(content)}</div>
+            <div>
+              <Markdown
+                renderers={{
+                  paragraph: BlogParagraph,
+                  image: BlogImage,
+                  blockquote: BlogQuote,
+                }}
+                source={content}
+              />
+            </div>
             <div>
               {tags &&
                 tags.map((tag) => (

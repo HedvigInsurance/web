@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import { fonts } from '@hedviginsurance/brand';
-import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
+import { Markdown } from 'src/cms/utils/markdown';
 
 const BodyContainer = styled('div')({
   padding: '70px 0',
@@ -38,6 +38,8 @@ interface BodyProps {
 export const Body: React.SFC<BodyProps> = ({ title, text }) => (
   <BodyContainer>
     <Title>{title}</Title>
-    <BodyText>{renderMarkdownToReactComponent()(text)}</BodyText>
+    <BodyText>
+      <Markdown source={text} />
+    </BodyText>
   </BodyContainer>
 );

@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody } from 'src/components/Card';
 import styled from 'react-emotion';
 import { Spacing } from 'src/components/Spacing';
 import { BlogLink } from 'src/components/Blog/BlogStyles';
-import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
+import { Markdown } from 'src/cms/utils/markdown';
 
 interface Props {
   post?: {
@@ -48,7 +48,7 @@ const PrevNextCard: React.SFC<Props> = ({ post }) =>
           <CardTitle>{post.node.frontmatter.title}</CardTitle>
           <Spacing height={8} />
           <div>
-            {renderMarkdownToReactComponent()(post.node.frontmatter.excerpt)}
+            <Markdown source={post.node.frontmatter.excerpt} />
           </div>
           <Spacing height={8} />
           <p>Läs inlägget</p>

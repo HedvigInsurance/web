@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
 
 import { PressItem } from './press-item';
-import { renderMarkdownToReactComponent } from 'src/utils/markdown-renderer';
+import { Markdown } from 'src/cms/utils/markdown';
 
 const Background = styled('div')({
   backgroundColor: '#F9FAFC',
@@ -66,9 +66,12 @@ export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
         />
       ))}
       <Footnote>
-        {renderMarkdownToReactComponent({
-          a: Link,
-        })(footnote)}
+        <Markdown
+          renderers={{
+            link: Link,
+          }}
+          source={footnote}
+        />
       </Footnote>
     </PressContainer>
   </Background>
