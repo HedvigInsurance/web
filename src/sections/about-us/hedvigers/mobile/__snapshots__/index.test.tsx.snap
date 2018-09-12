@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
 .emotion-0 {
   font-size: 45px;
   line-height: 50px;
-  font-family: SoRay-ExtraBold;
+  font-family: SoRay;
   padding: 20px 60px;
   text-align: center;
 }
@@ -63,7 +63,7 @@ exports[`renders correctly 1`] = `
 
 .emotion-3 {
   font-size: 18px;
-  font-family: SoRay-ExtraBold;
+  font-family: SoRay;
 }
 
 .emotion-4 {
