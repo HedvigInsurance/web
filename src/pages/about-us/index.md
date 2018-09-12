@@ -8,10 +8,10 @@ hero:
   title: Making minds more peaceful
 main:
   text: >-
-    Om sanningen ska fram, vem gillar att köpa försäkring. Fullt förståeligt om
+    Om sanningen ska fram, vem gillar att köpa försäkring? Fullt förståeligt om
     man tänker på hur försäkringar fungerar idag. Du betalar dina räkningar utan
-    att veta riktigt vart pengarna tar vägen. När du väl behöver den hjälp du
-    betalat för så får du känslan av att bli lite motarbetad eller kanske till
+    att riktigt veta vart pengarna tar vägen. När du väl behöver den hjälp du
+    har betalat för, får du känslan av att bli lite motarbetad eller kanske till
     och med misstrodd. Varför är det så?
 
 
@@ -19,7 +19,7 @@ main:
     dig mindre. Hedvig är inget vanligt försäkringsbolag. Vi behandlar dina
     pengar som dina och tar bara ut en fast avgift för att driva och utveckla
     tjänsten. Resten av det du betalar öronmärks för att ersätta skador. Dina
-    pengar är aldrig våra pengar. Istället ligger dom på ett separat konto och
+    pengar är aldrig våra pengar. Istället ligger de på ett separat konto och
     kan endast användas för att betala ersättning till dig eller någon annan av
     våra medlemmar. När alla skador har betalats skänks överskottet till
     organisationer som gör världen bättre. Du väljer själv vad ditt hjärta
@@ -27,7 +27,7 @@ main:
 
 
     Allt vi bryr oss om är att ge dig hjälp när du behöver det. Och när du inte
-    gör det, så hjälper vi dig hjälpa andra.
+    gör det, så hjälper vi dig att hjälpa andra.
   title: Om Hedvig
 founders:
   imageText: >-
@@ -53,6 +53,18 @@ press:
       logo: /uploads/wired_logo.svg.png
       text: Utsedda av Wired UK.
       title: Hedvig är en av Europas 100 hetaste startups
+    - link: >-
+        https://digital.di.se/artikel/backas-av-tungviktare-nu-ska-hedvig-utmana-forsakringsbranschen
+      logo: /uploads/logo_large.png
+      text: Hedvig utmanar försäkringsbranschens jättar.
+      title: Backas av tungviktare – nu ska Hedvig utmana försäkringsbranschen
+    - link: >-
+        https://www.va.se/nyheter/2018/08/09/de-ar-sveriges-13-hetaste-startups-2018-enligt-riskkapitalister/
+      logo: /uploads/ru9ctzraehtyh0kv_400x400.jpg
+      text: >-
+        Hedvig har som mål att digitalisera den dinosaurie-liknande
+        försäkringsbranschen.
+      title: Hedvig är en av Sveriges 13 hetaste startups 2018
   title: Press
 investors:
   list:
