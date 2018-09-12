@@ -2,12 +2,18 @@ import styled from 'react-emotion';
 import Link from 'gatsby-link';
 import { colors } from '@hedviginsurance/brand';
 
+const TABLET_UP = '@media (min-width: 797px)';
+
 const BlogContainer = styled('div')({
   width: '100%',
   maxWidth: 787,
-  margin: '80px auto',
+  margin: '48px auto',
   paddingLeft: 24,
   paddingRight: 24,
+
+  [TABLET_UP]: {
+    margin: '80px auto',
+  },
 });
 
 interface PostContainerProps {
@@ -21,12 +27,27 @@ const PostContainer = styled('article')((props: PostContainerProps) => ({
   width: '100%',
 }));
 
-const PostHeader = styled('h2')({
-  fontSize: 40,
+const postHeaderFontSizes = {
+  sm: {
+    fontSize: 40,
+  },
+  lg: {
+    [TABLET_UP]: {
+      fontSize: 60,
+    },
+    fontSize: 40,
+  },
+};
+interface PostHeaderProps {
+  size?: keyof typeof postHeaderFontSizes;
+}
+
+const PostHeader = styled('h2')((props: PostHeaderProps) => ({
+  ...postHeaderFontSizes[props.size || 'sm'],
   display: 'block',
   marginBottom: 10,
   lineHeight: 1,
-});
+}));
 
 const BlogLink = styled(Link)({
   textDecoration: 'none',

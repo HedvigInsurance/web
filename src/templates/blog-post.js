@@ -28,8 +28,17 @@ const pagePropTypes = {
   content: PropTypes.string.isRequired,
 };
 
-const HeroImage = styled('img')({
-  maxWidth: '100%',
+const HeroImage = styled('div')((props) => ({
+  paddingTop: '50%',
+  maxHeight: '50vh',
+  width: '100%',
+  backgroundImage: `url(${props.src})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center center',
+}));
+
+const AuthorContainer = styled('div')({
+  padding: '35px 0',
 });
 
 const PrevNextContainer = styled('div')({
@@ -46,7 +55,7 @@ const PrevNextSection = styled('div')({
 
 const BlogParagraph = styled('p')({
   marginBottom: 20,
-  lineHeight: '24px',
+  lineHeight: 1.4,
 });
 
 const BlogImage = styled('img')({
@@ -62,9 +71,17 @@ const BlogQuote = styled('blockquote')({
   borderRadius: 10,
   padding: 48,
   fontFamily: fonts.SORAY,
-  fontSize: 48,
+  fontSize: 30,
+  lineHeight: 1.2,
+  margin: '50px 0',
+
+  '@media (min-width: 797px)': {
+    fontSize: 40,
+  },
+
   p: {
     marginBottom: 0,
+    lineHeight: 'inherit',
   },
 });
 
@@ -87,21 +104,21 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} langKey="se" />
       <article className="Site-content">
+        <HeroImage src={topImage} />
         <BlogContainer>
           <PostContainer isFirst isLast>
-            <HeroImage src={topImage} alt="" />
-            <PostHeader>{title}</PostHeader>
-            <BlogPostAuthor author={author} date={date} />
-            <div>
-              <Markdown
-                renderers={{
-                  paragraph: BlogParagraph,
-                  image: BlogImage,
-                  blockquote: BlogQuote,
-                }}
-                source={content}
-              />
-            </div>
+            <PostHeader size="lg">{title}</PostHeader>
+            <AuthorContainer>
+              <BlogPostAuthor author={author} date={date} />
+            </AuthorContainer>
+            <Markdown
+              renderers={{
+                paragraph: BlogParagraph,
+                image: BlogImage,
+                blockquote: BlogQuote,
+              }}
+              source={content}
+            />
             <div>
               {tags &&
                 tags.map((tag) => (

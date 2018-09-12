@@ -58,7 +58,7 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
     <TopImage src={topImage} alt="" />
     <Spacing height={18} />
     <BlogLink to={slug}>
-      <PostHeader>{title}</PostHeader>
+      <PostHeader size="sm">{title}</PostHeader>
     </BlogLink>
     <div>
       <Markdown source={excerpt} />
