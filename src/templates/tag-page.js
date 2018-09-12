@@ -55,32 +55,36 @@ const TagTemplate = ({ data, pathContext }) => {
             <h1>Posts tagged with: {tag}</h1>
           </PostContainer>
           <Spacing height={20} />
-          {taggedPosts.map(({ node: { fields, frontmatter } }) => {
-            const { title, date, topImage, tags, excerpt } = frontmatter;
-            const { slug } = fields;
-            const author = posters.edges.filter(
-              (poster) => poster.node.name === frontmatter.author,
-            )[0];
-            return (
-              <React.Fragment key={slug}>
-                <BlogPost
-                  title={title}
-                  excerpt={excerpt}
-                  date={date}
-                  topImage={topImage}
-                  slug={slug}
-                  tags={tags}
-                  author={
-                    author && {
-                      name: author.node.name,
-                      image: author.node.picture.standard,
+          {taggedPosts.map(
+            ({ node: { fields, frontmatter } }, index, origin) => {
+              const { title, date, topImage, tags, excerpt } = frontmatter;
+              const { slug } = fields;
+              const author = posters.edges.filter(
+                (poster) => poster.node.name === frontmatter.author,
+              )[0];
+              return (
+                <React.Fragment key={slug}>
+                  <BlogPost
+                    title={title}
+                    excerpt={excerpt}
+                    date={date}
+                    topImage={topImage}
+                    slug={slug}
+                    tags={tags}
+                    author={
+                      author && {
+                        name: author.node.name,
+                        image: author.node.picture.standard,
+                      }
                     }
-                  }
-                />
-                <Spacing height={20} />
-              </React.Fragment>
-            );
-          })}
+                    isFirst={index === 0}
+                    isLast={index === origin.length - 1}
+                  />
+                  <Spacing height={20} />
+                </React.Fragment>
+              );
+            },
+          )}
         </BlogContainer>
         <Footer data={footer} langKey="se" />
       </StickyContainer>

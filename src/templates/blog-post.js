@@ -88,7 +88,7 @@ const BlogPostTemplate = ({
       <Header data={header} langKey="se" />
       <article className="Site-content">
         <BlogContainer>
-          <PostContainer>
+          <PostContainer isFirst isLast>
             <HeroImage src={topImage} alt="" />
             <PostHeader>{title}</PostHeader>
             <BlogPostAuthor author={author} date={date} />

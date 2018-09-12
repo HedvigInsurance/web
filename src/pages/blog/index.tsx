@@ -52,7 +52,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
           <BlogContainer>
             {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
               .reverse()
-              .map(({ node: { frontmatter, fields } }) => {
+              .map(({ node: { frontmatter, fields } }, index, origin) => {
                 const { title, date, topImage, tags, excerpt } = frontmatter;
                 const { slug } = fields;
                 const author = posters.edges.find(
@@ -73,8 +73,9 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
                           image: author.node.picture.standard,
                         }
                       }
+                      isFirst={index === 0}
+                      isLast={index === origin.length - 1}
                     />
-                    <Spacing height={75} />
                   </React.Fragment>
                 );
               })}

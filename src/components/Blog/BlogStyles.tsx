@@ -1,5 +1,6 @@
 import styled from 'react-emotion';
 import Link from 'gatsby-link';
+import { colors } from '@hedviginsurance/brand';
 
 const BlogContainer = styled('div')({
   width: '100%',
@@ -9,9 +10,16 @@ const BlogContainer = styled('div')({
   paddingRight: 20,
 });
 
-const PostContainer = styled('article')({
+interface PostContainerProps {
+  isFirst?: boolean;
+  isLast?: boolean;
+}
+const PostContainer = styled('article')((props: PostContainerProps) => ({
+  paddingTop: props.isFirst ? 0 : 55,
+  paddingBottom: props.isLast ? 0 : 55,
+  borderBottom: props.isLast ? 'none' : `1px solid ${colors.LIGHT_GRAY}`,
   width: '100%',
-});
+}));
 
 const PostHeader = styled('h2')({
   fontSize: 48,
@@ -24,4 +32,18 @@ const BlogLink = styled(Link)({
   textDecoration: 'none',
 });
 
-export { BlogContainer, PostContainer, PostHeader, BlogLink };
+const ReadMoreLink = styled(Link)({
+  '&&': {
+    color: colors.PURPLE,
+    textDecoration: 'none',
+  },
+});
+
+export {
+  BlogContainer,
+  PostContainerProps,
+  PostContainer,
+  PostHeader,
+  BlogLink,
+  ReadMoreLink,
+};

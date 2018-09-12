@@ -12,6 +12,10 @@ import {
 import { Author } from 'src/components/Blog/types';
 import { Spacing } from 'src/components/Spacing';
 import { Markdown } from 'src/cms/utils/markdown';
+import {
+  ReadMoreLink,
+  PostContainerProps,
+} from 'src/components/Blog/BlogStyles';
 
 interface BlogPostProps {
   title: string;
@@ -29,7 +33,16 @@ const TopImage = styled('img')({
   boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
 });
 
-const BlogPost: React.SFC<BlogPostProps> = ({
+const Tags = styled('div')({
+  marginTop: 20,
+  marginBottom: 20,
+});
+
+const ReadMoreContainer = styled('div')({
+  marginTop: 35,
+});
+
+const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
   title,
   excerpt,
   topImage,
@@ -37,8 +50,10 @@ const BlogPost: React.SFC<BlogPostProps> = ({
   author,
   slug,
   tags,
+  isFirst,
+  isLast,
 }) => (
-  <PostContainer>
+  <PostContainer isFirst={isFirst} isLast={isLast}>
     <BlogPostAuthor author={author} date={date} />
     <TopImage src={topImage} alt="" />
     <Spacing height={22} />
@@ -48,14 +63,16 @@ const BlogPost: React.SFC<BlogPostProps> = ({
     <div>
       <Markdown source={excerpt} />
     </div>
-    <Link to={slug}>Read more</Link>
-    <div>
+    <Tags>
       {tags.map((tag) => (
         <BlogLink key={tag} to={`/blog/tags/${kebabCase(tag)}`}>
           <Badge>{tag}</Badge>
         </BlogLink>
       ))}
-    </div>
+    </Tags>
+    <ReadMoreContainer>
+      <ReadMoreLink to={slug}>Läs inlägget</ReadMoreLink>
+    </ReadMoreContainer>
   </PostContainer>
 );
 
