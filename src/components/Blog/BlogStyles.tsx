@@ -22,9 +22,9 @@ const PostContainer = styled('article')((props: PostContainerProps) => ({
 }));
 
 const PostHeader = styled('h2')({
-  fontSize: 48,
+  fontSize: 40,
   display: 'block',
-  marginBottom: 18,
+  marginBottom: 10,
   lineHeight: 1,
 });
 

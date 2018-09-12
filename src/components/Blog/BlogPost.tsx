@@ -56,7 +56,7 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
   <PostContainer isFirst={isFirst} isLast={isLast}>
     <BlogPostAuthor author={author} date={date} />
     <TopImage src={topImage} alt="" />
-    <Spacing height={22} />
+    <Spacing height={18} />
     <BlogLink to={slug}>
       <PostHeader>{title}</PostHeader>
     </BlogLink>
