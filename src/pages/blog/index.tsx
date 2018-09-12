@@ -6,7 +6,10 @@ import sortBy from 'lodash/sortBy';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
 import { BlogContainer, BlogPost } from 'src/components/Blog';
-import { Spacing } from 'src/components/Spacing';
+import {
+  OverviewHeroProps,
+  OverviewHero,
+} from 'src/components/Blog/OverviewHero';
 
 interface BlogPost {
   fields: { slug: string };
@@ -29,11 +32,16 @@ interface Poster {
   };
 }
 
+interface BlogPage {
+  title: string;
+  hero: OverviewHeroProps;
+}
+
 interface BlogProps {
   data: {
     posts: { edges: { node: BlogPost }[] };
     posters: { edges: { node: Poster }[] };
-    page: { title: string };
+    page: BlogPage;
     footer: any; // TODO add proper props when footer is typescript
     header: any; // TODO add proper props when header is typescript
   };
@@ -48,6 +56,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />
+        <OverviewHero {...data.page.hero} />
         <div className="Site-content">
           <BlogContainer>
             {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
@@ -122,6 +131,11 @@ export const blogQuery = graphql`
 
     page: dataYaml(id: { regex: "/blog/" }) {
       title
+      hero {
+        title
+        text
+        image
+      }
     }
 
     header: dataYaml(id: { regex: "/header/" }) {

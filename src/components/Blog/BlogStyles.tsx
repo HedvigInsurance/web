@@ -6,8 +6,8 @@ const BlogContainer = styled('div')({
   width: '100%',
   maxWidth: 787,
   margin: '80px auto',
-  paddingLeft: 20,
-  paddingRight: 20,
+  paddingLeft: 24,
+  paddingRight: 24,
 });
 
 interface PostContainerProps {
