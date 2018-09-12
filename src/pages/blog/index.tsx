@@ -55,9 +55,9 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
               .map(({ node: { frontmatter, fields } }) => {
                 const { title, date, topImage, tags, excerpt } = frontmatter;
                 const { slug } = fields;
-                const author = posters.edges.filter(
+                const author = posters.edges.find(
                   (poster) => poster.node.name === frontmatter.author,
-                )[0];
+                );
                 return (
                   <React.Fragment key={slug}>
                     <BlogPost

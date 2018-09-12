@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Hedvig
 date: '2018-02-01T15:35:05+02:00'
-topImage: /assets/identity/hedvig-wordmark-color@2x.png
+topImage: /assets/blog_img.jpg
 author: Matilda Fors
 tags:
   - Hedvig

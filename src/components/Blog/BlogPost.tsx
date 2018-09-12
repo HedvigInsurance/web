@@ -25,6 +25,8 @@ interface BlogPostProps {
 
 const TopImage = styled('img')({
   maxWidth: '100%',
+  borderRadius: 8,
+  boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)',
 });
 
 const BlogPost: React.SFC<BlogPostProps> = ({

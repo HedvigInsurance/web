@@ -1,6 +1,9 @@
-import { BlogPostAuthor } from './BlogPostAuthor'
-import { BlogContainer, PostContainer, PostHeader, BlogLink } from './BlogStyles'
-import { BlogPost } from './BlogPost'
-import { PrevNextCard } from './PrevNextCard';
-
-export { BlogPostAuthor, BlogContainer, PostContainer, PostHeader, BlogLink, BlogPost, PrevNextCard }
+export { BlogPostAuthor } from './BlogPostAuthor';
+export {
+  BlogContainer,
+  PostContainer,
+  PostHeader,
+  BlogLink,
+} from './BlogStyles';
+export { BlogPost } from './BlogPost';
+export { PrevNextCard } from './PrevNextCard';
