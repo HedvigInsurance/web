@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 
@@ -6,6 +7,33 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { BlogContainer, BlogPost, PostContainer } from 'src/components/Blog';
 import { Spacing } from 'src/components/Spacing';
+
+const pagePropTypes = {
+  title: PropTypes.string.isRequired,
+};
+const postPropTypes = {
+  node: PropTypes.shape({
+    fields: PropTypes.shape({ slug: PropTypes.string.isRequired }).isRequired,
+    frontmatter: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      topImage: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+      excerpt: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+const posterPropTypes = {
+  node: PropTypes.shape({
+    teamtailorId: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.shape({
+      standard: PropTypes.string.isRequired,
+      large: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 const TagTemplate = ({ data, pathContext }) => {
   const { posters, posts, page, header, footer } = data;
@@ -58,6 +86,21 @@ const TagTemplate = ({ data, pathContext }) => {
       </StickyContainer>
     </main>
   );
+};
+
+TagTemplate.propTypes = {
+  pathContext: PropTypes.shape({ tag: PropTypes.string.isRequired }).isRequired,
+  data: PropTypes.shape({
+    page: PropTypes.shape(pagePropTypes).isRequired,
+    posts: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape(postPropTypes)).isRequired,
+    }).isRequired,
+    posters: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape(posterPropTypes)).isRequired,
+    }).isRequired,
+    header: PropTypes.shape(headerPropTypes).isRequired,
+    footer: PropTypes.shape(footerPropTypes).isRequired,
+  }).isRequired,
 };
 
 export const tagQuery = graphql`

@@ -173,8 +173,8 @@ BlogPost.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape(pagePropTypes),
     }),
-    header: headerPropTypes,
-    footer: footerPropTypes,
+    header: PropTypes.shape(headerPropTypes).isRequired,
+    footer: PropTypes.shape(footerPropTypes).isRequired,
   }).isRequired,
 };
 
