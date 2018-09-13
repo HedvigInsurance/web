@@ -7,6 +7,7 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { BlogContainer, BlogPost } from 'src/components/Blog';
 import { Spacing } from 'src/components/Spacing';
+import styled from 'react-emotion';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -35,6 +36,10 @@ const posterPropTypes = {
   }).isRequired,
 };
 
+const TagTemplateTitle = styled('h1')({
+  lineHeight: 1.2,
+});
+
 const TagTemplate = ({ data, pathContext }) => {
   const { posters, posts, page, header, footer } = data;
   const { tag } = pathContext;
@@ -51,8 +56,9 @@ const TagTemplate = ({ data, pathContext }) => {
       <StickyContainer>
         <Header data={header} langKey="se" />
         <BlogContainer verticalMargin>
-          <h1>Inlägg taggade med: {tag}</h1>
+          <TagTemplateTitle>Inlägg taggade med: {tag}</TagTemplateTitle>
           <Spacing height={20} />
+
           {taggedPosts.map(
             ({ node: { fields, frontmatter } }, index, origin) => {
               const { title, date, topImage, tags, excerpt } = frontmatter;
@@ -61,25 +67,23 @@ const TagTemplate = ({ data, pathContext }) => {
                 (poster) => poster.node.name === frontmatter.author,
               )[0];
               return (
-                <React.Fragment key={slug}>
-                  <BlogPost
-                    title={title}
-                    excerpt={excerpt}
-                    date={date}
-                    topImage={topImage}
-                    slug={slug}
-                    tags={tags}
-                    author={
-                      author && {
-                        name: author.node.name,
-                        image: author.node.picture.standard,
-                      }
+                <BlogPost
+                  key={slug}
+                  title={title}
+                  excerpt={excerpt}
+                  date={date}
+                  topImage={topImage}
+                  slug={slug}
+                  tags={tags}
+                  author={
+                    author && {
+                      name: author.node.name,
+                      image: author.node.picture.standard,
                     }
-                    isFirst={index === 0}
-                    isLast={index === origin.length - 1}
-                  />
-                  <Spacing height={20} />
-                </React.Fragment>
+                  }
+                  isFirst={index === 0}
+                  isLast={index === origin.length - 1}
+                />
               );
             },
           )}

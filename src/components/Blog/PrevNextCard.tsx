@@ -25,7 +25,6 @@ interface Props {
   };
 }
 
-const LINE_HEIGHT = 28;
 const PHONE_UP = '@media (min-width: 480px)';
 
 const CardLink = styled(BlogLink)(({ background }: { background: string }) => ({
@@ -34,8 +33,9 @@ const CardLink = styled(BlogLink)(({ background }: { background: string }) => ({
   alignItems: 'flex-start',
   justifyContent: 'center',
   padding: 18,
-  width: '50%',
+  width: '100%',
   [PHONE_UP]: {
+    width: '50%',
     background: 'transparent',
     justifyContent: 'space-between',
     flexDirection: 'column',

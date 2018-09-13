@@ -2,7 +2,6 @@
 templateKey: blog-post
 title: Hedvig
 date: '2018-02-01T15:35:05+02:00'
-topImage: /assets/blog_img.jpg
 topImageColor: '#000a24'
 cta:
   show: true

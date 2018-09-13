@@ -137,9 +137,11 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} langKey="se" />
       <article className="Site-content">
-        <TopImageContainer backgroundColor={topImageColor}>
-          <TopImage src={topImage} />
-        </TopImageContainer>
+        {topImage && (
+          <TopImageContainer backgroundColor={topImageColor}>
+            <TopImage src={topImage} />
+          </TopImageContainer>
+        )}
         <BlogContainer verticalMargin>
           <PostContainer isFirst isLast>
             <PostHeader size="lg">{title}</PostHeader>
