@@ -10,6 +10,7 @@ import {
   OverviewHeroProps,
   OverviewHero,
 } from 'src/components/Blog/OverviewHero';
+import { GatsbyImageProps } from 'gatsby-image';
 
 interface BlogPost {
   fields: { slug: string };
@@ -39,6 +40,7 @@ interface BlogPage {
 
 interface BlogProps {
   data: {
+    teamImageFile: { image: GatsbyImageProps };
     posts: { edges: { node: BlogPost }[] };
     posters: { edges: { node: Poster }[] };
     page: BlogPage;
@@ -48,7 +50,12 @@ interface BlogProps {
 }
 
 const Blog: React.SFC<BlogProps> = ({ data }) => {
-  const { posters, posts, page, header, footer } = data;
+  const { teamImageFile, posters, posts, page, header, footer } = data;
+  const teamImageSrc =
+    (teamImageFile &&
+      teamImageFile.image.sizes &&
+      (teamImageFile.image.sizes as { src: string }).src) ||
+    '';
   return (
     <main className="Site">
       <Helmet>
@@ -56,7 +63,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />
-        <OverviewHero {...data.page.hero} />
+        <OverviewHero {...data.page.hero} image={teamImageSrc} />
         <div className="Site-content">
           <BlogContainer verticalMargin>
             {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
@@ -98,6 +105,14 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
 
 export const blogQuery = graphql`
   query BlogPage {
+    teamImageFile: file(relativePath: { eq: "blog/team.jpg" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 2000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+
     posts: allMarkdownRemark(filter: { id: { regex: "/blog/" } }) {
       edges {
         node {
