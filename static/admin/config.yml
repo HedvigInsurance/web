@@ -1445,7 +1445,7 @@ collections:
       - label: Top Image Color (hex, i.e. "#000000")
         name: topImageColor
         widget: string
-     - label: Cta
+      - label: Cta
         name: cta
         widget: object
         fields:
