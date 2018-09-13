@@ -5,7 +5,7 @@ import { StickyContainer } from 'react-sticky';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
-import { BlogContainer, BlogPost, PostContainer } from 'src/components/Blog';
+import { BlogContainer, BlogPost } from 'src/components/Blog';
 import { Spacing } from 'src/components/Spacing';
 
 const pagePropTypes = {
@@ -51,9 +51,7 @@ const TagTemplate = ({ data, pathContext }) => {
       <StickyContainer>
         <Header data={header} langKey="se" />
         <BlogContainer verticalMargin>
-          <PostContainer>
-            <h1>Posts tagged with: {tag}</h1>
-          </PostContainer>
+          <h1>Inlägg taggade med: {tag}</h1>
           <Spacing height={20} />
           {taggedPosts.map(
             ({ node: { fields, frontmatter } }, index, origin) => {

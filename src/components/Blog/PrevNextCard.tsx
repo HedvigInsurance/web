@@ -6,6 +6,7 @@ import { Spacing } from 'src/components/Spacing';
 import { BlogLink } from 'src/components/Blog/BlogStyles';
 import { Markdown } from 'src/cms/utils/markdown';
 import { colors } from '@hedviginsurance/brand';
+import { truncate } from 'src/utils/truncate';
 
 interface Props {
   phoneCardDirection: string;
@@ -30,10 +31,10 @@ const PHONE_UP = '@media (min-width: 480px)';
 const CardLink = styled(BlogLink)(({ background }: { background: string }) => ({
   background,
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'flex-start',
   justifyContent: 'center',
-  width: '100%',
   padding: 18,
+  width: '50%',
   [PHONE_UP]: {
     background: 'transparent',
     justifyContent: 'space-between',
@@ -59,11 +60,10 @@ const CustomCard = styled(Card)({
   },
 });
 
-const PhoneCard = styled('div')({
+const CardDirection = styled('div')({
   [PHONE_UP]: {
-    display: 'none',
+    paddingBottom: 20,
   },
-  display: 'flex',
   fontSize: 15,
 });
 
@@ -73,10 +73,6 @@ const CardImage = styled('img')({
 
 const CardTitle = styled('h3')({
   fontWeight: 'bold',
-  maxHeight: LINE_HEIGHT,
-  textOverflow: 'ellipsis',
-  overflow: 'hidden',
-  whiteSpace: 'nowrap',
 });
 
 const ReadMoreLink = styled('span')({
@@ -97,12 +93,13 @@ const PrevNextCard: React.SFC<Props> = ({
 }) =>
   post ? (
     <CardLink to={post.node.fields.slug} background={background}>
+      <CardDirection>{phoneCardDirection}</CardDirection>
       <CustomCard>
         <div>
           <CardImage src={post.node.frontmatter.topImage} />
 
           <CardHeader>
-            <CardTitle>{post.node.frontmatter.title}</CardTitle>
+            <CardTitle>{truncate(25)(post.node.frontmatter.title)}</CardTitle>
             <Spacing height={8} />
             <Markdown source={post.node.frontmatter.excerpt} />
           </CardHeader>
@@ -111,7 +108,6 @@ const PrevNextCard: React.SFC<Props> = ({
           <ReadMoreLink>Läs inlägget</ReadMoreLink>
         </CardBody>
       </CustomCard>
-      <PhoneCard>{phoneCardDirection}</PhoneCard>
     </CardLink>
   ) : (
     <PhonelessSpacing width={1000} />
