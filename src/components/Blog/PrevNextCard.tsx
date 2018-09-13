@@ -110,7 +110,7 @@ const PrevNextCard: React.SFC<Props> = ({
       </CustomCard>
     </CardLink>
   ) : (
-    <PhonelessSpacing width={1000} />
+    <PhonelessSpacing width="50%" />
   );
 
 export { PrevNextCard };

@@ -1,12 +1,13 @@
-import styled from 'react-emotion'
+import styled from 'react-emotion';
 
 interface SpacingProps {
-  width?: number,
-  height?: number,
+  width?: number | string;
+  height?: number | string;
 }
 
-const Spacing = styled('div')({}, ({ width, height }: SpacingProps) => ({
-  width: width || 1, height: height || 1
-}))
+const Spacing = styled('div')(({ width = 1, height = 1 }: SpacingProps) => ({
+  width,
+  height,
+}));
 
-export { Spacing }
+export { Spacing };
