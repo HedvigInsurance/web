@@ -305,4 +305,5 @@ export const BlogPostQuery = graphql`
   }
 `;
 
+export { BlogPostTemplate };
 export default BlogPost;

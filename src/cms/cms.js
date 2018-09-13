@@ -9,6 +9,7 @@ import FAQPagePreview from './preview-templates/faq-page-preview';
 import PrivacyPagePreview from './preview-templates/privacy-page-preview';
 import LegalPagePreview from './preview-templates/legal-page-preview';
 import TermsPagePreview from './preview-templates/terms-page-preview';
+import BlogPostPreview from './preview-templates/blog-post-preview';
 import HeaderPreview from './preview-templates/header-preview';
 import FooterPreview from './preview-templates/footer-preview';
 
@@ -23,5 +24,6 @@ CMS.registerPreviewTemplate('faq', FAQPagePreview);
 CMS.registerPreviewTemplate('privacy', PrivacyPagePreview);
 CMS.registerPreviewTemplate('legal', LegalPagePreview);
 CMS.registerPreviewTemplate('terms', TermsPagePreview);
+CMS.registerPreviewTemplate('blog-post', BlogPostPreview);
 CMS.registerPreviewTemplate('header', HeaderPreview);
 CMS.registerPreviewTemplate('footer', FooterPreview);
