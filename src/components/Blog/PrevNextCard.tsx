@@ -74,7 +74,7 @@ const CardImage = styled('img')({
 const ImagePlaceholder = styled('div')({
   width: '100%',
   paddingTop: '60%',
-  background: colors.LIGHT_GRAY,
+  background: '#f3f4f7',
 });
 
 const CardTitle = styled('h3')({
