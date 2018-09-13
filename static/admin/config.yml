@@ -1442,6 +1442,22 @@ collections:
       - label: Top Image
         name: topImage
         widget: image
+      - label: Top Image Color (hex, i.e. "#000000")
+        name: topImageColor
+        widget: string
+     - label: Cta
+        name: cta
+        widget: object
+        fields:
+          - label: Show
+            name: show
+            widget: boolean
+          - label: Label
+            name: label
+            widget: string
+          - label: Target (i.e. "/download")
+            name: target
+            widget: string
       - label: Author (Exact name as shown on TeamTailor)
         name: author
         widget: string
