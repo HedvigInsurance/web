@@ -50,7 +50,7 @@ const TagTemplate = ({ data, pathContext }) => {
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />
-        <BlogContainer>
+        <BlogContainer verticalMargin>
           <PostContainer>
             <h1>Posts tagged with: {tag}</h1>
           </PostContainer>

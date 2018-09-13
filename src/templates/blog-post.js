@@ -28,14 +28,19 @@ const pagePropTypes = {
   content: PropTypes.string.isRequired,
 };
 
-const HeroImage = styled('div')((props) => ({
-  paddingTop: '50%',
-  maxHeight: '50vh',
+const PHONE_UP = '@media (min-width: 480px)';
+
+const TopImageContainer = styled('div')((props) => ({
   width: '100%',
-  backgroundImage: `url(${props.src})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center center',
+  textAlign: 'center',
+  lineHeight: 0,
+  backgroundColor: props.backgroundColor,
 }));
+
+const TopImage = styled('img')({
+  maxHeight: '40vh',
+  maxWidth: '100%',
+});
 
 const AuthorContainer = styled('div')({
   padding: '35px 0',
@@ -44,13 +49,21 @@ const AuthorContainer = styled('div')({
 const PrevNextContainer = styled('div')({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between',
+  width: '100%',
+  maxWidth: 787,
+  margin: 'auto',
+  [PHONE_UP]: {
+    paddingLeft: 24,
+    paddingRight: 24,
+  },
 });
 
 const PrevNextSection = styled('div')({
   backgroundColor: colors.LIGHT_GRAY,
-  paddingTop: 20,
-  paddingBottom: 20,
+  [PHONE_UP]: {
+    paddingTop: 80,
+    paddingBottom: 80,
+  },
 });
 
 const BlogParagraph = styled('p')({
@@ -59,9 +72,7 @@ const BlogParagraph = styled('p')({
 });
 
 const BlogImage = styled('img')({
-  maxWidth: '110%',
-  position: 'relative',
-  left: '-5%',
+  maxWidth: '100%',
   marginTop: 20,
   marginBottom: 20,
 });
@@ -69,7 +80,7 @@ const BlogImage = styled('img')({
 const BlogQuote = styled('blockquote')({
   backgroundColor: '#FFF3F2',
   borderRadius: 10,
-  padding: 48,
+  padding: 24,
   fontFamily: fonts.SORAY,
   fontSize: 30,
   lineHeight: 1.2,
@@ -77,6 +88,7 @@ const BlogQuote = styled('blockquote')({
 
   '@media (min-width: 797px)': {
     fontSize: 40,
+    padding: 48,
   },
 
   p: {
@@ -93,6 +105,7 @@ const BlogPostTemplate = ({
   header,
   footer,
   topImage,
+  topImageColor,
   prevPost,
   nextPost,
   tags,
@@ -104,8 +117,10 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} langKey="se" />
       <article className="Site-content">
-        <HeroImage src={topImage} />
-        <BlogContainer>
+        <TopImageContainer backgroundColor={topImageColor}>
+          <TopImage src={topImage} />
+        </TopImageContainer>
+        <BlogContainer verticalMargin>
           <PostContainer isFirst isLast>
             <PostHeader size="lg">{title}</PostHeader>
             <AuthorContainer>
@@ -130,12 +145,18 @@ const BlogPostTemplate = ({
           </PostContainer>
         </BlogContainer>
         <PrevNextSection>
-          <PostContainer>
-            <PrevNextContainer>
-              <PrevNextCard post={prevPost} />
-              <PrevNextCard post={nextPost} />
-            </PrevNextContainer>
-          </PostContainer>
+          <PrevNextContainer>
+            <PrevNextCard
+              post={prevPost}
+              phoneCardDirection="Föregånde inlägg"
+              background="#f9fafc"
+            />
+            <PrevNextCard
+              post={nextPost}
+              phoneCardDirection="Nästa inlägg"
+              background="#f3f4f7"
+            />
+          </PrevNextContainer>
         </PrevNextSection>
       </article>
     </StickyContainer>
@@ -169,6 +190,7 @@ const BlogPost = ({ data }) => {
       title={data.post.frontmatter.title}
       date={data.post.frontmatter.date}
       topImage={data.post.frontmatter.topImage}
+      topImageColor={data.post.frontmatter.topImageColor}
       author={
         author && {
           name: author.node.name,
@@ -202,6 +224,7 @@ export const BlogPostQuery = graphql`
         title
         date
         topImage
+        topImageColor
         author
         content
         tags

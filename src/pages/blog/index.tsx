@@ -58,7 +58,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
         <Header data={header} langKey="se" />
         <OverviewHero {...data.page.hero} />
         <div className="Site-content">
-          <BlogContainer>
+          <BlogContainer verticalMargin>
             {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
               .reverse()
               .map(({ node: { frontmatter, fields } }, index, origin) => {

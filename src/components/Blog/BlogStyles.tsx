@@ -4,17 +4,17 @@ import { colors } from '@hedviginsurance/brand';
 
 const TABLET_UP = '@media (min-width: 797px)';
 
-const BlogContainer = styled('div')({
+const BlogContainer = styled('div')((props: { verticalMargin?: boolean }) => ({
   width: '100%',
   maxWidth: 787,
-  margin: '48px auto',
+  margin: props.verticalMargin ? '48px auto' : 'auto',
   paddingLeft: 24,
   paddingRight: 24,
 
   [TABLET_UP]: {
-    margin: '80px auto',
+    margin: props.verticalMargin ? '80px auto' : 'auto',
   },
-});
+}));
 
 interface PostContainerProps {
   isFirst?: boolean;
