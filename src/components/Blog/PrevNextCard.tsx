@@ -71,6 +71,12 @@ const CardImage = styled('img')({
   maxWidth: '100%',
 });
 
+const ImagePlaceholder = styled('div')({
+  width: '100%',
+  paddingTop: '60%',
+  background: colors.LIGHT_GRAY,
+});
+
 const CardTitle = styled('h3')({
   fontWeight: 'bold',
 });
@@ -96,7 +102,11 @@ const PrevNextCard: React.SFC<Props> = ({
       <CardDirection>{phoneCardDirection}</CardDirection>
       <CustomCard>
         <div>
-          <CardImage src={post.node.frontmatter.topImage} />
+          {post.node.frontmatter.topImage ? (
+            <CardImage src={post.node.frontmatter.topImage} />
+          ) : (
+            <ImagePlaceholder />
+          )}
 
           <CardHeader>
             <CardTitle>{truncate(25)(post.node.frontmatter.title)}</CardTitle>
