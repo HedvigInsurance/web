@@ -43,9 +43,7 @@ const Headline = styled('h1')({
   fontFamily: fonts.SORAY,
 });
 const TextContent = styled(Markdown)({
-  maxWidth: 600,
-  flex: 0,
-  flexGrow: 0,
+  flexBasis: '400px',
 });
 
 interface OverviewHeroProps {

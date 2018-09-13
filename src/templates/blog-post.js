@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import GatsbyLink from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 import sortBy from 'lodash/sortBy';
@@ -21,6 +22,7 @@ import {
 } from 'src/components/Blog';
 import { Badge } from 'src/components/Badge';
 import { Markdown } from 'src/cms/utils/markdown';
+import { Button } from 'src/components/Button';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -97,6 +99,23 @@ const BlogQuote = styled('blockquote')({
   },
 });
 
+const CtaContainer = styled('div')({
+  padding: '30px 0',
+  textAlign: 'center',
+  [PHONE_UP]: {
+    padding: '60px 0',
+  },
+});
+
+const Cta = styled(Button)({
+  '&&': {
+    display: 'inline-block',
+    textDecoration: 'none',
+    fontSize: 16,
+    color: colors.WHITE,
+  },
+}).withComponent(GatsbyLink);
+
 const BlogPostTemplate = ({
   title,
   date,
@@ -109,6 +128,7 @@ const BlogPostTemplate = ({
   prevPost,
   nextPost,
   tags,
+  cta,
 }) => (
   <main className="Site">
     <Helmet>
@@ -134,6 +154,14 @@ const BlogPostTemplate = ({
               }}
               source={content}
             />
+            {cta &&
+              cta.show && (
+                <CtaContainer>
+                  <Cta to={cta.target} size="sm">
+                    {cta.label}
+                  </Cta>
+                </CtaContainer>
+              )}
             <div>
               {tags &&
                 tags.map((tag) => (
@@ -203,6 +231,7 @@ const BlogPost = ({ data }) => {
       prevPost={prevPost}
       nextPost={nextPost}
       tags={data.post.frontmatter.tags}
+      cta={data.post.frontmatter.cta}
     />
   );
 };
@@ -228,6 +257,11 @@ export const BlogPostQuery = graphql`
         author
         content
         tags
+        cta {
+          show
+          label
+          target
+        }
       }
     }
 
