@@ -222,10 +222,12 @@ const BlogPost = ({ data }) => {
       topImage={data.post.frontmatter.topImage}
       topImageColor={data.post.frontmatter.topImageColor}
       author={
-        author && {
-          name: author.node.name,
-          image: author.node.picture.standard,
-        }
+        author
+          ? {
+              name: author.node.name,
+              image: author.node.picture.standard,
+            }
+          : { name: data.post.frontmatter.author }
       }
       content={data.post.frontmatter.content}
       header={data.header}

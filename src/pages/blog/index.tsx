@@ -84,10 +84,12 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
                     slug={slug}
                     tags={tags}
                     author={
-                      author && {
-                        name: author.node.name,
-                        image: author.node.picture.standard,
-                      }
+                      author
+                        ? {
+                            name: author.node.name,
+                            image: author.node.picture.standard,
+                          }
+                        : { name: frontmatter.author }
                     }
                     isFirst={index === 0}
                     isLast={index === origin.length - 1}

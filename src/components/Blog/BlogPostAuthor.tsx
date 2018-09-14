@@ -17,6 +17,7 @@ const PortraitContainer = styled('div')({
   borderRadius: '50%',
   overflow: 'hidden',
   position: 'relative',
+  marginRight: 12,
 });
 
 const Portrait = styled('img')({
@@ -36,16 +37,16 @@ const AuthorContainer = styled('div')({
 
 const AuthorTextContainer = styled('div')({
   lineHeight: 1.3,
-  marginLeft: 12,
 });
 
 const BlogPostAuthor: React.SFC<BlogPostAuthorProps> = ({ author, date }) => (
   <AuthorContainer>
-    {author && (
-      <PortraitContainer>
-        <Portrait src={author.image} alt={`Porträtt av ${author.name}`} />
-      </PortraitContainer>
-    )}
+    {author &&
+      author.image && (
+        <PortraitContainer>
+          <Portrait src={author.image} alt={`Porträtt av ${author.name}`} />
+        </PortraitContainer>
+      )}
     <AuthorTextContainer>
       <div>
         {format(parse(date), 'DD MMMM YYYY', {
