@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'constate';
 
 import { CSSInjector } from 'src/cms/css-injector';
@@ -6,14 +7,6 @@ import { BlogPostTemplate } from 'src/templates/blog-post';
 import { StaticRouter } from 'react-router-dom';
 
 const BlogPostPreview = ({ entry }) => {
-  console.log(
-    typeof entry.getIn(['data', 'tags']),
-    entry.getIn(['data', 'tags']),
-  );
-  console.log(
-    typeof entry.getIn(['data', 'cta']),
-    entry.getIn(['data', 'cta']),
-  );
   const tags = entry.getIn(['data', 'tags']);
   const cta = entry.getIn(['data', 'cta']);
   return (
@@ -34,6 +27,12 @@ const BlogPostPreview = ({ entry }) => {
       </Provider>
     </CSSInjector>
   );
+};
+
+BlogPostPreview.propTypes = {
+  entry: PropTypes.shape({
+    getIn: PropTypes.func,
+  }).isRequired,
 };
 
 export default BlogPostPreview;
