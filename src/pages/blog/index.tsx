@@ -75,24 +75,23 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
                   (poster) => poster.node.name === frontmatter.author,
                 );
                 return (
-                  <React.Fragment key={slug}>
-                    <BlogPost
-                      title={title}
-                      excerpt={excerpt}
-                      date={date}
-                      topImage={topImage}
-                      slug={slug}
-                      tags={tags}
-                      author={
-                        author && {
-                          name: author.node.name,
-                          image: author.node.picture.standard,
-                        }
+                  <BlogPost
+                    key={slug}
+                    title={title}
+                    excerpt={excerpt}
+                    date={date}
+                    topImage={topImage}
+                    slug={slug}
+                    tags={tags}
+                    author={
+                      author && {
+                        name: author.node.name,
+                        image: author.node.picture.standard,
                       }
-                      isFirst={index === 0}
-                      isLast={index === origin.length - 1}
-                    />
-                  </React.Fragment>
+                    }
+                    isFirst={index === 0}
+                    isLast={index === origin.length - 1}
+                  />
                 );
               })}
           </BlogContainer>
@@ -107,7 +106,7 @@ export const blogQuery = graphql`
   query BlogPage {
     teamImageFile: file(relativePath: { eq: "blog/team.jpg" }) {
       image: childImageSharp {
-        sizes(maxWidth: 2000) {
+        sizes(maxWidth: 2500) {
           ...GatsbyImageSharpSizes
         }
       }

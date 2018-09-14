@@ -31,10 +31,11 @@ const AuthorContainer = styled('div')({
   flexDirection: 'row',
   alignItems: 'center',
   marginBottom: 24,
+  fontSize: 16,
 });
 
 const AuthorTextContainer = styled('div')({
-  lineHeight: 1,
+  lineHeight: 1.3,
   marginLeft: 12,
 });
 

@@ -46,7 +46,7 @@ const PostHeader = styled('h2')((props: PostHeaderProps) => ({
   ...postHeaderFontSizes[props.size || 'sm'],
   display: 'block',
   marginBottom: 10,
-  lineHeight: 1,
+  lineHeight: 1.2,
 }));
 
 const BlogLink = styled(Link)({

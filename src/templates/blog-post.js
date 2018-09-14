@@ -70,7 +70,7 @@ const PrevNextSection = styled('div')({
 
 const BlogParagraph = styled('p')({
   marginBottom: 20,
-  lineHeight: 1.4,
+  lineHeight: 1.5,
 });
 
 const BlogImage = styled('img')({
@@ -85,7 +85,7 @@ const BlogQuote = styled('blockquote')({
   padding: 24,
   fontFamily: fonts.SORAY,
   fontSize: 30,
-  lineHeight: 1.2,
+  lineHeight: 1.5,
   margin: '50px 0',
 
   '@media (min-width: 797px)': {
