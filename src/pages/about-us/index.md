@@ -4,8 +4,8 @@ title: Om Hedvig | Hedvig
 heading: Om Hedvig
 hero:
   headline: 'Our Mission:'
-  playButtonText: Se filmen
-  title: Making minds more peaceful
+  playButtonText: Our story
+  title: Giving people the world's most delightful insurance service
 main:
   text: >-
     Om sanningen ska fram, vem gillar att köpa försäkring? Fullt förståeligt om
