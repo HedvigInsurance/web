@@ -166,7 +166,7 @@ const BlogPostTemplate = ({
               )}
             <div>
               {tags &&
-                tags.map((tag) => (
+                tags.filter((tag) => tag.trim() !== '').map((tag) => (
                   <BlogLink key={tag} to={`/blog/tags/${kebabCase(tag)}`}>
                     <Badge>{tag}</Badge>
                   </BlogLink>
