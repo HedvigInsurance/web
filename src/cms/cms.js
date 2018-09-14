@@ -24,6 +24,6 @@ CMS.registerPreviewTemplate('faq', FAQPagePreview);
 CMS.registerPreviewTemplate('privacy', PrivacyPagePreview);
 CMS.registerPreviewTemplate('legal', LegalPagePreview);
 CMS.registerPreviewTemplate('terms', TermsPagePreview);
-CMS.registerPreviewTemplate('blog-post', BlogPostPreview);
+CMS.registerPreviewTemplate('blogposts', BlogPostPreview);
 CMS.registerPreviewTemplate('header', HeaderPreview);
 CMS.registerPreviewTemplate('footer', FooterPreview);
