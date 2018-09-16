@@ -6,8 +6,10 @@
 
 const path = require('path');
 const { getSlugAndLang } = require('ptz-i18n');
-const uniq = require('lodash/uniq');
-const kebabCase = require('lodash/kebabCase');
+const {
+  createPageTemplates,
+  createTagPages,
+} = require('./src/utils/setup-gatsby-node');
 
 const DEFAULT_LANGUAGE = 'se';
 
@@ -46,34 +48,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
     }
-    // Create regular pages from markdown files
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const { slug, langKey } = node.fields;
-      createPage({
-        path: slug,
-        component: path.resolve(
-          __dirname,
-          `src/templates/${node.frontmatter.templateKey}.js`,
-        ),
-        context: { id: node.id, langKey },
-      });
-    });
 
-    let tags = [];
-    result.data.allMarkdownRemark.edges.forEach((edge) => {
-      if (edge.node.frontmatter.tags) {
-        tags = tags.concat(edge.node.frontmatter.tags);
-      }
-    });
-    tags = uniq(tags);
-    const tagPage = path.resolve('src/templates/tag-page.js');
-    tags.forEach((tag) => {
-      createPage({
-        path: `/blog/tags/${kebabCase(tag)}`,
-        component: tagPage,
-        context: { tag },
-      });
-    });
+    createPageTemplates(createPage)(result);
+    createTagPages(createPage)(result);
   });
 };
 
