@@ -1,15 +1,6 @@
 const nodePath = require('path');
-const {
-  pipe,
-  flatten,
-  filter,
-  map,
-  forEach,
-  uniq,
-  path,
-  replace,
-} = require('rambda');
-const kebabCase = require('just-kebab-case');
+const { pipe, flatten, map, forEach, uniq, path } = require('ramda');
+const { kebabCaseTags } = require('./blog-tags');
 
 const tagPageTemplatePath = nodePath.resolve(
   __dirname,
@@ -40,10 +31,7 @@ const flatMapTags = pipe(
 const getUniqueTags = pipe(
   getEdges,
   flatMapTags,
-  filter(Boolean),
-  map(kebabCase),
-  map(replace(/^-+/, '')),
-  map(replace(/-+$/, '')),
+  kebabCaseTags,
   uniq,
 );
 
