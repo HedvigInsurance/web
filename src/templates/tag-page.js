@@ -8,6 +8,10 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 import { BlogContainer, BlogPost } from 'src/components/Blog';
 import { Spacing } from 'src/components/Spacing';
 import styled from 'react-emotion';
+import { addIndex, filter, map, pathSatisfies, pipe, reverse } from 'ramda';
+import { getBlogPostPropsFromEdge, sortBlogPosts } from '../utils/blog-posts';
+import { notNullable } from '../utils/nullables';
+import { kebabCaseTag } from '../utils/blog-tags';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -43,10 +47,6 @@ const TagTemplateTitle = styled('h1')({
 const TagTemplate = ({ data, pathContext }) => {
   const { posters, posts, page, header, footer } = data;
   const { tag } = pathContext;
-  const taggedPosts = posts.edges.filter(
-    (post) =>
-      post.node.frontmatter.tags && post.node.frontmatter.tags.includes(tag),
-  );
 
   return (
     <main className="Site">
@@ -59,36 +59,26 @@ const TagTemplate = ({ data, pathContext }) => {
           <TagTemplateTitle>Inlägg taggade med: {tag}</TagTemplateTitle>
           <Spacing height={20} />
 
-          {taggedPosts.map(
-            ({ node: { fields, frontmatter } }, index, origin) => {
-              const { title, date, topImage, tags, excerpt } = frontmatter;
-              const { slug } = fields;
-              const author = posters.edges.filter(
-                (poster) => poster.node.name === frontmatter.author,
-              )[0];
-              return (
-                <BlogPost
-                  key={slug}
-                  title={title}
-                  excerpt={excerpt}
-                  date={date}
-                  topImage={topImage}
-                  slug={slug}
-                  tags={tags}
-                  author={
-                    author
-                      ? {
-                          name: author.node.name,
-                          image: author.node.picture.standard,
-                        }
-                      : { name: frontmatter.author }
-                  }
-                  isFirst={index === 0}
-                  isLast={index === origin.length - 1}
-                />
-              );
-            },
-          )}
+          {pipe(
+            sortBlogPosts,
+            reverse,
+            filter(
+              pathSatisfies((tags) => tags.map(kebabCaseTag).includes(tag), [
+                'node',
+                'frontmatter',
+                'tags',
+              ]),
+            ),
+            map(getBlogPostPropsFromEdge(posters.edges)),
+            addIndex(map)((postProps, index, originalArray) => (
+              <BlogPost
+                key={postProps.slug}
+                {...postProps}
+                isFirst={index === 0}
+                isLast={index === notNullable(originalArray).length - 1}
+              />
+            )),
+          )(posts.edges)}
         </BlogContainer>
         <Footer data={footer} langKey="se" />
       </StickyContainer>

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
-import sortBy from 'lodash/sortBy';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -11,6 +10,10 @@ import {
   OverviewHero,
 } from 'src/components/Blog/OverviewHero';
 import { GatsbyImageProps } from 'gatsby-image';
+import { sortBlogPosts, getBlogPostPropsFromEdge } from 'src/utils/blog-posts';
+import { pipe, reverse, map, addIndex } from 'ramda';
+import { BlogPostProps } from 'src/components/Blog/BlogPost';
+import { notNullable } from 'src/utils/nullables';
 
 interface BlogPost {
   fields: { slug: string };
@@ -66,36 +69,25 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
         <OverviewHero {...data.page.hero} image={teamImageSrc} />
         <div className="Site-content">
           <BlogContainer verticalMargin>
-            {sortBy(posts.edges, (p) => new Date(p.node.frontmatter.date))
-              .reverse()
-              .map(({ node: { frontmatter, fields } }, index, origin) => {
-                const { title, date, topImage, tags, excerpt } = frontmatter;
-                const { slug } = fields;
-                const author = posters.edges.find(
-                  (poster) => poster.node.name === frontmatter.author,
-                );
-                return (
+            {pipe(
+              sortBlogPosts,
+              reverse as { (list: any[]): any[] },
+              map(getBlogPostPropsFromEdge(posters.edges)),
+              addIndex<BlogPostProps>(map)(
+                (
+                  props: BlogPostProps,
+                  index: number,
+                  originalArray: BlogPostProps[] | undefined,
+                ) => (
                   <BlogPost
-                    key={slug}
-                    title={title}
-                    excerpt={excerpt}
-                    date={date}
-                    topImage={topImage}
-                    slug={slug}
-                    tags={tags}
-                    author={
-                      author
-                        ? {
-                            name: author.node.name,
-                            image: author.node.picture.standard,
-                          }
-                        : { name: frontmatter.author }
-                    }
+                    key={props.slug}
+                    {...props}
                     isFirst={index === 0}
-                    isLast={index === origin.length - 1}
+                    isLast={index === notNullable(originalArray).length - 1}
                   />
-                );
-              })}
+                ),
+              ),
+            )(posts.edges)}
           </BlogContainer>
         </div>
         <Footer data={footer} langKey="se" />

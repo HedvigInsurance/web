@@ -4,8 +4,6 @@ import styled from 'react-emotion';
 import GatsbyLink from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
-import sortBy from 'lodash/sortBy';
-import kebabCase from 'lodash/kebabCase';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -22,7 +20,13 @@ import {
 } from 'src/components/Blog';
 import { Badge } from 'src/components/Badge';
 import { Markdown } from 'src/cms/utils/markdown';
+import { kebabCaseTag } from 'src/utils/blog-tags';
 import { Button } from 'src/components/Button';
+import {
+  authorOrDefault,
+  getAuthorField,
+  sortBlogPosts,
+} from '../utils/blog-posts';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -166,8 +170,8 @@ const BlogPostTemplate = ({
               )}
             <div>
               {tags &&
-                tags.filter((tag) => tag.trim() !== '').map((tag) => (
-                  <BlogLink key={tag} to={`/blog/tags/${kebabCase(tag)}`}>
+                tags.map((tag) => (
+                  <BlogLink key={tag} to={`/blog/tags/${kebabCaseTag(tag)}`}>
                     <Badge>{tag}</Badge>
                   </BlogLink>
                 ))}
@@ -201,34 +205,22 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
-  const author = data.posters.edges.filter(
-    (poster) => poster.node.name === data.post.frontmatter.author,
-  )[0];
-  const sortedPosts = sortBy(
-    data.posts.edges,
-    (p) => new Date(p.node.frontmatter.date),
-  );
+  const sortedPosts = sortBlogPosts(data.posts.edges);
   const currentPostIndex = sortedPosts.findIndex(
     (p) => p.node.frontmatter.date === data.post.frontmatter.date,
   );
-  const prevPost = currentPostIndex > 0 && sortedPosts[currentPostIndex - 1];
-  const nextPost =
-    currentPostIndex !== sortedPosts.length &&
-    sortedPosts[currentPostIndex + 1];
+  const prevPost = sortedPosts[currentPostIndex - 1];
+  const nextPost = sortedPosts[currentPostIndex + 1];
   return (
     <BlogPostTemplate
       title={data.post.frontmatter.title}
       date={data.post.frontmatter.date}
       topImage={data.post.frontmatter.topImage}
       topImageColor={data.post.frontmatter.topImageColor}
-      author={
-        author
-          ? {
-              name: author.node.name,
-              image: author.node.picture.standard,
-            }
-          : { name: data.post.frontmatter.author }
-      }
+      author={authorOrDefault(
+        getAuthorField({ node: data.post }),
+        data.posters.edges,
+      )}
       content={data.post.frontmatter.content}
       header={data.header}
       footer={data.footer}

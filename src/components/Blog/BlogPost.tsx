@@ -1,5 +1,3 @@
-import Link from 'gatsby-link';
-import kebabCase from 'lodash/kebabCase';
 import * as React from 'react';
 import styled from 'react-emotion';
 import { Badge } from 'src/components/Badge';
@@ -16,6 +14,7 @@ import {
   ReadMoreLink,
   PostContainerProps,
 } from 'src/components/Blog/BlogStyles';
+import { kebabCaseTag } from 'src/utils/blog-tags';
 
 interface BlogPostProps {
   title: string;
@@ -65,7 +64,7 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
     </div>
     <Tags>
       {tags.filter((tag) => tag.trim() !== '').map((tag) => (
-        <BlogLink key={tag} to={`/blog/tags/${kebabCase(tag)}`}>
+        <BlogLink key={tag} to={`/blog/tags/${kebabCaseTag(tag)}`}>
           <Badge>{tag}</Badge>
         </BlogLink>
       ))}
@@ -76,4 +75,4 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
   </PostContainer>
 );
 
-export { BlogPost };
+export { BlogPostProps, PostContainerProps, BlogPost };
