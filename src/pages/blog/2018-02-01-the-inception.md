@@ -3,7 +3,6 @@ templateKey: blog-post
 title: Varför vi startade Hedvig
 date: '2018-07-04T14:35:05+02:00'
 topImage: /uploads/founders.jpg
-topImageColor: '#000a24'
 cta:
   label: Kom igång med Hedvig
   show: true

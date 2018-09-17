@@ -1465,9 +1465,6 @@ collections:
       - label: 'Top Image (~880:537 px)'
         name: topImage
         widget: image
-      - label: Top Image Color (hex, i.e. "#000000")
-        name: topImageColor
-        widget: string
       - label: Cta
         name: cta
         widget: object

@@ -37,16 +37,11 @@ const pagePropTypes = {
 
 const PHONE_UP = '@media (min-width: 480px)';
 
-const TopImageContainer = styled('div')((props) => ({
-  width: '100%',
-  textAlign: 'center',
-  lineHeight: 0,
-  backgroundColor: props.backgroundColor,
-}));
-
 const TopImage = styled('img')({
+  width: '100%',
   maxHeight: '40vh',
-  maxWidth: '100%',
+  objectFit: 'cover',
+  objectPosition: 'center center',
 });
 
 const AuthorContainer = styled('div')({
@@ -130,7 +125,6 @@ const BlogPostTemplate = ({
   header,
   footer,
   topImage,
-  topImageColor,
   prevPost,
   nextPost,
   tags,
@@ -160,11 +154,7 @@ const BlogPostTemplate = ({
     <StickyContainer>
       <Header data={header} langKey="se" />
       <article className="Site-content">
-        {topImage && (
-          <TopImageContainer backgroundColor={topImageColor}>
-            <TopImage src={topImage} />
-          </TopImageContainer>
-        )}
+        {topImage && <TopImage src={topImage} />}
         <BlogContainer verticalMargin>
           <PostContainer isFirst isLast>
             <PostHeader size="lg">{title}</PostHeader>
@@ -235,7 +225,6 @@ const BlogPost = ({ data }) => {
       title={data.post.frontmatter.title}
       date={data.post.frontmatter.date}
       topImage={data.post.frontmatter.topImage}
-      topImageColor={data.post.frontmatter.topImageColor}
       author={authorOrDefault(
         getAuthorField({ node: data.post }),
         data.posters.edges,
@@ -269,7 +258,6 @@ export const BlogPostQuery = graphql`
         title
         date
         topImage
-        topImageColor
         author
         content
         excerpt

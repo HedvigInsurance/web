@@ -19,7 +19,6 @@ const BlogPostPreview = ({ entry }) => {
             author={entry.getIn(['data', 'author'])}
             content={entry.getIn(['data', 'content'])}
             topImage={entry.getIn(['data', 'topImage'])}
-            topImageColor={entry.getIn(['data', 'topImageColor'])}
             tags={tags && tags.toJS ? tags.toJS() : tags}
             cta={cta && cta.toJS()}
           />
