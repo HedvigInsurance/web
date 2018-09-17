@@ -59,6 +59,9 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
     <main className="Site">
       <Helmet>
         <title>{page.title}</title>
+        <meta name="og:title" content={page.title} />
+        <meta name="og:description" content={data.page.hero.text} />
+        <meta name="og:image" content={page.hero.image} />
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />

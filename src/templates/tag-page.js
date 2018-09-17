@@ -45,13 +45,15 @@ const TagTemplateTitle = styled('h1')({
 });
 
 const TagTemplate = ({ data, pathContext }) => {
-  const { posters, posts, page, header, footer } = data;
+  const { posters, posts, header, footer } = data;
   const { tag } = pathContext;
+  const pageTitle = `Inlägg taggade med: ${tag} | Hedvig`;
 
   return (
     <main className="Site">
       <Helmet>
-        <title>{page.title}</title>
+        <title>{pageTitle}</title>
+        <meta name="og:title" content={pageTitle} />
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />
@@ -132,10 +134,6 @@ export const tagQuery = graphql`
           }
         }
       }
-    }
-
-    page: dataYaml(id: { regex: "/blog/" }) {
-      title
     }
 
     header: dataYaml(id: { regex: "/header/" }) {

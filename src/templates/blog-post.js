@@ -32,6 +32,7 @@ const pagePropTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
 };
 
 const PHONE_UP = '@media (min-width: 480px)';
@@ -125,6 +126,7 @@ const BlogPostTemplate = ({
   date,
   author,
   content,
+  excerpt,
   header,
   footer,
   topImage,
@@ -137,6 +139,10 @@ const BlogPostTemplate = ({
   <main className="Site">
     <Helmet>
       <title>{title} | Hedvig</title>
+      <meta name="og:title" content={`${title} | Hedvig`} />
+      <meta name="og:description" content={excerpt} />
+      <meta name="og:type" content="article" />
+      <meta name="og:image" content={topImage} />
     </Helmet>
     <StickyContainer>
       <Header data={header} langKey="se" />
@@ -222,6 +228,7 @@ const BlogPost = ({ data }) => {
         data.posters.edges,
       )}
       content={data.post.frontmatter.content}
+      excerpt={data.post.frontmatter.excerpt}
       header={data.header}
       footer={data.footer}
       prevPost={prevPost}
@@ -252,6 +259,7 @@ export const BlogPostQuery = graphql`
         topImageColor
         author
         content
+        excerpt
         tags
         cta {
           show
