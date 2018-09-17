@@ -6,6 +6,10 @@
 
 const path = require('path');
 const { getSlugAndLang } = require('ptz-i18n');
+const {
+  createPageTemplates,
+  createTagPages,
+} = require('./src/utils/setup-gatsby-node');
 
 const DEFAULT_LANGUAGE = 'se';
 
@@ -34,6 +38,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
             frontmatter {
               templateKey
+              tags
             }
           }
         }
@@ -43,18 +48,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
     }
-    // Create regular pages from markdown files
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const { slug, langKey } = node.fields;
-      createPage({
-        path: slug,
-        component: path.resolve(
-          __dirname,
-          `src/templates/${node.frontmatter.templateKey}.js`,
-        ),
-        context: { id: node.id, langKey },
-      });
-    });
+
+    createPageTemplates(createPage)(result);
+    createTagPages(createPage)(result);
   });
 };
 

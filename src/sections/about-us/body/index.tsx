@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
 import { fonts } from '@hedviginsurance/brand';
+import { Markdown } from 'src/cms/utils/markdown';
 
 const BodyContainer = styled('div')({
   padding: '70px 0',
@@ -40,11 +39,7 @@ export const Body: React.SFC<BodyProps> = ({ title, text }) => (
   <BodyContainer>
     <Title>{title}</Title>
     <BodyText>
-      {
-        remark()
-          .use(reactRenderer)
-          .processSync(text).contents
-      }
+      <Markdown source={text} />
     </BodyText>
   </BodyContainer>
 );
