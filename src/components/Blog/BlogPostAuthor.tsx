@@ -4,7 +4,6 @@ import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 import svLocale from 'date-fns/locale/sv';
 import { Author } from 'src/components/Blog/types';
-import { colors } from '@hedviginsurance/brand';
 
 interface BlogPostAuthorProps {
   author?: Author;
