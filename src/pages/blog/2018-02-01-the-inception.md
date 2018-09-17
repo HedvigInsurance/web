@@ -2,12 +2,12 @@
 templateKey: blog-post
 title: Varför vi startade Hedvig
 date: '2018-07-04T14:35:05+02:00'
-topImage: /uploads/hedvig_2960_06.jpg
+topImage: /uploads/victor-xok-590629-unsplash.jpg
 cta:
   label: Kom igång med Hedvig
   show: true
   target: /download
-author: Lucas Carlsén
+author: Fredrik Fors
 tags:
   - ''
 excerpt: Försäkring är en tjänst som är svår att älska.
