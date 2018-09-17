@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
+import Img from 'gatsby-image';
 import './Page.css';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
-import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
+import styled from 'react-emotion';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -19,6 +20,41 @@ const pagePropTypes = {
   successText: PropTypes.string.isRequired,
   errorText: PropTypes.string.isRequired,
 };
+
+const Container = styled('div')({
+  maxWidth: 1240,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: 10,
+  paddingRight: 10,
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginTop: 140,
+  marginBottom: 140,
+  '@media (max-width: 786px)': {
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: 0,
+    marginBottom: 50,
+  },
+});
+
+const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
+  // Why did I even make this
+  ({ width }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%',
+    '@media (min-width: 786px)': {
+      width,
+    },
+  }),
+);
+
+const DashboardPhone = styled(Img)({
+  height: '100%',
+});
 
 class DownloadTemplate extends React.Component {
   static propTypes = {
@@ -94,6 +130,7 @@ class DownloadTemplate extends React.Component {
       header,
       footer,
       langKey,
+      dashboardPhoneFile,
     } = this.props;
     const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
     const isDisabled = !phoneNumber || isSending;
@@ -105,72 +142,73 @@ class DownloadTemplate extends React.Component {
         <StickyContainer>
           <Header data={header} langKey={langKey} />
           <article className="Site-content u-flexGrow1">
-            <div
-              className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
-              style={{
-                height: '100%',
-              }}
-            >
-              <div className="u-textCenter">
-                <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
-                  {heading}
-                </h1>
-              </div>
-              <div className="u-spaceMB5">
+            <Container>
+              <Column width="60%">
                 <div className="u-textCenter">
-                  <div>
-                    {isSuccessful ? (
-                      <div>{successText}</div>
-                    ) : (
-                      <form onSubmit={this.handleSubmit}>
-                        <input
-                          style={{
-                            minWidth: '280px',
-                          }}
-                          className={[
-                            'TextInput u-spaceMB12 u-spaceMR11',
-                            hasErrors && 'has-errors',
-                          ].join(' ')}
-                          type="tel"
-                          placeholder={phoneNumberPlaceholder}
-                          value={phoneNumber}
-                          onChange={this.handleChange}
-                        />
-                        <button
-                          type="submit"
-                          disabled={isDisabled}
-                          style={{
-                            backgroundColor: isDisabled
-                              ? 'rgb(175, 175, 175)'
-                              : 'inherit',
-                          }}
-                          className={[
-                            !isDisabled && 'u-backgroundPrimaryBlue',
-                            'Button u-colorWhite u-spaceMB12',
-                          ].join(' ')}
-                        >
-                          {ctaText}
-                        </button>
-                      </form>
-                    )}
-                    {isSending && (
-                      <div className="Spinner">
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                      </div>
-                    )}
-                    {hasErrors && (
-                      <div className="u-spaceMT8 u-colorPrimaryPink">
-                        {errorText}
-                      </div>
-                    )}
+                  <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
+                    {heading}
+                  </h1>
+                </div>
+                <div className="u-spaceMB5">
+                  <div className="u-textCenter">
+                    <div>
+                      {isSuccessful ? (
+                        <div>{successText}</div>
+                      ) : (
+                        <form onSubmit={this.handleSubmit}>
+                          <input
+                            style={{
+                              minWidth: '280px',
+                            }}
+                            className={[
+                              'TextInput u-spaceMB12 u-spaceMR11',
+                              hasErrors && 'has-errors',
+                            ].join(' ')}
+                            type="tel"
+                            placeholder={phoneNumberPlaceholder}
+                            value={phoneNumber}
+                            onChange={this.handleChange}
+                          />
+                          <button
+                            type="submit"
+                            disabled={isDisabled}
+                            style={{
+                              backgroundColor: isDisabled
+                                ? 'rgb(175, 175, 175)'
+                                : 'inherit',
+                            }}
+                            className={[
+                              !isDisabled && 'u-backgroundPrimaryBlue',
+                              'Button u-colorWhite u-spaceMB12',
+                            ].join(' ')}
+                          >
+                            {ctaText}
+                          </button>
+                        </form>
+                      )}
+                      {isSending && (
+                        <div className="Spinner">
+                          <div className="Spinner__bounce" />
+                          <div className="Spinner__bounce" />
+                          <div className="Spinner__bounce" />
+                          <div className="Spinner__bounce" />
+                        </div>
+                      )}
+                      {hasErrors && (
+                        <div className="u-spaceMT8 u-colorPrimaryPink">
+                          {errorText}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <FakeHedvigWebButton />
-              </div>
-            </div>
+              </Column>
+              <Column width="40%">
+                {dashboardPhoneFile && (
+                  <DashboardPhone sizes={dashboardPhoneFile.image.sizes} />
+                )}
+              </Column>
+            </Container>
           </article>
         </StickyContainer>
         <Footer data={footer} langKey={langKey} />
@@ -192,6 +230,7 @@ const Download = ({ data, pathContext }) => (
     header={data.header}
     footer={data.footer}
     langKey={pathContext.langKey}
+    dashboardPhoneFile={data.dashboardPhoneFile}
   />
 );
 
@@ -220,6 +259,16 @@ export const downloadPageQuery = graphql`
         cta_text
         success_text
         error_text
+      }
+    }
+
+    dashboardPhoneFile: file(
+      relativePath: { eq: "download/dashboard-phone.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 620) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
       }
     }
 
