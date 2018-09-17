@@ -21,7 +21,7 @@ interface BlogPostProps {
   excerpt: string;
   topImage: string;
   date: string;
-  author?: Author;
+  author: Author;
   slug: string;
   tags: string[];
 }

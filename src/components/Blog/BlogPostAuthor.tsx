@@ -6,7 +6,7 @@ import svLocale from 'date-fns/locale/sv';
 import { Author } from 'src/components/Blog/types';
 
 interface BlogPostAuthorProps {
-  author?: Author;
+  author: Author;
   date: string; // DateString, maybe better representation aswell?
 }
 
@@ -40,19 +40,18 @@ const AuthorTextContainer = styled('div')({
 
 const BlogPostAuthor: React.SFC<BlogPostAuthorProps> = ({ author, date }) => (
   <AuthorContainer>
-    {author &&
-      author.image && (
-        <PortraitContainer>
-          <Portrait src={author.image} alt={`Porträtt av ${author.name}`} />
-        </PortraitContainer>
-      )}
+    {author.image && (
+      <PortraitContainer>
+        <Portrait src={author.image} alt={author.name} />
+      </PortraitContainer>
+    )}
     <AuthorTextContainer>
       <div>
         {format(parse(date), 'DD MMMM YYYY', {
           locale: svLocale,
         })}
       </div>
-      <div>{author ? author.name : 'Anonym'}</div>
+      <div>{author.name}</div>
     </AuthorTextContainer>
   </AuthorContainer>
 );
