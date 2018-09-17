@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
 import Img from 'gatsby-image';
 import './Page.css';
+import { fonts } from '@hedviginsurance/brand';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
@@ -54,6 +55,17 @@ const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
 const DashboardPhone = styled(Img)({
   height: '100%',
 });
+
+const Heading = styled('h1')({
+  textAlign: 'center',
+  fontFamily: fonts.SORAY,
+  fontSize: 36,
+  '@media (min-width: 786px)': {
+    fontSize: 50,
+  },
+});
+
+// const CustomButton = styled(Button)(({ disabled }) => ({}));
 
 class DownloadTemplate extends React.Component {
   static propTypes = {
@@ -144,9 +156,7 @@ class DownloadTemplate extends React.Component {
             <Container>
               <Column width="60%">
                 <div className="u-textCenter">
-                  <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
-                    {heading}
-                  </h1>
+                  <Heading>{heading}</Heading>
                 </div>
                 <div className="u-spaceMB5">
                   <div className="u-textCenter">
