@@ -18,6 +18,7 @@ import './Home.css';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
+import { SwitcherSources } from '../sections/ladning/switcher-sources';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -256,33 +257,7 @@ class LandingTemplate extends React.Component {
 
             <PriceSection {...pricing} />
 
-            {/* Customer source */}
-            <div className="u-backgroundSecondaryGrey">
-              <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {customerSource.heading}
-                </h1>
-                <figure // eslint-disable-line
-                  className="u-spaceMT8"
-                  onClick={this.registerCustomerSourceClick}
-                >
-                  {customerSourceDesktopFile && (
-                    <Img
-                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
-                      sizes={customerSourceDesktopFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                  {customerSourceMobileFile && (
-                    <Img
-                      className="Home-customerSource-image-mobile u-lg-hidden"
-                      sizes={customerSourceMobileFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                </figure>
-              </div>
-            </div>
+            <SwitcherSources />
 
             {/* Model */}
             <div className="u-backgroundWhite">
