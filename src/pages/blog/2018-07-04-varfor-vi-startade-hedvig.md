@@ -44,6 +44,6 @@ content: >-
   kände att vi var tvungna att göra något åt det.
 
 
-  Så vi startade [Hedvig](www.hedvig.com).
+  Så vi startade [Hedvig](https://www.hedvig.com).
 ---
 
