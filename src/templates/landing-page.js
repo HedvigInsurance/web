@@ -15,45 +15,11 @@ import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
+import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
+import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
+import PaidRightAway from '../components/Animations/PaidRightAway';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
-const insuranceInMinutesAnimation = require('assets/animations/three-explainers/insurance-in-minutes.json');
-
-const insuranceInMinutesOptions = {
-  loop: false,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: insuranceInMinutesAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
-const claimOnPhoneAnimation = require('assets/animations/three-explainers/claim-on-your-phone.json');
-
-const claimOnPhoneOptions = {
-  loop: true,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: claimOnPhoneAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
-
-const paidRightAwayAnimation = require('assets/animations/three-explainers/paid-right-away.json');
-
-const paidRightAwayOptions = {
-  loop: false,
-  autoplay: false,
-  renderer: 'svg',
-  animationData: paidRightAwayAnimation,
-  rendererSettings: {
-    progressiveLoad: true,
-    preserveAspectRatio: 'xMaxYMin meet',
-  },
-};
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -199,13 +165,11 @@ class LandingTemplate extends React.Component {
                 >
                   <div className="u-flex u-flexCol u-lg-flexRow u-textCenter">
                     <div className="u-lg-size1of3">
-                      <LottieLoader
+                      <InsuranceInMinutes
                         ref={(anim) => {
                           this.insuranceInMinutesAnim = anim;
                         }}
-                        options={insuranceInMinutesOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12 u-lg-spaceMH10">
                         {
@@ -221,13 +185,11 @@ class LandingTemplate extends React.Component {
                       </p>
                     </div>
                     <div className="u-lg-size1of3">
-                      <LottieLoader
+                      <ClaimOnPhone
                         ref={(anim) => {
                           this.claimOnPhoneAnimation = anim;
                         }}
-                        options={claimOnPhoneOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.claim_on_phone.title}
@@ -240,13 +202,11 @@ class LandingTemplate extends React.Component {
                       </p>
                     </div>
                     <div className="u-lg-size1of3">
-                      <LottieLoader
+                      <PaidRightAway
                         ref={(anim) => {
                           this.paidRightAwayAnimation = anim;
                         }}
-                        options={paidRightAwayOptions}
-                        width={THREE_EXPLAINER_WIDTH_HEIGHT}
-                        height={THREE_EXPLAINER_WIDTH_HEIGHT}
+                        sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
                       <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
                         {threeExplainers.three_explainers.paid_right_away.title}
