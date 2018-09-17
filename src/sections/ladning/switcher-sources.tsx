@@ -19,18 +19,31 @@ interface BarProps {
 
 const Container = styled('div')({
   display: 'flex',
+  marginLeft: '15%',
+  marginRight: '15%',
+  '@media (max-width: 600px)': {
+    marginLeft: '10%',
+    marginRight: '10%',
+  },
 });
 
-const CompanyNamesContainer = styled('div')({});
+const CompanyNamesContainer = styled('div')({
+  marginRight: '10px',
+});
 
 const BarsContainer = styled('div')({
   width: '100%',
+  '@media (max-width: 600px)': {
+    width: '70%',
+  },
 });
 
 const Bar = styled('div')((props: BarProps) => ({
   backgroundColor: props.color,
   height: 10,
+  marginRight: '10px',
   display: 'inline-block',
+  borderRadius: 10,
 }));
 
 const calculateViewPercentage = (positions: ViewPositions) => {
@@ -81,21 +94,21 @@ class SwitcherSources extends React.Component<{}, Point> {
           <div>
             <Bar
               color={colors.BLACK_PURPLE}
-              style={{ width: `${percent * 100}%` }}
+              style={{ width: `${percent * 29*2.5}%` }}
             />
-            <div>29%</div>
+            <div style={{textAlign: 'right', display: 'inline-block' }}>29%</div>
           </div>
           <div>
-            <Bar color={colors.PURPLE} style={{ width: `${percent * 100}%` }} />
-            <div>25%</div>
+            <Bar color={colors.PURPLE} style={{ width: `${percent * 25*2.5}%` }} />
+            <div style={{textAlign: 'right', display: 'inline-block' }}>25%</div>
           </div>
           <div>
-            <Bar color={colors.PINK} style={{ width: `${percent * 100}%` }} />
-            <div>18%</div>
+            <Bar color={colors.PINK} style={{ width: `${percent * 18*2.5}%` }} />
+            <div style={{textAlign: 'right', display: 'inline-block' }}>18%</div>
           </div>
           <div>
-            <Bar color={colors.GREEN} style={{ width: `${percent * 100}%` }} />
-            <div>11%</div>
+            <Bar color={colors.GREEN} style={{ width: `${percent * 11*2.5}%` }} />
+            <div style={{textAlign: 'right', display: 'inline-block' }}>11%</div>
           </div>
         </BarsContainer>
       </Container>
