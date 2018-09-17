@@ -34,9 +34,6 @@ const getBlogPosts = (posterEdges, postEdges, tag) =>
       />
     )),
   )(postEdges);
-const pagePropTypes = {
-  title: PropTypes.string.isRequired,
-};
 const postPropTypes = {
   node: PropTypes.shape({
     fields: PropTypes.shape({ slug: PropTypes.string.isRequired }).isRequired,
@@ -74,7 +71,7 @@ const TagTemplate = ({ data, pathContext }) => {
     <main className="Site">
       <Helmet>
         <title>{pageTitle}</title>
-        <meta name="og:title" content={pageTitle} />
+        <meta property="og:title" content={pageTitle} />
       </Helmet>
       <StickyContainer>
         <Header data={header} langKey="se" />
@@ -92,7 +89,6 @@ const TagTemplate = ({ data, pathContext }) => {
 TagTemplate.propTypes = {
   pathContext: PropTypes.shape({ tag: PropTypes.string.isRequired }).isRequired,
   data: PropTypes.shape({
-    page: PropTypes.shape(pagePropTypes).isRequired,
     posts: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.shape(postPropTypes)).isRequired,
     }).isRequired,

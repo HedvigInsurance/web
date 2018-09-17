@@ -139,10 +139,15 @@ const BlogPostTemplate = ({
   <main className="Site">
     <Helmet>
       <title>{title} | Hedvig</title>
-      <meta name="og:title" content={`${title} | Hedvig`} />
-      <meta name="og:description" content={excerpt} />
-      <meta name="og:type" content="article" />
-      <meta name="og:image" content={topImage} />
+      <meta property="og:title" content={`${title} | Hedvig`} />
+      <meta property="og:description" content={excerpt} />
+      <meta property="og:type" content="article" />
+      {topImage && [
+        <meta key={0} property="og:image" content={topImage} />,
+        <meta key={1} property="og:image:width" content="" />,
+        <meta key={2} property="og:image:height" content="" />,
+        <meta key={3} property="twitter:image" content={topImage} />,
+      ]}
     </Helmet>
     <StickyContainer>
       <Header data={header} langKey="se" />
