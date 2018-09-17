@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Varför vi startade Hedvig
 date: '2018-07-04T14:35:05+02:00'
-topImage: /uploads/victor-xok-590629-unsplash.jpg
+topImage: /uploads/lagenhet-hemforsakring.jpg
 cta:
   label: Kom igång med Hedvig
   show: true
@@ -29,9 +29,7 @@ content: >-
   trasig.
 
 
-
-
-  ![Hedvig – Grundare](/uploads/founders.jpg)
+  ![Hedvig – Grundare](/uploads/hedvig-grundare.jpg)
 
 
   Hur då?
