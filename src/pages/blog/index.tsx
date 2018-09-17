@@ -61,7 +61,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
         <title>{page.title}</title>
         <meta property="og:title" content={page.title} />
         <meta property="og:description" content={data.page.hero.text} />
-        <meta property="og:image" content={page.hero.image} />
+        <meta property="og:image" content={process.env.URL + page.hero.image} />
         <meta property="og:image:width" content="" />
         <meta property="og:image:height" content="" />
       </Helmet>

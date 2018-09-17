@@ -143,10 +143,18 @@ const BlogPostTemplate = ({
       <meta property="og:description" content={excerpt} />
       <meta property="og:type" content="article" />
       {topImage && [
-        <meta key={0} property="og:image" content={topImage} />,
+        <meta
+          key={0}
+          property="og:image"
+          content={process.env.URL + topImage}
+        />,
         <meta key={1} property="og:image:width" content="" />,
         <meta key={2} property="og:image:height" content="" />,
-        <meta key={3} property="twitter:image" content={topImage} />,
+        <meta
+          key={3}
+          property="twitter:image"
+          content={process.env.URL + topImage}
+        />,
       ]}
     </Helmet>
     <StickyContainer>
