@@ -11,7 +11,7 @@ import {
 } from 'src/components/Blog/OverviewHero';
 import { GatsbyImageProps } from 'gatsby-image';
 import { sortBlogPosts, getBlogPostPropsFromEdge } from 'src/utils/blog-posts';
-import { pipe, reverse, map, addIndex } from 'ramda';
+import { pipe, reverse, map, addIndex, pathOr } from 'ramda';
 import { BlogPostProps } from 'src/components/Blog/BlogPost';
 import { notNullable } from 'src/utils/nullables';
 
@@ -54,11 +54,7 @@ interface BlogProps {
 
 const Blog: React.SFC<BlogProps> = ({ data }) => {
   const { teamImageFile, posters, posts, page, header, footer } = data;
-  const teamImageSrc =
-    (teamImageFile &&
-      teamImageFile.image.sizes &&
-      (teamImageFile.image.sizes as { src: string }).src) ||
-    '';
+  const teamImageSrc = pathOr('', ['image', 'sizes', 'src'], teamImageFile);
   return (
     <main className="Site">
       <Helmet>
