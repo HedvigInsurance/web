@@ -10,7 +10,6 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
-import { PriceSection } from 'src/sections/price';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
@@ -92,13 +91,7 @@ class LandingTemplate extends React.Component {
 
   render() {
     const {
-      reinsuredFile,
-      authorisedFile,
-      aaRatedFile,
       mediaLogosFile,
-      modelFixedFile,
-      modelClaimPoolFile,
-      modelCharityFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       customerSourceDesktopFile,
@@ -107,10 +100,7 @@ class LandingTemplate extends React.Component {
       landing,
       threeExplainers,
       perilForest,
-      philosophy,
       customerSource,
-      safety,
-      pricing,
       header,
       footer,
       langKey,
@@ -294,8 +284,6 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            <PriceSection {...pricing} />
-
             {/* Customer source */}
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePT2 u-spacePB5">
@@ -324,124 +312,6 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Model */}
-            <div className="u-backgroundWhite">
-              <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
-                  {philosophy.heading}
-                </h2>
-                <p className="u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter Home-model-paragraph">
-                  {philosophy.paragraph}
-                </p>
-                <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryBlackPurple u-spacePV6">
-                        {modelFixedFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelFixedFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card1_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPurple u-spacePV6">
-                        {modelClaimPoolFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelClaimPoolFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card2_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPink u-spacePV6">
-                        {modelCharityFile && (
-                          <Img
-                            className="Home-model-image Home-model-image-charity"
-                            sizes={modelCharityFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card3_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Safety */}
-            <div className="u-backgroundPrimaryDarkestPurple Home-safety">
-              <div className="Grid Grid--withGutter Grid--alignCenter">
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {reinsuredFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={reinsuredFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item1}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {aaRatedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={aaRatedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item2}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {authorisedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={authorisedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item3}
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Media logos on mobile */}
             <div>
               <div className="Container u-lg-hidden">
@@ -464,13 +334,7 @@ class LandingTemplate extends React.Component {
 }
 
 LandingTemplate.propTypes = {
-  reinsuredFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  authorisedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  aaRatedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelFixedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelClaimPoolFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
