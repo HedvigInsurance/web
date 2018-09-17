@@ -40,7 +40,6 @@ const Container = styled('div')({
 });
 
 const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
-  // Why did I even make this
   ({ width }) => ({
     display: 'flex',
     flexDirection: 'column',
