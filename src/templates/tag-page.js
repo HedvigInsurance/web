@@ -13,6 +13,27 @@ import { getBlogPostPropsFromEdge, sortBlogPosts } from '../utils/blog-posts';
 import { notNullable } from '../utils/nullables';
 import { kebabCaseTag } from '../utils/blog-tags';
 
+const getBlogPosts = (posterEdges, postEdges, tag) =>
+  pipe(
+    sortBlogPosts,
+    reverse,
+    filter(
+      pathSatisfies((tags) => tags.map(kebabCaseTag).includes(tag), [
+        'node',
+        'frontmatter',
+        'tags',
+      ]),
+    ),
+    map(getBlogPostPropsFromEdge(posterEdges)),
+    addIndex(map)((postProps, index, originalArray) => (
+      <BlogPost
+        key={postProps.slug}
+        {...postProps}
+        isFirst={index === 0}
+        isLast={index === notNullable(originalArray).length - 1}
+      />
+    )),
+  )(postEdges);
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
 };
@@ -60,27 +81,7 @@ const TagTemplate = ({ data, pathContext }) => {
         <BlogContainer verticalMargin>
           <TagTemplateTitle>Inlägg taggade med: {tag}</TagTemplateTitle>
           <Spacing height={20} />
-
-          {pipe(
-            sortBlogPosts,
-            reverse,
-            filter(
-              pathSatisfies((tags) => tags.map(kebabCaseTag).includes(tag), [
-                'node',
-                'frontmatter',
-                'tags',
-              ]),
-            ),
-            map(getBlogPostPropsFromEdge(posters.edges)),
-            addIndex(map)((postProps, index, originalArray) => (
-              <BlogPost
-                key={postProps.slug}
-                {...postProps}
-                isFirst={index === 0}
-                isLast={index === notNullable(originalArray).length - 1}
-              />
-            )),
-          )(posts.edges)}
+          {getBlogPosts(posters.edges, posts.edges, tag)}
         </BlogContainer>
         <Footer data={footer} langKey="se" />
       </StickyContainer>
