@@ -35,7 +35,7 @@ content: >-
   dig över vad som händer om något går fel. 
 
 
-  ![Cykel](/uploads/student-hemforsakring.png)
+  ![Cykel](/uploads/cykel-student-hemforsakring.jpg)
 
 
   Visst, du kan ju hoppas på det bästa, tråkiga saker som vattenläckor och
