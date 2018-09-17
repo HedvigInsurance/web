@@ -11,6 +11,7 @@ import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
+import { JoinBanner } from 'src/components/JoinBanner';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
@@ -176,6 +177,8 @@ class LandingTemplate extends React.Component {
                 )}
               </div>
             </div>
+
+            <JoinBanner />
 
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
