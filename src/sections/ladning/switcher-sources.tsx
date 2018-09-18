@@ -43,7 +43,6 @@ const TableRow = styled('div')({
   '@media (max-width: 600px)':{
     display: 'flex',
     flexDirection: 'column-reverse',
-
   },
 });
 
@@ -78,7 +77,10 @@ const PercentageText = styled('div')({
   fontSize: 18,
   color: colors.DARK_GRAY,
   textAlign: 'right',
-  display: 'inline-block'
+  display: 'inline-block',
+  '@media (max-width: 600px)':{
+    fontSize: 16
+  },
 });
 
 const Container = styled('div')({
