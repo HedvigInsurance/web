@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
-import Img from 'gatsby-image';
 import './Page.css';
-import { fonts } from '@hedviginsurance/brand';
+import { fonts, colors } from '@hedviginsurance/brand';
+import styled from 'react-emotion';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
-import styled from 'react-emotion';
+import { Spacing } from 'src/components/Spacing';
+import { DownloadSpinner } from 'src/components/DownloadSpinner';
+import { RotatingPhoneVideo } from 'src/components/RotatingPhoneVideo';
+import { Button } from 'src/components/Button';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -30,13 +33,11 @@ const Container = styled('div')({
   paddingRight: 10,
   display: 'flex',
   justifyContent: 'space-between',
-  marginTop: 140,
-  marginBottom: 140,
-  '@media (max-width: 786px)': {
+  paddingTop: 50,
+  paddingBottom: 50,
+  '@media (max-width: 1024px)': {
     alignItems: 'center',
-    flexDirection: 'column',
-    marginTop: 0,
-    marginBottom: 50,
+    flexDirection: 'column-reverse',
   },
 });
 
@@ -45,27 +46,51 @@ const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
-    '@media (min-width: 786px)': {
+    '@media (min-width: 1024px)': {
       width,
     },
   }),
 );
 
-const DashboardPhone = styled(Img)({
-  height: '100%',
-});
-
 const Heading = styled('h1')({
   textAlign: 'center',
   fontFamily: fonts.SORAY,
   fontSize: 36,
-  '@media (min-width: 786px)': {
+  '@media (min-width: 1024px)': {
     fontSize: 50,
   },
 });
 
-// const CustomButton = styled(Button)(({ disabled }) => ({}));
+const CustomButton = styled(Button)(({ disabled }) => ({
+  backgroundColor: disabled ? colors.LIGHT_GRAY : colors.GREEN,
+}));
+const Input = styled('input')(({ error }) => ({
+  minWidth: 280,
+  borderWidth: 2,
+  borderStyle: 'solid',
+  borderColor: error ? colors.PINK : colors.LIGHT_GRAY,
+  borderRadius: 30,
+  boxShadow: 'none',
+  padding: '0.79em 1.2em',
+  outline: 'none',
+  ':focus': { borderColor: colors.PURPLE },
+}));
+
+const Form = styled('form')({
+  display: 'flex',
+  '@media (max-width: 1024px)': {
+    flexDirection: 'column',
+  },
+});
+
+const ErrorText = styled('p')({
+  color: colors.PINK,
+});
+const Article = styled('article')({
+  backgroundColor: '#F9FBFC',
+});
 
 class DownloadTemplate extends React.Component {
   static propTypes = {
@@ -141,7 +166,6 @@ class DownloadTemplate extends React.Component {
       header,
       footer,
       langKey,
-      dashboardPhoneFile,
     } = this.props;
     const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
     const isDisabled = !phoneNumber || isSending;
@@ -152,73 +176,43 @@ class DownloadTemplate extends React.Component {
         </Helmet>
         <StickyContainer>
           <Header data={header} langKey={langKey} />
-          <article className="Site-content u-flexGrow1">
+          <Article className="Site-content u-flexGrow1">
             <Container>
-              <Column width="60%">
+              <Column width="50%">
+                <RotatingPhoneVideo />
+              </Column>
+              <Column width="50%">
                 <div className="u-textCenter">
                   <Heading>{heading}</Heading>
                 </div>
-                <div className="u-spaceMB5">
-                  <div className="u-textCenter">
-                    <div>
-                      {isSuccessful ? (
-                        <div>{successText}</div>
-                      ) : (
-                        <form onSubmit={this.handleSubmit}>
-                          <input
-                            style={{
-                              minWidth: '280px',
-                            }}
-                            className={[
-                              'TextInput u-spaceMB12 u-spaceMR11',
-                              hasErrors && 'has-errors',
-                            ].join(' ')}
-                            type="tel"
-                            placeholder={phoneNumberPlaceholder}
-                            value={phoneNumber}
-                            onChange={this.handleChange}
-                          />
-                          <button
-                            type="submit"
-                            disabled={isDisabled}
-                            style={{
-                              backgroundColor: isDisabled
-                                ? 'rgb(175, 175, 175)'
-                                : 'inherit',
-                            }}
-                            className={[
-                              !isDisabled && 'u-backgroundPrimaryBlue',
-                              'Button u-colorWhite u-spaceMB12',
-                            ].join(' ')}
-                          >
-                            {ctaText}
-                          </button>
-                        </form>
-                      )}
-                      {isSending && (
-                        <div className="Spinner">
-                          <div className="Spinner__bounce" />
-                          <div className="Spinner__bounce" />
-                          <div className="Spinner__bounce" />
-                          <div className="Spinner__bounce" />
-                        </div>
-                      )}
-                      {hasErrors && (
-                        <div className="u-spaceMT8 u-colorPrimaryPink">
-                          {errorText}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </Column>
-              <Column width="40%">
-                {dashboardPhoneFile && (
-                  <DashboardPhone sizes={dashboardPhoneFile.image.sizes} />
+                <Spacing height={62.5} />
+                {isSuccessful ? (
+                  <div>{successText}</div>
+                ) : (
+                  <Form onSubmit={this.handleSubmit}>
+                    <Input
+                      error={hasErrors}
+                      type="tel"
+                      placeholder={phoneNumberPlaceholder}
+                      value={phoneNumber}
+                      onChange={this.handleChange}
+                    />
+                    <Spacing height={12} width={15} />
+                    <CustomButton type="submit" disabled={isDisabled}>
+                      {ctaText}
+                    </CustomButton>
+                  </Form>
+                )}
+                {isSending && <DownloadSpinner />}
+                {hasErrors && (
+                  <React.Fragment>
+                    <Spacing height={30} />
+                    <ErrorText>{errorText}</ErrorText>
+                  </React.Fragment>
                 )}
               </Column>
             </Container>
-          </article>
+          </Article>
         </StickyContainer>
         <Footer data={footer} langKey={langKey} />
       </main>
@@ -268,16 +262,6 @@ export const downloadPageQuery = graphql`
         cta_text
         success_text
         error_text
-      }
-    }
-
-    dashboardPhoneFile: file(
-      relativePath: { eq: "download/dashboard-phone.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 620) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
       }
     }
 
