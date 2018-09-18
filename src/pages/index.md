@@ -55,11 +55,9 @@ pricing:
   owned_title: För dig i bostadsrätt
   rental_price: 99kr
   rental_title: För dig i hyresrätt
-customer_source:
-  heading: Redan försäkrad? Vi sköter bytet
-  image_alt: >-
-    Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
-    If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
+customerSources:
+  headline: Redan försäkrad? Vi sköter bytet
+  paragraph: Våra användare kommer ifrån
 safety:
   item1: >-
     Hedvig är tryggat av Inter Hannover, del av en av världens största

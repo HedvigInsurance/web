@@ -7,6 +7,11 @@ interface Point {
   y: number;
 }
 
+interface Props {
+  headline: string;
+  paragraph: string;
+}
+
 interface ViewPositions {
   scrollHeight: number;
   scrollPosition: number;
@@ -148,8 +153,7 @@ const calculateViewPercentage = (positions: ViewPositions, offset: number) => {
   const delta = (numerator / denumerator) * -1;
   return Math.min(1, Math.max(0, delta));
 };
-class SwitcherSources extends React.Component<{}, Point> {
-  state = { x: 0, y: 0 };
+class CustomerSources extends React.Component<Props> {
   scroll: Point = { x: 0, y: 0 };
   tableRef: HTMLDivElement | null = null;
   rowRefs: {
@@ -198,9 +202,9 @@ class SwitcherSources extends React.Component<{}, Point> {
       <Container className={'Container'}>
         <TitleSection>
           <Title className="u-md-fontSize2 u-lg-fontSize2">
-            Redan försäkrad? Vi sköter bytet
+            {this.props.headline}
           </Title>
-          <SubTitle>Våra användare kommer ifrån</SubTitle>
+          <SubTitle>{this.props.paragraph}</SubTitle>
         </TitleSection>
 
         <Table
@@ -245,4 +249,4 @@ class SwitcherSources extends React.Component<{}, Point> {
   }
 }
 
-export { SwitcherSources };
+export { CustomerSources };

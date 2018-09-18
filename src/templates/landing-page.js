@@ -18,7 +18,7 @@ import './Home.css';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
-import { SwitcherSources } from '../sections/landing/switcher-sources';
+import { CustomerSources } from '../sections/landing/customer-sources';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -75,6 +75,7 @@ class LandingTemplate extends React.Component {
       philosophy,
       safety,
       pricing,
+      customerSources,
       header,
       footer,
       langKey,
@@ -254,7 +255,10 @@ class LandingTemplate extends React.Component {
 
             <PriceSection {...pricing} />
 
-            <SwitcherSources />
+            <CustomerSources
+              headline={customerSources.headline}
+              paragraph={customerSources.paragraph}
+            />
 
             {/* Model */}
             <div className="u-backgroundWhite">
@@ -456,6 +460,10 @@ LandingTemplate.propTypes = {
     ownedPrice: PropTypes.string.isRequired,
     bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
+  customerSources: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+  }).isRequired,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
@@ -491,6 +499,7 @@ const Landing = ({ data, pathContext }) => {
         monthlyLabel: copy.pricing.monthly_label,
         aroundLabel: copy.pricing.around_label,
       }}
+      customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
       langKey={pathContext.langKey}
@@ -616,9 +625,9 @@ export const query = graphql`
             card3_paragraph
           }
         }
-        customer_source {
-          heading
-          image_alt
+        customerSources {
+          headline
+          paragraph
         }
         safety {
           item1
