@@ -28,7 +28,7 @@ const BackgroundImage = styled('img')({
   width: '82%',
   left: '5%',
   top: '-7%',
-  zIndex: '-1',
+  zIndex: -1,
   '@media (max-width: 600px)': {
     left: '10%',
     height: '75%',
@@ -44,9 +44,9 @@ const TableRow = styled('div')({
   },
 });
 
-const TableCell = styled('div')({
+const TableCellName = styled('div')({
   display: 'table-cell',
-  paddingRight: '10px',
+  paddingRight: 25,
   paddingBottom: 30,
 });
 const TableCellBar = styled('div')({
@@ -59,14 +59,12 @@ const TitleSection = styled('div')({
   display: 'inline',
 });
 
-const Title = styled('div')({
-  fontSize: 60,
-  lineHeight: '66px',
+const Title = styled('h2')({
   paddingBottom: 30,
 });
 
 const SubTitle = styled('div')({
-  fontSize: '20px',
+  fontSize: 20,
   lineHeight: '23px',
   paddingBottom: 60,
 });
@@ -82,8 +80,10 @@ const PercentageText = styled('div')({
 });
 
 const Container = styled('div')({
+  paddingTop: 120,
   '@media (max-width: 600px)': {
     overflow: 'hidden',
+    paddingTop: 60,
   },
 });
 
@@ -152,7 +152,6 @@ class SwitcherSources extends React.Component<{}, Point> {
   state = { x: 0, y: 0 };
   scroll: Point = { x: 0, y: 0 };
   tableRef: HTMLDivElement | null = null;
-  currentScrollInterPolation: number = 0;
   rowRefs: {
     [key: string]: {
       cellRef: HTMLDivElement | null;
@@ -182,7 +181,7 @@ class SwitcherSources extends React.Component<{}, Point> {
       );
       rowRef.barRef.style.width = calcBarWidth(percent, rowRef.percent);
       rowRef.barRef.style.marginRight = `${percent * 16}px`;
-      rowRef.cellRef.style.opacity = percent;
+      rowRef.cellRef.style.opacity = '' + percent;
     });
   };
 
@@ -198,7 +197,9 @@ class SwitcherSources extends React.Component<{}, Point> {
     return (
       <Container className={'Container'}>
         <TitleSection>
-          <Title>Redan försäkrad? Vi sköter bytet</Title>
+          <Title className="u-md-fontSize2 u-lg-fontSize2">
+            Redan försäkrad? Vi sköter bytet
+          </Title>
           <SubTitle>Våra användare kommer ifrån</SubTitle>
         </TitleSection>
 
@@ -211,9 +212,9 @@ class SwitcherSources extends React.Component<{}, Point> {
           <BarsContainer>
             {COMPANIES.map((company) => (
               <TableRow key={company.name}>
-                <TableCell>
+                <TableCellName>
                   <CompanyName>{company.name}</CompanyName>
-                </TableCell>
+                </TableCellName>
                 <TableCellBar
                   innerRef={(cellRef) => {
                     this.rowRefs[company.name] = {
