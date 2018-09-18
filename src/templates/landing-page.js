@@ -18,7 +18,7 @@ import './Home.css';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
-import { SwitcherSources } from '../sections/ladning/switcher-sources';
+import { SwitcherSources } from '../sections/landing/switcher-sources';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -68,14 +68,11 @@ class LandingTemplate extends React.Component {
       modelCharityFile,
       perilForestMobileFile,
       perilForestDesktopFile,
-      customerSourceDesktopFile,
-      customerSourceMobileFile,
       title,
       landing,
       threeExplainers,
       perilForest,
       philosophy,
-      customerSource,
       safety,
       pricing,
       header,
@@ -408,8 +405,6 @@ LandingTemplate.propTypes = {
   modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -446,10 +441,6 @@ LandingTemplate.propTypes = {
       card3_paragraph: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  customerSource: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    image_alt: PropTypes.string.isRequired,
-  }).isRequired,
   safety: PropTypes.shape({
     item1: PropTypes.string.isRequired,
     item2: PropTypes.string.isRequired,
@@ -484,14 +475,11 @@ const Landing = ({ data, pathContext }) => {
       modelCharityFile={data.modelCharityFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
-      customerSourceDesktopFile={data.customerSourceDesktopFile}
-      customerSourceMobileFile={data.customerSourceMobileFile}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       philosophy={copy.philosophy}
-      customerSource={copy.customer_source}
       safety={copy.safety}
       pricing={{
         heading: copy.pricing.heading,
@@ -565,24 +553,6 @@ export const query = graphql`
     ) {
       image: childImageSharp {
         sizes(maxWidth: 754) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    customerSourceDesktopFile: file(
-      relativePath: { eq: "home/customer-source-desktop@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 679) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    customerSourceMobileFile: file(
-      relativePath: { eq: "home/customer-source-mobile@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 276) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
