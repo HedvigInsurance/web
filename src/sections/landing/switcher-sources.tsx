@@ -21,7 +21,6 @@ const Table = styled('div')({
   position: 'relative',
   display: 'table',
   width: '100%',
-
 });
 
 const BackgroundImage = styled('img')({
@@ -30,17 +29,16 @@ const BackgroundImage = styled('img')({
   left: '5%',
   top: '-7%',
   zIndex: '-1',
-  '@media (max-width: 600px)':{
+  '@media (max-width: 600px)': {
     left: '10%',
     height: '75%',
     width: 'auto',
   },
-
 });
 
 const TableRow = styled('div')({
   display: 'table-row',
-  '@media (max-width: 600px)':{
+  '@media (max-width: 600px)': {
     display: 'flex',
     flexDirection: 'column-reverse',
   },
@@ -64,13 +62,13 @@ const TitleSection = styled('div')({
 const Title = styled('div')({
   fontSize: 60,
   lineHeight: '66px',
-  paddingBottom: 30
+  paddingBottom: 30,
 });
 
 const SubTitle = styled('div')({
   fontSize: '20px',
   lineHeight: '23px',
-  paddingBottom: 60
+  paddingBottom: 60,
 });
 
 const PercentageText = styled('div')({
@@ -78,14 +76,14 @@ const PercentageText = styled('div')({
   color: colors.DARK_GRAY,
   textAlign: 'right',
   display: 'inline-block',
-  '@media (max-width: 600px)':{
-    fontSize: 16
+  '@media (max-width: 600px)': {
+    fontSize: 16,
   },
 });
 
 const Container = styled('div')({
-  '@media (max-width: 600px)':{
-    overflow: 'hidden'
+  '@media (max-width: 600px)': {
+    overflow: 'hidden',
   },
 });
 
@@ -95,27 +93,57 @@ const CompanyName = styled('div')({
   lineHeight: 1,
   '@media (max-width: 600px)': {
     fontSize: 16,
-  }
+  },
 });
 
 const BarsContainer = styled('div')({
   width: '100%',
-
 });
 
 const Bar = styled('div')((props: BarProps) => ({
   backgroundColor: props.color,
-  height: 10,
-  marginRight: '10px',
+  height: 12,
   display: 'inline-block',
   borderRadius: 10,
 }));
 
-const calcBarWidth = (scrollPercent: number, weight: number) => `calc(${scrollPercent * ((100/29)*weight)}% - 60px)`;
+const COMPANIES = [
+  {
+    name: 'Länsförsäkringar',
+    percent: 29,
+    color: colors.BLACK_PURPLE,
+    offset: 100,
+  },
+  {
+    name: 'If',
+    percent: 25,
+    color: colors.PURPLE,
+    offset: 200,
+  },
+  {
+    name: 'TryggHansa',
+    percent: 18,
+    color: colors.PINK,
+    offset: 250,
+  },
+  {
+    name: 'Folksam',
+    percent: 11,
+    color: colors.GREEN,
+    offset: 250,
+  },
+  {
+    name: 'Övrigt',
+    percent: 17,
+    color: colors.DARK_GRAY,
+    offset: 275,
+  },
+];
 
-const calculateViewPercentage = (positions: ViewPositions) => {
-  const OFFSET = 200;
-  const numerator = positions.sectionPosition + OFFSET - positions.scrollHeight;
+const calcBarWidth = (scrollPercent: number, weight: number) =>
+  `calc(${scrollPercent * ((100 / 29) * weight)}% - 60px)`;
+const calculateViewPercentage = (positions: ViewPositions, offset: number) => {
+  const numerator = positions.sectionPosition + offset - positions.scrollHeight;
   const denumerator = positions.scrollHeight / 4;
   const delta = (numerator / denumerator) * -1;
   return Math.min(1, Math.max(0, delta));
@@ -123,11 +151,39 @@ const calculateViewPercentage = (positions: ViewPositions) => {
 class SwitcherSources extends React.Component<{}, Point> {
   state = { x: 0, y: 0 };
   scroll: Point = { x: 0, y: 0 };
-  ref: HTMLDivElement | null = null;
+  tableRef: HTMLDivElement | null = null;
+  currentScrollInterPolation: number = 0;
+  rowRefs: {
+    [key: string]: {
+      cellRef: HTMLDivElement | null;
+      barRef: HTMLDivElement | null;
+      percent: number;
+      offset: number;
+    };
+  } = {};
 
   handleScroll: EventListener = () => {
     this.scroll = { x: window.scrollX, y: window.scrollY };
-    this.forceUpdate();
+
+    Object.keys(this.rowRefs).forEach((key) => {
+      const rowRef = this.rowRefs[key];
+      if (rowRef.barRef === null || rowRef.cellRef === null) {
+        return;
+      }
+
+      const percent = calculateViewPercentage(
+        {
+          scrollHeight: window.innerHeight,
+          scrollPosition: this.scroll.y,
+          sectionPosition:
+            (this.tableRef && this.tableRef.getBoundingClientRect().top) || 0,
+        },
+        rowRef.offset,
+      );
+      rowRef.barRef.style.width = calcBarWidth(percent, rowRef.percent);
+      rowRef.barRef.style.marginRight = `${percent * 16}px`;
+      rowRef.cellRef.style.opacity = percent;
+    });
   };
 
   componentDidMount() {
@@ -139,11 +195,6 @@ class SwitcherSources extends React.Component<{}, Point> {
   }
 
   render() {
-    const percent = calculateViewPercentage({
-      scrollHeight: window.innerHeight,
-      scrollPosition: window.scrollY,
-      sectionPosition: (this.ref && this.ref.getBoundingClientRect().top) || 0,
-    });
     return (
       <Container className={'Container'}>
         <TitleSection>
@@ -153,82 +204,39 @@ class SwitcherSources extends React.Component<{}, Point> {
 
         <Table
           innerRef={(ref) => {
-            this.ref = ref;
+            this.tableRef = ref;
           }}
         >
-          <BackgroundImage src={'/assets/backgrounds/mesh@2x.png'}/>
+          <BackgroundImage src={'/assets/backgrounds/mesh@2x.png'} />
           <BarsContainer>
-            <TableRow>
-              <TableCell>
-                <CompanyName>Länsförsäkringar</CompanyName>
-              </TableCell>
-              <TableCellBar>
-                <Bar
-                  color={colors.BLACK_PURPLE}
-                  style={{ width: calcBarWidth(percent, 29)}}
-                />
-                <PercentageText>
-                  29%
-                </PercentageText>
-              </TableCellBar>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <CompanyName>If</CompanyName>
-              </TableCell>
-              <TableCellBar>
-                <Bar
-                  color={colors.PURPLE}
-                  style={{ width:calcBarWidth(percent, 25)}}
-                />
-                <PercentageText >
-                  25%
-                </PercentageText>
-              </TableCellBar>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <CompanyName>TryggHansa</CompanyName>
-              </TableCell>
-              <TableCellBar>
-                <Bar
-                  color={colors.PINK}
-                  style={{ width: calcBarWidth(percent, 18)}}
-                />
-                <PercentageText>
-                  18%
-                </PercentageText>
-              </TableCellBar>
-            </TableRow>
-            <TableRow>
-
-            <TableCell>
-              <CompanyName>Folksam</CompanyName>
-            </TableCell>
-            <TableCellBar>
-              <Bar
-                color={colors.GREEN}
-                style={{ width: calcBarWidth(percent, 11) }}
-              />
-              <PercentageText>
-                11%
-              </PercentageText>
-            </TableCellBar>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <CompanyName>Övriga</CompanyName>
-              </TableCell>
-              <TableCellBar>
-                <Bar
-                  color={'#9B9BAA'}
-                  style={{ width: calcBarWidth(percent, 17)}}
-                />
-                <PercentageText>
-                  17%
-                </PercentageText>
-              </TableCellBar>
-            </TableRow>
+            {COMPANIES.map((company) => (
+              <TableRow key={company.name}>
+                <TableCell>
+                  <CompanyName>{company.name}</CompanyName>
+                </TableCell>
+                <TableCellBar
+                  innerRef={(cellRef) => {
+                    this.rowRefs[company.name] = {
+                      ...(this.rowRefs[company.name] || {}),
+                      cellRef,
+                      percent: company.percent,
+                      offset: company.offset,
+                    };
+                  }}
+                >
+                  <Bar
+                    color={company.color}
+                    innerRef={(barRef) => {
+                      this.rowRefs[company.name] = {
+                        ...(this.rowRefs[company.name] || {}),
+                        barRef,
+                      };
+                    }}
+                  />
+                  <PercentageText>{`${company.percent}%`}</PercentageText>
+                </TableCellBar>
+              </TableRow>
+            ))}
           </BarsContainer>
         </Table>
       </Container>
