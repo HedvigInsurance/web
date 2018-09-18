@@ -17,8 +17,15 @@ interface BarProps {
   color: string;
 }
 
+const TitleSection = styled('div')({
+  height: '232px',
+  textAlign: 'center',
+  display: 'inline'
+});
+
 const Container = styled('div')({
   display: 'flex',
+  alignItems: 'baseline',
   marginLeft: '15%',
   marginRight: '15%',
   '@media (max-width: 600px)': {
@@ -78,24 +85,30 @@ class SwitcherSources extends React.Component<{}, Point> {
       sectionPosition: (this.ref && this.ref.getBoundingClientRect().top) || 0,
     });
     return (
+      <div>
+      <TitleSection>
+          <h1 style={{height: '200px'}}>Redan försäkrad? Vi sköter bytet</h1>
+          <p style={{height: '50px'}}>Våra användare kommer ifrån</p>
+      </TitleSection>
+
       <Container
         innerRef={(ref) => {
           this.ref = ref;
         }}
-        style={{ height: 500 }}
+        style={{ height: 250 }}
       >
+
         <CompanyNamesContainer>
           <div>Länsförsäkringar</div>
           <div>If</div>
           <div>TryggHansa</div>
           <div>Folksam</div>
+          <div>Övriga</div>
         </CompanyNamesContainer>
         <BarsContainer>
           <div>
             <Bar
-              color={colors.BLACK_PURPLE}
-              style={{ width: `${percent * 29*2.5}%` }}
-            />
+              color={colors.BLACK_PURPLE} style={{ width: `${percent * 29*2.5}%` }}/>
             <div style={{textAlign: 'right', display: 'inline-block' }}>29%</div>
           </div>
           <div>
@@ -110,8 +123,13 @@ class SwitcherSources extends React.Component<{}, Point> {
             <Bar color={colors.GREEN} style={{ width: `${percent * 11*2.5}%` }} />
             <div style={{textAlign: 'right', display: 'inline-block' }}>11%</div>
           </div>
+          <div>
+            <Bar color={'#9B9BAA'} style={{ width: `${percent * 17*2.5}%` }} />
+            <div style={{textAlign: 'right', display: 'inline-block' }}>17%</div>
+          </div>
         </BarsContainer>
       </Container>
+      </div>
     );
   }
 }
