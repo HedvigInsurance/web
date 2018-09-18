@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
+import remark from 'remark'
+import reactRenderer from 'remark-react'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import './Page.css';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import './Page.css'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -15,7 +15,7 @@ const pagePropTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({ section: PropTypes.string.isRequired }),
   ).isRequired,
-};
+}
 
 const TermsTemplate = ({
   title,
@@ -57,13 +57,13 @@ const TermsTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 TermsTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
-};
+}
 
 const Terms = ({ data, pathContext }) => (
   <TermsTemplate
@@ -74,7 +74,7 @@ const Terms = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 Terms.propTypes = {
   data: PropTypes.shape({
@@ -85,9 +85,9 @@ Terms.propTypes = {
     footer: footerPropTypes,
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { TermsTemplate };
+export { TermsTemplate }
 
 export const termsPageQuery = graphql`
   query TermsPage($id: String!) {
@@ -109,6 +109,6 @@ export const termsPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default Terms;
+export default Terms

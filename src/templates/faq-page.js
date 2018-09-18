@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
-import './Page.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
+import remark from 'remark'
+import reactRenderer from 'remark-react'
+import './Page.css'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -18,7 +18,7 @@ const pagePropTypes = {
       answer: PropTypes.string.isRequired,
     }),
   ).isRequired,
-};
+}
 
 const FAQTemplate = ({
   title,
@@ -65,12 +65,12 @@ const FAQTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 FAQTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
-};
+}
 
 const FAQ = ({ data, pathContext }) => (
   <FAQTemplate
@@ -81,7 +81,7 @@ const FAQ = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 FAQ.propTypes = {
   data: PropTypes.shape({
@@ -92,9 +92,9 @@ FAQ.propTypes = {
     footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { FAQTemplate };
+export { FAQTemplate }
 
 export const faqPageQuery = graphql`
   query FaqPage($id: String!) {
@@ -117,6 +117,6 @@ export const faqPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default FAQ;
+export default FAQ

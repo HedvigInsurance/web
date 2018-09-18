@@ -1,14 +1,14 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { Spring, config, animated } from 'react-spring';
+import * as React from 'react'
+import styled from 'react-emotion'
+import { animated, config, Spring } from 'react-spring'
 
-import { ReactComponent as PlayIcon } from 'assets/icons/play.svg';
+import { ReactComponent as PlayIcon } from 'assets/icons/play.svg'
 
 const MissionTitle = styled(animated.span)({
   color: 'white',
   fontSize: '30px',
   lineHeight: '40px',
-});
+})
 
 const Mission = styled(animated.h1)({
   color: 'white',
@@ -27,7 +27,7 @@ const Mission = styled(animated.h1)({
     fontSize: '90px',
     lineHeight: '100px',
   },
-});
+})
 
 const PlayButtonContainer = styled('div')({
   display: 'inline-block',
@@ -36,7 +36,7 @@ const PlayButtonContainer = styled('div')({
   ':active': {
     transform: 'scale(0.9)',
   },
-});
+})
 
 const PlayButton = styled(animated.button)({
   color: 'white',
@@ -51,15 +51,15 @@ const PlayButton = styled(animated.button)({
   ':focus': {
     outline: 0,
   },
-});
+})
 
-const DELAY = 500;
+const DELAY = 500
 
 interface TitleProps {
-  clickedPlayButton: () => void;
-  headline: string;
-  title: string;
-  playButtonText: string;
+  clickedPlayButton: () => void
+  headline: string
+  title: string
+  playButtonText: string
 }
 
 export const Title: React.SFC<TitleProps> = ({
@@ -104,4 +104,4 @@ export const Title: React.SFC<TitleProps> = ({
       )}
     </Spring>
   </>
-);
+)

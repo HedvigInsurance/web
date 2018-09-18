@@ -1,13 +1,13 @@
-import { colors } from '@hedviginsurance/brand';
-import styled from 'react-emotion';
+import { colors } from '@hedviginsurance/brand'
+import styled from 'react-emotion'
 
 const buttonSizes = {
   sm: '10px 20px',
   md: '15px 40px',
-};
+}
 
 interface ButtonProps {
-  size: keyof typeof buttonSizes;
+  size: keyof typeof buttonSizes
 }
 
 const Button = styled('button')(({ size = 'md' }: ButtonProps) => ({
@@ -16,6 +16,6 @@ const Button = styled('button')(({ size = 'md' }: ButtonProps) => ({
   borderRadius: 30,
   color: colors.WHITE,
   cursor: 'pointer',
-}));
+}))
 
-export { Button };
+export { Button }

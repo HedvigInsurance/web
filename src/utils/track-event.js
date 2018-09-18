@@ -8,6 +8,6 @@ export const trackEvent = (eventName, properties, options, callback) => {
       },
       options,
       callback,
-    );
+    )
   }
-};
+}

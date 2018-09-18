@@ -38,11 +38,11 @@ hedvigers:
 facts:
   list:
     - explainer: formulär ifyllda av våra medlemmar
-      number: '0'
+      num: '0'
     - explainer: minuters telefonkö
-      number: '0'
+      num: '0'
     - explainer: minuter att få svar i Hedvig-chatten
-      number: '2.7'
+      num: '2.7'
   title: Korta fakta
 press:
   footnote: >-

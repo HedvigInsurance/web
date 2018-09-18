@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import { BlogContainer, BlogPost } from 'src/components/Blog';
-import { Spacing } from 'src/components/Spacing';
-import styled from 'react-emotion';
-import { addIndex, filter, map, pathSatisfies, pipe, reverse } from 'ramda';
-import { getBlogPostPropsFromEdge, sortBlogPosts } from '../utils/blog-posts';
-import { notNullable } from '../utils/nullables';
-import { kebabCaseTag } from '../utils/blog-tags';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import { BlogContainer, BlogPost } from 'src/components/Blog'
+import { Spacing } from 'src/components/Spacing'
+import styled from 'react-emotion'
+import { addIndex, filter, map, pathSatisfies, pipe, reverse } from 'ramda'
+import { getBlogPostPropsFromEdge, sortBlogPosts } from '../utils/blog-posts'
+import { notNullable } from '../utils/nullables'
+import { kebabCaseTag } from '../utils/blog-tags'
 
 const getBlogPosts = (posterEdges, postEdges, tag) =>
   pipe(
@@ -33,7 +33,7 @@ const getBlogPosts = (posterEdges, postEdges, tag) =>
         isLast={index === notNullable(originalArray).length - 1}
       />
     )),
-  )(postEdges);
+  )(postEdges)
 const postPropTypes = {
   node: PropTypes.shape({
     fields: PropTypes.shape({ slug: PropTypes.string.isRequired }).isRequired,
@@ -46,7 +46,7 @@ const postPropTypes = {
       excerpt: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-};
+}
 const posterPropTypes = {
   node: PropTypes.shape({
     teamtailorId: PropTypes.string.isRequired,
@@ -56,16 +56,16 @@ const posterPropTypes = {
       large: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-};
+}
 
 const TagTemplateTitle = styled('h1')({
   lineHeight: 1.2,
-});
+})
 
 const TagTemplate = ({ data, pathContext }) => {
-  const { posters, posts, header, footer } = data;
-  const { tag } = pathContext;
-  const pageTitle = `Inlägg taggade med: ${tag} | Hedvig`;
+  const { posters, posts, header, footer } = data
+  const { tag } = pathContext
+  const pageTitle = `Inlägg taggade med: ${tag} | Hedvig`
 
   return (
     <main className="Site">
@@ -83,8 +83,8 @@ const TagTemplate = ({ data, pathContext }) => {
         <Footer data={footer} langKey="se" />
       </StickyContainer>
     </main>
-  );
-};
+  )
+}
 
 TagTemplate.propTypes = {
   pathContext: PropTypes.shape({ tag: PropTypes.string.isRequired }).isRequired,
@@ -98,7 +98,7 @@ TagTemplate.propTypes = {
     header: PropTypes.shape(headerPropTypes).isRequired,
     footer: PropTypes.shape(footerPropTypes).isRequired,
   }).isRequired,
-};
+}
 
 export const tagQuery = graphql`
   query TagQuery {
@@ -141,6 +141,6 @@ export const tagQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default TagTemplate;
+export default TagTemplate

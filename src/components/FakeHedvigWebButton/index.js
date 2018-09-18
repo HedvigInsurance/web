@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'react-emotion';
-import { Container } from 'constate';
+import React from 'react'
+import styled from 'react-emotion'
+import { Container } from 'constate'
 
-import { trackEvent } from 'src/utils/track-event';
-import { Dialog } from '../Dialog';
-import { Button } from '../Button';
+import { trackEvent } from 'src/utils/track-event'
+import { Dialog } from '../Dialog'
+import { Button } from '../Button'
 
 const OrText = styled('span')({
   display: 'flex',
@@ -14,22 +14,22 @@ const OrText = styled('span')({
   fontSize: 23,
   textAlign: 'center',
   fontWeight: 'bold',
-});
+})
 
 const ButtonContainer = styled('div')({
   marginTop: 30,
   textAlign: 'center',
-});
+})
 
 const actions = {
   setVisible: (visible) => () => ({
     visible,
   }),
-};
+}
 
 const initialState = {
   visible: false,
-};
+}
 
 export const FakeHedvigWebButton = () => (
   <Container actions={actions} initialState={initialState}>
@@ -38,8 +38,8 @@ export const FakeHedvigWebButton = () => (
         <OrText>Eller...</OrText>
         <ButtonContainer
           onClick={() => {
-            setVisible(true);
-            trackEvent('Click fake web button');
+            setVisible(true)
+            trackEvent('Click fake web button')
           }}
         >
           <Button>Skaffa Hedvig på webben</Button>
@@ -48,4 +48,4 @@ export const FakeHedvigWebButton = () => (
       </React.Fragment>
     )}
   </Container>
-);
+)

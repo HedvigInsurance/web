@@ -1,19 +1,19 @@
-import * as React from 'react';
-import SwipeableViews from '@hedviginsurance/react-swipeable-views';
-import styled from 'react-emotion';
-import MediaQuery from 'react-responsive';
-import { fonts } from '@hedviginsurance/brand';
+import { fonts } from '@hedviginsurance/brand'
+import SwipeableViews from '@hedviginsurance/react-swipeable-views'
+import * as React from 'react'
+import styled from 'react-emotion'
+import MediaQuery from 'react-responsive'
 
-import { TeamtailorUser } from '..';
+import { TeamtailorUser } from '..'
 
 interface MobileProps {
-  teamtailorUsers: TeamtailorUser[];
-  title: string;
+  teamtailorUsers: TeamtailorUser[]
+  title: string
 }
 
 const Box = styled('div')({
   padding: '20px 0',
-});
+})
 
 const Card = styled('div')({
   margin: 20,
@@ -21,14 +21,14 @@ const Card = styled('div')({
   borderRadius: 5,
   overflow: 'hidden',
   flex: 1,
-});
+})
 
 const ImageContainer = styled('div')({
   position: 'relative',
   overflow: 'hidden',
   height: 240,
   width: '100%',
-});
+})
 
 const Image = styled('img')({
   position: 'absolute',
@@ -37,7 +37,7 @@ const Image = styled('img')({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
-});
+})
 
 const UserInfo = styled('div')({
   backgroundColor: 'white',
@@ -45,16 +45,16 @@ const UserInfo = styled('div')({
   flexDirection: 'column',
   padding: 20,
   userSelect: 'none',
-});
+})
 
 const CardName = styled('span')({
   fontSize: 18,
   fontFamily: fonts.SORAY,
-});
+})
 
 const CardTitle = styled('span')({
   fontSize: 16,
-});
+})
 
 const Title = styled('h3')({
   fontSize: 45,
@@ -65,7 +65,7 @@ const Title = styled('h3')({
   '@media (min-width: 700px)': {
     textAlign: 'left',
   },
-});
+})
 
 export const Mobile: React.SFC<MobileProps> = ({ title, teamtailorUsers }) => {
   const cards = teamtailorUsers.map((user) => (
@@ -78,7 +78,7 @@ export const Mobile: React.SFC<MobileProps> = ({ title, teamtailorUsers }) => {
         <CardTitle>{user.title}</CardTitle>
       </UserInfo>
     </Card>
-  ));
+  ))
 
   return (
     <Box>
@@ -105,5 +105,5 @@ export const Mobile: React.SFC<MobileProps> = ({ title, teamtailorUsers }) => {
         </SwipeableViews>
       </MediaQuery>
     </Box>
-  );
-};
+  )
+}

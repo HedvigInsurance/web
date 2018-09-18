@@ -274,7 +274,7 @@ collections:
                 widget: list
                 fields:
                   - label: Number
-                    name: number
+                    name: num
                     widget: string
                   - label: Explainer
                     name: explainer

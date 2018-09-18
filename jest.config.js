@@ -21,4 +21,4 @@ module.exports = {
     '^src(.*)$': '<rootDir>/src$1',
     '^assets(.*)$': '<rootDir>/static/assets$1',
   },
-};
+}

@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
-import './Page.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
+import './Page.css'
 
-import { Hedvigers } from 'src/sections/about-us/hedvigers';
-import { Hero } from 'src/sections/about-us/hero';
-import { Body } from 'src/sections/about-us/body';
-import { Founders } from 'src/sections/about-us/founders';
-import { Facts } from 'src/sections/about-us/facts';
-import { Press } from 'src/sections/about-us/press';
-import { Investors } from 'src/sections/about-us/investors';
+import { Hedvigers } from 'src/sections/about-us/hedvigers'
+import { Hero } from 'src/sections/about-us/hero'
+import { Body } from 'src/sections/about-us/body'
+import { Founders } from 'src/sections/about-us/founders'
+import { Facts } from 'src/sections/about-us/facts'
+import { Press } from 'src/sections/about-us/press'
+import { Investors } from 'src/sections/about-us/investors'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -62,7 +62,7 @@ const pagePropTypes = {
       type: PropTypes.string.isRequired,
     }).isRequired,
   }),
-};
+}
 
 const AboutUsTemplate = ({
   title,
@@ -95,14 +95,14 @@ const AboutUsTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 AboutUsTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 const AboutUs = ({ data, pathContext }) => (
   <AboutUsTemplate
@@ -122,7 +122,7 @@ const AboutUs = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 AboutUs.propTypes = {
   data: PropTypes.shape({
@@ -134,11 +134,11 @@ AboutUs.propTypes = {
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string.isRequired })
     .isRequired,
-};
+}
 
-export { AboutUsTemplate };
+export { AboutUsTemplate }
 
-export default AboutUs;
+export default AboutUs
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
@@ -171,7 +171,7 @@ export const aboutPageQuery = graphql`
         facts {
           title
           list {
-            number
+            num
             explainer
           }
         }
@@ -216,4 +216,4 @@ export const aboutPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`

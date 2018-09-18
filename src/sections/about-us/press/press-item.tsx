@@ -1,12 +1,12 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { fonts } from '@hedviginsurance/brand';
+import { fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
 
-import { PressItem as PressItemType } from '.';
+import { PressItem as PressItemType } from '.'
 
 const Link = styled('a')({
   textDecoration: 'none',
-});
+})
 
 const PressItemContainer = styled('div')({
   borderRadius: 5,
@@ -15,31 +15,31 @@ const PressItemContainer = styled('div')({
   display: 'flex',
   alignItems: 'center',
   backgroundColor: 'white',
-});
+})
 
 const Logo = styled('img')({
   width: '75px',
   height: '75px',
   objectFit: 'contain',
-});
+})
 
 const Content = styled('div')({
   paddingLeft: 20,
   display: 'flex',
   flexDirection: 'column',
-});
+})
 
 const Title = styled('span')({
   fontSize: 20,
   lineHeight: '21px',
   fontFamily: fonts.SORAY,
-});
+})
 
 const Text = styled('span')({
   fontSize: 14,
   lineHeight: '16px',
   marginTop: 5,
-});
+})
 
 export const PressItem: React.SFC<PressItemType> = ({
   logo,
@@ -56,4 +56,4 @@ export const PressItem: React.SFC<PressItemType> = ({
       </Content>
     </PressItemContainer>
   </Link>
-);
+)

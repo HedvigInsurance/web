@@ -1,9 +1,9 @@
-export { BlogPostAuthor } from './BlogPostAuthor';
+export { BlogPostAuthor } from './BlogPostAuthor'
 export {
   BlogContainer,
   PostContainer,
   PostHeader,
   BlogLink,
-} from './BlogStyles';
-export { BlogPost } from './BlogPost';
-export { PrevNextCard } from './PrevNextCard';
+} from './BlogStyles'
+export { BlogPost } from './BlogPost'
+export { PrevNextCard } from './PrevNextCard'

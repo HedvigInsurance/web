@@ -1,9 +1,9 @@
-import React from 'react';
-import { Container } from 'constate';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { Container } from 'constate'
+import styled from 'react-emotion'
+import PropTypes from 'prop-types'
 
-import AppLink from 'src/components/AppLink';
+import AppLink from 'src/components/AppLink'
 
 const PositionAnimation = styled('div')`
   transition: transform 250ms;
@@ -16,7 +16,7 @@ const PositionAnimation = styled('div')`
     transform: translateX(155px);
     ${({ isVisible }) => isVisible && `transform: translateX(0);`};
   }
-`;
+`
 
 export const CTALinkContainer = ({ ctaText, children }) => (
   <div className="u-md-inlineBlock u-lg-inlineBlock">
@@ -36,7 +36,7 @@ export const CTALinkContainer = ({ ctaText, children }) => (
       )}
     </Container>
   </div>
-);
+)
 
 CTALinkContainer.propTypes = {
   children: PropTypes.oneOfType([
@@ -44,8 +44,8 @@ CTALinkContainer.propTypes = {
     PropTypes.node,
   ]),
   ctaText: PropTypes.string.isRequired,
-};
+}
 
 CTALinkContainer.defaultProps = {
   children: undefined,
-};
+}

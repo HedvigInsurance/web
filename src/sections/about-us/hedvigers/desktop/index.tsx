@@ -1,20 +1,20 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { Container, ActionMap } from 'constate';
+import { ActionMap, Container } from 'constate'
+import * as React from 'react'
+import styled from 'react-emotion'
 
-import { List } from './list';
-import { SelectedUser } from './selected-user';
-import { TeamtailorUser } from '..';
+import { TeamtailorUser } from '..'
+import { List } from './list'
+import { SelectedUser } from './selected-user'
 
 const Background = styled('div')({
   backgroundColor: '#F9FAFC',
-});
+})
 
 const CenterAlign = styled('div')({
   maxWidth: '80%',
   margin: '0 auto',
   padding: '70px 0',
-});
+})
 
 const Box = styled('div')({
   display: 'flex',
@@ -22,27 +22,27 @@ const Box = styled('div')({
   borderRadius: 5,
   boxShadow: '-1px 0 10px rgba(0,0,0,0.14)',
   overflow: 'hidden',
-});
+})
 
 interface DesktopProps {
-  teamtailorUsers: TeamtailorUser[];
-  title: string;
+  teamtailorUsers: TeamtailorUser[]
+  title: string
 }
 
 interface State {
-  selectedUser: TeamtailorUser;
-  users: TeamtailorUser[];
+  selectedUser: TeamtailorUser
+  users: TeamtailorUser[]
 }
 
 interface Actions {
-  setSelectedUser: (selectedUser: TeamtailorUser) => void;
+  setSelectedUser: (selectedUser: TeamtailorUser) => void
 }
 
 const actions: ActionMap<State, Actions> = {
   setSelectedUser: (selectedUser) => ({
     selectedUser,
   }),
-};
+}
 
 export const Desktop: React.SFC<DesktopProps> = ({
   title,
@@ -71,4 +71,4 @@ export const Desktop: React.SFC<DesktopProps> = ({
       )}
     </Container>
   </Background>
-);
+)

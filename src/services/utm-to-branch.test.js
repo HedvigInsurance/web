@@ -1,9 +1,9 @@
-import { utmParamsToBranchLinkOptions } from './utm-to-branch';
+import { utmParamsToBranchLinkOptions } from './utm-to-branch'
 
 describe('utmParamsToBranchLinkOptions(utmParams, branchLinkOptions)', () => {
   it('handles null utm params and branch link options', () => {
-    expect(utmParamsToBranchLinkOptions(null, null)).toEqual({});
-  });
+    expect(utmParamsToBranchLinkOptions(null, null)).toEqual({})
+  })
 
   it('utm params transformed to branch link options', () => {
     expect(
@@ -23,8 +23,8 @@ describe('utmParamsToBranchLinkOptions(utmParams, branchLinkOptions)', () => {
       keywords: ['hemförsäkring'],
       tags: ['students-sto-v1'],
       campaign: 'traffic-180430',
-    });
-  });
+    })
+  })
 
   it('branch tags and keywords are converted to arrays', () => {
     expect(
@@ -39,8 +39,8 @@ describe('utmParamsToBranchLinkOptions(utmParams, branchLinkOptions)', () => {
       feature: 'organic',
       tags: ['experiment-v2'],
       keywords: ['travel'],
-    });
-  });
+    })
+  })
 
   it('utm params take precedent over branch link options', () => {
     expect(
@@ -64,6 +64,6 @@ describe('utmParamsToBranchLinkOptions(utmParams, branchLinkOptions)', () => {
       keywords: ['hemförsäkring'],
       tags: ['students-sto-v1'],
       campaign: 'traffic-180430',
-    });
-  });
-});
+    })
+  })
+})

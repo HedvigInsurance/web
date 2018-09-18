@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { mount } from 'enzyme';
+import { mount } from 'enzyme'
+import * as React from 'react'
 
-import { Desktop } from './';
+import { Desktop } from './'
 
 it('renders correctly', () => {
   const teamtailorUsers = [
@@ -12,10 +12,10 @@ it('renders correctly', () => {
         large: 'https://mockimage.com',
       },
     },
-  ];
+  ]
 
   const wrapper = mount(
     <Desktop title="mock title" teamtailorUsers={teamtailorUsers} />,
-  );
-  expect(wrapper).toMatchSnapshot();
-});
+  )
+  expect(wrapper).toMatchSnapshot()
+})

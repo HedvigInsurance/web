@@ -5,6 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-import 'babel-polyfill';
+import 'babel-polyfill'
 
-exports.onClientEntry = () => {};
+exports.onClientEntry = () => {}
