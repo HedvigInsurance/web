@@ -14,6 +14,7 @@ import styled from 'react-emotion'
 import { Button } from 'src/components/Button'
 import { Spacing } from 'src/components/Spacing'
 import { DownloadSpinner } from 'src/components/DownloadSpinner'
+import { RotatingPhoneVideo } from 'src/components/RotatingPhoneVideo'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -32,13 +33,13 @@ const Container = styled('div')({
   paddingRight: 10,
   display: 'flex',
   justifyContent: 'space-between',
-  marginTop: 140,
-  marginBottom: 140,
+  paddingTop: 140,
+  paddingBottom: 140,
   '@media (max-width: 786px)': {
     alignItems: 'center',
-    flexDirection: 'column',
-    marginTop: 0,
-    marginBottom: 50,
+    flexDirection: 'column-reverse',
+    paddingTop: 50,
+    paddingBottom: 50,
   },
 })
 
@@ -90,6 +91,10 @@ const Form = styled('form')({
 
 const ErrorText = styled('p')({
   color: colors.PINK,
+})
+
+const Article = styled('article')({
+  backgroundColor: '#F9FBFC',
 })
 
 class DownloadTemplate extends React.Component {
@@ -176,43 +181,43 @@ class DownloadTemplate extends React.Component {
         </Helmet>
         <StickyContainer>
           <Header data={header} langKey={langKey} />
-          <article className="Site-content u-flexGrow1">
+          <Article className="Site-content u-flexGrow1">
             <Container>
-              <Column width="50%" />
+              <Column width="50%">
+                <RotatingPhoneVideo />
+              </Column>
               <Column width="50%">
                 <div className="u-textCenter">
                   <Heading>{heading}</Heading>
                 </div>
                 <Spacing height={62.5} />
-                <div>
-                  {isSuccessful ? (
-                    <div>{successText}</div>
-                  ) : (
-                    <Form onSubmit={this.handleSubmit}>
-                      <Input
-                        error={hasErrors}
-                        type="tel"
-                        placeholder={phoneNumberPlaceholder}
-                        value={phoneNumber}
-                        onChange={this.handleChange}
-                      />
-                      <Spacing height={12} width={15} />
-                      <CustomButton type="submit" disabled={isDisabled}>
-                        {ctaText}
-                      </CustomButton>
-                    </Form>
-                  )}
-                  {isSending && <DownloadSpinner />}
-                  {hasErrors && (
-                    <React.Fragment>
-                      <Spacing height={30} />
-                      <ErrorText>{errorText}</ErrorText>
-                    </React.Fragment>
-                  )}
-                </div>
+                {isSuccessful ? (
+                  <div>{successText}</div>
+                ) : (
+                  <Form onSubmit={this.handleSubmit}>
+                    <Input
+                      error={hasErrors}
+                      type="tel"
+                      placeholder={phoneNumberPlaceholder}
+                      value={phoneNumber}
+                      onChange={this.handleChange}
+                    />
+                    <Spacing height={12} width={15} />
+                    <CustomButton type="submit" disabled={isDisabled}>
+                      {ctaText}
+                    </CustomButton>
+                  </Form>
+                )}
+                {isSending && <DownloadSpinner />}
+                {hasErrors && (
+                  <React.Fragment>
+                    <Spacing height={30} />
+                    <ErrorText>{errorText}</ErrorText>
+                  </React.Fragment>
+                )}
               </Column>
             </Container>
-          </article>
+          </Article>
         </StickyContainer>
         <Footer data={footer} langKey={langKey} />
       </main>
