@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { LottieLoader } from 'src/components/LottieLoader';
+import { LottieLoader } from 'src/components/LottieLoader'
 
-const paidRightAwayAnimation = require('assets/animations/three-explainers/paid-right-away.json');
+const paidRightAwayAnimation = require('assets/animations/three-explainers/paid-right-away.json')
 
 const paidRightAwayOptions = {
   loop: false,
@@ -14,7 +14,7 @@ const paidRightAwayOptions = {
     progressiveLoad: true,
     preserveAspectRatio: 'xMaxYMin meet',
   },
-};
+}
 
 const PaidRightAway = React.forwardRef(({ sideLength }, ref) => (
   <LottieLoader
@@ -23,11 +23,11 @@ const PaidRightAway = React.forwardRef(({ sideLength }, ref) => (
     width={sideLength}
     height={sideLength}
   />
-));
+))
 
 PaidRightAway.propTypes = {
   ref: PropTypes.func.isRequired,
   sideLength: PropTypes.number.isRequired,
-};
+}
 
-export default PaidRightAway;
+export default PaidRightAway

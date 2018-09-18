@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { GivingBackTemplate } from 'src/templates/giving-back-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { GivingBackTemplate } from 'src/templates/giving-back-page'
 
 const GivingBackPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -15,10 +15,10 @@ const GivingBackPagePreview = ({ entry }) => (
       ctaText={entry.getIn(['data', 'cta_text'])}
     />
   </Provider>
-);
+)
 
 GivingBackPagePreview.propTypes = {
   entry: PropTypes.shape({ getIn: PropTypes.func.isRequired }).isRequired,
-};
+}
 
-export default GivingBackPagePreview;
+export default GivingBackPagePreview

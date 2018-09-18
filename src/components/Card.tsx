@@ -1,5 +1,5 @@
-import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
+import { colors } from '@hedviginsurance/brand'
+import styled from 'react-emotion'
 
 const Card = styled('div')({
   backgroundColor: colors.WHITE,
@@ -10,15 +10,15 @@ const Card = styled('div')({
     '0 3px 1px -2px rgba(0, 0, 0, 0.12)',
   ].join(),
   overflow: 'hidden',
-});
+})
 
 const CardHeader = styled('div')({
   margin: 24,
   marginBottom: 0,
-});
+})
 
 const CardBody = styled('div')({
   margin: 24,
-});
+})
 
-export { Card, CardHeader, CardBody };
+export { Card, CardHeader, CardBody }

@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
 
 const Press = ({ data: { header, footer } }) => (
   <main className="Site">
@@ -57,14 +57,14 @@ const Press = ({ data: { header, footer } }) => (
     </StickyContainer>
     <Footer data={footer} />
   </main>
-);
+)
 
 Press.propTypes = {
   data: PropTypes.shape({
     header: PropTypes.shape(headerPropTypes),
     footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
-};
+}
 
 export const pressPageQuery = graphql`
   query PressPage {
@@ -76,6 +76,6 @@ export const pressPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default Press;
+export default Press

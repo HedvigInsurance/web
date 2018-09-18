@@ -21,11 +21,11 @@ hedvigers:
 facts:
   list:
     - explainer: forms filled out by our members
-      number: '0'
+      num: '0'
     - explainer: minutes of phone queuing
-      number: '0'
+      num: '0'
     - explainer: minutes to get a reply in the Hedvig-chat
-      number: '2.7'
+      num: '2.7'
   title: Short facts
 press:
   footnote: >-

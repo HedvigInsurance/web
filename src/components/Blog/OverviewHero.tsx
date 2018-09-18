@@ -1,9 +1,9 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { colors, fonts } from '@hedviginsurance/brand';
-import { Markdown } from 'src/cms/utils/markdown';
+import { colors, fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
+import { Markdown } from 'src/cms/utils/markdown'
 
-const TABLET_UP = '@media (min-width: 797px)';
+const TABLET_UP = '@media (min-width: 797px)'
 
 const HeroWrapper = styled('div')((props: { image: string }) => ({
   padding: '100px 0',
@@ -20,7 +20,7 @@ const HeroWrapper = styled('div')((props: { image: string }) => ({
   ].join(),
   backgroundSize: 'cover',
   backgroundPosition: 'center center',
-}));
+}))
 const HeroTextWrapper = styled('div')({
   [TABLET_UP]: {
     display: 'flex',
@@ -32,7 +32,7 @@ const HeroTextWrapper = styled('div')({
   maxWidth: 1200,
   margin: 'auto',
   color: colors.WHITE,
-});
+})
 const Headline = styled('h1')({
   [TABLET_UP]: {
     marginBottom: 20,
@@ -41,15 +41,15 @@ const Headline = styled('h1')({
   fontSize: 60,
   lineHeight: 1,
   fontFamily: fonts.SORAY,
-});
+})
 const TextContent = styled(Markdown)({
   flexBasis: '400px',
-});
+})
 
 interface OverviewHeroProps {
-  title: string;
-  text: string;
-  image: string;
+  title: string
+  text: string
+  image: string
 }
 
 const OverviewHero: React.SFC<OverviewHeroProps> = ({ title, text, image }) => (
@@ -59,6 +59,6 @@ const OverviewHero: React.SFC<OverviewHeroProps> = ({ title, text, image }) => (
       <TextContent source={text} />
     </HeroTextWrapper>
   </HeroWrapper>
-);
+)
 
-export { OverviewHeroProps, OverviewHero };
+export { OverviewHeroProps, OverviewHero }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header from 'src/components/Header'
+import Footer from 'src/components/Footer'
 
 const Terms = () => (
   <main className="Site">
@@ -123,6 +123,6 @@ const Terms = () => (
     </StickyContainer>
     <Footer />
   </main>
-);
+)
 
-export default Terms;
+export default Terms

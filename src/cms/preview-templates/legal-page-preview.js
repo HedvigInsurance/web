@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { LegalTemplate } from 'src/templates/legal-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { LegalTemplate } from 'src/templates/legal-page'
 
 const LegalPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -11,12 +11,12 @@ const LegalPagePreview = ({ entry }) => (
       sections={entry.getIn(['data', 'sections']).toJS()}
     />
   </Provider>
-);
+)
 
 LegalPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }).isRequired,
-};
+}
 
-export default LegalPagePreview;
+export default LegalPagePreview

@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled from 'react-emotion'
+import PropTypes from 'prop-types'
 
-import { PriceBubble } from './bubble';
+import { PriceBubble } from './bubble'
 
 const Container = styled('div')`
   padding: 50px 0;
   padding-bottom: 100px;
-`;
+`
 
 const Title = styled('div')`
   text-align: center;
@@ -20,7 +20,7 @@ const Title = styled('div')`
   @media (min-width: 500px) {
     padding-bottom: 30px;
   }
-`;
+`
 
 const PriceBubbles = styled('div')`
   display: flex;
@@ -31,12 +31,12 @@ const PriceBubbles = styled('div')`
   @media (max-width: 600px) {
     flex-direction: column;
   }
-`;
+`
 
 const BottomParagraph = styled('div')`
   margin-top: 25px;
   text-align: center;
-`;
+`
 
 export const PriceSection = ({
   heading,
@@ -72,7 +72,7 @@ export const PriceSection = ({
       </BottomParagraph>
     </Container>
   </div>
-);
+)
 
 PriceSection.propTypes = {
   heading: PropTypes.string.isRequired,
@@ -83,4 +83,4 @@ PriceSection.propTypes = {
   ownedTitle: PropTypes.string.isRequired,
   monthlyLabel: PropTypes.string.isRequired,
   aroundLabel: PropTypes.string.isRequired,
-};
+}

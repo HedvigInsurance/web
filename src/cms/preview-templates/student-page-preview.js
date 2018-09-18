@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { StudentTemplate } from 'src/templates/student-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { StudentTemplate } from 'src/templates/student-page'
 
 const StudentPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -13,12 +13,12 @@ const StudentPagePreview = ({ entry }) => (
       bottomCta={entry.getIn(['data', 'bottom_cta'])}
     />
   </Provider>
-);
+)
 
 StudentPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func.isRequired,
   }).isRequired,
-};
+}
 
-export default StudentPagePreview;
+export default StudentPagePreview

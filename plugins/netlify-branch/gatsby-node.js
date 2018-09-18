@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
 
 exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
@@ -8,7 +8,7 @@ exports.modifyWebpackConfig = ({ config }) => {
         NETLIFY_BRANCH: JSON.stringify(process.env.BRANCH || 'local'),
       }),
     ],
-  });
+  })
 
-  return config;
-};
+  return config
+}
