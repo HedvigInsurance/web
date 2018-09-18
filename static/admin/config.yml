@@ -77,6 +77,29 @@ collections:
                   - label: Alt Text
                     name: altText
                     widget: string
+
+      - file: src/data/blog.yml
+        label: Blog
+        name: blog
+        path: /blog
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Hero title
+                name: title
+                wigdet: string
+              - label: Text
+                name: text
+                widget: text
+
       - file: src/data/footer.yml
         label: Footer
         name: footer
@@ -1442,6 +1465,28 @@ collections:
       - label: Top Image
         name: topImage
         widget: image
+      - label: Cta
+        name: cta
+        widget: object
+        fields:
+          - label: Show
+            name: show
+            widget: boolean
+          - label: Label
+            name: label
+            widget: string
+          - label: Target (i.e. "/download")
+            name: target
+            widget: string
+      - label: Author (Exact name as shown on TeamTailor)
+        name: author
+        widget: string
+      - label: Tags
+        name: tags
+        widget: list
+      - label: Excerpt
+        name: excerpt
+        widget: markdown
       - label: Content
         name: content
         widget: markdown

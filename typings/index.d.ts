@@ -1,3 +1,7 @@
+declare const graphql: {
+  (strings: TemplateStringsArray, ...interpolations: any[]): any; // unsure what this returns, but it doesn't matter so much since it's consumed by gatsby anyways
+};
+
 declare module '*.mp4' {
   const content: string;
   export default content;
