@@ -42,8 +42,8 @@ content: >-
   vinst kan de göra.
 
 
-  > Från insidan av försäkringsbranschen såg vi hur detta påverkade allt, och
-  kände att vi var tvungna att göra något åt det.
+  > “Från insidan av försäkringsbranschen såg vi hur detta påverkade allt, och
+  kände att vi var tvungna att göra något åt det.”
 
 
   Så vi startade [Hedvig](/).
