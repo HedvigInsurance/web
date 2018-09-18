@@ -11,7 +11,7 @@ const LandingPagePreview = ({ entry }) => (
       threeExplainers={entry.getIn(['data', 'three_explainers']).toJS()}
       perilForest={entry.getIn(['data', 'peril_forest']).toJS()}
       philosophy={entry.getIn(['data', 'philosophy']).toJS()}
-      customerSource={entry.getIn(['data', 'customer_source']).toJS()}
+      customerSource={entry.getIn(['data', 'customerSource']).toJS()}
       safety={entry.getIn(['data', 'safety']).toJS()}
       pricing={entry.getIn(['data', 'pricing']).toJS()}
     />
