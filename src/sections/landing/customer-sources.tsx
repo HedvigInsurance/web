@@ -59,16 +59,16 @@ const TableCellBar = styled('div')({
   width: '100%',
 });
 
-const TitleSection = styled('div')({
+const HeadlineSection = styled('div')({
   textAlign: 'center',
   display: 'inline',
 });
 
-const Title = styled('h2')({
+const Headline = styled('h2')({
   paddingBottom: 30,
 });
 
-const SubTitle = styled('div')({
+const Paragraph = styled('p')({
   fontSize: 20,
   lineHeight: '23px',
   paddingBottom: 60,
@@ -145,8 +145,11 @@ const COMPANIES = [
   },
 ];
 
+const MAX_WEIGHT = 29;
+const PERCENTAGE_TEXT_WIDTH = '60px';
 const calcBarWidth = (scrollPercent: number, weight: number) =>
-  `calc(${scrollPercent * ((100 / 29) * weight)}% - 60px)`;
+  `calc(${scrollPercent *
+    ((100 / MAX_WEIGHT) * weight)}% - ${PERCENTAGE_TEXT_WIDTH})`;
 const calculateViewPercentage = (positions: ViewPositions, offset: number) => {
   const numerator = positions.sectionPosition + offset - positions.scrollHeight;
   const denumerator = positions.scrollHeight / 4;
@@ -154,7 +157,7 @@ const calculateViewPercentage = (positions: ViewPositions, offset: number) => {
   return Math.min(1, Math.max(0, delta));
 };
 class CustomerSources extends React.Component<Props> {
-  scroll: Point = { x: 0, y: 0 };
+  scrollY: number = 0;
   tableRef: HTMLDivElement | null = null;
   rowRefs: {
     [key: string]: {
@@ -166,7 +169,7 @@ class CustomerSources extends React.Component<Props> {
   } = {};
 
   handleScroll: EventListener = () => {
-    this.scroll = { x: window.scrollX, y: window.scrollY };
+    this.scrollY = window.scrollY;
 
     Object.keys(this.rowRefs).forEach((key) => {
       const rowRef = this.rowRefs[key];
@@ -177,7 +180,7 @@ class CustomerSources extends React.Component<Props> {
       const percent = calculateViewPercentage(
         {
           scrollHeight: window.innerHeight,
-          scrollPosition: this.scroll.y,
+          scrollPosition: this.scrollY,
           sectionPosition:
             (this.tableRef && this.tableRef.getBoundingClientRect().top) || 0,
         },
@@ -190,22 +193,22 @@ class CustomerSources extends React.Component<Props> {
   };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scrollY', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scrollY', this.handleScroll);
   }
 
   render() {
     return (
       <Container className={'Container'}>
-        <TitleSection>
-          <Title className="u-md-fontSize2 u-lg-fontSize2">
+        <HeadlineSection>
+          <Headline className="u-md-fontSize2 u-lg-fontSize2">
             {this.props.headline}
-          </Title>
-          <SubTitle>{this.props.paragraph}</SubTitle>
-        </TitleSection>
+          </Headline>
+          <Paragraph>{this.props.paragraph}</Paragraph>
+        </HeadlineSection>
 
         <Table
           innerRef={(ref) => {
