@@ -10,7 +10,9 @@ cta:
 author: Fredrik Fors
 tags:
   - ''
-excerpt: Försäkring är en tjänst som är svår att älska.
+excerpt: >-
+  Från insidan av försäkringsbranschen såg vi hur detta påverkade allt, och
+  kände att vi var tvungna att göra något åt det. Så vi startade Hedvig.
 content: >-
   Försäkring är en tjänst som är svår att älska.
 
