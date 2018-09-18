@@ -21,9 +21,9 @@ content: >-
   inte? 
 
 
-  > Oavsett var du till slut hamnar kan tillvaron vara hektisk som nybliven
+  > “Oavsett var du till slut hamnar kan tillvaron vara hektisk som nybliven
   student. Det är fester du inte vill missa, nya vänner att lära känna och
-  föreläsningar att gå på. 
+  föreläsningar att gå på.”
 
 
   Mitt i allt detta är inte försäkringar precis prio ett. Och det är lugnt – vi
