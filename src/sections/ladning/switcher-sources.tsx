@@ -17,32 +17,88 @@ interface BarProps {
   color: string;
 }
 
-const TitleSection = styled('div')({
-  height: '232px',
-  textAlign: 'center',
-  display: 'inline'
+const Table = styled('div')({
+  position: 'relative',
+  display: 'table',
+  width: '100%',
+
 });
 
-const Container = styled('div')({
-  display: 'flex',
-  alignItems: 'baseline',
-  marginLeft: '15%',
-  marginRight: '15%',
-  '@media (max-width: 600px)': {
-    marginLeft: '10%',
-    marginRight: '10%',
+const BackgroundImage = styled('img')({
+  position: 'absolute',
+  width: '82%',
+  left: '5%',
+  top: '-7%',
+  zIndex: '-1',
+  '@media (max-width: 600px)':{
+    left: '10%',
+    height: '75%',
+    width: 'auto',
+  },
+
+});
+
+const TableRow = styled('div')({
+  display: 'table-row',
+  '@media (max-width: 600px)':{
+    display: 'flex',
+    flexDirection: 'column-reverse',
+
   },
 });
 
-const CompanyNamesContainer = styled('div')({
-  marginRight: '10px',
+const TableCell = styled('div')({
+  display: 'table-cell',
+  paddingRight: '10px',
+  paddingBottom: 30,
+});
+const TableCellBar = styled('div')({
+  display: 'table-cell',
+  width: '100%',
+});
+
+const TitleSection = styled('div')({
+  textAlign: 'center',
+  display: 'inline',
+});
+
+const Title = styled('div')({
+  fontSize: 60,
+  lineHeight: '66px',
+  paddingBottom: 30
+});
+
+const SubTitle = styled('div')({
+  fontSize: '20px',
+  lineHeight: '23px',
+  paddingBottom: 60
+});
+
+const PercentageText = styled('div')({
+  fontSize: 18,
+  color: colors.DARK_GRAY,
+  textAlign: 'right',
+  display: 'inline-block'
+});
+
+const Container = styled('div')({
+  '@media (max-width: 600px)':{
+    overflow: 'hidden'
+  },
+});
+
+const CompanyName = styled('div')({
+  fontSize: 18,
+  fontWeight: 'bold',
+  lineHeight: 1,
+  '@media (max-width: 600px)': {
+    fontSize: 16,
+  }
 });
 
 const BarsContainer = styled('div')({
   width: '100%',
-  '@media (max-width: 600px)': {
-    width: '70%',
-  },
+
 });
 
 const Bar = styled('div')((props: BarProps) => ({
@@ -52,6 +108,8 @@ const Bar = styled('div')((props: BarProps) => ({
   display: 'inline-block',
   borderRadius: 10,
 }));
+
+const calcBarWidth = (scrollPercent: number, weight: number) => `calc(${scrollPercent * ((100/29)*weight)}% - 60px)`;
 
 const calculateViewPercentage = (positions: ViewPositions) => {
   const OFFSET = 200;
@@ -85,51 +143,93 @@ class SwitcherSources extends React.Component<{}, Point> {
       sectionPosition: (this.ref && this.ref.getBoundingClientRect().top) || 0,
     });
     return (
-      <div>
-      <TitleSection>
-          <h1 style={{height: '200px'}}>Redan försäkrad? Vi sköter bytet</h1>
-          <p style={{height: '50px'}}>Våra användare kommer ifrån</p>
-      </TitleSection>
+      <Container className={'Container'}>
+        <TitleSection>
+          <Title>Redan försäkrad? Vi sköter bytet</Title>
+          <SubTitle>Våra användare kommer ifrån</SubTitle>
+        </TitleSection>
 
-      <Container
-        innerRef={(ref) => {
-          this.ref = ref;
-        }}
-        style={{ height: 250 }}
-      >
+        <Table
+          innerRef={(ref) => {
+            this.ref = ref;
+          }}
+        >
+          <BackgroundImage src={'/assets/backgrounds/mesh@2x.png'}/>
+          <BarsContainer>
+            <TableRow>
+              <TableCell>
+                <CompanyName>Länsförsäkringar</CompanyName>
+              </TableCell>
+              <TableCellBar>
+                <Bar
+                  color={colors.BLACK_PURPLE}
+                  style={{ width: calcBarWidth(percent, 29)}}
+                />
+                <PercentageText>
+                  29%
+                </PercentageText>
+              </TableCellBar>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <CompanyName>If</CompanyName>
+              </TableCell>
+              <TableCellBar>
+                <Bar
+                  color={colors.PURPLE}
+                  style={{ width:calcBarWidth(percent, 25)}}
+                />
+                <PercentageText >
+                  25%
+                </PercentageText>
+              </TableCellBar>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <CompanyName>TryggHansa</CompanyName>
+              </TableCell>
+              <TableCellBar>
+                <Bar
+                  color={colors.PINK}
+                  style={{ width: calcBarWidth(percent, 18)}}
+                />
+                <PercentageText>
+                  18%
+                </PercentageText>
+              </TableCellBar>
+            </TableRow>
+            <TableRow>
 
-        <CompanyNamesContainer>
-          <div>Länsförsäkringar</div>
-          <div>If</div>
-          <div>TryggHansa</div>
-          <div>Folksam</div>
-          <div>Övriga</div>
-        </CompanyNamesContainer>
-        <BarsContainer>
-          <div>
-            <Bar
-              color={colors.BLACK_PURPLE} style={{ width: `${percent * 29*2.5}%` }}/>
-            <div style={{textAlign: 'right', display: 'inline-block' }}>29%</div>
-          </div>
-          <div>
-            <Bar color={colors.PURPLE} style={{ width: `${percent * 25*2.5}%` }} />
-            <div style={{textAlign: 'right', display: 'inline-block' }}>25%</div>
-          </div>
-          <div>
-            <Bar color={colors.PINK} style={{ width: `${percent * 18*2.5}%` }} />
-            <div style={{textAlign: 'right', display: 'inline-block' }}>18%</div>
-          </div>
-          <div>
-            <Bar color={colors.GREEN} style={{ width: `${percent * 11*2.5}%` }} />
-            <div style={{textAlign: 'right', display: 'inline-block' }}>11%</div>
-          </div>
-          <div>
-            <Bar color={'#9B9BAA'} style={{ width: `${percent * 17*2.5}%` }} />
-            <div style={{textAlign: 'right', display: 'inline-block' }}>17%</div>
-          </div>
-        </BarsContainer>
+            <TableCell>
+              <CompanyName>Folksam</CompanyName>
+            </TableCell>
+            <TableCellBar>
+              <Bar
+                color={colors.GREEN}
+                style={{ width: calcBarWidth(percent, 11) }}
+              />
+              <PercentageText>
+                11%
+              </PercentageText>
+            </TableCellBar>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <CompanyName>Övriga</CompanyName>
+              </TableCell>
+              <TableCellBar>
+                <Bar
+                  color={'#9B9BAA'}
+                  style={{ width: calcBarWidth(percent, 17)}}
+                />
+                <PercentageText>
+                  17%
+                </PercentageText>
+              </TableCellBar>
+            </TableRow>
+          </BarsContainer>
+        </Table>
       </Container>
-      </div>
     );
   }
 }
