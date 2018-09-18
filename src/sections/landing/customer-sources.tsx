@@ -193,11 +193,11 @@ class CustomerSources extends React.Component<Props> {
   };
 
   componentDidMount() {
-    window.addEventListener('scrollY', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scrollY', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {

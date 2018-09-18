@@ -461,7 +461,7 @@ LandingTemplate.propTypes = {
     bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
   customerSources: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    headline: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
   }).isRequired,
   header: PropTypes.shape(headerPropTypes).isRequired,
