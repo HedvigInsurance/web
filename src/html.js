@@ -3,10 +3,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-if (typeof document !== 'undefined') {
-  require('scrollingelement');
-}
-
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
   try {
