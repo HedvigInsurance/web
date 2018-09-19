@@ -81,6 +81,7 @@ const PercentageText = styled(AnimatedDiv)({
   willChange: 'transform',
   '@media (max-width: 600px)': {
     fontSize: 16,
+    top: 17,
   },
 });
 
@@ -115,6 +116,9 @@ const Bar = styled(AnimatedDiv)((props: BarProps) => ({
   position: 'absolute',
   left: 0,
   top: 0,
+  '@media (max-width: 600px)': {
+    top: 25,
+  },
 }));
 
 const COMPANIES = [
@@ -258,7 +262,7 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
             })
           }
         >
-          <Measure offset>
+          <Measure offset bounds>
             {({ measureRef, contentRect }) => (
               <Section className={'Container'}>
                 <HeadlineSection>
