@@ -420,56 +420,6 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Model section
-            name: philosophy
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: Cards
-                name: cards
-                widget: object
-                fields:
-                  - label: Card 1 paragraph
-                    name: card1_paragraph
-                    widget: text
-                  - label: Card 2 paragraph
-                    name: card2_paragraph
-                    widget: text
-                  - label: Card 3 paragraph
-                    name: card3_paragraph
-          - label: Pricing section
-            name: pricing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Monthly Label
-                name: monthly_label
-                widget: string
-              - label: Around Label
-                name: around_label
-                widget: string
-              - label: Rental Title
-                name: rental_title
-                widget: string
-              - label: Rental Price
-                name: rental_price
-                widget: string
-              - label: Owned Title
-                name: owned_title
-                widget: string
-              - label: Owned Price
-                name: owned_price
-                widget: string
-              - label: Bottom Paragraph
-                name: bottom_paragraph
-                widget: string
           - label: Customer source section
             name: customerSources
             widget: object
@@ -480,22 +430,22 @@ collections:
               - label: Paragraph
                 name: paragraph
                 widget: text
-          - label: Safety section
-            name: safety
+          - label: Get started section
+            name: get_started
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Heading1
+                name: heading1
                 widget: string
-              - label: Item 1
-                name: item1
-                widget: text
-              - label: Item 2
-                name: item2
-                widget: text
-              - label: Item 3
-                name: item3
-                widget: text
+              - label: Heading2
+                name: heading2
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: string
+              - label: ButtonText
+                name: buttontext
+                widget: string
       - file: src/pages/student/index.md
         label: Student
         name: student
@@ -1033,56 +983,6 @@ collections:
                 name: heading
                 widget: string
               - label: Bottom paragraph
-                name: bottom_paragraph
-                widget: string
-          - label: Model section
-            name: philosophy
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: Cards
-                name: cards
-                widget: object
-                fields:
-                  - label: Card 1 paragraph
-                    name: card1_paragraph
-                    widget: text
-                  - label: Card 2 paragraph
-                    name: card2_paragraph
-                    widget: text
-                  - label: Card 3 paragraph
-                    name: card3_paragraph
-          - label: Pricing section
-            name: pricing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Monthly Label
-                name: monthly_label
-                widget: string
-              - label: Around Label
-                name: around_label
-                widget: string
-              - label: Rental Title
-                name: rental_title
-                widget: string
-              - label: Rental Price
-                name: rental_price
-                widget: string
-              - label: Owned Title
-                name: owned_title
-                widget: string
-              - label: Owned Price
-                name: owned_price
-                widget: string
-              - label: Bottom Paragraph
                 name: bottom_paragraph
                 widget: string
           - label: Customer source section

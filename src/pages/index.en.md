@@ -24,38 +24,12 @@ peril_forest:
   heading: >-
     Hedvig covers everything a traditional home insurance covers – even your
     gadgets
-philosophy:
-  cards:
-    card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
-    card2_paragraph: The rest is set aside for claims so we can pay out quickly.
-    card3_paragraph: >-
-      If there is any money left at the end of the year we give it to charities
-      selected by our members.
-  heading: A different kind of insurer
-  paragraph: >-
-    Hedvig does things differently from traditional insurers. Our model puts
-    your interests first. It starts with us only taking a fixed fee. By doing
-    this we have no incentive to pay out less in claims or create unnecessary
-    delays or hassles in the claims process. 
-pricing:
-  around_label: 'Starting at '
-  bottom_paragraph: >-
-    PS! These prices are estimates based on a single occupant living in a
-    small-ish apartment. Get your personal price in the app.
-  heading: Don't let insurers lock you in. Hedvig bills monthly.
-  monthly_label: / month
-  owned_price: 129kr
-  owned_title: Owned apartment
-  rental_price: 99kr
-  rental_title: Rental apartment
 customerSources:
   headline: Already insured? We'll handle the switch
   paragraph: Our users come from
-safety:
-  item1: >-
-    Hedvig is re-insured by Inter Hannover, part of one of the world’s largest
-    insurance groups.
-  item2: Has a AA-rating from Standard & Poor's
-  item3: Authorized by the Swedish Finansinspektionen
+get_started:
+  heading1: "2 minutes. 8 questions."
+  heading2: "Your perfect insurance."
+  paragraph: "No lock in. Monthly billing."
+  buttontext: "Get started"
 ---
-

@@ -10,11 +10,11 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
-import { PriceSection } from 'src/sections/price';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
+import { GetStarted } from 'src/sections/landing/get-started';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -59,22 +59,14 @@ class LandingTemplate extends React.Component {
 
   render() {
     const {
-      reinsuredFile,
-      authorisedFile,
-      aaRatedFile,
       mediaLogosFile,
-      modelFixedFile,
-      modelClaimPoolFile,
-      modelCharityFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       title,
       landing,
       threeExplainers,
       perilForest,
-      philosophy,
-      safety,
-      pricing,
+      getStarted,
       customerSources,
       header,
       footer,
@@ -253,130 +245,12 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            <PriceSection {...pricing} />
-
             <CustomerSources
               headline={customerSources.headline}
               paragraph={customerSources.paragraph}
             />
 
-            {/* Model */}
-            <div className="u-backgroundWhite">
-              <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
-                  {philosophy.heading}
-                </h2>
-                <p className="u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter Home-model-paragraph">
-                  {philosophy.paragraph}
-                </p>
-                <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryBlackPurple u-spacePV6">
-                        {modelFixedFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelFixedFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card1_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPurple u-spacePV6">
-                        {modelClaimPoolFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelClaimPoolFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card2_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPink u-spacePV6">
-                        {modelCharityFile && (
-                          <Img
-                            className="Home-model-image Home-model-image-charity"
-                            sizes={modelCharityFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card3_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Safety */}
-            <div className="u-backgroundPrimaryDarkestPurple Home-safety">
-              <div className="Grid Grid--withGutter Grid--alignCenter">
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {reinsuredFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={reinsuredFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item1}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {aaRatedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={aaRatedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item2}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {authorisedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={authorisedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item3}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <GetStarted {...getStarted} />
 
             {/* Media logos on mobile */}
             <div>
@@ -400,13 +274,7 @@ class LandingTemplate extends React.Component {
 }
 
 LandingTemplate.propTypes = {
-  reinsuredFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  authorisedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  aaRatedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelFixedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelClaimPoolFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
@@ -436,29 +304,11 @@ LandingTemplate.propTypes = {
     heading: PropTypes.string.isRequired,
     bottom_paragraph: PropTypes.string.isRequired,
   }).isRequired,
-  philosophy: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
+  getStarted: PropTypes.shape({
+    heading1: PropTypes.string.isRequired,
+    heading2: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
-    cards: PropTypes.shape({
-      card1_paragraph: PropTypes.string.isRequired,
-      card2_paragraph: PropTypes.string.isRequired,
-      card3_paragraph: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  safety: PropTypes.shape({
-    item1: PropTypes.string.isRequired,
-    item2: PropTypes.string.isRequired,
-    item3: PropTypes.string.isRequired,
-  }).isRequired,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    monthlyLabel: PropTypes.string.isRequired,
-    aroundLabel: PropTypes.string.isRequired,
-    rentalTitle: PropTypes.string.isRequired,
-    rentalPrice: PropTypes.string.isRequired,
-    ownedTitle: PropTypes.string.isRequired,
-    ownedPrice: PropTypes.string.isRequired,
-    bottomParagraph: PropTypes.string.isRequired,
+    buttontext: PropTypes.string.isRequired,
   }).isRequired,
   customerSources: PropTypes.shape({
     headline: PropTypes.string.isRequired,
@@ -473,32 +323,15 @@ const Landing = ({ data, pathContext }) => {
   const copy = data.landingPage.frontmatter;
   return (
     <LandingTemplate
-      reinsuredFile={data.reinsuredFile}
-      authorisedFile={data.authorisedFile}
-      aaRatedFile={data.aaRatedFile}
       chatDemoBgFile={data.chatDemoBgFile}
       mediaLogosFile={data.mediaLogosFile}
-      modelFixedFile={data.modelFixedFile}
-      modelClaimPoolFile={data.modelClaimPoolFile}
-      modelCharityFile={data.modelCharityFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
-      philosophy={copy.philosophy}
-      safety={copy.safety}
-      pricing={{
-        heading: copy.pricing.heading,
-        rentalTitle: copy.pricing.rental_title,
-        rentalPrice: copy.pricing.rental_price,
-        ownedTitle: copy.pricing.owned_title,
-        ownedPrice: copy.pricing.owned_price,
-        bottomParagraph: copy.pricing.bottom_paragraph,
-        monthlyLabel: copy.pricing.monthly_label,
-        aroundLabel: copy.pricing.around_label,
-      }}
+      getStarted={copy.get_started}
       customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
@@ -525,29 +358,6 @@ export const query = graphql`
         }
       }
     }
-    modelFixedFile: file(relativePath: { eq: "home/model-fixed@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    modelClaimPoolFile: file(
-      relativePath: { eq: "home/model-claim-pool@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    modelCharityFile: file(relativePath: { eq: "home/model-charity@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
     perilForestMobileFile: file(
       relativePath: { eq: "home/peril-forest-mobile@2x.png" }
     ) {
@@ -562,27 +372,6 @@ export const query = graphql`
     ) {
       image: childImageSharp {
         sizes(maxWidth: 754) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    reinsuredFile: file(relativePath: { eq: "home/reinsured@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    authorisedFile: file(relativePath: { eq: "home/authorised@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    aaRatedFile: file(relativePath: { eq: "home/aa-rated@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
@@ -616,33 +405,15 @@ export const query = graphql`
           heading
           bottom_paragraph
         }
-        philosophy {
-          heading
-          paragraph
-          cards {
-            card1_paragraph
-            card2_paragraph
-            card3_paragraph
-          }
-        }
         customerSources {
           headline
           paragraph
         }
-        safety {
-          item1
-          item2
-          item3
-        }
-        pricing {
-          heading
-          monthly_label
-          around_label
-          rental_title
-          rental_price
-          owned_title
-          owned_price
-          bottom_paragraph
+        get_started {
+          heading1
+          heading2
+          paragraph
+          buttontext
         }
       }
     }
