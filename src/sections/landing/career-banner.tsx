@@ -4,6 +4,7 @@ import { colors, fonts } from '@hedviginsurance/brand';
 import VisibilitySensor from 'react-visibility-sensor';
 import { LottieLoader } from 'src/components/LottieLoader';
 import { ReactComponent as LogoSvg } from 'assets/identity/hedvig-symbol-color.svg';
+import { Container } from 'constate';
 
 const typingAnimation = require('assets/animations/hedvig/hedvig-typing.json');
 
@@ -12,6 +13,13 @@ interface Props {
   message2: string;
   ctaLabel: string;
   ctaTarget: string;
+}
+
+interface State {
+  hasMounted: boolean;
+}
+interface Actions {
+  mount: () => void;
 }
 
 interface WithVisibility {
@@ -78,7 +86,6 @@ const HedvigLogo = styled(LogoSvg)(
 const TypingAnimation = styled('div')(
   ({ exitDelay, isVisible }: { exitDelay: number } & WithVisibility) => ({
     position: 'absolute',
-    width: 60,
     borderRadius: 8,
     animation: isVisible ? `${fadeOut} 400ms forwards` : 'none',
     animationDelay: `${exitDelay}ms`,
@@ -138,30 +145,34 @@ const Button = styled('a')(
     },
   }),
 );
-class CareerBanner extends React.PureComponent<Props, { hasMounted: boolean }> {
-  state: { hasMounted: boolean } = { hasMounted: false };
-  render() {
-    return (
-      <CareerBannerContainer className="Container">
+
+const actions = {
+  mount: () => (_: State): Partial<State> => ({ hasMounted: true }),
+};
+
+const CareerBanner: React.SFC<Props> = (props) => (
+  <CareerBannerContainer className="Container">
+    <Container<State, Actions>
+      actions={actions}
+      initialState={{ hasMounted: false }}
+    >
+      {({ hasMounted, mount }: State & Actions) => (
         <VisibilitySensor
           onChange={(isVisible: boolean) => {
-            this.setState(({ hasMounted }) => ({
-              hasMounted: hasMounted || isVisible,
-            }));
+            if (isVisible) {
+              mount();
+            }
           }}
         >
           {() => (
             <>
               <HedvigLogo
                 animationDelay={0}
-                src="/assets/identity/hedvig-symbol-color.svg"
-                isVisible={this.state.hasMounted}
+                width={60}
+                isVisible={hasMounted}
               />
               <Row>
-                <TypingAnimation
-                  isVisible={this.state.hasMounted}
-                  exitDelay={900}
-                >
+                <TypingAnimation isVisible={hasMounted} exitDelay={900}>
                   <LottieLoader
                     options={{
                       loop: true,
@@ -171,22 +182,13 @@ class CareerBanner extends React.PureComponent<Props, { hasMounted: boolean }> {
                     }}
                   />
                 </TypingAnimation>
-                <ChatMessage
-                  animationDelay={1_100}
-                  isVisible={this.state.hasMounted}
-                >
-                  {this.props.message1}
+                <ChatMessage animationDelay={1_100} isVisible={hasMounted}>
+                  {props.message1}
                 </ChatMessage>
               </Row>
               <Row>
-                <HiddenContainer
-                  isVisible={this.state.hasMounted}
-                  animationDelay={1_100}
-                >
-                  <TypingAnimation
-                    isVisible={this.state.hasMounted}
-                    exitDelay={1_900}
-                  >
+                <HiddenContainer isVisible={hasMounted} animationDelay={1_100}>
+                  <TypingAnimation isVisible={hasMounted} exitDelay={1_900}>
                     <LottieLoader
                       options={{
                         loop: true,
@@ -197,28 +199,25 @@ class CareerBanner extends React.PureComponent<Props, { hasMounted: boolean }> {
                     />
                   </TypingAnimation>
                 </HiddenContainer>
-                <ChatMessage
-                  animationDelay={1_900}
-                  isVisible={this.state.hasMounted}
-                >
-                  {this.props.message2}
+                <ChatMessage animationDelay={1_900} isVisible={hasMounted}>
+                  {props.message2}
                 </ChatMessage>
               </Row>
               <Row align="right">
                 <Button
-                  href={this.props.ctaTarget}
+                  href={props.ctaTarget}
                   animationDelay={2_300}
-                  isVisible={this.state.hasMounted}
+                  isVisible={hasMounted}
                 >
-                  {this.props.ctaLabel}
+                  {props.ctaLabel}
                 </Button>
               </Row>
             </>
           )}
         </VisibilitySensor>
-      </CareerBannerContainer>
-    );
-  }
-}
+      )}
+    </Container>
+  </CareerBannerContainer>
+);
 
 export { CareerBanner };
