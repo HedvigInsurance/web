@@ -27,4 +27,9 @@ peril_forest:
 customerSources:
   headline: Already insured? We'll handle the switch
   paragraph: Our users come from
+get_started:
+  heading1: "2 minutes. 8 questions."
+  heading2: "Your perfect insurance."
+  paragraph: "No lock in. Monthly billing."
+  buttontext: "Get started"
 ---
