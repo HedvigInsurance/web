@@ -13,7 +13,7 @@ const baseVideoUrl =
   'https://s3.eu-central-1.amazonaws.com/www.hedvig.com/rotating-phone-video';
 
 const RotatingPhoneVideo: React.SFC = () => (
-  <Video autoPlay loop>
+  <Video autoPlay loop muted>
     <source
       src={`${baseVideoUrl}/hedvig_rotating_phone.m3u8`}
       type="application/vnd.apple.mpegurl"
