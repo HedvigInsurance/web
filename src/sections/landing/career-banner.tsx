@@ -48,11 +48,13 @@ const fadeSlideIn = keyframes({
 const CareerBannerContainer = styled('div')({
   paddingTop: 30,
   paddingBottom: 20,
+  paddingLeft: 20,
+  paddingRight: 20,
+  maxWidth: 900,
+  margin: '0 auto',
   '@media (min-width: 480px)': {
-    paddingTop: 80,
-    paddingBottom: 90,
-    paddingLeft: 50,
-    paddingRight: 50,
+    paddingTop: 40,
+    paddingBottom: 40,
   },
 });
 
@@ -151,7 +153,7 @@ const actions = {
 };
 
 const CareerBanner: React.SFC<Props> = (props) => (
-  <CareerBannerContainer className="Container">
+  <CareerBannerContainer>
     <Container<State, Actions>
       actions={actions}
       initialState={{ hasMounted: false }}
