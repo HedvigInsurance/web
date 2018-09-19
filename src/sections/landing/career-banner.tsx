@@ -6,6 +6,13 @@ import { LottieLoader } from 'src/components/LottieLoader';
 
 const typingAnimation = require('assets/animations/hedvig/hedvig-typing.json');
 
+interface Props {
+  message1: string;
+  message2: string;
+  ctaLabel: string;
+  ctaTarget: string;
+}
+
 interface WithVisibility {
   isVisible: boolean;
 }
@@ -130,7 +137,7 @@ const Button = styled('a')(
     },
   }),
 );
-class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
+class CareerBanner extends React.PureComponent<Props, { hasMounted: boolean }> {
   state: { hasMounted: boolean } = { hasMounted: false };
   render() {
     return (
@@ -167,8 +174,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
                   animationDelay={1_100}
                   isVisible={this.state.hasMounted}
                 >
-                  Hedvig reste nyligen 30 MSEK för att expandera och utöka
-                  teamet
+                  {this.props.message1}
                 </ChatMessage>
               </Row>
               <Row>
@@ -194,16 +200,16 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
                   animationDelay={1_900}
                   isVisible={this.state.hasMounted}
                 >
-                  Vill du vara med på resan?
+                  {this.props.message2}
                 </ChatMessage>
               </Row>
               <Row align="right">
                 <Button
-                  href="https://join.hedvig.com"
+                  href={this.props.ctaTarget}
                   animationDelay={2_300}
                   isVisible={this.state.hasMounted}
                 >
-                  Se lediga tjänster
+                  {this.props.ctaLabel}
                 </Button>
               </Row>
             </>
