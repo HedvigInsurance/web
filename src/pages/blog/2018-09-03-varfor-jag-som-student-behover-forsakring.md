@@ -20,11 +20,14 @@ content: >-
   kanske bara ville bort och testa på något nytt: plugga i Göteborg? – varför
   inte? 
 
-  > “Det är enkelt. Försäkringsbolag har all anledning att göra det svårt för
-  dig
-    att få betalt när du behöver hjälp. För ju mindre de betalar ut, desto större vinst kan de göra.”
+
+  > “Oavsett var du till slut hamnar kan tillvaron vara hektisk som nybliven
+  student. Det är fester du inte vill missa, nya vänner att lära känna och
+  föreläsningar att gå på.”
 
 
+  Mitt i allt detta är inte försäkringar precis prio ett. Och det är lugnt – vi
+  fattar att du har annat att tänka på. Det är precis det som Hedvig går ut på.
   Oavsett var du till slut hamnade så kan tillvaron vara hektisk som nybliven
   student. Det är fester du inte vill miss, nya vänner att lära känna och
   föreläsningar att gå på. Mitt i allt detta är inte försäkringar precis prio
@@ -48,8 +51,6 @@ content: >-
   exempel cykel, mobil eller dator.
 
 
-
-
   Att skydda dina grejer är något som alla försäkringsbolag lovar. Hedvig tar
   steget längre och ger dig hjälp på riktigt istället för ett vagt skydd. Vi är
   inte som andra försäkringsbolag. Istället för att vara som ett svart hål där
@@ -57,8 +58,7 @@ content: >-
   helt annorlunda. Hedvig hjälper dig och finns helt enkelt där för dig när du
   behöver det. Om du mitt under tentaperioden spiller kaffe på datorn löser
   Hedvig problemet åt dig. Det är bara att prata med Hedvig så får du en ny
-  dator redan nästa dag. Att då inte behöva vänta en månad till nästa
-  studiebidrag kommer är guld värt. Du kan fortsätta med ditt liv och klara
-  kursen.
+  dator redan nästa dag. Att inte behöva vänta en månad till nästa studiebidrag
+  kommer är guld värt.
 ---
 
