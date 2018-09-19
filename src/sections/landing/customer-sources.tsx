@@ -1,26 +1,21 @@
 import * as React from 'react';
+import Measure from 'react-measure';
 import styled from 'react-emotion';
+import Animated from 'animated';
 import { colors } from '@hedviginsurance/brand';
+import { Container } from 'constate';
+import { Mount, Unmount } from 'react-lifecycle-components';
 
-interface Point {
-  x: number;
-  y: number;
-}
-
-interface Props {
+interface CustomerSourcesProps {
   headline: string;
   paragraph: string;
-}
-
-interface ViewPositions {
-  scrollHeight: number;
-  scrollPosition: number;
-  sectionPosition: number;
 }
 
 interface BarProps {
   color: string;
 }
+
+const AnimatedDiv = Animated.createAnimatedComponent('div');
 
 const Table = styled('div')({
   position: 'relative',
@@ -54,9 +49,10 @@ const TableCellName = styled('div')({
   paddingRight: 25,
   paddingBottom: 30,
 });
-const TableCellBar = styled('div')({
+const TableCellBar = styled(AnimatedDiv)({
   display: 'table-cell',
   width: '100%',
+  position: 'relative',
 });
 
 const HeadlineSection = styled('div')({
@@ -74,17 +70,21 @@ const Paragraph = styled('p')({
   paddingBottom: 60,
 });
 
-const PercentageText = styled('div')({
+const PercentageText = styled(AnimatedDiv)({
   fontSize: 18,
   color: colors.DARK_GRAY,
   textAlign: 'right',
   display: 'inline-block',
+  position: 'absolute',
+  left: 0,
+  top: -8,
+  willChange: 'transform',
   '@media (max-width: 600px)': {
     fontSize: 16,
   },
 });
 
-const Container = styled('div')({
+const Section = styled('div')({
   paddingTop: 120,
   '@media (max-width: 600px)': {
     overflow: 'hidden',
@@ -105,11 +105,16 @@ const BarsContainer = styled('div')({
   width: '100%',
 });
 
-const Bar = styled('div')((props: BarProps) => ({
+const Bar = styled(AnimatedDiv)((props: BarProps) => ({
   backgroundColor: props.color,
   height: 12,
   display: 'inline-block',
   borderRadius: 10,
+  transformOrigin: 'top left',
+  willChange: 'transform',
+  position: 'absolute',
+  left: 0,
+  top: 0,
 }));
 
 const COMPANIES = [
@@ -117,139 +122,194 @@ const COMPANIES = [
     name: 'Länsförsäkringar',
     percent: 29,
     color: colors.BLACK_PURPLE,
-    offset: 100,
+    offset: 200,
   },
   {
     name: 'If',
     percent: 25,
     color: colors.PURPLE,
-    offset: 200,
+    offset: 350,
   },
   {
     name: 'TryggHansa',
     percent: 18,
     color: colors.PINK,
-    offset: 250,
+    offset: 400,
   },
   {
     name: 'Folksam',
     percent: 11,
     color: colors.GREEN,
-    offset: 250,
+    offset: 450,
   },
   {
     name: 'Övrigt',
     percent: 17,
     color: colors.DARK_GRAY,
-    offset: 275,
+    offset: 475,
   },
 ];
 
 const MAX_WEIGHT = 29;
-const PERCENTAGE_TEXT_WIDTH = '60px';
-const calcBarWidth = (scrollPercent: number, weight: number) =>
-  `calc(${scrollPercent *
-    ((100 / MAX_WEIGHT) * weight)}% - ${PERCENTAGE_TEXT_WIDTH})`;
-const calculateViewPercentage = (positions: ViewPositions, offset: number) => {
-  const numerator = positions.sectionPosition + offset - positions.scrollHeight;
-  const denumerator = positions.scrollHeight / 4;
-  const delta = (numerator / denumerator) * -1;
-  return Math.min(1, Math.max(0, delta));
-};
-class CustomerSources extends React.Component<Props> {
-  scrollY: number = 0;
-  tableRef: HTMLDivElement | null = null;
-  rowRefs: {
-    [key: string]: {
-      cellRef: HTMLDivElement | null;
-      barRef: HTMLDivElement | null;
-      percent: number;
-      offset: number;
-    };
-  } = {};
 
-  handleScroll: EventListener = () => {
-    this.scrollY = window.scrollY;
-
-    Object.keys(this.rowRefs).forEach((key) => {
-      const rowRef = this.rowRefs[key];
-      if (rowRef.barRef === null || rowRef.cellRef === null) {
-        return;
-      }
-
-      const percent = calculateViewPercentage(
-        {
-          scrollHeight: window.innerHeight,
-          scrollPosition: this.scrollY,
-          sectionPosition:
-            (this.tableRef && this.tableRef.getBoundingClientRect().top) || 0,
-        },
-        rowRef.offset,
-      );
-      rowRef.barRef.style.width = calcBarWidth(percent, rowRef.percent);
-      rowRef.barRef.style.marginRight = `${percent * 16}px`;
-      rowRef.cellRef.style.opacity = '' + percent;
-    });
-  };
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  render() {
-    return (
-      <Container className={'Container'}>
-        <HeadlineSection>
-          <Headline className="u-md-fontSize2 u-lg-fontSize2">
-            {this.props.headline}
-          </Headline>
-          <Paragraph>{this.props.paragraph}</Paragraph>
-        </HeadlineSection>
-
-        <Table
-          innerRef={(ref) => {
-            this.tableRef = ref;
-          }}
-        >
-          <BackgroundImage src={'/assets/backgrounds/mesh@2x.png'} />
-          <BarsContainer>
-            {COMPANIES.map((company) => (
-              <TableRow key={company.name}>
-                <TableCellName>
-                  <CompanyName>{company.name}</CompanyName>
-                </TableCellName>
-                <TableCellBar
-                  innerRef={(cellRef) => {
-                    this.rowRefs[company.name] = {
-                      ...(this.rowRefs[company.name] || {}),
-                      cellRef,
-                      percent: company.percent,
-                      offset: company.offset,
-                    };
-                  }}
-                >
-                  <Bar
-                    color={company.color}
-                    innerRef={(barRef) => {
-                      this.rowRefs[company.name] = {
-                        ...(this.rowRefs[company.name] || {}),
-                        barRef,
-                      };
-                    }}
-                  />
-                  <PercentageText>{`${company.percent}%`}</PercentageText>
-                </TableCellBar>
-              </TableRow>
-            ))}
-          </BarsContainer>
-        </Table>
-      </Container>
-    );
-  }
+interface GetStyle {
+  animatedValue: Animated.Value;
+  offsetTop: number;
+  offset: number;
+  percent: number;
 }
 
-export { CustomerSources };
+const getSectionPosition = ({ offsetTop }: { offsetTop: number }) =>
+  offsetTop - window.innerHeight;
+
+const getTableCellStyle = ({
+  animatedValue,
+  offsetTop = 0,
+  offset,
+}: GetStyle) => {
+  const sectionPosition = getSectionPosition({ offsetTop });
+
+  const opacity = animatedValue.interpolate({
+    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
+    outputRange: [0, 1],
+    extrapolate: 'clamp',
+  });
+
+  return {
+    opacity,
+  };
+};
+
+const getBarStyle = ({
+  animatedValue,
+  offsetTop = 0,
+  offset,
+  percent,
+}: GetStyle) => {
+  const sectionPosition = getSectionPosition({ offsetTop });
+
+  const transform = animatedValue.interpolate({
+    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
+    outputRange: ['scaleX(0)', `scaleX(1)`],
+    extrapolate: 'clamp',
+  });
+
+  return {
+    width: `calc(${(100 / MAX_WEIGHT) * percent}% - 50px)`,
+    transform,
+  };
+};
+
+const getPercentageTextStyle = ({
+  animatedValue,
+  offsetTop = 0,
+  offset,
+  percent,
+}: GetStyle) => {
+  const sectionPosition = getSectionPosition({ offsetTop });
+
+  const transform = animatedValue.interpolate({
+    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
+    outputRange: [`translateX(-90%)`, `translateX(0%)`],
+    extrapolate: 'clamp',
+  });
+
+  return {
+    transform,
+    width: `${(100 / MAX_WEIGHT) * percent}%`,
+  };
+};
+
+interface State {
+  animatedValue: Animated.Value;
+  eventHandler: (...args: any[]) => void;
+}
+
+const getInitialState: () => State = () => {
+  const animatedValue = new Animated.Value(0);
+
+  return {
+    animatedValue,
+    eventHandler: Animated.event([
+      { target: { scrollingElement: { scrollTop: animatedValue } } },
+    ]),
+  };
+};
+
+export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
+  headline,
+  paragraph,
+}) => (
+  <Container<State> initialState={getInitialState()}>
+    {({ animatedValue, eventHandler }) => (
+      <Unmount on={() => window.removeEventListener('scroll', eventHandler)}>
+        <Mount
+          on={() =>
+            window.addEventListener('scroll', eventHandler, {
+              passive: true,
+            })
+          }
+        >
+          <Measure offset>
+            {({ measureRef, contentRect }) => (
+              <Section className={'Container'}>
+                <HeadlineSection>
+                  <Headline className="u-md-fontSize2 u-lg-fontSize2">
+                    {headline}
+                  </Headline>
+                  <Paragraph>{paragraph}</Paragraph>
+                </HeadlineSection>
+                <Table innerRef={measureRef}>
+                  <BackgroundImage src={'/assets/backgrounds/mesh@2x.png'} />
+                  <BarsContainer>
+                    {COMPANIES.map((company, index) => (
+                      <TableRow key={company.name}>
+                        <TableCellName>
+                          <CompanyName>{company.name}</CompanyName>
+                        </TableCellName>
+                        <TableCellBar
+                          style={getTableCellStyle({
+                            animatedValue: animatedValue,
+                            offsetTop:
+                              (contentRect.offset && contentRect.offset.top) ||
+                              0,
+                            offset: index * 35 + 100,
+                            percent: company.percent,
+                          })}
+                        >
+                          <Bar
+                            color={company.color}
+                            style={getBarStyle({
+                              animatedValue: animatedValue,
+                              offsetTop:
+                                (contentRect.offset &&
+                                  contentRect.offset.top) ||
+                                0,
+                              offset: index * 35 + 100,
+                              percent: company.percent,
+                            })}
+                          />
+                          <PercentageText
+                            style={getPercentageTextStyle({
+                              animatedValue: animatedValue,
+                              offsetTop:
+                                (contentRect.offset &&
+                                  contentRect.offset.top) ||
+                                0,
+                              offset: index * 35 + 100,
+                              percent: company.percent,
+                            })}
+                          >{`${company.percent}%`}</PercentageText>
+                        </TableCellBar>
+                      </TableRow>
+                    ))}
+                  </BarsContainer>
+                </Table>
+              </Section>
+            )}
+          </Measure>
+        </Mount>
+      </Unmount>
+    )}
+  </Container>
+);
