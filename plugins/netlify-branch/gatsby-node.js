@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 
-exports.modifyWebpackConfig = ({ config }) => {
-  config.merge({
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
     plugins: [
       new webpack.DefinePlugin({
         'process.env.URL': JSON.stringify(process.env.URL),
@@ -9,6 +9,4 @@ exports.modifyWebpackConfig = ({ config }) => {
       }),
     ],
   });
-
-  return config;
 };
