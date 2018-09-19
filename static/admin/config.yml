@@ -446,22 +446,6 @@ collections:
               - label: ButtonText
                 name: buttontext
                 widget: string
-          - label: Safety section
-            name: safety
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Item 1
-                name: item1
-                widget: text
-              - label: Item 2
-                name: item2
-                widget: text
-              - label: Item 3
-                name: item3
-                widget: text
       - file: src/pages/student/index.md
         label: Student
         name: student

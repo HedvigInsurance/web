@@ -59,9 +59,6 @@ class LandingTemplate extends React.Component {
 
   render() {
     const {
-      reinsuredFile,
-      authorisedFile,
-      aaRatedFile,
       mediaLogosFile,
       perilForestMobileFile,
       perilForestDesktopFile,
@@ -70,7 +67,6 @@ class LandingTemplate extends React.Component {
       threeExplainers,
       perilForest,
       getStarted,
-      safety,
       customerSources,
       header,
       footer,
@@ -256,56 +252,6 @@ class LandingTemplate extends React.Component {
 
             <GetStarted {...getStarted} />
 
-            {/* Safety */}
-            <div className="u-backgroundPrimaryDarkestPurple Home-safety">
-              <div className="Grid Grid--withGutter Grid--alignCenter">
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {reinsuredFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={reinsuredFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item1}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-spaceMB6 u-md-spaceMB0 u-lg-spaceMB0 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {aaRatedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={aaRatedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item2}
-                  </p>
-                </div>
-
-                <div className="u-md-size1of3 u-lg-size1of3 u-flex u-flexCol u-flexAlignItemsCenter">
-                  <figure>
-                    {authorisedFile && (
-                      <Img
-                        className="Home-safety-image"
-                        sizes={authorisedFile.image.sizes}
-                        alt=""
-                      />
-                    )}
-                  </figure>
-                  <p className="Home-safety-image-text u-colorWhite u-textCenter u-maxWidth1of3 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                    {safety.item3}
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Media logos on mobile */}
             <div>
               <div className="Container u-lg-hidden">
@@ -328,9 +274,6 @@ class LandingTemplate extends React.Component {
 }
 
 LandingTemplate.propTypes = {
-  reinsuredFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  authorisedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  aaRatedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -367,11 +310,6 @@ LandingTemplate.propTypes = {
     paragraph: PropTypes.string.isRequired,
     buttontext: PropTypes.string.isRequired,
   }).isRequired,
-  safety: PropTypes.shape({
-    item1: PropTypes.string.isRequired,
-    item2: PropTypes.string.isRequired,
-    item3: PropTypes.string.isRequired,
-  }).isRequired,
   customerSources: PropTypes.shape({
     headline: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
@@ -385,9 +323,6 @@ const Landing = ({ data, pathContext }) => {
   const copy = data.landingPage.frontmatter;
   return (
     <LandingTemplate
-      reinsuredFile={data.reinsuredFile}
-      authorisedFile={data.authorisedFile}
-      aaRatedFile={data.aaRatedFile}
       chatDemoBgFile={data.chatDemoBgFile}
       mediaLogosFile={data.mediaLogosFile}
       perilForestMobileFile={data.perilForestMobileFile}
@@ -397,7 +332,6 @@ const Landing = ({ data, pathContext }) => {
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       getStarted={copy.get_started}
-      safety={copy.safety}
       customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
@@ -442,27 +376,6 @@ export const query = graphql`
         }
       }
     }
-    reinsuredFile: file(relativePath: { eq: "home/reinsured@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    authorisedFile: file(relativePath: { eq: "home/authorised@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    aaRatedFile: file(relativePath: { eq: "home/aa-rated@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
     landingPage: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -501,11 +414,6 @@ export const query = graphql`
           heading2
           paragraph
           buttontext
-        }
-        safety {
-          item1
-          item2
-          item3
         }
       }
     }

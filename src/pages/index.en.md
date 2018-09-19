@@ -27,10 +27,4 @@ peril_forest:
 customerSources:
   headline: Already insured? We'll handle the switch
   paragraph: Our users come from
-safety:
-  item1: >-
-    Hedvig is re-insured by Inter Hannover, part of one of the world’s largest
-    insurance groups.
-  item2: Has a AA-rating from Standard & Poor's
-  item3: Authorized by the Swedish Finansinspektionen
 ---

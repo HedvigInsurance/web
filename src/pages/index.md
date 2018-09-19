@@ -36,10 +36,4 @@ get_started:
   heading2: "Din perfekta försäkring."
   paragraph: "Ingen bindningstid. Månadsvis betalning"
   buttontext: "Kom igång"
-safety:
-  item1: >-
-    Hedvig är tryggat av Inter Hannover, del av en av världens största
-    försäkringsgrupper
-  item2: Med AA-rating från Standard & Poor's
-  item3: Hedvig är auktoriserat av Finansinspektionen
 ---

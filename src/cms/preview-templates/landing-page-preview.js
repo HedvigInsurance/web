@@ -12,7 +12,6 @@ const LandingPagePreview = ({ entry }) => (
       perilForest={entry.getIn(['data', 'peril_forest']).toJS()}
       getStarted={entry.getIn(['data', 'get_started']).toJS()}
       customerSources={entry.getIn(['data', 'customerSources']).toJS()}
-      safety={entry.getIn(['data', 'safety']).toJS()}
     />
   </Provider>
 );
