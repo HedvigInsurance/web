@@ -159,8 +159,16 @@ interface GetStyle {
   percent: number;
 }
 
+const getWindowInnerHeight = () => {
+  if (typeof window !== 'undefined') {
+    return window.innerHeight;
+  }
+
+  return 0;
+};
+
 const getSectionPosition = ({ offsetTop }: { offsetTop: number }) =>
-  offsetTop - window.innerHeight;
+  offsetTop - getWindowInnerHeight();
 
 const getTableCellStyle = ({
   animatedValue,
