@@ -2,7 +2,11 @@ import * as React from 'react';
 import styled from 'react-emotion';
 
 const Video = styled('video')({
-  maxWidth: '100%',
+  maxWidth: 300,
+  width: '100%',
+  '@media (min-width: 1024px)': {
+    maxWidth: 450,
+  },
 });
 
 const baseVideoUrl =
