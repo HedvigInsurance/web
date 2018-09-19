@@ -1,4 +1,4 @@
-import { sortBy, compose, path, pathOr, find, prop, pipe, propOr } from 'ramda';
+import { compose, find, path, pathOr, pipe, propOr, sortBy } from 'ramda';
 import { BlogPost } from 'src/components/Blog';
 import { Author } from '../components/Blog/types';
 import { notNullable } from 'src/utils/nullables';
