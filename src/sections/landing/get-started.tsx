@@ -94,47 +94,43 @@ const ImgTag = styled('img')({
   },
 });
 
-class GetStarted extends React.Component<Props> {
-  render() {
-    return (
-      <Section>
-        <Container className="Container">
-          <MediaQuery query="(max-width: 600px)">
-            <GetStartedBtnMobile>
-              <LinkTag
-                tags="home-hero"
-                className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-              >
-                {this.props.buttontext}
-              </LinkTag>
-            </GetStartedBtnMobile>
-          </MediaQuery>
+const GetStarted: React.SFC<Props> = (props) => (
+  <Section>
+    <Container className="Container">
+      <MediaQuery query="(max-width: 600px)">
+        <GetStartedBtnMobile>
+          <LinkTag
+            tags={['get-started']}
+            className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+          >
+            {props.buttontext}
+          </LinkTag>
+        </GetStartedBtnMobile>
+      </MediaQuery>
 
-          <ImageContainer>
-            <ImgTag src={'/assets/social/get-started-image.png'} />
-          </ImageContainer>
+      <ImageContainer>
+        <ImgTag src={'/assets/social/get-started-image.png'} />
+      </ImageContainer>
 
-          <HeadlineContainer>
-            <Headline className="u-md-fontSize4 u-lg-fontSize4 u-fontSize6">
-              {this.props.heading1} <br />
-              {this.props.heading2}
-            </Headline>
-            <Paragraph>{this.props.paragraph}</Paragraph>
-            <MediaQuery query="(min-width: 600px)">
-              <GetStartedBtn>
-                <LinkTag
-                  tags="home-hero"
-                  className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-                >
-                  {this.props.buttontext}
-                </LinkTag>
-              </GetStartedBtn>
-            </MediaQuery>
-          </HeadlineContainer>
-        </Container>
-      </Section>
-    );
-  }
-}
+      <HeadlineContainer>
+        <Headline className="u-md-fontSize4 u-lg-fontSize4 u-fontSize6">
+          {props.heading1} <br />
+          {props.heading2}
+        </Headline>
+        <Paragraph>{props.paragraph}</Paragraph>
+        <MediaQuery query="(min-width: 601px)">
+          <GetStartedBtn>
+            <LinkTag
+              tags={['get-started']}
+              className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+            >
+              {props.buttontext}
+            </LinkTag>
+          </GetStartedBtn>
+        </MediaQuery>
+      </HeadlineContainer>
+    </Container>
+  </Section>
+);
 
 export { GetStarted };
