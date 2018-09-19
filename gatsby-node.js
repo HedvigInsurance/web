@@ -24,8 +24,22 @@ exports.modifyWebpackConfig = ({ config }) => {
   })
 }
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage, createRedirect } = boundActionCreators
+
+  createRedirect({
+    fromPath: '/press',
+    toPath: '/about-us',
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+  createRedirect({
+    fromPath: '/press/',
+    toPath: '/about-us',
+    isPermanent: true,
+    redirectInBrowser: true,
+  })
+
   return graphql(`
     {
       allMarkdownRemark {
