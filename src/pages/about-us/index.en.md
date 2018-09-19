@@ -32,10 +32,10 @@ press:
     We can be reached at <mailto:press@hedvig.com> and our press assets are
     available for download [here](/assets/press/hedvig-press-assets.zip).
   items:
-    - link: 'https://www.wired.co.uk/magazine'
+    - link: 'https://www.wired.co.uk/article/best-startups-in-stockholm-2018'
       logo: /uploads/wired_logo.svg.png
-      text: Designated by Wired UK
-      title: Hedvig is one of Europe’s 100 hottest startups
+      text: Declared by Wired UK
+      title: Hedvig is listed as one of Europe’s 100 hottest startups
   title: Press
 investors:
   list:
