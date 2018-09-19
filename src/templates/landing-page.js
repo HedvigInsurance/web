@@ -141,19 +141,6 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop */}
-            <div>
-              <div className="Container u-hidden u-lg-block">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
-
             <CareerBanner />
 
             {/* Three explainers */}
@@ -405,9 +392,9 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on mobile */}
+            {/* Media logos on desktop */}
             <div>
-              <div className="Container u-lg-hidden">
+              <div className="Container">
                 {mediaLogosFile && (
                   <Img
                     className="Home-media"

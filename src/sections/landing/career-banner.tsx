@@ -30,14 +30,21 @@ const fadeSlideIn = keyframes({
 });
 
 const CareerBannerContainer = styled('div')({
-  paddingTop: 80,
-  paddingBottom: 90,
+  paddingTop: 30,
+  paddingBottom: 20,
+  '@media (min-width: 480px)': {
+    paddingTop: 80,
+    paddingBottom: 90,
+    paddingLeft: 50,
+    paddingRight: 50,
+  },
 });
 
 const Row = styled('div')(
   ({ align = 'left' }: { align?: 'left' | 'right' }) => ({
     position: 'relative',
     paddingBottom: 15,
+    fontSize: 16,
     textAlign: align,
     '@media (max-width: 480px)':
       align === 'right'
@@ -145,7 +152,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
               <Row>
                 <TypingAnimation
                   isVisible={this.state.hasMounted}
-                  exitDelay={1_400}
+                  exitDelay={900}
                 >
                   <LottieLoader
                     options={{
@@ -157,7 +164,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
                   />
                 </TypingAnimation>
                 <ChatMessage
-                  animationDelay={1_600}
+                  animationDelay={1_100}
                   isVisible={this.state.hasMounted}
                 >
                   Hedvig reste nyligen 30 MSEK för att expandera och utöka
@@ -167,11 +174,11 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
               <Row>
                 <HiddenContainer
                   isVisible={this.state.hasMounted}
-                  animationDelay={1_600}
+                  animationDelay={1_100}
                 >
                   <TypingAnimation
                     isVisible={this.state.hasMounted}
-                    exitDelay={2_400}
+                    exitDelay={1_900}
                   >
                     <LottieLoader
                       options={{
@@ -184,7 +191,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
                   </TypingAnimation>
                 </HiddenContainer>
                 <ChatMessage
-                  animationDelay={2_400}
+                  animationDelay={1_900}
                   isVisible={this.state.hasMounted}
                 >
                   Vill du vara med på resan?
@@ -193,7 +200,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
               <Row align="right">
                 <Button
                   href="https://join.hedvig.com"
-                  animationDelay={2_800}
+                  animationDelay={2_300}
                   isVisible={this.state.hasMounted}
                 >
                   Se lediga tjänster
