@@ -15,6 +15,7 @@ import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
+import { GetStarted } from 'src/sections/landing/get-started';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -284,6 +285,7 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
+            <GetStarted />
             {/* Model */}
             <div className="u-backgroundWhite">
               <div className="Container u-spacePV2">
