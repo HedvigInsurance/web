@@ -24,10 +24,13 @@ const Table = styled('div')({
 });
 
 const BackgroundImage = styled('img')({
+  objectFit: 'cover',
   position: 'absolute',
   width: '82%',
+  height: '100%',
   left: '5%',
   top: '-7%',
+  bottom: 0,
   zIndex: -1,
   '@media (max-width: 600px)': {
     left: '10%',
@@ -99,6 +102,7 @@ const PercentageText = styled(AnimatedDiv)({
 
 const Section = styled('div')({
   paddingTop: 120,
+  paddingBottom: 120,
   '@media (max-width: 600px)': {
     overflow: 'hidden',
     paddingTop: 60,

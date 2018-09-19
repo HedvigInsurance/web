@@ -420,28 +420,6 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Model section
-            name: philosophy
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: Cards
-                name: cards
-                widget: object
-                fields:
-                  - label: Card 1 paragraph
-                    name: card1_paragraph
-                    widget: text
-                  - label: Card 2 paragraph
-                    name: card2_paragraph
-                    widget: text
-                  - label: Card 3 paragraph
-                    name: card3_paragraph
           - label: Pricing section
             name: pricing
             widget: object
@@ -1051,28 +1029,6 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Model section
-            name: philosophy
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: Cards
-                name: cards
-                widget: object
-                fields:
-                  - label: Card 1 paragraph
-                    name: card1_paragraph
-                    widget: text
-                  - label: Card 2 paragraph
-                    name: card2_paragraph
-                    widget: text
-                  - label: Card 3 paragraph
-                    name: card3_paragraph
           - label: Pricing section
             name: pricing
             widget: object

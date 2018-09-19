@@ -24,19 +24,6 @@ peril_forest:
   heading: >-
     Hedvig covers everything a traditional home insurance covers – even your
     gadgets
-philosophy:
-  cards:
-    card1_paragraph: 'Hedvig takes a low, fixed fee from your monthly premium.'
-    card2_paragraph: The rest is set aside for claims so we can pay out quickly.
-    card3_paragraph: >-
-      If there is any money left at the end of the year we give it to charities
-      selected by our members.
-  heading: A different kind of insurer
-  paragraph: >-
-    Hedvig does things differently from traditional insurers. Our model puts
-    your interests first. It starts with us only taking a fixed fee. By doing
-    this we have no incentive to pay out less in claims or create unnecessary
-    delays or hassles in the claims process.
 pricing:
   around_label: 'Starting at '
   bottom_paragraph: >-
