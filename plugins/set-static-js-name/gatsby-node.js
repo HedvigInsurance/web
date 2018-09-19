@@ -1,12 +1,10 @@
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ actions, stage }) => {
   if (stage === 'build-javascript') {
-    config.merge({
+    actions.setWebpackConfig({
       output: {
         filename: '[name].js',
         chunkFilename: '[name].js',
       },
     });
   }
-
-  return config;
 };
