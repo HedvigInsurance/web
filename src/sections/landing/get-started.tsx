@@ -18,6 +18,9 @@ const Container = styled('div')({
     paddingTop: 50,
     paddingBottom: 50,
   },
+  '@media (min-width: 601px) and (max-width: 959px)': {
+    paddingTop: 0,
+  },
 });
 
 const ImageContainer = styled('div')({
@@ -33,11 +36,12 @@ const ImageContainer = styled('div')({
     paddingTop: 0,
     marginRight: 0,
   },
-  '@media (max-width: 960px) and (min-width: 601px)': {
+  '@media (max-width: 959px) and (min-width: 601px)': {
     paddingTop: '100px',
   },
 });
 
+//margin left ta bort vid 960 och ha size 100% på bilden då också
 const HeadlineContainer = styled('div')({
   marginLeft: 100,
   float: 'right',
@@ -46,6 +50,9 @@ const HeadlineContainer = styled('div')({
   '@media (max-width: 600px)': {
     maxWidth: 'none',
     paddingTop: 0,
+    marginLeft: 0,
+  },
+  '@media (max-width: 959px)': {
     marginLeft: 0,
   },
 });
@@ -60,7 +67,7 @@ const Headline = styled('h2')({
 
 const Paragrah = styled('p')({
   paddingTop: 15,
-  '@media (max-width: 600px)': {
+  '@media (max-width: 600x)': {
     textAlign: 'center',
   },
 });
@@ -95,7 +102,7 @@ const LinkTag = styled('a')({
 
 const ImgTag = styled('img')({
   maxWidth: '80%',
-  '@media (max-width: 600px)': {
+  '@media (max-width: 959px)': {
     maxWidth: '100%',
   },
 });
