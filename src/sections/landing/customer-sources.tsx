@@ -133,31 +133,26 @@ const COMPANIES = [
     name: 'Länsförsäkringar',
     percent: 29,
     color: colors.BLACK_PURPLE,
-    offset: 200,
   },
   {
     name: 'If',
     percent: 25,
     color: colors.PURPLE,
-    offset: 350,
   },
   {
     name: 'TryggHansa',
     percent: 18,
     color: colors.PINK,
-    offset: 400,
   },
   {
     name: 'Folksam',
     percent: 11,
     color: colors.GREEN,
-    offset: 450,
   },
   {
     name: 'Övrigt',
     percent: 17,
     color: colors.DARK_GRAY,
-    offset: 475,
   },
 ];
 
