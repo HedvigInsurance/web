@@ -2,7 +2,7 @@ import * as React from 'react';
 import Measure from 'react-measure';
 import styled from 'react-emotion';
 import Animated from 'animated';
-import { colors } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand';
 import { Container } from 'constate';
 import { Mount, Unmount } from 'react-lifecycle-components';
 
@@ -78,6 +78,7 @@ const HeadlineSection = styled('div')({
 
 const Headline = styled('h2')({
   paddingBottom: 30,
+  fontFamily: fonts.SORAY,
 });
 
 const Paragraph = styled('p')({

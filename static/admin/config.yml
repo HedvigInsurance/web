@@ -446,6 +446,9 @@ collections:
               - label: ButtonText
                 name: buttontext
                 widget: string
+              - label: Image Alt Text
+                name: imageAltText
+                widget: string
       - file: src/pages/student/index.md
         label: Student
         name: student
@@ -575,9 +578,35 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Bottom CTA
-            name: bottom_cta
-            widget: string
+          - label: Customer source section
+            name: customerSources
+            widget: object
+            fields:
+              - label: Headline
+                name: headline
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: text
+          - label: Get started section
+            name: get_started
+            widget: object
+            fields:
+              - label: Heading1
+                name: heading1
+                widget: string
+              - label: Heading2
+                name: heading2
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: string
+              - label: ButtonText
+                name: buttontext
+                widget: string
+              - label: Image Alt Text
+                name: imageAltText
+                widget: string
       - file: src/pages/giving-back/index.md
         label: Giving Back
         name: giving-back

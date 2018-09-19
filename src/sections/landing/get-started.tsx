@@ -4,12 +4,15 @@ import { colors } from '@hedviginsurance/brand';
 import { fonts } from '@hedviginsurance/brand';
 import AppLink from 'src/components/AppLink';
 import MediaQuery from 'react-responsive';
+import Img from 'gatsby-image';
 
 interface Props {
   heading1: string;
   heading2: string;
   paragraph: string;
   buttontext: string;
+  imageAltText: string;
+  image?: any; // TODO type this better, too late tonight though
 }
 
 const Section = styled('div')({
@@ -34,9 +37,6 @@ const ImageContainer = styled('div')({
   marginRight: 20,
   maxWidth: '50%',
   position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
   '@media (max-width: 600px)': {
     marginRight: 0,
     maxWidth: '300px',
@@ -59,6 +59,7 @@ const HeadlineContainer = styled('div')({
 const Headline = styled('h2')({
   minWidth: '100%',
   fontFamily: fonts.SORAY,
+  fontWeight: 600,
   '@media (max-width: 600px)': {
     textAlign: 'center',
   },
@@ -87,8 +88,8 @@ const LinkTag = styled(AppLink)({
   },
 });
 
-const ImgTag = styled('img')({
-  maxWidth: '80%',
+const Image = styled(Img)({
+  width: 480,
   '@media (max-width: 959px)': {
     maxWidth: '100%',
   },
@@ -109,11 +110,13 @@ const GetStarted: React.SFC<Props> = (props) => (
       </MediaQuery>
 
       <ImageContainer>
-        <ImgTag src={'/assets/social/get-started-image.png'} />
+        {props.image && (
+          <Image sizes={props.image.image.sizes} alt={props.imageAltText} />
+        )}
       </ImageContainer>
 
       <HeadlineContainer>
-        <Headline className="u-md-fontSize4 u-lg-fontSize4 u-fontSize6">
+        <Headline className="u-md-fontSize4 u-lg-fontSize2">
           {props.heading1} <br />
           {props.heading2}
         </Headline>

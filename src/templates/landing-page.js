@@ -67,6 +67,7 @@ class LandingTemplate extends React.Component {
       threeExplainers,
       perilForest,
       getStarted,
+      getStartedImage,
       customerSources,
       header,
       footer,
@@ -250,7 +251,7 @@ class LandingTemplate extends React.Component {
               paragraph={customerSources.paragraph}
             />
 
-            <GetStarted {...getStarted} />
+            <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos on mobile */}
             <div>
@@ -327,6 +328,7 @@ const Landing = ({ data, pathContext }) => {
       mediaLogosFile={data.mediaLogosFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
+      getStartedImage={data.getStartedImage}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
@@ -376,6 +378,15 @@ export const query = graphql`
         }
       }
     }
+
+    getStartedImage: file(relativePath: { eq: "home/get-started-image.png" }) {
+      image: childImageSharp {
+        sizes(maxWidth: 500) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+
     landingPage: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -414,6 +425,7 @@ export const query = graphql`
           heading2
           paragraph
           buttontext
+          imageAltText
         }
       }
     }
