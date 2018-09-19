@@ -49,7 +49,7 @@ press:
     Vi finns på <mailto:press@hedvig.com> och våra presskit finns att ladda ner
     [här](/assets/press/hedvig-press-assets.zip).
   items:
-    - link: 'https://www.wired.co.uk/magazine'
+    - link: 'https://www.wired.co.uk/article/best-startups-in-stockholm-2018'
       logo: /uploads/wired_logo.svg.png
       text: Utsedda av Wired UK.
       title: Hedvig är en av Europas 100 hetaste startups
