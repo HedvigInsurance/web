@@ -18,6 +18,7 @@ import './Home.css';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
+import { CareerBanner } from '../sections/landing/career-banner';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -71,6 +72,7 @@ class LandingTemplate extends React.Component {
       customerSourceMobileFile,
       title,
       landing,
+      careerBanner,
       threeExplainers,
       perilForest,
       philosophy,
@@ -140,18 +142,7 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop */}
-            <div>
-              <div className="Container u-hidden u-lg-block">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            <CareerBanner {...careerBanner} />
 
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
@@ -402,9 +393,9 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on mobile */}
+            {/* Media logos */}
             <div>
-              <div className="Container u-lg-hidden">
+              <div className="Container">
                 {mediaLogosFile && (
                   <Img
                     className="Home-media"
@@ -440,6 +431,12 @@ LandingTemplate.propTypes = {
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
     cta_text: PropTypes.string.isRequired,
+  }).isRequired,
+  careerBanner: PropTypes.shape({
+    message1: PropTypes.string.isRequired,
+    message2: PropTypes.string.isRequired,
+    ctaLabel: PropTypes.string.isRequired,
+    ctaTarget: PropTypes.string.isRequired,
   }).isRequired,
   threeExplainers: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -513,6 +510,7 @@ const Landing = ({ data, pathContext }) => {
       customerSourceMobileFile={data.customerSourceMobileFile}
       title={copy.title}
       landing={copy.landing}
+      careerBanner={copy.careerBanner}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       philosophy={copy.philosophy}
@@ -640,6 +638,12 @@ export const query = graphql`
           heading
           subheading
           cta_text
+        }
+        careerBanner {
+          message1
+          message2
+          ctaLabel
+          ctaTarget
         }
         three_explainers {
           heading
