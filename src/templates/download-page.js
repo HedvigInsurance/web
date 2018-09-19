@@ -4,12 +4,17 @@ import { Helmet } from 'react-helmet';
 import Cookies from 'js-cookie';
 import { StickyContainer } from 'react-sticky';
 import './Page.css';
+import { fonts, colors } from '@hedviginsurance/brand';
+import styled from 'react-emotion';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
 import { trackEvent } from 'src/utils/track-event';
-import { FakeHedvigWebButton } from 'src/components/FakeHedvigWebButton';
+import { Spacing } from 'src/components/Spacing';
+import { DownloadSpinner } from 'src/components/DownloadSpinner';
+import { RotatingPhoneVideo } from 'src/components/RotatingPhoneVideo';
+import { Button } from 'src/components/Button';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -19,6 +24,73 @@ const pagePropTypes = {
   successText: PropTypes.string.isRequired,
   errorText: PropTypes.string.isRequired,
 };
+
+const Container = styled('div')({
+  maxWidth: 1240,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: 10,
+  paddingRight: 10,
+  display: 'flex',
+  justifyContent: 'space-between',
+  paddingTop: 130,
+  paddingBottom: 150,
+  '@media (max-width: 1024px)': {
+    alignItems: 'center',
+    flexDirection: 'column-reverse',
+  },
+});
+
+const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
+  ({ width }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    '@media (min-width: 1024px)': {
+      width,
+    },
+  }),
+);
+
+const Heading = styled('h1')({
+  textAlign: 'center',
+  fontFamily: fonts.SORAY,
+  fontSize: 36,
+  '@media (min-width: 1024px)': {
+    fontSize: 50,
+  },
+});
+
+const CustomButton = styled(Button)(({ disabled }) => ({
+  backgroundColor: disabled ? colors.LIGHT_GRAY : colors.GREEN,
+}));
+const Input = styled('input')(({ error }) => ({
+  minWidth: 280,
+  borderWidth: 2,
+  borderStyle: 'solid',
+  borderColor: error ? colors.PINK : colors.LIGHT_GRAY,
+  borderRadius: 30,
+  boxShadow: 'none',
+  padding: '0.79em 1.2em',
+  outline: 'none',
+  ':focus': { borderColor: colors.PURPLE },
+}));
+
+const Form = styled('form')({
+  display: 'flex',
+  '@media (max-width: 1024px)': {
+    flexDirection: 'column',
+  },
+});
+
+const ErrorText = styled('p')({
+  color: colors.PINK,
+});
+const Article = styled('article')({
+  backgroundColor: '#F9FBFC',
+});
 
 class DownloadTemplate extends React.Component {
   static propTypes = {
@@ -104,74 +176,43 @@ class DownloadTemplate extends React.Component {
         </Helmet>
         <StickyContainer>
           <Header data={header} langKey={langKey} />
-          <article className="Site-content u-flexGrow1">
-            <div
-              className="Container u-flex u-flexJustifyCenter u-flexCol u-flexAlignItemsCenter"
-              style={{
-                height: '100%',
-              }}
-            >
-              <div className="u-textCenter">
-                <h1 className="u-spaceMT2 u-spaceMB8 u-md-spaceMB7 u-lg-spaceMB7 u-fontFamilyHeader u-fontSize5 u-md-fontSize4 u-lg-fontSize3">
-                  {heading}
-                </h1>
-              </div>
-              <div className="u-spaceMB5">
+          <Article className="Site-content u-flexGrow1">
+            <Container>
+              <Column width="50%">
+                <RotatingPhoneVideo />
+              </Column>
+              <Column width="50%">
                 <div className="u-textCenter">
-                  <div>
-                    {isSuccessful ? (
-                      <div>{successText}</div>
-                    ) : (
-                      <form onSubmit={this.handleSubmit}>
-                        <input
-                          style={{
-                            minWidth: '280px',
-                          }}
-                          className={[
-                            'TextInput u-spaceMB12 u-spaceMR11',
-                            hasErrors && 'has-errors',
-                          ].join(' ')}
-                          type="tel"
-                          placeholder={phoneNumberPlaceholder}
-                          value={phoneNumber}
-                          onChange={this.handleChange}
-                        />
-                        <button
-                          type="submit"
-                          disabled={isDisabled}
-                          style={{
-                            backgroundColor: isDisabled
-                              ? 'rgb(175, 175, 175)'
-                              : 'inherit',
-                          }}
-                          className={[
-                            !isDisabled && 'u-backgroundPrimaryBlue',
-                            'Button u-colorWhite u-spaceMB12',
-                          ].join(' ')}
-                        >
-                          {ctaText}
-                        </button>
-                      </form>
-                    )}
-                    {isSending && (
-                      <div className="Spinner">
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                        <div className="Spinner__bounce" />
-                      </div>
-                    )}
-                    {hasErrors && (
-                      <div className="u-spaceMT8 u-colorPrimaryPink">
-                        {errorText}
-                      </div>
-                    )}
-                  </div>
+                  <Heading>{heading}</Heading>
                 </div>
-                <FakeHedvigWebButton />
-              </div>
-            </div>
-          </article>
+                <Spacing height={62.5} />
+                {isSuccessful ? (
+                  <div>{successText}</div>
+                ) : (
+                  <Form onSubmit={this.handleSubmit}>
+                    <Input
+                      error={hasErrors}
+                      type="tel"
+                      placeholder={phoneNumberPlaceholder}
+                      value={phoneNumber}
+                      onChange={this.handleChange}
+                    />
+                    <Spacing height={12} width={15} />
+                    <CustomButton type="submit" disabled={isDisabled}>
+                      {ctaText}
+                    </CustomButton>
+                  </Form>
+                )}
+                {isSending && <DownloadSpinner />}
+                {hasErrors && (
+                  <React.Fragment>
+                    <Spacing height={30} />
+                    <ErrorText>{errorText}</ErrorText>
+                  </React.Fragment>
+                )}
+              </Column>
+            </Container>
+          </Article>
         </StickyContainer>
         <Footer data={footer} langKey={langKey} />
       </main>
