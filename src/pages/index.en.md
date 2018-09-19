@@ -48,18 +48,9 @@ pricing:
   owned_title: Owned apartment
   rental_price: 99kr
   rental_title: Rental apartment
-customer_source:
-  heading: >-
-    Switching from your existing insurer is dead simple. Tell us who it is and
-    we handle the rest.
-  image_alt: >-
-    Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
-    Trygg Hansa, 17% Övriga och 11% Folksam.
-get_started:
-  heading1: "2 minutes. 8 questions."
-  heading2: "Your perfect insurance."
-  paragraph: "No lock in. Monthly billing."
-  buttontext: "Get started"    
+customerSources:
+  headline: Already insured? We'll handle the switch
+  paragraph: Our users come from
 safety:
   item1: >-
     Hedvig is re-insured by Inter Hannover, part of one of the world’s largest

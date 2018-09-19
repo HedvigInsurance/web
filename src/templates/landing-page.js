@@ -19,6 +19,7 @@ import { GetStarted } from 'src/sections/landing/get-started';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
+import { CustomerSources } from '../sections/landing/customer-sources';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -65,16 +66,14 @@ class LandingTemplate extends React.Component {
       mediaLogosFile,
       perilForestMobileFile,
       perilForestDesktopFile,
-      customerSourceDesktopFile,
-      customerSourceMobileFile,
       title,
       landing,
       threeExplainers,
       perilForest,
-      customerSource,
       getStarted,
       safety,
       pricing,
+      customerSources,
       header,
       footer,
       langKey,
@@ -254,33 +253,10 @@ class LandingTemplate extends React.Component {
 
             <PriceSection {...pricing} />
 
-            {/* Customer source */}
-            <div className="u-backgroundSecondaryGrey">
-              <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {customerSource.heading}
-                </h1>
-                <figure // eslint-disable-line
-                  className="u-spaceMT8"
-                  onClick={this.registerCustomerSourceClick}
-                >
-                  {customerSourceDesktopFile && (
-                    <Img
-                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
-                      sizes={customerSourceDesktopFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                  {customerSourceMobileFile && (
-                    <Img
-                      className="Home-customerSource-image-mobile u-lg-hidden"
-                      sizes={customerSourceMobileFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                </figure>
-              </div>
-            </div>
+            <CustomerSources
+              headline={customerSources.headline}
+              paragraph={customerSources.paragraph}
+            />
 
             <GetStarted {...getStarted} />
 
@@ -362,8 +338,6 @@ LandingTemplate.propTypes = {
   mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -391,10 +365,6 @@ LandingTemplate.propTypes = {
     heading: PropTypes.string.isRequired,
     bottom_paragraph: PropTypes.string.isRequired,
   }).isRequired,
-  customerSource: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    image_alt: PropTypes.string.isRequired,
-  }).isRequired,
   getStarted: PropTypes.shape({
     heading1: PropTypes.string.isRequired,
     heading2: PropTypes.string.isRequired,
@@ -416,6 +386,10 @@ LandingTemplate.propTypes = {
     ownedPrice: PropTypes.string.isRequired,
     bottomParagraph: PropTypes.string.isRequired,
   }).isRequired,
+  customerSources: PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+  }).isRequired,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
@@ -432,13 +406,10 @@ const Landing = ({ data, pathContext }) => {
       mediaLogosFile={data.mediaLogosFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
-      customerSourceDesktopFile={data.customerSourceDesktopFile}
-      customerSourceMobileFile={data.customerSourceMobileFile}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
-      customerSource={copy.customer_source}
       getStarted={copy.get_started}
       safety={copy.safety}
       pricing={{
@@ -451,6 +422,7 @@ const Landing = ({ data, pathContext }) => {
         monthlyLabel: copy.pricing.monthly_label,
         aroundLabel: copy.pricing.around_label,
       }}
+      customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
       langKey={pathContext.langKey}
@@ -490,24 +462,6 @@ export const query = graphql`
     ) {
       image: childImageSharp {
         sizes(maxWidth: 754) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    customerSourceDesktopFile: file(
-      relativePath: { eq: "home/customer-source-desktop@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 679) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    customerSourceMobileFile: file(
-      relativePath: { eq: "home/customer-source-mobile@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 276) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
@@ -562,9 +516,9 @@ export const query = graphql`
           heading
           bottom_paragraph
         }
-        customer_source {
-          heading
-          image_alt
+        customerSources {
+          headline
+          paragraph
         }
         get_started {
           heading1
