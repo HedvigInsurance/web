@@ -10,7 +10,6 @@ import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
 
-import { PriceSection } from 'src/sections/price';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
 
@@ -72,7 +71,6 @@ class LandingTemplate extends React.Component {
       perilForest,
       getStarted,
       safety,
-      pricing,
       customerSources,
       header,
       footer,
@@ -251,8 +249,6 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            <PriceSection {...pricing} />
-
             <CustomerSources
               headline={customerSources.headline}
               paragraph={customerSources.paragraph}
@@ -376,16 +372,6 @@ LandingTemplate.propTypes = {
     item2: PropTypes.string.isRequired,
     item3: PropTypes.string.isRequired,
   }).isRequired,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    monthlyLabel: PropTypes.string.isRequired,
-    aroundLabel: PropTypes.string.isRequired,
-    rentalTitle: PropTypes.string.isRequired,
-    rentalPrice: PropTypes.string.isRequired,
-    ownedTitle: PropTypes.string.isRequired,
-    ownedPrice: PropTypes.string.isRequired,
-    bottomParagraph: PropTypes.string.isRequired,
-  }).isRequired,
   customerSources: PropTypes.shape({
     headline: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
@@ -412,16 +398,6 @@ const Landing = ({ data, pathContext }) => {
       perilForest={copy.peril_forest}
       getStarted={copy.get_started}
       safety={copy.safety}
-      pricing={{
-        heading: copy.pricing.heading,
-        rentalTitle: copy.pricing.rental_title,
-        rentalPrice: copy.pricing.rental_price,
-        ownedTitle: copy.pricing.owned_title,
-        ownedPrice: copy.pricing.owned_price,
-        bottomParagraph: copy.pricing.bottom_paragraph,
-        monthlyLabel: copy.pricing.monthly_label,
-        aroundLabel: copy.pricing.around_label,
-      }}
       customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
@@ -530,16 +506,6 @@ export const query = graphql`
           item1
           item2
           item3
-        }
-        pricing {
-          heading
-          monthly_label
-          around_label
-          rental_title
-          rental_price
-          owned_title
-          owned_price
-          bottom_paragraph
         }
       }
     }

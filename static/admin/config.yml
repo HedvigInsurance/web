@@ -420,34 +420,6 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Pricing section
-            name: pricing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Monthly Label
-                name: monthly_label
-                widget: string
-              - label: Around Label
-                name: around_label
-                widget: string
-              - label: Rental Title
-                name: rental_title
-                widget: string
-              - label: Rental Price
-                name: rental_price
-                widget: string
-              - label: Owned Title
-                name: owned_title
-                widget: string
-              - label: Owned Price
-                name: owned_price
-                widget: string
-              - label: Bottom Paragraph
-                name: bottom_paragraph
-                widget: string
           - label: Customer source section
             name: customerSources
             widget: object
@@ -1027,34 +999,6 @@ collections:
                 name: heading
                 widget: string
               - label: Bottom paragraph
-                name: bottom_paragraph
-                widget: string
-          - label: Pricing section
-            name: pricing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Monthly Label
-                name: monthly_label
-                widget: string
-              - label: Around Label
-                name: around_label
-                widget: string
-              - label: Rental Title
-                name: rental_title
-                widget: string
-              - label: Rental Price
-                name: rental_price
-                widget: string
-              - label: Owned Title
-                name: owned_title
-                widget: string
-              - label: Owned Price
-                name: owned_price
-                widget: string
-              - label: Bottom Paragraph
                 name: bottom_paragraph
                 widget: string
           - label: Customer source section

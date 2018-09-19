@@ -24,17 +24,6 @@ peril_forest:
   heading: >-
     Hedvig covers everything a traditional home insurance covers – even your
     gadgets
-pricing:
-  around_label: 'Starting at '
-  bottom_paragraph: >-
-    PS! These prices are estimates based on a single occupant living in a
-    small-ish apartment. Get your personal price in the app.
-  heading: Don't let insurers lock you in. Hedvig bills monthly.
-  monthly_label: / month
-  owned_price: 129kr
-  owned_title: Owned apartment
-  rental_price: 99kr
-  rental_title: Rental apartment
 customerSources:
   headline: Already insured? We'll handle the switch
   paragraph: Our users come from

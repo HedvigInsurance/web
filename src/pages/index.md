@@ -28,17 +28,6 @@ three_explainers:
 peril_forest:
   bottom_paragraph: Läs allt om skyddet i appen.
   heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
-pricing:
-  around_label: omkring
-  bottom_paragraph: >-
-    PS! Priserna ovan får du om du bor solo, i en mindre lägenhet. Ladda ner
-    appen för att se ditt pris.
-  heading: Månadsvis betalning. Ingen bindningstid
-  monthly_label: / mån
-  owned_price: 129kr
-  owned_title: För dig i bostadsrätt
-  rental_price: 99kr
-  rental_title: För dig i hyresrätt
 customerSources:
   headline: Redan försäkrad? Vi sköter bytet
   paragraph: Våra användare kommer ifrån
