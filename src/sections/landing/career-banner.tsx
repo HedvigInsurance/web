@@ -3,6 +3,7 @@ import styled, { keyframes } from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
 import VisibilitySensor from 'react-visibility-sensor';
 import { LottieLoader } from 'src/components/LottieLoader';
+import { ReactComponent as LogoSvg } from 'assets/identity/hedvig-symbol-color.svg';
 
 const typingAnimation = require('assets/animations/hedvig/hedvig-typing.json');
 
@@ -62,7 +63,7 @@ const Row = styled('div')(
   }),
 );
 
-const HedvigLogo = styled('img')(
+const HedvigLogo = styled(LogoSvg)(
   ({
     animationDelay,
     isVisible,
