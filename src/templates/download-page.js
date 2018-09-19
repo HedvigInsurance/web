@@ -233,7 +233,6 @@ const Download = ({ data, pathContext }) => (
     header={data.header}
     footer={data.footer}
     langKey={pathContext.langKey}
-    dashboardPhoneFile={data.dashboardPhoneFile}
   />
 );
 
