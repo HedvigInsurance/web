@@ -9,6 +9,7 @@ interface Props {
   heading1: string;
   heading2: string;
   paragraph: string;
+  buttontext: string;
 }
 
 const Section = styled('div')({
