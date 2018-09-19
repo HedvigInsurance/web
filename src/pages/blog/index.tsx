@@ -1,60 +1,60 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
-import { BlogContainer, BlogPost } from 'src/components/Blog';
+import { GatsbyImageProps } from 'gatsby-image'
+import { addIndex, map, pathOr, pipe, reverse } from 'ramda'
+import { BlogContainer, BlogPost } from 'src/components/Blog'
+import { BlogPostProps } from 'src/components/Blog/BlogPost'
 import {
-  OverviewHeroProps,
   OverviewHero,
-} from 'src/components/Blog/OverviewHero';
-import { GatsbyImageProps } from 'gatsby-image';
-import { sortBlogPosts, getBlogPostPropsFromEdge } from 'src/utils/blog-posts';
-import { pipe, reverse, map, addIndex, pathOr } from 'ramda';
-import { BlogPostProps } from 'src/components/Blog/BlogPost';
-import { notNullable } from 'src/utils/nullables';
+  OverviewHeroProps,
+} from 'src/components/Blog/OverviewHero'
+import Footer from 'src/components/Footer'
+import Header from 'src/components/Header'
+import { getBlogPostPropsFromEdge, sortBlogPosts } from 'src/utils/blog-posts'
+import { notNullable } from 'src/utils/nullables'
 
 interface BlogPost {
-  fields: { slug: string };
+  fields: { slug: string }
   frontmatter: {
-    title: string;
-    date: string;
-    topImage: string;
-    author: string;
-    tags: string[];
-    excerpt: string;
-  };
+    title: string
+    date: string
+    topImage: string
+    author: string
+    tags: string[]
+    excerpt: string
+  }
 }
 
 interface Poster {
-  teamtailorId: string;
-  name: string;
+  teamtailorId: string
+  name: string
   picture: {
-    standard: string;
-    large: string;
-  };
+    standard: string
+    large: string
+  }
 }
 
 interface BlogPage {
-  title: string;
-  hero: OverviewHeroProps;
+  title: string
+  hero: OverviewHeroProps
 }
 
 interface BlogProps {
   data: {
-    teamImageFile: { image: GatsbyImageProps };
-    posts: { edges: { node: BlogPost }[] };
-    posters: { edges: { node: Poster }[] };
-    page: BlogPage;
-    footer: any; // TODO add proper props when footer is typescript
-    header: any; // TODO add proper props when header is typescript
-  };
+    teamImageFile: { image: GatsbyImageProps }
+    posts: { edges: Array<{ node: BlogPost }> }
+    posters: { edges: Array<{ node: Poster }> }
+    page: BlogPage
+    footer: any // TODO add proper props when footer is typescript
+    header: any // TODO add proper props when header is typescript
+  }
 }
 
 const Blog: React.SFC<BlogProps> = ({ data }) => {
-  const { teamImageFile, posters, posts, page, header, footer } = data;
-  const teamImageSrc = pathOr('', ['image', 'sizes', 'src'], teamImageFile);
+  const { teamImageFile, posters, posts, page, header, footer } = data
+  const teamImageSrc = pathOr('', ['image', 'sizes', 'src'], teamImageFile)
   return (
     <main className="Site">
       <Helmet>
@@ -72,7 +72,7 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
           <BlogContainer verticalMargin>
             {pipe(
               sortBlogPosts,
-              reverse as { (list: any[]): any[] },
+              reverse as (list: any[]) => any[],
               map(getBlogPostPropsFromEdge(posters.edges)),
               addIndex<BlogPostProps>(map)(
                 (
@@ -94,8 +94,8 @@ const Blog: React.SFC<BlogProps> = ({ data }) => {
         <Footer data={footer} langKey="se" />
       </StickyContainer>
     </main>
-  );
-};
+  )
+}
 
 export const blogQuery = graphql`
   query BlogPage {
@@ -155,6 +155,6 @@ export const blogQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default Blog;
+export default Blog

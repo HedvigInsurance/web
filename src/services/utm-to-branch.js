@@ -19,27 +19,27 @@ export const utmParamsToBranchLinkOptions = (utmParams, linkOptions) => {
     campaign: 'name',
     tags: 'content',
     keywords: 'term',
-  };
+  }
 
-  const arrayValues = ['keywords', 'tags'];
+  const arrayValues = ['keywords', 'tags']
   return ['channel', 'campaign', 'tags', 'feature', 'keywords', 'stage'].reduce(
     (acc, key) => {
-      const value = linkOptions && linkOptions[key];
-      const utmValue = utmParams && utmParams[mapBranchToUtmParams[key]];
+      const value = linkOptions && linkOptions[key]
+      const utmValue = utmParams && utmParams[mapBranchToUtmParams[key]]
       // utm param values always take precedent over static values
       // This enables ad attribution in app
-      let linkValue = utmValue || value;
+      let linkValue = utmValue || value
 
       if (linkValue) {
         // Branch expects keywords and tags as array
         if (arrayValues.includes(key) && !Array.isArray(linkValue)) {
-          linkValue = [linkValue];
+          linkValue = [linkValue]
         }
-        acc[key] = linkValue;
+        acc[key] = linkValue
       }
 
-      return acc;
+      return acc
     },
     {},
-  );
-};
+  )
+}

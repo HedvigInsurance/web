@@ -1,31 +1,31 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Card, CardHeader, CardBody } from 'src/components/Card';
-import styled from 'react-emotion';
-import { Spacing } from 'src/components/Spacing';
-import { BlogLink } from 'src/components/Blog/BlogStyles';
-import { Markdown } from 'src/cms/utils/markdown';
-import { colors } from '@hedviginsurance/brand';
-import { truncate } from 'src/utils/truncate';
+import { colors } from '@hedviginsurance/brand'
+import styled from 'react-emotion'
+import { Markdown } from 'src/cms/utils/markdown'
+import { BlogLink } from 'src/components/Blog/BlogStyles'
+import { Card, CardBody, CardHeader } from 'src/components/Card'
+import { Spacing } from 'src/components/Spacing'
+import { truncate } from 'src/utils/truncate'
 
 interface Props {
-  phoneCardDirection: string;
-  background: string;
+  phoneCardDirection: string
+  background: string
   post?: {
     node: {
       fields: {
-        slug: string;
-      };
+        slug: string
+      }
       frontmatter: {
-        title: string;
-        topImage: string;
-        excerpt: string;
-      };
-    };
-  };
+        title: string
+        topImage: string
+        excerpt: string
+      }
+    }
+  }
 }
 
-const PHONE_UP = '@media (min-width: 480px)';
+const PHONE_UP = '@media (min-width: 480px)'
 
 const CardLink = styled(BlogLink)(({ background }: { background: string }) => ({
   background,
@@ -47,7 +47,7 @@ const CardLink = styled(BlogLink)(({ background }: { background: string }) => ({
       paddingLeft: 12,
     },
   },
-}));
+}))
 
 const CustomCard = styled(Card)({
   maxWidth: 350,
@@ -58,39 +58,39 @@ const CustomCard = styled(Card)({
     flex: 1,
     flexDirection: 'column',
   },
-});
+})
 
 const CardDirection = styled('div')({
   [PHONE_UP]: {
     paddingBottom: 20,
   },
   fontSize: 15,
-});
+})
 
 const CardImage = styled('img')({
   maxWidth: '100%',
-});
+})
 
 const ImagePlaceholder = styled('div')({
   width: '100%',
   paddingTop: '60%',
   background: '#f3f4f7',
-});
+})
 
 const CardTitle = styled('h3')({
   fontWeight: 'bold',
-});
+})
 
 const ReadMoreLink = styled('span')({
   color: colors.PURPLE,
-});
+})
 
 const PhonelessSpacing = styled(Spacing)({
   display: 'none',
   [PHONE_UP]: {
     display: 'block',
   },
-});
+})
 
 const PrevNextCard: React.SFC<Props> = ({
   post,
@@ -121,6 +121,6 @@ const PrevNextCard: React.SFC<Props> = ({
     </CardLink>
   ) : (
     <PhonelessSpacing width="50%" />
-  );
+  )
 
-export { PrevNextCard };
+export { PrevNextCard }

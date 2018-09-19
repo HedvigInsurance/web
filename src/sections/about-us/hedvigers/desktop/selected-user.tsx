@@ -1,28 +1,28 @@
-import * as React from 'react';
-import styled, { keyframes } from 'react-emotion';
-import { TransitionGroup, Transition } from 'react-transition-group';
+import { fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled, { keyframes } from 'react-emotion'
+import { Transition, TransitionGroup } from 'react-transition-group'
 import {
-  TransitionStatus,
   ENTERED,
   ENTERING,
-} from 'react-transition-group/Transition';
-import { fonts } from '@hedviginsurance/brand';
+  TransitionStatus,
+} from 'react-transition-group/Transition'
 
-import { TeamtailorUser } from 'src/sections/about-us/hedvigers';
+import { TeamtailorUser } from 'src/sections/about-us/hedvigers'
 
 interface SelectedUserProps {
-  users: TeamtailorUser[];
-  selectedUser: TeamtailorUser;
+  users: TeamtailorUser[]
+  selectedUser: TeamtailorUser
 }
 
 const Container = styled('div')({
   width: '50%',
   overflow: 'hidden',
   position: 'relative',
-});
+})
 
 interface ImageContainerProps {
-  status: TransitionStatus;
+  status: TransitionStatus
 }
 
 const enter = keyframes({
@@ -32,7 +32,7 @@ const enter = keyframes({
   to: {
     transform: 'translateX(0) translateZ(0)',
   },
-});
+})
 
 const exit = keyframes({
   from: {
@@ -41,24 +41,24 @@ const exit = keyframes({
   to: {
     transform: 'translateX(-100%) translateZ(0)',
   },
-});
+})
 
 const getTransform = (status: TransitionStatus) => {
   switch (status) {
     case ENTERED:
       return {
         animation: `${enter} 0ms ease forwards`,
-      };
+      }
     case ENTERING:
       return {
         animation: `${enter} 800ms ease forwards`,
-      };
+      }
     default:
       return {
         animation: `${exit} 800ms ease forwards`,
-      };
+      }
   }
-};
+}
 
 const ImageContainer = styled('div')(
   {
@@ -71,13 +71,13 @@ const ImageContainer = styled('div')(
   ({ status }: ImageContainerProps) => ({
     ...getTransform(status),
   }),
-);
+)
 
 const Image = styled('img')({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
-});
+})
 
 const enterDetails = keyframes({
   from: {
@@ -88,7 +88,7 @@ const enterDetails = keyframes({
     transform: 'translateX(0)',
     opacity: 1,
   },
-});
+})
 
 const exitDetails = keyframes({
   from: {
@@ -99,27 +99,27 @@ const exitDetails = keyframes({
     transform: 'translateX(-10%)',
     opacity: 0,
   },
-});
+})
 
 const getDetailsAnimation = (status: TransitionStatus) => {
   switch (status) {
     case ENTERED:
       return {
         animation: `${enterDetails} 0ms ease forwards`,
-      };
+      }
     case 'entering':
       return {
         animation: `${enterDetails} 1500ms ease forwards`,
-      };
+      }
     default:
       return {
         animation: `${exitDetails} 800ms ease forwards`,
-      };
+      }
   }
-};
+}
 
 interface DetailsProps {
-  status: TransitionStatus;
+  status: TransitionStatus
 }
 
 const Details = styled('div')(
@@ -133,19 +133,19 @@ const Details = styled('div')(
   ({ status }: DetailsProps) => ({
     ...getDetailsAnimation(status),
   }),
-);
+)
 
 const Name = styled('span')({
   fontFamily: fonts.SORAY,
   fontSize: 35,
   lineHeight: '40px',
   color: 'white',
-});
+})
 
 const Title = styled('span')({
   fontSize: 20,
   color: 'white',
-});
+})
 
 export const SelectedUser: React.SFC<SelectedUserProps> = ({
   users,
@@ -171,4 +171,4 @@ export const SelectedUser: React.SFC<SelectedUserProps> = ({
       )}
     </TransitionGroup>
   </Container>
-);
+)

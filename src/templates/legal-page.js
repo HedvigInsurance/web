@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
+import remark from 'remark'
+import reactRenderer from 'remark-react'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import './Page.css';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import './Page.css'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -15,7 +15,7 @@ const pagePropTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({ section: PropTypes.string.isRequired }),
   ).isRequired,
-};
+}
 
 const LegalTemplate = ({
   title,
@@ -58,14 +58,14 @@ const LegalTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 LegalTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 const Legal = ({ data, pathContext }) => (
   <LegalTemplate
@@ -76,7 +76,7 @@ const Legal = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 Legal.propTypes = {
   data: PropTypes.shape({
@@ -87,9 +87,9 @@ Legal.propTypes = {
     footer: footerPropTypes,
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { LegalTemplate };
+export { LegalTemplate }
 
 export const legalPageQuery = graphql`
   query LegalPage($id: String!) {
@@ -111,6 +111,6 @@ export const legalPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default Legal;
+export default Legal

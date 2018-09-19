@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { DownloadTemplate } from 'src/templates/download-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { DownloadTemplate } from 'src/templates/download-page'
 
 const DownloadPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -14,10 +14,10 @@ const DownloadPagePreview = ({ entry }) => (
       errorText={entry.getIn(['data', 'error_text'])}
     />
   </Provider>
-);
+)
 
 DownloadPagePreview.propTypes = {
   entry: PropTypes.shape({ getIn: PropTypes.func }).isRequired,
-};
+}
 
-export default DownloadPagePreview;
+export default DownloadPagePreview

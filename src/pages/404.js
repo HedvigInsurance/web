@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StickyContainer } from 'react-sticky'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import { LottieLoader } from 'src/components/LottieLoader';
+import Header, { headerPropTypes } from 'src/components/Header'
+import { LottieLoader } from 'src/components/LottieLoader'
 
 const styles = {
   container: {
     height: '100%',
   },
-};
+}
 
-const sadAnimation = require('assets/animations/hedvig-sad-avatar/data.json');
+const sadAnimation = require('assets/animations/hedvig-sad-avatar/data.json')
 
 const NotFound = ({ data: { header } }) => (
   <div style={styles.container}>
@@ -38,13 +38,13 @@ const NotFound = ({ data: { header } }) => (
       </div>
     </StickyContainer>
   </div>
-);
+)
 
 NotFound.propTypes = {
   data: PropTypes.shape({
     header: PropTypes.shape(headerPropTypes),
   }).isRequired,
-};
+}
 
 export const notFoundQuery = graphql`
   query NotFound {
@@ -52,6 +52,6 @@ export const notFoundQuery = graphql`
       ...Header_data
     }
   }
-`;
+`
 
-export default NotFound;
+export default NotFound

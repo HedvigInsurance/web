@@ -1,14 +1,14 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { fonts } from '@hedviginsurance/brand';
-import { Markdown } from 'src/cms/utils/markdown';
+import { fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
+import { Markdown } from 'src/cms/utils/markdown'
 
 const BodyContainer = styled('div')({
   padding: '70px 0',
   width: '80%',
   maxWidth: '800px',
   margin: '0 auto',
-});
+})
 
 const Title = styled('h1')({
   fontSize: 60,
@@ -18,7 +18,7 @@ const Title = styled('h1')({
     fontSize: 48,
     lineHeight: '53px',
   },
-});
+})
 
 const BodyText = styled('div')({
   marginTop: 20,
@@ -28,11 +28,11 @@ const BodyText = styled('div')({
   'div > p': {
     marginTop: 25,
   },
-});
+})
 
 interface BodyProps {
-  title: string;
-  text: string;
+  title: string
+  text: string
 }
 
 export const Body: React.SFC<BodyProps> = ({ title, text }) => (
@@ -42,4 +42,4 @@ export const Body: React.SFC<BodyProps> = ({ title, text }) => (
       <Markdown source={text} />
     </BodyText>
   </BodyContainer>
-);
+)

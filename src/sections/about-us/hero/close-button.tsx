@@ -1,11 +1,11 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { Spring } from 'react-spring';
+import * as React from 'react'
+import styled from 'react-emotion'
+import { Spring } from 'react-spring'
 
-import { ReactComponent as CrossIcon } from 'assets/icons/cross-icon.svg';
+import { ReactComponent as CrossIcon } from 'assets/icons/cross-icon.svg'
 
 interface ButtonProps {
-  hidden: boolean;
+  hidden: boolean
 }
 
 const Button = styled('button')(
@@ -25,11 +25,11 @@ const Button = styled('button')(
   ({ hidden }: ButtonProps) => ({
     pointerEvents: hidden ? 'none' : 'all',
   }),
-);
+)
 
 interface CloseButtonProps {
-  onClick: () => void;
-  hidden: boolean;
+  onClick: () => void
+  hidden: boolean
 }
 
 export const CloseButton: React.SFC<CloseButtonProps> = ({
@@ -48,4 +48,4 @@ export const CloseButton: React.SFC<CloseButtonProps> = ({
       </Button>
     )}
   </Spring>
-);
+)

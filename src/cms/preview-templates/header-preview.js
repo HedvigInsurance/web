@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { StickyContainer } from 'react-sticky'
 
-import Header from 'src/components/Header';
+import Header from 'src/components/Header'
 
 const HeaderPreview = ({ entry }) => (
   <React.Fragment>
@@ -30,12 +30,12 @@ const HeaderPreview = ({ entry }) => (
       </StickyContainer>
     </Provider>
   </React.Fragment>
-);
+)
 
 HeaderPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func.isRequired,
   }).isRequired,
-};
+}
 
-export default HeaderPreview;
+export default HeaderPreview

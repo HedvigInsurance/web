@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { FAQTemplate } from 'src/templates/faq-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { FAQTemplate } from 'src/templates/faq-page'
 
 const FAQPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -11,12 +11,12 @@ const FAQPagePreview = ({ entry }) => (
       questions={entry.getIn(['data', 'questions']).toJS()}
     />
   </Provider>
-);
+)
 
 FAQPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }).isRequired,
-};
+}
 
-export default FAQPagePreview;
+export default FAQPagePreview

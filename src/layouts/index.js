@@ -1,38 +1,38 @@
-import 'normalize.css';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
-import { Provider } from 'constate';
+import 'normalize.css'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Helmet from 'react-helmet'
+import { Provider } from 'constate'
 
-import 'src/css/style.css';
+import 'src/css/style.css'
 
 class TemplateWrapper extends React.Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
     location: PropTypes.objectOf(PropTypes.any).isRequired,
-  };
+  }
 
   static childContextTypes = {
     location: PropTypes.shape({
       pathname: PropTypes.string,
     }),
-  };
+  }
 
   getChildContext = () => {
-    const { location } = this.props;
+    const { location } = this.props
     if (!location) {
-      return { location: { pathname: '' } };
+      return { location: { pathname: '' } }
     }
-    const { pathname } = location;
+    const { pathname } = location
     return {
       location: {
         pathname,
       },
-    };
-  };
+    }
+  }
 
   render() {
-    const { children, data } = this.props;
+    const { children, data } = this.props
 
     const schemaOrgJSONLD = [
       {
@@ -63,7 +63,7 @@ class TemplateWrapper extends React.Component {
           data.site.siteMetadata.linkedInProfile,
         ],
       },
-    ];
+    ]
 
     return (
       <Provider initialState={{}}>
@@ -111,15 +111,15 @@ class TemplateWrapper extends React.Component {
         </Helmet>
         {children()}
       </Provider>
-    );
+    )
   }
 }
 
 TemplateWrapper.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
 
 export const query = graphql`
   query LayoutQuery {
@@ -145,4 +145,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

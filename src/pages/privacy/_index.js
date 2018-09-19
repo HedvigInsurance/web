@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header from 'src/components/Header'
+import Footer from 'src/components/Footer'
 
 const Privacy = () => (
   <main className="Site">
@@ -733,6 +733,6 @@ const Privacy = () => (
     </StickyContainer>
     <Footer />
   </main>
-);
+)
 
-export default Privacy;
+export default Privacy

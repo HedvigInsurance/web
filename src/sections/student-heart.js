@@ -1,16 +1,16 @@
-import React from 'react';
-import styled, { css } from 'react-emotion';
-import Img from 'gatsby-image';
-import VisibilitySensor from 'react-visibility-sensor';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled, { css } from 'react-emotion'
+import Img from 'gatsby-image'
+import VisibilitySensor from 'react-visibility-sensor'
+import PropTypes from 'prop-types'
 
 const mediaQuery = (styles) => css`
   @media (min-width: 650px) {
     ${styles};
   }
-`;
+`
 
-const MARGIN = 35;
+const MARGIN = 35
 
 const Container = styled('div')`
   padding-top: 30px;
@@ -35,7 +35,7 @@ const Container = styled('div')`
     padding-top: 70px;
     padding-bottom: 70px;
   `)};
-`;
+`
 
 const Wordmark = styled(Img)`
   width: 80px;
@@ -44,7 +44,7 @@ const Wordmark = styled(Img)`
   ${mediaQuery(`
     width: 150px;
   `)};
-`;
+`
 
 const Heart = styled(Img)`
   width: 40px;
@@ -52,7 +52,7 @@ const Heart = styled(Img)`
   ${mediaQuery(`
     width: 80px;
   `)};
-`;
+`
 
 const Text = styled('span')`
   font-size: 23px;
@@ -65,7 +65,7 @@ const Text = styled('span')`
   ${mediaQuery(`
     font-size: 45px;
   `)};
-`;
+`
 
 export const StudentHeart = ({ heartFile, wordmarkFile }) => (
   <div className="u-backgroundPrimaryPurple">
@@ -86,9 +86,9 @@ export const StudentHeart = ({ heartFile, wordmarkFile }) => (
       )}
     </VisibilitySensor>
   </div>
-);
+)
 
 StudentHeart.propTypes = {
   heartFile: PropTypes.objectOf(Img.propTypes.sizes).isRequired,
   wordmarkFile: PropTypes.objectOf(Img.propTypes.sizes).isRequired,
-};
+}

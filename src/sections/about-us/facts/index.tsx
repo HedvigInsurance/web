@@ -1,15 +1,15 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { colors, fonts } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
 
 const FactsContainer = styled('div')({
   backgroundColor: '#FFF3F2',
   padding: '70px 20px',
   color: colors.BLACK_PURPLE,
-});
+})
 
-const MEDIA_QUERY_WIDTH = '650px';
-const MEDIA_QUERY = `@media (min-width: ${MEDIA_QUERY_WIDTH})`;
+const MEDIA_QUERY_WIDTH = '650px'
+const MEDIA_QUERY = `@media (min-width: ${MEDIA_QUERY_WIDTH})`
 
 const Title = styled('h3')({
   fontSize: 45,
@@ -20,7 +20,7 @@ const Title = styled('h3')({
     fontSize: 60,
     lineHeight: '65px',
   },
-});
+})
 
 const Grid = styled('div')({
   display: 'flex',
@@ -32,14 +32,14 @@ const Grid = styled('div')({
   [MEDIA_QUERY]: {
     flexDirection: 'row',
   },
-});
+})
 
 const Fact = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   marginTop: 40,
-});
+})
 
 const FactNumber = styled('span')({
   fontSize: 70,
@@ -49,7 +49,7 @@ const FactNumber = styled('span')({
     fontSize: 90,
     lineHeight: '95px',
   },
-});
+})
 
 const FactExplainer = styled('span')({
   fontSize: 14,
@@ -61,28 +61,28 @@ const FactExplainer = styled('span')({
     fontSize: 18,
     lineHeight: '19px',
   },
-});
+})
 
 interface Fact {
-  number: string;
-  explainer: string;
+  number: string
+  explainer: string
 }
 
 interface FactsProps {
-  title: string;
-  list: Fact[];
+  title: string
+  list: Fact[]
 }
 
 export const Facts: React.SFC<FactsProps> = ({ title, list }) => (
   <FactsContainer>
     <Title>{title}</Title>
     <Grid>
-      {list.map(({ number, explainer }) => (
+      {list.map(({ number: num, explainer }) => (
         <Fact>
-          <FactNumber>{number}</FactNumber>
+          <FactNumber>{num}</FactNumber>
           <FactExplainer>{explainer}</FactExplainer>
         </Fact>
       ))}
     </Grid>
   </FactsContainer>
-);
+)

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { ContactTemplate } from 'src/templates/contact-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { ContactTemplate } from 'src/templates/contact-page'
 
 const ContactPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -10,10 +10,10 @@ const ContactPagePreview = ({ entry }) => (
       heading={entry.getIn(['data', 'heading'])}
     />
   </Provider>
-);
+)
 
 ContactPagePreview.propTypes = {
   entry: PropTypes.func.isRequired,
-};
+}
 
-export default ContactPagePreview;
+export default ContactPagePreview

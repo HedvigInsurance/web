@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header from 'src/components/Header';
-import Footer from 'src/components/Footer';
+import Header from 'src/components/Header'
+import Footer from 'src/components/Footer'
 
 const Legal = () => (
   <main className="Site">
@@ -198,6 +198,6 @@ const Legal = () => (
     </StickyContainer>
     <Footer />
   </main>
-);
+)
 
-export default Legal;
+export default Legal

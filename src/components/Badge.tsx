@@ -1,6 +1,6 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
+import { colors } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
 
 const BadgeStyle = styled('span')({
   backgroundColor: colors.LIGHT_GRAY,
@@ -9,8 +9,8 @@ const BadgeStyle = styled('span')({
   padding: '4px 10px',
   marginRight: 12,
   fontSize: 12,
-});
+})
 
-const Badge: React.SFC = ({ children }) => <BadgeStyle>{children}</BadgeStyle>;
+const Badge: React.SFC = ({ children }) => <BadgeStyle>{children}</BadgeStyle>
 
-export { Badge };
+export { Badge }
