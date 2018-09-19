@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'scrollingelement';
 
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {

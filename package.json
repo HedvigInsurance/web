@@ -108,6 +108,7 @@
     "remark-parse": "^5.0.0",
     "remark-react": "^4.0.3",
     "rimraf": "^2.6.2",
+    "scrollingelement": "^1.5.2",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-suitcss": "^14.0.0",
