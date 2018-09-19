@@ -53,6 +53,17 @@ const TableCellBar = styled(AnimatedDiv)({
   display: 'table-cell',
   width: '100%',
   position: 'relative',
+  '@media (max-width: 600px)': {
+    height: '20px',
+  },
+});
+
+const BarContainer = styled('div')({
+  overflow: 'hidden',
+  height: 12,
+  borderRadius: 10,
+  width: '100%',
+  position: 'relative',
 });
 
 const HeadlineSection = styled('div')({
@@ -76,12 +87,11 @@ const PercentageText = styled(AnimatedDiv)({
   textAlign: 'right',
   display: 'inline-block',
   position: 'absolute',
-  left: 0,
-  top: -8,
+  left: 50,
+  top: -6,
   willChange: 'transform',
   '@media (max-width: 600px)': {
     fontSize: 16,
-    top: 17,
   },
 });
 
@@ -116,9 +126,6 @@ const Bar = styled(AnimatedDiv)((props: BarProps) => ({
   position: 'absolute',
   left: 0,
   top: 0,
-  '@media (max-width: 600px)': {
-    top: 25,
-  },
 }));
 
 const COMPANIES = [
@@ -174,15 +181,28 @@ const getWindowInnerHeight = () => {
 const getSectionPosition = ({ offsetTop }: { offsetTop: number }) =>
   offsetTop - getWindowInnerHeight();
 
+const getBarWidth = ({ percent }: { percent: number }) =>
+  `calc(${(100 / MAX_WEIGHT) * percent}% - 50px)`;
+
+const getInputRange = ({
+  offsetTop,
+  offset,
+}: {
+  offsetTop: number;
+  offset: number;
+}) => {
+  const sectionPosition = getSectionPosition({ offsetTop });
+
+  return [sectionPosition + offset, sectionPosition + offset * 2];
+};
+
 const getTableCellStyle = ({
   animatedValue,
   offsetTop = 0,
   offset,
 }: GetStyle) => {
-  const sectionPosition = getSectionPosition({ offsetTop });
-
   const opacity = animatedValue.interpolate({
-    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
+    inputRange: getInputRange({ offsetTop, offset }),
     outputRange: [0, 1],
     extrapolate: 'clamp',
   });
@@ -198,16 +218,14 @@ const getBarStyle = ({
   offset,
   percent,
 }: GetStyle) => {
-  const sectionPosition = getSectionPosition({ offsetTop });
-
   const transform = animatedValue.interpolate({
-    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
-    outputRange: ['scaleX(0)', `scaleX(1)`],
+    inputRange: getInputRange({ offsetTop, offset }),
+    outputRange: ['translateX(-100%)', `translateX(0%)`],
     extrapolate: 'clamp',
   });
 
   return {
-    width: `calc(${(100 / MAX_WEIGHT) * percent}% - 50px)`,
+    width: getBarWidth({ percent }),
     transform,
   };
 };
@@ -218,17 +236,15 @@ const getPercentageTextStyle = ({
   offset,
   percent,
 }: GetStyle) => {
-  const sectionPosition = getSectionPosition({ offsetTop });
-
   const transform = animatedValue.interpolate({
-    inputRange: [sectionPosition + offset, sectionPosition + offset * 2],
-    outputRange: [`translateX(-90%)`, `translateX(0%)`],
+    inputRange: getInputRange({ offsetTop, offset }),
+    outputRange: [`translateX(-100%)`, `translateX(0%)`],
     extrapolate: 'clamp',
   });
 
   return {
     transform,
-    width: `${(100 / MAX_WEIGHT) * percent}%`,
+    width: getBarWidth({ percent }),
   };
 };
 
@@ -289,18 +305,20 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
                             percent: company.percent,
                           })}
                         >
-                          <Bar
-                            color={company.color}
-                            style={getBarStyle({
-                              animatedValue: animatedValue,
-                              offsetTop:
-                                (contentRect.offset &&
-                                  contentRect.offset.top) ||
-                                0,
-                              offset: index * 35 + 100,
-                              percent: company.percent,
-                            })}
-                          />
+                          <BarContainer>
+                            <Bar
+                              color={company.color}
+                              style={getBarStyle({
+                                animatedValue: animatedValue,
+                                offsetTop:
+                                  (contentRect.offset &&
+                                    contentRect.offset.top) ||
+                                  0,
+                                offset: index * 35 + 100,
+                                percent: company.percent,
+                              })}
+                            />
+                          </BarContainer>
                           <PercentageText
                             style={getPercentageTextStyle({
                               animatedValue: animatedValue,
