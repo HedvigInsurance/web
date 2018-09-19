@@ -130,7 +130,7 @@ const Button = styled('a')(
       background: colors.PURPLE,
       padding: '10px 25px',
       fontSize: 16,
-      color: '#fff',
+      color: colors.WHITE,
       textDecoration: 'none',
       borderRadius: '50px',
       transition: 'background 400ms',

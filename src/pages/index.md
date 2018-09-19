@@ -10,7 +10,7 @@ landing:
 careerBanner:
   message1: Hedvig reste nyligen 30 MSEK för att expandera och utöka teamet
   message2: Vill du vara med på resan?
-  ctaLabel: Se lediga tjänster
+  ctaLabel: Visa lediga tjänster
   ctaTarget: https://join.hedvig.com
 three_explainers:
   heading: Slipp telefonköer och hissmusik
