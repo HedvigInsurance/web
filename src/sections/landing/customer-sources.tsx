@@ -64,7 +64,8 @@ const BarContainer = styled('div')({
   borderRadius: 10,
   width: '100%',
   position: 'relative',
-  '-webkit-mask-image': '-webkit-radial-gradient(white, black)',
+  backfaceVisibility: 'hidden',
+  transform: 'translate3d(0, 0, 0)',
 });
 
 const HeadlineSection = styled('div')({
