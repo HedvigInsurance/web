@@ -2,6 +2,9 @@ import * as React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
 import VisibilitySensor from 'react-visibility-sensor';
+import { LottieLoader } from 'src/components/LottieLoader';
+
+const typingAnimation = require('assets/animations/hedvig/hedvig-typing.json');
 
 interface WithVisibility {
   isVisible: boolean;
@@ -10,6 +13,10 @@ interface WithVisibility {
 const fadeIn = keyframes({
   from: { opacity: 0 },
   to: { opacity: 1 },
+});
+const fadeOut = keyframes({
+  from: { opacity: 1 },
+  to: { opacity: 0 },
 });
 const fadeSlideIn = keyframes({
   from: {
@@ -29,8 +36,15 @@ const CareerBannerContainer = styled('div')({
 
 const Row = styled('div')(
   ({ align = 'left' }: { align?: 'left' | 'right' }) => ({
-    paddingBottom: 10,
+    position: 'relative',
+    paddingBottom: 15,
     textAlign: align,
+    '@media (max-width: 480px)':
+      align === 'right'
+        ? {
+            paddingTop: 30,
+          }
+        : {},
   }),
 );
 
@@ -40,8 +54,28 @@ const HedvigLogo = styled('img')(
     isVisible,
   }: { animationDelay: number } & WithVisibility) => ({
     width: 30,
+    marginBottom: 10,
     opacity: 0,
-    animation: isVisible ? `${fadeIn} 500ms forwards` : 'none',
+    animation: isVisible ? `${fadeIn} 400ms forwards` : 'none',
+    animationDelay: `${animationDelay}ms`,
+  }),
+);
+const TypingAnimation = styled('div')(
+  ({ exitDelay, isVisible }: { exitDelay: number } & WithVisibility) => ({
+    position: 'absolute',
+    width: 60,
+    borderRadius: 8,
+    animation: isVisible ? `${fadeOut} 400ms forwards` : 'none',
+    animationDelay: `${exitDelay}ms`,
+  }),
+);
+const HiddenContainer = styled(`div`)(
+  ({
+    animationDelay,
+    isVisible,
+  }: { animationDelay: number } & WithVisibility) => ({
+    opacity: 0,
+    animation: isVisible ? `${fadeIn} 400ms forwards` : 'none',
     animationDelay: `${animationDelay}ms`,
   }),
 );
@@ -51,7 +85,7 @@ const ChatMessage = styled('div')(
     isVisible,
   }: { animationDelay: number } & WithVisibility) => ({
     opacity: 0,
-    animation: isVisible ? `${fadeSlideIn} 500ms forwards` : 'none',
+    animation: isVisible ? `${fadeSlideIn} 400ms forwards` : 'none',
     animationDelay: `${animationDelay}ms`,
 
     display: 'inline-block',
@@ -77,14 +111,14 @@ const Button = styled('a')(
       color: '#fff',
       textDecoration: 'none',
       borderRadius: '50px',
-      transition: 'background 300ms',
+      transition: 'background 400ms',
       '&:hover, &:focus': {
         background: '#752EFF',
         textDecoration: 'none',
       },
 
       opacity: 0,
-      animation: isVisible ? `${fadeIn} 500ms forwards` : 'none',
+      animation: isVisible ? `${fadeIn} 400ms forwards` : 'none',
       animationDelay: `${animationDelay}ms`,
     },
   }),
@@ -104,13 +138,26 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
           {() => (
             <>
               <HedvigLogo
-                animationDelay={500}
+                animationDelay={0}
                 src="/assets/identity/hedvig-symbol-color.svg"
                 isVisible={this.state.hasMounted}
               />
               <Row>
+                <TypingAnimation
+                  isVisible={this.state.hasMounted}
+                  exitDelay={1_400}
+                >
+                  <LottieLoader
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      renderer: 'svg',
+                      animationData: typingAnimation,
+                    }}
+                  />
+                </TypingAnimation>
                 <ChatMessage
-                  animationDelay={1_500}
+                  animationDelay={1_600}
                   isVisible={this.state.hasMounted}
                 >
                   Hedvig reste nyligen 30 MSEK för att expandera och utöka
@@ -118,8 +165,26 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
                 </ChatMessage>
               </Row>
               <Row>
+                <HiddenContainer
+                  isVisible={this.state.hasMounted}
+                  animationDelay={1_600}
+                >
+                  <TypingAnimation
+                    isVisible={this.state.hasMounted}
+                    exitDelay={2_400}
+                  >
+                    <LottieLoader
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        renderer: 'svg',
+                        animationData: typingAnimation,
+                      }}
+                    />
+                  </TypingAnimation>
+                </HiddenContainer>
                 <ChatMessage
-                  animationDelay={3_500}
+                  animationDelay={2_400}
                   isVisible={this.state.hasMounted}
                 >
                   Vill du vara med på resan?
@@ -128,7 +193,7 @@ class CareerBanner extends React.PureComponent<{}, { hasMounted: boolean }> {
               <Row align="right">
                 <Button
                   href="https://join.hedvig.com"
-                  animationDelay={5_000}
+                  animationDelay={2_800}
                   isVisible={this.state.hasMounted}
                 >
                   Se lediga tjänster
