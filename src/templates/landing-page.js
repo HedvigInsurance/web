@@ -63,9 +63,6 @@ class LandingTemplate extends React.Component {
       authorisedFile,
       aaRatedFile,
       mediaLogosFile,
-      modelFixedFile,
-      modelClaimPoolFile,
-      modelCharityFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       customerSourceDesktopFile,
@@ -74,7 +71,6 @@ class LandingTemplate extends React.Component {
       landing,
       threeExplainers,
       perilForest,
-      philosophy,
       customerSource,
       safety,
       pricing,
@@ -286,73 +282,6 @@ class LandingTemplate extends React.Component {
             </div>
 
             <GetStarted />
-            {/* Model */}
-            <div className="u-backgroundWhite">
-              <div className="Container u-spacePV2">
-                <h2 className="u-fontFamilyHeader u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2">
-                  {philosophy.heading}
-                </h2>
-                <p className="u-spaceMT8 u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter Home-model-paragraph">
-                  {philosophy.paragraph}
-                </p>
-                <div className="u-flex u-flexCol u-lg-flexRow u-md-flexAlignItemsCenter u-lg-flexJustifyBetween">
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryBlackPurple u-spacePV6">
-                        {modelFixedFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelFixedFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card1_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPurple u-spacePV6">
-                        {modelClaimPoolFile && (
-                          <Img
-                            className="Home-model-image"
-                            sizes={modelClaimPoolFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card2_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="u-md-size3of5 u-lg-size1of3 u-lg-spacePH10">
-                    <div className="Card u-spaceMT6 Home-model">
-                      <figure className="Home-model-figure u-backgroundPrimaryPink u-spacePV6">
-                        {modelCharityFile && (
-                          <Img
-                            className="Home-model-image Home-model-image-charity"
-                            sizes={modelCharityFile.image.sizes}
-                            alt=""
-                          />
-                        )}
-                      </figure>
-                      <div className="Home-model-paragraph u-flex u-flexJustifyCenter u-flexAlignItemsCenter">
-                        <p className="u-textCenter u-spaceMV8 u-spacePH11 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                          {philosophy.cards.card3_paragraph}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Safety */}
             <div className="u-backgroundPrimaryDarkestPurple Home-safety">
@@ -430,9 +359,6 @@ LandingTemplate.propTypes = {
   authorisedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   aaRatedFile: PropTypes.objectOf(PropTypes.object).isRequired,
   mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelFixedFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelClaimPoolFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -463,15 +389,6 @@ LandingTemplate.propTypes = {
   perilForest: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     bottom_paragraph: PropTypes.string.isRequired,
-  }).isRequired,
-  philosophy: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    paragraph: PropTypes.string.isRequired,
-    cards: PropTypes.shape({
-      card1_paragraph: PropTypes.string.isRequired,
-      card2_paragraph: PropTypes.string.isRequired,
-      card3_paragraph: PropTypes.string.isRequired,
-    }).isRequired,
   }).isRequired,
   customerSource: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -506,9 +423,6 @@ const Landing = ({ data, pathContext }) => {
       aaRatedFile={data.aaRatedFile}
       chatDemoBgFile={data.chatDemoBgFile}
       mediaLogosFile={data.mediaLogosFile}
-      modelFixedFile={data.modelFixedFile}
-      modelClaimPoolFile={data.modelClaimPoolFile}
-      modelCharityFile={data.modelCharityFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       customerSourceDesktopFile={data.customerSourceDesktopFile}
@@ -517,7 +431,6 @@ const Landing = ({ data, pathContext }) => {
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
-      philosophy={copy.philosophy}
       customerSource={copy.customer_source}
       safety={copy.safety}
       pricing={{
@@ -551,29 +464,6 @@ export const query = graphql`
     mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    modelFixedFile: file(relativePath: { eq: "home/model-fixed@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    modelClaimPoolFile: file(
-      relativePath: { eq: "home/model-claim-pool@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    modelCharityFile: file(relativePath: { eq: "home/model-charity@2x.png" }) {
-      image: childImageSharp {
-        sizes(maxWidth: 120) {
           ...GatsbyImageSharpSizes_noBase64
         }
       }
@@ -663,15 +553,6 @@ export const query = graphql`
         peril_forest {
           heading
           bottom_paragraph
-        }
-        philosophy {
-          heading
-          paragraph
-          cards {
-            card1_paragraph
-            card2_paragraph
-            card3_paragraph
-          }
         }
         customer_source {
           heading

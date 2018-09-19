@@ -11,77 +11,66 @@ const Container = styled('div')({
   paddingTop: 100,
   display: 'flex',
   flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
   '@media (max-width: 600px)': {
     flexDirection: 'column-reverse',
-    alignItems: 'center',
-    justifyContent: 'center',
     paddingTop: 50,
     paddingBottom: 50,
   },
   '@media (min-width: 601px) and (max-width: 959px)': {
-    paddingTop: 0,
+    paddingTop: 100,
   },
 });
 
 const ImageContainer = styled('div')({
   marginRight: 20,
-  float: 'left',
   maxWidth: '50%',
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',
-  paddingTop: 50,
   '@media (max-width: 600px)': {
-    paddingTop: 0,
     marginRight: 0,
-  },
-  '@media (max-width: 959px) and (min-width: 601px)': {
-    paddingTop: '100px',
+    maxWidth: '300px',
+    width: '80%',
   },
 });
 
-//margin left ta bort vid 960 och ha size 100% på bilden då också
 const HeadlineContainer = styled('div')({
+  position: 'relative',
+  top: -50,
   marginLeft: 100,
-  float: 'right',
   maxWidth: '50%',
-  paddingTop: 100,
   '@media (max-width: 600px)': {
     maxWidth: 'none',
-    paddingTop: 0,
-    marginLeft: 0,
   },
   '@media (max-width: 959px)': {
     marginLeft: 0,
+    top: 0,
   },
 });
 
 const Headline = styled('h2')({
   minWidth: '100%',
-  // paddingTop: 200,
   '@media (max-width: 600px)': {
     textAlign: 'center',
   },
 });
 
 const Paragrah = styled('p')({
-  paddingTop: 15,
-  '@media (max-width: 600x)': {
+  paddingTop: 10,
+  '@media (max-width: 600px)': {
     textAlign: 'center',
+    paddingBottom: 30,
   },
 });
 
 const GetStartedBtn = styled('div')({
-  visibility: 'visible',
-  paddingTop: 30,
-  float: 'left',
-  paddingBottom: 50,
+  display: 'block',
+  paddingTop: 50,
   '@media (max-width: 600px)': {
-    visibility: 'hidden',
-    paddingTop: 20,
-    paddingBottom: 0,
-    height: 0,
+    display: 'none',
   },
 });
 
@@ -89,15 +78,15 @@ const GetStartedBtnMobile = styled('div')({
   display: 'none',
   '@media (max-width: 600px)': {
     paddingTop: 30,
-    float: 'left',
-    paddingBottom: 50,
     display: 'flex',
   },
 });
 
 const LinkTag = styled('a')({
-  width: 234,
-  height: 56,
+  padding: '15px 75px',
+  '@media (max-width: 600px)': {
+    linewidth: '100%',
+  },
 });
 
 const ImgTag = styled('img')({
@@ -133,7 +122,7 @@ class GetStarted extends React.Component {
               Din perfekta försäkring.
             </Headline>
             <Paragrah>Ingen Bindningstid. Månadsvis betalning.</Paragrah>
-            <GetStartedBtn className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
+            <GetStartedBtn>
               <LinkTag
                 tags="home-hero"
                 className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
