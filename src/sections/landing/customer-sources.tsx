@@ -64,6 +64,7 @@ const BarContainer = styled('div')({
   borderRadius: 10,
   width: '100%',
   position: 'relative',
+  '-webkit-mask-image': '-webkit-radial-gradient(white, black)',
 });
 
 const HeadlineSection = styled('div')({
