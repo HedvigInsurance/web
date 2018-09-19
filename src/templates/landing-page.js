@@ -72,6 +72,7 @@ class LandingTemplate extends React.Component {
       threeExplainers,
       perilForest,
       customerSource,
+      getStarted,
       safety,
       pricing,
       header,
@@ -281,7 +282,7 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            <GetStarted />
+            <GetStarted {...getStarted} />
 
             {/* Safety */}
             <div className="u-backgroundPrimaryDarkestPurple Home-safety">
@@ -394,6 +395,12 @@ LandingTemplate.propTypes = {
     heading: PropTypes.string.isRequired,
     image_alt: PropTypes.string.isRequired,
   }).isRequired,
+  getStarted: PropTypes.shape({
+    heading1: PropTypes.string.isRequired,
+    heading2: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
+    buttontext: PropTypes.string.isRequired,
+  }).isRequired,
   safety: PropTypes.shape({
     item1: PropTypes.string.isRequired,
     item2: PropTypes.string.isRequired,
@@ -432,6 +439,7 @@ const Landing = ({ data, pathContext }) => {
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       customerSource={copy.customer_source}
+      getStarted={copy.get_started}
       safety={copy.safety}
       pricing={{
         heading: copy.pricing.heading,
@@ -557,6 +565,12 @@ export const query = graphql`
         customer_source {
           heading
           image_alt
+        }
+        get_started {
+          heading1
+          heading2
+          paragraph
+          buttontext
         }
         safety {
           item1

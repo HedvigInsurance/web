@@ -60,6 +60,11 @@ customer_source:
   image_alt: >-
     Diagram över vart Hedvigs medlemmar kommer ifrån; 29% Länsförsäkringar, 25%
     If, 18% Trygg Hansa, 17% Övriga och 11% Folksam.
+get_started:
+  heading1: "2 minuter. 8 frågor."
+  heading2: "Din perfekta försäkring."
+  paragraph: "Ingen bindningstid. Månadsvis betalning"
+  buttontext: "Kom igång"
 safety:
   item1: >-
     Hedvig är tryggat av Inter Hannover, del av en av världens största

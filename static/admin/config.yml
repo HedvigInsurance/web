@@ -483,6 +483,22 @@ collections:
               - label: Paragraph
                 name: paragraph
                 widget: text
+          - label: Get started section
+            name: get_started
+            widget: object
+            fields:
+              - label: Heading1
+                name: heading1
+                widget: string
+              - label: Heading2
+                name: heading2
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: string
+              - label: ButtonText
+                name: buttontext
+                widget: string
           - label: Safety section
             name: safety
             widget: object

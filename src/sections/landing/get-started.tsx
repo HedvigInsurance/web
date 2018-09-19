@@ -5,6 +5,12 @@ import { fonts } from '@hedviginsurance/brand';
 import AppLink from 'src/components/AppLink';
 import MediaQuery from 'react-responsive';
 
+interface Props {
+  heading1: string;
+  heading2: string;
+  paragraph: string;
+}
+
 const Section = styled('div')({
   backgroundColor: colors.OFF_WHITE,
 });
@@ -15,7 +21,7 @@ const Container = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'space-between',
   '@media (max-width: 600px)': {
     flexDirection: 'column-reverse',
     paddingTop: 50,
@@ -40,13 +46,11 @@ const ImageContainer = styled('div')({
 const HeadlineContainer = styled('div')({
   position: 'relative',
   top: -50,
-  marginLeft: 100,
   maxWidth: '50%',
   '@media (max-width: 600px)': {
     maxWidth: 'none',
   },
   '@media (max-width: 959px)': {
-    marginLeft: 0,
     top: 0,
   },
 });
@@ -89,7 +93,7 @@ const ImgTag = styled('img')({
   },
 });
 
-class GetStarted extends React.Component {
+class GetStarted extends React.Component<Props> {
   render() {
     return (
       <Section>
@@ -100,7 +104,7 @@ class GetStarted extends React.Component {
                 tags="home-hero"
                 className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
               >
-                Kom igång
+                {this.props.buttontext}
               </LinkTag>
             </GetStartedBtnMobile>
           </MediaQuery>
@@ -111,17 +115,17 @@ class GetStarted extends React.Component {
 
           <HeadlineContainer>
             <Headline className="u-md-fontSize4 u-lg-fontSize4 u-fontSize6">
-              2 minuter. 8 frågor. <br />
-              Din perfekta försäkring.
+              {this.props.heading1} <br />
+              {this.props.heading2}
             </Headline>
-            <Paragraph>Ingen Bindningstid. Månadsvis betalning.</Paragraph>
+            <Paragraph>{this.props.paragraph}</Paragraph>
             <MediaQuery query="(min-width: 600px)">
               <GetStartedBtn>
                 <LinkTag
                   tags="home-hero"
                   className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
                 >
-                  Kom igång
+                  {this.props.buttontext}
                 </LinkTag>
               </GetStartedBtn>
             </MediaQuery>

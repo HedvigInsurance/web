@@ -36,7 +36,7 @@ philosophy:
     Hedvig does things differently from traditional insurers. Our model puts
     your interests first. It starts with us only taking a fixed fee. By doing
     this we have no incentive to pay out less in claims or create unnecessary
-    delays or hassles in the claims process. 
+    delays or hassles in the claims process.
 pricing:
   around_label: 'Starting at '
   bottom_paragraph: >-
@@ -55,6 +55,11 @@ customer_source:
   image_alt: >-
     Where Hedvig members are switching from; 29% Länsförsäkringar, 25% If, 18%
     Trygg Hansa, 17% Övriga och 11% Folksam.
+get_started:
+  heading1: "2 minutes. 8 questions."
+  heading2: "Your perfect insurance."
+  paragraph: "No lock in. Monthly billing."
+  buttontext: "Get started"    
 safety:
   item1: >-
     Hedvig is re-insured by Inter Hannover, part of one of the world’s largest
@@ -62,4 +67,3 @@ safety:
   item2: Has a AA-rating from Standard & Poor's
   item3: Authorized by the Swedish Finansinspektionen
 ---
-
