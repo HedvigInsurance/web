@@ -5,7 +5,7 @@ heading: About Hedvig
 hero:
   headline: 'Our Mission:'
   playButtonText: Play
-  title: Making minds more peaceful
+  title: Giving people the world's most incredible insurance experience
 main:
   text: >-
     Insurance has been broken for way too long. With the latest technologies,
