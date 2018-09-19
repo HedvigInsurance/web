@@ -471,15 +471,12 @@ collections:
                 name: bottom_paragraph
                 widget: string
           - label: Customer source section
-            name: customer_source
+            name: customerSources
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Headline
+                name: headline
                 widget: string
-              - label: Image accessibility text
-                name: image_alt
-                widget: text
               - label: Paragraph
                 name: paragraph
                 widget: text

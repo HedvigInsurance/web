@@ -18,6 +18,7 @@ import './Home.css';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
+import { CustomerSources } from '../sections/landing/customer-sources';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -67,16 +68,14 @@ class LandingTemplate extends React.Component {
       modelCharityFile,
       perilForestMobileFile,
       perilForestDesktopFile,
-      customerSourceDesktopFile,
-      customerSourceMobileFile,
       title,
       landing,
       threeExplainers,
       perilForest,
       philosophy,
-      customerSource,
       safety,
       pricing,
+      customerSources,
       header,
       footer,
       langKey,
@@ -256,33 +255,10 @@ class LandingTemplate extends React.Component {
 
             <PriceSection {...pricing} />
 
-            {/* Customer source */}
-            <div className="u-backgroundSecondaryGrey">
-              <div className="Container u-spacePT2 u-spacePB5">
-                <h1 className="u-textCenter u-fontFamilyHeader u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {customerSource.heading}
-                </h1>
-                <figure // eslint-disable-line
-                  className="u-spaceMT8"
-                  onClick={this.registerCustomerSourceClick}
-                >
-                  {customerSourceDesktopFile && (
-                    <Img
-                      className="Home-customerSource-image-desktop u-hidden u-lg-block"
-                      sizes={customerSourceDesktopFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                  {customerSourceMobileFile && (
-                    <Img
-                      className="Home-customerSource-image-mobile u-lg-hidden"
-                      sizes={customerSourceMobileFile.image.sizes}
-                      alt={customerSource.image_alt}
-                    />
-                  )}
-                </figure>
-              </div>
-            </div>
+            <CustomerSources
+              headline={customerSources.headline}
+              paragraph={customerSources.paragraph}
+            />
 
             {/* Model */}
             <div className="u-backgroundWhite">
@@ -433,8 +409,6 @@ LandingTemplate.propTypes = {
   modelCharityFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  customerSourceMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
@@ -471,10 +445,6 @@ LandingTemplate.propTypes = {
       card3_paragraph: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  customerSource: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    image_alt: PropTypes.string.isRequired,
-  }).isRequired,
   safety: PropTypes.shape({
     item1: PropTypes.string.isRequired,
     item2: PropTypes.string.isRequired,
@@ -489,6 +459,10 @@ LandingTemplate.propTypes = {
     ownedTitle: PropTypes.string.isRequired,
     ownedPrice: PropTypes.string.isRequired,
     bottomParagraph: PropTypes.string.isRequired,
+  }).isRequired,
+  customerSources: PropTypes.shape({
+    headline: PropTypes.string.isRequired,
+    paragraph: PropTypes.string.isRequired,
   }).isRequired,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
@@ -509,14 +483,11 @@ const Landing = ({ data, pathContext }) => {
       modelCharityFile={data.modelCharityFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
-      customerSourceDesktopFile={data.customerSourceDesktopFile}
-      customerSourceMobileFile={data.customerSourceMobileFile}
       title={copy.title}
       landing={copy.landing}
       threeExplainers={copy.three_explainers}
       perilForest={copy.peril_forest}
       philosophy={copy.philosophy}
-      customerSource={copy.customer_source}
       safety={copy.safety}
       pricing={{
         heading: copy.pricing.heading,
@@ -528,6 +499,7 @@ const Landing = ({ data, pathContext }) => {
         monthlyLabel: copy.pricing.monthly_label,
         aroundLabel: copy.pricing.around_label,
       }}
+      customerSources={copy.customerSources}
       header={data.header}
       footer={data.footer}
       langKey={pathContext.langKey}
@@ -594,24 +566,6 @@ export const query = graphql`
         }
       }
     }
-    customerSourceDesktopFile: file(
-      relativePath: { eq: "home/customer-source-desktop@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 679) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    customerSourceMobileFile: file(
-      relativePath: { eq: "home/customer-source-mobile@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 276) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
     reinsuredFile: file(relativePath: { eq: "home/reinsured@2x.png" }) {
       image: childImageSharp {
         sizes(maxWidth: 120) {
@@ -671,9 +625,9 @@ export const query = graphql`
             card3_paragraph
           }
         }
-        customer_source {
-          heading
-          image_alt
+        customerSources {
+          headline
+          paragraph
         }
         safety {
           item1
