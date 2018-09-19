@@ -393,7 +393,7 @@ class LandingTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop */}
+            {/* Media logos */}
             <div>
               <div className="Container">
                 {mediaLogosFile && (
