@@ -19,8 +19,8 @@ declare module '*.png' {
 
 declare module '*.svg' {
   interface ReactComponentProps {
-    width?: number;
-    height?: number;
+    width: number;
+    height: number;
   }
   export const ReactComponent: React.SFC<ReactComponentProps>;
 }
