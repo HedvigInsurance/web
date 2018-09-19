@@ -29,11 +29,12 @@ peril_forest:
   bottom_paragraph: Läs allt om skyddet i appen.
   heading: 'Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle'
 customerSources:
-  headline: Redan försäkrad? Vi sköter bytet
+  headline: "Redan försäkrad? Vi sköter\_bytet"
   paragraph: Våra användare kommer ifrån
 get_started:
   heading1: "2 minuter. 8 frågor."
   heading2: "Din perfekta försäkring."
   paragraph: "Ingen bindningstid. Månadsvis betalning"
   buttontext: "Kom igång"
+  imageAltText: Hedvig-appen på en iPhone
 ---
