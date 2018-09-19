@@ -33,8 +33,8 @@ const Container = styled('div')({
   paddingRight: 10,
   display: 'flex',
   justifyContent: 'space-between',
-  paddingTop: 50,
-  paddingBottom: 50,
+  paddingTop: 130,
+  paddingBottom: 150,
   '@media (max-width: 1024px)': {
     alignItems: 'center',
     flexDirection: 'column-reverse',
