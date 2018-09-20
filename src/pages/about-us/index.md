@@ -46,6 +46,13 @@ facts:
   title: Korta fakta
 press:
   footnote: >-
+    Läs vårt senaste pressmeddelande
+    [här](https://www.hedvig.com/uploads/press-2018-09-19.pdf).
+
+
+    <br/>
+
+
     Vi finns på <mailto:press@hedvig.com> och våra presskit finns att ladda ner
     [här](/assets/press/hedvig-press-assets.zip).
   items:
@@ -77,6 +84,12 @@ investors:
     - image: /uploads/creades.png
       name: Creades
       type: Investment Company
+    - image: /uploads/10c033d355e30a20399948d14a13af70.png
+      name: Khaled Helioui
+      type: Angel Investor
+    - image: /uploads/cherry-logo.jpg
+      name: Cherry Ventures
+      type: Venture Fund
   title: Hedvigs investerare
 ---
 
