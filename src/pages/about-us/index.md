@@ -77,6 +77,12 @@ investors:
     - image: /uploads/creades.png
       name: Creades
       type: Investment Company
+    - image: /uploads/10c033d355e30a20399948d14a13af70.png
+      name: Khaled Helioui
+      type: Angel Investor
+    - image: /uploads/cherry-logo.jpg
+      name: Cherry Ventures
+      type: Venture Fund
   title: Hedvigs investerare
 ---
 
