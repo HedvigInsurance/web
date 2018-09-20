@@ -1,9 +1,6 @@
-<svg width="16" height="22" viewBox="0 0 16 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="Canvas" fill="none">
-<g id="hedvig-symbol-color">
-<path id="Vector" d="M 3.21477 0L 0 0L 0 7.67203L 3.21477 7.67203L 3.21477 0Z" transform="translate(12.4843 14.2755)" fill="#0F007A"/>
-<path id="Vector_2" d="M 3.21477 0L 0 0L 0 21.9326L 3.21477 21.9326L 3.21477 0Z" fill="#0F007A"/>
-<path id="Vector_3" d="M 15.699 7.97949L 12.4843 7.97949C 12.4843 5.38798 10.4084 3.265 7.84231 3.265C 5.29068 3.265 3.20035 5.37334 3.20035 7.97949L 0 7.97949C 0 3.57247 3.51751 0 7.85673 0C 12.1959 0 15.699 3.57247 15.699 7.97949Z" transform="translate(0 6.29584)" fill="#FF8A80"/>
-</g>
-</g>
+<svg viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M23.0625 37.997H28.748V24.7198H23.0625V37.997Z" fill="#1BE9B6"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M28.7499 24.7199H23.0644C23.0644 20.2238 19.3906 16.5636 14.8757 16.5636C10.3594 16.5636 6.68553 20.2238 6.68553 24.7199H1C1 17.1017 7.22432 10.9031 14.8757 10.9031C22.5256 10.9031 28.7499 17.1017 28.7499 24.7199Z" fill="#651EFF"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M1 24.7198H6.68553V0H1V24.7198Z" fill="#0F007A"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M1 37.997H6.68553V24.7198H1V37.997Z" fill="#FF8A80"/>
 </svg>

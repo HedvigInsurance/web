@@ -497,6 +497,18 @@ collections:
                   - label: Explainer
                     name: explainer
                     widget: string
+          - label: Career banner
+            name: careerBanner
+            widget: object
+            fields:
+              - label: Message 1
+                name: message1
+              - label: Message 2
+                name: message2
+              - label: CTA Label
+                name: ctaLabel
+              - label: CTA target
+                name: ctaTarget
           - label: Three Explainers section
             name: three_explainers
             widget: object

@@ -5,6 +5,11 @@ landing:
   cta_text: Get started
   heading: Life happens. Let Hedvig help.
   subheading: 'Home insurance reimagined for your lifestyle. It''s simple, fast and fair.'
+careerBanner:
+  message1: Hedvig just raised 30 MSEK to expand and grow the team
+  message2: Want to join our journey?
+  ctaLabel: See open positions
+  ctaTarget: https://join.hedvig.com
 three_explainers:
   heading: Skip the phone queues and elevator music
   three_explainers:
