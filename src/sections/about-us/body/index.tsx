@@ -22,8 +22,8 @@ const Title = styled('h1')({
 
 const BodyText = styled('div')({
   marginTop: 20,
-  fontSize: 16,
-  lineHeight: '24px',
+  fontSize: 18,
+  lineHeight: '28px',
   fontFamily: fonts.CIRCULAR,
   'div > p': {
     marginTop: 25,

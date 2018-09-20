@@ -32,4 +32,5 @@ get_started:
   heading2: "Your perfect insurance."
   paragraph: "No lock in. Monthly billing."
   buttontext: "Get started"
+  imageAltText: The Hedvig App on an iPhone
 ---
