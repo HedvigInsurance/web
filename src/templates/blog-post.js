@@ -27,6 +27,8 @@ import {
   getAuthorField,
   sortBlogPosts,
 } from '../utils/blog-posts';
+import { truncate } from '../utils/truncate';
+import { Breadcrumb, Breadcrumbs } from '../components/Breadcrumbs';
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -156,6 +158,10 @@ const BlogPostTemplate = ({
       <article className="Site-content">
         {topImage && <TopImage src={topImage} />}
         <BlogContainer verticalMargin>
+          <Breadcrumbs>
+            <Breadcrumb to="/blog">Blogg</Breadcrumb>
+            <Breadcrumb>{truncate(25)(title)}</Breadcrumb>
+          </Breadcrumbs>
           <PostContainer isFirst isLast>
             <PostHeader size="lg">{title}</PostHeader>
             <AuthorContainer>
