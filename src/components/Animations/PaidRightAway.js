@@ -26,7 +26,6 @@ const PaidRightAway = React.forwardRef(({ sideLength }, ref) => (
 ));
 
 PaidRightAway.propTypes = {
-  ref: PropTypes.func.isRequired,
   sideLength: PropTypes.number.isRequired,
 };
 
