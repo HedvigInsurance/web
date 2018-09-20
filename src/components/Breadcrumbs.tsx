@@ -16,9 +16,7 @@ const BreadcrumbComponent = styled('li')({
   },
 });
 
-const PlainBreadcrumb = styled('span')({
-  fontStyle: 'italic',
-});
+const PlainBreadcrumb = styled('span')({});
 
 const Breadcrumb: React.SFC<BreadcrumbProps> = ({ to, children }) => (
   <BreadcrumbComponent>
