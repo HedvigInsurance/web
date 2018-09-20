@@ -46,6 +46,13 @@ facts:
   title: Korta fakta
 press:
   footnote: >-
+    Läs vårt senaste pressmeddelande
+    [här](https://www.hedvig.com/uploads/press-2018-09-19.pdf).
+
+
+    <br/>
+
+
     Vi finns på <mailto:press@hedvig.com> och våra presskit finns att ladda ner
     [här](/assets/press/hedvig-press-assets.zip).
   items:
