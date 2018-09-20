@@ -11,6 +11,7 @@ landing:
   heading: Not your parent's insurance.
   paragraph: Billed monthly. No fixed contracts!
   subheading: Home insurance designed for students - all done by chat.
+  cta_text: Get Hedvig for students
 three_explainers:
   heading: An easy way to earn some 'adult points'.
   three_explainers:
