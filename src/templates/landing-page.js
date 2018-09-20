@@ -1,62 +1,62 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { LottieLoader } from 'src/components/LottieLoader';
-import Img from 'gatsby-image';
-import VisibilitySensor from 'react-visibility-sensor';
-import { StickyContainer } from 'react-sticky';
-import { Helmet } from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { LottieLoader } from 'src/components/LottieLoader'
+import Img from 'gatsby-image'
+import VisibilitySensor from 'react-visibility-sensor'
+import { StickyContainer } from 'react-sticky'
+import { Helmet } from 'react-helmet'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import AppLink from 'src/components/AppLink';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import AppLink from 'src/components/AppLink'
 
-import { CTAWaypoint } from 'src/components/CTAWaypoint';
-import { trackEvent } from 'src/utils/track-event';
+import { CTAWaypoint } from 'src/components/CTAWaypoint'
+import { trackEvent } from 'src/utils/track-event'
 
-import './Home.css';
-import { GetStarted } from 'src/sections/landing/get-started';
-import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
-import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
-import PaidRightAway from '../components/Animations/PaidRightAway';
-import { CareerBanner } from '../sections/landing/career-banner';
-import { CustomerSources } from '../sections/landing/customer-sources';
+import './Home.css'
+import { GetStarted } from 'src/sections/landing/get-started'
+import ClaimOnPhone from '../components/Animations/ClaimOnPhone'
+import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes'
+import PaidRightAway from '../components/Animations/PaidRightAway'
+import { CareerBanner } from '../sections/landing/career-banner'
+import { CustomerSources } from '../sections/landing/customer-sources'
 
-const claimsAnimation = require('assets/animations/chat-demo/data.json');
+const claimsAnimation = require('assets/animations/chat-demo/data.json')
 
-const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
+const THREE_EXPLAINER_WIDTH_HEIGHT = 210
 
 class LandingTemplate extends React.Component {
   chatDemoOnVisibilityChange = (isVisible) => {
-    if (!this.chatAnim) return;
+    if (!this.chatAnim) return
 
     if (isVisible) {
-      this.chatAnim.play();
+      this.chatAnim.play()
     } else {
-      this.chatAnim.stop();
+      this.chatAnim.stop()
     }
-  };
+  }
 
   threeExplainersVisbilityChanged = (isVisible) => {
     if (!this.insuranceInMinutesAnim) {
-      return;
+      return
     }
     if (isVisible) {
-      this.insuranceInMinutesAnim.play();
-      this.claimOnPhoneAnimation.play();
-      this.paidRightAwayAnimation.play();
+      this.insuranceInMinutesAnim.play()
+      this.claimOnPhoneAnimation.play()
+      this.paidRightAwayAnimation.play()
     } else {
-      this.insuranceInMinutesAnim.stop();
-      this.paidRightAwayAnimation.stop();
+      this.insuranceInMinutesAnim.stop()
+      this.paidRightAwayAnimation.stop()
     }
-  };
+  }
 
   registerPerilForestClick = () => {
-    trackEvent('Peril forest clicked');
-  };
+    trackEvent('Peril forest clicked')
+  }
 
   registerCustomerSourceClick = () => {
-    trackEvent('Customer source clicked');
-  };
+    trackEvent('Customer source clicked')
+  }
 
   render() {
     const {
@@ -74,7 +74,7 @@ class LandingTemplate extends React.Component {
       header,
       footer,
       langKey,
-    } = this.props;
+    } = this.props
     return (
       <main className="Site">
         <Helmet>
@@ -113,7 +113,7 @@ class LandingTemplate extends React.Component {
                       <div className="Home-chatDemo-phone u-spaceMV6 u-lg-spaceMT4">
                         <LottieLoader
                           ref={(anim) => {
-                            this.chatAnim = anim;
+                            this.chatAnim = anim
                           }}
                           options={{
                             loop: true,
@@ -150,7 +150,7 @@ class LandingTemplate extends React.Component {
                     <div className="u-lg-size1of3">
                       <InsuranceInMinutes
                         ref={(anim) => {
-                          this.insuranceInMinutesAnim = anim;
+                          this.insuranceInMinutesAnim = anim
                         }}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
@@ -170,7 +170,7 @@ class LandingTemplate extends React.Component {
                     <div className="u-lg-size1of3">
                       <ClaimOnPhone
                         ref={(anim) => {
-                          this.claimOnPhoneAnimation = anim;
+                          this.claimOnPhoneAnimation = anim
                         }}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
@@ -187,7 +187,7 @@ class LandingTemplate extends React.Component {
                     <div className="u-lg-size1of3">
                       <PaidRightAway
                         ref={(anim) => {
-                          this.paidRightAwayAnimation = anim;
+                          this.paidRightAwayAnimation = anim
                         }}
                         sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                       />
@@ -261,7 +261,7 @@ class LandingTemplate extends React.Component {
 
         <Footer data={footer} langKey={langKey} />
       </main>
-    );
+    )
   }
 }
 
@@ -315,10 +315,10 @@ LandingTemplate.propTypes = {
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 const Landing = ({ data, pathContext }) => {
-  const copy = data.landingPage.frontmatter;
+  const copy = data.landingPage.frontmatter
   return (
     <LandingTemplate
       chatDemoBgFile={data.chatDemoBgFile}
@@ -337,17 +337,17 @@ const Landing = ({ data, pathContext }) => {
       footer={data.footer}
       langKey={pathContext.langKey}
     />
-  );
-};
+  )
+}
 
 Landing.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { LandingTemplate };
+export { LandingTemplate }
 
-export default Landing;
+export default Landing
 
 export const query = graphql`
   query LandingPage($id: String!) {
@@ -442,4 +442,4 @@ export const query = graphql`
       ...Footer_data
     }
   }
-`;
+`

@@ -1,27 +1,27 @@
-import * as React from 'react';
-import Measure from 'react-measure';
-import styled from 'react-emotion';
-import Animated from 'animated';
-import { colors, fonts } from '@hedviginsurance/brand';
-import { Container } from 'constate';
-import { Mount, Unmount } from 'react-lifecycle-components';
+import { colors, fonts } from '@hedviginsurance/brand'
+import Animated from 'animated'
+import { Container } from 'constate'
+import * as React from 'react'
+import styled from 'react-emotion'
+import { Mount, Unmount } from 'react-lifecycle-components'
+import Measure from 'react-measure'
 
 interface CustomerSourcesProps {
-  headline: string;
-  paragraph: string;
+  headline: string
+  paragraph: string
 }
 
 interface BarProps {
-  color: string;
+  color: string
 }
 
-const AnimatedDiv = Animated.createAnimatedComponent('div');
+const AnimatedDiv = Animated.createAnimatedComponent('div')
 
 const Table = styled('div')({
   position: 'relative',
   display: 'table',
   width: '100%',
-});
+})
 
 const BackgroundImage = styled('img')({
   objectFit: 'cover',
@@ -37,7 +37,7 @@ const BackgroundImage = styled('img')({
     height: '75%',
     width: 'auto',
   },
-});
+})
 
 const TableRow = styled('div')({
   display: 'table-row',
@@ -45,13 +45,13 @@ const TableRow = styled('div')({
     display: 'flex',
     flexDirection: 'column-reverse',
   },
-});
+})
 
 const TableCellName = styled('div')({
   display: 'table-cell',
   paddingRight: 25,
   paddingBottom: 30,
-});
+})
 const TableCellBar = styled(AnimatedDiv)({
   display: 'table-cell',
   width: '100%',
@@ -59,7 +59,7 @@ const TableCellBar = styled(AnimatedDiv)({
   '@media (max-width: 600px)': {
     height: '20px',
   },
-});
+})
 
 const BarContainer = styled('div')({
   overflow: 'hidden',
@@ -69,23 +69,23 @@ const BarContainer = styled('div')({
   position: 'relative',
   backfaceVisibility: 'hidden',
   transform: 'translate3d(0, 0, 0)',
-});
+})
 
 const HeadlineSection = styled('div')({
   textAlign: 'center',
   display: 'inline',
-});
+})
 
 const Headline = styled('h2')({
   paddingBottom: 30,
   fontFamily: fonts.SORAY,
-});
+})
 
 const Paragraph = styled('p')({
   fontSize: 20,
   lineHeight: '23px',
   paddingBottom: 60,
-});
+})
 
 const PercentageText = styled(AnimatedDiv)({
   fontSize: 18,
@@ -99,7 +99,7 @@ const PercentageText = styled(AnimatedDiv)({
   '@media (max-width: 600px)': {
     fontSize: 16,
   },
-});
+})
 
 const Section = styled('div')({
   paddingTop: 120,
@@ -108,7 +108,7 @@ const Section = styled('div')({
     overflow: 'hidden',
     paddingTop: 60,
   },
-});
+})
 
 const CompanyName = styled('div')({
   fontSize: 18,
@@ -117,11 +117,11 @@ const CompanyName = styled('div')({
   '@media (max-width: 600px)': {
     fontSize: 16,
   },
-});
+})
 
 const BarsContainer = styled('div')({
   width: '100%',
-});
+})
 
 const Bar = styled(AnimatedDiv)((props: BarProps) => ({
   backgroundColor: props.color,
@@ -133,7 +133,7 @@ const Bar = styled(AnimatedDiv)((props: BarProps) => ({
   position: 'absolute',
   left: 0,
   top: 0,
-}));
+}))
 
 const COMPANIES = [
   {
@@ -161,42 +161,42 @@ const COMPANIES = [
     percent: 17,
     color: colors.DARK_GRAY,
   },
-];
+]
 
-const MAX_WEIGHT = 29;
+const MAX_WEIGHT = 29
 
 interface GetStyle {
-  animatedValue: Animated.Value;
-  offsetTop: number;
-  offset: number;
-  percent: number;
+  animatedValue: Animated.Value
+  offsetTop: number
+  offset: number
+  percent: number
 }
 
 const getWindowInnerHeight = () => {
   if (typeof window !== 'undefined') {
-    return window.innerHeight;
+    return window.innerHeight
   }
 
-  return 0;
-};
+  return 0
+}
 
 const getSectionPosition = ({ offsetTop }: { offsetTop: number }) =>
-  offsetTop - getWindowInnerHeight();
+  offsetTop - getWindowInnerHeight()
 
 const getBarWidth = ({ percent }: { percent: number }) =>
-  `calc(${(100 / MAX_WEIGHT) * percent}% - 50px)`;
+  `calc(${(100 / MAX_WEIGHT) * percent}% - 50px)`
 
 const getInputRange = ({
   offsetTop,
   offset,
 }: {
-  offsetTop: number;
-  offset: number;
+  offsetTop: number
+  offset: number
 }) => {
-  const sectionPosition = getSectionPosition({ offsetTop });
+  const sectionPosition = getSectionPosition({ offsetTop })
 
-  return [sectionPosition + offset, sectionPosition + offset * 2];
-};
+  return [sectionPosition + offset, sectionPosition + offset * 2]
+}
 
 const getTableCellStyle = ({
   animatedValue,
@@ -207,12 +207,12 @@ const getTableCellStyle = ({
     inputRange: getInputRange({ offsetTop, offset }),
     outputRange: [0, 1],
     extrapolate: 'clamp',
-  });
+  })
 
   return {
     opacity,
-  };
-};
+  }
+}
 
 const getBarStyle = ({
   animatedValue,
@@ -224,13 +224,13 @@ const getBarStyle = ({
     inputRange: getInputRange({ offsetTop, offset }),
     outputRange: ['translateX(-100%)', `translateX(0%)`],
     extrapolate: 'clamp',
-  });
+  })
 
   return {
     width: getBarWidth({ percent }),
     transform,
-  };
-};
+  }
+}
 
 const getPercentageTextStyle = ({
   animatedValue,
@@ -242,29 +242,29 @@ const getPercentageTextStyle = ({
     inputRange: getInputRange({ offsetTop, offset }),
     outputRange: [`translateX(-100%)`, `translateX(0%)`],
     extrapolate: 'clamp',
-  });
+  })
 
   return {
     transform,
     width: getBarWidth({ percent }),
-  };
-};
+  }
+}
 
 interface State {
-  animatedValue: Animated.Value;
-  eventHandler: (...args: any[]) => void;
+  animatedValue: Animated.Value
+  eventHandler: (...args: any[]) => void
 }
 
 const getInitialState: () => State = () => {
-  const animatedValue = new Animated.Value(0);
+  const animatedValue = new Animated.Value(0)
 
   return {
     animatedValue,
     eventHandler: Animated.event([
       { target: { scrollingElement: { scrollTop: animatedValue } } },
     ]),
-  };
-};
+  }
+}
 
 export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
   headline,
@@ -299,7 +299,7 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
                         </TableCellName>
                         <TableCellBar
                           style={getTableCellStyle({
-                            animatedValue: animatedValue,
+                            animatedValue,
                             offsetTop:
                               (contentRect.offset && contentRect.offset.top) ||
                               0,
@@ -311,7 +311,7 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
                             <Bar
                               color={company.color}
                               style={getBarStyle({
-                                animatedValue: animatedValue,
+                                animatedValue,
                                 offsetTop:
                                   (contentRect.offset &&
                                     contentRect.offset.top) ||
@@ -323,7 +323,7 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
                           </BarContainer>
                           <PercentageText
                             style={getPercentageTextStyle({
-                              animatedValue: animatedValue,
+                              animatedValue,
                               offsetTop:
                                 (contentRect.offset &&
                                   contentRect.offset.top) ||
@@ -344,4 +344,4 @@ export const CustomerSources: React.SFC<CustomerSourcesProps> = ({
       </Unmount>
     )}
   </Container>
-);
+)

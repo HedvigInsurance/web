@@ -1,5 +1,5 @@
-import React from 'react';
-import { max as createSnippet } from '@segment/snippet';
+import React from 'react'
+import { max as createSnippet } from '@segment/snippet'
 
 export const onRenderBody = ({ setPostBodyComponents }, { writeKey }) => {
   // host: the domain name where the analytics.js script is hosted.
@@ -13,14 +13,14 @@ export const onRenderBody = ({ setPostBodyComponents }, { writeKey }) => {
     apiKey: writeKey,
     page: false,
     load: true,
-  };
+  }
 
-  const snippet = createSnippet(options);
+  const snippet = createSnippet(options)
 
   return setPostBodyComponents([
     <script
       key="segment-snippet"
       dangerouslySetInnerHTML={{ __html: snippet }} // eslint-disable-line
     />,
-  ]);
-};
+  ])
+}

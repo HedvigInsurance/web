@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import Img from 'gatsby-image';
-import { StickyContainer } from 'react-sticky';
-import './Page.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import Img from 'gatsby-image'
+import { StickyContainer } from 'react-sticky'
+import './Page.css'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
-};
+}
 
 const ContactTemplate = ({
   image,
@@ -88,14 +88,14 @@ const ContactTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 ContactTemplate.propTypes = {
   image: PropTypes.objectOf(PropTypes.object).isRequired,
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
-};
+}
 
 const Contact = ({ data, pathContext }) => (
   <ContactTemplate
@@ -106,16 +106,16 @@ const Contact = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 Contact.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { ContactTemplate };
+export { ContactTemplate }
 
-export default Contact;
+export default Contact
 
 export const query = graphql`
   query ContactPage($id: String!) {
@@ -141,4 +141,4 @@ export const query = graphql`
       ...Footer_data
     }
   }
-`;
+`

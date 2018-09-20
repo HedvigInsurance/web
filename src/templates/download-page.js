@@ -1,20 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import Cookies from 'js-cookie';
-import { StickyContainer } from 'react-sticky';
-import './Page.css';
-import { fonts, colors } from '@hedviginsurance/brand';
-import styled from 'react-emotion';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import Cookies from 'js-cookie'
+import { StickyContainer } from 'react-sticky'
+import './Page.css'
+import { fonts, colors } from '@hedviginsurance/brand'
+import styled from 'react-emotion'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch';
-import { trackEvent } from 'src/utils/track-event';
-import { Spacing } from 'src/components/Spacing';
-import { DownloadSpinner } from 'src/components/DownloadSpinner';
-import { RotatingPhoneVideo } from 'src/components/RotatingPhoneVideo';
-import { Button } from 'src/components/Button';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import { utmParamsToBranchLinkOptions } from 'src/services/utm-to-branch'
+import { trackEvent } from 'src/utils/track-event'
+import { Spacing } from 'src/components/Spacing'
+import { DownloadSpinner } from 'src/components/DownloadSpinner'
+import { RotatingPhoneVideo } from 'src/components/RotatingPhoneVideo'
+import { Button } from 'src/components/Button'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -23,7 +23,7 @@ const pagePropTypes = {
   ctaText: PropTypes.string.isRequired,
   successText: PropTypes.string.isRequired,
   errorText: PropTypes.string.isRequired,
-};
+}
 
 const Container = styled('div')({
   maxWidth: 1240,
@@ -39,7 +39,7 @@ const Container = styled('div')({
     alignItems: 'center',
     flexDirection: 'column-reverse',
   },
-});
+})
 
 const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
   ({ width }) => ({
@@ -52,7 +52,7 @@ const Column = styled('div', { shouldForwardProp: (name) => name !== 'width' })(
       width,
     },
   }),
-);
+)
 
 const Heading = styled('h1')({
   textAlign: 'center',
@@ -61,11 +61,11 @@ const Heading = styled('h1')({
   '@media (min-width: 1024px)': {
     fontSize: 50,
   },
-});
+})
 
 const CustomButton = styled(Button)(({ disabled }) => ({
   backgroundColor: disabled ? colors.LIGHT_GRAY : colors.GREEN,
-}));
+}))
 const Input = styled('input')(({ error }) => ({
   minWidth: 280,
   borderWidth: 2,
@@ -76,62 +76,62 @@ const Input = styled('input')(({ error }) => ({
   padding: '0.79em 1.2em',
   outline: 'none',
   ':focus': { borderColor: colors.PURPLE },
-}));
+}))
 
 const Form = styled('form')({
   display: 'flex',
   '@media (max-width: 1024px)': {
     flexDirection: 'column',
   },
-});
+})
 
 const ErrorText = styled('p')({
   color: colors.PINK,
-});
+})
 const Article = styled('article')({
   backgroundColor: '#F9FBFC',
-});
+})
 
 class DownloadTemplate extends React.Component {
   static propTypes = {
     ...pagePropTypes,
     header: PropTypes.shape(headerPropTypes).isRequired,
-  };
+  }
 
   state = {
     phoneNumber: '',
     hasErrors: false,
     isSuccessful: false,
     isSending: false,
-  };
+  }
 
   handleChange = (event) => {
-    this.setState({ phoneNumber: event.target.value });
-  };
+    this.setState({ phoneNumber: event.target.value })
+  }
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    let { phoneNumber } = this.state;
-    phoneNumber = phoneNumber.trim();
+    let { phoneNumber } = this.state
+    phoneNumber = phoneNumber.trim()
     // Default to Sweden if no country code
     if (!phoneNumber.match(/^\+/)) {
-      phoneNumber = `+46${phoneNumber}`;
+      phoneNumber = `+46${phoneNumber}`
     }
-    if (!phoneNumber) return;
+    if (!phoneNumber) return
 
-    this.setState({ isSending: true, hasErrors: false });
+    this.setState({ isSending: true, hasErrors: false })
 
-    const utmParams = Cookies.getJSON('utm-params') || {};
+    const utmParams = Cookies.getJSON('utm-params') || {}
     const defaultBranchLinkOptions = {
       channel: 'hedvig',
       feature: 'send-sms',
-    };
+    }
     // utmParams take precendent over default branch params
     const linkOptions = utmParamsToBranchLinkOptions(
       utmParams,
       defaultBranchLinkOptions,
-    );
+    )
 
     window.branch.sendSMS(
       phoneNumber,
@@ -143,17 +143,17 @@ class DownloadTemplate extends React.Component {
       },
       { make_new_link: false },
       (err) => {
-        this.setState({ isSending: false });
+        this.setState({ isSending: false })
         if (err) {
-          this.setState({ hasErrors: true });
-          console.log('Branch.sendSMS error', err);
-          return;
+          this.setState({ hasErrors: true })
+          console.log('Branch.sendSMS error', err)
+          return
         }
-        this.setState({ isSuccessful: true, phoneNumber: '' });
-        trackEvent('Send app link sms');
+        this.setState({ isSuccessful: true, phoneNumber: '' })
+        trackEvent('Send app link sms')
       },
-    );
-  };
+    )
+  }
 
   render() {
     const {
@@ -166,9 +166,9 @@ class DownloadTemplate extends React.Component {
       header,
       footer,
       langKey,
-    } = this.props;
-    const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state;
-    const isDisabled = !phoneNumber || isSending;
+    } = this.props
+    const { phoneNumber, isSending, isSuccessful, hasErrors } = this.state
+    const isDisabled = !phoneNumber || isSending
     return (
       <main className="Site">
         <Helmet>
@@ -216,7 +216,7 @@ class DownloadTemplate extends React.Component {
         </StickyContainer>
         <Footer data={footer} langKey={langKey} />
       </main>
-    );
+    )
   }
 }
 
@@ -234,7 +234,7 @@ const Download = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 Download.propTypes = {
   data: PropTypes.shape({
@@ -245,11 +245,11 @@ Download.propTypes = {
     footer: PropTypes.shape(footerPropTypes),
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { DownloadTemplate };
+export { DownloadTemplate }
 
-export default Download;
+export default Download
 
 export const downloadPageQuery = graphql`
   query DownloadPage($id: String!) {
@@ -272,4 +272,4 @@ export const downloadPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`

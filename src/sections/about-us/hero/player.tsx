@@ -1,11 +1,11 @@
-import * as React from 'react';
-import styled, { keyframes } from 'react-emotion';
-import { Update } from 'react-lifecycle-components';
+import * as React from 'react'
+import styled, { keyframes } from 'react-emotion'
+import { Update } from 'react-lifecycle-components'
 
-import heroVideoPoster from 'assets/about-us-hero-poster.png';
+import heroVideoPoster from 'assets/about-us-hero-poster.png'
 
 interface HeightContainerProps {
-  isFullScreen: boolean;
+  isFullScreen: boolean
 }
 
 const fadeInKeyframe = keyframes({
@@ -15,7 +15,7 @@ const fadeInKeyframe = keyframes({
   to: {
     opacity: 1,
   },
-});
+})
 
 const HeightContainer = styled('div')(
   {
@@ -39,7 +39,7 @@ const HeightContainer = styled('div')(
           height: 'calc(100vh - 70px) !important',
         }
       : null,
-);
+)
 
 const Video = styled('video')(
   {
@@ -63,28 +63,30 @@ const Video = styled('video')(
       : {
           height: '100%',
         },
-);
+)
 
 interface PlayerProps {
-  isFullScreen: boolean;
-  videoRef: React.RefObject<HTMLVideoElement>;
+  isFullScreen: boolean
+  videoRef: React.RefObject<HTMLVideoElement>
 }
 
 const restartVideo = ({ isFullScreen, videoRef }: PlayerProps) => () => {
-  if (!videoRef.current || !isFullScreen) return;
+  if (!videoRef.current || !isFullScreen) {
+    return
+  }
 
-  const video = videoRef.current;
+  const video = videoRef.current
 
-  video.pause();
-  video.currentTime = 0;
-  video.play();
-};
-
-interface FullScreenUpdate {
-  isFullScreen: boolean;
+  video.pause()
+  video.currentTime = 0
+  video.play()
 }
 
-const baseVideoUrl = `https://s3.eu-central-1.amazonaws.com/www.hedvig.com/about-us-video`;
+interface FullScreenUpdate {
+  isFullScreen: boolean
+}
+
+const baseVideoUrl = `https://s3.eu-central-1.amazonaws.com/www.hedvig.com/about-us-video`
 
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
   <Update<FullScreenUpdate>
@@ -111,4 +113,4 @@ export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
       </Video>
     </HeightContainer>
   </Update>
-);
+)

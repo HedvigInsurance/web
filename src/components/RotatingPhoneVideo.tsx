@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from 'react-emotion';
+import * as React from 'react'
+import styled from 'react-emotion'
 
 const Video = styled('video')({
   maxWidth: 300,
@@ -7,10 +7,10 @@ const Video = styled('video')({
   '@media (min-width: 1024px)': {
     maxWidth: 450,
   },
-});
+})
 
 const baseVideoUrl =
-  'https://s3.eu-central-1.amazonaws.com/www.hedvig.com/rotating-phone-video';
+  'https://s3.eu-central-1.amazonaws.com/www.hedvig.com/rotating-phone-video'
 
 const RotatingPhoneVideo: React.SFC = () => (
   <Video autoPlay loop muted playsInline>
@@ -21,6 +21,6 @@ const RotatingPhoneVideo: React.SFC = () => (
     <source src={`${baseVideoUrl}/web.mp4`} />
     <source src={`${baseVideoUrl}/web.webm`} />
   </Video>
-);
+)
 
-export { RotatingPhoneVideo };
+export { RotatingPhoneVideo }

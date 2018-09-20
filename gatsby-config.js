@@ -5,7 +5,7 @@ const {
   BRANCH_KEY_PRODUCTION,
   BRANCH_KEY_TEST,
   TEAMTAILOR_TOKEN,
-} = process.env;
+} = process.env
 
 const hasEnvConfig = [
   SEGMENT_JS_WRITE_KEY_PRODUCTION,
@@ -13,7 +13,7 @@ const hasEnvConfig = [
   BRANCH_KEY_PRODUCTION,
   BRANCH_KEY_TEST,
   TEAMTAILOR_TOKEN,
-].every((value) => !!value);
+].every((value) => !!value)
 
 if (!hasEnvConfig) {
   throw new Error(
@@ -21,7 +21,7 @@ if (!hasEnvConfig) {
        - https://app.segment.com/hedvig/sources
        - https://dashboard.branch.io/account-settings/app
     `,
-  );
+  )
 }
 
 const siteMetadata = {
@@ -49,7 +49,7 @@ const siteMetadata = {
   addressCountry: 'SE',
   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hedvig.app',
   itunesStoreUrl: 'https://itunes.apple.com/se/app/hedvig/id1303668531?mt=8',
-};
+}
 
 module.exports = {
   siteMetadata,
@@ -204,4 +204,4 @@ module.exports = {
       },
     },
   ],
-};
+}

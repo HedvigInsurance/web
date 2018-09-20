@@ -1,21 +1,21 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { Container, ActionMap } from 'constate';
-import isIOS from 'is-ios';
+import { ActionMap, Container } from 'constate'
+import isIOS from 'is-ios'
+import * as React from 'react'
+import styled from 'react-emotion'
 
-import { Title } from './title';
-import { Player } from './player';
-import { CloseButton } from './close-button';
+import { CloseButton } from './close-button'
+import { Player } from './player'
+import { Title } from './title'
 
 interface HeroProps {
-  headline: string;
-  title: string;
-  playButtonText: string;
+  headline: string
+  title: string
+  playButtonText: string
 }
 
 const Background = styled('div')({
   backgroundColor: 'black',
-});
+})
 
 const HeroContainer = styled('div')({
   width: '100%',
@@ -23,10 +23,10 @@ const HeroContainer = styled('div')({
   overflow: 'hidden',
   maxWidth: 1500,
   margin: '0 auto',
-});
+})
 
 interface ShadowProps {
-  hidden: boolean;
+  hidden: boolean
 }
 
 const Shadow = styled('div')(
@@ -47,16 +47,16 @@ const Shadow = styled('div')(
     opacity: hidden ? 0 : 1,
     pointerEvents: hidden ? 'none' : 'all',
   }),
-);
+)
 
 interface State {
-  isFullScreen: boolean;
-  videoRef: React.RefObject<HTMLVideoElement>;
+  isFullScreen: boolean
+  videoRef: React.RefObject<HTMLVideoElement>
 }
 
 interface Actions {
-  setFullScreen: (isFullScreen: boolean) => void;
-  setVideoRef: (videoRef: React.RefObject<HTMLVideoElement>) => void;
+  setFullScreen: (isFullScreen: boolean) => void
+  setVideoRef: (videoRef: React.RefObject<HTMLVideoElement>) => void
 }
 
 const actions: ActionMap<State, Actions> = {
@@ -66,27 +66,27 @@ const actions: ActionMap<State, Actions> = {
   setVideoRef: (videoRef) => () => ({
     videoRef,
   }),
-};
+}
 
 const onPlay = ({
   videoRef,
   setFullScreen,
 }: {
-  videoRef: React.RefObject<HTMLVideoElement>;
-  setFullScreen: (isFullScreen: boolean) => void;
+  videoRef: React.RefObject<HTMLVideoElement>
+  setFullScreen: (isFullScreen: boolean) => void
 }) => () => {
   if (videoRef.current && isIOS) {
-    const video = videoRef.current;
-    video.muted = false;
-    video.pause();
-    video.currentTime = 0;
-    video.play();
-    video.webkitEnterFullscreen();
-    return;
+    const video = videoRef.current
+    video.muted = false
+    video.pause()
+    video.currentTime = 0
+    video.play()
+    video.webkitEnterFullscreen()
+    return
   }
 
-  setFullScreen(true);
-};
+  setFullScreen(true)
+}
 
 export const Hero: React.SFC<HeroProps> = ({
   headline,
@@ -120,4 +120,4 @@ export const Hero: React.SFC<HeroProps> = ({
       )}
     </Container>
   </Background>
-);
+)

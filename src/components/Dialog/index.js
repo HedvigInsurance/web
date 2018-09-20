@@ -1,12 +1,12 @@
-import React from 'react';
-import { colors } from '@hedviginsurance/brand';
-import styled from 'react-emotion';
-import { Spring } from 'react-spring';
-import Delayed from 'react-delayed';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { colors } from '@hedviginsurance/brand'
+import styled from 'react-emotion'
+import { Spring } from 'react-spring'
+import Delayed from 'react-delayed'
+import PropTypes from 'prop-types'
 
-import { Button } from 'src/components/Button';
-import { Modal } from './modal';
+import { Button } from 'src/components/Button'
+import { Modal } from './modal'
 
 const coverStyling = {
   position: 'fixed',
@@ -14,14 +14,14 @@ const coverStyling = {
   height: '100%',
   top: 0,
   left: 0,
-};
+}
 
 const Background = styled('div')({
   backgroundColor: 'rgba(0,0,0,0.25)',
   ...coverStyling,
   zIndex: 20000,
   cursor: 'pointer',
-});
+})
 
 const ContentContainer = styled('div')({
   position: 'fixed',
@@ -29,7 +29,7 @@ const ContentContainer = styled('div')({
   left: '50%',
   zIndex: 20001,
   transformOrigin: '0 0',
-});
+})
 
 const InnerContent = styled('div')({
   display: 'flex',
@@ -44,29 +44,29 @@ const InnerContent = styled('div')({
   maxWidth: 450,
   height: 300,
   transform: 'translateX(-50%) translateY(-50%)',
-});
+})
 
 const Spacing = styled('div')({
   width: 1,
   height: 10,
-});
+})
 
 export const Dialog = ({ visible, onRequestClose }) => {
-  const opacityFrom = { opacity: visible ? 0 : 1 };
-  const opacityTo = { opacity: visible ? 1 : 0 };
+  const opacityFrom = { opacity: visible ? 0 : 1 }
+  const opacityTo = { opacity: visible ? 1 : 0 }
 
   const transformFrom = {
     ...opacityFrom,
     transform: visible
       ? 'translateY(100px) scale(0.8)'
       : 'translateY(0) scale(1)',
-  };
+  }
   const transformTo = {
     ...opacityTo,
     transform: visible
       ? 'translateY(0) scale(1)'
       : 'translateY(100px) scale(0.8)',
-  };
+  }
 
   return (
     <Delayed mounted={visible} mountAfter={0} unmountAfter={500}>
@@ -94,10 +94,10 @@ export const Dialog = ({ visible, onRequestClose }) => {
         </Spring>
       </Modal>
     </Delayed>
-  );
-};
+  )
+}
 
 Dialog.propTypes = {
   visible: PropTypes.bool.isRequired,
   onRequestClose: PropTypes.func.isRequired,
-};
+}

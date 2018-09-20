@@ -1,14 +1,14 @@
-import * as React from 'react';
-import Img, { GatsbyImageProps } from 'gatsby-image';
-import styled from 'react-emotion';
+import Img, { GatsbyImageProps } from 'gatsby-image'
+import * as React from 'react'
+import styled from 'react-emotion'
 
 interface ImageFile {
-  image: GatsbyImageProps;
+  image: GatsbyImageProps
 }
 
 interface FoundersProps {
-  imageFile: ImageFile;
-  imageText: string;
+  imageFile: ImageFile
+  imageText: string
 }
 
 const FoundersContainer = styled('div')({
@@ -16,17 +16,17 @@ const FoundersContainer = styled('div')({
   maxWidth: 1500,
   margin: '0 auto',
   position: 'relative',
-});
+})
 
 const ImgWithMaxHeight = styled(Img)({
   maxHeight: 500,
-});
+})
 
 const PlaceholderImage = styled('div')({
   height: 500,
   backgroundColor: 'black',
   width: '100%',
-});
+})
 
 const Shadow = styled('div')({
   position: 'absolute',
@@ -44,14 +44,14 @@ const Shadow = styled('div')({
     backgroundImage:
       'linear-gradient(transparent, transparent 60%, rgba(0,0,0,0.85))',
   },
-});
+})
 
 const FounderName = styled('span')({
   fontSize: 14,
   textAlign: 'center',
   margin: '0 auto',
   maxWidth: '80%',
-});
+})
 
 export const Founders: React.SFC<FoundersProps> = ({
   imageFile,
@@ -67,4 +67,4 @@ export const Founders: React.SFC<FoundersProps> = ({
       <FounderName>{imageText}</FounderName>
     </Shadow>
   </FoundersContainer>
-);
+)

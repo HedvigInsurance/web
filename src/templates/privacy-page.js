@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
-import remark from 'remark';
-import reactRenderer from 'remark-react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
+import remark from 'remark'
+import reactRenderer from 'remark-react'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import './Page.css';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import './Page.css'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -15,7 +15,7 @@ const pagePropTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({ section: PropTypes.string.isRequired }),
   ).isRequired,
-};
+}
 
 const PrivacyTemplate = ({
   title,
@@ -58,14 +58,14 @@ const PrivacyTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 PrivacyTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 const Privacy = ({ data, pathContext }) => (
   <PrivacyTemplate
@@ -76,7 +76,7 @@ const Privacy = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 Privacy.propTypes = {
   data: PropTypes.shape({
@@ -87,9 +87,9 @@ Privacy.propTypes = {
     footer: footerPropTypes,
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { PrivacyTemplate };
+export { PrivacyTemplate }
 
 export const privacyPageQuery = graphql`
   query PrivacyPage($id: String!) {
@@ -111,6 +111,6 @@ export const privacyPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export default Privacy;
+export default Privacy

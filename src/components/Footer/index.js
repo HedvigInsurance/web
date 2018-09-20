@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebook.svg';
-import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
-import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
-import { ReactComponent as FlagSe } from 'assets/flags/se.svg';
-import { ReactComponent as FlagEn } from 'assets/flags/en.svg';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
+import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebook.svg'
+import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg'
+import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg'
+import { ReactComponent as FlagSe } from 'assets/flags/se.svg'
+import { ReactComponent as FlagEn } from 'assets/flags/en.svg'
 
 const propTypes = {
   linkSection1: PropTypes.arrayOf(
@@ -29,12 +29,12 @@ const propTypes = {
   twitterAlt: PropTypes.string.isRequired,
   copyrightText: PropTypes.string.isRequired,
   legalText: PropTypes.string.isRequired,
-};
+}
 
 export const footerPropTypes = {
   se: PropTypes.shape(propTypes),
   en: PropTypes.shape(propTypes),
-};
+}
 
 const renderLink = (link) => {
   if (link.external) {
@@ -46,7 +46,7 @@ const renderLink = (link) => {
       >
         {link.label}
       </a>
-    );
+    )
   }
 
   return (
@@ -57,13 +57,13 @@ const renderLink = (link) => {
     >
       {link.label}
     </Link>
-  );
-};
+  )
+}
 
 const Footer = ({ data = {}, langKey }, { location }) => {
-  const dataForLanguage = data[langKey || 'se'];
+  const dataForLanguage = data[langKey || 'se']
 
-  if (!dataForLanguage) return null;
+  if (!dataForLanguage) return null
 
   const {
     linkSection1,
@@ -75,7 +75,7 @@ const Footer = ({ data = {}, langKey }, { location }) => {
     twitterAlt,
     copyrightText,
     legalText,
-  } = dataForLanguage;
+  } = dataForLanguage
 
   return (
     <div className="u-backgroundPrimaryDarkBlue u-flexNone">
@@ -169,20 +169,20 @@ const Footer = ({ data = {}, langKey }, { location }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 Footer.propTypes = {
   data: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 // Passed in from layouts/index
 Footer.contextTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string,
   }).isRequired,
-};
+}
 
 export const footerQuery = graphql`
   fragment Footer_data on DataYaml {
@@ -225,6 +225,6 @@ export const footerQuery = graphql`
       legalText
     }
   }
-`;
+`
 
-export default Footer;
+export default Footer

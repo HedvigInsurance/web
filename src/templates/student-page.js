@@ -1,84 +1,84 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-import VisibilitySensor from 'react-visibility-sensor';
-import { StickyContainer } from 'react-sticky';
-import { Helmet } from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
+import VisibilitySensor from 'react-visibility-sensor'
+import { StickyContainer } from 'react-sticky'
+import { Helmet } from 'react-helmet'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
-import AppLink from 'src/components/AppLink';
-import { StudentHeart } from 'src/sections/student-heart';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
+import AppLink from 'src/components/AppLink'
+import { StudentHeart } from 'src/sections/student-heart'
 
-import './Home.css';
-import './Student.css';
-import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes';
-import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
-import PaidRightAway from 'src/components/Animations/PaidRightAway';
-import ChatDemo from 'src/components/Animations/ChatDemo';
-import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
-import { CTAWaypoint } from 'src/components/CTAWaypoint';
+import './Home.css'
+import './Student.css'
+import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes'
+import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone'
+import PaidRightAway from 'src/components/Animations/PaidRightAway'
+import ChatDemo from 'src/components/Animations/ChatDemo'
+import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg'
+import { CTAWaypoint } from 'src/components/CTAWaypoint'
 
-const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
+const THREE_EXPLAINER_WIDTH_HEIGHT = 210
 
 class StudentTemplate extends React.Component {
   chatDemoOnVisibilityChange = (isVisible) => {
-    if (!this.chatAnim) return;
+    if (!this.chatAnim) return
 
     if (isVisible) {
-      this.chatAnim.play();
+      this.chatAnim.play()
     } else {
-      this.chatAnim.stop();
+      this.chatAnim.stop()
     }
-  };
+  }
 
   chatAnimRef = (anim) => {
-    this.chatAnim = anim;
-  };
+    this.chatAnim = anim
+  }
 
   insuranceInMinutesRef = (anim) => {
-    this.insuranceInMinutesAnim = anim;
-  };
+    this.insuranceInMinutesAnim = anim
+  }
 
   claimOnPhoneRef = (anim) => {
-    this.claimOnPhoneAnimation = anim;
-  };
+    this.claimOnPhoneAnimation = anim
+  }
 
   paidRightAwayRef = (anim) => {
-    this.paidRightAwayAnimation = anim;
-  };
+    this.paidRightAwayAnimation = anim
+  }
 
   threeExplainersVisbilityChanged = (isVisible) => {
     if (!this.insuranceInMinutesAnim) {
-      return;
+      return
     }
     if (isVisible) {
-      this.insuranceInMinutesAnim.play();
-      this.claimOnPhoneAnimation.play();
-      this.paidRightAwayAnimation.play();
+      this.insuranceInMinutesAnim.play()
+      this.claimOnPhoneAnimation.play()
+      this.paidRightAwayAnimation.play()
     } else {
-      this.insuranceInMinutesAnim.stop();
-      this.paidRightAwayAnimation.stop();
+      this.insuranceInMinutesAnim.stop()
+      this.paidRightAwayAnimation.stop()
     }
-  };
+  }
 
   registerPerilForestClick = () => {
     if (window && window.analytics) {
-      window.analytics.track('Peril forest clicked');
+      window.analytics.track('Peril forest clicked')
     }
-  };
+  }
 
   registerPriceRentClick = () => {
     if (window && window.analytics) {
-      window.analytics.track('Student price, rent clicked');
+      window.analytics.track('Student price, rent clicked')
     }
-  };
+  }
 
   registerPriceBrfClick = () => {
     if (window && window.analytics) {
-      window.analytics.track('Student price, brf clicked');
+      window.analytics.track('Student price, brf clicked')
     }
-  };
+  }
 
   render() {
     const {
@@ -95,7 +95,7 @@ class StudentTemplate extends React.Component {
       header,
       footer,
       langKey,
-    } = this.props;
+    } = this.props
     return (
       <main className="Site">
         <Helmet>
@@ -319,7 +319,7 @@ class StudentTemplate extends React.Component {
 
         <Footer data={footer} langKey={langKey} />
       </main>
-    );
+    )
   }
 }
 
@@ -362,10 +362,10 @@ StudentTemplate.propTypes = {
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
   langKey: PropTypes.string.isRequired,
-};
+}
 
 const Student = ({ data, pathContext }) => {
-  const copy = data.studentPage.frontmatter;
+  const copy = data.studentPage.frontmatter
   return (
     <StudentTemplate
       chatDemoBgFile={data.chatDemoBgFile}
@@ -383,17 +383,17 @@ const Student = ({ data, pathContext }) => {
       footer={data.footer}
       langKey={pathContext.langKey}
     />
-  );
-};
+  )
+}
 
 Student.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { StudentTemplate };
+export { StudentTemplate }
 
-export default Student;
+export default Student
 
 export const query = graphql`
   query StudentPage($id: String!) {
@@ -501,4 +501,4 @@ export const query = graphql`
       ...Footer_data
     }
   }
-`;
+`

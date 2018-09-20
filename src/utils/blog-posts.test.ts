@@ -1,4 +1,4 @@
-import { sortBlogPosts } from './blog-posts';
+import { sortBlogPosts } from './blog-posts'
 it('sorts blog posts', () => {
   const edges = [
     {
@@ -9,7 +9,7 @@ it('sorts blog posts', () => {
       id: 42,
       node: { frontmatter: { date: '2018-09-16T14:40:33+00:00' } },
     },
-  ];
+  ]
 
-  expect(sortBlogPosts(edges)).toMatchObject([{ id: 42 }, { id: 1337 }]);
-});
+  expect(sortBlogPosts(edges)).toMatchObject([{ id: 42 }, { id: 1337 }])
+})

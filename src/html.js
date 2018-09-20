@@ -1,25 +1,25 @@
 /* eslint-disable global-require, react/no-danger, import/no-webpack-loader-syntax, import/no-unresolved */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-let stylesStr;
+let stylesStr
 if (process.env.NODE_ENV === 'production') {
   try {
-    stylesStr = require('!raw-loader!../public/styles.css');
+    stylesStr = require('!raw-loader!../public/styles.css')
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
 }
 
-let css;
+let css
 if (process.env.NODE_ENV === 'production') {
   css = (
     <style
       id="gatsby-inlined-css"
       dangerouslySetInnerHTML={{ __html: stylesStr }}
     />
-  );
+  )
 }
 
 // Un-register buggy service workers that got deployed when first
@@ -37,7 +37,7 @@ const getScriptToUnregisterBuggyServiceWorkers = () => ({
       });
     }
   `,
-});
+})
 
 const HTML = ({
   htmlAttributes,
@@ -71,7 +71,7 @@ const HTML = ({
       {postBodyComponents}
     </body>
   </html>
-);
+)
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.node,
@@ -80,7 +80,7 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.node,
   body: PropTypes.string.isRequired,
   postBodyComponents: PropTypes.node,
-};
+}
 
 HTML.defaultProps = {
   htmlAttributes: null,
@@ -88,6 +88,6 @@ HTML.defaultProps = {
   bodyAttributes: null,
   preBodyComponents: null,
   postBodyComponents: null,
-};
+}
 
-module.exports = HTML;
+module.exports = HTML

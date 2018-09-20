@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { LandingTemplate } from 'src/templates/landing-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { LandingTemplate } from 'src/templates/landing-page'
 
 const LandingPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -14,12 +14,12 @@ const LandingPagePreview = ({ entry }) => (
       customerSources={entry.getIn(['data', 'customerSources']).toJS()}
     />
   </Provider>
-);
+)
 
 LandingPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func.isRequired,
   }).isRequired,
-};
+}
 
-export default LandingPagePreview;
+export default LandingPagePreview

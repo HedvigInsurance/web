@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
-import GatsbyLink from 'gatsby-link';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'react-emotion'
+import GatsbyLink from 'gatsby-link'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer, { footerPropTypes } from 'src/components/Footer';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer, { footerPropTypes } from 'src/components/Footer'
 
-import { colors, fonts } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand'
 
 import {
   BlogPostAuthor,
@@ -17,36 +17,36 @@ import {
   PostHeader,
   PrevNextCard,
   BlogLink,
-} from 'src/components/Blog';
-import { Badge } from 'src/components/Badge';
-import { Markdown } from 'src/cms/utils/markdown';
-import { kebabCaseTag } from 'src/utils/blog-tags';
-import { Button } from 'src/components/Button';
+} from 'src/components/Blog'
+import { Badge } from 'src/components/Badge'
+import { Markdown } from 'src/cms/utils/markdown'
+import { kebabCaseTag } from 'src/utils/blog-tags'
+import { Button } from 'src/components/Button'
 import {
   authorOrDefault,
   getAuthorField,
   sortBlogPosts,
-} from '../utils/blog-posts';
+} from '../utils/blog-posts'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
-};
+}
 
-const PHONE_UP = '@media (min-width: 480px)';
+const PHONE_UP = '@media (min-width: 480px)'
 
 const TopImage = styled('img')({
   width: '100%',
   maxHeight: '40vh',
   objectFit: 'cover',
   objectPosition: 'center center',
-});
+})
 
 const AuthorContainer = styled('div')({
   padding: '35px 0',
-});
+})
 
 const PrevNextContainer = styled('div')({
   display: 'flex',
@@ -58,7 +58,7 @@ const PrevNextContainer = styled('div')({
     paddingLeft: 24,
     paddingRight: 24,
   },
-});
+})
 
 const PrevNextSection = styled('div')({
   backgroundColor: colors.LIGHT_GRAY,
@@ -66,18 +66,18 @@ const PrevNextSection = styled('div')({
     paddingTop: 80,
     paddingBottom: 80,
   },
-});
+})
 
 const BlogParagraph = styled('p')({
   marginBottom: 20,
   lineHeight: 1.5,
-});
+})
 
 const BlogImage = styled('img')({
   maxWidth: '100%',
   marginTop: 20,
   marginBottom: 20,
-});
+})
 
 const BlogQuote = styled('blockquote')({
   backgroundColor: '#FFF3F2',
@@ -97,7 +97,7 @@ const BlogQuote = styled('blockquote')({
     marginBottom: 0,
     lineHeight: 'inherit',
   },
-});
+})
 
 const CtaContainer = styled('div')({
   padding: '30px 0',
@@ -105,7 +105,7 @@ const CtaContainer = styled('div')({
   [PHONE_UP]: {
     padding: '60px 0',
   },
-});
+})
 
 const Cta = styled(Button)({
   '&&': {
@@ -114,7 +114,7 @@ const Cta = styled(Button)({
     fontSize: 16,
     color: colors.WHITE,
   },
-}).withComponent(GatsbyLink);
+}).withComponent(GatsbyLink)
 
 const BlogPostTemplate = ({
   title,
@@ -205,21 +205,21 @@ const BlogPostTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey="se" />
   </main>
-);
+)
 
 BlogPostTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
   footer: PropTypes.shape(footerPropTypes).isRequired,
-};
+}
 
 const BlogPost = ({ data }) => {
-  const sortedPosts = sortBlogPosts(data.posts.edges);
+  const sortedPosts = sortBlogPosts(data.posts.edges)
   const currentPostIndex = sortedPosts.findIndex(
     (p) => p.node.frontmatter.date === data.post.frontmatter.date,
-  );
-  const prevPost = sortedPosts[currentPostIndex - 1];
-  const nextPost = sortedPosts[currentPostIndex + 1];
+  )
+  const prevPost = sortedPosts[currentPostIndex - 1]
+  const nextPost = sortedPosts[currentPostIndex + 1]
   return (
     <BlogPostTemplate
       title={data.post.frontmatter.title}
@@ -238,8 +238,8 @@ const BlogPost = ({ data }) => {
       tags={data.post.frontmatter.tags}
       cta={data.post.frontmatter.cta}
     />
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
@@ -249,7 +249,7 @@ BlogPost.propTypes = {
     header: PropTypes.shape(headerPropTypes).isRequired,
     footer: PropTypes.shape(footerPropTypes).isRequired,
   }).isRequired,
-};
+}
 
 export const BlogPostQuery = graphql`
   query BlogPost($id: String!) {
@@ -306,7 +306,7 @@ export const BlogPostQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`
 
-export { BlogPostTemplate };
-export default BlogPost;
+export { BlogPostTemplate }
+export default BlogPost

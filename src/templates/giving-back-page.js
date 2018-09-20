@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { StickyContainer } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import { StickyContainer } from 'react-sticky'
 
-import Header, { headerPropTypes } from 'src/components/Header';
-import Footer from 'src/components/Footer';
-import AppLink from 'src/components/AppLink';
-import { ReactComponent as SosBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg';
-import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg';
-import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
-import './Page.css';
+import Header, { headerPropTypes } from 'src/components/Header'
+import Footer from 'src/components/Footer'
+import AppLink from 'src/components/AppLink'
+import { ReactComponent as SosBarnbyarLogo } from 'assets/charity/sos-barnbyar-logo.svg'
+import { ReactComponent as BarncancerfondenLogo } from 'assets/charity/barncancerfonden-logo.svg'
+import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg'
+import './Page.css'
 
 const pagePropTypes = {
   title: PropTypes.string.isRequired,
@@ -36,7 +36,7 @@ const pagePropTypes = {
     barncancerfonden: PropTypes.string.isRequired,
   }).isRequired,
   ctaText: PropTypes.string.isRequired,
-};
+}
 
 const GivingBackTemplate = ({
   title,
@@ -164,12 +164,12 @@ const GivingBackTemplate = ({
     </StickyContainer>
     <Footer data={footer} langKey={langKey} />
   </main>
-);
+)
 
 GivingBackTemplate.propTypes = {
   ...pagePropTypes,
   header: PropTypes.shape(headerPropTypes).isRequired,
-};
+}
 
 const GivingBack = ({ data, pathContext }) => (
   <GivingBackTemplate
@@ -184,7 +184,7 @@ const GivingBack = ({ data, pathContext }) => (
     footer={data.footer}
     langKey={pathContext.langKey}
   />
-);
+)
 
 GivingBack.propTypes = {
   data: PropTypes.shape({
@@ -194,11 +194,11 @@ GivingBack.propTypes = {
     header: headerPropTypes,
   }).isRequired,
   pathContext: PropTypes.shape({ langKey: PropTypes.string }).isRequired,
-};
+}
 
-export { GivingBackTemplate };
+export { GivingBackTemplate }
 
-export default GivingBack;
+export default GivingBack
 
 export const givingBackPageQuery = graphql`
   query GivingBackPage($id: String!) {
@@ -239,4 +239,4 @@ export const givingBackPageQuery = graphql`
       ...Footer_data
     }
   }
-`;
+`

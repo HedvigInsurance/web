@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { PrivacyTemplate } from 'src/templates/privacy-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { PrivacyTemplate } from 'src/templates/privacy-page'
 
 const PrivacyPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -11,12 +11,12 @@ const PrivacyPagePreview = ({ entry }) => (
       sections={entry.getIn(['data', 'sections']).toJS()}
     />
   </Provider>
-);
+)
 
 PrivacyPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }).isRequired,
-};
+}
 
-export default PrivacyPagePreview;
+export default PrivacyPagePreview

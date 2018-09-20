@@ -1,23 +1,22 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
-import { fonts } from '@hedviginsurance/brand';
-import AppLink from 'src/components/AppLink';
-import MediaQuery from 'react-responsive';
-import Img from 'gatsby-image';
+import { colors, fonts } from '@hedviginsurance/brand'
+import Img from 'gatsby-image'
+import * as React from 'react'
+import styled from 'react-emotion'
+import MediaQuery from 'react-responsive'
+import AppLink from 'src/components/AppLink'
 
 interface Props {
-  heading1: string;
-  heading2: string;
-  paragraph: string;
-  buttontext: string;
-  imageAltText: string;
-  image?: any; // TODO type this better, too late tonight though
+  heading1: string
+  heading2: string
+  paragraph: string
+  buttontext: string
+  imageAltText: string
+  image?: any // TODO type this better, too late tonight though
 }
 
 const Section = styled('div')({
   backgroundColor: colors.OFF_WHITE,
-});
+})
 
 const Container = styled('div')({
   paddingBottom: 100,
@@ -31,7 +30,7 @@ const Container = styled('div')({
     paddingTop: 50,
     paddingBottom: 50,
   },
-});
+})
 
 const ImageContainer = styled('div')({
   marginRight: 20,
@@ -42,7 +41,7 @@ const ImageContainer = styled('div')({
     maxWidth: '300px',
     width: '80%',
   },
-});
+})
 
 const HeadlineContainer = styled('div')({
   position: 'relative',
@@ -54,7 +53,7 @@ const HeadlineContainer = styled('div')({
   '@media (max-width: 959px)': {
     top: 0,
   },
-});
+})
 
 const Headline = styled('h2')({
   minWidth: '100%',
@@ -63,7 +62,7 @@ const Headline = styled('h2')({
   '@media (max-width: 600px)': {
     textAlign: 'center',
   },
-});
+})
 
 const Paragraph = styled('p')({
   paddingTop: 10,
@@ -71,29 +70,29 @@ const Paragraph = styled('p')({
     textAlign: 'center',
     paddingBottom: 30,
   },
-});
+})
 
 const GetStartedBtn = styled('div')({
   paddingTop: 50,
-});
+})
 
 const GetStartedBtnMobile = styled('div')({
   paddingTop: 30,
-});
+})
 
 const LinkTag = styled(AppLink)({
   padding: '15px 75px',
   '@media (max-width: 600px)': {
     width: '100%',
   },
-});
+})
 
 const Image = styled(Img)({
   width: 480,
   '@media (max-width: 959px)': {
     maxWidth: '100%',
   },
-});
+})
 
 const GetStarted: React.SFC<Props> = (props) => (
   <Section>
@@ -134,6 +133,6 @@ const GetStarted: React.SFC<Props> = (props) => (
       </HeadlineContainer>
     </Container>
   </Section>
-);
+)
 
-export { GetStarted };
+export { GetStarted }

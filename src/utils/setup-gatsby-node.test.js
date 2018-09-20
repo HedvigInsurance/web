@@ -5,7 +5,7 @@ const {
   flatMapTags,
   getUniqueTags,
   createTagPages,
-} = require('./setup-gatsby-node');
+} = require('./setup-gatsby-node')
 
 const getResultData = () => ({
   data: {
@@ -40,13 +40,13 @@ const getResultData = () => ({
       ],
     },
   },
-});
+})
 
 it('gets egdges', () => {
   expect(getEdges(getResultData())).toEqual(
     getResultData().data.allMarkdownRemark.edges,
-  );
-});
+  )
+})
 
 it('gets template params from node', () => {
   expect(
@@ -58,15 +58,15 @@ it('gets template params from node', () => {
     templateKey: 'a-tmpl',
     component: 'component',
     context: { id: 1, langKey: 'sv' },
-  });
-});
+  })
+})
 
 it('creates page templates', () => {
-  const createPageStub = jest.fn();
-  createPageTemplates(createPageStub)(getResultData());
-  expect(createPageStub).toHaveBeenCalledTimes(2);
+  const createPageStub = jest.fn()
+  createPageTemplates(createPageStub)(getResultData())
+  expect(createPageStub).toHaveBeenCalledTimes(2)
   // TODO improve assertions here
-});
+})
 
 it('flat maps tags', () => {
   expect(flatMapTags(getResultData().data.allMarkdownRemark.edges)).toEqual([
@@ -74,16 +74,16 @@ it('flat maps tags', () => {
     'tag b',
     'tag b',
     '#c',
-  ]);
-});
+  ])
+})
 
 it('gets unique tags', () => {
-  expect(getUniqueTags(getResultData())).toEqual(['tag-a', 'tag-b', 'c']);
-});
+  expect(getUniqueTags(getResultData())).toEqual(['tag-a', 'tag-b', 'c'])
+})
 
 it('creates tag pages', () => {
-  const createPage = jest.fn();
-  createTagPages(createPage)(getResultData());
-  expect(createPage).toHaveBeenCalledTimes(3);
+  const createPage = jest.fn()
+  createTagPages(createPage)(getResultData())
+  expect(createPage).toHaveBeenCalledTimes(3)
   // TODO better assertions
-});
+})

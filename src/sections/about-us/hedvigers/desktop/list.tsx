@@ -1,36 +1,36 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { colors, fonts } from '@hedviginsurance/brand';
+import { colors, fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
 
-import { TeamtailorUser } from '..';
+import { TeamtailorUser } from '..'
 
 interface ListProps {
-  users: TeamtailorUser[];
-  onSelect: (user: TeamtailorUser) => void;
-  selectedUser: TeamtailorUser;
-  title: string;
+  users: TeamtailorUser[]
+  onSelect: (user: TeamtailorUser) => void
+  selectedUser: TeamtailorUser
+  title: string
 }
 
 const Container = styled('div')({
   padding: 30,
   width: '50%',
-});
+})
 
 const Title = styled('h3')({
   fontSize: 40,
   fontFamily: fonts.SORAY,
   marginTop: 20,
   marginBottom: 30,
-});
+})
 
 const ListContainer = styled('ul')({
   display: 'flex',
   flexWrap: 'wrap',
   marginTop: 10,
-});
+})
 
 interface ListItemProps {
-  active: boolean;
+  active: boolean
 }
 
 const ListItem = styled('li')(
@@ -69,20 +69,20 @@ const ListItem = styled('li')(
       ? 'color 500ms, transform 350ms 150ms, background 350ms'
       : 'color 500ms, transform 150ms, background 350ms',
   }),
-);
+)
 
 const ListName = styled('span')({
   fontWeight: 800,
   fontSize: 16,
   lineHeight: '19px',
-});
+})
 
 const ListTitle = styled('span')({
   marginTop: 5,
   fontSize: 12,
   maxWidth: '90%',
   lineHeight: '17px',
-});
+})
 
 export const List: React.SFC<ListProps> = ({
   users,
@@ -105,4 +105,4 @@ export const List: React.SFC<ListProps> = ({
       ))}
     </ListContainer>
   </Container>
-);
+)

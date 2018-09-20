@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { AboutUsTemplate } from 'src/templates/about-page';
-import { CSSInjector } from '../css-injector';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { AboutUsTemplate } from 'src/templates/about-page'
+import { CSSInjector } from '../css-injector'
 
 const AboutPagePreview = ({ entry }) => (
   <CSSInjector>
@@ -21,12 +21,12 @@ const AboutPagePreview = ({ entry }) => (
       />
     </Provider>
   </CSSInjector>
-);
+)
 
 AboutPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }).isRequired,
-};
+}
 
-export default AboutPagePreview;
+export default AboutPagePreview

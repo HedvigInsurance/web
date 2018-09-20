@@ -1,39 +1,39 @@
-import * as React from 'react';
-import styled, { keyframes } from 'react-emotion';
-import { colors, fonts } from '@hedviginsurance/brand';
-import VisibilitySensor from 'react-visibility-sensor';
-import { LottieLoader } from 'src/components/LottieLoader';
-import { ReactComponent as LogoSvg } from 'assets/identity/hedvig-symbol-color.svg';
-import { Container } from 'constate';
+import { colors, fonts } from '@hedviginsurance/brand'
+import { ReactComponent as LogoSvg } from 'assets/identity/hedvig-symbol-color.svg'
+import { Container } from 'constate'
+import * as React from 'react'
+import styled, { keyframes } from 'react-emotion'
+import VisibilitySensor from 'react-visibility-sensor'
+import { LottieLoader } from 'src/components/LottieLoader'
 
-const typingAnimation = require('assets/animations/hedvig/hedvig-typing.json');
+import typingAnimation = require('assets/animations/hedvig/hedvig-typing.json')
 
 interface Props {
-  message1: string;
-  message2: string;
-  ctaLabel: string;
-  ctaTarget: string;
+  message1: string
+  message2: string
+  ctaLabel: string
+  ctaTarget: string
 }
 
 interface State {
-  hasMounted: boolean;
+  hasMounted: boolean
 }
 interface Actions {
-  mount: () => void;
+  mount: () => void
 }
 
 interface WithVisibility {
-  isVisible: boolean;
+  isVisible: boolean
 }
 
 const fadeIn = keyframes({
   from: { opacity: 0 },
   to: { opacity: 1 },
-});
+})
 const fadeOut = keyframes({
   from: { opacity: 1 },
   to: { opacity: 0 },
-});
+})
 const fadeSlideIn = keyframes({
   from: {
     opacity: 0,
@@ -43,7 +43,7 @@ const fadeSlideIn = keyframes({
     opacity: 1,
     transform: 'translateY(0%)',
   },
-});
+})
 
 const CareerBannerContainer = styled('div')({
   paddingTop: 30,
@@ -56,7 +56,7 @@ const CareerBannerContainer = styled('div')({
     paddingTop: 40,
     paddingBottom: 40,
   },
-});
+})
 
 const Row = styled('div')(
   ({ align = 'left' }: { align?: 'left' | 'right' }) => ({
@@ -71,7 +71,7 @@ const Row = styled('div')(
           }
         : {},
   }),
-);
+)
 
 const HedvigLogo = styled(LogoSvg)(
   ({
@@ -84,7 +84,7 @@ const HedvigLogo = styled(LogoSvg)(
     animation: isVisible ? `${fadeIn} 400ms forwards` : 'none',
     animationDelay: `${animationDelay}ms`,
   }),
-);
+)
 const TypingAnimation = styled('div')(
   ({ exitDelay, isVisible }: { exitDelay: number } & WithVisibility) => ({
     position: 'absolute',
@@ -92,7 +92,7 @@ const TypingAnimation = styled('div')(
     animation: isVisible ? `${fadeOut} 400ms forwards` : 'none',
     animationDelay: `${exitDelay}ms`,
   }),
-);
+)
 const HiddenContainer = styled(`div`)(
   ({
     animationDelay,
@@ -102,7 +102,7 @@ const HiddenContainer = styled(`div`)(
     animation: isVisible ? `${fadeIn} 400ms forwards` : 'none',
     animationDelay: `${animationDelay}ms`,
   }),
-);
+)
 const ChatMessage = styled('div')(
   ({
     animationDelay,
@@ -119,7 +119,7 @@ const ChatMessage = styled('div')(
     fontFamily: fonts.MERRIWEATHER,
     color: colors.BLACK_PURPLE,
   }),
-);
+)
 
 const Button = styled('a')(
   ({
@@ -146,11 +146,11 @@ const Button = styled('a')(
       animationDelay: `${animationDelay}ms`,
     },
   }),
-);
+)
 
 const actions = {
   mount: () => (_: State): Partial<State> => ({ hasMounted: true }),
-};
+}
 
 const CareerBanner: React.SFC<Props> = (props) => (
   <CareerBannerContainer>
@@ -162,7 +162,7 @@ const CareerBanner: React.SFC<Props> = (props) => (
         <VisibilitySensor
           onChange={(isVisible: boolean) => {
             if (isVisible) {
-              mount();
+              mount()
             }
           }}
         >
@@ -220,6 +220,6 @@ const CareerBanner: React.SFC<Props> = (props) => (
       )}
     </Container>
   </CareerBannerContainer>
-);
+)
 
-export { CareerBanner };
+export { CareerBanner }

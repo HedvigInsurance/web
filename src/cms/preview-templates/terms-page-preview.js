@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Provider } from 'constate';
-import { TermsTemplate } from 'src/templates/terms-page';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Provider } from 'constate'
+import { TermsTemplate } from 'src/templates/terms-page'
 
 const TermsPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
@@ -11,12 +11,12 @@ const TermsPagePreview = ({ entry }) => (
       sections={entry.getIn(['data', 'sections']).toJS()}
     />
   </Provider>
-);
+)
 
 TermsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }).isRequired,
-};
+}
 
-export default TermsPagePreview;
+export default TermsPagePreview

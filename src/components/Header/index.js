@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import classNames from 'classnames';
-import { Sticky } from 'react-sticky';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
+import classNames from 'classnames'
+import { Sticky } from 'react-sticky'
 
-import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg';
-import AppLink from 'src/components/AppLink';
+import { ReactComponent as Logo } from 'assets/identity/hedvig-wordmark-solid.svg'
+import AppLink from 'src/components/AppLink'
 
-import './Header.css';
-import { CTALinkContainer } from './cta-link-container';
+import './Header.css'
+import { CTALinkContainer } from './cta-link-container'
 
 const propTypes = {
   links: PropTypes.arrayOf(
@@ -20,77 +20,77 @@ const propTypes = {
     path: PropTypes.string.isRequired,
     altText: PropTypes.string.isRequired,
   }).isRequired,
-};
+}
 
 export const headerPropTypes = {
   se: PropTypes.shape(propTypes),
   en: PropTypes.shape(propTypes),
-};
+}
 
 class Header extends React.Component {
   static propTypes = {
     data: PropTypes.shape(headerPropTypes),
     langKey: PropTypes.string.isRequired,
-  };
+  }
 
-  static defaultProps = { data: {} };
+  static defaultProps = { data: {} }
 
-  state = { popoverIsActive: false };
+  state = { popoverIsActive: false }
 
   componentWillUnmount() {
-    this.dismiss();
+    this.dismiss()
   }
 
   documentOnClickHandler = (event) => {
-    const { popoverIsActive } = this.state;
-    const clickedOutside = !this.popoverElem.contains(event.target);
+    const { popoverIsActive } = this.state
+    const clickedOutside = !this.popoverElem.contains(event.target)
 
     if (popoverIsActive && clickedOutside) {
-      this.dismiss();
+      this.dismiss()
     }
-  };
+  }
 
   togglePopover = (event) => {
-    event.stopPropagation();
-    const { popoverIsActive } = this.state;
+    event.stopPropagation()
+    const { popoverIsActive } = this.state
     if (!popoverIsActive) {
-      this.show();
+      this.show()
     } else {
-      this.dismiss();
+      this.dismiss()
     }
-  };
+  }
 
   dismiss() {
-    this.setState({ popoverIsActive: false });
-    document.removeEventListener('click', this.documentOnClickHandler, false);
+    this.setState({ popoverIsActive: false })
+    document.removeEventListener('click', this.documentOnClickHandler, false)
   }
 
   show() {
-    this.setState({ popoverIsActive: true });
-    document.addEventListener('click', this.documentOnClickHandler, false);
+    this.setState({ popoverIsActive: true })
+    document.addEventListener('click', this.documentOnClickHandler, false)
   }
 
   render() {
-    const { data, langKey } = this.props;
+    const { data, langKey } = this.props
 
-    const dataForLanguage = data[langKey || 'se'];
+    const dataForLanguage = data[langKey || 'se']
 
-    if (!dataForLanguage) return null;
+    if (!dataForLanguage) return null
 
-    const { links, ctaTextDesktop, ctaTextMobile, logoLink } = dataForLanguage;
-    const { popoverIsActive } = this.state;
+    const { links, ctaTextDesktop, ctaTextMobile, logoLink } = dataForLanguage
+    const { popoverIsActive } = this.state
 
     const burgerClassNames = classNames({
       'Header-burger': true,
       'u-lg-hidden': true,
       'is-active': popoverIsActive,
-    });
+    })
 
     const popoverClassNames = classNames({
       'Header-popover': true,
       'u-lg-hidden': true,
       'is-active': popoverIsActive,
-    });
+    })
 
     return (
       <Sticky>
@@ -132,7 +132,7 @@ class Header extends React.Component {
               <div
                 className={popoverClassNames}
                 ref={(popoverElem) => {
-                  this.popoverElem = popoverElem;
+                  this.popoverElem = popoverElem
                 }}
               >
                 <div className="Popover-content">
@@ -162,7 +162,7 @@ class Header extends React.Component {
           </header>
         )}
       </Sticky>
-    );
+    )
   }
 }
 
@@ -194,6 +194,6 @@ export const headerQuery = graphql`
       }
     }
   }
-`;
+`
 
-export default Header;
+export default Header

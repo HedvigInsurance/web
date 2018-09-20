@@ -5,8 +5,8 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         filename: '[name].js',
         chunkFilename: '[name].js',
       },
-    });
+    })
   }
 
-  return config;
-};
+  return config
+}

@@ -1,26 +1,26 @@
-import * as React from 'react';
-import styled from 'react-emotion';
-import { fonts } from '@hedviginsurance/brand';
+import { fonts } from '@hedviginsurance/brand'
+import * as React from 'react'
+import styled from 'react-emotion'
 
 interface Investor {
-  image: string;
-  name: string;
-  type: string;
+  image: string
+  name: string
+  type: string
 }
 
 interface InverstorsProps {
-  title: string;
-  list: Investor[];
+  title: string
+  list: Investor[]
 }
 
-const MEDIA_QUERY = '@media (max-width: 650px)';
+const MEDIA_QUERY = '@media (max-width: 650px)'
 
 const InvestorsContainer = styled('div')({
   width: '80%',
   padding: '70px 0',
   maxWidth: '700px',
   margin: '0 auto',
-});
+})
 
 const Title = styled('h3')({
   fontSize: 60,
@@ -32,7 +32,7 @@ const Title = styled('h3')({
     fontSize: 45,
     lineHeight: '50px',
   },
-});
+})
 
 const InvestorList = styled('div')({
   display: 'flex',
@@ -41,7 +41,7 @@ const InvestorList = styled('div')({
   [MEDIA_QUERY]: {
     flexDirection: 'column',
   },
-});
+})
 
 const InvestorContainer = styled('div')({
   display: 'flex',
@@ -50,27 +50,27 @@ const InvestorContainer = styled('div')({
   [MEDIA_QUERY]: {
     marginBottom: 30,
   },
-});
+})
 
 const InvestorImage = styled('img')({
   width: '75px',
   height: '75px',
   objectFit: 'cover',
   borderRadius: 5,
-});
+})
 
 const InvestorName = styled('span')({
   fontFamily: fonts.SORAY,
   fontSize: 18,
   lineHeight: '19px',
   marginTop: 15,
-});
+})
 
 const InvestorType = styled('span')({
   fontSize: 15,
   lineHeight: '16px',
   marginTop: 5,
-});
+})
 
 export const Investors: React.SFC<InverstorsProps> = ({ title, list }) => (
   <InvestorsContainer>
@@ -85,4 +85,4 @@ export const Investors: React.SFC<InverstorsProps> = ({ title, list }) => (
       ))}
     </InvestorList>
   </InvestorsContainer>
-);
+)
