@@ -184,5 +184,12 @@ questions:
       Detta gäller dock inte om det är så att du uppsåtligen orsakat skada eller
       begått brott.
     question: Vilket juridiskt skydd har jag?
+  - answer: >-
+      Hedvig ersätter upp till 100 timmars arbete för ditt ombud, kostnader för
+      utredning före rättegång, bevisning i rättegång, rättegångskostnader som
+      du måste betala till din motpart. Hedvig ersätter inte förlorad inkomst
+      eller höjda levnadskostnader, kostnader till skiljemän eller kostnader för
+      verkställighet av dom eller avtal.
+    question: Vilka kostnader ersätts i samband med rättegång?
 ---
 
