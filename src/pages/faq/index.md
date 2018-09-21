@@ -169,5 +169,10 @@ questions:
     question: Finns det någon barnförsäkring hos er?
   - answer: 45 dagar.
     question: Hur lång resa täcker försäkringen?
+  - answer: >-
+      Reseförsäkringen täcker sjukdom, tandbesvär och olycka på resa, försenat
+      bagage, eventuell evakuering på grund av oroligheter samt om du behöver
+      avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
+    question: Vad täcker reseförsäkringen?
 ---
 
