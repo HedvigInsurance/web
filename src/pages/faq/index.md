@@ -126,5 +126,7 @@ questions:
       försäkring, se bara till att meddela oss om namn och personnummer här i
       chatten
     question: Ingår min sambo?
+  - answer: 'Nej, jag försäkrar inte djur.'
+    question: Täcker min försäkring djur?
 ---
 
