@@ -12,6 +12,7 @@ import { addIndex, filter, map, pathSatisfies, pipe, reverse } from 'ramda';
 import { getBlogPostPropsFromEdge, sortBlogPosts } from '../utils/blog-posts';
 import { notNullable } from '../utils/nullables';
 import { kebabCaseTag } from '../utils/blog-tags';
+import { Breadcrumb, Breadcrumbs } from '../components/Breadcrumbs';
 
 const getBlogPosts = (posterEdges, postEdges, tag) =>
   pipe(
@@ -76,6 +77,11 @@ const TagTemplate = ({ data, pathContext }) => {
       <StickyContainer>
         <Header data={header} langKey="se" />
         <BlogContainer verticalMargin>
+          <Breadcrumbs>
+            <Breadcrumb to="/blog">Blogg</Breadcrumb>
+            <Breadcrumb>Taggar</Breadcrumb>
+            <Breadcrumb>{tag}</Breadcrumb>
+          </Breadcrumbs>
           <TagTemplateTitle>Inlägg taggade med: {tag}</TagTemplateTitle>
           <Spacing height={20} />
           {getBlogPosts(posters.edges, posts.edges, tag)}
