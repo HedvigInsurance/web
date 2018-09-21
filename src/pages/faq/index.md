@@ -178,5 +178,11 @@ questions:
       Ja, du kan göra det inom de första 45 dagarna då du påbörjat din resa.
       Viktigt är bara att du är frisk när du gör det.
     question: Kan jag förlänga min reseförsäkring?
+  - answer: >-
+      Hedvig betalar om någon kräver dig på skadestånd för person- eller
+      sakskada, och står också för rättegångskostnader om det skulle behövas.
+      Detta gäller dock inte om det är så att du uppsåtligen orsakat skada eller
+      begått brott.
+    question: Vilket juridiskt skydd har jag?
 ---
 
