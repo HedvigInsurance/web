@@ -174,5 +174,9 @@ questions:
       bagage, eventuell evakuering på grund av oroligheter samt om du behöver
       avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
     question: Vad täcker reseförsäkringen?
+  - answer: >-
+      Ja, du kan göra det inom de första 45 dagarna då du påbörjat din resa.
+      Viktigt är bara att du är frisk när du gör det.
+    question: Kan jag förlänga min reseförsäkring?
 ---
 
