@@ -302,10 +302,6 @@ LandingTemplate.propTypes = {
     paragraph: PropTypes.string.isRequired,
     buttontext: PropTypes.string.isRequired,
   }).isRequired,
-  mediaLogos: PropTypes.shape({
-    image: PropTypes.objectOf(PropTypes.object).isRequired,
-    size: PropTypes.number.isRequired,
-  }).isRequired,
   customerSources: PropTypes.shape({
     headline: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
