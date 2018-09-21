@@ -117,5 +117,9 @@ questions:
     question: Täcks min motorcykel?
   - answer: Allt som räknas till motorfordon ingår inte i vår försäkring.
     question: Täcks motorfordon?
+  - answer: >-
+      Ja, cyklar ingår i hemförsäkringen (upp till 15 000). Om den är värd mer
+      än 15 000 ordnar jag det!
+    question: Täcks min cykel?
 ---
 
