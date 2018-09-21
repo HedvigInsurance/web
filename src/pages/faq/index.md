@@ -134,5 +134,14 @@ questions:
     question: Gäller försäkringen om jag behöver fjällräddning men inte är skadad?
   - answer: Självrisken är alltid 1500 kr.
     question: Vad är självrisken?
+  - answer: >-
+      Förutom att du får hjälp på nolltid om något händer har vi riktigt
+      schyssta villkor. Vår drulle som alltid ingår täcker alla dina prylar upp
+      till 50 000 per pryl (vanlig försäkring täcker totalt 50 000 för alla
+      prylar), vi ger bättre ersättning för de flesta techgrejer och har tagit
+      bort en hel del besvärliga specialbestämmelser som försäkringsbolag brukar
+      använda för att begränsa ersättning. Vill du veta mer, skriv till oss i
+      chatten :)
+    question: Hur fungerar drulleförsäkringen?
 ---
 
