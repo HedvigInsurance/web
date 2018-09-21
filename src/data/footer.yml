@@ -60,7 +60,7 @@ en:
       path: /en/contact
     - external: true
       label: Press
-      path: /about-us
+      path: /en/about-us
   linkSection2:
     - external: false
       label: Personal information
