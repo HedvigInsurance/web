@@ -1,7 +1,4 @@
 import * as React from 'react';
-import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
-import { fonts } from '@hedviginsurance/brand';
 import Img from 'gatsby-image';
 
 interface Props {
