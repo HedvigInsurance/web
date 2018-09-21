@@ -121,5 +121,10 @@ questions:
       Ja, cyklar ingår i hemförsäkringen (upp till 15 000). Om den är värd mer
       än 15 000 ordnar jag det!
     question: Täcks min cykel?
+  - answer: >-
+      Om din sambo är folkbokförd på samma adress så täcks hen också av din
+      försäkring, se bara till att meddela oss om namn och personnummer här i
+      chatten
+    question: Ingår min sambo?
 ---
 
