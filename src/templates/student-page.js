@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
-import { StudentHeart } from 'src/sections/student-heart';
+import { StudentHeart } from 'src/sections/student/student-heart';
 
 import './Home.css';
 import './Student.css';
