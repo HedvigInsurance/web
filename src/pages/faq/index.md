@@ -148,5 +148,9 @@ questions:
       personer som du bor tillsammans med och vars namn du anger på
       försäkringsbrevet
     question: Vem gäller försäkringen för?
+  - answer: >-
+      När du flyttar gäller din gamla och din nya bostad i en månad från
+      flyttdatumet.
+    question: Vad händer om jag flyttar?
 ---
 
