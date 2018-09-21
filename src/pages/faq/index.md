@@ -128,5 +128,9 @@ questions:
     question: Ingår min sambo?
   - answer: 'Nej, jag försäkrar inte djur.'
     question: Täcker min försäkring djur?
+  - answer: >-
+      Nej, fjällräddning med helikopter eller liknande täcks endast om du varit
+      med om en olycka och är skadad
+    question: Gäller försäkringen om jag behöver fjällräddning men inte är skadad?
 ---
 
