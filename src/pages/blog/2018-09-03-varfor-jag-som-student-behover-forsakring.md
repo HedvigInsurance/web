@@ -29,7 +29,7 @@ content: >-
   Mitt i allt detta är inte försäkringar precis prio ett. Och det är lugnt – vi
   fattar att du har annat att tänka på. Det är precis det som Hedvig går ut på.
   Oavsett var du till slut hamnade så kan tillvaron vara hektisk som nybliven
-  student. Det är fester du inte vill miss, nya vänner att lära känna och
+  student. Det är fester du inte vill missa, nya vänner att lära känna och
   föreläsningar att gå på. Mitt i allt detta är inte försäkringar precis prio
   ett. Och det är lugnt – vi fattar att du har annat att tänka på. Det är precis
   det som Hedvig går ut på. Vi finns här för dig så att du inte måste tänka på

@@ -1077,11 +1077,8 @@ collections:
               - label: Subheading
                 name: subheading
                 widget: string
-              - label: CTA 1 text
-                name: cta_text1
-                widget: string
-              - label: CTA 2 text
-                name: cta_text2
+              - label: CTA text
+                name: cta_text
                 widget: string
               - label: paragraph
                 name: paragraph
