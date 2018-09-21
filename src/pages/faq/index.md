@@ -156,5 +156,10 @@ questions:
       Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
       resa.
     question: Ingår olycksfall i min försäkring?
+  - answer: >-
+      Hedvig täcker alla ytskikten i lägenheten ink sådant som ägaren enligt lag
+      eller stadgar är skyldig att underhålla (till exempel skador som är
+      orsakade av brand eller vattenläcka).
+    question: Vad täcker bostadsrättstillägget?
 ---
 
