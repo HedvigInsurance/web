@@ -167,5 +167,7 @@ questions:
       skyddade mot misshandel, överfall och andra obehagliga händelser. Om ni
       åker på resa är hela familjen skyddad mot olycksfall och sjukdom.
     question: Finns det någon barnförsäkring hos er?
+  - answer: 45 dagar.
+    question: Hur lång resa täcker försäkringen?
 ---
 
