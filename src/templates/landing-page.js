@@ -246,10 +246,7 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <MediaLogos
-              image={mediaLogosFile}
-              sizes={mediaLogosFile.image.sizes}
-            />
+            <MediaLogos image={mediaLogosFile} />
           </StickyContainer>
         </section>
 
