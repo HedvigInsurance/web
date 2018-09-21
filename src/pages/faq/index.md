@@ -191,5 +191,9 @@ questions:
       eller höjda levnadskostnader, kostnader till skiljemän eller kostnader för
       verkställighet av dom eller avtal.
     question: Vilka kostnader ersätts i samband med rättegång?
+  - answer: >-
+      Ja, Hedvig ersätter hushållsmaskiner eller andra elektriska maskiner som
+      går sönder pga kortslutning, överspänning eller överslag
+    question: Får jag ersättning om mina vitvaror går sönder?
 ---
 
