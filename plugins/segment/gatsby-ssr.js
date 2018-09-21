@@ -1,5 +1,5 @@
 import React from 'react';
-import { max as createSnippet } from '@segment/snippet';
+import { min as createSnippet } from '@segment/snippet';
 
 export const onRenderBody = ({ setPostBodyComponents }, { writeKey }) => {
   // host: the domain name where the analytics.js script is hosted.
