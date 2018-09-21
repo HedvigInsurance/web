@@ -15,6 +15,7 @@ import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
+import { MediaLogos } from 'src/sections/landing/media-logos';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -245,17 +246,10 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <div>
-              <div className="Container">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            <MediaLogos
+              image={mediaLogosFile}
+              sizes={mediaLogosFile.image.sizes}
+            />
           </StickyContainer>
         </section>
 
@@ -307,6 +301,10 @@ LandingTemplate.propTypes = {
     heading2: PropTypes.string.isRequired,
     paragraph: PropTypes.string.isRequired,
     buttontext: PropTypes.string.isRequired,
+  }).isRequired,
+  mediaLogos: PropTypes.shape({
+    image: PropTypes.objectOf(PropTypes.object).isRequired,
+    size: PropTypes.number.isRequired,
   }).isRequired,
   customerSources: PropTypes.shape({
     headline: PropTypes.string.isRequired,
