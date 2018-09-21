@@ -115,5 +115,7 @@ questions:
     question: Vad händer om jag blir sjuk på resa?
   - answer: 'Nej, det gör den inte.'
     question: Täcks min motorcykel?
+  - answer: Allt som räknas till motorfordon ingår inte i vår försäkring.
+    question: Täcks motorfordon?
 ---
 
