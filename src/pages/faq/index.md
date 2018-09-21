@@ -152,5 +152,9 @@ questions:
       När du flyttar gäller din gamla och din nya bostad i en månad från
       flyttdatumet.
     question: Vad händer om jag flyttar?
+  - answer: >-
+      Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
+      resa.
+    question: Ingår olycksfall i min försäkring?
 ---
 
