@@ -143,5 +143,10 @@ questions:
       använda för att begränsa ersättning. Vill du veta mer, skriv till oss i
       chatten :)
     question: Hur fungerar drulleförsäkringen?
+  - answer: >-
+      Dig som försäkringstagare, de som är folkbokförda på samma adress eller
+      personer som du bor tillsammans med och vars namn du anger på
+      försäkringsbrevet
+    question: Vem gäller försäkringen för?
 ---
 
