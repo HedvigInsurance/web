@@ -161,5 +161,11 @@ questions:
       eller stadgar är skyldig att underhålla (till exempel skador som är
       orsakade av brand eller vattenläcka).
     question: Vad täcker bostadsrättstillägget?
+  - answer: >-
+      Nej tyvärr! Vi har ingen barnförsäkring än utan säljer bara hemförsäkring.
+      Dina barns saker är dock skyddade genom din hemförsäkring och dom är även
+      skyddade mot misshandel, överfall och andra obehagliga händelser. Om ni
+      åker på resa är hela familjen skyddad mot olycksfall och sjukdom.
+    question: Finns det någon barnförsäkring hos er?
 ---
 
