@@ -132,5 +132,7 @@ questions:
       Nej, fjällräddning med helikopter eller liknande täcks endast om du varit
       med om en olycka och är skadad
     question: Gäller försäkringen om jag behöver fjällräddning men inte är skadad?
+  - answer: Självrisken är alltid 1500 kr.
+    question: Vad är självrisken?
 ---
 
