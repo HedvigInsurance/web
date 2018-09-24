@@ -28,10 +28,10 @@ class AppLink extends React.Component {
   };
 
   static defaultProps = {
-    channel: 'hedvig',
-    campaign: null,
+    channel: 'organic',
+    campaign: 'direct',
     tags: null,
-    feature: 'organic',
+    feature: null,
     stage: null,
     keywords: null,
   };
