@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import styled from 'react-emotion';
 
 interface Props {
-  image: {
+  image?: {
     image: {
       sizes: {
         apsectRatio: number;
