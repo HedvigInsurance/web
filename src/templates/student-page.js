@@ -18,6 +18,7 @@ import PaidRightAway from 'src/components/Animations/PaidRightAway';
 import ChatDemo from 'src/components/Animations/ChatDemo';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
+import { MediaLogos } from 'src/sections/landing/media-logos';
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -169,17 +170,7 @@ class StudentTemplate extends React.Component {
             </div>
 
             {/* Media logos on desktop */}
-            <div>
-              <div className="Container u-hidden u-lg-block">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media" // TODO: use emotion and remove css when extracted to section
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            <MediaLogos image={mediaLogosFile} />
 
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
