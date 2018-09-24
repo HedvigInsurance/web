@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LottieLoader } from 'src/components/LottieLoader';
+import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
-import Img from 'gatsby-image';
+
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
@@ -48,10 +49,6 @@ class LandingTemplate extends React.Component {
       this.insuranceInMinutesAnim.stop();
       this.paidRightAwayAnimation.stop();
     }
-  };
-
-  registerPerilForestClick = () => {
-    trackEvent('Peril forest clicked');
   };
 
   registerCustomerSourceClick = () => {

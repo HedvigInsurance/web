@@ -89,7 +89,6 @@ const PerilForest: React.SFC<Props> = (props) => (
       <Header>{props.heading}</Header>
 
       <Fig // eslint-disable-line
-      //onClick={this.registerPerilForestClick}
       >
         {props.perilForestMobileFile && (
           <ImageMobile sizes={props.perilForestMobileFile.image.sizes} alt="" />
