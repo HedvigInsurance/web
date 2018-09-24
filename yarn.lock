@@ -12278,9 +12278,9 @@ react-split-pane@^0.1.66:
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
 
-react-spring@^5.6.12:
-  version "5.6.12"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.12.tgz#31873761f9d37fdbdb13fb87cfbe73e2be975798"
+react-spring@^5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.8.0.tgz#52d8206487692b99c223377c252acea645d77307"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
