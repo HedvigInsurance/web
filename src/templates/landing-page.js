@@ -20,6 +20,7 @@ import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
 import { CareerBanner } from '../sections/landing/career-banner';
 import { CustomerSources } from '../sections/landing/customer-sources';
+import { ThreeExplainers } from '../sections/landing/three-explainers';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -137,6 +138,7 @@ class LandingTemplate extends React.Component {
             <CareerBanner {...careerBanner} />
 
             {/* Three explainers */}
+            <ThreeExplainers />
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePV2">
                 <h2 className="u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
