@@ -6,7 +6,7 @@ interface Props {
   image: {
     image: {
       sizes: {
-        apsectRatio: string;
+        apsectRatio: number;
         sizes: string;
         src: string;
         srcSet: string;
