@@ -4,7 +4,7 @@ import { LottieLoader } from 'src/components/LottieLoader';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
-
+import Img from 'gatsby-image';
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
 import AppLink from 'src/components/AppLink';
@@ -14,7 +14,6 @@ import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
-import { MediaLogos } from 'src/sections/landing/media-logos';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -223,7 +222,17 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <MediaLogos image={mediaLogosFile} />
+            <div>
+              <div className="Container">
+                {mediaLogosFile && (
+                  <Img
+                    className="Home-media"
+                    sizes={mediaLogosFile.image.sizes}
+                    alt=""
+                  />
+                )}
+              </div>
+            </div>
           </StickyContainer>
         </section>
 

@@ -173,7 +173,7 @@ class StudentTemplate extends React.Component {
               <div className="Container u-hidden u-lg-block">
                 {mediaLogosFile && (
                   <Img
-                    className="Home-media" // TODO: use emotion and remove css when extracted to section
+                    className="Home-media"
                     sizes={mediaLogosFile.image.sizes}
                     alt=""
                   />
