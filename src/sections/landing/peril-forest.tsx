@@ -83,13 +83,16 @@ const Container = styled('div')({
   paddingBottom: '75px',
 });
 
+const BackgroundWrapper = styled('div')({
+  backgroundColor: colors.DARK_PURPLE,
+});
+
 const PerilForest: React.SFC<Props> = (props) => (
-  <div className="u-backgroundPrimaryDarkestPurple">
+  <BackgroundWrapper>
     <Container>
       <Header>{props.heading}</Header>
 
-      <Fig // eslint-disable-line
-      >
+      <Fig>
         {props.perilForestMobileFile && (
           <ImageMobile sizes={props.perilForestMobileFile.image.sizes} alt="" />
         )}
@@ -103,7 +106,7 @@ const PerilForest: React.SFC<Props> = (props) => (
 
       <Paragraph>{props.bottom_paragraph}</Paragraph>
     </Container>
-  </div>
+  </BackgroundWrapper>
 );
 
 export { PerilForest };
