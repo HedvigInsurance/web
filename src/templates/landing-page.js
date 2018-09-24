@@ -138,7 +138,8 @@ class LandingTemplate extends React.Component {
             <CareerBanner {...careerBanner} />
 
             {/* Three explainers */}
-            <ThreeExplainers />
+            <ThreeExplainers {...threeExplainers} />
+
             <div className="u-backgroundSecondaryGrey">
               <div className="Container u-spacePV2">
                 <h2 className="u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
