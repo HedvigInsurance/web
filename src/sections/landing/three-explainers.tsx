@@ -1,8 +1,9 @@
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
-import PaidRightAway from '../components/Animations/PaidRightAway';
-import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
+
+import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
+import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes';
+import PaidRightAway from 'src/components/Animations/PaidRightAway';
 
 interface Props {
   heading: string;
@@ -21,6 +22,8 @@ interface Props {
     };
   };
 }
+
+const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
