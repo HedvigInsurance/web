@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LottieLoader } from 'src/components/LottieLoader';
-import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
@@ -21,6 +20,7 @@ import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
 import { CareerBanner } from '../sections/landing/career-banner';
 import { CustomerSources } from '../sections/landing/customer-sources';
+import { PerilForest } from '../sections/landing/peril-forest';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -208,36 +208,13 @@ class LandingTemplate extends React.Component {
             </div>
 
             {/* Peril forest */}
-            <div className="u-backgroundPrimaryDarkestPurple">
-              <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {perilForest.heading}
-                </h2>
-                <figure // eslint-disable-line
-                  className="u-spaceMV6"
-                  onClick={this.registerPerilForestClick}
-                >
-                  {perilForestMobileFile && (
-                    <Img
-                      className="Home-perilForest-image-mobile u-lg-hidden"
-                      sizes={perilForestMobileFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                  {perilForestDesktopFile && (
-                    <Img
-                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
-                      sizes={perilForestDesktopFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                </figure>
-                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {perilForest.bottom_paragraph}
-                </p>
-              </div>
-            </div>
+            <PerilForest
+              {...perilForest}
+              perilForestDesktopFile={perilForestDesktopFile}
+              perilForestMobileFile={perilForestMobileFile}
+            />
 
+            {/* Customer sources */}
             <CustomerSources
               headline={customerSources.headline}
               paragraph={customerSources.paragraph}
