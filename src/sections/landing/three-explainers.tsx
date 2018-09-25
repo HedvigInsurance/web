@@ -30,7 +30,10 @@ const BackgroundWrapper = styled('div')({
   backgroundColor: colors.OFF_WHITE,
 });
 
-const container = styled('div')({});
+const Container = styled('div')({
+  paddingBottom: '125px',
+  paddingTop: '125px',
+});
 
 const Header = styled('h2')({
   textAlign: 'center',
@@ -52,16 +55,7 @@ const Row = styled('div')({
   },
 });
 
-{
-  /*style={{width: this.getWidth()}}
-getWidth = () =>
-  `calc(${(100 * 1 / 3)}%)`;
-*/
-}
 const Col = styled('div')({
-  '@media (max-width: 960px)': {
-    width: '100%',
-  },
   '@media (min-width: 960px)': {
     flexBasis: 'auto',
   },
@@ -111,6 +105,9 @@ class ThreeExplainers extends React.Component<Props> {
     }
   };
 
+  /* Not used atm */
+  getWidth = () => `calc(${(100 * 1) / 3}%)`;
+
   constructor(props: Props) {
     super(props);
   }
@@ -118,14 +115,15 @@ class ThreeExplainers extends React.Component<Props> {
   render() {
     return (
       <BackgroundWrapper>
-        <div className="Container u-spacePV2">
+        <Container className="Container">
           <Header>{this.props.heading}</Header>
           <VisibilitySensor
             partialVisibility
             onChange={this.threeExplainersVisbilityChanged}
           >
             <Row>
-              <div className="u-lg-size1of3">
+              <Col>
+                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <InsuranceInMinutes
                   ref={(anim: any) => {
                     this.insuranceInMinutesAnim = anim;
@@ -135,12 +133,13 @@ class ThreeExplainers extends React.Component<Props> {
                 <ColHeader>
                   {this.props.three_explainers.insurance_in_minutes.title}
                 </ColHeader>
-                <ColParagraph className=" u-lg-fontSize85">
+                <ColParagraph>
                   {this.props.three_explainers.insurance_in_minutes.paragraph}
                 </ColParagraph>
-              </div>
+              </Col>
 
-              <div className="u-lg-size1of3">
+              <Col>
+                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <ClaimOnPhone
                   ref={(anim: any) => {
                     this.claimOnPhoneAnimation = anim;
@@ -153,9 +152,10 @@ class ThreeExplainers extends React.Component<Props> {
                 <ColParagraph>
                   {this.props.three_explainers.claim_on_phone.paragraph}
                 </ColParagraph>
-              </div>
+              </Col>
 
-              <div className="u-lg-size1of3">
+              <Col>
+                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <PaidRightAway
                   ref={(anim: any) => {
                     this.paidRightAwayAnimation = anim;
@@ -168,10 +168,10 @@ class ThreeExplainers extends React.Component<Props> {
                 <ColParagraph>
                   {this.props.three_explainers.paid_right_away.paragraph}
                 </ColParagraph>
-              </div>
+              </Col>
             </Row>
           </VisibilitySensor>
-        </div>
+        </Container>
       </BackgroundWrapper>
     );
   }
