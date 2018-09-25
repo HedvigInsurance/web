@@ -14,6 +14,7 @@ import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
+import MediaQuery from 'react-responsive';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -57,7 +58,8 @@ class LandingTemplate extends React.Component {
 
   render() {
     const {
-      mediaLogosFile,
+      mediaLogosDesktopFile,
+      mediaLogosMobileFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       title,
@@ -219,7 +221,12 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <MediaLogos image={mediaLogosFile} />
+            <MediaQuery query="(max-width: 959px)">
+              <MediaLogos image={mediaLogosMobileFile} />
+            </MediaQuery>
+            <MediaQuery query="(min-width: 960px)">
+              <MediaLogos image={mediaLogosDesktopFile} />
+            </MediaQuery>
           </StickyContainer>
         </section>
 
@@ -230,7 +237,8 @@ class LandingTemplate extends React.Component {
 }
 
 LandingTemplate.propTypes = {
-  mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
@@ -286,7 +294,8 @@ const Landing = ({ data, pathContext }) => {
   return (
     <LandingTemplate
       chatDemoBgFile={data.chatDemoBgFile}
-      mediaLogosFile={data.mediaLogosFile}
+      mediaLogosDesktopFile={data.mediaLogosDesktopFile}
+      mediaLogosMobileFile={data.mediaLogosMobileFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       getStartedImage={data.getStartedImage}
@@ -315,7 +324,18 @@ export default Landing;
 
 export const query = graphql`
   query LandingPage($id: String!) {
-    mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
+    mediaLogosDesktopFile: file(
+      relativePath: { eq: "home/media-logos_desktop@2x.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 759) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    mediaLogosMobileFile: file(
+      relativePath: { eq: "home/media-logos_mobile@2x.png" }
+    ) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
           ...GatsbyImageSharpSizes_noBase64

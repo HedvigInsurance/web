@@ -19,6 +19,7 @@ import ChatDemo from 'src/components/Animations/ChatDemo';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { MediaLogos } from 'src/sections/landing/media-logos';
+import MediaQuery from 'react-responsive';
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -83,7 +84,8 @@ class StudentTemplate extends React.Component {
 
   render() {
     const {
-      mediaLogosFile,
+      mediaLogosDesktopFile,
+      mediaLogosMobileFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       heartFile,
@@ -170,7 +172,12 @@ class StudentTemplate extends React.Component {
             </div>
 
             {/* Media logos on desktop before, now always, consistent with the landing page */}
-            <MediaLogos image={mediaLogosFile} />
+            <MediaQuery query="(max-width: 959px)">
+              <MediaLogos image={mediaLogosMobileFile} />
+            </MediaQuery>
+            <MediaQuery query="(min-width: 960px)">
+              <MediaLogos image={mediaLogosDesktopFile} />
+            </MediaQuery>
 
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
@@ -315,7 +322,8 @@ class StudentTemplate extends React.Component {
 }
 
 StudentTemplate.propTypes = {
-  mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   heartFile: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -360,7 +368,8 @@ const Student = ({ data, pathContext }) => {
   return (
     <StudentTemplate
       chatDemoBgFile={data.chatDemoBgFile}
-      mediaLogosFile={data.mediaLogosFile}
+      mediaLogosDesktopFile={data.mediaLogosDesktopFile}
+      mediaLogosMobileFile={data.mediaLogosMobileFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       heartFile={data.heartFile}
@@ -388,7 +397,18 @@ export default Student;
 
 export const query = graphql`
   query StudentPage($id: String!) {
-    mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
+    mediaLogosDesktopFile: file(
+      relativePath: { eq: "home/media-logos_desktop@2x.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 759) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    mediaLogosMobileFile: file(
+      relativePath: { eq: "home/media-logos_mobile@2x.png" }
+    ) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
           ...GatsbyImageSharpSizes_noBase64
