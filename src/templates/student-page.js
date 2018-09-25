@@ -18,6 +18,8 @@ import PaidRightAway from 'src/components/Animations/PaidRightAway';
 import ChatDemo from 'src/components/Animations/ChatDemo';
 import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
+import { MediaLogos } from 'src/sections/landing/media-logos';
+import MediaQuery from 'react-responsive';
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -82,7 +84,7 @@ class StudentTemplate extends React.Component {
 
   render() {
     const {
-      mediaLogosFile,
+      mediaLogosDesktopFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       heartFile,
@@ -168,18 +170,10 @@ class StudentTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop */}
-            <div>
-              <div className="Container u-hidden u-lg-block">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            {/* Media logos on desktop before */}
+            <MediaQuery query="(min-width: 960px)">
+              <MediaLogos image={mediaLogosDesktopFile} />
+            </MediaQuery>
 
             {/* Three explainers */}
             <div className="u-backgroundSecondaryGrey">
@@ -324,7 +318,7 @@ class StudentTemplate extends React.Component {
 }
 
 StudentTemplate.propTypes = {
-  mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   heartFile: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -369,7 +363,7 @@ const Student = ({ data, pathContext }) => {
   return (
     <StudentTemplate
       chatDemoBgFile={data.chatDemoBgFile}
-      mediaLogosFile={data.mediaLogosFile}
+      mediaLogosDesktopFile={data.mediaLogosDesktopFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       heartFile={data.heartFile}
@@ -397,7 +391,9 @@ export default Student;
 
 export const query = graphql`
   query StudentPage($id: String!) {
-    mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
+    mediaLogosDesktopFile: file(
+      relativePath: { eq: "home/media-logos_desktop@2x.png" }
+    ) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
           ...GatsbyImageSharpSizes_noBase64
