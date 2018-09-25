@@ -3,6 +3,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes';
 import PaidRightAway from 'src/components/Animations/PaidRightAway';
+import styled from 'react-emotion';
+import { colors, fonts } from '@hedviginsurance/brand';
 
 interface Props {
   heading: string;
@@ -23,6 +25,72 @@ interface Props {
 }
 
 const THREE_EXPLAINER_WIDTH_HEIGHT: number = 210;
+
+const BackgroundWrapper = styled('div')({
+  backgroundColor: colors.OFF_WHITE,
+});
+
+const container = styled('div')({});
+
+const Header = styled('h2')({
+  textAlign: 'center',
+  fontSize: '36px',
+  lineHeight: '50px',
+  fontFamily: fonts.SORAY,
+  '@media (min-width: 640px)': {
+    fontSize: '60px',
+    lineHeight: '66px',
+  },
+});
+
+const Row = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  textAlign: 'center',
+  '@media (min-width: 960px)': {
+    flexDirection: 'row',
+  },
+});
+
+{
+  /*style={{width: this.getWidth()}}
+getWidth = () =>
+  `calc(${(100 * 1 / 3)}%)`;
+*/
+}
+const Col = styled('div')({
+  '@media (max-width: 960px)': {
+    width: '100%',
+  },
+  '@media (min-width: 960px)': {
+    flexBasis: 'auto',
+  },
+});
+
+const ColHeader = styled('h4')({
+  fontSize: '20px',
+  lineHeight: '29px',
+  marginBottom: '10px',
+  '@media (min-width: 640px)': {
+    fontSize: '22px',
+    lineHeight: '30px',
+    marginLeft: '20px',
+    marginRight: '20px',
+  },
+});
+
+const ColParagraph = styled('div')({
+  fontSize: '18px',
+  lineHeight: '28px',
+  '@media (min-width: 960px)': {
+    marginLeft: '30px',
+    marginRight: '30px',
+  },
+  '@media (min-width: 640px)': {
+    fontSize: '18px',
+    lineHeight: '30px',
+  },
+});
 
 class ThreeExplainers extends React.Component<Props> {
   insuranceInMinutesAnim: any | null = null;
@@ -49,16 +117,14 @@ class ThreeExplainers extends React.Component<Props> {
 
   render() {
     return (
-      <div className="u-backgroundSecondaryGrey">
+      <BackgroundWrapper>
         <div className="Container u-spacePV2">
-          <h2 className="u-textCenter u-fontSize5 u-md-fontSize2 u-lg-fontSize2 u-fontFamilyHeader">
-            {this.props.heading}
-          </h2>
+          <Header>{this.props.heading}</Header>
           <VisibilitySensor
             partialVisibility
             onChange={this.threeExplainersVisbilityChanged}
           >
-            <div className="u-flex u-flexCol u-lg-flexRow u-textCenter">
+            <Row>
               <div className="u-lg-size1of3">
                 <InsuranceInMinutes
                   ref={(anim: any) => {
@@ -66,13 +132,14 @@ class ThreeExplainers extends React.Component<Props> {
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                 />
-                <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12 u-lg-spaceMH10">
+                <ColHeader>
                   {this.props.three_explainers.insurance_in_minutes.title}
-                </h4>
-                <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                </ColHeader>
+                <ColParagraph className=" u-lg-fontSize85">
                   {this.props.three_explainers.insurance_in_minutes.paragraph}
-                </p>
+                </ColParagraph>
               </div>
+
               <div className="u-lg-size1of3">
                 <ClaimOnPhone
                   ref={(anim: any) => {
@@ -80,13 +147,14 @@ class ThreeExplainers extends React.Component<Props> {
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                 />
-                <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
+                <ColHeader>
                   {this.props.three_explainers.claim_on_phone.title}
-                </h4>
-                <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                </ColHeader>
+                <ColParagraph>
                   {this.props.three_explainers.claim_on_phone.paragraph}
-                </p>
+                </ColParagraph>
               </div>
+
               <div className="u-lg-size1of3">
                 <PaidRightAway
                   ref={(anim: any) => {
@@ -94,17 +162,17 @@ class ThreeExplainers extends React.Component<Props> {
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
                 />
-                <h4 className="u-fontSize8 u-md-fontSize7 u-lg-fontSize7 u-spaceMB12">
+                <ColHeader>
                   {this.props.three_explainers.paid_right_away.title}
-                </h4>
-                <p className="u-lg-spaceMH8 u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
+                </ColHeader>
+                <ColParagraph>
                   {this.props.three_explainers.paid_right_away.paragraph}
-                </p>
+                </ColParagraph>
               </div>
-            </div>
+            </Row>
           </VisibilitySensor>
         </div>
-      </div>
+      </BackgroundWrapper>
     );
   }
 }
