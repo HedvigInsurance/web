@@ -4344,6 +4344,14 @@ dom-serializer@0, dom-serializer@~0.1.0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
+dom-testing-library@^3.1.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-3.6.0.tgz#e5598fae9477f3918e22aee44f2262727203b5bd"
+  dependencies:
+    mutationobserver-shim "^0.3.2"
+    pretty-format "^22.4.3"
+    wait-for-expect "^1.0.0"
+
 dom-walk@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.1.tgz#672226dc74c8f799ad35307df936aba11acd6018"
@@ -5861,12 +5869,13 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@^1.0.31:
-  version "1.0.54"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-1.0.54.tgz#84ab7d723e48a031eb698d8552ad331943d369fd"
+gatsby-image@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.9.tgz#ed5feebb4749530e5d53436ebfbec409253e1493"
   dependencies:
-    babel-runtime "^6.26.0"
-    prop-types "^15.6.0"
+    "@babel/runtime" "^7.0.0"
+    prop-types "^15.6.1"
+    react-testing-library "^4.1.7"
 
 gatsby-link@^1.6.46:
   version "1.6.46"
@@ -9770,6 +9779,10 @@ multipipe@^1.0.2:
     duplexer2 "^0.1.2"
     object-assign "^4.1.0"
 
+mutationobserver-shim@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#f4d5dae7a4971a2207914fb5a90ebd514b65acca"
+
 mute-stream@0.0.7, mute-stream@~0.0.4:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
@@ -11683,7 +11696,7 @@ pretty-error@^2.0.2, pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
-pretty-format@^22.0.3:
+pretty-format@^22.0.3, pretty-format@^22.4.3:
   version "22.4.3"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-22.4.3.tgz#f873d780839a9c02e9664c8a082e9ee79eaac16f"
   dependencies:
@@ -12334,6 +12347,13 @@ react-test-renderer@^16.0.0-0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
     react-is "^16.4.1"
+
+react-testing-library@^4.1.7:
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-4.1.9.tgz#a96fe41fd2a6205d6a2029604f46df18b9cda2d2"
+  dependencies:
+    dom-testing-library "^3.1.0"
+    wait-for-expect "^1.0.0"
 
 react-textarea-autosize@^5.2.0:
   version "5.2.1"
@@ -15677,6 +15697,10 @@ w3c-hr-time@^1.0.1:
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.1.tgz#82ac2bff63d950ea9e3189a58a65625fedf19045"
   dependencies:
     browser-process-hrtime "^0.1.2"
+
+wait-for-expect@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wait-for-expect/-/wait-for-expect-1.0.1.tgz#73ab346ed56ed2ef66c380a59fd623755ceac0ce"
 
 walker@~1.0.5:
   version "1.0.7"
