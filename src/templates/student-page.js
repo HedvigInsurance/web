@@ -85,7 +85,6 @@ class StudentTemplate extends React.Component {
   render() {
     const {
       mediaLogosDesktopFile,
-      mediaLogosMobileFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       heartFile,
@@ -171,10 +170,7 @@ class StudentTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop before, now always, consistent with the landing page */}
-            <MediaQuery query="(max-width: 959px)">
-              <MediaLogos image={mediaLogosMobileFile} />
-            </MediaQuery>
+            {/* Media logos on desktop before */}
             <MediaQuery query="(min-width: 960px)">
               <MediaLogos image={mediaLogosDesktopFile} />
             </MediaQuery>
@@ -323,7 +319,6 @@ class StudentTemplate extends React.Component {
 
 StudentTemplate.propTypes = {
   mediaLogosDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
-  mediaLogosMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   heartFile: PropTypes.objectOf(PropTypes.object).isRequired,
@@ -369,7 +364,6 @@ const Student = ({ data, pathContext }) => {
     <StudentTemplate
       chatDemoBgFile={data.chatDemoBgFile}
       mediaLogosDesktopFile={data.mediaLogosDesktopFile}
-      mediaLogosMobileFile={data.mediaLogosMobileFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       heartFile={data.heartFile}
@@ -399,15 +393,6 @@ export const query = graphql`
   query StudentPage($id: String!) {
     mediaLogosDesktopFile: file(
       relativePath: { eq: "home/media-logos_desktop@2x.png" }
-    ) {
-      image: childImageSharp {
-        sizes(maxWidth: 759) {
-          ...GatsbyImageSharpSizes_noBase64
-        }
-      }
-    }
-    mediaLogosMobileFile: file(
-      relativePath: { eq: "home/media-logos_mobile@2x.png" }
     ) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
