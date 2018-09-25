@@ -1,6 +1,5 @@
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
-
 import ClaimOnPhone from 'src/components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from 'src/components/Animations/InsuranceInMinutes';
 import PaidRightAway from 'src/components/Animations/PaidRightAway';
@@ -23,12 +22,14 @@ interface Props {
   };
 }
 
-const claimsAnimation = require('assets/animations/chat-demo/data.json');
-
-const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
+const THREE_EXPLAINER_WIDTH_HEIGHT: number = 210;
 
 class ThreeExplainers extends React.Component<Props> {
-  threeExplainersVisbilityChanged = (isVisible) => {
+  insuranceInMinutesAnim: any | null = null;
+  claimOnPhoneAnimation: any | null = null;
+  paidRightAwayAnimation: any | null = null;
+
+  threeExplainersVisbilityChanged = (isVisible: boolean) => {
     if (!this.insuranceInMinutesAnim) {
       return;
     }
@@ -60,7 +61,7 @@ class ThreeExplainers extends React.Component<Props> {
             <div className="u-flex u-flexCol u-lg-flexRow u-textCenter">
               <div className="u-lg-size1of3">
                 <InsuranceInMinutes
-                  ref={(anim) => {
+                  ref={(anim: any) => {
                     this.insuranceInMinutesAnim = anim;
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
@@ -74,7 +75,7 @@ class ThreeExplainers extends React.Component<Props> {
               </div>
               <div className="u-lg-size1of3">
                 <ClaimOnPhone
-                  ref={(anim) => {
+                  ref={(anim: any) => {
                     this.claimOnPhoneAnimation = anim;
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
@@ -88,7 +89,7 @@ class ThreeExplainers extends React.Component<Props> {
               </div>
               <div className="u-lg-size1of3">
                 <PaidRightAway
-                  ref={(anim) => {
+                  ref={(anim: any) => {
                     this.paidRightAwayAnimation = anim;
                   }}
                   sideLength={THREE_EXPLAINER_WIDTH_HEIGHT}
