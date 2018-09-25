@@ -169,7 +169,7 @@ class StudentTemplate extends React.Component {
               </div>
             </div>
 
-            {/* Media logos on desktop */}
+            {/* Media logos on desktop before, now always, consistent with the landing page */}
             <MediaLogos image={mediaLogosFile} />
 
             {/* Three explainers */}

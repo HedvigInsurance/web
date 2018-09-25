@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LottieLoader } from 'src/components/LottieLoader';
-import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
@@ -21,6 +20,7 @@ import PaidRightAway from '../components/Animations/PaidRightAway';
 import { CareerBanner } from '../sections/landing/career-banner';
 import { CustomerSources } from '../sections/landing/customer-sources';
 import { PerilForest } from '../sections/landing/peril-forest';
+import { MediaLogos } from '../sections/landing/media-logos';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -219,17 +219,7 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <div>
-              <div className="Container">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            <MediaLogos image={mediaLogosFile} />
           </StickyContainer>
         </section>
 

@@ -3,6 +3,7 @@ import Img from 'gatsby-image';
 import styled from 'react-emotion';
 
 interface Props {
+  student: boolean;
   image?: {
     image: {
       sizes: {
