@@ -87,6 +87,7 @@ const ColParagraph = styled('div')({
 });
 
 class ThreeExplainers extends React.Component<Props> {
+  /*TODO: Change any to correct type - react-lottie */
   insuranceInMinutesAnim: any | null = null;
   claimOnPhoneAnimation: any | null = null;
   paidRightAwayAnimation: any | null = null;
@@ -105,9 +106,6 @@ class ThreeExplainers extends React.Component<Props> {
     }
   };
 
-  /* Not used atm */
-  getWidth = () => `calc(${(100 * 1) / 3}%)`;
-
   constructor(props: Props) {
     super(props);
   }
@@ -123,7 +121,6 @@ class ThreeExplainers extends React.Component<Props> {
           >
             <Row>
               <Col>
-                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <InsuranceInMinutes
                   ref={(anim: any) => {
                     this.insuranceInMinutesAnim = anim;
@@ -139,7 +136,6 @@ class ThreeExplainers extends React.Component<Props> {
               </Col>
 
               <Col>
-                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <ClaimOnPhone
                   ref={(anim: any) => {
                     this.claimOnPhoneAnimation = anim;
@@ -155,7 +151,6 @@ class ThreeExplainers extends React.Component<Props> {
               </Col>
 
               <Col>
-                {/* style={{width: this.getWidth()}} - Does not make any difference */}
                 <PaidRightAway
                   ref={(anim: any) => {
                     this.paidRightAwayAnimation = anim;
