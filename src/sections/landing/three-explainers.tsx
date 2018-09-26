@@ -58,6 +58,7 @@ const Row = styled('div')({
 const Col = styled('div')({
   '@media (min-width: 960px)': {
     flexBasis: 'auto',
+    width: 'calc(100% * 1 / 3)',
   },
 });
 
