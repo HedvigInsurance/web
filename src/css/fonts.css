@@ -10,13 +10,10 @@ which is embedded as an svg for performance.
   font-family: "SoRay";
   font-style: normal;
   font-weight: 800;
-  src: url("/assets/fonts/SoRay-ExtraBold.eot");
-  src: url("/assets/fonts/SoRay-ExtraBold.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/SoRay-ExtraBold.woff2") format("woff2"),
-    url("/assets/fonts/SoRay-ExtraBold.woff") format("woff"),
-    url("/assets/fonts/SoRay-ExtraBold.ttf") format("truetype"),
-    url("/assets/fonts/SoRay-ExtraBold.svg#so_rayextrabold") format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/SoRay-ExtraBold.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/SoRay-ExtraBold.woff")
+    format("woff");
 }
 
 @font-face {
@@ -24,14 +21,10 @@ which is embedded as an svg for performance.
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 600;
-  src: url("/assets/fonts/CircularStd-Bold.eot");
-  src: url("/assets/fonts/CircularStd-Bold.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-Bold.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-Bold.woff") format("woff"),
-    url("/assets/fonts/CircularStd-Bold.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-Bold.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/CircularStd-Bold.woff")
+    format("woff");
 }
 
 @font-face {
@@ -39,108 +32,78 @@ which is embedded as an svg for performance.
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/CircularStd-Book.eot");
-  src: url("/assets/fonts/CircularStd-Book.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-Book.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-Book.woff") format("woff"),
-    url("/assets/fonts/CircularStd-Book.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-Book.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/CircularStd-Book.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "CircularStd";
   font-style: italic;
   font-weight: 400;
-  src: url("/assets/fonts/CircularStd-BookItalic.eot");
-  src: url("/assets/fonts/CircularStd-BookItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/CircularStd-BookItalic.woff2") format("woff2"),
-    url("/assets/fonts/CircularStd-BookItalic.woff") format("woff"),
-    url("/assets/fonts/CircularStd-BookItalic.ttf") format("truetype"),
-    url("/assets/fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-BookItalic.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/CircularStd-BookItalic.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather-Light";
   font-style: italic;
   font-weight: 300;
-  src: url("/assets/fonts/Merriweather-LightItalic.eot");
-  src: url("/assets/fonts/Merriweather-LightItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-LightItalic.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-LightItalic.woff") format("woff"),
-    url("/assets/fonts/Merriweather-LightItalic.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-LightItalic.svg#Merriweather-LightItalic")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-LightItalic.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-LightItalic.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather";
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/Merriweather-Regular.eot");
-  src: url("/assets/fonts/Merriweather-Regular.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-Regular.woff") format("woff"),
-    url("/assets/fonts/Merriweather-Regular.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-Regular.svg#Merriweather-Regular")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Regular.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Regular.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather";
   font-style: italic;
   font-weight: bold;
-  src: url("/assets/fonts/Merriweather-BoldItalic.eot");
-  src: url("/assets/fonts/Merriweather-BoldItalic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-BoldItalic.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-BoldItalic.woff") format("woff"),
-    url("/assets/fonts/Merriweather-BoldItalic.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-BoldItalic.svg#Merriweather-BoldItalic")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-BoldItalic.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-BoldItalic.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather";
   font-style: italic;
   font-weight: normal;
-  src: url("/assets/fonts/Merriweather-Italic.eot");
-  src: url("/assets/fonts/Merriweather-Italic.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-Italic.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-Italic.woff") format("woff"),
-    url("/assets/fonts/Merriweather-Italic.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-Italic.svg#Merriweather-Italic")
-    format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Italic.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Italic.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather-Light";
   font-style: normal;
   font-weight: 300;
-  src: url("/assets/fonts/Merriweather-Light.eot");
-  src: url("/assets/fonts/Merriweather-Light.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-Light.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-Light.woff") format("woff"),
-    url("/assets/fonts/Merriweather-Light.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-Light.svg#Merriweather-Light") format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Light.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Light.woff")
+    format("woff");
 }
 
 @font-face {
   font-family: "Merriweather";
   font-style: normal;
   font-weight: bold;
-  src: url("/assets/fonts/Merriweather-Bold.eot");
-  src: url("/assets/fonts/Merriweather-Bold.eot?#iefix")
-    format("embedded-opentype"),
-    url("/assets/fonts/Merriweather-Bold.woff2") format("woff2"),
-    url("/assets/fonts/Merriweather-Bold.woff") format("woff"),
-    url("/assets/fonts/Merriweather-Bold.ttf") format("truetype"),
-    url("/assets/fonts/Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Bold.woff2")
+    format("woff2"),
+    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Bold.woff")
+    format("woff");
 }
