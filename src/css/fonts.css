@@ -1,10 +1,3 @@
-/*
-
-Currently GT-Super-Display is only used for the heading "Insurance. Unbroken."
-which is embedded as an svg for performance.
-
-*/
-
 @font-face {
   font-display: swap;
   font-family: "SoRay";
