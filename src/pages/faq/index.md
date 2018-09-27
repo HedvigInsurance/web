@@ -113,5 +113,26 @@ questions:
       vård, ring Hedvig Global Assistance dygnet runt på [+45 38 48 94
       61]("tel:+4538489461")
     question: Vad händer om jag blir sjuk på resa?
+  - answer: Självrisken är alltid 1500 kr.
+    question: Vad är självrisken?
+  - answer: >-
+      Dig som försäkringstagare, de som är folkbokförda på samma adress eller
+      personer som du bor tillsammans med och vars namn du anger på
+      försäkringsbrevet
+    question: Vem gäller försäkringen för?
+  - answer: >-
+      Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
+      resa.
+    question: Ingår olycksfall i min försäkring?
+  - answer: >-
+      Hedvig täcker alla ytskikten i lägenheten ink sådant som ägaren enligt lag
+      eller stadgar är skyldig att underhålla (till exempel skador som är
+      orsakade av brand eller vattenläcka).
+    question: Vad täcker bostadsrättstillägget?
+  - answer: >-
+      Reseförsäkringen täcker sjukdom, tandbesvär och olycka på resa, försenat
+      bagage, eventuell evakuering på grund av oroligheter samt om du behöver
+      avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
+    question: Vad täcker reseförsäkringen?
 ---
 
