@@ -121,10 +121,11 @@ questions:
       försäkringsbrevet
     question: Vem gäller försäkringen för?
   - answer: >-
-      Om din sambo är folkbokförd på samma adress så täcks hen också av din
-      försäkring, se bara till att meddela oss om namn och personnummer här i
-      chatten
-    question: Ingår min sambo?
+      Försäkringen gäller för de som är folkbokförda på din adress förutsatt att
+      de också stadigvarande bor hos dig. Försäkringen gäller också för den du
+      bor med som inte är folkbokförd på din adress, om du berättar för oss var
+      personen heter så att hen kan anges på försäkringsbrevet.
+    question: Vilka gäller min försäkring för? Ingår min sambo?
   - answer: >-
       Förutom att du får hjälp på nolltid om något händer har vi riktigt
       schyssta villkor. Vår drulle som alltid ingår täcker alla dina prylar upp
