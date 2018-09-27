@@ -4,12 +4,12 @@ se:
   links:
     - label: Student
       path: /student
+    - label: Hur vi ger tillbaka
+      path: /giving-back
     - label: Vanliga frågor
       path: /faq
     - label: Om Hedvig
       path: /about-us
-    - label: Hur vi ger tillbaka
-      path: /giving-back
   logoLink:
     altText: Hedvig hem
     path: /
