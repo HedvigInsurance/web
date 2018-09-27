@@ -121,21 +121,6 @@ questions:
       försäkringsbrevet
     question: Vem gäller försäkringen för?
   - answer: >-
-      Försäkringen gäller för de som är folkbokförda på din adress förutsatt att
-      de också stadigvarande bor hos dig. Försäkringen gäller också för den du
-      bor med som inte är folkbokförd på din adress, om du berättar för oss var
-      personen heter så att hen kan anges på försäkringsbrevet.
-    question: Vilka gäller min försäkring för? Ingår min sambo?
-  - answer: >-
-      Förutom att du får hjälp på nolltid om något händer har vi riktigt
-      schyssta villkor. Vår drulle som alltid ingår täcker alla dina prylar upp
-      till 50 000 per pryl (vanlig försäkring täcker totalt 50 000 för alla
-      prylar), vi ger bättre ersättning för de flesta techgrejer och har tagit
-      bort en hel del besvärliga specialbestämmelser som försäkringsbolag brukar
-      använda för att begränsa ersättning. Vill du veta mer, skriv till oss i
-      chatten :)
-    question: Hur fungerar drulleförsäkringen?
-  - answer: >-
       Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
       resa.
     question: Ingår olycksfall i min försäkring?
@@ -145,56 +130,9 @@ questions:
       orsakade av brand eller vattenläcka).
     question: Vad täcker bostadsrättstillägget?
   - answer: >-
-      När du flyttar gäller din gamla och din nya bostad i en månad från
-      flyttdatumet.
-    question: Vad händer om jag flyttar?
-  - answer: >-
-      Nej tyvärr! Vi har ingen barnförsäkring än utan säljer bara hemförsäkring.
-      Dina barns saker är dock skyddade genom din hemförsäkring och dom är även
-      skyddade mot misshandel, överfall och andra obehagliga händelser. Om ni
-      åker på resa är hela familjen skyddad mot olycksfall och sjukdom.
-    question: Finns det någon barnförsäkring hos er?
-  - answer: 'Nej, jag försäkrar inte djur.'
-    question: Täcker min försäkring djur?
-  - answer: Allt som räknas till motorfordon ingår inte i vår försäkring.
-    question: Täcks motorfordon?
-  - answer: 'Nej, det gör den inte.'
-    question: Täcks min motorcykel?
-  - answer: >-
-      Ja, cyklar ingår i hemförsäkringen (upp till 15 000). Om den är värd mer
-      än 15 000 ordnar jag det!
-    question: Täcks min cykel?
-  - answer: >-
-      Ja, Hedvig ersätter hushållsmaskiner eller andra elektriska maskiner som
-      går sönder pga kortslutning, överspänning eller överslag
-    question: Får jag ersättning om mina vitvaror går sönder?
-  - answer: >-
       Reseförsäkringen täcker sjukdom, tandbesvär och olycka på resa, försenat
       bagage, eventuell evakuering på grund av oroligheter samt om du behöver
       avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
     question: Vad täcker reseförsäkringen?
-  - answer: 45 dagar.
-    question: Hur lång resa täcker försäkringen?
-  - answer: >-
-      Ja, du kan göra det inom de första 45 dagarna då du påbörjat din resa.
-      Viktigt är bara att du är frisk när du gör det.
-    question: Kan jag förlänga min reseförsäkring?
-  - answer: >-
-      Nej, fjällräddning med helikopter eller liknande täcks endast om du varit
-      med om en olycka och är skadad
-    question: Gäller försäkringen om jag behöver fjällräddning men inte är skadad?
-  - answer: >-
-      Hedvig betalar om någon kräver dig på skadestånd för person- eller
-      sakskada, och står också för rättegångskostnader om det skulle behövas.
-      Detta gäller dock inte om det är så att du uppsåtligen orsakat skada eller
-      begått brott.
-    question: Vilket juridiskt skydd har jag?
-  - answer: >-
-      Hedvig ersätter upp till 100 timmars arbete för ditt ombud, kostnader för
-      utredning före rättegång, bevisning i rättegång, rättegångskostnader som
-      du måste betala till din motpart. Hedvig ersätter inte förlorad inkomst
-      eller höjda levnadskostnader, kostnader till skiljemän eller kostnader för
-      verkställighet av dom eller avtal.
-    question: Vilka kostnader ersätts i samband med rättegång?
 ---
 
