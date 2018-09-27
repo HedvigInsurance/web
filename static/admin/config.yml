@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: hedviginsurance/web
-  branch: master
+  branch: createable-landings
 
 media_folder: static/uploads
 public_folder: /uploads
@@ -340,115 +340,7 @@ collections:
           - label: Heading
             name: heading
             widget: string
-      - file: src/pages/index.md
-        label: Landing
-        name: landing
-        path: /
-        fields:
-          - label: Path
-            name: path
-            widget: hidden
-            default: /
-          - label: Template Key
-            name: templateKey
-            widget: hidden
-            default: landing-page
-          - label: Title
-            name: title
-            widget: string
-          - label: Landing section
-            name: landing
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Subheading
-                name: subheading
-                widget: string
-              - label: CTA text
-                name: cta_text
-                widget: string
-          - label: Three Explainers section
-            name: three_explainers
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Three Explainers
-                name: three_explainers
-                widget: object
-                fields:
-                  - label: Insurance in minutes
-                    name: insurance_in_minutes
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-                  - label: Claim on your phone
-                    name: claim_on_phone
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-                  - label: Paid right away
-                    name: paid_right_away
-                    widget: object
-                    fields:
-                      - label: Title
-                        name: title
-                        widget: string
-                      - label: Paragraph
-                        name: paragraph
-                        widget: text
-          - label: Peril Forest section
-            name: peril_forest
-            widget: object
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Bottom paragraph
-                name: bottom_paragraph
-                widget: string
-          - label: Customer source section
-            name: customerSources
-            widget: object
-            fields:
-              - label: Headline
-                name: headline
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: text
-          - label: Get started section
-            name: get_started
-            widget: object
-            fields:
-              - label: Heading1
-                name: heading1
-                widget: string
-              - label: Heading2
-                name: heading2
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: ButtonText
-                name: buttontext
-                widget: string
-              - label: Image Alt Text
-                name: imageAltText
-                widget: string
+
       - file: src/pages/student/index.md
         label: Student
         name: student
@@ -813,6 +705,119 @@ collections:
               - label: Section
                 name: section
                 widget: markdown
+  - name: 'landings'
+    label: Landings
+    folder: src/pages
+    create: true
+    fields:
+      - label: Template key
+        name: templateKey
+        widget: hidden
+        defaultValue: landing-page
+      - label: Path
+        name: path
+        widget: hidden
+        default: /
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: landing-page
+      - label: Title
+        name: title
+        widget: string
+      - label: Landing section
+        name: landing
+        widget: object
+        fields:
+        - label: Heading
+          name: heading
+          widget: string
+        - label: Subheading
+          name: subheading
+          widget: string
+        - label: CTA text
+          name: cta_text
+          widget: string
+      - label: Three Explainers section
+        name: three_explainers
+        widget: object
+        fields:
+        - label: Heading
+          name: heading
+          widget: string
+        - label: Three Explainers
+          name: three_explainers
+          widget: object
+          fields:
+          - label: Insurance in minutes
+            name: insurance_in_minutes
+            widget: object
+            fields:
+            - label: Title
+              name: title
+              widget: string
+            - label: Paragraph
+              name: paragraph
+              widget: text
+          - label: Claim on your phone
+            name: claim_on_phone
+            widget: object
+            fields:
+            - label: Title
+              name: title
+              widget: string
+            - label: Paragraph
+              name: paragraph
+              widget: text
+          - label: Paid right away
+            name: paid_right_away
+            widget: object
+            fields:
+            - label: Title
+              name: title
+              widget: string
+            - label: Paragraph
+              name: paragraph
+              widget: text
+      - label: Peril Forest section
+        name: peril_forest
+        widget: object
+        fields:
+        - label: Heading
+          name: heading
+          widget: string
+        - label: Bottom paragraph
+          name: bottom_paragraph
+          widget: string
+      - label: Customer source section
+        name: customerSources
+        widget: object
+        fields:
+        - label: Headline
+          name: headline
+          widget: string
+        - label: Paragraph
+          name: paragraph
+          widget: text
+      - label: Get started section
+        name: get_started
+        widget: object
+        fields:
+        - label: Heading1
+          name: heading1
+          widget: string
+        - label: Heading2
+          name: heading2
+          widget: string
+        - label: Paragraph
+          name: paragraph
+          widget: string
+        - label: ButtonText
+          name: buttontext
+          widget: string
+        - label: Image Alt Text
+          name: imageAltText
+          widget: string
   - name: 'pagesEnglish'
     label: 'Pages, English'
     files:
