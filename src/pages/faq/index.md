@@ -48,20 +48,16 @@ questions:
       klart hela försäkringsvillkor också! De hittar du här:
 
 
-
       [För dig som hyr din
       lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
-
 
 
       [För dig som äger din
       lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
 
 
-
       [För dig som försäkrar en extra dyr
       pryl](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf)
-
 
 
       Vill du inte läsa hela villkoren finns sammanfattningar här:
@@ -71,9 +67,12 @@ questions:
       lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
 
 
-
       [Förköpsinformation för dig som äger
       lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+
+
+      [Förköpsinformation enligt europeisk
+      standard](https://www.hedvig.com/uploads/sv_eiopa_ipid_hedvig.pdf)
     question: Hur vet jag vad min försäkring täcker?
   - answer: |-
       Ditt pris beror på lite olika saker, till exempel hur du bor,
@@ -113,26 +112,15 @@ questions:
       vård, ring Hedvig Global Assistance dygnet runt på [+45 38 48 94
       61]("tel:+4538489461")
     question: Vad händer om jag blir sjuk på resa?
-  - answer: Självrisken är alltid 1500 kr.
+  - answer: Självrisken hos Hedvig ligger på 1500 kr.
     question: Vad är självrisken?
   - answer: >-
-      Dig som försäkringstagare, de som är folkbokförda på samma adress eller
-      personer som du bor tillsammans med och vars namn du anger på
-      försäkringsbrevet
+      Hedvig täcker dig och de som du bor med, exempelvis din sambo eller dina
+      barn. Du anger hur många du vill försäkra i appen!
     question: Vem gäller försäkringen för?
   - answer: >-
-      Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
-      resa.
+      Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig självklart dig
+      ifall du skulle bli sjuk eller råka ut för en olycka när du är på resa.
     question: Ingår olycksfall i min försäkring?
-  - answer: >-
-      Hedvig täcker alla ytskikten i lägenheten ink sådant som ägaren enligt lag
-      eller stadgar är skyldig att underhålla (till exempel skador som är
-      orsakade av brand eller vattenläcka).
-    question: Vad täcker bostadsrättstillägget?
-  - answer: >-
-      Reseförsäkringen täcker sjukdom, tandbesvär och olycka på resa, försenat
-      bagage, eventuell evakuering på grund av oroligheter samt om du behöver
-      avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
-    question: Vad täcker reseförsäkringen?
 ---
 
