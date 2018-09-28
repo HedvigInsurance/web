@@ -113,7 +113,7 @@ questions:
       vård, ring Hedvig Global Assistance dygnet runt på [+45 38 48 94
       61]("tel:+4538489461")
     question: Vad händer om jag blir sjuk på resa?
-  - answer: Självrisken är alltid 1500 kr.
+  - answer: Självrisken hos Hedvig ligger på 1500 kr.
     question: Vad är självrisken?
   - answer: >-
       Dig som försäkringstagare, de som är folkbokförda på samma adress eller
