@@ -126,14 +126,9 @@ questions:
       skulle bli sjuk eller råka ut för en olycka när du är på resa.
     question: Ingår olycksfall i min försäkring?
   - answer: >-
-      Hedvig täcker alla ytskikten i lägenheten ink sådant som ägaren enligt lag
-      eller stadgar är skyldig att underhålla (till exempel skador som är
-      orsakade av brand eller vattenläcka).
-    question: Vad täcker bostadsrättstillägget?
-  - answer: >-
-      Reseförsäkringen täcker sjukdom, tandbesvär och olycka på resa, försenat
-      bagage, eventuell evakuering på grund av oroligheter samt om du behöver
-      avbryta resan för att någon närstående blivit akut sjuk eller avlidit.
+      Hedvig täcker dig när du är ute och reser ifall du t. ex skulle bli sjuk
+      eller råka ut för en olycka. Det gäller för dig och för de närstående som
+      är (skrivna på samma adress, eller som du angivit för Hedvig bor med dig.)
     question: Vad täcker reseförsäkringen?
 ---
 
