@@ -122,8 +122,8 @@ questions:
       signar upp. /chatten.
     question: Vem gäller försäkringen för?
   - answer: >-
-      Nej, inte när du är hemma, men olycks- och sjukfall täcks om du är på
-      resa.
+      Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig dig ifall du
+      skulle bli sjuk eller råka ut för en olycka när du är på resa.
     question: Ingår olycksfall i min försäkring?
   - answer: >-
       Hedvig täcker alla ytskikten i lägenheten ink sådant som ägaren enligt lag
