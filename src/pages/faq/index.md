@@ -118,17 +118,12 @@ questions:
   - answer: >-
       Hedvig försäkring täcker dig och de som du bor med, exempelvis din sambo
       eller dina barn. Det räcker med att de antingen står skrivna på samma
-      adress eller att du skriver deras namn och personnummer till oss när du
-      signar upp. /chatten.
+      adress eller att du anger deras namn och personnummer till oss när du
+      signar upp.
     question: Vem gäller försäkringen för?
   - answer: >-
       Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig dig ifall du
       skulle bli sjuk eller råka ut för en olycka när du är på resa.
     question: Ingår olycksfall i min försäkring?
-  - answer: >-
-      Hedvig täcker dig när du är ute och reser ifall du t. ex skulle bli sjuk
-      eller råka ut för en olycka. Det gäller för dig och för de närstående som
-      är (skrivna på samma adress, eller som du angivit för Hedvig bor med dig.)
-    question: Vad täcker reseförsäkringen?
 ---
 
