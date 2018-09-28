@@ -116,10 +116,8 @@ questions:
   - answer: Självrisken hos Hedvig ligger på 1500 kr.
     question: Vad är självrisken?
   - answer: >-
-      Hedvig försäkring täcker dig och de som du bor med, exempelvis din sambo
-      eller dina barn. Det räcker med att de antingen står skrivna på samma
-      adress eller att du anger deras namn och personnummer till oss när du
-      signar upp.
+      Hedvig täcker dig och de som du bor med, exempelvis din sambo eller dina
+      barn. Du anger hur många du vill försäkra i appen!
     question: Vem gäller försäkringen för?
   - answer: >-
       Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig självklart dig
