@@ -3,13 +3,13 @@ templateKey: legal-page
 title: Legal information | Hedvig
 heading: Legal information
 sections:
-  - section: >+
-      # Förmedling av försäkringar
+  - section: >-
+      # Försäkringsförmedling
 
 
       Hedvig står under Finansinspektionens tillsyn som förmedlare av
-      försäkringar och på våra försäkringsavtal tillämpas Försäkringsavtalslagen
-      (2005:104).
+      försäkringar i enlighet med Lag (2018:1219) om försäkringsdistribution. På
+      våra försäkringsavtal tillämpas Försäkringsavtalslagen (2005:104).
 
 
       Exklusiv försäkringsgivare för Hedvigs försäkringar är International
@@ -20,7 +20,6 @@ sections:
       Hedvig är registrerat hos Bolagsverket och har sin ansvarsförsäkring hos
       QBE Insurance (Europe) Ltd., UK filial Sverige. Se längst ner på sidan för
       kontaktuppgifter till Finansinspektionen, Bolagsverket och QBE.
-
   - section: >+
       # Om du inte är nöjd
 
