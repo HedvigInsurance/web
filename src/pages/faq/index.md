@@ -122,8 +122,8 @@ questions:
       signar upp.
     question: Vem gäller försäkringen för?
   - answer: >-
-      Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig dig ifall du
-      skulle bli sjuk eller råka ut för en olycka när du är på resa.
+      Nej, tyvärr inte när du är hemma. Däremot täcker Hedvig självklart dig
+      ifall du skulle bli sjuk eller råka ut för en olycka när du är på resa.
     question: Ingår olycksfall i min försäkring?
 ---
 
