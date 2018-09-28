@@ -72,7 +72,7 @@ questions:
 
 
       [Förköpsinformation enligt europeisk
-      standard](https://www.hedvig.com/upload/SV_EIOPA_IPID_HEDVIG.pdf)
+      standard](https://www.hedvig.com/uploads/sv_eiopa_ipid_hedvig.pdf)
     question: Hur vet jag vad min försäkring täcker?
   - answer: |-
       Ditt pris beror på lite olika saker, till exempel hur du bor,
