@@ -26,7 +26,6 @@ const InsuranceInMinutes = React.forwardRef(({ sideLength }, ref) => (
 ));
 
 InsuranceInMinutes.propTypes = {
-  ref: PropTypes.func.isRequired,
   sideLength: PropTypes.number.isRequired,
 };
 

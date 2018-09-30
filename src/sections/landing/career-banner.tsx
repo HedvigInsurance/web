@@ -73,7 +73,11 @@ const Row = styled('div')(
   }),
 );
 
-const HedvigLogo = styled(LogoSvg)(
+const HedvigLogo = styled(LogoSvg, {
+  shouldForwardProp: (name) =>
+    name !== 'animationDelay' && name !== 'isVisible',
+})(
+  // Let prettier reformat this later
   ({
     animationDelay,
     isVisible,

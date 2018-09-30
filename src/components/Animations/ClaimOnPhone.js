@@ -25,7 +25,6 @@ const ClaimOnPhone = React.forwardRef(({ sideLength }, ref) => (
 ));
 
 ClaimOnPhone.propTypes = {
-  ref: PropTypes.func.isRequired,
   sideLength: PropTypes.number.isRequired,
 };
 

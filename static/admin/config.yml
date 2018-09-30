@@ -449,6 +449,18 @@ collections:
               - label: Image Alt Text
                 name: imageAltText
                 widget: string
+          - label: Career banner
+            name: careerBanner
+            widget: object
+            fields:
+              - label: Message 1
+                name: message1
+              - label: Message 2
+                name: message2
+              - label: CTA Label
+                name: ctaLabel
+              - label: CTA target
+                name: ctaTarget
       - file: src/pages/student/index.md
         label: Student
         name: student
@@ -497,18 +509,6 @@ collections:
                   - label: Explainer
                     name: explainer
                     widget: string
-          - label: Career banner
-            name: careerBanner
-            widget: object
-            fields:
-              - label: Message 1
-                name: message1
-              - label: Message 2
-                name: message2
-              - label: CTA Label
-                name: ctaLabel
-              - label: CTA target
-                name: ctaTarget
           - label: Three Explainers section
             name: three_explainers
             widget: object
@@ -590,35 +590,9 @@ collections:
               - label: Bottom paragraph
                 name: bottom_paragraph
                 widget: string
-          - label: Customer source section
-            name: customerSources
-            widget: object
-            fields:
-              - label: Headline
-                name: headline
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: text
-          - label: Get started section
-            name: get_started
-            widget: object
-            fields:
-              - label: Heading1
-                name: heading1
-                widget: string
-              - label: Heading2
-                name: heading2
-                widget: string
-              - label: Paragraph
-                name: paragraph
-                widget: string
-              - label: ButtonText
-                name: buttontext
-                widget: string
-              - label: Image Alt Text
-                name: imageAltText
-                widget: string
+          - label: Bottom CTA
+            name: bottom_cta
+            widget: string
       - file: src/pages/giving-back/index.md
         label: Giving Back
         name: giving-back
@@ -1027,34 +1001,46 @@ collections:
                 name: bottom_paragraph
                 widget: string
           - label: Customer source section
-            name: customer_source
+            name: customerSources
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Headline
+                name: headline
                 widget: string
-              - label: Image accessibility text
-                name: image_alt
-                widget: text
               - label: Paragraph
                 name: paragraph
                 widget: text
-          - label: Safety section
-            name: safety
+          - label: Get started section
+            name: get_started
             widget: object
             fields:
-              - label: Heading
-                name: heading
+              - label: Heading1
+                name: heading1
                 widget: string
-              - label: Item 1
-                name: item1
-                widget: text
-              - label: Item 2
-                name: item2
-                widget: text
-              - label: Item 3
-                name: item3
-                widget: text
+              - label: Heading2
+                name: heading2
+                widget: string
+              - label: Paragraph
+                name: paragraph
+                widget: string
+              - label: ButtonText
+                name: buttontext
+                widget: string
+              - label: Image Alt Text
+                name: imageAltText
+                widget: string
+          - label: Career banner
+            name: careerBanner
+            widget: object
+            fields:
+              - label: Message 1
+                name: message1
+              - label: Message 2
+                name: message2
+              - label: CTA Label
+                name: ctaLabel
+              - label: CTA target
+                name: ctaTarget
       - file: src/pages/student/index.en.md
         label: Student
         name: student
