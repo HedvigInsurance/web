@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LottieLoader } from 'src/components/LottieLoader';
-import Img from 'gatsby-image';
 import VisibilitySensor from 'react-visibility-sensor';
 import { StickyContainer } from 'react-sticky';
 import { Helmet } from 'react-helmet';
@@ -15,11 +14,14 @@ import { trackEvent } from 'src/utils/track-event';
 
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
+import MediaQuery from 'react-responsive';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
 import { CareerBanner } from '../sections/landing/career-banner';
 import { CustomerSources } from '../sections/landing/customer-sources';
+import { PerilForest } from '../sections/landing/peril-forest';
+import { MediaLogos } from '../sections/landing/media-logos';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -50,17 +52,14 @@ class LandingTemplate extends React.Component {
     }
   };
 
-  registerPerilForestClick = () => {
-    trackEvent('Peril forest clicked');
-  };
-
   registerCustomerSourceClick = () => {
     trackEvent('Customer source clicked');
   };
 
   render() {
     const {
-      mediaLogosFile,
+      mediaLogosDesktopFile,
+      mediaLogosMobileFile,
       perilForestMobileFile,
       perilForestDesktopFile,
       title,
@@ -207,36 +206,13 @@ class LandingTemplate extends React.Component {
             </div>
 
             {/* Peril forest */}
-            <div className="u-backgroundPrimaryDarkestPurple">
-              <div className="Container u-spacePT2 u-spacePB4">
-                <h2 className="u-colorWhite u-fontFamilyHeader u-textCenter u-fontSize4 u-md-fontSize2 u-lg-fontSize2">
-                  {perilForest.heading}
-                </h2>
-                <figure // eslint-disable-line
-                  className="u-spaceMV6"
-                  onClick={this.registerPerilForestClick}
-                >
-                  {perilForestMobileFile && (
-                    <Img
-                      className="Home-perilForest-image-mobile u-lg-hidden"
-                      sizes={perilForestMobileFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                  {perilForestDesktopFile && (
-                    <Img
-                      className="Home-perilForest-image-desktop u-hidden u-lg-block"
-                      sizes={perilForestDesktopFile.image.sizes}
-                      alt=""
-                    />
-                  )}
-                </figure>
-                <p className="u-colorWhite u-textCenter u-fontSize9 u-md-fontSize85 u-lg-fontSize85">
-                  {perilForest.bottom_paragraph}
-                </p>
-              </div>
-            </div>
+            <PerilForest
+              {...perilForest}
+              perilForestDesktopFile={perilForestDesktopFile}
+              perilForestMobileFile={perilForestMobileFile}
+            />
 
+            {/* Customer sources */}
             <CustomerSources
               headline={customerSources.headline}
               paragraph={customerSources.paragraph}
@@ -245,17 +221,12 @@ class LandingTemplate extends React.Component {
             <GetStarted {...getStarted} image={getStartedImage} />
 
             {/* Media logos */}
-            <div>
-              <div className="Container">
-                {mediaLogosFile && (
-                  <Img
-                    className="Home-media"
-                    sizes={mediaLogosFile.image.sizes}
-                    alt=""
-                  />
-                )}
-              </div>
-            </div>
+            <MediaQuery query="(max-width: 959px)">
+              <MediaLogos image={mediaLogosMobileFile} />
+            </MediaQuery>
+            <MediaQuery query="(min-width: 960px)">
+              <MediaLogos image={mediaLogosDesktopFile} />
+            </MediaQuery>
           </StickyContainer>
         </section>
 
@@ -266,7 +237,8 @@ class LandingTemplate extends React.Component {
 }
 
 LandingTemplate.propTypes = {
-  mediaLogosFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
+  mediaLogosMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
@@ -322,7 +294,8 @@ const Landing = ({ data, pathContext }) => {
   return (
     <LandingTemplate
       chatDemoBgFile={data.chatDemoBgFile}
-      mediaLogosFile={data.mediaLogosFile}
+      mediaLogosDesktopFile={data.mediaLogosDesktopFile}
+      mediaLogosMobileFile={data.mediaLogosMobileFile}
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       getStartedImage={data.getStartedImage}
@@ -351,7 +324,18 @@ export default Landing;
 
 export const query = graphql`
   query LandingPage($id: String!) {
-    mediaLogosFile: file(relativePath: { eq: "home/media-logos@2x.png" }) {
+    mediaLogosDesktopFile: file(
+      relativePath: { eq: "home/media-logos_desktop@2x.png" }
+    ) {
+      image: childImageSharp {
+        sizes(maxWidth: 759) {
+          ...GatsbyImageSharpSizes_noBase64
+        }
+      }
+    }
+    mediaLogosMobileFile: file(
+      relativePath: { eq: "home/media-logos_mobile@2x.png" }
+    ) {
       image: childImageSharp {
         sizes(maxWidth: 759) {
           ...GatsbyImageSharpSizes_noBase64
