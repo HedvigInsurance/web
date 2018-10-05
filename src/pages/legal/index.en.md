@@ -7,14 +7,22 @@ sections:
       # Förmedling av försäkringar
 
 
-      Hedvig står under Finansinspektionens tillsyn som förmedlare av
-      försäkringar och på våra försäkringsavtal tillämpas Försäkringsavtalslagen
-      (2005:104).
+      Hedvig AB, org. nr. 559093-0334, med registrerad adress Artillerigatan 10,
+      114 51 Stockholm, står under Finansinspektionens tillsyn som förmedlare av
+      försäkringar i enlighet med Lag (2018:1219) om försäkringsdistribution. På
+      våra försäkringsavtal tillämpas Försäkringsavtalslagen (2005:104).
 
 
       Exklusiv försäkringsgivare för Hedvigs försäkringar är International
-      Insurance Company of Hannover SE. Hedvigs ersättning mottagen från dig som
-      kund består av en fast procentavgift av din premie.
+      Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
+      Hedvigs ersättning mottagen från dig som kund består av en fast avgift av
+      din månadspremie om 20 %. Hedvig distribuerar enbart försäkringar under
+      Hedvigs varumärke. International Insurance Company of Hannover SE är
+      försäkringsgivare för samtliga försäkringar som distribueras av Hedvig.
+
+
+      Varken International Insurance Company of Hannover SE eller något annat
+      försäkringsföretag har ett innehav i Hedvig.
 
 
       Hedvig är registrerat hos Bolagsverket och har sin ansvarsförsäkring hos
@@ -26,7 +34,7 @@ sections:
 
       Om du har ett allmänt klagomål eller är missnöjd med någonting i ett
       skadeärende, kontakta Hedvig direkt via din app eller maila
-      hedvig@hedvig.com.
+      help@hedvig.com.
 
 
       Du kan också vända dig till Konsumentvägledningen i din kommun eller till
