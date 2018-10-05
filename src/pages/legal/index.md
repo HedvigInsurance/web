@@ -15,11 +15,10 @@ sections:
 
       Exklusiv försäkringsgivare för Hedvigs försäkringar är International
       Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
-      Hedvigs ersättning mottagen från dig som kund består enbart av en fast
-      procentavgift av din månadspremie uppgående till 20 %. Hedvig distribuerar
-      enbart försäkringar under Hedvigs varumärke. International Insurance
-      Company of Hannover SE är försäkringsgivare för samtliga försäkringar som
-      distribueras av Hedvig.
+      Hedvigs ersättning mottagen från dig som kund består av en fast avgift av
+      din månadspremie om 20 %. Hedvig distribuerar enbart försäkringar under
+      Hedvigs varumärke. International Insurance Company of Hannover SE är
+      försäkringsgivare för samtliga försäkringar som distribueras av Hedvig.
 
 
       Varken International Insurance Company of Hannover SE eller något annat
