@@ -91,7 +91,7 @@ sections:
       För att göra samma sak på din telefon kan du för iOS under integritets-
       och reklaminställningar välja att begränsa spårning. För Android gör du
       detta under Google-inställningar och annonser.
-  - section: '## Kontaktuppgifter'
+  - section: '# Kontaktuppgifter'
   - section: |-
       ## Finansinspektionen
 
