@@ -93,30 +93,50 @@ sections:
       detta under Google-inställningar och annonser.
   - section: '## Kontaktuppgifter'
   - section: |-
-      # Finansinspektionen
+      ## Finansinspektionen
 
       Box 7821
+
+
       103 97 Stockholm
+
+
       finansinspektionen@fi.se
+
+
       T: 08-408 980 00
   - section: |-
-      # Bolagsverket
+      ## Bolagsverket
 
       851 81 Sundsvall
+
+
       bolagsverket@bolagsverket.se
+
+
       T: 0771-670 670
   - section: |-
-      # International Insurance Company of Hannover SE, Sverige filial
+      ## International Insurance Company of Hannover SE, Sverige filial
 
       Box 22085
+
+
       Hantverkargatan 25
+
+
       104 22 Stockholm
+
+
       T: 08-617 54 00
   - section: |-
-      # QBE Insurance (Europe) Ltd., UK filial Sverige
+      ## QBE Insurance (Europe) Ltd., UK filial Sverige
 
       Sveavägen 13
+
+
       111 57 Stockholm
+
+
       T: 08-587 514 00
 ---
 
