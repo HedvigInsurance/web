@@ -22,6 +22,10 @@ sections:
       distribueras av Hedvig.
 
 
+      Varken International Insurance Company of Hannover SE eller något annat
+      försäkringsföretag har ett innehav i Hedvig.
+
+
       Hedvig är registrerat hos Bolagsverket och har sin ansvarsförsäkring hos
       QBE Insurance (Europe) Ltd., UK filial Sverige. Se längst ner på sidan för
       kontaktuppgifter till Finansinspektionen, Bolagsverket och QBE.
