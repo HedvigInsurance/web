@@ -91,13 +91,37 @@ sections:
       För att göra samma sak på din telefon kan du för iOS under integritets-
       och reklaminställningar välja att begränsa spårning. För Android gör du
       detta under Google-inställningar och annonser.
-  - section: |
-      ## Kontaktuppgifter
-  - section: "# Finansinspektionen\n\nBox 7821\r\n\n103 97 Stockholm\r\n\nfinansinspektionen@fi.se\r\n\nT: 08-408 980 00"
-  - section: "# Bolagsverket\n\n851 81 Sundsvall\r\n\nbolagsverket@bolagsverket.se\r\n\nT: 0771-670 670"
-  - section: "# International Insurance Company of Hannover SE, Sverige filial\n\nBox 22085\r\n\nHantverkargatan 25\r\n\n104 22 Stockholm\r\n\nT: 08-617 54 00"
+  - section: '# Kontaktuppgifter'
   - section: |-
-      # QBE Insurance (Europe) Ltd., UK filial Sverige
+      ## Finansinspektionen
+
+      Box 7821
+
+      103 97 Stockholm
+
+      finansinspektionen@fi.se
+
+      T: 08-408 980 00
+  - section: |-
+      ## Bolagsverket
+
+      851 81 Sundsvall
+
+      bolagsverket@bolagsverket.se
+
+      T: 0771-670 670
+  - section: |-
+      ## International Insurance Company of Hannover SE, Sverige filial
+
+      Box 22085
+
+      Hantverkargatan 25
+
+      104 22 Stockholm
+
+      T: 08-617 54 00
+  - section: |-
+      ## QBE Insurance (Europe) Ltd., UK filial Sverige
 
       Sveavägen 13
 
