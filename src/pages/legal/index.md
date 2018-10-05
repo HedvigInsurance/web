@@ -7,32 +7,36 @@ sections:
       # Försäkringsförmedling
 
 
-      Hedvig står under Finansinspektionens tillsyn som förmedlare av
+      Hedvig AB, org. nr. 559093-0334, med registrerad adress Artillerigatan 10,
+      114 51 Stockholm, står under Finansinspektionens tillsyn som förmedlare av
       försäkringar i enlighet med Lag (2018:1219) om försäkringsdistribution. På
       våra försäkringsavtal tillämpas Försäkringsavtalslagen (2005:104).
 
 
       Exklusiv försäkringsgivare för Hedvigs försäkringar är International
-      Insurance Company of Hannover SE. Hedvigs ersättning mottagen från dig som
-      kund består av en fast procentavgift av din premie.
+      Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
+      Hedvigs ersättning mottagen från dig som kund består enbart av en fast
+      procentavgift av din premie, uppgående till 20 %. Hedvig distribuerar
+      enbart försäkringar under Hedvigs varumärke. International Insurance
+      Company of Hannover SE är försäkringsgivare för samtliga försäkringar som
+      distribueras av Hedvig.
 
 
       Hedvig är registrerat hos Bolagsverket och har sin ansvarsförsäkring hos
       QBE Insurance (Europe) Ltd., UK filial Sverige. Se längst ner på sidan för
       kontaktuppgifter till Finansinspektionen, Bolagsverket och QBE.
-  - section: >+
+  - section: >-
       # Om du inte är nöjd
 
 
       Om du har ett allmänt klagomål eller är missnöjd med någonting i ett
       skadeärende, kontakta Hedvig direkt via din app eller maila
-      hedvig@hedvig.com.
+      help@hedvig.com.
 
 
       Du kan också vända dig till Konsumentvägledningen i din kommun eller till
       Konsumenternas Försäkringsbyrå. Vid tvist kan du vända dig till Allmänna
       reklamationsnämnden eller till allmän domstol.
-
   - section: >-
       # Cookies
 
@@ -86,31 +90,16 @@ sections:
       detta under Google-inställningar och annonser.
   - section: |
       ## Kontaktuppgifter
-  - section: |-
-      # Finansinspektionen
-
-      Box 7821
-      103 97 Stockholm
-      finansinspektionen@fi.se
-      T: 08-408 980 00
-  - section: |-
-      # Bolagsverket
-
-      851 81 Sundsvall
-      bolagsverket@bolagsverket.se
-      T: 0771-670 670
-  - section: |-
-      # International Insurance Company of Hannover SE, Sverige filial
-
-      Box 22085
-      Hantverkargatan 25
-      104 22 Stockholm
-      T: 08-617 54 00
+  - section: "# Finansinspektionen\n\nBox 7821\r\n\n103 97 Stockholm\r\n\nfinansinspektionen@fi.se\r\n\nT: 08-408 980 00"
+  - section: "# Bolagsverket\n\n851 81 Sundsvall\r\n\nbolagsverket@bolagsverket.se\r\n\nT: 0771-670 670"
+  - section: "# International Insurance Company of Hannover SE, Sverige filial\n\nBox 22085\r\n\nHantverkargatan 25\r\n\n104 22 Stockholm\r\n\nT: 08-617 54 00"
   - section: |-
       # QBE Insurance (Europe) Ltd., UK filial Sverige
 
       Sveavägen 13
+
       111 57 Stockholm
+
       T: 08-587 514 00
 ---
 
