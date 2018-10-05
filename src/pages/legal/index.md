@@ -4,7 +4,7 @@ title: Legal information | Hedvig
 heading: Legal information
 sections:
   - section: >-
-      # Försäkringsförmedling
+      # Förmedling av försäkringar
 
 
       Hedvig AB, org. nr. 559093-0334, med registrerad adress Artillerigatan 10,
