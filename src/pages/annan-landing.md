@@ -32,7 +32,7 @@ customerSources:
   headline: "Redan försäkrad? Vi sköter\_bytet"
   paragraph: Våra användare kommer ifrån
 get_started:
-  buttontext: Kom igång
+  buttontext: Till mitt prisförslag
   heading1: 2 minuter och 8 frågor
   heading2: Få ditt prisförslag direkt
   imageAltText: Hedvig-appen på en iPhone
