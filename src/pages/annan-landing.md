@@ -17,7 +17,7 @@ three_explainers:
       paragraph: >-
         Inga bindningstider och månadsvis betalning. Perfekt oavsett hyr under
         en kortare eller längre tid
-      title: Smidigt och enkelt
+      title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
