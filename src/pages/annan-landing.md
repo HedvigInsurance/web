@@ -6,7 +6,7 @@ landing:
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din hyresrätt och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
-  heading: Varför ska hemförsäkring vara komplicerat? Det undrar vi med
+  heading: Varför ska hemförsäkring vara komplicerat?
   three_explainers:
     claim_on_phone:
       paragraph: >-
@@ -15,14 +15,14 @@ three_explainers:
       title: Slipp pappersarbete och formulär
     insurance_in_minutes:
       paragraph: >-
-        Inga bindningstider, månadsvis betalning och överskott till välgörenhet.
-        Perfekt både om du hyr länge eller under en begränsad tid.
+        Inga bindningstider, månadsvis betalning. Perfekt både om du hyr länge
+        eller under en begränsad tid.
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
         intelligens. Så du kan lägga tid på annat än försäkringsärenden.
-      title: 'Hjälp på sekunder, ersättning på minuter'
+      title: Hjälp på sekunder
 peril_forest:
   bottom_paragraph: Då kan läsa mer om skyddet i appen
   heading: >-
@@ -32,7 +32,7 @@ customerSources:
   headline: "Redan försäkrad? Vi sköter\_bytet"
   paragraph: Våra användare kommer ifrån
 get_started:
-  buttontext: Kom igång
+  buttontext: Till mitt prisförslag
   heading1: 2 minuter och 8 frågor
   heading2: Få ditt prisförslag direkt
   imageAltText: Hedvig-appen på en iPhone
