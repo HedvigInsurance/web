@@ -10,8 +10,8 @@ three_explainers:
   three_explainers:
     claim_on_phone:
       paragraph: >-
-        Fråga vad som helst och sköt ärenden i appen. Hedvig är alltid bara ett
-        knapptryck bort
+        Fråga vad som helst och sköt dina ärenden i appen. Hedvig är alltid bara
+        ett knapptryck bort.
       title: Slipp pappersarbete och formulär
     insurance_in_minutes:
       paragraph: >-
@@ -21,7 +21,7 @@ three_explainers:
     paid_right_away:
       paragraph: >-
         Vi ersätter dig blixtsnabbt med hjälp av smart teknik och artificiell
-        intelligens
+        intelligens. Så du kan lägga tid på annat än försäkringsärenden.
       title: 'Hjälp på sekunder, ersättning på minuter'
 peril_forest:
   bottom_paragraph: Då kan läsa mer om skyddet i appen
