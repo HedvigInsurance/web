@@ -15,8 +15,8 @@ three_explainers:
       title: Slipp pappersarbete och formulär
     insurance_in_minutes:
       paragraph: >-
-        Inga bindningstider och månadsvis betalning. Perfekt oavsett hyr under
-        en kortare eller längre tid
+        Inga bindningstider och månadsvis betalning. Perfekt oavsett om du hyr
+        länge eller under en kortare tid.
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
