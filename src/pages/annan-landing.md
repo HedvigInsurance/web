@@ -20,9 +20,8 @@ three_explainers:
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
-        Vi ersätter dig blixtsnabbt med hjälp av smart teknik. Så du kan lägga
-        tid på annat än försäkringsärenden och få hjälp när du behöver det. På
-        riktigt.
+        Vi ersätter dig blixtsnabbt med hjälp av smart teknik, så du kan lägga
+        tid på annat och få hjälp när du behöver det. På riktigt.
       title: Hjälp på sekunder
 peril_forest:
   bottom_paragraph: 'Dig, din lägenhet och alla dina prylar. Då kan läsa mer om skyddet i appen.'
