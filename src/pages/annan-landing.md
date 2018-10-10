@@ -4,7 +4,7 @@ title: "Hedvig Försäkring | Hyresrätt |\_Få hjälp när du behöver det"
 landing:
   cta_text: Kom igång
   heading: Sveriges smidigaste hemförsäkring
-  subheading: För din hyresrätt och alla dina prylar
+  subheading: För din hyresrätt och alla dina prylar. Gör allt direkt i appen.
 three_explainers:
   heading: En hemförsäkring som den borde vara
   three_explainers:
