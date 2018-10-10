@@ -33,9 +33,9 @@ customerSources:
   paragraph: Våra användare kommer ifrån
 get_started:
   buttontext: Kom igång
-  heading1: Du är 2 minuter och 8 frågor bort från
-  heading2: den perfekta hemförsäkringen för din hyresrätt.
+  heading1: 2 minuter och 8 frågor
+  heading2: Få ditt prisförslag direkt
   imageAltText: Hedvig-appen på en iPhone
-  paragraph: Den enda på marknaden idag utan bindningstid.
+  paragraph: Alltid utan bindningstid eller andra krångligheter.
 ---
 
