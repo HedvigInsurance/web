@@ -12,7 +12,7 @@ three_explainers:
       paragraph: >-
         Fråga vad som helst och sköt ärenden i appen. Hedvig är alltid bara ett
         knapptryck bort
-      title: Slipp pappersarbete och formulär
+      title: Slipp pappersarbete och formulär med telefonen
     insurance_in_minutes:
       paragraph: >-
         Inga bindningstider och månadsvis betalning. Perfekt oavsett hyr under
