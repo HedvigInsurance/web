@@ -24,7 +24,7 @@ three_explainers:
         intelligens. Så du kan lägga tid på annat än försäkringsärenden.
       title: Hjälp på sekunder
 peril_forest:
-  bottom_paragraph: Då kan läsa mer om skyddet i appen
+  bottom_paragraph: 'Dig, din lägenhet och alla dina prylar. Då kan läsa mer om skyddet i appen.'
   heading: >-
     Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle
     såklart
