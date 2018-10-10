@@ -6,7 +6,7 @@ landing:
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din hyresrätt och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
-  heading: Varför ska hemförsäkring vara komplicerat? Det undrar vi med
+  heading: Varför ska hemförsäkring vara komplicerat?
   three_explainers:
     claim_on_phone:
       paragraph: >-
@@ -15,8 +15,8 @@ three_explainers:
       title: Slipp pappersarbete och formulär
     insurance_in_minutes:
       paragraph: >-
-        Inga bindningstider, månadsvis betalning och överskott till välgörenhet.
-        Perfekt både om du hyr länge eller under en begränsad tid.
+        Inga bindningstider, månadsvis betalning. Perfekt både om du hyr länge
+        eller under en begränsad tid.
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
