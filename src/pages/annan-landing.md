@@ -33,9 +33,9 @@ customerSources:
   paragraph: Våra användare kommer ifrån
 get_started:
   buttontext: Till mitt prisförslag
-  heading1: 2 minuter och 8 frågor
-  heading2: Få ditt prisförslag direkt
+  heading1: '2 minuter, 8 frågor'
+  heading2: Få ditt prisförslag direkt.
   imageAltText: Hedvig-appen på en iPhone
-  paragraph: Alltid utan bindningstid eller andra krångligheter.
+  paragraph: 'Alltid utan bindningstid eller andra krångligheter. '
 ---
 
