@@ -6,7 +6,7 @@ landing:
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din hyresrätt och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
-  heading: Varför ska hemförsäkring vara komplicerat?
+  heading: Hemförsäkring behöver inte vara komplicerat
   three_explainers:
     claim_on_phone:
       paragraph: >-
