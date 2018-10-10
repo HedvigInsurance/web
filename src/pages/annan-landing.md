@@ -1,10 +1,10 @@
 ---
 templateKey: landing-page
-title: "Hedvig Försäkring | Hyresrätt |\_Få hjälp när du behöver det"
+title: "Hedvig Hemförsäkring |\_Få hjälp när du behöver det"
 landing:
-  cta_text: Kom igång
+  cta_text: Få ditt pris
   heading: Sveriges smidigaste hemförsäkring
-  subheading: För din hyresrätt och alla dina prylar - sköt allt direkt i appen.
+  subheading: För din lägenhet och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
   heading: Hemförsäkring behöver inte vara komplicerat
   three_explainers:
@@ -15,8 +15,8 @@ three_explainers:
       title: Slipp pappersarbete och formulär
     insurance_in_minutes:
       paragraph: >-
-        Inga bindningstider, månadsvis betalning. Perfekt både om du hyr länge
-        eller under en begränsad tid.
+        Inga bindningstider, månadsvis betalning. Perfekt både om du behöver
+        hemförsäkring länge eller under en begränsad tid.
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
