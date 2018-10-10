@@ -6,7 +6,7 @@ landing:
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din hyresrätt och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
-  heading: Hemförsäkring som den borde vara. Välkommen till 2018
+  heading: Hemförsäkring som den borde vara. <br> Välkommen till 2018
   three_explainers:
     claim_on_phone:
       paragraph: >-
