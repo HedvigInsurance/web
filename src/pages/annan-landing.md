@@ -20,11 +20,14 @@ three_explainers:
       title: 'Smidigt, enkelt och transparent'
     paid_right_away:
       paragraph: >-
-        Vi ersätter dig blixtsnabbt med hjälp av smart teknik, så du kan lägga
-        tid på annat och få hjälp när du behöver det. På riktigt.
+        När olyckan är framme ersätter vi dig blixtsnabbt med hjälp av smart
+        teknik. Så du kan få hjälp när du behöver det. På riktigt.
       title: Hjälp på sekunder
 peril_forest:
-  bottom_paragraph: 'Dig, din lägenhet och alla dina prylar. Då kan läsa mer om skyddet i appen.'
+  bottom_paragraph: >-
+    Hedvigs hemförsäkring täcker dig, din lägenhet och alla dina prylar.
+    Självklart har du även reseskydd om något skulle hände när du är ute på
+    vift. Du kan läsa mer om allt skydd i appen.
   heading: >-
     Hedvig innehåller allt en hemförsäkring brukar innehålla, plus drulle
     såklart
