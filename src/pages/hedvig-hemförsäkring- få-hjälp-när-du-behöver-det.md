@@ -4,7 +4,7 @@ path: /
 title: "Hedvig Hemförsäkring |\_Få hjälp när du behöver det"
 landing:
   cta_text: Skaffa hemförsäkring nu
-  heading: Att hyra lägenhet är tryggs med Hedvig
+  heading: Sveriges smidigaste hemförsäkring för dig som hyr
   subheading: >-
     Hedvig och Qasa gör vi det tryggare för dig att hyra ut din hyres- eller
     bostadsrätt i andrahand med vår hyresrättsförsäkring. Alltid utan
