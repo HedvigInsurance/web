@@ -4,7 +4,7 @@ title: "Hedvig Försäkring | Namnsdag |\_Få hjälp när du behöver det"
 landing:
   cta_text: Testa en månad gratis
   heading: Sveriges smidigaste hemförsäkring
-  subheading: För din lägenhet och alla dina prylar - sköt allt direkt i appen.
+  subheading: 'För din lägenhet och alla dina prylar - sköt allt direkt i appen. '
 three_explainers:
   heading: Hemförsäkring behöver inte vara komplicerat
   three_explainers:
@@ -39,6 +39,6 @@ get_started:
   heading1: 2 minuter. 8 frågor.
   heading2: Få ditt prisförslag direkt.
   imageAltText: Hedvig-appen på en iPhone
-  paragraph: 'Ingen bindningstid. Månadsvis betalning. '
+  paragraph: Ingen bindningstid. Månadsvis betalning. Första månaden gratis.
 ---
 
