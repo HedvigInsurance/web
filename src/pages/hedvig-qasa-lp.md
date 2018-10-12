@@ -6,8 +6,8 @@ landing:
   cta_text: Skaffa hemförsäkring nu
   heading: Hyr säkert med hemförsäkring
   subheading: >-
-    Hedvig och Qasa gör vi det tryggare för dig att hyra ut din hyres- eller
-    bostadsrätt i andrahand med hyresrättsförsäkring. Alltid utan bindningstid.
+    Hedvig och Qasa gör det tryggare för dig att hyra ut din hyres- eller
+    bostadsrätt i andrahand. Alltid utan bindningstid.
 three_explainers:
   heading: Detta är Hedvig
   three_explainers:
