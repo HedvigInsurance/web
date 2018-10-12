@@ -9,7 +9,7 @@ landing:
     Hedvig och Qasa gör vi det tryggare för dig att hyra ut din hyres- eller
     bostadsrätt i andrahand med hyresrättsförsäkring. Alltid utan bindningstid.
 three_explainers:
-  heading: Hemförsäkring behöver inte vara komplicerat
+  heading: Detta är Hedvig
   three_explainers:
     claim_on_phone:
       paragraph: >-
