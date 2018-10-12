@@ -6,6 +6,7 @@ topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa Hedvig hemförsäkring
   show: true
+  target: 'https://www.hedvig.com/qasa'
 author: Margarita Kradjian
 tags:
   - qasa
