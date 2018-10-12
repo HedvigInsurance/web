@@ -62,6 +62,7 @@ class LandingTemplate extends React.Component {
       mediaLogosMobileFile,
       perilForestMobileFile,
       perilForestDesktopFile,
+      noindex,
       title,
       landing,
       careerBanner,
@@ -78,6 +79,7 @@ class LandingTemplate extends React.Component {
       <main className="Site">
         <Helmet>
           <title>{title}</title>
+          {noindex && <meta name="robots" content="noindex" />}
         </Helmet>
         <section className="Site-content">
           <StickyContainer>
@@ -242,6 +244,7 @@ LandingTemplate.propTypes = {
   perilForestMobileFile: PropTypes.objectOf(PropTypes.object).isRequired,
   perilForestDesktopFile: PropTypes.objectOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
+  noindex: PropTypes.bool,
   landing: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     subheading: PropTypes.string.isRequired,
@@ -289,6 +292,10 @@ LandingTemplate.propTypes = {
   langKey: PropTypes.string.isRequired,
 };
 
+LandingTemplate.defaultProps = {
+  noindex: false,
+};
+
 const Landing = ({ data, pathContext }) => {
   const copy = data.landingPage.frontmatter;
   return (
@@ -299,6 +306,7 @@ const Landing = ({ data, pathContext }) => {
       perilForestMobileFile={data.perilForestMobileFile}
       perilForestDesktopFile={data.perilForestDesktopFile}
       getStartedImage={data.getStartedImage}
+      noindex={copy.noindex}
       title={copy.title}
       landing={copy.landing}
       careerBanner={copy.careerBanner}
@@ -372,6 +380,7 @@ export const query = graphql`
     landingPage: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        noindex
         landing {
           heading
           subheading

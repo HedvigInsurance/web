@@ -152,45 +152,30 @@ const actions = {
   mount: () => (_: State): Partial<State> => ({ hasMounted: true }),
 };
 
-const CareerBanner: React.SFC<Props> = (props) => (
-  <CareerBannerContainer>
-    <Container<State, Actions>
-      actions={actions}
-      initialState={{ hasMounted: false }}
-    >
-      {({ hasMounted, mount }: State & Actions) => (
-        <VisibilitySensor
-          onChange={(isVisible: boolean) => {
-            if (isVisible) {
-              mount();
-            }
-          }}
-        >
-          {() => (
-            <>
-              <HedvigLogo
-                animationDelay={0}
-                width={60}
-                isVisible={hasMounted}
-              />
-              <Row>
-                <TypingAnimation isVisible={hasMounted} exitDelay={900}>
-                  <LottieLoader
-                    options={{
-                      loop: true,
-                      autoplay: true,
-                      renderer: 'svg',
-                      animationData: typingAnimation,
-                    }}
-                  />
-                </TypingAnimation>
-                <ChatMessage animationDelay={1_100} isVisible={hasMounted}>
-                  {props.message1}
-                </ChatMessage>
-              </Row>
-              <Row>
-                <HiddenContainer isVisible={hasMounted} animationDelay={1_100}>
-                  <TypingAnimation isVisible={hasMounted} exitDelay={1_900}>
+const CareerBanner: React.SFC<Props> = (props) =>
+  props.message1 && props.message2 ? (
+    <CareerBannerContainer>
+      <Container<State, Actions>
+        actions={actions}
+        initialState={{ hasMounted: false }}
+      >
+        {({ hasMounted, mount }: State & Actions) => (
+          <VisibilitySensor
+            onChange={(isVisible: boolean) => {
+              if (isVisible) {
+                mount();
+              }
+            }}
+          >
+            {() => (
+              <>
+                <HedvigLogo
+                  animationDelay={0}
+                  width={60}
+                  isVisible={hasMounted}
+                />
+                <Row>
+                  <TypingAnimation isVisible={hasMounted} exitDelay={900}>
                     <LottieLoader
                       options={{
                         loop: true,
@@ -200,26 +185,45 @@ const CareerBanner: React.SFC<Props> = (props) => (
                       }}
                     />
                   </TypingAnimation>
-                </HiddenContainer>
-                <ChatMessage animationDelay={1_900} isVisible={hasMounted}>
-                  {props.message2}
-                </ChatMessage>
-              </Row>
-              <Row align="right">
-                <Button
-                  href={props.ctaTarget}
-                  animationDelay={2_300}
-                  isVisible={hasMounted}
-                >
-                  {props.ctaLabel}
-                </Button>
-              </Row>
-            </>
-          )}
-        </VisibilitySensor>
-      )}
-    </Container>
-  </CareerBannerContainer>
-);
+                  <ChatMessage animationDelay={1_100} isVisible={hasMounted}>
+                    {props.message1}
+                  </ChatMessage>
+                </Row>
+                <Row>
+                  <HiddenContainer
+                    isVisible={hasMounted}
+                    animationDelay={1_100}
+                  >
+                    <TypingAnimation isVisible={hasMounted} exitDelay={1_900}>
+                      <LottieLoader
+                        options={{
+                          loop: true,
+                          autoplay: true,
+                          renderer: 'svg',
+                          animationData: typingAnimation,
+                        }}
+                      />
+                    </TypingAnimation>
+                  </HiddenContainer>
+                  <ChatMessage animationDelay={1_900} isVisible={hasMounted}>
+                    {props.message2}
+                  </ChatMessage>
+                </Row>
+                <Row align="right">
+                  <Button
+                    href={props.ctaTarget}
+                    animationDelay={2_300}
+                    isVisible={hasMounted}
+                  >
+                    {props.ctaLabel}
+                  </Button>
+                </Row>
+              </>
+            )}
+          </VisibilitySensor>
+        )}
+      </Container>
+    </CareerBannerContainer>
+  ) : null;
 
 export { CareerBanner };

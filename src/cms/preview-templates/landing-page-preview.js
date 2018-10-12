@@ -7,6 +7,7 @@ const LandingPagePreview = ({ entry }) => (
   <Provider initialState={{}}>
     <LandingTemplate
       title={entry.getIn(['data', 'title'])}
+      noindex={entry.getIn(['data', 'noindex'])}
       landing={entry.getIn(['data', 'landing']).toJS()}
       threeExplainers={entry.getIn(['data', 'three_explainers']).toJS()}
       perilForest={entry.getIn(['data', 'peril_forest']).toJS()}
