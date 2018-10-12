@@ -1,7 +1,7 @@
 ---
 templateKey: landing-page
 path: /
-title: "Hedvig Hemförsäkring |\_Få hjälp när du behöver det"
+title: Hedvig & Qasa
 landing:
   cta_text: Skaffa hemförsäkring nu
   heading: Sveriges smidigaste hemförsäkring för dig som hyr
