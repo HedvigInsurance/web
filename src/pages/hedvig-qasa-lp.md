@@ -4,7 +4,7 @@ path: /
 title: Hedvig & Qasa LP
 landing:
   cta_text: Skaffa hemförsäkring nu
-  heading: Hyr lägenheten säkert med Hedvig
+  heading: Hyr säkert med rätt hemförsäkring
   subheading: >-
     Hedvig och Qasa gör vi det tryggare för dig att hyra ut din hyres- eller
     bostadsrätt i andrahand med hyresrättsförsäkring. Alltid utan bindningstid.
