@@ -25,9 +25,15 @@ content: >-
 
 
   Vi vill att hyresvärdar ska kunna vara säkra på att hyresgästen är försäkrad,
-  så att bostadens inventarier ersätts om något skulle hända. Genom vårt
-  partnerskap med Qasa kommer hyresgästen enkelt  att kunna skaffa en
+  så att bostadens inventarier ersätts om något skulle hända. 
+
+
+  ```
+
+  Genom vårt partnerskap med Qasa kommer hyresgästen enkelt  att kunna skaffa en
   hemförsäkring som är anpassad efter dess unika behov. 
+
+  ```
 
 
   Hedvigs vision är att erbjuda världens smidigaste försäkringsupplevelse, och
