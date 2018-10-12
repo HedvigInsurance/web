@@ -39,15 +39,15 @@ content: >-
   bakomliggande situation.
 
 
+
+
   **Såhär fungerar det:**
 
 
-  1.Signera ett hyresavtal via Qasas hemsida
+  1. **1. **Signera ett hyresavtal via Qasas hemsida
 
+  2. **2. **Teckna Hedvigs hemförsäkring för din nya adress 
 
-  2.Teckna Hedvigs hemförsäkring för din nya adress 
-
-
-  3.Meddela din hyresvärd om att du har tecknat en hemförsäkring
+  3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
 ---
 
