@@ -51,6 +51,6 @@ content: >-
   3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
 
 
-  ![](/uploads/hedvigqasa1.png)
+  ![null](/uploads/hedvigqasa1.png)
 ---
 
