@@ -6,7 +6,7 @@ topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa hemförsäkring för din lägenhet
   show: true
-  target: /qasa
+  target: ''
 author: Margarita Kradjian
 tags:
   - qasa
