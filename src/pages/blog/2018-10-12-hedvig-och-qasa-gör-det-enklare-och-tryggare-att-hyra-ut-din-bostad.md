@@ -49,7 +49,8 @@ content: >-
 
   1. **1. **Signera ett hyresavtal via [Qasas hemsida](https://qasa.se/)
 
-  2. **2. **[Teckna Hedvigs hemförsäkring](www.hedvig.com) för din nya adress 
+  2. **2. **[Teckna Hedvigs hemförsäkring](https://hedvig.com) för din nya
+  adress 
 
   3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
 ---
