@@ -14,7 +14,7 @@ excerpt: >-
   Genom vårt partnerskap med Qasa kommer hyresgästen enkelt att kunna skaffa en
   hemförsäkring som är anpassad efter dess unika behov.
 content: >-
-  ![hedvig-qasa.png](/uploads/hedvigqasa1.png)
+  ![hedvig-qasa](/uploads/hedvigqasa1.png)
 
 
   **Tillsammans med Qasa gör vi det tryggare för dig att hyra ut din hyres-
