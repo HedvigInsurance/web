@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Hedvig och Qasa gör det enklare och tryggare att hyra ut din bostad
-date: '2018-10-12T15:32:02+02:00'
+date: '2018-10-15T21:32:00+02:00'
 topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa hemförsäkring för din lägenhet
