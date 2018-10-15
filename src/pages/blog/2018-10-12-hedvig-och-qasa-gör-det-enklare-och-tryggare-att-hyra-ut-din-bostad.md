@@ -5,7 +5,7 @@ date: '2018-10-15T21:32:00+02:00'
 topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa hemförsäkring till din lägenhet
-  show: false
+  show: true
   target: ''
 author: Margarita Kradjian
 tags:
@@ -14,6 +14,9 @@ excerpt: >-
   Genom vårt partnerskap med Qasa kommer hyresgästen enkelt att kunna skaffa en
   hemförsäkring som är anpassad efter dess unika behov.
 content: >-
+  ![qasa](/uploads/qasa2.png)
+
+
   **Tillsammans med Qasa gör vi det tryggare för dig att hyra ut din hyres-
   eller bostadsrätt i andrahand. **
 
@@ -49,8 +52,5 @@ content: >-
   2. **2. **[Teckna Hedvigs hemförsäkring](www.hedvig.com) för din nya adress 
 
   3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
-
-
-  ![null](/uploads/hedvigqasa1.png)
 ---
 
