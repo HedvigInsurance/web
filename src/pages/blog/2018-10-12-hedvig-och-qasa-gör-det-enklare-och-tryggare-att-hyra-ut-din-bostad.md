@@ -5,7 +5,7 @@ date: '2018-10-15T21:32:00+02:00'
 topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa hemförsäkring till din lägenhet
-  show: true
+  show: false
   target: ''
 author: Margarita Kradjian
 tags:
@@ -44,13 +44,13 @@ content: >-
   **Såhär fungerar det:**
 
 
-  1. **1. **Signera ett hyresavtal via Qasas hemsida
+  1. **1. **Signera ett hyresavtal via [Qasas hemsida](https://qasa.se/)
 
-  2. **2. **Teckna Hedvigs hemförsäkring för din nya adress 
+  2. **2. **[Teckna Hedvigs hemförsäkring](www.hedvig.com) för din nya adress 
 
   3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
 
 
-  ![qasa](/uploads/hedvigqasa2.png)
+  ![](/uploads/hedvigqasa1.png)
 ---
 
