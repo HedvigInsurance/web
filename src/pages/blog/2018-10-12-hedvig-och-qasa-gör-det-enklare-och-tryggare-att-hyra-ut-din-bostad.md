@@ -14,7 +14,7 @@ excerpt: >-
   Genom vårt partnerskap med Qasa kommer hyresgästen enkelt att kunna skaffa en
   hemförsäkring som är anpassad efter dess unika behov.
 content: >-
-  ![hedvig-qasa](/uploads/hedvigqasa1.png)
+  ![qasa](/uploads/qasa2.png)
 
 
   **Tillsammans med Qasa gör vi det tryggare för dig att hyra ut din hyres-
@@ -47,9 +47,10 @@ content: >-
   **Såhär fungerar det:**
 
 
-  1. **1. **Signera ett hyresavtal via Qasas hemsida
+  1. **1. **Signera ett hyresavtal via [Qasas hemsida](https://qasa.se/)
 
-  2. **2. **Teckna Hedvigs hemförsäkring för din nya adress 
+  2. **2. **[Teckna Hedvigs hemförsäkring](https://hedvig.com) för din nya
+  adress 
 
   3. **3. **Meddela din hyresvärd om att du har tecknat en hemförsäkring
 ---
