@@ -9,7 +9,7 @@ cta:
   target: ''
 author: Margarita Kradjian
 tags:
-  - qasa
+  - '#qasa #partnership'
 excerpt: >-
   Genom vårt partnerskap med Qasa kommer hyresgästen enkelt att kunna skaffa en
   hemförsäkring som är anpassad efter dess unika behov.
