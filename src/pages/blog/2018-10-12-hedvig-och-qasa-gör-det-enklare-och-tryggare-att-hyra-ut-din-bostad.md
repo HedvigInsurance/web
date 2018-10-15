@@ -6,7 +6,7 @@ topImage: /uploads/qasa-hedvig.jpg
 cta:
   label: Skaffa hemförsäkring till din lägenhet
   show: true
-  target: 'Https://www.hedvig.com/qasa'
+  target: qasa
 author: Margarita Kradjian
 tags:
   - '#partnership'
