@@ -11,8 +11,8 @@ author: Margarita Kradjian
 tags:
   - qasa
 excerpt: >-
-  **Tillsammans med Qasa gör vi det tryggare för dig att hyra ut din hyres-
-  eller bostadsrätt i andrahand. **
+  Genom vårt partnerskap med Qasa kommer hyresgästen enkelt att kunna skaffa en
+  hemförsäkring som är anpassad efter dess unika behov.
 content: >-
   **Tillsammans med Qasa gör vi det tryggare för dig att hyra ut din hyres-
   eller bostadsrätt i andrahand. **
