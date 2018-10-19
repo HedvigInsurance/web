@@ -6,6 +6,7 @@
   from = "/bli-medlem/*"
   to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/bli-medlem/:splat"
   status = 200
+
 [[redirects]]
   from = "/onboarding-assets/*"
   to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/onboarding-assets/:splat"
