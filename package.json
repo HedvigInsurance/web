@@ -3,6 +3,7 @@
   "version": "1.2.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@hedviginsurance/brand": "^1.4.0",
     "@hedviginsurance/react-swipeable-views": "^0.12.20",
     "@segment/snippet": "^4.4.0",
@@ -25,7 +26,6 @@
     "babel-eslint": "^9.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
