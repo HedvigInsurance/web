@@ -31,7 +31,7 @@ export const CSSInjector: React.SFC = ({ children }) => (
             const css = renderStylesToString(
               renderToString(React.Children.only(children)),
             );
-            ref.ownerDocument.head.innerHTML += css;
+            ref.ownerDocument!.head!.innerHTML += css;
           }
         }}
       >
