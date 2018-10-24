@@ -5,7 +5,8 @@
  */
 
 // You can delete this file if you're not using it
-import 'babel-polyfill';
-import 'scrollingelement';
 
-exports.onClientEntry = () => {};
+exports.onClientEntry = () => {
+  require('@babel/polyfill'); // eslint-disable-line
+  require('scrollingelement'); // eslint-disable-line
+};

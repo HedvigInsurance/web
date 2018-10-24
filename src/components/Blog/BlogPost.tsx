@@ -64,6 +64,7 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
     </div>
     <Tags>
       {tags.filter((tag) => tag.trim() !== '').map((tag) => (
+        // @ts-ignore
         <BlogLink key={tag} to={`/blog/tags/${kebabCaseTag(tag)}`}>
           <Badge>{tag}</Badge>
         </BlogLink>
