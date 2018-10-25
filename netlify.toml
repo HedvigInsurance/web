@@ -3,11 +3,11 @@
   command = "yarn build"
 
 [[redirects]]
-  from = "/bli-medlem/*"
-  to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/bli-medlem/:splat"
+  from = "/new-member/*"
+  to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/new-member/:splat"
   status = 200
 
 [[redirects]]
-  from = "/onboarding-assets/*"
-  to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/onboarding-assets/:splat"
+  from = "/new-member-assets/*"
+  to = "https://hedvig-web-onboarding-st-pr-43.herokuapp.com/new-member-assets/:splat"
   status = 200
