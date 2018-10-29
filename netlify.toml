@@ -4,10 +4,10 @@
 
 [[redirects]]
   from = "/new-member/*"
-  to = "https://hedvig-web-onboarding-prod.herokuapp.com/new-member/:splat"
+  to = "https://hedvig-web-onboarding-staging.herokuapp.com/new-member/:splat"
   status = 200
 
 [[redirects]]
   from = "/new-member-assets/*"
-  to = "https://hedvig-web-onboarding-prod.herokuapp.com/new-member-assets/:splat"
+  to = "https://hedvig-web-onboarding-staging.herokuapp.com/new-member-assets/:splat"
   status = 200
