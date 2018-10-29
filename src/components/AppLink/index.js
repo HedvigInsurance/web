@@ -53,13 +53,13 @@ class AppLink extends React.Component {
       this.context && this.context.location && this.context.location.pathname; // eslint-disable-line
 
     const host =
-      NODE_ENV === 'development' ? 'localhost:8000' : 'http://www.hedvig.com';
+      NODE_ENV === 'development' ? 'localhost:8000' : process.env.URL;
 
     window.branch.link(
       {
         ...linkOptions,
         data: {
-          $desktop_url: `${host}/download`,
+          $desktop_url: `${host}/new-member`,
           path,
         },
       },
