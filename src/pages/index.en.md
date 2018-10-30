@@ -2,7 +2,7 @@
 templateKey: landing-page
 title: "Hedvig Insurance |\_Help when you need it"
 landing:
-  cta_text: Get started
+  cta_text: Get your price
   heading: Life happens. Let Hedvig help.
   subheading: 'Home insurance reimagined for your lifestyle. It''s simple, fast and fair.'
 careerBanner:
@@ -36,6 +36,6 @@ get_started:
   heading1: "2 minutes. 8 questions."
   heading2: "Your perfect insurance."
   paragraph: "No lock in. Monthly billing."
-  buttontext: "Get started"
+  buttontext: "Get your price"
   imageAltText: The Hedvig App on an iPhone
 ---
