@@ -3,7 +3,7 @@ templateKey: about-page
 title: Om Hedvig | Hedvig
 heading: Om Hedvig
 hero:
-  headline: 'Our Mission:'
+  headline: 'Our mission:'
   playButtonText: Our story
   title: Create the world's most remarkable insurance experience
 main:
