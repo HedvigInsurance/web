@@ -5,7 +5,7 @@ heading: Om Hedvig
 hero:
   headline: 'Our Mission:'
   playButtonText: Our story
-  title: Giving people the world's most incredible insurance experience
+  title: Create the world's most remarkable insurance experience
 main:
   text: >-
     Om sanningen ska fram, vem gillar att köpa försäkring? Fullt förståeligt om
