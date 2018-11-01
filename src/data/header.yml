@@ -1,5 +1,5 @@
 se:
-  ctaTextDesktop: Kom igång
+  ctaTextDesktop: Se ditt pris
   ctaTextMobile: Ladda ner appen
   links:
     - label: Student
@@ -14,7 +14,7 @@ se:
     altText: Hedvig hem
     path: /
 en:
-  ctaTextDesktop: Get started
+  ctaTextDesktop: Get your price
   ctaTextMobile: Download the app
   links:
     - label: Student
