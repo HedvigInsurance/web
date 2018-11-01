@@ -10,7 +10,11 @@ sections:
       Hedvig AB, org. nr. 559093-0334, med registrerad adress Artillerigatan 10,
       114 51 Stockholm, står under Finansinspektionens tillsyn som förmedlare av
       försäkringar i enlighet med Lag (2018:1219) om försäkringsdistribution. På
-      våra försäkringsavtal tillämpas Försäkringsavtalslagen (2005:104).
+      våra försäkringsavtal tillämpas Försäkringsavtalslagen (2005:104). Genom
+      att teckna en försäkring hos Hedvig godkänner du att information rörande
+      försäkringen och Hedvig AB enbart tillhandahålls i digital form. Om du
+      önskar informationen i annan form än digital, bara maila help@hedvig.com
+      eller kontakta Hedvig direkt i din app.
 
 
       Exklusiv försäkringsgivare för Hedvigs försäkringar är International
