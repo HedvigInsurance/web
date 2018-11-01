@@ -224,14 +224,6 @@ class LandingTemplate extends React.Component {
             />
 
             <GetStarted {...getStarted} image={getStartedImage} />
-
-            {/* Media logos */}
-            <MediaQuery query="(max-width: 959px)">
-              <MediaLogos image={mediaLogosMobileFile} />
-            </MediaQuery>
-            <MediaQuery query="(min-width: 960px)">
-              <MediaLogos image={mediaLogosDesktopFile} />
-            </MediaQuery>
           </StickyContainer>
         </section>
 
