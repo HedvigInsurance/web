@@ -3,9 +3,9 @@
   font-family: "SoRay";
   font-style: normal;
   font-weight: 800;
-  src: url("https://cdn.hedvig.com/identity/fonts/SoRay-ExtraBold.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/SoRay-ExtraBold.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/SoRay-ExtraBold.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/SoRay-ExtraBold.woff")
     format("woff");
 }
 
@@ -14,9 +14,9 @@
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 600;
-  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-Bold.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-Bold.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/CircularStd-Bold.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-Bold.woff")
     format("woff");
 }
 
@@ -25,9 +25,9 @@
   font-family: "CircularStd";
   font-style: normal;
   font-weight: 400;
-  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-Book.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-Book.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/CircularStd-Book.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-Book.woff")
     format("woff");
 }
 
@@ -35,9 +35,9 @@
   font-family: "CircularStd";
   font-style: italic;
   font-weight: 400;
-  src: url("https://cdn.hedvig.com/identity/fonts/CircularStd-BookItalic.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-BookItalic.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/CircularStd-BookItalic.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/CircularStd-BookItalic.woff")
     format("woff");
 }
 
@@ -45,9 +45,9 @@
   font-family: "Merriweather-Light";
   font-style: italic;
   font-weight: 300;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-LightItalic.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-LightItalic.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-LightItalic.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-LightItalic.woff")
     format("woff");
 }
 
@@ -55,9 +55,9 @@
   font-family: "Merriweather";
   font-style: normal;
   font-weight: normal;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Regular.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Regular.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Regular.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Regular.woff")
     format("woff");
 }
 
@@ -65,9 +65,9 @@
   font-family: "Merriweather";
   font-style: italic;
   font-weight: bold;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-BoldItalic.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-BoldItalic.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-BoldItalic.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-BoldItalic.woff")
     format("woff");
 }
 
@@ -75,9 +75,9 @@
   font-family: "Merriweather";
   font-style: italic;
   font-weight: normal;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Italic.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Italic.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Italic.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Italic.woff")
     format("woff");
 }
 
@@ -85,9 +85,9 @@
   font-family: "Merriweather-Light";
   font-style: normal;
   font-weight: 300;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Light.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Light.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Light.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Light.woff")
     format("woff");
 }
 
@@ -95,8 +95,8 @@
   font-family: "Merriweather";
   font-style: normal;
   font-weight: bold;
-  src: url("https://cdn.hedvig.com/identity/fonts/Merriweather-Bold.woff2")
+  src: url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Bold.woff2")
     format("woff2"),
-    url("https://cdn.hedvig.com/identity/fonts/Merriweather-Bold.woff")
+    url("https://cdn.dev.hedvigit.com/identity/fonts/Merriweather-Bold.woff")
     format("woff");
 }
