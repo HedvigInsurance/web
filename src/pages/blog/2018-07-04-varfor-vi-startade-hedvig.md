@@ -47,5 +47,37 @@ content: >-
 
 
   Så vi startade [Hedvig](/).
+
+
+
+
+  Det vi har gjort är att designa om försäkring från grunden - för att göra det
+  rättvist. Det betyder att försäkring hos Hedvig fungerar annorlunda. Istället
+  för att 100 % av det du betalar för din försäkring går till oss tar vi  bara
+  en fast avgift ur din månadskostnad för att sköta tjänsten. Resten av pengarna
+  öronmärks för att gå till utbetalningar för skador. Så när du behöver hjälp
+  får du betalt blixtsnabbt - Hedvig har inget att vinna på att göra det onödigt
+  krångligt...   
+
+
+
+
+  Och om det finns pengar kvar när året är slut, så behåller vi inte dem. Det
+  skulle ge oss fel incitament. Istället donerar vi allt som blir över till
+  välgörenhet. Du som användare väljer var du vill att din del ska gå. Genom att
+  ändra den trasiga försäkringsmodellen och använda smart teknologi har vi
+  istället fokuserat på att göra försäkring radikalt enkelt. 
+
+
+
+
+  Men missförstå oss inte. Vi har ingenting emot vinst. Det vi inte tål är
+  tjänster som är medvetet oschyssta, som medvetet skapar friktion och som
+  medvetet försämrar användarupplevelsen i syfte att tjäna mer pengar. 
+
+
+
+
+  Det var därför vi startade Hedvig.
 ---
 
