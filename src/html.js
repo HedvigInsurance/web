@@ -59,6 +59,22 @@ const getSnapTrackingCode = () => ({
   `,
 });
 
+const getOptimizePageHidingCss = () => ({
+  __html: `
+    .async-hide { opacity: 0 !important}
+  `,
+});
+
+const getOptimizePageHidingSnippet = () => ({
+  __html: `
+  (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+      })(window,document.documentElement,'async-hide','dataLayer',4000,
+      {'GTM-KDM39NC':true});
+  `,
+});
+
 const HTML = ({
   htmlAttributes,
   headComponents,
@@ -70,6 +86,8 @@ const HTML = ({
   <html {...htmlAttributes} lang="sv">
     <head>
       <meta charSet="utf-8" />
+      <style dangerouslySetInnerHTML={getOptimizePageHidingCss()} />
+      <script dangerouslySetInnerHTML={getOptimizePageHidingSnippet()} />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta
         name="viewport"
