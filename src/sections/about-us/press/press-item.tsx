@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import { fonts } from '@hedviginsurance/brand';
 
-import { PressItem as PressItemType } from '.';
+import { PressItemProps } from '.';
 
 const Link = styled('a')({
   textDecoration: 'none',
@@ -41,7 +41,7 @@ const Text = styled('span')({
   marginTop: 5,
 });
 
-export const PressItem: React.SFC<PressItemType> = ({
+export const PressItem: React.SFC<PressItemProps> = ({
   logo,
   link,
   title,

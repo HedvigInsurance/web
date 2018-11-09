@@ -34,7 +34,7 @@ se:
       path: 'https://join.hedvig.com'
     - external: true
       label: Press
-      path: /about-us
+      path: "/about-us#press"
   playStoreAlt: Ladda ner på Google Play
   twitterAlt: Hedvig på Twitter
 en:
@@ -60,7 +60,7 @@ en:
       path: /en/contact
     - external: true
       label: Press
-      path: /en/about-us
+      path: "/en/about-us#press"
   linkSection2:
     - external: false
       label: Personal information
