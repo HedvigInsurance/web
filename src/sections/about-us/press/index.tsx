@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
 
-import { PressItem } from './press-item';
 import { Markdown } from 'src/cms/utils/markdown';
+import { PressItem } from './press-item';
 
 const Background = styled('div')({
   backgroundColor: '#F9FAFC',
@@ -39,7 +39,7 @@ const Link = styled('a')({
   color: colors.PURPLE,
 });
 
-export interface PressItem {
+export interface PressItemProps {
   logo: string;
   title: string;
   text: string;
@@ -47,22 +47,22 @@ export interface PressItem {
 }
 
 interface PressProps {
-  items: PressItem[];
+  items: PressItemProps[];
   footnote: string;
   title: string;
 }
 
 export const Press: React.SFC<PressProps> = ({ title, items, footnote }) => (
-  <Background>
+  <Background id="press">
     <PressContainer>
       <Title>{title}</Title>
-      {items.map(({ logo, title, text, link }) => (
+      {items.map((pressItem) => (
         <PressItem
-          key={link}
-          link={link}
-          title={title}
-          logo={logo}
-          text={text}
+          key={pressItem.link}
+          link={pressItem.link}
+          title={pressItem.title}
+          logo={pressItem.logo}
+          text={pressItem.text}
         />
       ))}
       <Footnote>
