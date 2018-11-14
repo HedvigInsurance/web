@@ -27,7 +27,7 @@ export const Hedvigers: React.SFC<HedvigersProps> = ({
     <MediaQuery query="(max-width: 900px)">
       <Mobile title={title} teamtailorUsers={teamtailorUsers} />
     </MediaQuery>
-    <MediaQuery query="(min-width: 900px)">
+    <MediaQuery query="(min-width: 901px)">
       <Desktop title={title} teamtailorUsers={teamtailorUsers} />
     </MediaQuery>
   </>

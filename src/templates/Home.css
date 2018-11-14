@@ -3,6 +3,7 @@
 .Home-hero {
   margin: 0 auto;
   max-width: 1600px;
+  overflow-x: hidden;
 }
 
 .Home-hero-title {
