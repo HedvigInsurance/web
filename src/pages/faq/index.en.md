@@ -42,26 +42,36 @@ questions:
 
 
       [For those who rent their
-      apartments](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+      apartments](https://cdn.hedvig.com/info/forsakringsvillkor-hyresratt-2018-02.pdf)
 
 
       [For those who own their
-      apartments](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+      apartments](https://cdn.hedvig.com/info/forsakringsvillkor-bostadsratt-2018-02.pdf)
+
+      [For those who study and rent their apartments](https://cdn.hedvig.com/info/forsakringsvillkor-student-hyresratt-2018-08.pdf)
+
+      [For those who study and own their apartments](https://cdn.hedvig.com/info/forsakringsvillkor-student-bostadsratt-2018-08.pdf)
 
 
       [For those who need extra coverage for their
-      items](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf)
+      items](https://cdn.hedvig.com/info/forsakringsvillkor-sakforsakring-2018-02.pdf)
 
 
       If you don't want to read the entire terms you can find summaries here:
 
 
       [Pre-sale information for
-      renters](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+      renters](https://cdn.hedvig.com/info/forkopsinformation-hyresratt-2018-02.pdf)
 
 
       [Pre-sale information for
-      owners](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+      owners](https://cdn.hedvig.com/info/forkopsinformation-bostadsratt-2018-02.pdf)
+
+      [Pre-sale information for renters that study](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
+
+      [Pre-sale information for owners that study](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
+
+      [Pre-sale information in accordance with european standards](https://cdn.hedvig.com/info/forkopsinformation-eu-standard-2018-09.pdf)
     question: 'What does my insurance cover? '
   - answer: >-
       The price depends on a few different variables such as where you live, how
