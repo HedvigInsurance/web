@@ -48,7 +48,9 @@ questions:
       [For those who own their
       apartments](https://cdn.hedvig.com/info/forsakringsvillkor-bostadsratt-2018-02.pdf)
 
+
       [For those who study and rent their apartments](https://cdn.hedvig.com/info/forsakringsvillkor-student-hyresratt-2018-08.pdf)
+
 
       [For those who study and own their apartments](https://cdn.hedvig.com/info/forsakringsvillkor-student-bostadsratt-2018-08.pdf)
 
@@ -67,9 +69,12 @@ questions:
       [Pre-sale information for
       owners](https://cdn.hedvig.com/info/forkopsinformation-bostadsratt-2018-02.pdf)
 
+
       [Pre-sale information for renters that study](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
 
+
       [Pre-sale information for owners that study](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
+
 
       [Pre-sale information in accordance with european standards](https://cdn.hedvig.com/info/forkopsinformation-eu-standard-2018-09.pdf)
     question: 'What does my insurance cover? '

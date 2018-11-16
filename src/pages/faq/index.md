@@ -55,7 +55,9 @@ questions:
       [För dig som äger din
       lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-bostadsratt-2018-02.pdf)
 
+
       [För dig som studerar och hyr din lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-student-hyresratt-2018-08.pdf)
+
 
       [För dig som studerar och äger din lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-student-bostadsratt-2018-08.pdf)
 
@@ -74,7 +76,9 @@ questions:
       [Förköpsinformation för dig som äger
       lägenhet](https://cdn.hedvig.com/info/forkopsinformation-bostadsratt-2018-02.pdf)
 
+
       [Förköpsinformation för dig som studerar och hyr lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
+
 
       [Förköpsinformation för dig som studerar och äger lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
 
