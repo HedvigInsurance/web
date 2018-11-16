@@ -77,10 +77,10 @@ questions:
       lägenhet](https://cdn.hedvig.com/info/forkopsinformation-bostadsratt-2018-02.pdf)
 
 
-      [Förköpsinformation för dig som studerar och hyr lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
+      [Förköpsinformation för dig som studerar och hyr din lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
 
 
-      [Förköpsinformation för dig som studerar och äger lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
+      [Förköpsinformation för dig som studerar och äger din lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
 
 
       [Förköpsinformation enligt europeisk
