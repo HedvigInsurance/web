@@ -10,7 +10,7 @@ tags:
   - meet the team
 excerpt: Lär känna Sofia – Member Experience Manager på Hedvig!
 content: >-
-  ![Sofia Alvebro, Member Experience Manager på Hedvig](/uploads/dsc05934.jpg)
+  ![Team Hedvig](/uploads/dsc06387.jpg)
 
 
   **Namn** Sofia Alvebro · **Ålder **28 år · **Roll **Member Experience Manager
