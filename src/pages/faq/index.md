@@ -49,30 +49,42 @@ questions:
 
 
       [För dig som hyr din
-      lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+      lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-hyresratt-2018-02.pdf)
 
 
       [För dig som äger din
-      lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rs%C3%A4kringsvillkor+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+      lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-bostadsratt-2018-02.pdf)
+
+
+      [För dig som studerar och hyr din lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-student-hyresratt-2018-08.pdf)
+
+
+      [För dig som studerar och äger din lägenhet](https://cdn.hedvig.com/info/forsakringsvillkor-student-bostadsratt-2018-08.pdf)
 
 
       [För dig som försäkrar en extra dyr
-      pryl](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/Hedvigs+fo%CC%88rsa%CC%88kringsvillkor+fo%CC%88r+extra+dyr+pryl.pdf)
+      pryl](https://cdn.hedvig.com/info/forsakringsvillkor-sakforsakring-2018-02.pdf)
 
 
       Vill du inte läsa hela villkoren finns sammanfattningar här:
 
 
       [Förköpsinformation för dig som hyr
-      lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Hyresr%C3%A4tt+(Februari+2018).pdf)
+      lägenhet](https://cdn.hedvig.com/info/forkopsinformation-hyresratt-2018-02.pdf)
 
 
       [Förköpsinformation för dig som äger
-      lägenhet](https://s3.eu-central-1.amazonaws.com/com-hedvig-web-content/F%C3%B6rk%C3%B6psinformation+-+Bostadsr%C3%A4tt+(Februari+2018).pdf)
+      lägenhet](https://cdn.hedvig.com/info/forkopsinformation-bostadsratt-2018-02.pdf)
+
+
+      [Förköpsinformation för dig som studerar och hyr din lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-hyresratt-2018-08.pdf)
+
+
+      [Förköpsinformation för dig som studerar och äger din lägenhet](https://cdn.hedvig.com/info/forkopsinformation-student-bostadsratt-2018-08.pdf)
 
 
       [Förköpsinformation enligt europeisk
-      standard](https://www.hedvig.com/uploads/sv_eiopa_ipid_hedvig.pdf)
+      standard](https://cdn.hedvig.com/info/forkopsinformation-eu-standard-2018-09.pdf)
     question: Hur vet jag vad min försäkring täcker?
   - answer: |-
       Ditt pris beror på lite olika saker, till exempel hur du bor,
