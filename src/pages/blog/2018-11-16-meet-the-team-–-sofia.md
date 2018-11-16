@@ -28,8 +28,6 @@ content: >-
   vänner hade beklagat oss över bara några dagar tidigare."
 
 
-
-
   Jag blev så pass överraskad att jag slängde iväg ett mail för att berätta hur
   mycket jag uppskattar vad de försöker ta sig an, och hur spännande det kommer
   vara att följa deras resa. De var helt enkelt inne på helt rätt spår. Nu, 6
@@ -48,25 +46,38 @@ content: >-
   medlemmars röst är det viktigaste som finns, och vår kommunikation och
   funktionalitet utformas utefter deras behov och önskemål. Jag ser ständigt
   till att vi har en tight dialog, så att Hedvig växer och utvecklas i rätt
-  riktning – tillsammans med våra medlemmar. Två märken som är duktiga på detta
+  riktning - tillsammans med våra medlemmar. Två märken som är duktiga på detta
   är  och Glossier. 
 
 
-  **Sofias bästa Stockholmstips**\
+  **Sofias bästa Stockholmstips**
 
-  **Artipelag** · En perfekt dagsaktivitet om man vill komma bort från stan\
 
-  **Indio Kitchen** · Helt fantastisk mat, prova deras lobster roll!\
+  [**Artipelag**](https://artipelag.se/) · En perfekt dagsaktivitet om man vill
+  komma bort från stan
 
-  **Adornment Studios** · En oupptäckt vintagebutik\
 
-  **Bar á Vins** · Mysig fransk restaurang med underbart vin\
+  [**Indio Kitchen**](http://indio.se/kitchen/) · Helt fantastisk mat, prova
+  deras lobster roll!
 
-  **Bar Agrikultur** · Härlig restaurang precis vid Nytorget, med väldigt bra
-  råvaror\
 
-  **Nationalmuseum** · Ett måste nu efter nyöppningen\
+  [**Adornment Studios**](https://www.adornmentstudios.com/) · En oupptäckt
+  vintagebutik på Östermalm
 
-  **Totême** · Ser så mycket fram emot att Totême öppnar på Biblioteksgatan 2019
+
+  [**Bar á Vins**](http://www.baravins.se/) · Mysig fransk restaurang med
+  underbart vin
+
+
+  [**Bar Agrikultur**](http://www.agrikultur.se/) · Härlig restaurang precis vid
+  Nytorget, med väldigt bra råvaror
+
+
+  [**Nationalmuseum**](https://www.nationalmuseum.se/) · Ett måste nu efter
+  nyöppningen
+
+
+  [**Totême**](http://www.bibliotekstan.se/artiklar/2018/toteme/) · Ser så
+  mycket fram emot att Totême öppnar på Biblioteksgatan 2019!
 ---
 
