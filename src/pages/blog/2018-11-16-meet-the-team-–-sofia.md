@@ -47,7 +47,7 @@ content: >-
   funktionalitet utformas utefter deras behov och önskemål. Jag ser ständigt
   till att vi har en tight dialog, så att Hedvig växer och utvecklas i rätt
   riktning - tillsammans med våra medlemmar. Två märken som är duktiga på detta
-  är  och Glossier. 
+  är [Asket](https://www.asket.com/) och [Glossier](https://www.glossier.com/). 
 
 
   **Sofias bästa Stockholmstips**
