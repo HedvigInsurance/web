@@ -45,6 +45,7 @@ export interface AppLinkFormProps {
   ctaText: string;
   errorText: string;
   successText: string;
+  className?: string;
 }
 
 interface State {
@@ -115,7 +116,7 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
 
   render() {
     return (
-      <>
+      <div className={this.props.className}>
         {this.state.isSuccessful ? (
           <div>{this.props.successText}</div>
         ) : (
@@ -144,7 +145,7 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
             <ErrorText>{this.props.errorText}</ErrorText>
           </>
         )}
-      </>
+      </div>
     );
   }
 }

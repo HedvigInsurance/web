@@ -20,6 +20,12 @@ import { ReactComponent as CheckIcon } from 'assets/icons/check-icon.svg';
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { MediaLogos } from 'src/sections/landing/media-logos';
 import MediaQuery from 'react-responsive';
+import styled from 'react-emotion';
+import { AppLinkForm } from '../components/AppLinkForm';
+
+const PaddedAppLinkForm = styled(AppLinkForm)({
+  paddingBottom: 30,
+});
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -145,12 +151,14 @@ class StudentTemplate extends React.Component {
                       </div>
                     </div>
                     <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
-                      <AppLink
-                        tags={['student-hero']}
-                        className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
-                      >
-                        {landing.cta_text}
-                      </AppLink>
+                      <PaddedAppLinkForm
+                        phoneNumberPlaceholder={
+                          landing.phone_number_placeholder
+                        }
+                        ctaText={landing.form_submit_text}
+                        errorText={landing.error_text}
+                        successText={landing.success_text}
+                      />
                       <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9">
                         {landing.paragraph}
                       </p>
@@ -451,6 +459,10 @@ export const query = graphql`
             price
             explainer
           }
+          phone_number_placeholder
+          form_submit_text
+          success_text
+          error_text
         }
         three_explainers {
           heading
