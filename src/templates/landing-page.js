@@ -14,7 +14,6 @@ import { trackEvent } from 'src/utils/track-event';
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
 import MediaQuery from 'react-responsive';
-import styled from 'react-emotion';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -25,12 +24,6 @@ import { AppLinkForm } from '../components/AppLinkForm';
 import AppLink from '../components/AppLink';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
-
-const MobileAppLinkFormContainer = styled('div')({
-  '@media (min-width: 640px)': {
-    padding: 0,
-  },
-});
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -102,7 +95,7 @@ class LandingTemplate extends React.Component {
                       <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
                         {landing.subheading}
                       </p>
-                      <MobileAppLinkFormContainer className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter Container">
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2">
                         <MediaQuery query="(max-width: 600px)">
                           <AppLink
                             tags={['home-hero']}
@@ -122,7 +115,7 @@ class LandingTemplate extends React.Component {
                             linkOptions={{ is_home_hero: true }}
                           />
                         </MediaQuery>
-                      </MobileAppLinkFormContainer>
+                      </div>
                     </div>
                   </CTAWaypoint>
                   <div className="u-sizeFull u-lg-size2of5">
