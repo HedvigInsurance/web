@@ -97,8 +97,8 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
       phoneNumber,
       {
         ...linkOptions,
-        ...(this.props.linkOptions || {}),
         data: {
+          ...(this.props.linkOptions || {}),
           $custom_sms_text: 'Ladda ner Hedvig-appen: {{ link }}',
         },
       },
