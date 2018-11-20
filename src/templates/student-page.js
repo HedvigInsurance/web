@@ -151,14 +151,25 @@ class StudentTemplate extends React.Component {
                       </div>
                     </div>
                     <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT6 u-md-spaceMB3 u-lg-spaceMB2 u-textCenter">
-                      <PaddedAppLinkForm
-                        phoneNumberPlaceholder={
-                          landing.phone_number_placeholder
-                        }
-                        ctaText={landing.form_submit_text}
-                        errorText={landing.error_text}
-                        successText={landing.success_text}
-                      />
+                      <MediaQuery query="(min-width: 601px)">
+                        <PaddedAppLinkForm
+                          phoneNumberPlaceholder={
+                            landing.phone_number_placeholder
+                          }
+                          ctaText={landing.form_submit_text}
+                          errorText={landing.error_text}
+                          successText={landing.success_text}
+                          linkOptions={{ is_student_hero: true }}
+                        />
+                      </MediaQuery>
+                      <MediaQuery query="(max-width: 600px)">
+                        <AppLink
+                          tags={['student-hero']}
+                          className="Button Student-cta u-colorWhite u-backgroundPrimaryGreen u-spaceMB12 u-md-spaceMB10 u-lg-spaceMB10 u-fontWeightBold"
+                        >
+                          {landing.cta_text}
+                        </AppLink>
+                      </MediaQuery>
                       <p className="u-colorBlack u-textCenter u-md-textLeft u-lg-textLeft u-fontSize9">
                         {landing.paragraph}
                       </p>

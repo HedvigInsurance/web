@@ -22,6 +22,7 @@ import { CustomerSources } from '../sections/landing/customer-sources';
 import { PerilForest } from '../sections/landing/peril-forest';
 import { MediaLogos } from '../sections/landing/media-logos';
 import { AppLinkForm } from '../components/AppLinkForm';
+import AppLink from '../components/AppLink';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -102,17 +103,15 @@ class LandingTemplate extends React.Component {
                         {landing.subheading}
                       </p>
                       <MobileAppLinkFormContainer className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter Container">
-                        <MediaQuery query="(max-width: 900px)">
-                          <AppLinkForm
-                            phoneNumberPlaceholder={
-                              landing.phone_number_placeholder
-                            }
-                            ctaText={landing.form_submit_text}
-                            errorText={landing.error_text}
-                            successText={landing.success_text}
-                          />
+                        <MediaQuery query="(max-width: 600px)">
+                          <AppLink
+                            tags={['home-hero']}
+                            className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                          >
+                            {landing.cta_text}
+                          </AppLink>
                         </MediaQuery>
-                        <MediaQuery query="(min-width: 901px)">
+                        <MediaQuery query="(min-width: 601px)">
                           <AppLinkForm
                             phoneNumberPlaceholder={
                               landing.phone_number_placeholder
@@ -120,6 +119,7 @@ class LandingTemplate extends React.Component {
                             ctaText={landing.form_submit_text}
                             errorText={landing.error_text}
                             successText={landing.success_text}
+                            linkOptions={{ is_home_hero: true }}
                           />
                         </MediaQuery>
                       </MobileAppLinkFormContainer>

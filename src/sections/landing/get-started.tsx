@@ -4,6 +4,7 @@ import { colors, fonts } from '@hedviginsurance/brand';
 import MediaQuery from 'react-responsive';
 import Img from 'gatsby-image';
 import { AppLinkForm, AppLinkFormProps } from 'src/components/AppLinkForm';
+import AppLink from 'src/components/AppLink';
 
 interface Props extends AppLinkFormProps {
   heading1: string;
@@ -64,6 +65,10 @@ const Headline = styled('h2')({
   },
 });
 
+const GetStartedBtnMobile = styled('div')({
+  paddingTop: 30,
+});
+
 const Paragraph = styled('p')({
   paddingTop: 10,
   paddingBottom: 30,
@@ -72,6 +77,12 @@ const Paragraph = styled('p')({
   },
 });
 
+const LinkTag = styled(AppLink)({
+  padding: '15px 75px',
+  '@media (max-width: 600px)': {
+    width: '100%',
+  },
+});
 const Image = styled(Img)({
   width: 480,
   '@media (max-width: 959px)': {
@@ -83,12 +94,14 @@ const GetStarted: React.SFC<Props> = (props) => (
   <Section>
     <Container className="Container">
       <MediaQuery query="(max-width: 600px)">
-        <AppLinkForm
-          phoneNumberPlaceholder={props.phoneNumberPlaceholder}
-          ctaText={props.ctaText}
-          errorText={props.errorText}
-          successText={props.successText}
-        />
+        <GetStartedBtnMobile>
+          <LinkTag
+            tags={['get-started']}
+            className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+          >
+            {props.buttontext}
+          </LinkTag>
+        </GetStartedBtnMobile>
       </MediaQuery>
 
       <ImageContainer>
@@ -109,6 +122,7 @@ const GetStarted: React.SFC<Props> = (props) => (
             ctaText={props.ctaText}
             errorText={props.errorText}
             successText={props.successText}
+            linkOptions={{ is_desktop_splash_form: true }}
           />
         </MediaQuery>
       </HeadlineContainer>

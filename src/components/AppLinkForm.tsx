@@ -46,6 +46,7 @@ export interface AppLinkFormProps {
   errorText: string;
   successText: string;
   className?: string;
+  linkOptions?: { [key: string]: any };
 }
 
 interface State {
@@ -96,6 +97,7 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
       phoneNumber,
       {
         ...linkOptions,
+        ...(this.props.linkOptions || {}),
         data: {
           $custom_sms_text: 'Ladda ner Hedvig-appen: {{ link }}',
         },
