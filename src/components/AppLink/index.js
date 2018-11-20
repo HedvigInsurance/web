@@ -59,7 +59,7 @@ class AppLink extends React.Component {
       {
         ...linkOptions,
         data: {
-          $desktop_url: `${host}/new-member`,
+          $desktop_url: `${host}/download`,
           path,
         },
       },
