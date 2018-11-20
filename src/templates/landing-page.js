@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
-import AppLink from 'src/components/AppLink';
 
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
@@ -15,6 +14,7 @@ import { trackEvent } from 'src/utils/track-event';
 import './Home.css';
 import { GetStarted } from 'src/sections/landing/get-started';
 import MediaQuery from 'react-responsive';
+import styled from 'react-emotion';
 import ClaimOnPhone from '../components/Animations/ClaimOnPhone';
 import InsuranceInMinutes from '../components/Animations/InsuranceInMinutes';
 import PaidRightAway from '../components/Animations/PaidRightAway';
@@ -24,6 +24,12 @@ import { MediaLogos } from '../sections/landing/media-logos';
 import { AppLinkForm } from '../components/AppLinkForm';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
+
+const MobileAppLinkFormContainer = styled('div')({
+  '@media (min-width: 640px)': {
+    padding: 0,
+  },
+});
 
 const THREE_EXPLAINER_WIDTH_HEIGHT = 210;
 
@@ -95,14 +101,16 @@ class LandingTemplate extends React.Component {
                       <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
                         {landing.subheading}
                       </p>
-                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
+                      <MobileAppLinkFormContainer className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter Container">
                         <MediaQuery query="(max-width: 900px)">
-                          <AppLink
-                            tags={['home-hero']}
-                            className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-                          >
-                            {landing.cta_text}
-                          </AppLink>
+                          <AppLinkForm
+                            phoneNumberPlaceholder={
+                              landing.phone_number_placeholder
+                            }
+                            ctaText={landing.form_submit_text}
+                            errorText={landing.error_text}
+                            successText={landing.success_text}
+                          />
                         </MediaQuery>
                         <MediaQuery query="(min-width: 901px)">
                           <AppLinkForm
@@ -114,7 +122,7 @@ class LandingTemplate extends React.Component {
                             successText={landing.success_text}
                           />
                         </MediaQuery>
-                      </div>
+                      </MobileAppLinkFormContainer>
                     </div>
                   </CTAWaypoint>
                   <div className="u-sizeFull u-lg-size2of5">
@@ -236,7 +244,14 @@ class LandingTemplate extends React.Component {
               paragraph={customerSources.paragraph}
             />
 
-            <GetStarted {...getStarted} image={getStartedImage} />
+            <GetStarted
+              {...getStarted}
+              image={getStartedImage}
+              phoneNumberPlaceholder={landing.phone_number_placeholder}
+              ctaText={landing.form_submit_text}
+              errorText={landing.error_text}
+              successText={landing.success_text}
+            />
           </StickyContainer>
         </section>
 

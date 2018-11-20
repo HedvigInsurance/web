@@ -8,9 +8,14 @@ import { colors } from '@hedviginsurance/brand';
 import Cookies from 'js-cookie';
 import { DownloadSpinner } from 'src/components/DownloadSpinner';
 
-const CustomButton = styled(Button)(({ disabled }: { disabled: boolean }) => ({
-  backgroundColor: disabled ? colors.LIGHT_GRAY : colors.GREEN,
-}));
+const CustomButton = styled(Button)(
+  ({ disabled, touched }: { disabled: boolean; touched: boolean }) => ({
+    backgroundColor: disabled && touched ? colors.LIGHT_GRAY : colors.GREEN,
+    opacity: !touched ? 0.5 : 1,
+    transition: 'background-color 250ms, opacity 250ms',
+    whiteSpace: 'nowrap',
+  }),
+);
 const Input = styled('input')(({ error }: { error: boolean }) => ({
   minWidth: 280,
   borderWidth: 2,
@@ -25,7 +30,8 @@ const Input = styled('input')(({ error }: { error: boolean }) => ({
 
 const Form = styled('form')({
   display: 'flex',
-  '@media (max-width: 1024px)': {
+  maxWidth: '100%',
+  '@media (max-width: 1050px)': {
     flexDirection: 'column',
   },
 });
@@ -34,7 +40,7 @@ const ErrorText = styled('p')({
   color: colors.PINK,
 });
 
-interface AppLinkFormProps {
+export interface AppLinkFormProps {
   phoneNumberPlaceholder: string;
   ctaText: string;
   errorText: string;
@@ -46,6 +52,7 @@ interface State {
   hasErrors: boolean;
   isSuccessful: boolean;
   isSending: boolean;
+  isTouched: boolean;
 }
 
 export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
@@ -54,10 +61,11 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
     hasErrors: false,
     isSuccessful: false,
     isSending: false,
+    isTouched: false,
   };
 
   handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    this.setState({ phoneNumber: event.target.value });
+    this.setState({ phoneNumber: event.target.value, isTouched: true });
   };
 
   handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
@@ -123,6 +131,7 @@ export class AppLinkForm extends React.PureComponent<AppLinkFormProps, State> {
             <CustomButton
               type="submit"
               disabled={!this.state.phoneNumber || this.state.isSending}
+              touched={this.state.isTouched}
             >
               {this.props.ctaText}
             </CustomButton>
