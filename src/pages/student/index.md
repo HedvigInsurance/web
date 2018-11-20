@@ -14,6 +14,10 @@ landing:
   subheading: >-
     Hemförsäkring som gjort för studenter.
   subheading_emphasis: Drulle ingår!
+  phone_number_placeholder: Skriv in ditt mobilnummer
+  form_submit_text: Få en länk till appen
+  success_text: Vi har skickat dig ett sms med en länk för att ladda ner Hedvig-appen
+  error_text: Ojdå! Det gick inte att skicka sms till det angivna numret. Dubbelkolla numret och prova igen.
 three_explainers:
   heading: Barnsligt enkelt att kamma hem vuxenpoäng
   three_explainers:

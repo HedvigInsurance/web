@@ -7,7 +7,7 @@ const buttonSizes = {
 };
 
 interface ButtonProps {
-  size: keyof typeof buttonSizes;
+  size?: keyof typeof buttonSizes;
 }
 
 const Button = styled('button')(({ size = 'md' }: ButtonProps) => ({

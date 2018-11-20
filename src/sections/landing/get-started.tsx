@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { colors } from '@hedviginsurance/brand';
-import { fonts } from '@hedviginsurance/brand';
-import AppLink from 'src/components/AppLink';
+import { colors, fonts } from '@hedviginsurance/brand';
 import MediaQuery from 'react-responsive';
 import Img from 'gatsby-image';
+import { AppLinkForm, AppLinkFormProps } from 'src/components/AppLinkForm';
+import AppLink from 'src/components/AppLink';
 
-interface Props {
+interface Props extends AppLinkFormProps {
   heading1: string;
   heading2: string;
   paragraph: string;
@@ -65,20 +65,16 @@ const Headline = styled('h2')({
   },
 });
 
-const Paragraph = styled('p')({
-  paddingTop: 10,
-  '@media (max-width: 600px)': {
-    textAlign: 'center',
-    paddingBottom: 30,
-  },
-});
-
-const GetStartedBtn = styled('div')({
-  paddingTop: 50,
-});
-
 const GetStartedBtnMobile = styled('div')({
   paddingTop: 30,
+});
+
+const Paragraph = styled('p')({
+  paddingTop: 10,
+  paddingBottom: 30,
+  '@media (max-width: 600px)': {
+    textAlign: 'center',
+  },
 });
 
 const LinkTag = styled(AppLink)({
@@ -87,7 +83,6 @@ const LinkTag = styled(AppLink)({
     width: '100%',
   },
 });
-
 const Image = styled(Img)({
   width: 480,
   '@media (max-width: 959px)': {
@@ -122,14 +117,13 @@ const GetStarted: React.SFC<Props> = (props) => (
         </Headline>
         <Paragraph>{props.paragraph}</Paragraph>
         <MediaQuery query="(min-width: 601px)">
-          <GetStartedBtn>
-            <LinkTag
-              tags={['get-started']}
-              className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-            >
-              {props.buttontext}
-            </LinkTag>
-          </GetStartedBtn>
+          <AppLinkForm
+            phoneNumberPlaceholder={props.phoneNumberPlaceholder}
+            ctaText={props.ctaText}
+            errorText={props.errorText}
+            successText={props.successText}
+            linkOptions={{ is_desktop_splash_form: true }}
+          />
         </MediaQuery>
       </HeadlineContainer>
     </Container>

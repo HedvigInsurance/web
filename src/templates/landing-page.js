@@ -7,7 +7,6 @@ import { Helmet } from 'react-helmet';
 
 import Header, { headerPropTypes } from 'src/components/Header';
 import Footer, { footerPropTypes } from 'src/components/Footer';
-import AppLink from 'src/components/AppLink';
 
 import { CTAWaypoint } from 'src/components/CTAWaypoint';
 import { trackEvent } from 'src/utils/track-event';
@@ -21,6 +20,8 @@ import PaidRightAway from '../components/Animations/PaidRightAway';
 import { CustomerSources } from '../sections/landing/customer-sources';
 import { PerilForest } from '../sections/landing/peril-forest';
 import { MediaLogos } from '../sections/landing/media-logos';
+import { AppLinkForm } from '../components/AppLinkForm';
+import AppLink from '../components/AppLink';
 
 const claimsAnimation = require('assets/animations/chat-demo/data.json');
 
@@ -94,13 +95,26 @@ class LandingTemplate extends React.Component {
                       <p className="Home-hero-subheading u-colorPrimaryBlue u-fontSize9 u-md-fontSize8 u-lg-fontSize8 u-textCenter u-md-textLeft u-lg-textLeft u-spaceMT11">
                         {landing.subheading}
                       </p>
-                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2 u-textCenter">
-                        <AppLink
-                          tags={['home-hero']}
-                          className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
-                        >
-                          {landing.cta_text}
-                        </AppLink>
+                      <div className="Grid Grid--alignCenter u-lg-flexJustifyStart u-spaceMT8 u-lg-spaceMB2">
+                        <MediaQuery query="(max-width: 600px)">
+                          <AppLink
+                            tags={['home-hero']}
+                            className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+                          >
+                            {landing.cta_text}
+                          </AppLink>
+                        </MediaQuery>
+                        <MediaQuery query="(min-width: 601px)">
+                          <AppLinkForm
+                            phoneNumberPlaceholder={
+                              landing.phone_number_placeholder
+                            }
+                            ctaText={landing.form_submit_text}
+                            errorText={landing.error_text}
+                            successText={landing.success_text}
+                            linkOptions={{ is_home_hero: true }}
+                          />
+                        </MediaQuery>
                       </div>
                     </div>
                   </CTAWaypoint>
@@ -223,7 +237,14 @@ class LandingTemplate extends React.Component {
               paragraph={customerSources.paragraph}
             />
 
-            <GetStarted {...getStarted} image={getStartedImage} />
+            <GetStarted
+              {...getStarted}
+              image={getStartedImage}
+              phoneNumberPlaceholder={landing.phone_number_placeholder}
+              ctaText={landing.form_submit_text}
+              errorText={landing.error_text}
+              successText={landing.success_text}
+            />
           </StickyContainer>
         </section>
 
@@ -374,6 +395,10 @@ export const query = graphql`
           heading
           subheading
           cta_text
+          phone_number_placeholder
+          form_submit_text
+          success_text
+          error_text
         }
         three_explainers {
           heading

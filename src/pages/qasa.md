@@ -9,6 +9,10 @@ landing:
   subheading: >-
     Hedvig och Qasa gör det tillsammans tryggare för dig att hyra i andrahand.
     Alltid utan bindningstid.
+  phone_number_placeholder: Skriv in ditt mobilnummer
+  form_submit_text: Få en länk till appen
+  success_text: Vi har skickat dig ett sms med en länk för att ladda ner Hedvig-appen
+  error_text: Ojdå! Det gick inte att skicka sms till det angivna numret. Dubbelkolla numret och prova igen
 three_explainers:
   heading: Detta är Hedvig
   three_explainers:

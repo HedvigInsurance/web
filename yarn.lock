@@ -867,6 +867,11 @@
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.7.tgz#77f9a4332ccf8db680a31818ade3ee454c831a79"
   integrity sha512-N0p6mHrS0RHC3A9hHN4QH1RM2fGSb2E8rt6ONEK5xKSnyKtn/JAhr1VritkCn6cdyDBephVB80THqJGWzK8FAw==
 
+"@types/js-cookie@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-2.2.0.tgz#ae2eabaa4bc892ba553c664cca21e6ee5224e5b5"
+  integrity sha512-k0umv2jvUvl1/OdOgFwEIPF6qKllf2jEsrd5ka9aVQo2ilxaBb2vsh1AmAAZ3eqt54vNrdbGW5QPOKJBmCNS7g==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
