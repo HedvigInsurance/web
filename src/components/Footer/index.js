@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import { ReactComponent as FacebookIcon } from 'assets/social/social-icon-facebook.svg';
 import { ReactComponent as TwitterIcon } from 'assets/social/social-icon-twitter.svg';
 import { ReactComponent as InstagramIcon } from 'assets/social/social-icon-instagram.svg';
@@ -50,13 +49,13 @@ const renderLink = (link) => {
   }
 
   return (
-    <Link
+    <a
       key={link.path}
       className="u-spaceMB9 u-linkBlock u-colorWhite"
-      to={link.path}
+      href={link.path}
     >
       {link.label}
-    </Link>
+    </a>
   );
 };
 
@@ -154,12 +153,12 @@ const Footer = ({ data = {}, langKey }, { location }) => {
           </a>
         </div>
         <div className="u-spaceMB8">
-          <Link to="/" className="u-spaceMR12" aria-label="Svenska">
+          <a href="/" className="u-spaceMR12" aria-label="Svenska">
             <FlagSe role="presentation" width={40} height={25} />
-          </Link>
-          <Link to="/en" aria-label="English">
+          </a>
+          <a href="/en" aria-label="English">
             <FlagEn role="presentation" width={40} height={25} />
-          </Link>
+          </a>
         </div>
         <div className="u-spaceMB10">
           <p className="u-fontSize10 u-colorWhite u-spaceMB9">

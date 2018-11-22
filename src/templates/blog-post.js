@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import GatsbyLink from 'gatsby-link';
 import { Helmet } from 'react-helmet';
 import { StickyContainer } from 'react-sticky';
 
@@ -116,7 +115,7 @@ const Cta = styled(Button)({
     fontSize: 16,
     color: colors.WHITE,
   },
-}).withComponent(GatsbyLink);
+}).withComponent('a');
 
 const BlogPostTemplate = ({
   title,
@@ -178,7 +177,7 @@ const BlogPostTemplate = ({
             {cta &&
               cta.show && (
                 <CtaContainer>
-                  <Cta to={cta.target} size="sm">
+                  <Cta href={cta.target} size="sm">
                     {cta.label}
                   </Cta>
                 </CtaContainer>
@@ -186,7 +185,7 @@ const BlogPostTemplate = ({
             <div>
               {tags &&
                 tags.filter((tag) => tag.trim() !== '').map((tag) => (
-                  <BlogLink key={tag} to={`/blog/tags/${kebabCaseTag(tag)}`}>
+                  <BlogLink key={tag} href={`/blog/tags/${kebabCaseTag(tag)}`}>
                     <Badge>{tag}</Badge>
                   </BlogLink>
                 ))}
