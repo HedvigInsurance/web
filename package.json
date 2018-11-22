@@ -104,7 +104,7 @@
     "react-transitions": "^1.0.0",
     "react-visibility-sensor": "^4.1.0",
     "remark": "^9.0.0",
-    "remark-parse": "^5.0.0",
+    "remark-parse": "^6.0.3",
     "remark-react": "^4.0.3",
     "rimraf": "^2.6.2",
     "scrollingelement": "^1.5.2",
