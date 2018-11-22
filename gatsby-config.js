@@ -137,9 +137,6 @@ module.exports = {
       resolve: 'gatsby-transformer-json',
     },
     {
-      resolve: 'gatsby-plugin-catch-links',
-    },
-    {
       resolve: 'gatsby-plugin-sitemap',
     },
     {

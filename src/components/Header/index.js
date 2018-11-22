@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import classNames from 'classnames';
 import { Sticky } from 'react-sticky';
 
@@ -98,9 +97,9 @@ class Header extends React.Component {
           <header className="Header" style={style}>
             <div className="u-flex">
               <div className="u-flexGrow1 Header-logo">
-                <Link to={logoLink.path} aria-label={logoLink.altText}>
+                <a href={logoLink.path} aria-label={logoLink.altText}>
                   <Logo />
-                </Link>
+                </a>
               </div>
               <div>
                 <CTALinkContainer ctaText={ctaTextDesktop}>
@@ -108,13 +107,13 @@ class Header extends React.Component {
                     <div className="u-flex u-flexRow">
                       {links &&
                         links.map((link) => (
-                          <Link
+                          <a
                             key={link.path}
-                            to={link.path}
+                            href={link.path}
                             className="Header-menu-link u-linkBlock"
                           >
                             {link.label}
-                          </Link>
+                          </a>
                         ))}
                     </div>
                   </nav>
@@ -139,13 +138,13 @@ class Header extends React.Component {
                   <div>
                     {links &&
                       links.map((link) => (
-                        <Link
+                        <a
                           key={link.path}
-                          to={link.path}
+                          href={link.path}
                           className="u-spacePV11 u-linkBlock"
                         >
                           {link.label}
-                        </Link>
+                        </a>
                       ))}
                   </div>
                   <div className="u-textCenter u-spacePT10">

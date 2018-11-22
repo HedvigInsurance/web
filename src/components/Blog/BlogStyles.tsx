@@ -1,5 +1,4 @@
 import styled from 'react-emotion';
-import Link from 'gatsby-link';
 import { colors } from '@hedviginsurance/brand';
 
 const TABLET_UP = '@media (min-width: 797px)';
@@ -49,11 +48,11 @@ const PostHeader = styled('h2')((props: PostHeaderProps) => ({
   lineHeight: 1.2,
 }));
 
-const BlogLink = styled(Link)({
+const BlogLink = styled('a')({
   textDecoration: 'none',
 });
 
-const ReadMoreLink = styled(Link)({
+const ReadMoreLink = styled('a')({
   '&&': {
     color: colors.PURPLE,
     textDecoration: 'none',

@@ -56,7 +56,7 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
     <BlogPostAuthor author={author} date={date} />
     <TopImage src={topImage} alt="" />
     <Spacing height={18} />
-    <BlogLink to={slug}>
+    <BlogLink href={slug}>
       <PostHeader size="sm">{title}</PostHeader>
     </BlogLink>
     <div>
@@ -65,13 +65,13 @@ const BlogPost: React.SFC<BlogPostProps & PostContainerProps> = ({
     <Tags>
       {tags.filter((tag) => tag.trim() !== '').map((tag) => (
         // @ts-ignore
-        <BlogLink key={tag} to={`/blog/tags/${kebabCaseTag(tag)}`}>
+        <BlogLink key={tag} href={`/blog/tags/${kebabCaseTag(tag)}`}>
           <Badge>{tag}</Badge>
         </BlogLink>
       ))}
     </Tags>
     <ReadMoreContainer>
-      <ReadMoreLink to={slug}>Läs inlägget</ReadMoreLink>
+      <ReadMoreLink href={slug}>Läs inlägget</ReadMoreLink>
     </ReadMoreContainer>
   </PostContainer>
 );

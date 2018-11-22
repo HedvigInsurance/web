@@ -78,7 +78,7 @@ const TagTemplate = ({ data, pathContext }) => {
         <Header data={header} langKey="se" />
         <BlogContainer verticalMargin>
           <Breadcrumbs>
-            <Breadcrumb to="/blog">Blogg</Breadcrumb>
+            <Breadcrumb href="/blog">Blogg</Breadcrumb>
             <Breadcrumb>Taggar</Breadcrumb>
             <Breadcrumb>{tag}</Breadcrumb>
           </Breadcrumbs>

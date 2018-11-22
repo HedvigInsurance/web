@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import GatsbyLink from 'gatsby-link';
 
 interface BreadcrumbProps {
-  to?: string;
+  href?: string;
 }
 
 const BreadcrumbComponent = styled('li')({
@@ -18,10 +17,10 @@ const BreadcrumbComponent = styled('li')({
 
 const PlainBreadcrumb = styled('span')({});
 
-const Breadcrumb: React.SFC<BreadcrumbProps> = ({ to, children }) => (
+const Breadcrumb: React.SFC<BreadcrumbProps> = ({ href, children }) => (
   <BreadcrumbComponent>
-    {to ? (
-      <GatsbyLink to={to}>{children}</GatsbyLink>
+    {href ? (
+      <a href={href}>{children}</a>
     ) : (
       <PlainBreadcrumb>{children}</PlainBreadcrumb>
     )}
