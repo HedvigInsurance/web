@@ -98,7 +98,7 @@ const PrevNextCard: React.SFC<Props> = ({
   background,
 }) =>
   post ? (
-    <CardLink to={post.node.fields.slug} background={background}>
+    <CardLink href={post.node.fields.slug} background={background}>
       <CardDirection>{phoneCardDirection}</CardDirection>
       <CustomCard>
         <div>

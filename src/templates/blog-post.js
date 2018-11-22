@@ -158,7 +158,7 @@ const BlogPostTemplate = ({
         {topImage && <TopImage src={topImage} />}
         <BlogContainer verticalMargin>
           <Breadcrumbs>
-            <Breadcrumb to="/blog">Blogg</Breadcrumb>
+            <Breadcrumb href="/blog">Blogg</Breadcrumb>
             <Breadcrumb>{truncate(25)(title)}</Breadcrumb>
           </Breadcrumbs>
           <PostContainer isFirst isLast>
