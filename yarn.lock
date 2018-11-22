@@ -6486,14 +6486,6 @@ gatsby-plugin-canonical-urls@^1.0.18:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-catch-links@^1.0.24:
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-1.0.26.tgz#6a190f3ad55a35539ef2839afd9caa51a207f4c1"
-  integrity sha512-neznwTlPm6pA1MW4vDm6wyOdQU3iwKKGztI/RtLAQ2ttOVynJmaGh4iaC62ZKCyCTnWcp13Be/ig18pQOhLzLg==
-  dependencies:
-    babel-runtime "^6.26.0"
-    escape-string-regexp "^1.0.5"
-
 gatsby-plugin-emotion@^1.1.17:
   version "1.1.17"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-1.1.17.tgz#27b31f03ea47007aa84efa3b19b5653bf863af4b"
