@@ -5,12 +5,6 @@ landing:
   cta_text: Get your price
   heading: Life happens. Let Hedvig help.
   subheading: 'Home insurance reimagined for your lifestyle. It''s simple, fast and fair.'
-  phone_number_placeholder: Enter you mobile number
-  form_submit_text: Get a link to the app
-  success_text: Great! We have sent you an SMS with a link to the Hedvig app.
-  error_text: >-
-    Oops. We couldn't send an SMS to that number. Please double-check the number
-    and try again.
 three_explainers:
   heading: Skip the phone queues and elevator music
   three_explainers:

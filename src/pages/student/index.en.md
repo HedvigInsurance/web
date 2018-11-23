@@ -12,12 +12,6 @@ landing:
   paragraph: Billed monthly. No fixed contracts!
   subheading: Home insurance designed for students - all done by chat.
   cta_text: Get Hedvig for students
-  phone_number_placeholder: Enter you mobile number
-  form_submit_text: Get a link to the app
-  success_text: Great! We have sent you an SMS with a link to the Hedvig app.
-  error_text: >-
-    Oops. We couldn't send an SMS to that number. Please double-check the number
-    and try again.
 three_explainers:
   heading: An easy way to earn some 'adult points'.
   three_explainers:

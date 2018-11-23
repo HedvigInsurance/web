@@ -3,10 +3,9 @@ import styled from 'react-emotion';
 import { colors, fonts } from '@hedviginsurance/brand';
 import MediaQuery from 'react-responsive';
 import Img from 'gatsby-image';
-import { AppLinkForm, AppLinkFormProps } from 'src/components/AppLinkForm';
 import AppLink from 'src/components/AppLink';
 
-interface Props extends AppLinkFormProps {
+interface Props {
   heading1: string;
   heading2: string;
   paragraph: string;
@@ -65,6 +64,10 @@ const Headline = styled('h2')({
   },
 });
 
+const GetStartedBtn = styled('div')({
+  paddingTop: 50,
+});
+
 const GetStartedBtnMobile = styled('div')({
   paddingTop: 30,
 });
@@ -117,13 +120,14 @@ const GetStarted: React.SFC<Props> = (props) => (
         </Headline>
         <Paragraph>{props.paragraph}</Paragraph>
         <MediaQuery query="(min-width: 601px)">
-          <AppLinkForm
-            phoneNumberPlaceholder={props.phoneNumberPlaceholder}
-            ctaText={props.ctaText}
-            errorText={props.errorText}
-            successText={props.successText}
-            linkOptions={{ is_desktop_splash_form: true }}
-          />
+          <GetStartedBtn>
+            <LinkTag
+              tags={['get-started']}
+              className="Button u-fontSize10 u-colorWhite u-backgroundPrimaryGreen u-md-spaceMR12 u-lg-spaceMR12 u-fontWeightBold"
+            >
+              {props.buttontext}
+            </LinkTag>
+          </GetStartedBtn>
         </MediaQuery>
       </HeadlineContainer>
     </Container>
