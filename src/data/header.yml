@@ -1,5 +1,5 @@
 se:
-  ctaTextDesktop: Skaffa Hedvig
+  ctaTextDesktop: Säg hej
   ctaTextMobile: Ladda ner appen
   links:
     - label: Student
@@ -14,7 +14,7 @@ se:
     altText: Hedvig hem
     path: /
 en:
-  ctaTextDesktop: Get Hedvig
+  ctaTextDesktop: Say hi
   ctaTextMobile: Download the app
   links:
     - label: Student
