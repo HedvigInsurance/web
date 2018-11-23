@@ -6,10 +6,6 @@ landing:
   cta_text: Få ditt pris
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din lägenhet och alla dina prylar - sköt allt direkt i appen.
-  phone_number_placeholder: Skriv in ditt mobilnummer
-  form_submit_text: Få en länk till appen
-  success_text: Vi har skickat dig ett sms med en länk för att ladda ner Hedvig-appen
-  error_text: Ojdå! Det gick inte att skicka sms till det angivna numret. Dubbelkolla numret och prova igen.
 three_explainers:
   heading: Hemförsäkring behöver inte vara komplicerat
   three_explainers:
