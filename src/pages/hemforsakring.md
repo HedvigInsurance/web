@@ -3,7 +3,7 @@ templateKey: landing-page
 title: "Hedvig Hemförsäkring |\_Få hjälp när du behöver det"
 noindex: true
 landing:
-  cta_text: Få ditt pris
+  cta_text: Säg hej till Hedvig
   heading: Sveriges smidigaste hemförsäkring
   subheading: För din lägenhet och alla dina prylar - sköt allt direkt i appen.
 three_explainers:
