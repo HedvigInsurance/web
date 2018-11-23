@@ -374,10 +374,6 @@ export const query = graphql`
           heading
           subheading
           cta_text
-          phone_number_placeholder
-          form_submit_text
-          success_text
-          error_text
         }
         three_explainers {
           heading

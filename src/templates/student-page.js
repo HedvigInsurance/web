@@ -451,10 +451,6 @@ export const query = graphql`
             price
             explainer
           }
-          phone_number_placeholder
-          form_submit_text
-          success_text
-          error_text
         }
         three_explainers {
           heading
