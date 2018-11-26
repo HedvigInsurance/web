@@ -9,8 +9,7 @@ const Video = styled('video')({
   },
 });
 
-const baseVideoUrl =
-  'https://s3.eu-central-1.amazonaws.com/www.hedvig.com/rotating-phone-video';
+const baseVideoUrl = 'https://cdn.hedvig.com/www/rotating-phone-video';
 
 const RotatingPhoneVideo: React.SFC = () => (
   <Video autoPlay loop muted playsInline>
