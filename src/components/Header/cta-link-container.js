@@ -13,7 +13,7 @@ const PositionAnimation = styled('div')`
 
   @media (min-width: 960px) {
     margin-right: 0;
-    transform: translateX(155px);
+    transform: translateX(125px);
     ${({ isVisible }) => isVisible && `transform: translateX(0);`};
   }
 `;
