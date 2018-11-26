@@ -84,7 +84,7 @@ interface FullScreenUpdate {
   isFullScreen: boolean;
 }
 
-const baseVideoUrl = `https://s3.eu-central-1.amazonaws.com/www.hedvig.com/about-us-video`;
+const baseVideoUrl = `https://cdn.hedvig.com/www/about-us-video`;
 
 export const Player: React.SFC<PlayerProps> = ({ isFullScreen, videoRef }) => (
   <Update<FullScreenUpdate>
