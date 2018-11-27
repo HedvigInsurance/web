@@ -33,7 +33,7 @@ customerSources:
   headline: "Redan försäkrad? Vi sköter\_bytet"
   paragraph: Våra användare kommer ifrån
 get_started:
-  buttontext: Säg hej till Hedvig
+  buttontext: Skaffa Hedvig
   heading1: 2 minuter. 8 frågor.
   heading2: Din perfekta försäkring.
   imageAltText: Hedvig-appen på en iPhone
