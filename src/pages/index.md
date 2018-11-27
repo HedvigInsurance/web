@@ -3,7 +3,7 @@ templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
 noindex: true
 landing:
-  cta_text: Säg hej till Hedvig
+  cta_text: Skaffa Hedvig
   heading: "Livet händer. Låt\_Hedvig hjälpa dig."
   subheading: >-
     Hedvig är hemförsäkring skapat för din livsstil. Det är enkelt, snabbt och
@@ -33,7 +33,7 @@ customerSources:
   headline: "Redan försäkrad? Vi sköter\_bytet"
   paragraph: Våra användare kommer ifrån
 get_started:
-  buttontext: Säg hej till Hedvig
+  buttontext: Skaffa Hedvig
   heading1: 2 minuter. 8 frågor.
   heading2: Din perfekta försäkring.
   imageAltText: Hedvig-appen på en iPhone
