@@ -19,6 +19,7 @@ class AppLink extends React.Component {
     keywords: PropTypes.arrayOf(PropTypes.string),
     feature: PropTypes.string,
     stage: PropTypes.string,
+    innerRef: PropTypes.func,
   };
 
   static contextTypes = {
@@ -34,6 +35,7 @@ class AppLink extends React.Component {
     feature: null,
     stage: null,
     keywords: null,
+    innerRef: null,
   };
 
   state = {
@@ -59,7 +61,7 @@ class AppLink extends React.Component {
       {
         ...linkOptions,
         data: {
-          $desktop_url: `${host}/download`,
+          $desktop_url: `${host}/new-member`,
           path,
         },
       },
@@ -78,10 +80,15 @@ class AppLink extends React.Component {
   };
 
   render() {
-    const { children, ...props } = this.props;
+    const { children, innerRef, ...props } = this.props;
     const { link } = this.state;
     return (
-      <a {...props} href={link} onClick={() => this.trackClick()}>
+      <a
+        {...props}
+        href={link}
+        ref={innerRef}
+        onClick={() => this.trackClick()}
+      >
         {children}
       </a>
     );
