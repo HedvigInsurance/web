@@ -1,6 +1,6 @@
 ---
 templateKey: download-page
-heading: Få ditt pris och bli medlem i Hedvig-appen
+heading: Få ditt pris och bli medlem
 paragraph1: ' '
 paragraph2: ' '
 phone_number_placeholder: Skriv in ditt mobilnummer
