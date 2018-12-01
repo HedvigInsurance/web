@@ -84,6 +84,10 @@ const HTML = ({
         type="text/javascript"
         dangerouslySetInnerHTML={getSnapTrackingCode()}
       />
+      <meta
+        name="google-site-verification"
+        content="BXRlEOqZgYtS-KjUZRPXj5_YIDXQK5RN3FRHNd2R7po"
+      />
     </head>
     <body {...bodyAttributes}>
       {preBodyComponents}
