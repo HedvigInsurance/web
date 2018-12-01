@@ -1,7 +1,7 @@
 ---
 templateKey: landing-page
 title: "Hedvig Försäkring |\_Få hjälp när du behöver det"
-noindex: true
+noindex: false
 landing:
   cta_text: Få ditt pris
   heading: "Livet händer. Låt\_Hedvig hjälpa dig."
