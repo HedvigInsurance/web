@@ -6,9 +6,9 @@ se:
   facebookAlt: Hedvig på Facebook
   instagramAlt: Hedvig på Instagram
   legalText: >-
-    Exklusiv försäkringsgivare för Hedvigs försäkringar är International
-    Insurance Company of Hannover SE, Sverige filial, org. nr. 516402-6345.
-    Hedvig står under Finansinspektionens tillsyn.
+    Exklusiv försäkringsgivare för Hedvigs försäkringar är HDI Global Specialty
+    SE, Sverige Filial, org. nr. 516402-6345. Hedvig står under
+    Finansinspektionens tillsyn.
   linkSection1:
     - external: false
       label: Vanliga frågor
@@ -34,7 +34,7 @@ se:
       path: 'https://join.hedvig.com'
     - external: true
       label: Press
-      path: "/about-us#press"
+      path: '/about-us#press'
   playStoreAlt: Ladda ner på Google Play
   twitterAlt: Hedvig på Twitter
 en:
@@ -60,7 +60,7 @@ en:
       path: /en/contact
     - external: true
       label: Press
-      path: "/en/about-us#press"
+      path: '/en/about-us#press'
   linkSection2:
     - external: false
       label: Personal information
