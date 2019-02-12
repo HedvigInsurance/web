@@ -97,7 +97,7 @@
     "react-responsive": "^5.0.0",
     "react-router-dom": "^4.3.1",
     "react-router-enzyme-context": "^1.2.0",
-    "react-spring": "^5.8.0",
+    "react-spring": "^7.2.11",
     "react-sticky": "^6.0.3",
     "react-swipeable-views": "^0.12.17",
     "react-transition-group": "^2.4.0",
