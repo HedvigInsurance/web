@@ -6452,13 +6452,13 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@^1.0.31:
-  version "1.0.55"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-1.0.55.tgz#716c7f44d9949864c55331bd3316b751c94ca0c8"
-  integrity sha1-cWx/RNmUmGTFUzG9Mxa3UclMoMg=
+gatsby-image@^2.0.32:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.32.tgz#0fa8537a65287f3cc4de40a6df7b9ba513d2cc8a"
+  integrity sha512-JrPdkUnBnO1OQvZksvgcH01U2ue+9+vjQNW3totflXUx7yqvT9rHeP5zFfM22I7APFLhvLiv4YfEDwEmur1eUg==
   dependencies:
-    babel-runtime "^6.26.0"
-    prop-types "^15.6.0"
+    "@babel/runtime" "^7.0.0"
+    prop-types "^15.6.1"
 
 gatsby-link@^1.6.46:
   version "1.6.46"
