@@ -924,10 +924,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@^0.56.22":
-  version "0.56.24"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.56.24.tgz#e91880738be3e82d39f46d3e0f4af0d6da4e6fa3"
-  integrity sha512-5lNrSj/y9MGXZooutAPTDwti92JJvyHvgEDyo0F3IvI924jH7TE4EM0JBNOm9U/PwdxyMdcL4l7cRJu/xXmpyw==
+"@types/react-native@^0.57.41":
+  version "0.57.41"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.41.tgz#bf355f38d8cfe5eac68de977e210ae0805cd053a"
+  integrity sha512-y7XML8Fbg09sAuPk69WFXmh3x8EQzJ4Ta+lyluOILk40RMsz/w2YJeKr4LHW7x/Th0EPD8OPIG1Ei4rg5gd6Mw==
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
