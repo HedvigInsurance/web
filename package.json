@@ -75,7 +75,7 @@
     "js-cookie": "^2.2.0",
     "jsdom": "^12.0.0",
     "just-kebab-case": "^1.1.0",
-    "lint-staged": "^7.2.0",
+    "lint-staged": "^8.1.6",
     "netlify-cms": "^1.9.3",
     "normalize.css": "^8.0.0",
     "prettier": "^1.14.2",
